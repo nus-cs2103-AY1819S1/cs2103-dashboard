@@ -1,2 +1,2 @@
-# dashboard
-A repo for the dashboard of code contributions
+# Coding Activity Dashboard
+The dashboard is at [https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/](https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/)
