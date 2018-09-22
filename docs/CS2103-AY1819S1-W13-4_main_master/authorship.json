@@ -1,0 +1,3011 @@
+[
+  {
+    "path": "README.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d Address Book (Level 4)"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github,env-browser[:relfileprefix: docs/]"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "https://travis-ci.org/CS2103-AY1819S1-W13-4/main[image:https://travis-ci.org/CS2103-AY1819S1-W13-4/main.svg?branch\u003dmaster[Build Status]]"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://ci.appveyor.com/project/damithc/addressbook-level4[image:https://ci.appveyor.com/api/projects/status/3boko2x2vr5cc3w2?svg\u003dtrue[Build status]]"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "https://coveralls.io/github/CS2103-AY1819S1-W13-4/main?branch\u003dmaster[image:https://coveralls.io/repos/CS2103-AY1819S1-W13-4/main/badge.svg?branch\u003dmaster[Coverage Status]]"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://www.codacy.com/app/damith/addressbook-level4?utm_source\u003dgithub.com\u0026utm_medium\u003dreferral\u0026utm_content\u003dse-edu/addressbook-level4\u0026utm_campaign\u003dBadge_Grade[image:https://api.codacy.com/project/badge/Grade/fc0b7775cf7f4fdeaf08776f3d8e364a[Codacy Badge]]"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://gitter.im/se-edu/Lobby[image:https://badges.gitter.im/se-edu/Lobby.svg[Gitter chat]]"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::docs/images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifndef::env-github[]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* This is a desktop Address Book application. It has a GUI but most of the user interactions happen using a CLI (Command Line Interface)."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* It is a Java sample application intended for students learning Software Engineering while using Java as the main programming language."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* It is *written in OOP fashion*. It provides a *reasonably well-written* code example that is *significantly bigger* (around 6 KLoC)than what students usually write in beginner-level SE modules."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* What\u0027s different from https://github.com/se-edu/addressbook-level3[level 3]:"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** A more sophisticated GUI that includes a list  panel and an in-built Browser."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** More test cases, including automated GUI testing."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** Support for _Build Automation_ using Gradle and for _Continuous Integration_ using Travis CI."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Site Map"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cUserGuide#, User Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cDeveloperGuide#, Developer Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cLearningOutcomes#, Learning Outcomes\u003e\u003e"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cAboutUs#, About Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cContactUs#, Contact Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Acknowledgements"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Some parts of this sample application were inspired by the excellent http://code.makery.ch/library/javafx-8-tutorial/[Java FX tutorial] by"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_Marco Jakob_."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Libraries used: https://github.com/TestFX/TestFX[TextFX], https://bitbucket.org/controlsfx/controlsfx/[ControlsFX], https://github.com/FasterXML/jackson[Jackson], https://github.com/google/guava[Guava], https://github.com/junit-team/junit5[JUnit5]"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Licence : link:LICENSE[MIT]"
+      }
+    ],
+    "authorContributionMap": {
+      "SusterDrifter": 2,
+      "-": 38
+    }
+  },
+  {
+    "path": "docs/DeveloperGuide.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d AddressBook Level 4 - Developer Guide"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: DeveloperGuide"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc:"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc-title:"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc-placement: preamble"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":sectnums:"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":xrefstyle: full"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":tip-caption: :bulb:"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":note-caption: :information_source:"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":warning-caption: :warning:"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":experimental:"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":repoURL: https://github.com/CS2103-AY1819S1-W13-4/main/tree/master"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "\u003d\u003d Value Proposition"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "Current:"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Tutors use reminder applications to keep track of lessons"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Tutors use physical diaries or notepads to keep track of current lesson progress"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "Value:"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Tutors have a platform where they can keep track of all their student’s lessons"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  as well as the progress and syllabus which they have or intend to cover"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d User Stories"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". For private tutors to manage individual students’ schedule. As a tutor, I want"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  to be able to know where my students live, what time their tuition is,"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  their individual syllabus progress, and my weekly schedule."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Use Cases"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Actor: Tutor"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  MSS: Delete/Edit student sessions"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Precondition:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 1:"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: Tutor"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: Type command ‘Delete/Edit \u003cSTUDENT NAME\u003e’ on the CLI bar"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 2:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System attempts to locate the data of specified student"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "          inside the database and deletes/edit if present"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3a.1:"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System finds the specified student."
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3a.2:"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System deletes/edits student details"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3b.1:"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System cannot find the specified student inside the database"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3b.2:"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System asks user to re-enter command, Go back to Step 1"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". MSS: View students details (progress, level, syllabus, location, time of tuition)"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Precondition: Tutor is logged in"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003eStep 1:"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: Tutor"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: Type command ‘view \u003cSTUDENT NAME\u003e’ on the CLI bar."
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003eStep 2:"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System locates the data of specified student inside the database"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003eStep 3a.1"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System can find the specified student."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3a.2:"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System displays the detail of students onto the screen."
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3b.1:"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System cannot find the specified student inside the database"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3b.2:"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System asks’ for next user query"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". MSS: Tracking students progress"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Precondition: Tutor is logged in"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Steps:"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "    -View Student Details"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "    -Edit Syllabus Progress"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 1:"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: Tutor"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: Type command ‘progress \u003cSTUDENT NAME\u003e’ on the CLI bar."
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 2:"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System locates the data of specified student inside the database"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3a.1:"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System can find the specified student."
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3a.2:"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System compares student progress to the syllabus"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  being used by the students"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3a.3:"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System displays students’ progress in terms of percentage"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3b.1:"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System cannot find the specified student inside the database"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  -\u003e Step 3b.2:"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Actor: System"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "  Action: System asks’ for next user query"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "\u003d\u003d Non-Functional Requirements"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Display a list of upcoming sessions with students"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Must be accurate"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Must be fast in displaying results"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Can view own timetable"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Integrate google map to reach students’ location"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Glossary"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ". Syllabus: the subjects in a course of study or teaching."
+      }
+    ],
+    "authorContributionMap": {
+      "ooihuiying": 94,
+      "-": 24
+    }
+  },
+  {
+    "path": "docs/UserGuide.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d AddressBook Level 4 - User Guide"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: UserGuide"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc:"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc-title:"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc-placement: preamble"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":sectnums:"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":xrefstyle: full"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":experimental:"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":tip-caption: :bulb:"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":note-caption: :information_source:"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":repoURL: https://github.com/CS2103-AY1819S1-W13-4/main"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "By: `Team SE-EDU`      Since: `Jun 2016`      Licence: `MIT`"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Introduction"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "AddressBook Level 4 (AB4) is for those who *prefer to use a desktop app for managing contacts*. More importantly, AB4 is *optimized for those who prefer to work with a Command Line Interface* (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, AB4 can get your contact management tasks done faster than traditional GUI apps. Interested? Jump to the \u003c\u003cQuick Start\u003e\u003e to get started. Enjoy!"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "System finds and deletes the student’s data."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Quick Start"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Ensure you have Java version `9` or later installed in your Computer."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Download the latest `addressbook.jar` link:{repoURL}/releases[here]."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Copy the file to the folder you want to use as the home folder for your Address Book."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Double-click the file to start the app. The GUI should appear in a few seconds."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "+"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::Ui.png[width\u003d\"790\"]"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "+"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Type the command in the command box and press kbd:[Enter] to execute it. +"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. typing *`help`* and pressing kbd:[Enter] will open the help window."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Some example commands you can try:"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *`list`* : lists all contacts"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : adds a contact named `John Doe` to the Address Book."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **`delete`**`3` : deletes the 3rd contact shown in the current list"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *`exit`* : exits the app"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "Introduction"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "(name of project) is for tutors who have trouble managing their students’ details \u0026 progress, time of tuition and their own weekly tuition schedule. This project is an all-in-one scheduler."
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Refer to \u003c\u003cFeatures\u003e\u003e for details of each command."
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[[Features]]"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Features"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*Command Format*"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Words in `UPPER_CASE` are the parameters to be supplied by the user e.g. in `add n/NAME`, `NAME` is a parameter which can be used as `add n/John Doe`."
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Items in square brackets are optional e.g `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or as `n/John Doe`."
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Items with `…`​ after them can be used multiple times including zero times e.g. `[t/TAG]...` can be used as `{nbsp}` (i.e. 0 times), `t/friend`, `t/friend t/family` etc."
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Parameters can be in any order e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Viewing help : `help`"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `help`"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Adding a person: `add`"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": "Adds a person to the scheduler +"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]...`"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[TIP]"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "A person can have any number of tags (including 0)"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `add n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 t/criminal`"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Listing all persons : `list`"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Shows a list of all persons in the address book. +"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `list`"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Editing a person : `edit`"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Edits an existing person in the address book. +"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [a/ADDRESS] [t/TAG]...`"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed person list. The index *must be a positive integer* 1, 2, 3, ..."
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* At least one of the optional fields must be provided."
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Existing values will be updated to the input values."
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative."
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* You can remove all the person\u0027s tags by typing `t/` without specifying any tags after it."
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `edit 1 p/91234567 e/johndoe@example.com` +"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively."
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `edit 2 n/Betsy Crower t/` +"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags."
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Locating persons by name: `find`"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Finds persons whose names contain any of the given keywords. +"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `find KEYWORD [MORE_KEYWORDS]`"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* The search is case insensitive. e.g `hans` will match `Hans`"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Only the name is searched."
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Only full words will be matched e.g. `Han` will not match `Hans`"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Persons matching at least one keyword will be returned (i.e. `OR` search). e.g. `Hans Bo` will return `Hans Gruber`, `Bo Yang`"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `find John` +"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Returns `john` and `John Doe`"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `find Betsy Tim John` +"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Returns any person having names `Betsy`, `Tim`, or `John`"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Deleting a person : `delete`"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Deletes the specified person from the address book. +"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `delete INDEX`"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Deletes the person at the specified `INDEX`."
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* The index refers to the index number shown in the displayed person list."
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* The index *must be a positive integer* 1, 2, 3, ..."
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `list` +"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`delete 2` +"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Deletes the 2nd person in the address book."
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `find Betsy` +"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`delete 1` +"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Deletes the 1st person in the results of the `find` command."
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Selecting a person : `select`"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Selects the person identified by the index number used in the displayed person list. +"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `select INDEX`"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Selects the person and loads the Google search page the person at the specified `INDEX`."
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* The index refers to the index number shown in the displayed person list."
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* The index *must be a positive integer* `1, 2, 3, ...`"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `list` +"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`select 2` +"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Selects the 2nd person in the address book."
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `find Betsy` +"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`select 1` +"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Selects the 1st person in the results of the `find` command."
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Listing entered commands : `history`"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Lists all the commands that you have entered in reverse chronological order. +"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `history`"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[NOTE]"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// tag::undoredo[]"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Restores the address book to the state before the previous _undoable_ command was executed. +"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `undo`"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[NOTE]"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Undoable commands: those commands that modify the address book\u0027s content (`add`, `delete`, `edit` and `clear`)."
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`list` +"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `select 1` +"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`list` +"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` +"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The `undo` command fails as there are no undoable commands executed previously."
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`clear` +"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `clear` command) +"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Reverses the most recent `undo` command. +"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `redo`"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` (reapplies the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` +"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The `redo` command fails as there are no `undo` commands executed previously."
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`clear` +"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `clear` command) +"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` (reapplies the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` (reapplies the `clear` command) +"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// end::undoredo[]"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Clears all entries from the address book. +"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `clear`"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Exits the program. +"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `exit`"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Saving the data"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Address book data are saved in the hard disk automatically after any command that changes the data. +"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "There is no need to save manually."
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// tag::dataencryption[]"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_{explain how the user can enable/disable data encryption}_"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// end::dataencryption[]"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d FAQ"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*Q*: How do I transfer my data to another Computer? +"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder."
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Command Summary"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Add* `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 t/friend t/colleague`"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Clear* : `clear`"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Delete* : `delete INDEX` +"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `delete 3`"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Edit* : `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `edit 2 n/James Lee e/jameslee@example.com`"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Find* : `find KEYWORD [MORE_KEYWORDS]` +"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `find James Jake`"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *List* : `list`"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Help* : `help`"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Select* : `select INDEX` +"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g.`select 2`"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *History* : `history`"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Undo* : `undo`"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Redo* : `redo`"
+      }
+    ],
+    "authorContributionMap": {
+      "ooihuiying": 9,
+      "-": 259
+    }
+  }
+]

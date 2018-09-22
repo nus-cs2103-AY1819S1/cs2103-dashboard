@@ -1,0 +1,784 @@
+[
+  {
+    "path": "README.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d Address Book (Level 4)"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github,env-browser[:relfileprefix: docs/]"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://travis-ci.org/se-edu/addressbook-level4[image:https://travis-ci.org/se-edu/addressbook-level4.svg?branch\u003dmaster[Build Status]]"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://ci.appveyor.com/project/damithc/addressbook-level4[image:https://ci.appveyor.com/api/projects/status/3boko2x2vr5cc3w2?svg\u003dtrue[Build status]]"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://coveralls.io/github/se-edu/addressbook-level4?branch\u003dmaster[image:https://coveralls.io/repos/github/se-edu/addressbook-level4/badge.svg?branch\u003dmaster[Coverage Status]]"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "teowz46"
+        },
+        "content": "//https://www.codacy.com/app/damith/addressbook-level4?utm_source\u003dgithub.com\u0026utm_medium\u003dreferral\u0026utm_content\u003dse-edu/addressbook-level4\u0026utm_campaign\u003dBadge_Grade[image:https://api.codacy.com/project/badge/Grade/fc0b7775cf7f4fdeaf08776f3d8e364a[Codacy Badge]]"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://gitter.im/se-edu/Lobby[image:https://badges.gitter.im/se-edu/Lobby.svg[Gitter chat]]"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::docs/images/UI_login_username.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::docs/images/UI_login_password.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::docs/images/UI_landing_page.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::docs/images/UI_list_guests.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "* Concierge is a desktop Hotel Management application. It has a GUI but most of the user interactions happen using a CLI (Command Line Interface)."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "* It is a concise Java application intended for small hotels looking for a simple application to manage basic hotel features."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "* Value Proposition"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "** A simple, intuitive and free command line tool for managing a small-scale hotel."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "** Hassle-free for receptionists in managing day-to-day hotel operations."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "** A logistics tool that generates insightful reports for hotel managers to assess hotel efficiency"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Site Map"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cUserGuide#, User Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cDeveloperGuide#, Developer Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cLearningOutcomes#, Learning Outcomes\u003e\u003e"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cAboutUs#, About Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cContactUs#, Contact Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Acknowledgements"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Some parts of this sample application were inspired by the excellent http://code.makery.ch/library/javafx-8-tutorial/[Java FX tutorial] by"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_Marco Jakob_."
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Libraries used: https://github.com/TestFX/TestFX[TextFX], https://bitbucket.org/controlsfx/controlsfx/[ControlsFX], https://github.com/FasterXML/jackson[Jackson], https://github.com/google/guava[Guava], https://github.com/junit-team/junit5[JUnit5]"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Licence : link:LICENSE[MIT]"
+      }
+    ],
+    "authorContributionMap": {
+      "teowz46": 1,
+      "adamwth": 17,
+      "-": 29
+    }
+  },
+  {
+    "path": "docs/AboutUs.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d About Us"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":relfileprefix: team/"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Concierge was developed by the CS2103 F11-2 team. +"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{empty} +"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "We are a team based in the http://www.comp.nus.edu.sg[School of Computing, National University of Singapore]."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Project Team"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "\u003d\u003d\u003d Adam Chew Yong Soon"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::team_photos/adam.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "{empty}[https://github.com/adamwth[github]] [\u003c\u003cjohndoe#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Role: Team Lead +"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Responsibilities: UI Design, Model Component, JavaFX expert +"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Side-responsiblities: Scheduling and tracking, Integration"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "\u003d\u003d\u003d Joyce Yeo Shu Hui"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::team_photos/joyce.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "{empty}[http://github.com/pikulet[github]] [\u003c\u003cjohndoe#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Responsibilities: Documentation, Storage Component, IntelliJ expert +"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Side-responsiblities: Deliverables and deadlines"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "\u003d\u003d\u003d Teo Wei Zheng"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::team_photos/weizheng.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "{empty}[http://github.com/teowz46[github]] [\u003c\u003cjohndoe#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Responsibilities: Logic Component, Travis CI expert +"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Side-responsiblities: Deliverables and deadlines"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "\u003d\u003d\u003d Tan Jia Qing"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::team_photos/jiaqing.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "{empty}[http://github.com/JiaqingTan[github]] [\u003c\u003cjohndoe#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Responsibilities: UI Design \u0026 Implementation, UI Component, JavaFX expert +"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Side-responsiblities: Code quality"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "\u003d\u003d\u003d Neil Mehta"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "image::team_photos/neil.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "{empty}[http://github.com/neilish3re[github]] [\u003c\u003cjohndoe#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Responsibilities: Testing, Commons Component, JUnit expert +"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": "Side-responsiblities: Git expert"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "adamwth"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      }
+    ],
+    "authorContributionMap": {
+      "adamwth": 29,
+      "-": 33
+    }
+  }
+]

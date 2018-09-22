@@ -1,0 +1,1696 @@
+[
+  {
+    "path": "README.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d Address Book (Level 4)"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github,env-browser[:relfileprefix: docs/]"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://travis-ci.org/se-edu/addressbook-level4[image:https://travis-ci.org/se-edu/addressbook-level4.svg?branch\u003dmaster[Build Status]]"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://ci.appveyor.com/project/damithc/addressbook-level4[image:https://ci.appveyor.com/api/projects/status/3boko2x2vr5cc3w2?svg\u003dtrue[Build status]]"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://coveralls.io/github/se-edu/addressbook-level4?branch\u003dmaster[image:https://coveralls.io/repos/github/se-edu/addressbook-level4/badge.svg?branch\u003dmaster[Coverage Status]]"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://www.codacy.com/app/damith/addressbook-level4?utm_source\u003dgithub.com\u0026utm_medium\u003dreferral\u0026utm_content\u003dse-edu/addressbook-level4\u0026utm_campaign\u003dBadge_Grade[image:https://api.codacy.com/project/badge/Grade/fc0b7775cf7f4fdeaf08776f3d8e364a[Codacy Badge]]"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://gitter.im/se-edu/Lobby[image:https://badges.gitter.im/se-edu/Lobby.svg[Gitter chat]]"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::docs/images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifndef::env-github[]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* Welcome to TheTracker"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* TheTracker aims at NUS students to keep track of everything from the"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "modules they take to the events they join, and every person related to them"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "from NUS staff to their friends."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* The design of TheTracker favours students who prefer interactions which are"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": " using CLI(Command Line Interface)."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* TheTracker welcomes students who are:"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Sociable and wish to know about his/her NUS peers"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Academic and wish to keep track of their grades for certain modules and all"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "the modules"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** keep track of schedule of events on a calendar"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Site Map"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cUserGuide#, User Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cDeveloperGuide#, Developer Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cAboutUs#, About Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cContactUs#, Contact Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Acknowledgements"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* The original source of code: AddressBook-Level4 project created by SE-EDU"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "initiative at https://github.com/se-edu/g"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Libraries used: https://github.com/TestFX/TestFX[TextFX], https://bitbucket.org/controlsfx/controlsfx/[ControlsFX], https://github.com/FasterXML/jackson[Jackson], https://github.com/google/guava[Guava], https://github.com/junit-team/junit5[JUnit5]"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Licence : link:LICENSE[MIT]"
+      }
+    ],
+    "authorContributionMap": {
+      "KongZijin": 13,
+      "-": 30
+    }
+  },
+  {
+    "path": "docs/AboutUs.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d About Us"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":relfileprefix: team/"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "AddressBook - Level 4 was developed by the https://se-edu.github.io/docs/Team.html[se-edu] team. +"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_{The dummy content given below serves as a placeholder to be used by future forks of the project.}_ +"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{empty} +"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "We are a team based in the http://www.comp.nus.edu.sg[School of Computing, National University of Singapore]."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Project Team"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Ahan Gupta"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::spikerheado1234.png[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{empty}[http://www.ahangupta.com[homepage]] [https://github.com/spikerheado1234[github]] [\u003c\u003cspikerheado1234#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "Role: Team Lead"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Way Tan"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::waytan.png[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "{empty}[http://github.com/waytan[github]] [\u003c\u003cwaytan#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Team Member"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Kong Zijin"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "image::kongzijin.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "{empty}[http://github.com/KongZijin[github]] [\u003c\u003cKongZijin#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "Role: Team Member"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "\u003d\u003d\u003d Alistair Ong"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "image::alistairong.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "{empty}[http://github.com/alistairong[github]] [\u003c\u003calistairong#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "Role: Team Member"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Tian Xueyan"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::xueyantian.jpeg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "{empty}[http://github.com/xueyantian[github]] [\u003c\u003cxueyantian#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Team Member"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      }
+    ],
+    "authorContributionMap": {
+      "KongZijin": 3,
+      "-": 40,
+      "alistairong": 7
+    }
+  },
+  {
+    "path": "docs/team/KongZijin.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "\u003d Kong Zijin - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ":imagesDir: ../images"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ":stylesDir: ../stylesheets"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "\u003d\u003d PROJECT: AddressBook - Level 4"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "AddressBook - Level 4 is a desktop address book application used for teaching Software Engineering principles. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* *Major enhancement*: added *the ability to undo/redo previous commands*"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Credits: _{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}_"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* *Minor enhancement*: added a history command that allows the user to navigate to previous commands using up/down keys."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] _{give links to collated code files}_"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Project management:"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Enhancements to existing features:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Documentation:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Community:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "** Tools:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Integrated a third party library (Natty) to the project (https://github.com[#42])"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "*** Integrated a new Github plugin (CircleCI) to the team repo"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "_{you can add/remove categories in the list above}_"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "\u003d\u003d PROJECT: PowerPointLabs"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "KongZijin"
+        },
+        "content": "_{Optionally, you may include other projects in your portfolio.}_"
+      }
+    ],
+    "authorContributionMap": {
+      "KongZijin": 72
+    }
+  },
+  {
+    "path": "docs/team/alistairong.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "\u003d Alistair Ong - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ":imagesDir: ../images"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ":stylesDir: ../stylesheets"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "\u003d\u003d PROJECT: AddressBook - Level 4"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "AddressBook - Level 4 is a desktop address book application used for teaching Software Engineering principles. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "* *Major enhancement*: added *the ability to undo/redo previous commands*"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** Credits: _{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}_"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "* *Minor enhancement*: added a history command that allows the user to navigate to previous commands using up/down keys."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "* *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] _{give links to collated code files}_"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** Project management:"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** Enhancements to existing features:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** Documentation:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** Community:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "** Tools:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Integrated a third party library (Natty) to the project (https://github.com[#42])"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "*** Integrated a new Github plugin (CircleCI) to the team repo"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "_{you can add/remove categories in the list above}_"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "\u003d\u003d PROJECT: PowerPointLabs"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "_{Optionally, you may include other projects in your portfolio.}_"
+      }
+    ],
+    "authorContributionMap": {
+      "alistairong": 72
+    }
+  }
+]

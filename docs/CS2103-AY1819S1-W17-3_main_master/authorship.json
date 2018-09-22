@@ -1,0 +1,4572 @@
+[
+  {
+    "path": "README.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d FlashBook"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github,env-browser[:relfileprefix: docs/]"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "https://travis-ci.org/nus-cs2103-AY1819S1/addressbook-level4[image:https://travis-ci.org/nus-cs2103-AY1819S1/addressbook-level4.svg?branch\u003dmaster[Build Status]]"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "https://coveralls.io/repos/github/CS2103-AY1819S1-W17-3/main[image:https://coveralls.io/repos/github/CS2103-AY1819S1-W17-3/main/badge.svg?branch\u003dmaster[Coverage Status]]"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::docs/images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifndef::env-github[]"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* This is a desktop Task Manager application. It has a GUI but most of the user interactions happen using a CLI (Command Line Interface)."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* The base code is taken from [Address Book (level 4)](https://github.com/nus-cs2103-AY1617S1/addressbook-level4). Below are some description about Address Book (level 4):"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** It is a Java sample application intended for students learning Software Engineering while using Java as the main programming language."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** It is *written in OOP fashion*. It provides a *reasonably well-written* code example that is *significantly bigger* (around 6 KLoC)than what students usually write in beginner-level SE modules."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Site Map"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cUserGuide#, User Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cDeveloperGuide#, Developer Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cAboutUs#, About Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cContactUs#, Contact Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Acknowledgements"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Some parts of this sample application were inspired by the excellent http://code.makery.ch/library/javafx-8-tutorial/[Java FX tutorial] by"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_Marco Jakob_."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Libraries used: https://github.com/TestFX/TestFX[TextFX], https://bitbucket.org/controlsfx/controlsfx/[ControlsFX], https://github.com/FasterXML/jackson[Jackson], https://github.com/google/guava[Guava], https://github.com/junit-team/junit5[JUnit5]"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Licence : link:LICENSE[MIT]"
+      }
+    ],
+    "authorContributionMap": {
+      "zenious": 2,
+      "-": 31
+    }
+  },
+  {
+    "path": "docs/AboutUs.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d About Us"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":relfileprefix: team/"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "FlashBook is developed by the https://github.com/CS2103-AY1819S1-W17-3[CS2103-AY1819S1-W17-3] team. +"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "{empty} +"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "FlashBook is morphed from https://github.com/se-edu/addressbook-level4[AddressBook - Level 4],"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "originally developed by the https://se-edu.github.io/docs/Team.html[se-edu] team. +"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{empty} +"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "We are a team based in the http://www.comp.nus.edu.sg[School of Computing, National University of Singapore]."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Project Team"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "\u003d\u003d\u003d Pakorn Ueareeworakul"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "image::nyxf4ll.jpeg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "{empty}[https://github.com/NyxF4ll[github]]"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "Responsibilities: Model"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "\u003d\u003d\u003d Ooi Heng Seng Jeffrey"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "image::jeffreyooi.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "{empty}[https://github.com/jeffreyooi[github]]"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Responsibilities: UI"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "\u003d\u003d\u003d Koh Zheng Wei"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "image::zenious.jpeg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "{empty}[http://github.com/Zenious[github]]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "Responsibilities: Storage"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "\u003d\u003d\u003d Zhuang Xinjie Derek"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "image::derek-hardy.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "{empty}[https://github.com/Derek-Hardy[github]]"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "Responsibilities: Logic"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "\u003d\u003d\u003d Tan Kuan Wei Benjamin"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "image::betakuwe.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "{empty}[https://github.com/betakuwe[github]]"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "betakuwe"
+        },
+        "content": "Responsibilities: Logic"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      }
+    ],
+    "authorContributionMap": {
+      "betakuwe": 25,
+      "-": 34
+    }
+  },
+  {
+    "path": "docs/UserGuide.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "\u003d FlashBook - User Guide"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: UserGuide"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc:"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc-title:"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc-placement: preamble"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":sectnums:"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":xrefstyle: full"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":experimental:"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":tip-caption: :bulb:"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":note-caption: :information_source:"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": ":repoURL: https://github.com/CS2103-AY1819S1-W17-3/main"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "By: `Team CS2103-AY1819S1-W17-3`      Since: `Aug 2018`      Licence: `MIT`"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Introduction"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Flashbook is for those who prefer to use a desktop app to manage their to-do for university. Flashbook is *designed for those who prefer to work with a Command Line Interface (CLI)* while still having the benefits of a Graphical User Interface (GUI). Users who can type fast can navigate and use the to-do list faster than traditional GUI apps. Makes your hand itchy and want to try out? Go to \u003c\u003cQuick Start\u003e\u003e to get started!"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Quick Start"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Ensure you have Java version `9` or later installed in your Computer."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": ".  Download the latest `flashbook.jar` link:{repoURL}/releases[here]."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": ".  Copy the file to the folder you want to use as the home folder for your Flash Book."
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Double-click the file to start the app. The GUI should appear in a few seconds."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "+"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::Ui.png[width\u003d\"790\"]"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "+"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Type the command in the command box and press kbd:[Enter] to execute it. +"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. typing *`help`* and pressing kbd:[Enter] will open the help window."
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Some example commands you can try:"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* *`list`* : Display all existing tasks on the display."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* **`add`**`n this add high Problem_5.12 with deadline on 100918: the most difficult one` : adds a task named `Problem_5.12` to the FlashBook and set the deadline of the task to due on `10/08/18`."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* **`delete`**`3` : deletes the 3rd contact shown in the current list"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *`exit`* : exits the app"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Refer to \u003c\u003cFeatures\u003e\u003e for details of each command."
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[[Features]]"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Features"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*Command Format*"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* Words in square brackets are the parameters to be supplied by the user e.g. in `changeto [tag] with [TaskParameters]`, `TaskParameters` and `tag` are parameters which can be used as `changeto urgent with deadline on 110918`."
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* Words in square brackets are optional. e.g. `changeto [tag] with [TaskParameters]` can be used as `changeto with deadline on 110918` or `changeto urgent`"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Viewing help : `help`"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `help`"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "\u003d\u003d\u003d Adding a new task: `add`"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Add a new task named [Task Name] with parameters described in [Task Parameters] to the module [Module Name]. +"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Format: `in [Module Name] add [Tag] [Task Name] with [Task Parameters]:[Description]`"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "[NOTE]"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "If Module Name is â€œthisâ€? or â€œ\u0026â€?, the new task will be added as a subtask of the selected task"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": ".Possible tags are:"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* urgent / u"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* high / h"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* normal / n (default)"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* low / l"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* done / d (this task will not show up in the find command unless specified)"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": ".Possible task parameters:"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* Deadline: `deadline on DDMMYY`, or the shorthand `dlDDMMYY`"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* Location: `@[Location Name]`"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* `in ST2131 add urgent Homework_1 with deadline on 170918 @S17:12 pages of statistics.` : In Module ST2131, add task Homework_1 with deadline on `17/09/18`, with task description of `12 pages of statistics` and location of task is at `S17`."
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* `#ST2131 a u Homework_1 dl170918 @S17:12 pages of statistics.`"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* `in this add high Problem_5.12 with deadline on 100918: the most difficult one`"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* `#\u0026 a h Problem_5.12 dl100918: the most difficult one`"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "[NOTE]"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "[Task Name] must be a string without spaces and is not a restricted keyword."
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "\u003d\u003d\u003d Editing a task : `changeto`"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Pre-condition: Task is already selected using `select` command. +"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Replace the selected tasksâ€™ parameters with those described in this command (undescribed parameters will not be changed) +"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Format: `changeto [Tag] with [TaskParameters]:[TaskDescription]`, or the shorthand `c [Tag] w [Taskparameters]:[TaskDescription]`"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* `changeto urgent with deadline on 150918: only ten pages is needed` +"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Edits task selected to be of `urgent` tag and deadline on `15/09/18`, with task description of `only ten pages is needed`."
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* `ct u w dl120918` +"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Edit task selected tagging it with `urgent` and set its deadline to `12/09/18`"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* `changeto with deadline on 110918: deadline extended` +"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Edit task selected deadline to `11/09/18`"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Deleting a task: `delete/del`"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Pre-condition: Task is already selected using select command"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Remove the selected task. +"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Format: `delete`, or the shorthand `del`"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "\u003d\u003d\u003d Managing the module list: modules"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Management of modules in FlashBook. Capabilities of FlashBook module system includes:"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "- Create a module: `modules create [Module Name]`, or `+\\#[Module Name]`"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "- Delete a module: `modules delete [Module Name]`, or `~#[Module Name]`"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "- List modules: `modules`, or `#`"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "- List tasks in the module: `modules [Module Name]`, or `#[Module Name]`"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "- Delete all modules: `modules delete \\*` or `~*`"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* modules create CS2103T"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* modules delete CS2101"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* +#ST2334"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* ~#CS2040"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* #CS2040"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* #"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "* ~*"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "`[Module Name] must be an alphanumeric string without spaces.`"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Find a task: `find / findwhere`"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Finds tasks and display it on the screen. +"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Format: `in [Module List] findwhere [TaskParameters] , or in [Module List] find [Name]` +"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Shorthand format: `#[Module List] fw [TaskParameters], or #[Module List] f [Name]`"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* The first version finds tasks with parameters that match [TaskParameters], while the second version finds tasks with name that match [Name]."
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* Possible [TaskParameters] are: +"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": ".  Deadline: â€œDeadline [on/after/before] DDMMYYâ€? or â€œdl[\u003d/\u003e/\u003c]DDMMYYâ€?"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": ".  Tag: â€œtag\u003d[Tag]â€? or â€œt\u003d[Tag]â€?"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": ".  Location: â€œlocation\u003d[LocationName]â€? or â€œ@\u003d[LocationName]â€?"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* [Module List] can be replaced with â€œanyâ€? or â€œ*â€? to select all modules"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* `in MA2101 findwhere tag\u003dhigh location\u003dS17 deadline before 300918`"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* `in CS2103T, CS2101 find LO5.7`"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* `in any findwhere tag\u003durgent`"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* `#CS2030,CS2040 fw @\u003dCOM1`"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* `#* find lab3`"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "The â€œthenâ€? keyword:"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "If â€œthen [Command]â€?  is inserted after find, the [Command] will be applied to all results of the find command."
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "[Command] can be replaced with either changeto, delete, or markdone."
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Thus it is possible to run commands like"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "â€œin CS2101 findwhere then deleteâ€? to delete every task under CS2101"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Selecting a task : `select`"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "Pre-condition: user already list all available tasks using  find/findwhere command"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Select and displays a task from the list obtained using find"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "zenious"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Format: `â€œselect [index]â€? or â€œs[index]â€? when [index] is a positive integer (starts from 1)`"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* This also display all subtasks of the selected task."
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "  If a task is already on display, this command instead select a subtask from the displayed tasksâ€™ list of subtasks."
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Going back to the parent task : `back / b`"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "If the selected task is a subtask, go back to the parent task of this subtask."
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Listing all tasks : `list`"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Display all existing tasks on the display."
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Marking the selected task as done: `markdone / md`"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "*Pre-condition:* Task is already selected using select command"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Change the tag the selected task to â€œdoneâ€?."
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "To reverse this, find and select the task then use the changeto command"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Import tasks : `import`"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "User is able to import other users tasks. +"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Format: `import \u003crelative filepath\u003e`"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Export tasks : `export`"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "User is able to export tasks to store as backup elsewhere or send tasks to other users of Flashbook. +"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Format: +"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "`Export all tasks : export * \u003crelative filepath\u003e` +"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "`Export all tasks of [Module Name]: export #[Module Name] \u003crelative filepath\u003e`"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "\u003d\u003d\u003d Autocomplete"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "To assist user to speed up typing of command, user can \u003cTAB\u003e to autocomplete the command."
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Saving the data"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "Flashbook data are saved in the hard disk automatically after any command that changes the data."
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// tag::dataencryption[]"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_{explain how the user can enable/disable data encryption}_"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// end::dataencryption[]"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d FAQ"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*Q*: How do I transfer my data to another Computer? +"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "*A*: Install the app in the other computer and transfer the data file into the same folder."
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "*Q*: Is the app only for NUS student? +"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "*A*: While this app is tailored to NUS students, it can be used for general day-to-day activities."
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "*Q*: Are there any plans to include other institutions? +"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "*A*: We plan to include other institutions after implementing all core functionalities of the app."
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "*Q*: Are there any plans to build for mobile as well? +"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "*A*: We might look into it if we receive enough requests from users."
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Command Summary"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Adding a new task:* `[module] add [tag] [task name] with [task parameters]:[description]` +"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "e.g. `CS2103T add assignment v1.0 with deadline on 170918 @S17:submit docs`"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Editing a task* : `changeto [tag] with [task parameters]:[task description]` +"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "e.g. `changeto urgent with deadline on 150918 @COM1: only ten pages is needed`"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Delete a task* : `delete`"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Managing the module list* : `modules` +"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "e.g. `modules create CS2103T`"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Find a task* : `in [module] find [task parameter] / in [module] find [name]` +"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "e.g. `in CS2103T find LO5.7`"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Selecting a task* : `select` +"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "e.g. `select 1`"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Going back to the parent task* : `back / b`"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *List all tasks* : `list`"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Marking the selected task as done* : `markdone / md`"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Import tasks* : `import`"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "* *Export tasks* : `export`"
+      }
+    ],
+    "authorContributionMap": {
+      "Derek-Hardy": 73,
+      "zenious": 62,
+      "-": 118
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/commands/DeleteCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.Messages;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.index.Index;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Deletes a person identified using it\u0027s displayed index from the address book."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class DeleteCommand extends Command {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"delete\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "    public static final String COMMAND_ALIAS \u003d \"del\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            + \": Deletes the person identified by the index number used in the displayed person list.\\n\""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            + \"Parameters: INDEX (must be a positive integer)\\n\""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            + \"Example: \" + COMMAND_WORD + \" 1\";"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String MESSAGE_DELETE_PERSON_SUCCESS \u003d \"Deleted Person: %1$s\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final Index targetIndex;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public DeleteCommand(Index targetIndex) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.targetIndex \u003d targetIndex;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cPerson\u003e lastShownList \u003d model.getFilteredPersonList();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (targetIndex.getZeroBased() \u003e\u003d lastShownList.size()) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Person personToDelete \u003d lastShownList.get(targetIndex.getZeroBased());"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model.deletePerson(personToDelete);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model.commitAddressBook();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new CommandResult(String.format(MESSAGE_DELETE_PERSON_SUCCESS, personToDelete));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                || (other instanceof DeleteCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 targetIndex.equals(((DeleteCommand) other).targetIndex)); // state check"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Derek-Hardy": 2,
+      "-": 55
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/parser/AddressBookParser.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.regex.Matcher;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.regex.Pattern;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.AddCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.ClearCommand;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.Command;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.DeleteCommand;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.EditCommand;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.ExitCommand;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.FindCommand;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.HelpCommand;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.HistoryCommand;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.ListCommand;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.RedoCommand;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.SelectCommand;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.UndoCommand;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Parses user input."
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class AddressBookParser {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Used for initial separation of command word and args."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Parses user input into command for execution."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param userInput full user input string"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @return the command based on the user input"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Command parseCommand(String userInput) throws ParseException {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!matcher.matches()) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        switch (commandWord) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case AddCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new AddCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case EditCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new EditCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case SelectCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new SelectCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case DeleteCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "        case DeleteCommand.COMMAND_ALIAS:"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new DeleteCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case ClearCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new ClearCommand();"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case FindCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new FindCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case ListCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new ListCommand();"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case HistoryCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new HistoryCommand();"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case ExitCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new ExitCommand();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case HelpCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new HelpCommand();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case UndoCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new UndoCommand();"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case RedoCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new RedoCommand();"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        default:"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Derek-Hardy": 1,
+      "-": 92
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/parser/AddressBookParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.stream.Collectors;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.Rule;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.rules.ExpectedException;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.AddCommand;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.ClearCommand;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.DeleteCommand;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.EditCommand;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.ExitCommand;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.FindCommand;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.HelpCommand;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.HistoryCommand;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.ListCommand;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.RedoCommand;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.SelectCommand;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.UndoCommand;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.testutil.EditPersonDescriptorBuilder;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.testutil.PersonBuilder;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.testutil.PersonUtil;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class AddressBookParserTest {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Rule"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final AddressBookParser parser \u003d new AddressBookParser();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_add() throws Exception {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Person person \u003d new PersonBuilder().build();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        AddCommand command \u003d (AddCommand) parser.parseCommand(PersonUtil.getAddCommand(person));"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(new AddCommand(person), command);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_clear() throws Exception {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD) instanceof ClearCommand);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD + \" 3\") instanceof ClearCommand);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_delete() throws Exception {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        DeleteCommand command \u003d (DeleteCommand) parser.parseCommand("
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                DeleteCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "    public void parseCommand_deleteAlias() throws Exception {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "        DeleteCommand command \u003d (DeleteCommand) parser.parseCommand("
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "                DeleteCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "        assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Derek-Hardy"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_edit() throws Exception {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Person person \u003d new PersonBuilder().build();"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        EditPersonDescriptor descriptor \u003d new EditPersonDescriptorBuilder(person).build();"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        EditCommand command \u003d (EditCommand) parser.parseCommand(EditCommand.COMMAND_WORD + \" \""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + PersonUtil.getEditPersonDescriptorDetails(descriptor));"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_exit() throws Exception {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD) instanceof ExitCommand);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD + \" 3\") instanceof ExitCommand);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_find() throws Exception {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cString\u003e keywords \u003d Arrays.asList(\"foo\", \"bar\", \"baz\");"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FindCommand command \u003d (FindCommand) parser.parseCommand("
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                FindCommand.COMMAND_WORD + \" \" + keywords.stream().collect(Collectors.joining(\" \")));"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_help() throws Exception {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD) instanceof HelpCommand);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD + \" 3\") instanceof HelpCommand);"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_history() throws Exception {"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD) instanceof HistoryCommand);"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD + \" 3\") instanceof HistoryCommand);"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            parser.parseCommand(\"histories\");"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new AssertionError(\"The expected ParseException was not thrown.\");"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (ParseException pe) {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertEquals(MESSAGE_UNKNOWN_COMMAND, pe.getMessage());"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_list() throws Exception {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD + \" 3\") instanceof ListCommand);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_select() throws Exception {"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        SelectCommand command \u003d (SelectCommand) parser.parseCommand("
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                SelectCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_redoCommandWord_returnsRedoCommand() throws Exception {"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_WORD) instanceof RedoCommand);"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(\"redo 1\") instanceof RedoCommand);"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_undoCommandWord_returnsUndoCommand() throws Exception {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD) instanceof UndoCommand);"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(\"undo 3\") instanceof UndoCommand);"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_unrecognisedInput_throwsParseException() throws Exception {"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(ParseException.class);"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expectMessage(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        parser.parseCommand(\"\");"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_unknownCommand_throwsParseException() throws Exception {"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(ParseException.class);"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expectMessage(MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        parser.parseCommand(\"unknownCommand\");"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "Derek-Hardy": 7,
+      "-": 143
+    }
+  }
+]

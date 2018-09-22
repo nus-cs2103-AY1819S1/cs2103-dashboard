@@ -1,0 +1,5326 @@
+[
+  {
+    "path": "README.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "\u003d SocialCare"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github,env-browser[:relfileprefix: docs/]"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "https://travis-ci.org/CS2103-AY1819S1-W16-2/main[image:https://travis-ci.org/CS2103-AY1819S1-W16-2/main.svg?branch\u003dmaster[Build Status]]"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "https://ci.appveyor.com/project/Kratious/main[image:https://ci.appveyor.com/api/projects/status/suon744fyw9kqi3x?svg\u003dtrue[Build status]]"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "https://coveralls.io/github/CS2103-AY1819S1-W16-2/main?branch\u003dmaster[image:https://coveralls.io/repos/github/CS2103-AY1819S1-W16-2/main/badge.svg?branch\u003dmaster[Coverage Status]]"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "https://www.codacy.com/app/Kratious/main?utm_source\u003dgithub.com\u0026amp;utm_medium\u003dreferral\u0026amp;utm_content\u003dCS2103-AY1819S1-W16-2/main\u0026amp;utm_campaign\u003dBadge_Grade[image:https://api.codacy.com/project/badge/Grade/474fa34d8e394186aa0f558eb50060c8[Codacy Badge]]"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::docs/images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifndef::env-github[]"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "* This is a desktop social welfare event and volunteer management application. It has a GUI but most of the user interactions happen using a CLI (Command Line Interface)."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* It is a Java sample application intended for students learning Software Engineering while using Java as the main programming language."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* It is *written in OOP fashion*. It provides a *reasonably well-written* code example that is *significantly bigger* (around 6 KLoC)than what students usually write in beginner-level SE modules."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "* The target audience is social welfare organisations that want to better manage their volunteers \u0026 events, and gain further statistical insights from the data."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "** Manage contacts and events faster than a typical mouse/GUI driven app"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "** Use tags to categorize events and volunteers"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "** Support more fields for volunteers, such as number of volunteer hours"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "** View volunteer and event statistics and derive insights from them"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Site Map"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cUserGuide#, User Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cDeveloperGuide#, Developer Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cAboutUs#, About Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cContactUs#, Contact Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Acknowledgements"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "* This application is based on https://github.com/nus-cs2103-AY1819S1/addressbook-level4[Address Book - Level 4] developed by"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "the https://se-edu.github.io/docs/Team.html[se-edu] team."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Some parts of this sample application were inspired by the excellent http://code.makery.ch/library/javafx-8-tutorial/[Java FX tutorial] by"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_Marco Jakob_."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Libraries used: https://github.com/TestFX/TestFX[TextFX], https://bitbucket.org/controlsfx/controlsfx/[ControlsFX], https://github.com/FasterXML/jackson[Jackson], https://github.com/google/guava[Guava], https://github.com/junit-team/junit5[JUnit5]"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Licence : link:LICENSE[MIT]"
+      }
+    ],
+    "authorContributionMap": {
+      "Kratious": 14,
+      "-": 28
+    }
+  },
+  {
+    "path": "docs/AboutUs.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d About Us"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":relfileprefix: team/"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "AddressBook - Level 4 was developed by the https://se-edu.github.io/docs/Team.html[se-edu] team. +"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_{The dummy content given below serves as a placeholder to be used by future forks of the project.}_ +"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{empty} +"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "We are a team based in the http://www.comp.nus.edu.sg[School of Computing, National University of Singapore]."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Project Team"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Afiq Lattif"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::afiqlattif.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "{empty}[https://github.com/afiqlattif[github]] [\u003c\u003cafiqlattif#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Responsibilities: -"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Sem Jing Han"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::kratious.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "{empty}[http://github.com/kratious[github]] [\u003c\u003csemjinghan#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Responsibilities: -"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Amabel Yeo"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "image::imarbles.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "{empty}[https://github.com/iMarbles[github]] [\u003c\u003camabelyeo#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Responsibilities: -"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Thangavel Sharan"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::sharan8.jpeg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "{empty}[https://github.com/sharan8[github]] [\u003c\u003cthangavelsharan#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Responsibilities: -"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Ngoh Wen Jun"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::yl_coder.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "{empty}[https://github.com/Scrubbius[github]] [\u003c\u003cngohwenjun#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Role: Developer +"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Responsibilities: -"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 16,
+      "-": 41
+    }
+  },
+  {
+    "path": "docs/UserGuide.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d SocialCare - User Guide"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: UserGuide"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc:"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc-title:"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":toc-placement: preamble"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":toclevels: 4"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":sectnums:"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":xrefstyle: full"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":experimental:"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":tip-caption: :bulb:"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":note-caption: :information_source:"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":repoURL: https://github.com/CS2103-AY1819S1-W16-2/main"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "By: `Team W16-2`      Since: `Sept 2018`      Licence: `MIT`"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Introduction"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "SocialCare morphs the given AB4 application into a volunteer management system that allows Social Welfare Organisations to better manage their volunteers \u0026 events, and gain further statistical insights from the data. +"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "SocialCare is for organizations which *prefer to use a desktop app for managing their volunteers *. More importantly, SocialCare is *optimized for those who prefer to work with a Command Line Interface* (CLI) while still having the benefits of a Graphical User Interface (GUI). If you can type fast, SocialCare can get your volunteer and event management tasks done faster than traditional GUI apps. Interested? Jump to the \u003c\u003cQuick Start\u003e\u003e to get started. Enjoy!"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Quick Start"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Ensure you have Java version `9` or later installed in your Computer."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Download the latest `addressbook.jar` link:{repoURL}/releases[here]."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ".  Copy the file to the folder you want to use as the home folder for SocialCare."
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Double-click the file to start the app. The GUI should appear in a few seconds."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "+"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::Ui.png[width\u003d\"790\"]"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "+"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Type the command in the command box and press kbd:[Enter] to execute it. +"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. typing *`help`* and pressing kbd:[Enter] will open the help window."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".  Refer to \u003c\u003cFeatures\u003e\u003e for details of each command."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[[Features]]"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Features"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*Command Format*"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Words in `UPPER_CASE` are the parameters to be supplied by the user e.g. in `add n/NAME`, `NAME` is a parameter which can be used as `add n/John Doe`."
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* Items in square brackets are optional e.g `[n/NAME]`."
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* Items with `…`​ after them can be used multiple times including zero times e.g. `[t/TAG]...` can be used as `{nbsp}` (i.e. 0 times), `t/charity`, `t/charity t/help` etc."
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Parameters can be in any order e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d General Commands"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Viewing help : `help`"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `help`"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Listing entered commands : `history`"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Lists all the commands that you have entered in reverse chronological order. +"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `history`"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[NOTE]"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// tag::undoredo[]"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Undoing previous command : `undo`"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Restores the system to the state before the previous _undoable_ command was executed. +"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `undo`"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[NOTE]"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Undoable commands: those commands that modify the system\u0027s content (`add`, `edit`, and `delete`)."
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`list` +"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `select 1` +"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`list` +"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` +"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The `undo` command fails as there are no undoable commands executed previously."
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`clear` +"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `clear` command) +"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Redoing the previously undone command : `redo`"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Reverses the most recent `undo` command. +"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `redo`"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` (reapplies the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` +"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The `redo` command fails as there are no `undo` commands executed previously."
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`clear` +"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `clear` command) +"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` (reapplies the `delete 1` command) +"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` (reapplies the `clear` command) +"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// end::undoredo[]"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Clearing all entries : `clear`"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Clears all entries from the volunteers or events, depending on context. +"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `clear`"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Exiting the program : `exit`"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Exits the program. +"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `exit`"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Switching context : `switch`"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Switches context to volunteers or events +"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `switch`"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `switch -e` +"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Switches to the event context"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `switch -v` +"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Switches to the volunteers context"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `switch -assign` +"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Switches to the assigning roles context"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Volunteer Management"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Register new volunteer: `add`"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Adds a volunteer to the system when in the volunteers context +"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `add n/NAME b/BIRTHDAY g/GENDER a/ADDRESS e/EMAIL p/PHONE_NUMBER [t/TAG]...`"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* Birthday is in the \u0027DD-MM-YYYY format\u0027"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* A volunteer can have any number of tags (including 0)"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `add n/John Doe b/05-08-1995 g/M a/Yishun Block 62 p/87183749 e/John@gmail.com`"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `add n/Betty Sue b/31-12-1995 g/M a/Ang Mo Kio Block 62 p/81749272 e/Betty@gmail.com t/Longtime t/Helpful`"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Listing all volunteers : `list`"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Lists all volunteers in the system when in the volunteers context. +"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `list`"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Editing volunteers details : `edit`"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Edit details of an existing volunteer in the system when in the volunteers context. +"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `edit INDEX [n/NAME] [b/BIRTHDAY] [g/GENDER] [a/ADDRESS] [e/EMAIL] [p/PHONE_NUMBER] [t/TAG]...`"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* Edits the volunteer at the specified `INDEX`. The index refers to the index number shown in the displayed volunteer list. The index *must be a positive integer* 1, 2, 3, ..."
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* At least one of the optional fields must be provided."
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* Existing values will be updated to the input values."
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* When editing tags, the existing tags of the volunteer will be removed i.e adding of tags is not cumulative."
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* You can remove all the volunteer\u0027s tags by typing `t/` without specifying any tags after it."
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `edit 1 n/John Doe` +"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Edits the name of the volunteer at index 1"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Deleting volunteer details : `delete`"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Deletes details of an existing volunteer in the system when in the volunteer context. +"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `delete INDEX`"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `delete 1 +"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Deletes the details of the volunteer specified at index 1"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Event Management"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Add new event: `add`"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Adds an event to the system when in the event context +"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `add n/NAME l/LOCATION sd/START_DATE ed/END_DATE d/DESCRIPTION [t/TAG]...`"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* Start date and end dates are in the \u0027DD-MM-YYYY format\u0027"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* An event can have any number of tags (including 0)"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `add n/Flag Day l/Yishun MRT S sd/31-10-2018 ed/31-10-2018 d/For the children\u0027s home`"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `add n/Fundraising l/Tampines S sd/31-09-2018 ed/31-09-2018 d/Raising funds  t/fundraiser t/charity`"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Listing all events : `list`"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Lists all events in the system when in the events context. +"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `list`"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Editing event details : `edit`"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Edit details of an existing event in the system when in the event context. +"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `edit INDEX [n/NAME] [l/LOCATION] [sd/START_DATE] [ed/END_DATE] [d/DESCRIPTION] [t/TAG]...`"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* Edits the event at the specified `INDEX`. The index refers to the index number shown in the displayed event list. The index *must be a positive integer* 1, 2, 3, ..."
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* At least one of the optional fields must be provided."
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* Existing values will be updated to the input values."
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* When editing tags, the existing tags of the event will be removed i.e adding of tags is not cumulative."
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* You can remove all the event\u0027s tags by typing `t/` without specifying any tags after it."
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `edit 1 n/Charity Fun Run t/` +"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Edits the name of event at index 1 and removes all tags"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Deleting event details : `delete`"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Deletes details of an existing event in the system when in the event context. +"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Format: `delete INDEX`"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* `delete 1+"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "Deletes the details of the event specified at index 1"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Miscellaneous"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Saving the data"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "SocialCare data are saved in the hard disk automatically after any command that changes the data. +"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "There is no need to save manually."
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// tag::dataencryption[]"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_{explain how the user can enable/disable data encryption}_"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// end::dataencryption[]"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d FAQ"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*Q*: How do I transfer my data to another Computer? +"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous SocialCare folder."
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Commands Summary"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d General Commands"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Help* : `help`"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Clear* : `clear`"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *History* : `history`"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Undo* : `undo`"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Redo* : `redo`"
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Exit* : `exit`"
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Switching Context* : `switch` +"
+      },
+      {
+        "lineNumber": 271,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "e.g. `switch -e`"
+      },
+      {
+        "lineNumber": 272,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 273,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Volunteer Management"
+      },
+      {
+        "lineNumber": 274,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 275,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Add* `add n/NAME b/BIRTHDAY g/GENDER a/ADDRESS e/EMAIL p/PHONE_NUMBER [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 276,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "e.g. `add n/John Doe b/05-08-1995 g/M a/Yishun Block 62 p/87183749 e/John@gmail.com`"
+      },
+      {
+        "lineNumber": 277,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *List* : `list`"
+      },
+      {
+        "lineNumber": 278,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Edit* : `edit INDEX [n/NAME][b/BIRTHDAY] [g/GENDER] [a/ADDRESS] [e/EMAIL] [p/PHONE_NUMBER] [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 279,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "e.g. `edit 2 n/James Lee e/jameslee@example.com`"
+      },
+      {
+        "lineNumber": 280,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Delete* : `delete INDEX` +"
+      },
+      {
+        "lineNumber": 281,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "e.g. `delete 3`"
+      },
+      {
+        "lineNumber": 282,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 283,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d\u003d Event Management"
+      },
+      {
+        "lineNumber": 284,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Add* `add n/NAME l/LOCATION sd/START_DATE ed/END_DATE d/DESCRIPTION [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 285,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "e.g. `add n/Fundraising l/Tampines S sd/31-09-2018 ed/31-09-2018 d/Raising funds  t/fundraiser t/charity`"
+      },
+      {
+        "lineNumber": 286,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *List* : `list`"
+      },
+      {
+        "lineNumber": 287,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Edit* : `edit INDEX [n/NAME] [l/LOCATION] [sd/START_DATE] [ed/END_DATE] [d/DESCRIPTION] [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 288,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "e.g. `edit 2 n/Fundraiser`"
+      },
+      {
+        "lineNumber": 289,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Delete* : `delete INDEX` +"
+      },
+      {
+        "lineNumber": 290,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "e.g. `delete 3`"
+      },
+      {
+        "lineNumber": 291,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 292,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 122,
+      "-": 170
+    }
+  },
+  {
+    "path": "docs/team/afiqlattif.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d Afiq Lattif - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":imagesDir: ../images"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":stylesDir: ../stylesheets"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: SocialCare"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "SocialCare morphs the given AddressBook - Level 4 application into a volunteer management system that allows Social Welfare Organisations to better manage their volunteers \u0026 events, and gain further statistical insights from the data. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Major enhancement*: added *the ability to undo/redo previous commands*"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Credits: _{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}_"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Minor enhancement*: added a history command that allows the user to navigate to previous commands using up/down keys."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] _{give links to collated code files}_"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Project management:"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Enhancements to existing features:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Documentation:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Community:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Tools:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a third party library (Natty) to the project (https://github.com[#42])"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a new Github plugin (CircleCI) to the team repo"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{you can add/remove categories in the list above}_"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: PowerPointLabs"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{Optionally, you may include other projects in your portfolio.}_"
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 72
+    }
+  },
+  {
+    "path": "docs/team/amabelyeo.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d Amabel Yeo - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":imagesDir: ../images"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":stylesDir: ../stylesheets"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: SocialCare"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "SocialCare morphs the given AddressBook - Level 4 application into a volunteer management system that allows Social Welfare Organisations to better manage their volunteers \u0026 events, and gain further statistical insights from the data. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Major enhancement*: added *the ability to undo/redo previous commands*"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Credits: _{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}_"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Minor enhancement*: added a history command that allows the user to navigate to previous commands using up/down keys."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] _{give links to collated code files}_"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Project management:"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Enhancements to existing features:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Documentation:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Community:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Tools:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a third party library (Natty) to the project (https://github.com[#42])"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a new Github plugin (CircleCI) to the team repo"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{you can add/remove categories in the list above}_"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: PowerPointLabs"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{Optionally, you may include other projects in your portfolio.}_"
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 72
+    }
+  },
+  {
+    "path": "docs/team/ngohwenjun.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d Ngoh Wen Jun - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":imagesDir: ../images"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":stylesDir: ../stylesheets"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: SocialCare"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "SocialCare morphs the given AddressBook - Level 4 application into a volunteer management system that allows Social Welfare Organisations to better manage their volunteers \u0026 events, and gain further statistical insights from the data. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Major enhancement*: added *the ability to undo/redo previous commands*"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Credits: _{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}_"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Minor enhancement*: added a history command that allows the user to navigate to previous commands using up/down keys."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] _{give links to collated code files}_"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Project management:"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Enhancements to existing features:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Documentation:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Community:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Tools:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a third party library (Natty) to the project (https://github.com[#42])"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a new Github plugin (CircleCI) to the team repo"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{you can add/remove categories in the list above}_"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: PowerPointLabs"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{Optionally, you may include other projects in your portfolio.}_"
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 72
+    }
+  },
+  {
+    "path": "docs/team/semjinghan.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d Sem Jing Han - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":imagesDir: ../images"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":stylesDir: ../stylesheets"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: SocialCare"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "SocialCare morphs the given AddressBook - Level 4 application into a volunteer management system that allows Social Welfare Organisations to better manage their volunteers \u0026 events, and gain further statistical insights from the data. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Major enhancement*: added *the ability to undo/redo previous commands*"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Credits: _{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}_"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Minor enhancement*: added a history command that allows the user to navigate to previous commands using up/down keys."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] _{give links to collated code files}_"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Project management:"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Enhancements to existing features:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Documentation:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Community:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Tools:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a third party library (Natty) to the project (https://github.com[#42])"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a new Github plugin (CircleCI) to the team repo"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{you can add/remove categories in the list above}_"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: PowerPointLabs"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{Optionally, you may include other projects in your portfolio.}_"
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 72
+    }
+  },
+  {
+    "path": "docs/team/thangavelsharan.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d Thangavel Sharan - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":imagesDir: ../images"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ":stylesDir: ../stylesheets"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: SocialCare"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "SocialCare morphs the given AddressBook - Level 4 application into a volunteer management system that allows Social Welfare Organisations to better manage their volunteers \u0026 events, and gain further statistical insights from the data. The user interacts with it using a CLI, and it has a GUI created with JavaFX. It is written in Java, and has about 10 kLoC."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Major enhancement*: added *the ability to undo/redo previous commands*"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** What it does: allows the user to undo all previous commands one at a time. Preceding undo commands can be reversed by using the redo command."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Justification: This feature improves the product significantly because a user can make mistakes in commands and the app should provide a convenient way to rectify them."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Highlights: This enhancement affects existing commands and commands to be added in future. It required an in-depth analysis of design alternatives. The implementation too was challenging as it required changes to existing commands."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Credits: _{mention here if you reused any code/ideas from elsewhere or if a third-party library is heavily used in the feature so that a reader can make a more accurate judgement of how much effort went into the feature}_"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Minor enhancement*: added a history command that allows the user to navigate to previous commands using up/down keys."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Code contributed*: [https://github.com[Functional code]] [https://github.com[Test code]] _{give links to collated code files}_"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Project management:"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Managed releases `v1.3` - `v1.5rc` (3 releases) on GitHub"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Enhancements to existing features:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Updated the GUI color scheme (Pull requests https://github.com[#33], https://github.com[#34])"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Wrote additional tests for existing features to increase coverage from 88% to 92% (Pull requests https://github.com[#36], https://github.com[#38])"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Documentation:"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Did cosmetic tweaks to existing contents of the User Guide: https://github.com[#14]"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Community:"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** PRs reviewed (with non-trivial review comments): https://github.com[#12], https://github.com[#32], https://github.com[#19], https://github.com[#42]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Contributed to forum discussions (examples:  https://github.com[1], https://github.com[2], https://github.com[3], https://github.com[4])"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Reported bugs and suggestions for other teams in the class (examples:  https://github.com[1], https://github.com[2], https://github.com[3])"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Some parts of the history feature I added was adopted by several other class mates (https://github.com[1], https://github.com[2])"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "** Tools:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a third party library (Natty) to the project (https://github.com[#42])"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "*** Integrated a new Github plugin (CircleCI) to the team repo"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{you can add/remove categories in the list above}_"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "\u003d\u003d PROJECT: PowerPointLabs"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "_{Optionally, you may include other projects in your portfolio.}_"
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 72
+    }
+  }
+]

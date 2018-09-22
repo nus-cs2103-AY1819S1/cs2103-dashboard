@@ -1,0 +1,1036 @@
+[
+  {
+    "path": "README.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d modsUNI"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github,env-browser[:relfileprefix: docs/]"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://travis-ci.org/CS2103-AY1819S1-W17-2/main[image:https://travis-ci.org/CS2103-AY1819S1-W17-2/main.svg?branch\u003dmaster[Build Status]]"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://ci.appveyor.com/project/CrimsonJacket/main[image:https://ci.appveyor.com/api/projects/status/6p90b4gg7ahc31r9?svg\u003dtrue[Build Status]]"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://coveralls.io/github/CS2103-AY1819S1-W17-2/main?branch\u003dmaster[image:https://coveralls.io/repos/github/CS2103-AY1819S1-W17-2/main/badge.svg?branch\u003dmaster[Coverage Status]]"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://www.codacy.com/app/CrimsonJacket/main?utm_source\u003dgithub.com\u0026amp;utm_medium\u003dreferral\u0026amp;utm_content\u003dCS2103-AY1819S1-W17-2/main\u0026amp;utm_campaign\u003dBadge_Grade[image:https://api.codacy.com/project/badge/Grade/4944450c9c804c8d9c181ae1cc733c1c[Codacy Badge]]"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "https://gitter.im/CS2103T-modUni/Lobby[image:https://badges.gitter.im/CS2103T-modUni/Lobby.svg[Gitter chat]]"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifdef::env-github[]"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::docs/images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "ifndef::env-github[]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "image::images/Ui.png[width\u003d\"600\"]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "endif::[]"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "* modsUni is a desktop timetable management application created by students for students. It incorporates a simple GUI with majority of its user interactions occuring in its in-built CLI."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "* modsUni is targeted at local SG university undergraduates (like NUS, NTU, SMU) in need of a tool to generate a simple module plan for their respective academic semesters."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "* Undergraduates with no clue as to how to plan their timetables in the respective semesters can use our tool to include possible module combinations and with a simple command/click, modsUni would generate a possible timetable for students."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "* With literally hundreds of modules and thousands more combinations, students are faced with a dilemma semester after semester. Additional prerequisites and preclusions only exacerbate the already complicated and often frustrating process of planning timetables."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "* modsUni is the one-stop solution for all students. Incorporating advanced algorithms and enhanced UI/UX design, modsUni can help students manage their modules throughout their candidature effectively, efficiently and swiftly."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "* modsUni includes the following features:"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "** Students can manage their respective accounts"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "** Students can manage modules their have already taken or ought to take"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "** Students can export/import current module configurations"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "** Students can generate a timetable that includes the modules they have specified"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "** Administrators can add/update/delete modules accordingly"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Site Map"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cUserGuide#, User Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cDeveloperGuide#, Developer Guide\u003e\u003e"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cAboutUs#, About Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* \u003c\u003cContactUs#, Contact Us\u003e\u003e"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Acknowledgements"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Some parts of this sample application were inspired by the excellent http://code.makery.ch/library/javafx-8-tutorial/[Java FX tutorial] by"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "_Marco Jakob_."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "CrimsonJacket"
+        },
+        "content": "* modsUni is built upon an https://github.com/se-edu/addressbook-level4[AddressBook-Level4] Application created by the https://github.com/se-edu/[SE-EDU] initiative."
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Libraries used: https://github.com/TestFX/TestFX[TextFX], https://bitbucket.org/controlsfx/controlsfx/[ControlsFX], https://github.com/FasterXML/jackson[Jackson], https://github.com/google/guava[Guava], https://github.com/junit-team/junit5[JUnit5]"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Licence : link:LICENSE[MIT]"
+      }
+    ],
+    "authorContributionMap": {
+      "CrimsonJacket": 12,
+      "-": 32
+    }
+  },
+  {
+    "path": "docs/AboutUs.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d About Us"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":relfileprefix: team/"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":imagesDir: images"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ":stylesDir: stylesheets"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "modsUni - A desktop timetable management application created by students for students."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "We are a team based in the http://www.comp.nus.edu.sg[School of Computing, National University of Singapore]."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Project Team"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "\u003d\u003d\u003d Daniel Tan Jia Wang"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "image::CrimsonJacket.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "{empty}[https://github.com/CrimsonJacket[github]] [\u003c\u003cdanieltan#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "Role: Team Lead"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "\u003d\u003d\u003d Edric Teo Jin Kai"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "image::etjk.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "{empty}[http://github.com/etjk[github]] [\u003c\u003cedricteo#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "Role: Documentation"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "\u003d\u003d\u003d He ZhenFeng"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "image::hzf1174.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "{empty}[http://github.com/hzf1174[github]] [\u003c\u003czhenfeng#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "Role: Testing"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "\u003d\u003d\u003d Lin Deming"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "image::deming16.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "{empty}[http://github.com/deming16[github]] [\u003c\u003cdeming#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "Role: Integration"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "\u003d\u003d\u003d Reuben Tan Jun Liang"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "image::RTJL.jpg[width\u003d\"150\", align\u003d\"left\"]"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "{empty}[http://github.com/RTJL[github]] [\u003c\u003creubentan#, portfolio\u003e\u003e]"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "etjk"
+        },
+        "content": "Role: Code Quality"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u0027\u0027\u0027"
+      }
+    ],
+    "authorContributionMap": {
+      "-": 29,
+      "etjk": 22
+    }
+  },
+  {
+    "path": "docs/team/zhenfeng.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "\u003d He Zhenfeng - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ":site-section: AboutUs"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ":imagesDir: ../images"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ":stylesDir: ../stylesheets"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "\u003d\u003d PROJECT: ModsUni"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "---"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "modsUni is a desktop timetable management application created by students for students. It incorporates a simple GUI with majority of its user interactions occurring in its in-built CLI."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "* *Major enhancement*:"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "** What it does:"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "** Justification:"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "** Highlights:"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "** Credits:"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "* *Minor enhancement*:"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "* *Code contributed*:"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "include::../UserGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003dundoredo]"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": "include::../DeveloperGuide.adoc[tag\u003ddataencryption]"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "hzf1174"
+        },
+        "content": ""
+      }
+    ],
+    "authorContributionMap": {
+      "hzf1174": 49
+    }
+  }
+]
