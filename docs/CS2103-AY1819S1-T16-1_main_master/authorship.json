@@ -23227,9 +23227,9 @@
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "bannified"
+          "gitId": "-"
         },
-        "content": "            if (wishSavedDifference.value \u003c 0) {"
+        "content": "            if (wishSavedDifference.value \u003e 0) {"
       },
       {
         "lineNumber": 73,
@@ -23429,8 +23429,9 @@
       }
     ],
     "authorContributionMap": {
-      "bannified": 15,
-      "dioptrique": 85
+      "bannified": 14,
+      "dioptrique": 85,
+      "-": 1
     }
   },
   {
@@ -37413,9 +37414,9 @@
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "bannified"
+          "gitId": "-"
         },
-        "content": "        return Amount.add(new Amount(savedAmount.toString()), new Amount(price.toString()));"
+        "content": "        return Amount.add(new Amount(savedAmount.toString()), new Amount(\"-\" + price.toString()));"
       },
       {
         "lineNumber": 119,
@@ -37755,9 +37756,9 @@
       }
     ],
     "authorContributionMap": {
-      "bannified": 47,
+      "bannified": 46,
       "dioptrique": 26,
-      "-": 93
+      "-": 94
     }
   },
   {
@@ -46773,84 +46774,84 @@
         "author": {
           "gitId": "jiholim"
         },
-        "content": "import seedu.address.commons.core.LogsCenter;"
+        "content": "import javafx.scene.layout.StackPane;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "import seedu.address.commons.events.ui.WishPanelSelectionChangedEvent;"
+        "content": "import seedu.address.commons.core.LogsCenter;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "import seedu.address.model.wish.Wish;"
+        "content": "import seedu.address.commons.events.ui.WishPanelSelectionChangedEvent;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "import seedu.address.model.wish.Wish;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "jiholim"
         },
-        "content": " * Panel containing the detail of wish."
+        "content": "/**"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "jiholim"
         },
-        "content": " */"
+        "content": " * Panel containing the detail of wish."
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "public class WishDetailPanel extends UiPart\u003cRegion\u003e {"
+        "content": " */"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "public class WishDetailPanel extends UiPart\u003cRegion\u003e {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private static final String FXML \u003d \"WishDetailPanel.fxml\";"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    private static final String FXML \u003d \"WishDetailPanel.fxml\";"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+        "content": "    private static final String[] TAG_COLORS \u003d { \"red\", \"yel\", \"blue\", \"navy\", \"ora\", \"green\", \"pink\", \"hot\", \"pur\" };"
       },
       {
         "lineNumber": 24,
@@ -46864,371 +46865,371 @@
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    @FXML"
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private Label name;"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    private WishDetailSavingAmount wishDetailSavingAmount;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    @FXML"
+        "content": "    private WishDetailSavingHistory wishDetailSavingHistory;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private Label price;"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    @FXML"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    @FXML"
+        "content": "    private StackPane wishSavingAmountPlaceholder;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private Label savedAmount;"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    @FXML"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    @FXML"
+        "content": "    private StackPane wishSavingHistoryPlaceholder;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private Label url;"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    @FXML"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    @FXML"
+        "content": "    private Label name;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private Label email;"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    @FXML"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    @FXML"
+        "content": "    private FlowPane tags;"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private Label remark;"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    public WishDetailPanel() {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    @FXML"
+        "content": "        super(FXML);"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private FlowPane tags;"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "        // To prevent triggering events for typing inside the loaded Web page."
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    public WishDetailPanel() {"
+        "content": "        getRoot().setOnKeyPressed(Event::consume);"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        super(FXML);"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "        wishDetailSavingAmount \u003d new WishDetailSavingAmount();"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        // To prevent triggering events for typing inside the loaded Web page."
+        "content": "        wishSavingAmountPlaceholder.getChildren().add(wishDetailSavingAmount.getRoot());"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        getRoot().setOnKeyPressed(Event::consume);"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "        wishDetailSavingHistory \u003d new WishDetailSavingHistory();"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        loadDefaultPage();"
+        "content": "        wishSavingHistoryPlaceholder.getChildren().add(wishDetailSavingHistory.getRoot());"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        registerAsAnEventHandler(this);"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    }"
+        "content": "        loadDefaultPage();"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "        registerAsAnEventHandler(this);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     * Load the default page."
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    public void loadDefaultPage() {"
+        "content": "     * Load the default page."
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        name.setText(\"Click on any wish for details\");"
+        "content": "     */"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        price.setText(\"\");"
+        "content": "    public void loadDefaultPage() {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        savedAmount.setText(\"\");"
+        "content": "        name.setText(\"Click on any wish for details\");"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        url.setText(\"\");"
+        "content": "    }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        email.setText(\"\");"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        remark.setText(\"\");"
+        "content": "    /**"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    }"
+        "content": "     * Load the page that shows the detail of wish."
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    /**"
+        "content": "    private void loadWishPage(Wish wish) {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     * Load the page that shows the detail of wish."
+        "content": "        name.setText(wish.getName().fullName);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     */"
+        "content": "        initTags(wish);"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private void loadWishPage(Wish wish) {"
+        "content": "    }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        name.setText(wish.getName().fullName);"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        savedAmount.setText(\"Saved: $\" + wish.getSavedAmount().toString());"
+        "content": "    /**"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        price.setText(\"Price: $\" + wish.getPrice().toString());"
+        "content": "     * Returns the color style for {@code tagName}\u0027s label."
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        url.setText(\"Product URL: \" + wish.getUrl().value);"
+        "content": "     */"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        email.setText(\"Email(?): \" + wish.getEmail().value);"
+        "content": "    private String getTagColorStyleFor(String tagName) {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        remark.setText(wish.getRemark().value);"
+        "content": "        return TAG_COLORS[Math.abs(tagName.hashCode()) % TAG_COLORS.length];"
       },
       {
         "lineNumber": 78,
@@ -47249,38 +47250,122 @@
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    @Subscribe"
+        "content": "    /**"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    private void handleWishPanelSelectionChangedEvent(WishPanelSelectionChangedEvent event) {"
+        "content": "     * Creates the tag labels for {@code wish}."
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": "     */"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        loadWishPage(event.getNewSelection());"
+        "content": "    private void initTags(Wish wish) {"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    }"
+        "content": "        tags.getChildren().clear();"
       },
       {
         "lineNumber": 85,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        wish.getTags().forEach(tag -\u003e {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            Label tagLabel \u003d new Label(tag.tagName);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            tagLabel.getStyleClass().add(getTagColorStyleFor(tag.tagName));"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            tags.getChildren().add(tagLabel);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private void handleWishPanelSelectionChangedEvent(WishPanelSelectionChangedEvent event) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        loadWishPage(event.getNewSelection());"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 97,
         "author": {
           "gitId": "jiholim"
         },
@@ -47288,7 +47373,695 @@
       }
     ],
     "authorContributionMap": {
-      "jiholim": 85
+      "jiholim": 97
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/ui/WishDetailSavingAmount.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "package seedu.address.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import java.util.logging.Logger;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import com.google.common.eventbus.Subscribe;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import javafx.fxml.FXML;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import javafx.scene.control.Label;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import javafx.scene.layout.Region;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import seedu.address.commons.core.LogsCenter;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import seedu.address.commons.events.ui.WishPanelSelectionChangedEvent;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import seedu.address.model.wish.Wish;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": " * Panel containing the detail of wish."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "public class WishDetailSavingAmount extends UiPart\u003cRegion\u003e {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private static final String FXML \u003d \"WishDetailSavingAmount.fxml\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private Label price;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private Label savedAmount;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    public WishDetailSavingAmount() {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        super(FXML);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        loadDefaultDetails();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        registerAsAnEventHandler(this);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "     * Load the default page."
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    public void loadDefaultDetails() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        price.setText(\"\");"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        savedAmount.setText(\"\");"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "     * Load the page that shows the detail of wish."
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private void loadWishDetails(Wish wish) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        savedAmount.setText(\"$\" + wish.getSavedAmount().toString());"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        price.setText(\"/ $\" + wish.getPrice().toString());"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private void handleWishPanelSelectionChangedEvent(WishPanelSelectionChangedEvent event) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        loadWishDetails(event.getNewSelection());"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiholim": 57
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/ui/WishDetailSavingHistory.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "package seedu.address.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import java.util.logging.Logger;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import com.google.common.eventbus.Subscribe;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import javafx.fxml.FXML;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import javafx.scene.layout.Region;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import seedu.address.commons.core.LogsCenter;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import seedu.address.commons.events.ui.WishPanelSelectionChangedEvent;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "import seedu.address.model.wish.Wish;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": " * Panel containing the detail of wish."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "public class WishDetailSavingHistory extends UiPart\u003cRegion\u003e {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private static final String FXML \u003d \"WishDetailSavingHistory.fxml\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    public WishDetailSavingHistory() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        super(FXML);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        registerAsAnEventHandler(this);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "     * Load the page that shows the detail of wish."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private void loadWishDetails(Wish wish) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    private void handleWishPanelSelectionChangedEvent(WishPanelSelectionChangedEvent event) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        loadWishDetails(event.getNewSelection());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiholim": 39
     }
   },
   {
@@ -48121,21 +48894,21 @@
         "author": {
           "gitId": "jiholim"
         },
-        "content": ".detail_label {"
+        "content": ".detail_sub_title_label {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     -fx-font-family: \"Segoe UI Semibold\";"
+        "content": "    -fx-font-family: \"Segoe UI Semibold\";"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     -fx-font-size: 16px;"
+        "content": "     -fx-font-size: 22px;"
       },
       {
         "lineNumber": 37,
@@ -48168,632 +48941,632 @@
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".text-field {"
+        "content": ".detail_label {"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-font-size: 12pt;"
+        "content": "     -fx-font-family: \"Segoe UI Semibold\";"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-font-family: \"Segoe UI Semibold\";"
+        "content": "     -fx-font-size: 16px;"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "     -fx-text-fill: #ffffff;"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ""
+        "content": "     -fx-padding: 15 0 15 0;"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ".box {"
+        "content": "}"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: #161618;"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "}"
+        "content": ".saving_amount_label {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "     -fx-font-family: \"Segoe UI Bold\";"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ".box-with-shadow {"
+        "content": "     -fx-font-size: 50px;"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-effect: dropshadow(gaussian, black, 12, 0, 5, 5);"
+        "content": "     -fx-text-fill: #2EE298;"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "     -fx-padding: 15 0 15 0;"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "-"
-        },
-        "content": ".tab-pane {"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-padding: 0 0 0 1;"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
         "content": ""
       },
       {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ".price_label {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "     -fx-font-family: \"Segoe UI Semibold\";"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "     -fx-font-size: 20px;"
+      },
+      {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".tab-pane .tab-header-area {"
+        "content": "     -fx-text-fill: #ffffff;"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-padding: 0 0 0 0;"
+        "content": "     -fx-padding: 33 0 15 0;"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-min-height: 0;"
+        "content": "}"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-max-height: 0;"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ".text-field {"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-font-size: 12pt;"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": ".table-view {"
+        "content": "    -fx-font-family: \"Segoe UI Semibold\";"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-base: #161618;"
+        "content": "}"
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-control-inner-background: #161618;"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: #161618;"
+        "content": ".box {"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-table-cell-border-color: transparent;"
+        "content": "    -fx-background-color: #161618;"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-table-header-border-color: transparent;"
+        "content": "}"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-padding: 5;"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "}"
+        "content": ".box-with-shadow {"
       },
       {
         "lineNumber": 72,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".table-view .column-header-background {"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-background-color: transparent;"
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 76,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 77,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".table-view .column-header, .table-view .filler {"
-      },
-      {
-        "lineNumber": 78,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-size: 35;"
-      },
-      {
-        "lineNumber": 79,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-border-width: 0 0 1 0;"
-      },
-      {
-        "lineNumber": 80,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-background-color: transparent;"
-      },
-      {
-        "lineNumber": 81,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-border-color:"
-      },
-      {
-        "lineNumber": 82,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        transparent"
-      },
-      {
-        "lineNumber": 83,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        transparent"
-      },
-      {
-        "lineNumber": 84,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        derive(-fx-base, 80%)"
-      },
-      {
-        "lineNumber": 85,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        transparent;"
-      },
-      {
-        "lineNumber": 86,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-border-insets: 0 10 1 0;"
-      },
-      {
-        "lineNumber": 87,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 89,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".table-view .column-header .label {"
-      },
-      {
-        "lineNumber": 90,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-font-size: 20pt;"
-      },
-      {
-        "lineNumber": 91,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-font-family: \"Segoe UI Light\";"
-      },
-      {
-        "lineNumber": 92,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-text-fill: white;"
-      },
-      {
-        "lineNumber": 93,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-alignment: center-left;"
-      },
-      {
-        "lineNumber": 94,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-opacity: 1;"
-      },
-      {
-        "lineNumber": 95,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 96,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 97,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".table-view:focused .table-row-cell:filled:focused:selected {"
-      },
-      {
-        "lineNumber": 98,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-background-color: -fx-focus-color;"
-      },
-      {
-        "lineNumber": 99,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 100,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 101,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".split-pane:horizontal .split-pane-divider {"
-      },
-      {
-        "lineNumber": 102,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: derive(#161618, 0%);"
-      },
-      {
-        "lineNumber": 103,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-border-color: transparent transparent transparent transparent;"
-      },
-      {
-        "lineNumber": 104,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 105,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 106,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".split-pane {"
-      },
-      {
-        "lineNumber": 107,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-border-radius: 1;"
-      },
-      {
-        "lineNumber": 108,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-border-width: 1;"
-      },
-      {
-        "lineNumber": 109,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: derive(#161618, 0%);"
-      },
-      {
-        "lineNumber": 110,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 111,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 112,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".list-view {"
-      },
-      {
-        "lineNumber": 113,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-background-insets: 0;"
-      },
-      {
-        "lineNumber": 114,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-padding: 0;"
-      },
-      {
-        "lineNumber": 115,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: derive(#161618, 0%);"
-      },
-      {
-        "lineNumber": 116,
         "author": {
           "gitId": "jiholim"
         },
         "content": "    -fx-effect: dropshadow(gaussian, black, 12, 0, 5, 5);"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 73,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".tab-pane {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-padding: 0 0 0 1;"
+      },
+      {
+        "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
         "content": "}"
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": ".list-cell {"
+        "content": ".tab-pane .tab-header-area {"
       },
       {
-        "lineNumber": 120,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-label-padding: 0 0 0 0;"
-      },
-      {
-        "lineNumber": 121,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-graphic-text-gap : 0;"
-      },
-      {
-        "lineNumber": 122,
+        "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
         "content": "    -fx-padding: 0 0 0 0;"
       },
       {
-        "lineNumber": 123,
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-min-height: 0;"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-max-height: 0;"
+      },
+      {
+        "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
         "content": "}"
       },
       {
-        "lineNumber": 124,
+        "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".table-view {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-base: #161618;"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-control-inner-background: #161618;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: #161618;"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-table-cell-border-color: transparent;"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-table-header-border-color: transparent;"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-padding: 5;"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".table-view .column-header-background {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-background-color: transparent;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".table-view .column-header, .table-view .filler {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-size: 35;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-border-width: 0 0 1 0;"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-background-color: transparent;"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-border-color:"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        transparent"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        transparent"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        derive(-fx-base, 80%)"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        transparent;"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-border-insets: 0 10 1 0;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".table-view .column-header .label {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-font-size: 20pt;"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-font-family: \"Segoe UI Light\";"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-text-fill: white;"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-alignment: center-left;"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-opacity: 1;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".table-view:focused .table-row-cell:filled:focused:selected {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-background-color: -fx-focus-color;"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".split-pane:horizontal .split-pane-divider {"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: derive(#161618, 0%);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-border-color: transparent transparent transparent transparent;"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": ".list-cell:filled:even {"
-      },
-      {
-        "lineNumber": 126,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: #161618;"
-      },
-      {
-        "lineNumber": 127,
-        "author": {
-          "gitId": "-"
-        },
         "content": "}"
       },
       {
-        "lineNumber": 128,
+        "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".split-pane {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-border-radius: 1;"
+      },
+      {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": ".list-cell:filled:odd {"
+        "content": "    -fx-border-width: 1;"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: #161618;"
+        "content": "    -fx-background-color: derive(#161618, 0%);"
       },
       {
         "lineNumber": 131,
@@ -48814,133 +49587,133 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".list-cell:filled:selected {"
+        "content": ".list-view {"
       },
       {
         "lineNumber": 134,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #192C26;"
+        "content": "    -fx-background-insets: 0;"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "    -fx-padding: 0;"
       },
       {
         "lineNumber": 136,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    -fx-background-color: derive(#161618, 0%);"
       },
       {
         "lineNumber": 137,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".list-cell:filled:selected #cardPane {"
+        "content": "    -fx-effect: dropshadow(gaussian, black, 12, 0, 5, 5);"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-border-color: #2EE298;"
+        "content": "}"
       },
       {
         "lineNumber": 139,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-border-width: 0;"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ".list-cell {"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-label-padding: 0 0 0 0;"
       },
       {
         "lineNumber": 142,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": ".cell_big_label {"
+        "content": "    -fx-graphic-text-gap : 0;"
       },
       {
         "lineNumber": 143,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "     -fx-font-family: \"Segoe UI Bold\";"
+        "content": "    -fx-padding: 0 0 0 0;"
       },
       {
         "lineNumber": 144,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "     -fx-font-size: 16px;"
-      },
-      {
-        "lineNumber": 145,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "     -fx-text-fill: #ffffff;"
-      },
-      {
-        "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
         "content": "}"
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 148,
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".list-cell:filled:even {"
+      },
+      {
+        "lineNumber": 147,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ".cell_big_green_label {"
+        "content": "    -fx-background-color: #161618;"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "     -fx-font-family: \"Segoe UI Bold\";"
+        "content": ""
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "     -fx-font-size: 16px;"
+        "content": ".list-cell:filled:odd {"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     -fx-text-fill: #2EE298;"
+        "content": "    -fx-background-color: #161618;"
       },
       {
         "lineNumber": 152,
@@ -48961,133 +49734,133 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".cell_small_label {"
+        "content": ".list-cell:filled:selected {"
       },
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-font-family: \"Segoe UI\";"
+        "content": "    -fx-background-color: #192C26;"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-size: 13px;"
+        "content": "}"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: #010504;"
+        "content": ""
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ".list-cell:filled:selected #cardPane {"
       },
       {
         "lineNumber": 159,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    -fx-border-color: #2EE298;"
       },
       {
         "lineNumber": 160,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".stack-pane {"
+        "content": "    -fx-border-width: 0;"
       },
       {
         "lineNumber": 161,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "     -fx-background-color: derive(#161618, 0%);"
+        "content": "}"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 163,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ""
+        "content": ".cell_big_label {"
       },
       {
         "lineNumber": 164,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".pane-with-border {"
+        "content": "     -fx-font-family: \"Segoe UI Bold\";"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     -fx-background-color: derive(#161618, 0%);"
+        "content": "     -fx-font-size: 16px;"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "     -fx-border-color: derive(#161618, 0%);"
+        "content": "     -fx-text-fill: #ffffff;"
       },
       {
         "lineNumber": 167,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "     -fx-border-top-width: 0px;"
-      },
-      {
-        "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
         "content": "}"
       },
       {
-        "lineNumber": 169,
+        "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ".cell_big_green_label {"
+      },
+      {
         "lineNumber": 170,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".status-bar {"
+        "content": "     -fx-font-family: \"Segoe UI Bold\";"
       },
       {
         "lineNumber": 171,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: derive(#1A1A1C, 20%);"
+        "content": "     -fx-font-size: 16px;"
       },
       {
         "lineNumber": 172,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-text-fill: black;"
+        "content": "     -fx-text-fill: #2EE298;"
       },
       {
         "lineNumber": 173,
@@ -49108,98 +49881,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".result-display {"
+        "content": ".cell_small_label {"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": "    -fx-font-family: \"Segoe UI\";"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-family: \"Segoe UI Light\";"
+        "content": "    -fx-font-size: 13px;"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-size: 13pt;"
+        "content": "    -fx-text-fill: #010504;"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": "}"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".stack-pane {"
       },
       {
         "lineNumber": 182,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".result-display .label {"
+        "content": "     -fx-background-color: derive(#161618, 0%);"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: black !important;"
+        "content": "}"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".pane-with-border {"
       },
       {
         "lineNumber": 186,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".status-bar .label {"
+        "content": "     -fx-background-color: derive(#161618, 0%);"
       },
       {
         "lineNumber": 187,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-font-family: \"Segoe UI Light\";"
+        "content": "     -fx-border-color: derive(#161618, 0%);"
       },
       {
         "lineNumber": 188,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": "     -fx-border-top-width: 0px;"
       },
       {
         "lineNumber": 189,
@@ -49220,98 +49993,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".status-bar-with-border {"
+        "content": ".status-bar {"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: derive(#161618, 30%);"
+        "content": "    -fx-background-color: derive(#1A1A1C, 20%);"
       },
       {
         "lineNumber": 193,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-border-color: derive(#161618, 25%);"
+        "content": "    -fx-text-fill: black;"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-border-width: 1px;"
+        "content": "}"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".result-display {"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": ".status-bar-with-border .label {"
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": "    -fx-font-family: \"Segoe UI Light\";"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "    -fx-font-size: 13pt;"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": ".grid-pane {"
+        "content": "}"
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: derive(#161618, 0%);"
+        "content": ""
       },
       {
         "lineNumber": 203,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-border-color: derive(#161618, 0%);"
+        "content": ".result-display .label {"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-border-width: 1px;"
+        "content": "    -fx-text-fill: black !important;"
       },
       {
         "lineNumber": 205,
@@ -49332,301 +50105,301 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".grid-pane .stack-pane {"
+        "content": ".status-bar .label {"
       },
       {
         "lineNumber": 208,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: derive(#161618, 0%);"
-      },
-      {
-        "lineNumber": 209,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 210,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 211,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".context-menu {"
-      },
-      {
-        "lineNumber": 212,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: derive(#161618, 50%);"
-      },
-      {
-        "lineNumber": 213,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 214,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 215,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".context-menu .label {"
-      },
-      {
-        "lineNumber": 216,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-text-fill: white;"
-      },
-      {
-        "lineNumber": 217,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 218,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 219,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".menu-bar {"
-      },
-      {
-        "lineNumber": 220,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-padding: 5 23 5 23;"
-      },
-      {
-        "lineNumber": 221,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: derive(#161618, 0%);"
-      },
-      {
-        "lineNumber": 222,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 223,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".menu-bar .label {"
-      },
-      {
-        "lineNumber": 225,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-font-size: 14pt;"
-      },
-      {
-        "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
         "content": "    -fx-font-family: \"Segoe UI Light\";"
       },
       {
-        "lineNumber": 227,
+        "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
         "content": "    -fx-text-fill: white;"
       },
       {
-        "lineNumber": 228,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-opacity: 0.9;"
-      },
-      {
-        "lineNumber": 229,
+        "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".status-bar-with-border {"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: derive(#161618, 30%);"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-border-color: derive(#161618, 25%);"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-border-width: 1px;"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".status-bar-with-border .label {"
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-text-fill: white;"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".grid-pane {"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: derive(#161618, 0%);"
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-border-color: derive(#161618, 0%);"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-border-width: 1px;"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".grid-pane .stack-pane {"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: derive(#161618, 0%);"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": ".menu .left-container {"
+        "content": ""
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-color: black;"
+        "content": ".context-menu {"
       },
       {
         "lineNumber": 233,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "    -fx-background-color: derive(#161618, 50%);"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "/*"
+        "content": ""
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": " * Metro style Push Button"
+        "content": ".context-menu .label {"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": " * Author: Pedro Duque Vieira"
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": " * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/"
+        "content": "}"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": ""
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": ".button {"
+        "content": ".menu-bar {"
       },
       {
         "lineNumber": 241,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-padding: 5 22 5 22;"
+        "content": "    -fx-padding: 5 23 5 23;"
       },
       {
         "lineNumber": 242,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-border-color: #e2e2e2;"
+        "content": "    -fx-background-color: derive(#161618, 0%);"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-border-width: 2;"
+        "content": "}"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-radius: 0;"
+        "content": ""
       },
       {
         "lineNumber": 245,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #161618;"
+        "content": ".menu-bar .label {"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-family: \"Segoe UI\", Helvetica, Arial, sans-serif;"
+        "content": "    -fx-font-size: 14pt;"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-size: 11pt;"
+        "content": "    -fx-font-family: \"Segoe UI Light\";"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: #d8d8d8;"
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-insets: 0 0 0 0, 0, 1, 2;"
+        "content": "    -fx-opacity: 0.9;"
       },
       {
         "lineNumber": 250,
@@ -49647,14 +50420,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".button:hover {"
+        "content": ".menu .left-container {"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-color: #3a3a3a;"
+        "content": "    -fx-background-color: black;"
       },
       {
         "lineNumber": 254,
@@ -49675,357 +50448,357 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".button:pressed, .button:default:hover:pressed {"
+        "content": "/*"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "  -fx-background-color: white;"
+        "content": " * Metro style Push Button"
       },
       {
         "lineNumber": 258,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "  -fx-text-fill: #161618;"
+        "content": " * Author: Pedro Duque Vieira"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": " * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
-        "content": ".button:focused {"
+        "content": ".button {"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-border-color: white, white;"
+        "content": "    -fx-padding: 5 22 5 22;"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-border-width: 1, 1;"
+        "content": "    -fx-border-color: #e2e2e2;"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-border-style: solid, segments(1, 1);"
+        "content": "    -fx-border-width: 2;"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-border-radius: 0, 0;"
+        "content": "    -fx-background-radius: 0;"
       },
       {
         "lineNumber": 266,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-border-insets: 1 1 1 1, 0;"
+        "content": "    -fx-background-color: #161618;"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "    -fx-font-family: \"Segoe UI\", Helvetica, Arial, sans-serif;"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-font-size: 11pt;"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": ".button:disabled, .button:default:disabled {"
+        "content": "    -fx-text-fill: #d8d8d8;"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-opacity: 0.4;"
+        "content": "    -fx-background-insets: 0 0 0 0, 0, 1, 2;"
       },
       {
         "lineNumber": 271,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #161618;"
+        "content": "}"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": ""
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ".button:hover {"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-background-color: #3a3a3a;"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
-        "content": ".button:default {"
+        "content": "}"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-color: -fx-focus-color;"
+        "content": ""
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: #ffffff;"
+        "content": ".button:pressed, .button:default:hover:pressed {"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "  -fx-background-color: white;"
       },
       {
         "lineNumber": 279,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ""
+        "content": "  -fx-text-fill: #161618;"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "-"
         },
-        "content": ".button:default:hover {"
+        "content": "}"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-color: derive(-fx-focus-color, 30%);"
+        "content": ""
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ".button:focused {"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-border-color: white, white;"
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
-        "content": ".dialog-pane {"
+        "content": "    -fx-border-width: 1, 1;"
       },
       {
         "lineNumber": 285,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #161618;"
+        "content": "    -fx-border-style: solid, segments(1, 1);"
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "    -fx-border-radius: 0, 0;"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-border-insets: 1 1 1 1, 0;"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
-        "content": ".dialog-pane \u003e *.button-bar \u003e *.container {"
+        "content": "}"
       },
       {
         "lineNumber": 289,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #161618;"
+        "content": ""
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ".button:disabled, .button:default:disabled {"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-opacity: 0.4;"
       },
       {
         "lineNumber": 292,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".dialog-pane \u003e *.label.content {"
+        "content": "    -fx-background-color: #161618;"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-size: 14px;"
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-weight: bold;"
+        "content": "}"
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": ""
       },
       {
         "lineNumber": 296,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ".button:default {"
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-background-color: -fx-focus-color;"
       },
       {
         "lineNumber": 298,
         "author": {
           "gitId": "-"
         },
-        "content": ".dialog-pane:header *.header-panel {"
+        "content": "    -fx-text-fill: #ffffff;"
       },
       {
         "lineNumber": 299,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: derive(#161618, 25%);"
-      },
-      {
-        "lineNumber": 300,
         "author": {
           "gitId": "-"
         },
         "content": "}"
       },
       {
-        "lineNumber": 301,
+        "lineNumber": 300,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 301,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".button:default:hover {"
+      },
+      {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": ".dialog-pane:header *.header-panel *.label {"
+        "content": "    -fx-background-color: derive(-fx-focus-color, 30%);"
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-size: 18px;"
+        "content": "}"
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-style: italic;"
+        "content": ""
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-fill: white;"
+        "content": ".dialog-pane {"
       },
       {
         "lineNumber": 306,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": "    -fx-background-color: #161618;"
       },
       {
         "lineNumber": 307,
@@ -50046,14 +50819,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".scroll-bar {"
+        "content": ".dialog-pane \u003e *.button-bar \u003e *.container {"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: derive(#161618, 0%);"
+        "content": "    -fx-background-color: #161618;"
       },
       {
         "lineNumber": 311,
@@ -50074,56 +50847,56 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".scroll-bar .thumb {"
+        "content": ".dialog-pane \u003e *.label.content {"
       },
       {
         "lineNumber": 314,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: derive(#161618, 30%);"
+        "content": "    -fx-font-size: 14px;"
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-insets: 3;"
+        "content": "    -fx-font-weight: bold;"
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
-        "content": ".scroll-bar .increment-button, .scroll-bar .decrement-button {"
+        "content": ""
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": ".dialog-pane:header *.header-panel {"
       },
       {
         "lineNumber": 320,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-padding: 0 0 0 0;"
+        "content": "    -fx-background-color: derive(#161618, 25%);"
       },
       {
         "lineNumber": 321,
@@ -50144,385 +50917,385 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {"
+        "content": ".dialog-pane:header *.header-panel *.label {"
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-shape: \" \";"
+        "content": "    -fx-font-size: 18px;"
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "    -fx-font-style: italic;"
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-fill: white;"
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "-"
         },
-        "content": ".scroll-bar:vertical .increment-arrow, .scroll-bar:vertical .decrement-arrow {"
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 328,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-padding: 1 5 1 5;"
+        "content": "}"
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".scroll-bar {"
       },
       {
         "lineNumber": 331,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": ".scroll-bar:horizontal .increment-arrow, .scroll-bar:horizontal .decrement-arrow {"
+        "content": "    -fx-background-color: derive(#161618, 0%);"
       },
       {
         "lineNumber": 332,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-padding: 5 1 5 1;"
+        "content": "}"
       },
       {
         "lineNumber": 333,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".scroll-bar .thumb {"
       },
       {
         "lineNumber": 335,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ".progress-bar {"
+        "content": "    -fx-background-color: derive(#161618, 30%);"
       },
       {
         "lineNumber": 336,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-accent: #2EE298;"
+        "content": "    -fx-background-insets: 3;"
       },
       {
         "lineNumber": 337,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
         "content": "}"
       },
       {
         "lineNumber": 338,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 339,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": ".progress-bar .bar {"
+        "content": ".scroll-bar .increment-button, .scroll-bar .decrement-button {"
       },
       {
         "lineNumber": 340,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-insets:0;"
-      },
-      {
-        "lineNumber": 341,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-padding: 0;"
-      },
-      {
-        "lineNumber": 342,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-border-radius: 50px;"
-      },
-      {
-        "lineNumber": 343,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-radius: 50px;"
-      },
-      {
-        "lineNumber": 344,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 345,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 346,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": ".progress-bar \u003e .track {"
-      },
-      {
-        "lineNumber": 347,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "  -fx-control-inner-background: #3E3F3F;"
-      },
-      {
-        "lineNumber": 348,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "  -fx-padding: 0;"
-      },
-      {
-        "lineNumber": 349,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "  -fx-background-insets:0;"
-      },
-      {
-        "lineNumber": 350,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "  -fx-border-radius: 50px;"
-      },
-      {
-        "lineNumber": 351,
-        "author": {
-          "gitId": "jiholim"
-        },
-        "content": "  -fx-background-radius: 50px;"
-      },
-      {
-        "lineNumber": 352,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 353,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 354,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "#cardPane {"
-      },
-      {
-        "lineNumber": 355,
         "author": {
           "gitId": "-"
         },
         "content": "    -fx-background-color: transparent;"
       },
       {
-        "lineNumber": 356,
+        "lineNumber": 341,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-border-width: 0;"
+        "content": "    -fx-padding: 0 0 0 0;"
+      },
+      {
+        "lineNumber": 342,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 343,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 344,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".scroll-bar .increment-arrow, .scroll-bar .decrement-arrow {"
+      },
+      {
+        "lineNumber": 345,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    -fx-shape: \" \";"
+      },
+      {
+        "lineNumber": 346,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 347,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 348,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".scroll-bar:vertical .increment-arrow, .scroll-bar:vertical .decrement-arrow {"
+      },
+      {
+        "lineNumber": 349,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-padding: 1 5 1 5;"
+      },
+      {
+        "lineNumber": 350,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 351,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 352,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".scroll-bar:horizontal .increment-arrow, .scroll-bar:horizontal .decrement-arrow {"
+      },
+      {
+        "lineNumber": 353,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-padding: 5 1 5 1;"
+      },
+      {
+        "lineNumber": 354,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 355,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 356,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ".progress-bar {"
       },
       {
         "lineNumber": 357,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "    -fx-accent: #2EE298;"
       },
       {
         "lineNumber": 358,
         "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 359,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "#commandTypeLabel {"
-      },
-      {
-        "lineNumber": 360,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-font-size: 11px;"
-      },
-      {
-        "lineNumber": 361,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    -fx-text-fill: #F70D1A;"
-      },
-      {
-        "lineNumber": 362,
-        "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
         "content": "}"
       },
       {
-        "lineNumber": 363,
+        "lineNumber": 359,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
         "content": ""
       },
       {
+        "lineNumber": 360,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ".progress-bar .bar {"
+      },
+      {
+        "lineNumber": 361,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-insets:0;"
+      },
+      {
+        "lineNumber": 362,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-padding: 0;"
+      },
+      {
+        "lineNumber": 363,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-border-radius: 50px;"
+      },
+      {
         "lineNumber": 364,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "#commandTextField {"
+        "content": "    -fx-background-radius: 50px;"
       },
       {
         "lineNumber": 365,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-padding: 5 5 15 5;"
+        "content": "}"
       },
       {
         "lineNumber": 366,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: transparent #383838 transparent #383838;"
+        "content": ""
       },
       {
         "lineNumber": 367,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-background-insets: 0;"
+        "content": ".progress-bar \u003e .track {"
       },
       {
         "lineNumber": 368,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-border-color: #161618 #161618 #ffffff #161618;"
+        "content": "  -fx-control-inner-background: #3E3F3F;"
       },
       {
         "lineNumber": 369,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-border-insets: 0;"
+        "content": "  -fx-padding: 0;"
       },
       {
         "lineNumber": 370,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-border-width: 1;"
+        "content": "  -fx-background-insets:0;"
       },
       {
         "lineNumber": 371,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-font-family: \"Segoe UI Light\";"
+        "content": "  -fx-border-radius: 50px;"
       },
       {
         "lineNumber": 372,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "    -fx-font-size: 13pt;"
+        "content": "  -fx-background-radius: 50px;"
       },
       {
         "lineNumber": 373,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": "}"
       },
       {
         "lineNumber": 374,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 375,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "#cardPane {"
       },
       {
         "lineNumber": 376,
         "author": {
           "gitId": "-"
         },
-        "content": "#filterField, #wishListPanel, #wishWebpage {"
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 377,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-effect: innershadow(gaussian, black, 10, 0, 0, 0);"
+        "content": "    -fx-border-width: 0;"
       },
       {
         "lineNumber": 378,
@@ -50543,278 +51316,278 @@
         "author": {
           "gitId": "-"
         },
-        "content": "#resultDisplay .content {"
+        "content": "#commandTypeLabel {"
       },
       {
         "lineNumber": 381,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-padding: 5 5 5 5;"
+        "content": "    -fx-font-size: 11px;"
       },
       {
         "lineNumber": 382,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #161618;"
+        "content": "    -fx-text-fill: #F70D1A;"
       },
       {
         "lineNumber": 383,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-background-radius: 0;"
+        "content": "}"
       },
       {
         "lineNumber": 384,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 385,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "#commandTextField {"
       },
       {
         "lineNumber": 386,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "#tags {"
+        "content": "    -fx-padding: 5 5 15 5;"
       },
       {
         "lineNumber": 387,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-hgap: 7;"
+        "content": "    -fx-background-color: transparent #383838 transparent #383838;"
       },
       {
         "lineNumber": 388,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-vgap: 3;"
+        "content": "    -fx-background-insets: 0;"
       },
       {
         "lineNumber": 389,
         "author": {
-          "gitId": "-"
+          "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "    -fx-border-color: #161618 #161618 #ffffff #161618;"
       },
       {
         "lineNumber": 390,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-border-insets: 0;"
       },
       {
         "lineNumber": 391,
         "author": {
           "gitId": "-"
         },
-        "content": "#tags .label {"
+        "content": "    -fx-border-width: 1;"
       },
       {
         "lineNumber": 392,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": "    -fx-font-family: \"Segoe UI Light\";"
       },
       {
         "lineNumber": 393,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #192C26;"
+        "content": "    -fx-font-size: 13pt;"
       },
       {
         "lineNumber": 394,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-padding: 3 8 3 8;"
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 395,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-border-radius: 10;"
+        "content": "}"
       },
       {
         "lineNumber": 396,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-radius: 10;"
+        "content": ""
       },
       {
         "lineNumber": 397,
         "author": {
           "gitId": "-"
         },
-        "content": "    -fx-font-size: 11;"
+        "content": "#filterField, #wishListPanel, #wishWebpage {"
       },
       {
         "lineNumber": 398,
         "author": {
           "gitId": "-"
         },
-        "content": "}"
+        "content": "    -fx-effect: innershadow(gaussian, black, 10, 0, 0, 0);"
       },
       {
         "lineNumber": 399,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 400,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "#tags .red {"
+        "content": ""
       },
       {
         "lineNumber": 401,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #EC3A4C;"
+        "content": "#resultDisplay .content {"
       },
       {
         "lineNumber": 402,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "    -fx-padding: 5 5 5 5;"
       },
       {
         "lineNumber": 403,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    -fx-background-color: #161618;"
       },
       {
         "lineNumber": 404,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "#tags .yel {"
+        "content": "    -fx-background-radius: 0;"
       },
       {
         "lineNumber": 405,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-text-fill: black;"
+        "content": "}"
       },
       {
         "lineNumber": 406,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #F7DE59;"
+        "content": ""
       },
       {
         "lineNumber": 407,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "}"
+        "content": "#tags {"
       },
       {
         "lineNumber": 408,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    -fx-hgap: 7;"
       },
       {
         "lineNumber": 409,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "#tags .blue {"
+        "content": "    -fx-vgap: 3;"
       },
       {
         "lineNumber": 410,
         "author": {
-          "gitId": "jiholim"
-        },
-        "content": "    -fx-background-color: #64C1FA;"
-      },
-      {
-        "lineNumber": 411,
-        "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
         "content": "}"
       },
       {
-        "lineNumber": 412,
+        "lineNumber": 411,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 412,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "#tags .label {"
+      },
+      {
         "lineNumber": 413,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "#tags .ora {"
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 414,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: #ED6533;"
+        "content": "    -fx-background-color: #192C26;"
       },
       {
         "lineNumber": 415,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "    -fx-padding: 3 8 3 8;"
       },
       {
         "lineNumber": 416,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "    -fx-border-radius: 10;"
       },
       {
         "lineNumber": 417,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "#tags .green {"
+        "content": "    -fx-background-radius: 10;"
       },
       {
         "lineNumber": 418,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
-        "content": "    -fx-background-color: #00BFA5;"
+        "content": "    -fx-font-size: 11;"
       },
       {
         "lineNumber": 419,
         "author": {
-          "gitId": "jiholim"
+          "gitId": "-"
         },
         "content": "}"
       },
@@ -50830,14 +51603,14 @@
         "author": {
           "gitId": "jiholim"
         },
-        "content": "#tags .pink {"
+        "content": "#tags .red {"
       },
       {
         "lineNumber": 422,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: #F087AA;"
+        "content": "    -fx-background-color: #EC3A4C;"
       },
       {
         "lineNumber": 423,
@@ -50858,101 +51631,248 @@
         "author": {
           "gitId": "jiholim"
         },
-        "content": "#tags .pur {"
+        "content": "#tags .yel {"
       },
       {
         "lineNumber": 426,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: #6400EB;"
+        "content": "    -fx-text-fill: black;"
       },
       {
         "lineNumber": 427,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "    -fx-background-color: #F7DE59;"
       },
       {
         "lineNumber": 428,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 429,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "#tags .hot {"
+        "content": ""
       },
       {
         "lineNumber": 430,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: #FF00BF;"
+        "content": "#tags .blue {"
       },
       {
         "lineNumber": 431,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "    -fx-background-color: #64C1FA;"
       },
       {
         "lineNumber": 432,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 433,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "#tags .navy {"
+        "content": ""
       },
       {
         "lineNumber": 434,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: #06179B;"
+        "content": "#tags .ora {"
       },
       {
         "lineNumber": 435,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "}"
+        "content": "    -fx-background-color: #ED6533;"
       },
       {
         "lineNumber": 436,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 437,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "#tags .black {"
+        "content": ""
       },
       {
         "lineNumber": 438,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    -fx-background-color: black;"
+        "content": "#tags .green {"
       },
       {
         "lineNumber": 439,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: #00BFA5;"
+      },
+      {
+        "lineNumber": 440,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 441,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 442,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "#tags .pink {"
+      },
+      {
+        "lineNumber": 443,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: #F087AA;"
+      },
+      {
+        "lineNumber": 444,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 445,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 446,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "#tags .pur {"
+      },
+      {
+        "lineNumber": 447,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: #6400EB;"
+      },
+      {
+        "lineNumber": 448,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 449,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 450,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "#tags .hot {"
+      },
+      {
+        "lineNumber": 451,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: #FF00BF;"
+      },
+      {
+        "lineNumber": 452,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 453,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 454,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "#tags .navy {"
+      },
+      {
+        "lineNumber": 455,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: #06179B;"
+      },
+      {
+        "lineNumber": 456,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 457,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 458,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "#tags .black {"
+      },
+      {
+        "lineNumber": 459,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    -fx-background-color: black;"
+      },
+      {
+        "lineNumber": 460,
         "author": {
           "gitId": "jiholim"
         },
@@ -50960,7 +51880,7 @@
       }
     ],
     "authorContributionMap": {
-      "jiholim": 133,
+      "jiholim": 154,
       "-": 306
     }
   },
@@ -51886,164 +52806,192 @@
         "author": {
           "gitId": "jiholim"
         },
-        "content": "\u003c?import javafx.scene.layout.HBox?\u003e"
+        "content": "\u003c?import javafx.scene.control.SplitPane?\u003e"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "\u003c?import javafx.scene.layout.VBox?\u003e"
+        "content": "\u003c?import javafx.scene.layout.HBox?\u003e"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "jiholim"
         },
-        "content": ""
+        "content": "\u003c?import javafx.scene.layout.VBox?\u003e"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "\u003cStackPane xmlns:fx\u003d\"http://javafx.com/fxml/1\"\u003e"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    \u003cGridPane HBox.hgrow\u003d\"ALWAYS\"\u003e"
+        "content": "\u003cStackPane xmlns:fx\u003d\"http://javafx.com/fxml/1\"\u003e"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        \u003ccolumnConstraints\u003e"
+        "content": "    \u003cGridPane HBox.hgrow\u003d\"ALWAYS\"\u003e"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cColumnConstraints hgrow\u003d\"SOMETIMES\" minWidth\u003d\"10\" prefWidth\u003d\"150\" /\u003e"
+        "content": "        \u003ccolumnConstraints\u003e"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        \u003c/columnConstraints\u003e"
+        "content": "            \u003cColumnConstraints hgrow\u003d\"SOMETIMES\" minWidth\u003d\"10\" prefWidth\u003d\"150\" /\u003e"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        \u003cVBox alignment\u003d\"CENTER_LEFT\" minHeight\u003d\"105\" GridPane.columnIndex\u003d\"0\"\u003e"
+        "content": "        \u003c/columnConstraints\u003e"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cpadding\u003e"
+        "content": "        \u003cVBox minHeight\u003d\"105\" GridPane.columnIndex\u003d\"0\"\u003e"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "                \u003cInsets top\u003d\"20\" right\u003d\"10\" bottom\u003d\"10\" left\u003d\"15\" /\u003e"
+        "content": "            \u003cpadding\u003e"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003c/padding\u003e"
+        "content": "                \u003cInsets top\u003d\"20\" right\u003d\"10\" bottom\u003d\"10\" left\u003d\"15\" /\u003e"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cHBox spacing\u003d\"5\" alignment\u003d\"CENTER_LEFT\"\u003e"
+        "content": "            \u003c/padding\u003e"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "                \u003cLabel fx:id\u003d\"name\" text\u003d\"\\$first\" styleClass\u003d\"detail_title_label\" /\u003e"
+        "content": "            \u003cHBox spacing\u003d\"5\" alignment\u003d\"CENTER_LEFT\"\u003e"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003c/HBox\u003e"
+        "content": "                \u003cLabel fx:id\u003d\"name\" text\u003d\"\\$first\" styleClass\u003d\"detail_title_label\" /\u003e"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cFlowPane fx:id\u003d\"tags\" /\u003e"
+        "content": "            \u003c/HBox\u003e"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cLabel fx:id\u003d\"savedAmount\" styleClass\u003d\"detail_label\" text\u003d\"\\$savedAmount\" /\u003e"
+        "content": "            \u003cFlowPane fx:id\u003d\"tags\"\u003e"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cLabel fx:id\u003d\"price\" styleClass\u003d\"detail_label\" text\u003d\"\\$price\" /\u003e"
+        "content": "                \u003cpadding\u003e"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cLabel fx:id\u003d\"url\" styleClass\u003d\"detail_label\" text\u003d\"\\$url\" /\u003e"
+        "content": "                    \u003cInsets bottom\u003d\"20\" /\u003e"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cLabel fx:id\u003d\"email\" styleClass\u003d\"detail_label\" text\u003d\"\\$email\" /\u003e"
+        "content": "                \u003c/padding\u003e"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "            \u003cLabel fx:id\u003d\"remark\" styleClass\u003d\"detail_label\" text\u003d\"\\$remark\"/\u003e"
+        "content": "            \u003c/FlowPane\u003e"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "        \u003c/VBox\u003e"
+        "content": "            \u003cSplitPane id\u003d\"wishDetailSplitPane\" fx:id\u003d\"splitPane\" VBox.vgrow\u003d\"ALWAYS\"\u003e"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "jiholim"
         },
-        "content": "    \u003c/GridPane\u003e"
+        "content": "                \u003cStackPane fx:id\u003d\"wishSavingAmountPlaceholder\" minWidth\u003d\"300\" prefWidth\u003d\"300\" SplitPane.resizableWithParent\u003d\"false\" /\u003e"
       },
       {
         "lineNumber": 32,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "                \u003cStackPane fx:id\u003d\"wishSavingHistoryPlaceholder\" minWidth\u003d\"300\" prefWidth\u003d\"300\" SplitPane.resizableWithParent\u003d\"false\" /\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003c/SplitPane\u003e"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003c/VBox\u003e"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    \u003c/GridPane\u003e"
+      },
+      {
+        "lineNumber": 36,
         "author": {
           "gitId": "jiholim"
         },
@@ -52051,7 +52999,401 @@
       }
     ],
     "authorContributionMap": {
-      "jiholim": 32
+      "jiholim": 36
+    }
+  },
+  {
+    "path": "src/main/resources/view/WishDetailSavingAmount.fxml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.StackPane?\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.geometry.Insets?\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.control.Label?\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.ColumnConstraints?\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.GridPane?\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.HBox?\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.VBox?\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003cStackPane xmlns:fx\u003d\"http://javafx.com/fxml/1\"\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    \u003cGridPane HBox.hgrow\u003d\"ALWAYS\"\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003ccolumnConstraints\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003cColumnConstraints hgrow\u003d\"SOMETIMES\" minWidth\u003d\"10\" prefWidth\u003d\"150\" /\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003c/columnConstraints\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003cVBox minHeight\u003d\"300\" GridPane.columnIndex\u003d\"0\"\u003e"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "                \u003cInsets top\u003d\"5\" bottom\u003d\"5\" /\u003e"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003cLabel styleClass\u003d\"detail_sub_title_label\"\u003e"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "                Amount Saved"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003cHBox spacing\u003d\"15\" alignment\u003d\"CENTER_LEFT\"\u003e"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "                \u003cLabel fx:id\u003d\"savedAmount\" styleClass\u003d\"saving_amount_label\" text\u003d\"\\$savedAmount\" /\u003e"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "                \u003cLabel fx:id\u003d\"price\" styleClass\u003d\"price_label\" text\u003d\"\\$price\" /\u003e"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003c/HBox\u003e"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003c/VBox\u003e"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    \u003c/GridPane\u003e"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c/StackPane\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "jiholim": 29
+    }
+  },
+  {
+    "path": "src/main/resources/view/WishDetailSavingHistory.fxml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.StackPane?\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.geometry.Insets?\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.control.Label?\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.ColumnConstraints?\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.GridPane?\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.HBox?\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c?import javafx.scene.layout.VBox?\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003cStackPane xmlns:fx\u003d\"http://javafx.com/fxml/1\"\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    \u003cGridPane HBox.hgrow\u003d\"ALWAYS\"\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003ccolumnConstraints\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003cColumnConstraints hgrow\u003d\"SOMETIMES\" minWidth\u003d\"10\" prefWidth\u003d\"150\" /\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003c/columnConstraints\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003cVBox minHeight\u003d\"300\" GridPane.columnIndex\u003d\"0\"\u003e"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "                \u003cInsets top\u003d\"5\" bottom\u003d\"5\" /\u003e"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003cLabel styleClass\u003d\"detail_sub_title_label\"\u003e"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "                Saving History"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "            \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "        \u003c/VBox\u003e"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "    \u003c/GridPane\u003e"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiholim"
+        },
+        "content": "\u003c/StackPane\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "jiholim": 25
     }
   },
   {
@@ -68489,9 +69831,9 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "bannified"
+          "gitId": "-"
         },
-        "content": "        if (wishSavedDifference.value \u003c 0) {"
+        "content": "        if (wishSavedDifference.value \u003e 0) {"
       },
       {
         "lineNumber": 58,
@@ -68727,9 +70069,9 @@
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "bannified"
+          "gitId": "-"
         },
-        "content": "        if (wishSavedDifference.value \u003c 0) {"
+        "content": "        if (wishSavedDifference.value \u003e 0) {"
       },
       {
         "lineNumber": 92,
@@ -69196,9 +70538,9 @@
       {
         "lineNumber": 158,
         "author": {
-          "gitId": "bannified"
+          "gitId": "-"
         },
-        "content": "        if (wishSavedDifference.value \u003c 0) {"
+        "content": "        if (wishSavedDifference.value \u003e 0) {"
       },
       {
         "lineNumber": 159,
@@ -69664,9 +71006,9 @@
       }
     ],
     "authorContributionMap": {
-      "bannified": 38,
+      "bannified": 35,
       "dioptrique": 178,
-      "-": 8
+      "-": 11
     }
   },
   {
