@@ -1972,7 +1972,7 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private final int index;"
+        "content": "    private int index;"
       },
       {
         "lineNumber": 31,
@@ -2121,40 +2121,40 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import static seedu.planner.logic.parser.CliSyntax.PREFIX_SEMESTER;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.planner.logic.CommandHistory;"
+        "content": "import static seedu.planner.logic.parser.CliSyntax.PREFIX_YEAR;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.planner.model.Model;"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.planner.logic.CommandHistory;"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "-"
         },
-        "content": "//@@author Hilda-Ang"
+        "content": "import seedu.planner.model.Model;"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -2163,115 +2163,220 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "/**"
+        "content": "//@@author Hilda-Ang"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": " * Shows all modules that the user is available to take."
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": " */"
+        "content": "/**"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "public class SuggestModuleCommand extends Command {"
+        "content": " * Shows all modules that the user is available to take for a particular semester."
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"suggestCommand\";"
+        "content": "public class SuggestModuleCommand extends Command {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Showed all available modules.\";"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    public static final String COMMAND_WORD \u003d \"suggestCommand\";"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Show modules the user is available to take. \""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        requireNonNull(model);"
+        "content": "            + \"Parameters: \""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "            + PREFIX_YEAR + \"YEAR \""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        //TODO: Implement command execution"
+        "content": "            + PREFIX_SEMESTER + \"SEMESTER \""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "            + \"Example: \" + COMMAND_WORD + \" \""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return new CommandResult(MESSAGE_SUCCESS);"
+        "content": "            + PREFIX_YEAR + \"1 \""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "            + PREFIX_SEMESTER + \"1 \";"
       },
       {
         "lineNumber": 26,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Showed all available modules.\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    private int index;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    public SuggestModuleCommand(int index) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        this.index \u003d index;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        model.getFilteredAvailableModuleList(index);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        return new CommandResult(MESSAGE_SUCCESS);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
         "author": {
           "gitId": "Hilda-Ang"
         },
@@ -2279,8 +2384,8 @@
       }
     ],
     "authorContributionMap": {
-      "-": 7,
-      "Hilda-Ang": 19
+      "-": 9,
+      "Hilda-Ang": 32
     }
   },
   {
@@ -4679,6 +4784,351 @@
       "GabrielYik": 16,
       "-": 131,
       "Hilda-Ang": 33
+    }
+  },
+  {
+    "path": "src/main/java/seedu/planner/logic/parser/SuggestModuleCommandParser.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.planner.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.planner.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.planner.logic.parser.CliSyntax.PREFIX_SEMESTER;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.planner.logic.parser.CliSyntax.PREFIX_YEAR;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.stream.Stream;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.planner.logic.commands.SuggestModuleCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.planner.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.planner.model.util.IndexUtil;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "//@@author Hilda-Ang"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": " * Parses input arguments and creates a new SuggestModuleCommand object."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "public class SuggestModuleCommandParser implements Parser\u003cSuggestModuleCommand\u003e {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "     * Parses the given {@code String} of arguments in the context of the SuggestModuleCommand"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "     * and returns a ListModuleCommand object for execution."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    public SuggestModuleCommand parse(String args) throws ParseException {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        ArgumentMultimap argMultimap \u003d"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_YEAR, PREFIX_SEMESTER);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        if (!arePrefixesPresent(argMultimap, PREFIX_YEAR, PREFIX_SEMESTER) || !argMultimap.getPreamble().isEmpty()) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, SuggestModuleCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        int year \u003d ParserUtil.parseYear(argMultimap.getValue(PREFIX_YEAR).get());"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        int semester \u003d ParserUtil.parseSemester(argMultimap.getValue(PREFIX_SEMESTER).get());"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        return new SuggestModuleCommand(IndexUtil.convertYearAndSemesterToIndex(year, semester));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "     * {@code ArgumentMultimap}."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "-": 12,
+      "Hilda-Ang": 36
     }
   },
   {
@@ -7685,7 +8135,7 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e modules \u003d semesters.get(index).getModulesAvailable();"
+        "content": "        List\u003cModule\u003e modules \u003d semesters.get(index - 1).getModulesAvailable();"
       },
       {
         "lineNumber": 113,

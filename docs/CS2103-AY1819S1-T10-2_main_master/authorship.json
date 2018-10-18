@@ -8044,7 +8044,7 @@
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": " * Deletes a patient from health book."
+        "content": " * Deletes a doctor from health book."
       },
       {
         "lineNumber": 11,
@@ -8149,24 +8149,45 @@
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": "    public DeleteDoctorCommand(Name name, Phone phone) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": "        super(name, phone);"
+        "content": "     * Creates an DeleteDoctorCommand to add the specified {@code Doctor}"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 28,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "    public DeleteDoctorCommand(Name name, Phone phone) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "        super(name, phone);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
         "author": {
           "gitId": "elroyhaw"
         },
@@ -8174,7 +8195,7 @@
       }
     ],
     "authorContributionMap": {
-      "elroyhaw": 28
+      "elroyhaw": 31
     }
   },
   {
@@ -8353,24 +8374,45 @@
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": "    public DeletePatientCommand(Name name, Phone phone) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": "        super(name, phone);"
+        "content": "     * Creates an DeletePatientCommand to add the specified {@code Patient}"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 28,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "    public DeletePatientCommand(Name name, Phone phone) {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "        super(name, phone);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
         "author": {
           "gitId": "elroyhaw"
         },
@@ -8378,7 +8420,7 @@
       }
     ],
     "authorContributionMap": {
-      "elroyhaw": 28
+      "elroyhaw": 31
     }
   },
   {
@@ -10272,9 +10314,9 @@
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "elroyhaw"
         },
-        "content": "     * Creates an AddPatientCommand to add the specified {@code Patient}"
+        "content": "     * Creates an RegisterPatientCommand to add the specified {@code Patient}"
       },
       {
         "lineNumber": 40,
@@ -10460,8 +10502,8 @@
       }
     ],
     "authorContributionMap": {
-      "-": 64,
-      "elroyhaw": 1
+      "-": 63,
+      "elroyhaw": 2
     }
   },
   {
@@ -13793,6 +13835,323 @@
     ],
     "authorContributionMap": {
       "florafong97": 39
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/appointment/Appointment.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.model.appointment;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "import java.time.LocalDateTime;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Represents an Appointment in the health book."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Guarantees: details are present and not null, field values are validated, immutable."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Appointment {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "    private static int appointmentCounter;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private int appointmentId;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "    private LocalDateTime startDateTime;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Status status;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String comments;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private List\u003cPrescription\u003e prescriptions;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "    public Appointment(LocalDateTime startDateTime) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "        this.appointmentId \u003d appointmentCounter;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "        appointmentCounter++;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.startDateTime \u003d startDateTime;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "        this.status \u003d Status.UPCOMING;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void addPrescription(Prescription prescription) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        prescriptions.add(prescription);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void completeAppointment() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        status \u003d Status.COMPLETED;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "elroyhaw"
+        },
+        "content": "     * Checks if target appointment is later than appointment argument by LocalDateTime."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Return true if target appointment is later than other appointment. Else, return false."
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean isLaterThan(Appointment appointmentToCheck) {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (startDateTime.compareTo(appointmentToCheck.startDateTime) \u003e 0) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "-": 35,
+      "elroyhaw": 9
     }
   },
   {

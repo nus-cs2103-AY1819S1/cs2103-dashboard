@@ -23813,9 +23813,9 @@
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "        return \" [Month: \" + month + \" Year: \" + year + \" Amount: \" + amount + \"]\";"
+        "content": "        return \" Month: \" + month + \" Year: \" + year + \" Amount: \" + amount;"
       },
       {
         "lineNumber": 129,
@@ -23953,9 +23953,9 @@
     ],
     "authorContributionMap": {
       "ooihuiying": 1,
-      "SusterDrifter": 15,
+      "SusterDrifter": 16,
       "ongyz": 26,
-      "-": 105
+      "-": 104
     }
   },
   {
@@ -25042,117 +25042,26 @@
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "                .append(getAddress())"
+        "content": "                .append(getAddress());"
       },
       {
         "lineNumber": 156,
-        "author": {
-          "gitId": "SusterDrifter"
-        },
-        "content": "                .append(\"\\nSubjects: \");"
-      },
-      {
-        "lineNumber": 157,
-        "author": {
-          "gitId": "SusterDrifter"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 158,
-        "author": {
-          "gitId": "SusterDrifter"
-        },
-        "content": "        getSubjects().forEach(builder::append);"
-      },
-      {
-        "lineNumber": 159,
-        "author": {
-          "gitId": "SusterDrifter"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 160,
-        "author": {
-          "gitId": "SusterDrifter"
-        },
-        "content": "        builder.append(\"\\nTuition Timing: \")"
-      },
-      {
-        "lineNumber": 161,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                .append(getTuitionTiming())"
-      },
-      {
-        "lineNumber": 162,
-        "author": {
-          "gitId": "ooihuiying"
-        },
-        "content": "                .append(\"\\nTags: \");"
-      },
-      {
-        "lineNumber": 163,
-        "author": {
-          "gitId": "SusterDrifter"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 164,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        getTags().forEach(builder::append);"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 166,
-        "author": {
-          "gitId": "ooihuiying"
-        },
-        "content": "        builder.append(\"\\nPayments: \");"
-      },
-      {
-        "lineNumber": 167,
-        "author": {
-          "gitId": "SusterDrifter"
-        },
-        "content": "        getPayments().forEach(builder::append);"
-      },
-      {
-        "lineNumber": 168,
-        "author": {
-          "gitId": "SusterDrifter"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
         "content": "        return builder.toString();"
       },
       {
-        "lineNumber": 170,
+        "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 171,
+        "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
@@ -25160,9 +25069,9 @@
       }
     ],
     "authorContributionMap": {
-      "ooihuiying": 7,
-      "SusterDrifter": 37,
-      "-": 127
+      "ooihuiying": 5,
+      "SusterDrifter": 30,
+      "-": 123
     }
   },
   {
@@ -27477,6 +27386,393 @@
     ],
     "authorContributionMap": {
       "SusterDrifter": 63
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/tag/Tag.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.model.tag;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.util.AppUtil.checkArgument;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Represents a Tag in the address book."
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Guarantees: immutable; name is valid as declared in {@link #isValidTagName(String)}"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class Tag {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String MESSAGE_TAG_CONSTRAINTS \u003d \"Tags names should be alphanumeric\";"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String TAG_VALIDATION_REGEX \u003d \"\\\\p{Alnum}+\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public final String tagName;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Constructs a {@code Tag}."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param tagName A valid tag name."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Tag(String tagName) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(tagName);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        checkArgument(isValidTagName(tagName), MESSAGE_TAG_CONSTRAINTS);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.tagName \u003d tagName;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns true if a given string is a valid tag name."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static boolean isValidTagName(String test) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return test.matches(TAG_VALIDATION_REGEX);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                || (other instanceof Tag // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 tagName.equals(((Tag) other).tagName)); // state check"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public int hashCode() {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return tagName.hashCode();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Format state as text for viewing."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "        return tagName;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "SusterDrifter": 1,
+      "-": 53
     }
   },
   {
@@ -32692,23 +32988,23 @@
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "import java.util.logging.Logger;"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": ""
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": "import com.google.common.eventbus.Subscribe;"
+        "content": "import java.util.logging.Logger;"
       },
       {
         "lineNumber": 7,
@@ -32722,98 +33018,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.application.Platform;"
+        "content": "import com.google.common.eventbus.Subscribe;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.event.Event;"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.fxml.FXML;"
+        "content": "import javafx.application.Platform;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.layout.Region;"
+        "content": "import javafx.event.Event;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.web.WebView;"
+        "content": "import javafx.fxml.FXML;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.MainApp;"
+        "content": "import javafx.scene.layout.Region;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.core.LogsCenter;"
+        "content": "import javafx.scene.web.WebView;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.events.ui.PersonPanelSelectionChangedEvent;"
+        "content": "import seedu.address.MainApp;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Person;"
+        "content": "import seedu.address.commons.core.LogsCenter;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.commons.events.ui.PersonPanelSelectionChangedEvent;"
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "/**"
+        "content": "import seedu.address.model.person.Payment;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": " * The Browser Panel of the App."
+        "content": "import seedu.address.model.person.Person;"
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": " */"
+        "content": "import seedu.address.model.subject.Subject;"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "public class BrowserPanel extends UiPart\u003cRegion\u003e {"
+        "content": "import seedu.address.model.tag.Tag;"
       },
       {
         "lineNumber": 22,
@@ -32827,70 +33123,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String DEFAULT_PAGE \u003d \"default.html\";"
+        "content": "/**"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String SEARCH_PAGE_URL \u003d"
+        "content": " * The Browser Panel of the App."
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "            \"PersonPage.html\";"
+        "content": " */"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class BrowserPanel extends UiPart\u003cRegion\u003e {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final String FXML \u003d \"BrowserPanel.fxml\";"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public static final String DEFAULT_PAGE \u003d \"default.html\";"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+        "content": "    public static final String SEARCH_PAGE_URL \u003d"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            \"PersonPage.html\";"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "    @FXML"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "    private WebView browser;"
+        "content": "    private static final String FXML \u003d \"BrowserPanel.fxml\";"
       },
       {
         "lineNumber": 33,
@@ -32904,465 +33200,668 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public BrowserPanel() {"
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "        super(FXML);"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @FXML"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "        // To prevent triggering events for typing inside the loaded Web page."
+        "content": "    private WebView browser;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "        getRoot().setOnKeyPressed(Event::consume);"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public BrowserPanel() {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "        loadDefaultPage();"
+        "content": "        super(FXML);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "        registerAsAnEventHandler(this);"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        // To prevent triggering events for typing inside the loaded Web page."
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        getRoot().setOnKeyPressed(Event::consume);"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Loads the page with the person\u0027s information parsed into the URL."
+        "content": "        loadDefaultPage();"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Also escapes pound sign."
+        "content": "        registerAsAnEventHandler(this);"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "    }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param person Person to read information from."
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void loadPersonPage(Person person) {"
+        "content": "     * Loads the page with the person\u0027s information parsed into the URL."
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "        final StringBuilder subjectsBuilder \u003d new StringBuilder();"
+        "content": "     * Also escapes pound sign."
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        person.getSubjects().forEach(subjectsBuilder::append);"
+        "content": "     *"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "ooihuiying"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "     * @param person Person to read information from."
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "        final StringBuilder paymentsBuilder \u003d new StringBuilder();"
+        "content": "     */"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "        person.getPayments().forEach(paymentsBuilder::append);"
+        "content": "    private void loadPersonPage(Person person) {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        final StringBuilder subjectsBuilder \u003d new StringBuilder();"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        final StringBuilder tagsBuilder \u003d new StringBuilder();"
+        "content": "        person.getSubjects().forEach(subjectsBuilder::append);"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "ooihuiying"
         },
-        "content": "        person.getTags().forEach(tagsBuilder::append);"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "ooihuiying"
+          "gitId": "SusterDrifter"
         },
-        "content": ""
+        "content": "        final StringBuilder subjectNamesBuilder \u003d new StringBuilder();"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "lywjoel"
-        },
-        "content": "        URL personPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + SEARCH_PAGE_URL);"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "ooihuiying"
+          "gitId": "SusterDrifter"
         },
         "content": ""
       },
       {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "        List\u003cSubject\u003e subjectNames \u003d new ArrayList\u003c\u003e(person.getSubjects());"
+      },
+      {
         "lineNumber": 62,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "        String url \u003d personPage.toExternalForm()"
+        "content": "        for (int i \u003d 0; i \u003c subjectNames.size(); i++) {"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "                + \"?name\u003d\" + person.getName().fullName"
+        "content": "            subjectNamesBuilder.append(subjectNames.get(i).getSubjectName());"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "                + \"\u0026phone\u003d\" + person.getPhone().value"
+        "content": "            if (i !\u003d subjectNames.size() - 1) {"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "                + \"\u0026email\u003d\" + person.getEmail().value"
+        "content": "                subjectNamesBuilder.append(\" | \");"
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "                + \"\u0026address\u003d\" + person.getAddress().value"
+        "content": "            }"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "                + \"\u0026tuitionTiming\u003d\" + person.getTuitionTiming().value"
+        "content": "        }"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "                + \"\u0026subjects\u003d\" + subjectsBuilder.toString()"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "                + \"\u0026payments\u003d\" + paymentsBuilder.toString()"
+        "content": "        final StringBuilder paymentsBuilder \u003d new StringBuilder();"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "                + \"\u0026tags\u003d\" + tagsBuilder.toString();"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "ooihuiying"
+          "gitId": "SusterDrifter"
         },
-        "content": ""
+        "content": "        List\u003cPayment\u003e payments \u003d new ArrayList\u003c\u003e(person.getPayments());"
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "        logger.info(url.replace(\"#\", \"%23\"));"
+        "content": "        for (int i \u003d 0; i \u003c payments.size(); i++) {"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "        loadPage(url.replace(\"#\", \"%23\"));"
+        "content": "            Payment selected \u003d payments.get(i);"
       },
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "    }"
+        "content": "            paymentsBuilder.append(String.format(\"Month: %5d     Year: %10d     Amount: %10d         \","
       },
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": ""
+        "content": "                    selected.getMonth(), selected.getYear(), selected.getAmount()));"
       },
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "    public void loadPage(String url) {"
+        "content": "        }"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "        Platform.runLater(() -\u003e browser.getEngine().load(url));"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        final StringBuilder tagsBuilder \u003d new StringBuilder();"
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": ""
+        "content": "        List\u003cTag\u003e tags \u003d new ArrayList\u003c\u003e(person.getTags());"
       },
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "    /**"
+        "content": "        for (int i \u003d 0; i \u003c tags.size(); i++) {"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "     * Loads a default HTML file with a background that matches the general theme."
+        "content": "            tagsBuilder.append(tags.get(i).toString());"
       },
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "     */"
+        "content": "            if (i !\u003d tags.size() - 1) {"
       },
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "    private void loadDefaultPage() {"
+        "content": "                tagsBuilder.append(\" | \");"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "        URL defaultPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
+        "content": "            }"
       },
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "        loadPage(defaultPage.toExternalForm());"
+        "content": "        }"
       },
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 87,
-        "author": {
-          "gitId": "-"
+          "gitId": "ooihuiying"
         },
         "content": ""
       },
       {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "lywjoel"
+        },
+        "content": "        URL personPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + SEARCH_PAGE_URL);"
+      },
+      {
         "lineNumber": 88,
         "author": {
-          "gitId": "-"
+          "gitId": "ooihuiying"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Frees resources allocated to the browser."
+        "content": "        String url \u003d personPage.toExternalForm()"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "                + \"?name\u003d\" + person.getName().fullName"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void freeResources() {"
+        "content": "                + \"\u0026phone\u003d\" + person.getPhone().value"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "        browser \u003d null;"
+        "content": "                + \"\u0026email\u003d\" + person.getEmail().value"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                + \"\u0026address\u003d\" + person.getAddress().value"
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": ""
+        "content": "                + \"\u0026tuitionTimingDay\u003d\" + person.getTuitionTiming().day.toString().substring(0, 3)"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "    @Subscribe"
+        "content": "                + \"\u0026tuitionTimingTime\u003d\" + person.getTuitionTiming().time"
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "-"
+          "gitId": "SusterDrifter"
         },
-        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
+        "content": "                + \"\u0026subjectNames\u003d\" + subjectNamesBuilder.toString()"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": "                + \"\u0026subjects\u003d\" + subjectsBuilder.toString()"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "        loadPersonPage(event.getNewSelection());"
+        "content": "                + \"\u0026payments\u003d\" + paymentsBuilder.toString()"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                + \"\u0026tags\u003d\" + tagsBuilder.toString();"
       },
       {
         "lineNumber": 100,
+        "author": {
+          "gitId": "ooihuiying"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(url.replace(\"#\", \"%23\"));"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        loadPage(url.replace(\"#\", \"%23\"));"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void loadPage(String url) {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Platform.runLater(() -\u003e browser.getEngine().load(url));"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Loads a default HTML file with a background that matches the general theme."
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private void loadDefaultPage() {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        URL defaultPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        loadPage(defaultPage.toExternalForm());"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Frees resources allocated to the browser."
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void freeResources() {"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        browser \u003d null;"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        loadPersonPage(event.getNewSelection());"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
@@ -33371,8 +33870,9 @@
     ],
     "authorContributionMap": {
       "ooihuiying": 4,
+      "SusterDrifter": 32,
       "lywjoel": 1,
-      "-": 95
+      "-": 92
     }
   },
   {
@@ -35347,6 +35847,85 @@
     }
   },
   {
+    "path": "src/main/resources/view/BrowserPanel.fxml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "\u003c?import javafx.scene.layout.Pane?\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c?import javafx.scene.layout.StackPane?\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c?import javafx.scene.web.WebView?\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "\u003cStackPane xmlns:fx\u003d\"http://javafx.com/fxml/1\" xmlns\u003d\"http://javafx.com/javafx/8.0.171\"\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "  \u003cWebView fx:id\u003d\"browser\" /\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "   \u003cPane prefHeight\u003d\"200.0\" prefWidth\u003d\"200.0\" /\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/StackPane\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "SusterDrifter": 3,
+      "-": 7
+    }
+  },
+  {
     "path": "src/main/resources/view/PersonListCard.fxml",
     "lines": [
       {
@@ -35647,6 +36226,1197 @@
     "authorContributionMap": {
       "SusterDrifter": 10,
       "-": 32
+    }
+  },
+  {
+    "path": "src/main/resources/view/PersonPage.css",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "body {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    background-color: #383838;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail {"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    width: 55%;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    height: 180px;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    text-align: left;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    margin-left: 10px;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    float: left;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.payment-detail {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    width: 40%;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    height: 180px;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    background-color: #3E3E3E;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    float: right;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    color: white;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .personal-name {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding-top: 10px;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding-bottom: 10px;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    color: white;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .text-lead {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 30px;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    line-height: 40px;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .personal-detail {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    margin-top: 10px;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    color: lightgrey;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .timing-detail {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    width: 60px;"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    height: 60px;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    margin-left: 10px;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    float: left;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .timing-detail .timing-text {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    text-align: right;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    margin-top: 35%;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    margin-right: 5px;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 15px;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    line-height: 20px;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Droid Sans\";"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    text-transform: uppercase;"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    color: lightslategrey;"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .timing-detail .timing-text .timing-day {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 25px;"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    color: darkgrey;"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .contact-detail {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    width: 280px;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    height: 60px;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    text-align: left;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    margin-left: 10px;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    float: left;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .contact-detail .text-detail {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 13px;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    line-height: 20px;"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding-top: 2px;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding-bottom: 2px;"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.main-detail .contact-detail .text-italic {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 13px;"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-style: italic;"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    line-height: 20px;"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ".detail-subject-division {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    clear:both;"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ".label {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    resize: both;"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    color: white;"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    margin-bottom: 5px;"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ".label .label-text {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding: 1px 3px;"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    resize: both;"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    background-color: #3e96;"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    border-radius: 5px;"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 11px;"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-weight: bold;"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.payment-detail .payment-label {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    resize: both;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    display: inline-block;"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    margin-bottom: 3px;"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    text-anchor: middle;"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.payment-detail .payment-title {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding: 3px 5px;"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    resize: both;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    background-color: darkslateblue;"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    border-radius: 5px;"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 15px;"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-weight: bold;"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.payment-detail .payment-numbers-panel {"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    width: 100%;"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.payment-detail .payment-numbers {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 13px;"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    line-height: 20px;"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    white-space: pre-wrap;"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.detail-subject-division .horizontal-divider {"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    width: 100%;"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    clear: both;"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.tags {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 15px;"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    line-height: 20px;"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding-top: 2px;"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding-bottom: 10px;"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    float: left;"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "header.tags .label .label-text {"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    background-color: mediumslateblue;"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "table.subject-table, th, td {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    border: 1px solid antiquewhite;"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    border-collapse: collapse;"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "th, td {"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-size: 15px;"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    line-height: 20px;"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    padding: 5px;"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    color: white;"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "th {"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    background-color: indianred;"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "    width: 20%;"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "SusterDrifter"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "SusterDrifter": 169
     }
   },
   {

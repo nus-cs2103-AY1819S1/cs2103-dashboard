@@ -50654,9 +50654,9 @@
       {
         "lineNumber": 238,
         "author": {
-          "gitId": "adjscent"
+          "gitId": "-"
         },
-        "content": "    public ArrayList\u003cSlot\u003e getFreeTime() throws ParseException {"
+        "content": "    public ArrayList\u003cSlot\u003e getFreeSlots() {"
       },
       {
         "lineNumber": 239,
@@ -50703,166 +50703,572 @@
       {
         "lineNumber": 245,
         "author": {
-          "gitId": "adjscent"
+          "gitId": "-"
         },
-        "content": "                    slot.setDay(getNumDay(i));"
+        "content": "                    try {"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "                    if (j / 2 \u003e 9) {"
+        "content": "                        slot.setDay(getNumDay(i));"
       },
       {
         "lineNumber": 247,
         "author": {
-          "gitId": "adjscent"
+          "gitId": "-"
         },
-        "content": "                        slot.setTime(\"\" + j / 2 + ((j % 2 \u003d\u003d 1) ? \"30\" : \"00\"));"
+        "content": "                    } catch (ParseException e) {"
       },
       {
         "lineNumber": 248,
         "author": {
-          "gitId": "adjscent"
+          "gitId": "-"
         },
-        "content": "                    } else {"
+        "content": "                        e.printStackTrace();"
       },
       {
         "lineNumber": 249,
         "author": {
-          "gitId": "adjscent"
+          "gitId": "-"
         },
-        "content": "                        slot.setTime(\"0\" + j / 2 + ((j % 2 \u003d\u003d 1) ? \"30\" : \"00\"));"
+        "content": "                    }"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "                    }"
+        "content": "                    if (j / 2 \u003e 9) {"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "                    slots.add(slot);"
+        "content": "                        slot.setTime(\"\" + j / 2 + ((j % 2 \u003d\u003d 1) ? \"30\" : \"00\"));"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "                }"
+        "content": "                    } else {"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "            }"
+        "content": "                        slot.setTime(\"0\" + j / 2 + ((j % 2 \u003d\u003d 1) ? \"30\" : \"00\"));"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        }"
+        "content": "                    }"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "                    slots.add(slot);"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        return slots;"
+        "content": "                }"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "            }"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "     * @return"
+        "content": "        return slots;"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "     * @throws ParseException"
+        "content": "    }"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    public String freeTimeToString() throws ParseException {"
+        "content": "    /**"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        StringBuilder sb \u003d new StringBuilder();"
+        "content": "     * @return"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        getFreeTime().forEach((slot) -\u003e sb.append(slot.getDay() + \",\" + slot.getTime() + \";\"));"
+        "content": "     * @throws ParseException"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        return sb.toString().trim();"
+        "content": "     */"
       },
       {
         "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public ArrayList\u003cSlot\u003e getFreeSlotsByDay(String day) {"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ArrayList\u003cSlot\u003e slots \u003d getFreeSlots();"
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        slots.removeIf(s -\u003e !s.getDay().equalsIgnoreCase(day));"
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return slots;"
+      },
+      {
+        "lineNumber": 271,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 272,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 273,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 274,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 275,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws ParseException"
+      },
+      {
+        "lineNumber": 276,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 277,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String freeTimeToString() {"
+      },
+      {
+        "lineNumber": 278,
+        "author": {
+          "gitId": "adjscent"
+        },
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 279,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        getFreeSlots().forEach((slot) -\u003e sb.append(slot.getDay() + \",\" + slot.getTime() + \";\"));"
+      },
+      {
+        "lineNumber": 280,
+        "author": {
+          "gitId": "adjscent"
+        },
+        "content": "        return sb.toString().trim();"
+      },
+      {
+        "lineNumber": 281,
         "author": {
           "gitId": "adjscent"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 268,
+        "lineNumber": 282,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 283,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 284,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Pretty printing into table format"
+      },
+      {
+        "lineNumber": 285,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 286,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @return"
+      },
+      {
+        "lineNumber": 287,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 288,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String prettyPrint() {"
+      },
+      {
+        "lineNumber": 289,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 290,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sb.append(\"\u003ctr\u003e\");"
+      },
+      {
+        "lineNumber": 291,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sb.append(\"\u003cth\u003e\u003c/th\u003e\");"
+      },
+      {
+        "lineNumber": 292,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (int i \u003d 0; i \u003c 7; i++) {"
+      },
+      {
+        "lineNumber": 293,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 294,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                sb.append(\"\u003cth\u003e\" + getNumDay(i).substring(0, 3) + \"\u003c/th\u003e\");"
+      },
+      {
+        "lineNumber": 295,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            } catch (ParseException e) {"
+      },
+      {
+        "lineNumber": 296,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                e.printStackTrace();"
+      },
+      {
+        "lineNumber": 297,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 298,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 299,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sb.append(\"\u003c/tr\u003e\");"
+      },
+      {
+        "lineNumber": 300,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        int oddatinator \u003d 0;"
+      },
+      {
+        "lineNumber": 301,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        int hourcounter \u003d 0;"
+      },
+      {
+        "lineNumber": 302,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (int i \u003d 0; i \u003c value[0].length; i++) {"
+      },
+      {
+        "lineNumber": 303,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            sb.append(\"\u003ctr\u003e\");"
+      },
+      {
+        "lineNumber": 304,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (oddatinator % 2 \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 305,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                sb.append(\"\u003ctd\u003e\" + String.format(\"%02d\", hourcounter) + \"00\u003c/td\u003e\");"
+      },
+      {
+        "lineNumber": 306,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                oddatinator++;"
+      },
+      {
+        "lineNumber": 307,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 308,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                sb.append(\"\u003ctd\u003e\" + String.format(\"%02d\", hourcounter) + \"30\u003c/td\u003e\");"
+      },
+      {
+        "lineNumber": 309,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                hourcounter++;"
+      },
+      {
+        "lineNumber": 310,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                oddatinator++;"
+      },
+      {
+        "lineNumber": 311,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 312,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 313,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 314,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            for (int j \u003d 0; j \u003c value.length; j++) {"
+      },
+      {
+        "lineNumber": 315,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 316,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                if (this.value[j][i] \u003d\u003d 1) {"
+      },
+      {
+        "lineNumber": 317,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    sb.append(\"\u003ctd class\u003d\u0027table-danger\u0027\u003e \u003c/td\u003e\");"
+      },
+      {
+        "lineNumber": 318,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                } else {"
+      },
+      {
+        "lineNumber": 319,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    sb.append(\"\u003ctd\u003e \u003c/td\u003e\");"
+      },
+      {
+        "lineNumber": 320,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 321,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 322,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            sb.append(\"\u003c/tr\u003e\");"
+      },
+      {
+        "lineNumber": 323,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 324,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return sb.toString();"
+      },
+      {
+        "lineNumber": 325,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 326,
         "author": {
           "gitId": "adjscent"
         },
@@ -50870,8 +51276,8 @@
       }
     ],
     "authorContributionMap": {
-      "adjscent": 265,
-      "-": 3
+      "adjscent": 262,
+      "-": 64
     }
   },
   {
@@ -89539,14 +89945,14 @@
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "adjscent"
+          "gitId": "-"
         },
-        "content": "import org.junit.jupiter.api.Test;"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "adjscent"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -89555,35 +89961,35 @@
         "author": {
           "gitId": "adjscent"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": "import org.junit.jupiter.api.Test;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "import seedu.address.testutil.Assert;"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "import seedu.address.testutil.Assert;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "class ScheduleTest {"
+        "content": ""
       },
       {
         "lineNumber": 14,
@@ -89597,21 +90003,21 @@
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    private String emptyScheduleString \u003d \"0000000000000000000000\""
+        "content": "class ScheduleTest {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        +"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        \"000000000000000000000000000000000000000000000000000\""
+        "content": "    private String emptyScheduleString \u003d \"0000000000000000000000\""
       },
       {
         "lineNumber": 18,
@@ -89695,196 +90101,196 @@
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        \"00000000\";"
+        "content": "        \"000000000000000000000000000000000000000000000000000\""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        +"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    @Test"
+        "content": "        \"00000000\";"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    public void constructor_null_throwsNullPointerException() {"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Assert.assertThrows(NullPointerException.class, () -\u003e new Schedule(null));"
+        "content": "    @Test"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "    public void constructor_null_throwsNullPointerException() {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        Assert.assertThrows(NullPointerException.class, () -\u003e new Schedule(null));"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    public void isValidSchedule() {"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertTrue(Schedule.isValidSchedule(VALID_SCHEDULE));"
+        "content": "    @Test"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "    public void isValidSchedule() {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        assertTrue(Schedule.isValidSchedule(VALID_SCHEDULE));"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    public void getTimeDay() throws ParseException {"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s \u003d new Schedule();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertFalse (s.getTimeDay(\"monday\", \"0100\"));"
+        "content": "    public void getTimeDay() throws ParseException {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertFalse (s.getTimeDay(\"tuesday\", \"0100\"));"
+        "content": "        Schedule s \u003d new Schedule();"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertFalse (s.getTimeDay(\"wednesday\", \"0100\"));"
+        "content": "        assertFalse(s.getTimeDay(\"monday\", \"0100\"));"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertFalse (s.getTimeDay(\"thursday\", \"0100\"));"
+        "content": "        assertFalse(s.getTimeDay(\"tuesday\", \"0100\"));"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertFalse (s.getTimeDay(\"friday\", \"0100\"));"
+        "content": "        assertFalse(s.getTimeDay(\"wednesday\", \"0100\"));"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertFalse (s.getTimeDay(\"saturday\", \"0100\"));"
+        "content": "        assertFalse(s.getTimeDay(\"thursday\", \"0100\"));"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertFalse (s.getTimeDay(\"sunday\", \"0100\"));"
+        "content": "        assertFalse(s.getTimeDay(\"friday\", \"0100\"));"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Assert.assertThrows(ParseException.class, () -\u003e s"
+        "content": "        assertFalse(s.getTimeDay(\"saturday\", \"0100\"));"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "            .setTimeDay(\"unknown\", \"0130\", true)"
+        "content": "        assertFalse(s.getTimeDay(\"sunday\", \"0100\"));"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        );"
+        "content": "        Assert.assertThrows(ParseException.class, () -\u003e s"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertFalse (s.getTimeDay(\"monday\", \"0130\"));"
+        "content": "            .setTimeDay(\"unknown\", \"0130\", true)"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        );"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "        assertFalse(s.getTimeDay(\"monday\", \"0130\"));"
       },
       {
         "lineNumber": 57,
@@ -89898,304 +90304,374 @@
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    public void setTimeDay() throws ParseException {"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s \u003d new Schedule();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        s.setTimeDay(\"monday\", \"0100\", true);"
+        "content": "    public void setTimeDay() throws ParseException {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        s.setTimeDay(\"monday\", \"0130\", true);"
+        "content": "        Schedule s \u003d new Schedule();"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Assert.assertThrows(ParseException.class, () -\u003e s"
+        "content": "        s.setTimeDay(\"monday\", \"0100\", true);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "            .setTimeDay(\"unknown\", \"0130\", true)"
+        "content": "        s.setTimeDay(\"monday\", \"0130\", true);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        );"
+        "content": "        Assert.assertThrows(ParseException.class, () -\u003e s"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "            .setTimeDay(\"unknown\", \"0130\", true)"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        );"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    void valueToString() {"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s1 \u003d new Schedule();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertTrue (s1.valueToString().equals(emptyScheduleString));"
+        "content": "    void valueToString() {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        Schedule s1 \u003d new Schedule();"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s2 \u003d new Schedule(emptyScheduleString);"
+        "content": "        assertTrue(s1.valueToString().equals(emptyScheduleString));"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertTrue (s2.valueToString().equals(emptyScheduleString));"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "        Schedule s2 \u003d new Schedule(emptyScheduleString);"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        assertTrue(s2.valueToString().equals(emptyScheduleString));"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    public void maxSchedule() {"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s1 \u003d new Schedule();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s2 \u003d new Schedule();"
+        "content": "    public void maxSchedule() {"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        s1.maxSchedule(s2);"
+        "content": "        Schedule s1 \u003d new Schedule();"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertTrue (s1.valueToString().equals(s2.valueToString()));"
+        "content": "        Schedule s2 \u003d new Schedule();"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "        s1.maxSchedule(s2);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        assertTrue(s1.valueToString().equals(s2.valueToString()));"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    public void xor() {"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s1 \u003d new Schedule();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s2 \u003d new Schedule();"
+        "content": "    public void xor() {"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        s1.xor(s2);"
+        "content": "        Schedule s1 \u003d new Schedule();"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        assertTrue (s1.valueToString().equals(emptyScheduleString));"
+        "content": "        Schedule s2 \u003d new Schedule();"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "        s1.xor(s2);"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "adjscent"
         },
-        "content": ""
+        "content": "        assertTrue(s1.valueToString().equals(emptyScheduleString));"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    void freeTimeToString() throws ParseException {"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        Schedule s1 \u003d new Schedule();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        s1.setTimeDay(\"monday\", \"1100\", true);"
+        "content": "    void freeTimeToString() throws ParseException {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        s1.setTimeDay(\"monday\", \"0130\", true);"
+        "content": "        Schedule s1 \u003d new Schedule();"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "        s1.freeTimeToString();"
+        "content": "        s1.setTimeDay(\"monday\", \"1100\", true);"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "adjscent"
         },
-        "content": "    }"
+        "content": "        s1.setTimeDay(\"monday\", \"0130\", true);"
       },
       {
         "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String ft \u003d s1.freeTimeToString();"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(ft.contains(\"monday\"));"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String p \u003d s1.prettyPrint();"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(p.contains(\"mon\"));"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ArrayList\u003cSlot\u003e slots \u003d s1.getFreeSlotsByDay(\"monday\");"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(slots.size() \u003d\u003d 24 * 2 - 2);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "adjscent"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 111,
         "author": {
           "gitId": "adjscent"
         },
@@ -90203,7 +90679,8 @@
       }
     ],
     "authorContributionMap": {
-      "adjscent": 101
+      "adjscent": 100,
+      "-": 11
     }
   },
   {

@@ -7110,114 +7110,114 @@
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "#### Listing Tasks: `list`"
+        "content": "#### Completing a Task: `complete`"
       },
       {
         "lineNumber": 77,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
         "content": "[%hardbreaks]"
       },
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "Shows a list of all tasks."
+        "content": "Completes task(s) in the task manager"
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": ""
+        "content": "Format: `complete INDEX` or `complete t/LABEL`"
       },
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "+Example: `list`"
+        "content": "+Example:"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "```"
+        "content": "`complete 1`"
       },
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "1. finish math tutorial  DueDate: 01-10-18 1300 Description: before exam PriorityValue: 2 Status: IN PROGRESS"
+        "content": "`complete l/urgent`"
       },
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "2. Attack Food  DueDate: 01-10-18 Description: what did food do PriorityValue: 88 Status: FINISHED"
+        "content": "-Example:"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "3. Induce Happiness DueDate: 03-10-18 Description: conditions of happiness PriorityValue: 3 Status: OVERDUE"
+        "content": "`complete 1 l/urgent` (Behavior is not clear)"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "```"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": ""
+        "content": "_Note that completion via label is case-sensitive_"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "#### Search for Tasks by Keyword: `find`"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "[%hardbreaks]"
+        "content": "* You can complete multiple tasks at once through the use of the format complete `l/LABEL`"
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "Format: `find KEYWORD`"
+        "content": "* Note that the label needs to be valid. Validity for a label, `x`, is defined by the following"
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "+Example: `find complete`"
+        "content": "condition:"
       },
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": ""
+        "content": "** Has at least one task which is labelled `x` and status is not \"COMPLETED\""
       },
       {
         "lineNumber": 92,
@@ -7231,70 +7231,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "## Command Summary"
+        "content": "#### Listing Tasks: `list`"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[%hardbreaks]"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "* System Commands"
+        "content": "Shows a list of all tasks."
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "`help`"
+        "content": ""
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo`"
+        "content": "+Example: `list`"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo`"
+        "content": "```"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "`history`"
+        "content": "1. finish math tutorial  DueDate: 01-10-18 1300 Description: before exam PriorityValue: 2 Status: IN PROGRESS"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "`exit`"
+        "content": "2. Attack Food  DueDate: 01-10-18 Description: what did food do PriorityValue: 88 Status: FINISHED"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "3. Induce Happiness DueDate: 03-10-18 Description: conditions of happiness PriorityValue: 3 Status: OVERDUE"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "* Task Management"
+        "content": "```"
       },
       {
         "lineNumber": 103,
@@ -7308,35 +7308,35 @@
         "author": {
           "gitId": "-"
         },
-        "content": "** `add n/TASK_NAME t/DUE_DATE p/PRIORITY_VALUE [d/detailed description] [l/LABEL]`"
+        "content": "#### Search for Tasks by Keyword: `find`"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[%hardbreaks]"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "** `delete INDEX`"
+        "content": "Format: `find KEYWORD`"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "+Example: `find complete`"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "** `edit INDEX [t/DUE_DATE] [p/PRIORITY_VALUE] [d/detailed description] [l/LABEL]`"
+        "content": ""
       },
       {
         "lineNumber": 109,
@@ -7350,7 +7350,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "** `list`"
+        "content": "## Command Summary"
       },
       {
         "lineNumber": 111,
@@ -7364,12 +7364,146 @@
         "author": {
           "gitId": "-"
         },
+        "content": "* System Commands"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`help`"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo`"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo`"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`history`"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`exit`"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* Task Management"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** `add n/TASK_NAME t/DUE_DATE p/PRIORITY_VALUE [d/detailed description] [l/LABEL]`"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** `delete INDEX`"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** `edit INDEX [t/DUE_DATE] [p/PRIORITY_VALUE] [d/detailed description] [l/LABEL]`"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "unsatisfiedpopcorn"
+        },
+        "content": "** `complete INDEX` or `complete l/LABEL`"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "** `list`"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
         "content": "** `find KEYWORD`"
       }
     ],
     "authorContributionMap": {
-      "-": 111,
-      "pengnam": 1
+      "-": 115,
+      "pengnam": 1,
+      "unsatisfiedpopcorn": 15
     }
   },
   {
@@ -17713,252 +17847,252 @@
         "author": {
           "gitId": "pengnam"
         },
-        "content": "import seedu.address.model.Model;"
+        "content": "import seedu.address.model.DependencyGraph;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "import seedu.address.model.task.Task;"
+        "content": "import seedu.address.model.Model;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "/**"
+        "content": "import seedu.address.model.task.Task;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "pengnam"
         },
-        "content": " * Initiates a depedency between a dependant task and a dependee task."
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "pengnam"
         },
-        "content": " * The dependent task is dependent on dependee task."
+        "content": "/**"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "pengnam"
         },
-        "content": " */"
+        "content": " * Initiates a dependency between a dependant task and a dependee task."
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "public class DependencyCommand extends Command {"
+        "content": " * The dependent task is dependent on dependee task."
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"dependency\";"
+        "content": " */"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"You have added dependency for :\\n%1$s\";"
+        "content": "public class DependencyCommand extends Command {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public static final String MESSAGE_ALREADY_DEPENDANT \u003d"
+        "content": "    public static final String COMMAND_WORD \u003d \"dependency\";"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            \"The dependee task is already dependent on the dependant task\";"
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"You have added dependency for :\\n%1$s\";"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD"
+        "content": "    public static final String MESSAGE_ALREADY_DEPENDANT \u003d"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            + \": Dependency identified by hashcode of the task.\\n\""
+        "content": "            \"The dependee task is already dependent on the dependant task\";"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            + \"Parameters: Index of task dependee, Index of task dependant\\n\""
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            + \"Example: \" + COMMAND_WORD + \" 1 2\";"
+        "content": "            + \": Dependency of dependant on dependee.\\n\""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    private final Index dependantIndex;"
+        "content": "            + \"Parameters: Index of task dependant, Index of task dependee\\n\""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    private final Index dependeeIndex;"
+        "content": "            + \"Example: \" + COMMAND_WORD + \" 1 2\";"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public DependencyCommand(Index dependantIndex, Index dependeeIndex) {"
+        "content": "    public static final String MESSAGE_CYCLIC_DEPENDENCY \u003d \"New dependency will introduce a cyclic dependency\";"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        requireNonNull(dependantIndex);"
+        "content": "    private final Index dependantIndex;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        requireNonNull(dependeeIndex);"
+        "content": "    private final Index dependeeIndex;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        this.dependantIndex \u003d dependantIndex;"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        this.dependeeIndex \u003d dependeeIndex;"
+        "content": "    public DependencyCommand(Index dependantIndex, Index dependeeIndex) {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": "        requireNonNull(dependantIndex);"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    @Override"
+        "content": "        requireNonNull(dependeeIndex);"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": "        this.dependantIndex \u003d dependantIndex;"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        requireNonNull(model);"
+        "content": "        this.dependeeIndex \u003d dependeeIndex;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        List\u003cTask\u003e lastShownList \u003d model.getFilteredTaskList();"
+        "content": "    }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        if (dependantIndex.getZeroBased() \u003e\u003d lastShownList.size()"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                || dependeeIndex.getZeroBased() \u003e\u003d lastShownList.size()) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        }"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        List\u003cTask\u003e lastShownList \u003d model.getFilteredTaskList();"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task taskDependant \u003d lastShownList.get(dependantIndex.getZeroBased());"
+        "content": "        //Checking if indexes are out of bounds"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task taskDependee \u003d lastShownList.get(dependeeIndex.getZeroBased());"
+        "content": "        if (dependantIndex.getZeroBased() \u003e\u003d lastShownList.size()"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        if (taskDependee.getDependency().containsDependency(taskDependee)) {"
+        "content": "                || dependeeIndex.getZeroBased() \u003e\u003d lastShownList.size()) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            throw new CommandException(MESSAGE_ALREADY_DEPENDANT);"
+        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 48,
@@ -17972,269 +18106,346 @@
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        //Checking if dependant or dependee already contains dependency"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task updatedTask \u003d createDependantTask(taskDependant, taskDependee);"
+        "content": "        Task taskDependant \u003d lastShownList.get(dependantIndex.getZeroBased());"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        model.updateTask(taskDependant, updatedTask);"
+        "content": "        Task taskDependee \u003d lastShownList.get(dependeeIndex.getZeroBased());"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        model.updateFilteredTaskList(PREDICATE_SHOW_ALL_TASKS);"
+        "content": "        if (taskDependee.getDependency().containsDependency(taskDependee)) {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        model.commitTaskManager();"
+        "content": "            throw new CommandException(MESSAGE_ALREADY_DEPENDANT);"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, updatedTask));"
+        "content": "        }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": "        //Checking if introducing dependency will create a cyclic dependency"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        Task updatedTask \u003d createDependantTask(taskDependant, taskDependee);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    /**"
+        "content": "        DependencyGraph dg \u003d new DependencyGraph(model.getTaskManager().getTaskList());"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "     * Returns a {@code Task} with it\u0027s the additional dependency added."
+        "content": "        if (dg.checkCyclicDependency(updatedTask)) {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "     * @param dependantTask An immutable task passed to have its attributes copied"
+        "content": "            throw new CommandException(MESSAGE_CYCLIC_DEPENDENCY);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "     * @return A new immutable task similar to dependantTask but with additional dependency"
+        "content": "        }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "     */"
+        "content": "        //Passes all checks"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public static Task createDependantTask(Task dependantTask, Task dependeeTask) {"
+        "content": "        model.updateTask(taskDependant, updatedTask);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        return new Task("
+        "content": "        model.updateFilteredTaskList(PREDICATE_SHOW_ALL_TASKS);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                dependantTask.getName(),"
+        "content": "        model.commitTaskManager();"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                dependantTask.getDueDate(),"
+        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, updatedTask));"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                dependantTask.getPriorityValue(),"
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                dependantTask.getDescription(),"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                dependantTask.getLabels(),"
+        "content": "    /**"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                dependantTask.getStatus(),"
+        "content": "     * Returns a {@code Task} with it\u0027s the additional dependency added."
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                dependantTask.getDependency().addDependency(dependeeTask)"
+        "content": "     * @param dependantTask An immutable task passed to have its attributes copied"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        );"
+        "content": "     * @return A new immutable task similar to dependantTask but with additional dependency"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "    public static Task createDependantTask(Task dependantTask, Task dependeeTask) {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    @Override"
+        "content": "        return new Task("
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public boolean equals(Object obj) {"
+        "content": "                dependantTask.getName(),"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        if (obj \u003d\u003d null) {"
+        "content": "                dependantTask.getDueDate(),"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            return false;"
+        "content": "                dependantTask.getPriorityValue(),"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        } else if (obj instanceof DependencyCommand) {"
+        "content": "                dependantTask.getDescription(),"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            return dependantIndex.equals(((DependencyCommand) obj).dependantIndex)"
+        "content": "                dependantTask.getLabels(),"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                    \u0026\u0026 dependeeIndex.equals(((DependencyCommand) obj).dependeeIndex);"
+        "content": "                dependantTask.getStatus(),"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        } else {"
+        "content": "                dependantTask.getDependency().addDependency(dependeeTask)"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            // superclass\u0027s implementation might pass,"
+        "content": "        );"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            // although in this instance it\u0027s a \u003d\u003d relationship."
+        "content": "    }"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "            return super.equals(obj);"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": "    public boolean equals(Object obj) {"
       },
       {
         "lineNumber": 87,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        if (obj \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        } else if (obj instanceof DependencyCommand) {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            return dependantIndex.equals(((DependencyCommand) obj).dependantIndex)"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                    \u0026\u0026 dependeeIndex.equals(((DependencyCommand) obj).dependeeIndex);"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            // superclass\u0027s implementation might pass,"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            // although in this instance it\u0027s a \u003d\u003d relationship."
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            return super.equals(obj);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 98,
         "author": {
           "gitId": "pengnam"
         },
@@ -18242,7 +18453,7 @@
       }
     ],
     "authorContributionMap": {
-      "pengnam": 87
+      "pengnam": 98
     }
   },
   {
@@ -26822,6 +27033,742 @@
     "authorContributionMap": {
       "-": 38,
       "pengnam": 1
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/DependencyGraph.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "package seedu.address.model;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.HashMap;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.HashSet;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.Map;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.Set;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import seedu.address.model.task.Task;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import seedu.address.model.task.exceptions.GraphCycleException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": " * DependencyGraph models the dependencies of the tasks so that checks such as cyclic dependencies can be performed and"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": " * useful information such as the topological sort of the dependencies can be determined."
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "public class DependencyGraph {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    private Map\u003cString, Set\u003cString\u003e\u003e adjacencyList \u003d new HashMap\u003c\u003e();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public DependencyGraph(List\u003cTask\u003e taskList) {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        for (Task task: taskList) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            String hash \u003d Integer.toString(task.hashCode());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            Set\u003cString\u003e edges \u003d task.getDependency().getHashes();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            adjacencyList.put(hash, edges);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        if (checkPresenceOfCycle()) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            throw new GraphCycleException();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * Updates graph and returns true if the update Task will result in a cycle in the graph"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public boolean checkCyclicDependency(Task updatedTask) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        String hash \u003d Integer.toString(updatedTask.hashCode());"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        adjacencyList.remove(hash);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        adjacencyList.put(hash, updatedTask.getDependency().getHashes());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        return checkPresenceOfCycle();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * Checks if there will be a cycle in the graph"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public boolean checkPresenceOfCycle() {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        Set\u003cString\u003e unvisited \u003d new HashSet\u003c\u003e(adjacencyList.keySet());"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        Set\u003cString\u003e stack \u003d new HashSet\u003c\u003e();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        List\u003cString\u003e visited \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        for (String node: adjacencyList.keySet()) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            if (unvisited.contains(node)) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                if (depthFirstSearch(node, unvisited, visited, stack, adjacencyList)) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                    return true;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * Returns topological sort of the graph"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * @return list of hashes of tasks sorted by topological order"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public List\u003cString\u003e topologicalSort() {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        Set\u003cString\u003e unvisited \u003d new HashSet\u003c\u003e(adjacencyList.keySet());"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        Set\u003cString\u003e stack \u003d new HashSet\u003c\u003e();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        List\u003cString\u003e visited \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        for (String node: adjacencyList.keySet()) {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            if (unvisited.contains(node)) {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                if (depthFirstSearch(node, unvisited, visited, stack, adjacencyList)) {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                    throw new GraphCycleException();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        return visited;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * Performs dfs on graph to check for cycles"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * @param node next node to check"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * @param unvisited set of unvisited nodes"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * @param stack set of nodes in current path. Used to check cycles"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * @param adjacencyList"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     * @return true is there is a cycle"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    private boolean depthFirstSearch(String node, Set\u003cString\u003e unvisited, List\u003cString\u003e visited, Set\u003cString\u003e stack,"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                                     Map\u003cString, Set\u003cString\u003e\u003e adjacencyList) {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        if (stack.contains(node)) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        unvisited.remove(node);"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        stack.add(node);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        Set\u003cString\u003e edges \u003d adjacencyList.getOrDefault(node, new HashSet\u003cString\u003e());"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        for (String nextNode: edges) {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            if (depthFirstSearch(nextNode, unvisited, visited, stack, adjacencyList)) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                return true;"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        if (!visited.contains(node)) {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "            visited.add(node);"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        stack.remove(node);"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        return false;"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "pengnam": 104
     }
   },
   {
@@ -38137,6 +39084,84 @@
     "authorContributionMap": {
       "pengnam": 1,
       "-": 10
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/task/exceptions/GraphCycleException.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "package seedu.address.model.task.exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": " * Signals that the operation has detected a cyclic dependency in the dependency graph."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "public class GraphCycleException extends RuntimeException {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public GraphCycleException() {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        super(\"Cycle detected in dependency graph\");"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "pengnam": 10
     }
   },
   {
@@ -62380,105 +63405,105 @@
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public void execute_validIndexFilteredList_success() {"
+        "content": "    public void execute_cyclicDependencyUnfilteredList_throwsCommandException() {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        showTaskAtTwoIndexes(model, INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+        "content": "        Task dependantTask \u003d model.getFilteredTaskList().get(INDEX_FIRST_TASK.getZeroBased());"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        Task dependeeTask \u003d model.getFilteredTaskList().get(INDEX_SECOND_TASK.getZeroBased());"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task dependantTask \u003d model.getFilteredTaskList().get(INDEX_FIRST_TASK.getZeroBased());"
+        "content": "        Task newDependeeTask \u003d DependencyCommand.createDependantTask(dependeeTask, dependantTask);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task dependeeTask \u003d model.getFilteredTaskList().get(INDEX_SECOND_TASK.getZeroBased());"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        model.updateTask(dependeeTask, newDependeeTask);"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task newTask \u003d DependencyCommand.createDependantTask(dependantTask, dependeeTask);"
+        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        String expectedMessage \u003d String.format(DependencyCommand.MESSAGE_SUCCESS, newTask);"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        ModelManager expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
+        "content": "        assertCommandFailure(dependencyCommand, model, commandHistory, DependencyCommand.MESSAGE_CYCLIC_DEPENDENCY);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.updateTask(dependantTask, newTask);"
+        "content": "    }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.commitTaskManager();"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandSuccess(dependencyCommand, model, commandHistory, expectedMessage, expectedModel);"
+        "content": "    public void execute_validIndexFilteredList_success() {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": "        showTaskAtTwoIndexes(model, INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
       },
       {
         "lineNumber": 68,
@@ -62492,112 +63517,112 @@
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    @Test"
+        "content": "        Task dependantTask \u003d model.getFilteredTaskList().get(INDEX_FIRST_TASK.getZeroBased());"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public void execute_invalidIndexFilteredList_throwsCommandException() {"
+        "content": "        Task dependeeTask \u003d model.getFilteredTaskList().get(INDEX_SECOND_TASK.getZeroBased());"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        showTaskAtTwoIndexes(model, INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Index outOfBoundIndex \u003d Index.fromOneBased(model.getFilteredTaskList().size() + 1);"
+        "content": "        Task newTask \u003d DependencyCommand.createDependantTask(dependantTask, dependeeTask);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(outOfBoundIndex, outOfBoundIndex);"
+        "content": "        String expectedMessage \u003d String.format(DependencyCommand.MESSAGE_SUCCESS, newTask);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandFailure(dependencyCommand, model, commandHistory, Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
+        "content": "        ModelManager expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": "        expectedModel.updateTask(dependantTask, newTask);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        expectedModel.commitTaskManager();"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public void executeUndoRedo_validIndexUnfilteredList_success() throws Exception {"
+        "content": "        assertCommandSuccess(dependencyCommand, model, commandHistory, expectedMessage, expectedModel);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task dependantTask \u003d model.getFilteredTaskList().get(INDEX_FIRST_TASK.getZeroBased());"
+        "content": "    }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task dependeeTask \u003d model.getFilteredTaskList().get(INDEX_SECOND_TASK.getZeroBased());"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+        "content": "    public void execute_invalidIndexFilteredList_throwsCommandException() {"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task newTask \u003d DependencyCommand.createDependantTask(dependantTask, dependeeTask);"
+        "content": "        showTaskAtTwoIndexes(model, INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
       },
       {
         "lineNumber": 85,
@@ -62611,224 +63636,224 @@
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Model expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
+        "content": "        Index outOfBoundIndex \u003d Index.fromOneBased(model.getFilteredTaskList().size() + 1);"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.updateTask(dependantTask, newTask);"
+        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(outOfBoundIndex, outOfBoundIndex);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.commitTaskManager();"
+        "content": "        assertCommandFailure(dependencyCommand, model, commandHistory, Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // add dependency"
+        "content": "    }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        dependencyCommand.execute(model, commandHistory);"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // undo -\u003e reverts task manager back to previous state and filtered task list to show all"
+        "content": "    @Test"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // tasks"
+        "content": "    public void executeUndoRedo_validIndexUnfilteredList_success() throws Exception {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.undoTaskManager();"
+        "content": "        Task dependantTask \u003d model.getFilteredTaskList().get(INDEX_FIRST_TASK.getZeroBased());"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandSuccess(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": "        Task dependeeTask \u003d model.getFilteredTaskList().get(INDEX_SECOND_TASK.getZeroBased());"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // redo -\u003e same first task deleted again"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.redoTaskManager();"
+        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandSuccess(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": "        Task newTask \u003d DependencyCommand.createDependantTask(dependantTask, dependeeTask);"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        Model expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    @Test"
+        "content": "        expectedModel.updateTask(dependantTask, newTask);"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public void executeUndoRedo_invalidIndexUnfilteredList_failure() {"
+        "content": "        expectedModel.commitTaskManager();"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        // add dependency"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Index outOfBoundIndex \u003d Index.fromOneBased(model.getFilteredTaskList().size() + 1);"
+        "content": "        dependencyCommand.execute(model, commandHistory);"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(outOfBoundIndex, outOfBoundIndex);"
+        "content": "        // undo -\u003e reverts task manager back to previous state and filtered task list to show all"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        // tasks"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // execution failed -\u003e task manager state not added into model"
+        "content": "        expectedModel.undoTaskManager();"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandFailure(dependencyCommand, model, commandHistory, Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
+        "content": "        assertCommandSuccess(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_SUCCESS, expectedModel);"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        // redo -\u003e same first task deleted again"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // single task manager state in model -\u003e undoCommand and redoCommand fail"
+        "content": "        expectedModel.redoTaskManager();"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandFailure(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_FAILURE);"
+        "content": "        assertCommandSuccess(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_SUCCESS, expectedModel);"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandFailure(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_FAILURE);"
+        "content": ""
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": "    @Test"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    @Test"
+        "content": "    public void executeUndoRedo_invalidIndexUnfilteredList_failure() {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public void executeUndoRedo_validIndexFilteredList_sameTaskDependency() throws Exception {"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        Index outOfBoundIndex \u003d Index.fromOneBased(model.getFilteredTaskList().size() + 1);"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(outOfBoundIndex, outOfBoundIndex);"
       },
       {
         "lineNumber": 118,
@@ -62842,248 +63867,339 @@
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Model expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
+        "content": "        // execution failed -\u003e task manager state not added into model"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        showTaskAtTwoIndexes(model, INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+        "content": "        assertCommandFailure(dependencyCommand, model, commandHistory, Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task dependantTask \u003d model.getFilteredTaskList().get(INDEX_FIRST_TASK.getZeroBased());"
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task dependeeTask \u003d model.getFilteredTaskList().get(INDEX_SECOND_TASK.getZeroBased());"
+        "content": "        // single task manager state in model -\u003e undoCommand and redoCommand fail"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        assertCommandFailure(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_FAILURE);"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        Task newTask \u003d DependencyCommand.createDependantTask(dependantTask, dependeeTask);"
+        "content": ""
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        assertCommandFailure(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_FAILURE);"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.updateTask(dependantTask, newTask);"
+        "content": "    }"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.commitTaskManager();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // dependency -\u003e dependency for second task in unfiltered task list / first task in filtered task"
+        "content": "    public void executeUndoRedo_validIndexFilteredList_sameTaskDependency() throws Exception {"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // list"
+        "content": ""
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        dependencyCommand.execute(model, commandHistory);"
+        "content": "        DependencyCommand dependencyCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // undo -\u003e reverts task manager back to previous state and filtered task list to show all tasks"
+        "content": ""
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.undoTaskManager();"
+        "content": "        Model expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandSuccess(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": "        showTaskAtTwoIndexes(model, INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertEquals(dependantTask.getDependency(), model.getFilteredTaskList().get("
+        "content": "        Task dependantTask \u003d model.getFilteredTaskList().get(INDEX_FIRST_TASK.getZeroBased());"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "                INDEX_FIRST_TASK.getZeroBased()).getDependency());"
+        "content": "        Task dependeeTask \u003d model.getFilteredTaskList().get(INDEX_SECOND_TASK.getZeroBased());"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        // redo -\u003e deletes same second task in unfiltered task list\u003d-"
+        "content": ""
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        expectedModel.redoTaskManager();"
+        "content": "        Task newTask \u003d DependencyCommand.createDependantTask(dependantTask, dependeeTask);"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertCommandSuccess(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": "        expectedModel.updateTask(dependantTask, newTask);"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        expectedModel.commitTaskManager();"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    @Test"
+        "content": "        // dependency -\u003e dependency for second task in unfiltered task list / first task in filtered task"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    public void equals() {"
+        "content": "        // list"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand firstCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+        "content": "        dependencyCommand.execute(model, commandHistory);"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand anotherFirstCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+        "content": "        // undo -\u003e reverts task manager back to previous state and filtered task list to show all tasks"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        expectedModel.undoTaskManager();"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertEquals(firstCommand, anotherFirstCommand);"
+        "content": "        assertCommandSuccess(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_SUCCESS, expectedModel);"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "        assertEquals(dependantTask.getDependency(), model.getFilteredTaskList().get("
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand secondCommand \u003d new DependencyCommand(INDEX_SECOND_TASK, INDEX_FIRST_TASK);"
+        "content": "                INDEX_FIRST_TASK.getZeroBased()).getDependency());"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        DependencyCommand thirdCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_THIRD_TASK);"
+        "content": "        // redo -\u003e deletes same second task in unfiltered task list\u003d-"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertNotEquals(firstCommand, secondCommand);"
+        "content": "        expectedModel.redoTaskManager();"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        assertNotEquals(firstCommand, thirdCommand);"
+        "content": "        assertCommandSuccess(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_SUCCESS, expectedModel);"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "pengnam"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 154,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        DependencyCommand firstCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        DependencyCommand anotherFirstCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_SECOND_TASK);"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        assertEquals(firstCommand, anotherFirstCommand);"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        DependencyCommand secondCommand \u003d new DependencyCommand(INDEX_SECOND_TASK, INDEX_FIRST_TASK);"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        DependencyCommand thirdCommand \u003d new DependencyCommand(INDEX_FIRST_TASK, INDEX_THIRD_TASK);"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        assertNotEquals(firstCommand, secondCommand);"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        assertNotEquals(firstCommand, thirdCommand);"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 167,
         "author": {
           "gitId": "pengnam"
         },
@@ -63091,7 +64207,7 @@
       }
     ],
     "authorContributionMap": {
-      "pengnam": 154
+      "pengnam": 167
     }
   },
   {
@@ -79167,6 +80283,539 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/model/task/DependencyGraphTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "package seedu.address.model.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import static seedu.address.testutil.Assert.assertThrows;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import java.util.stream.Collectors;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import org.junit.Before;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import seedu.address.logic.commands.DependencyCommand;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import seedu.address.model.DependencyGraph;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import seedu.address.model.task.exceptions.GraphCycleException;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "import seedu.address.testutil.TaskBuilder;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "public class DependencyGraphTest {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    private List\u003cTask\u003e preCyclicTasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    private Task cyclicTask;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    private List\u003cTask\u003e cyclicTasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    private List\u003cTask\u003e preSortedTasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    private List\u003cTask\u003e sortedTasks \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    @Before"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public void setUp() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        //Initializing task lists"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        Task a \u003d new TaskBuilder().withName(\"A\").build();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        Task b \u003d new TaskBuilder().withName(\"B\").withDependency(a).build();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        Task c \u003d new TaskBuilder().withName(\"C\").withDependency(b).withDependency(a).build();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        //preSortedTasks"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        preSortedTasks.add(a);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        preSortedTasks.add(c);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        preSortedTasks.add(b);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        //SortedTasks"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        sortedTasks.add(a);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        sortedTasks.add(b);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        sortedTasks.add(c);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        //preCyclicTasks"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        a \u003d DependencyCommand.createDependantTask(a, c);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        preCyclicTasks.add(a);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        preCyclicTasks.add(b);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        cyclicTask \u003d c;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        //CyclicTasks"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        cyclicTasks \u003d new ArrayList\u003c\u003e(preCyclicTasks);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        cyclicTasks.add(cyclicTask);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public void constructor_invalid_throwsGraphCycleException() {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        assertThrows(GraphCycleException.class, () -\u003e new DependencyGraph(cyclicTasks));"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public void checkCyclic() {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        DependencyGraph graph \u003d new DependencyGraph(preCyclicTasks);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        assertFalse(graph.checkPresenceOfCycle());"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        assertTrue(graph.checkCyclicDependency(cyclicTask));"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public void topologicalSort_valid_returnsList() {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        DependencyGraph graph \u003d new DependencyGraph(preSortedTasks);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        List\u003cString\u003e actualHashes \u003d graph.topologicalSort();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        List\u003cString\u003e expectedHashes \u003d sortedTasks.stream().map((task)-\u003eInteger.toString(task.hashCode()))"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "                .collect(Collectors.toList());"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        assertEquals(expectedHashes, actualHashes);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "pengnam": 75
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/model/task/DependencyTest.java",
     "lines": [
       {
@@ -89345,33 +90994,89 @@
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "-"
+          "gitId": "pengnam"
         },
-        "content": "    public Task build() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "pengnam"
         },
-        "content": "        return new Task(name, dueDate, priorityValue, description, labels, status, dependency);"
+        "content": "     * Sets the {@code Dependecy} of the {@code Task} that we are building."
       },
       {
         "lineNumber": 106,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public TaskBuilder withDependency(Task task) {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        this.dependency \u003d this.dependency.addDependency(task);"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        return this;"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Task build() {"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        return new Task(name, dueDate, priorityValue, description, labels, status, dependency);"
+      },
+      {
+        "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 107,
+        "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 108,
+        "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
@@ -89381,7 +91086,7 @@
     "authorContributionMap": {
       "chikchengyao": 2,
       "-": 90,
-      "pengnam": 16
+      "pengnam": 24
     }
   },
   {
