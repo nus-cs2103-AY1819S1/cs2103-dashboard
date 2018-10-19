@@ -4549,7 +4549,7 @@
       {
         "lineNumber": 296,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
         "content": ""
       },
@@ -4577,7 +4577,7 @@
       {
         "lineNumber": 300,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
         "content": ""
       },
@@ -4600,12 +4600,12 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "** An instance of `PhotoHandler` is accessed through `Model#getPhotoHandler()` and `Model#setPhotoHandler()."
+        "content": "** An instance of `PhotoHandler` is later accessed through `Model#getPhotoHandler()` and `Model#setPhotoHandler()``."
       },
       {
         "lineNumber": 304,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
         "content": ""
       },
@@ -4614,7 +4614,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "There are 4 main google-related commands, with the first being a command to login a user, and the latter 3 being overloaded command types, with `GoogleCommand` as the main class."
+        "content": "There are 4 main google-related commands, with the first being a command to login a user, and the latter 3 being overloaded command types with `GoogleCommand` as the parent class."
       },
       {
         "lineNumber": 306,
@@ -4628,28 +4628,28 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "* `LoginCommand` - Logins in user to their Google Account."
+        "content": "* `LoginCommand` - Logs in user to their Google Account."
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "chivent"
         },
-        "content": "* `GoogleLsCommand` - Returns the user\u0027s current directory."
+        "content": "* `GoogleLsCommand` - Returns the files in the user\u0027s current directory."
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "chivent"
         },
-        "content": "* `GoogleDlCommand` - Downloads the specified image \u003cto be implemented and updated in 1.3\u003e."
+        "content": "* `GoogleDlCommand` - Downloads the specified image(s) \u003cto be implemented and updated in 1.3\u003e."
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "chivent"
         },
-        "content": "* `GoogleUploadCommand` - Uploads the specified image \u003cto be implemented and updated in 1.3\u003e."
+        "content": "* `GoogleUploadCommand` - Uploads the specified image(s) \u003cto be implemented and updated in 1.3\u003e."
       },
       {
         "lineNumber": 311,
@@ -4663,7 +4663,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d Login (login) Command"
+        "content": "\u003d\u003d\u003d\u003d Login (login) Command"
       },
       {
         "lineNumber": 313,
@@ -4677,133 +4677,133 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "The login command can be called either explictly by the user through `login` or will execute implicitly whenever a user calls a google-related command without first logging in"
+        "content": "\u003d\u003d\u003d\u003d\u003d Current Implementation"
       },
       {
         "lineNumber": 315,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": ""
+        "content": "The Login command currently authenticates a user via Google OAuth. To learn more about the implementation of OAuth methods, you may refer to https://developers.google.com/identity/protocols/OAuth2#installed[O-Auth Explanation] and https://developers.google.com/api-client-library/java/google-api-java-client/oauth2#installed_applications[Google API examples]."
       },
       {
         "lineNumber": 316,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "Given below is an example usage scenario and how the google login behaves at each step upon explicit call."
+        "content": ""
       },
       {
         "lineNumber": 317,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "Given below is an example usage scenario and how the google login behaves at each step upon explicit `login` command executed."
+      },
+      {
+        "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 318,
+        "lineNumber": 319,
         "author": {
           "gitId": "chivent"
         },
         "content": "Step 1. The user executes a `login` command."
       },
       {
-        "lineNumber": 319,
+        "lineNumber": 320,
         "author": {
           "gitId": "-"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 320,
-        "author": {
-          "gitId": "chivent"
-        },
-        "content": "Step 2. The login command calls `Model#getPhotoHandler()` and checks if a PhotoHandler instance already exists, if false, it calls `PhotoLibraryClientFactory#createClient()` to set up the requirements for log in and redirects the user to the browser. To learn more about the implementation of OAuth methods, you may refer to https://developers.google.com/identity/protocols/OAuth2#installed[O-Auth Explanation] and https://developers.google.com/api-client-library/java/google-api-java-client/oauth2#installed_applications[Google API examples]"
       },
       {
         "lineNumber": 321,
         "author": {
+          "gitId": "chivent"
+        },
+        "content": "Step 2. The login command calls `Model#getPhotoHandler()` and checks if a PhotoHandler instance already exists, if false, it calls `PhotoLibraryClientFactory#createClient()` to set up the requirements for log in and redirects the user to the browser."
+      },
+      {
+        "lineNumber": 322,
+        "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 322,
+        "lineNumber": 323,
         "author": {
           "gitId": "chivent"
         },
         "content": "Step 3. PhotoLibraryClientFactory instance then calls `PhotoLibraryClientFactory#createPhotosLibraryClient()` and `PhotoLibraryClientFactory#getUserEmail() to instantiate a `PhotoHandler` instance"
       },
       {
-        "lineNumber": 323,
+        "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 324,
+        "lineNumber": 325,
         "author": {
           "gitId": "chivent"
         },
         "content": "Step 4. The `PhotoHandler` instance is then set via Model#setPhotoHandler() as Model#photoLibrary(), and confirmation of login is sent to user."
       },
       {
-        "lineNumber": 325,
+        "lineNumber": 326,
         "author": {
           "gitId": "-"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 326,
-        "author": {
-          "gitId": "chivent"
-        },
-        "content": "The following sequence diagram shows how the cd command works:"
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "chivent"
         },
-        "content": "{Diagram to be added}"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "If connection to the internet is lost at any point during authentication with Google\u0027s server, login will fail and an error message will be sent to user as feedback."
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "chivent"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d Other google commands"
+        "content": ""
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "The following sequence diagram illustrates how the above steps work:"
       },
       {
         "lineNumber": 331,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "{To be updated}"
+        "content": ""
       },
       {
         "lineNumber": 332,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": ""
+        "content": "{Diagram to be added}"
       },
       {
         "lineNumber": 333,
@@ -4815,9 +4815,9 @@
       {
         "lineNumber": 334,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": "\u003d\u003d Documentation"
+        "content": "\u003d\u003d\u003d\u003d Other google commands"
       },
       {
         "lineNumber": 335,
@@ -4829,9 +4829,9 @@
       {
         "lineNumber": 336,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": "We use asciidoc for writing documentation."
+        "content": "{To be updated in v1.3}"
       },
       {
         "lineNumber": 337,
@@ -4845,14 +4845,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 339,
         "author": {
           "gitId": "-"
         },
-        "content": "We chose asciidoc over Markdown because asciidoc, although a bit more complex than Markdown, provides more flexibility in formatting."
+        "content": "\u003d\u003d Documentation"
       },
       {
         "lineNumber": 340,
@@ -4866,7 +4866,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Editing Documentation"
+        "content": "We use asciidoc for writing documentation."
       },
       {
         "lineNumber": 342,
@@ -4880,14 +4880,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to learn how to render `.adoc` files locally to preview the end result of your edits."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 344,
         "author": {
           "gitId": "-"
         },
-        "content": "Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your `.adoc` files in real-time."
+        "content": "We chose asciidoc over Markdown because asciidoc, although a bit more complex than Markdown, provides more flexibility in formatting."
       },
       {
         "lineNumber": 345,
@@ -4901,7 +4901,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Publishing Documentation"
+        "content": "\u003d\u003d\u003d Editing Documentation"
       },
       {
         "lineNumber": 347,
@@ -4915,84 +4915,84 @@
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingTravis#deploying-github-pages, UsingTravis.adoc\u003e\u003e to learn how to deploy GitHub Pages using Travis."
+        "content": "See \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to learn how to render `.adoc` files locally to preview the end result of your edits."
       },
       {
         "lineNumber": 349,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your `.adoc` files in real-time."
       },
       {
         "lineNumber": 350,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Converting Documentation to PDF format"
+        "content": ""
       },
       {
         "lineNumber": 351,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Publishing Documentation"
       },
       {
         "lineNumber": 352,
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://www.google.com/chrome/browser/desktop/[Google Chrome] for converting documentation to PDF format, as Chrome\u0027s PDF engine preserves hyperlinks used in webpages."
+        "content": ""
       },
       {
         "lineNumber": 353,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "See \u003c\u003cUsingTravis#deploying-github-pages, UsingTravis.adoc\u003e\u003e to learn how to deploy GitHub Pages using Travis."
       },
       {
         "lineNumber": 354,
         "author": {
           "gitId": "-"
         },
-        "content": "Here are the steps to convert the project documentation files to PDF format."
+        "content": ""
       },
       {
         "lineNumber": 355,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Converting Documentation to PDF format"
       },
       {
         "lineNumber": 356,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Follow the instructions in \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to convert the AsciiDoc files in the `docs/` directory to HTML format."
+        "content": ""
       },
       {
         "lineNumber": 357,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Go to your generated HTML files in the `build/docs` folder, right click on them and select `Open with` -\u003e `Google Chrome`."
+        "content": "We use https://www.google.com/chrome/browser/desktop/[Google Chrome] for converting documentation to PDF format, as Chrome\u0027s PDF engine preserves hyperlinks used in webpages."
       },
       {
         "lineNumber": 358,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Within Chrome, click on the `Print` option in Chrome\u0027s menu."
+        "content": ""
       },
       {
         "lineNumber": 359,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below."
+        "content": "Here are the steps to convert the project documentation files to PDF format."
       },
       {
         "lineNumber": 360,
@@ -5006,49 +5006,49 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".Saving documentation as PDF files in Chrome"
+        "content": ".  Follow the instructions in \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to convert the AsciiDoc files in the `docs/` directory to HTML format."
       },
       {
         "lineNumber": 362,
         "author": {
           "gitId": "-"
         },
-        "content": "image::chrome_save_as_pdf.png[width\u003d\"300\"]"
+        "content": ".  Go to your generated HTML files in the `build/docs` folder, right click on them and select `Open with` -\u003e `Google Chrome`."
       },
       {
         "lineNumber": 363,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  Within Chrome, click on the `Print` option in Chrome\u0027s menu."
       },
       {
         "lineNumber": 364,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Docs-SiteWideDocSettings]]"
+        "content": ".  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below."
       },
       {
         "lineNumber": 365,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Site-wide Documentation Settings"
+        "content": ""
       },
       {
         "lineNumber": 366,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".Saving documentation as PDF files in Chrome"
       },
       {
         "lineNumber": 367,
         "author": {
           "gitId": "-"
         },
-        "content": "The link:{repoURL}/build.gradle[`build.gradle`] file specifies some project-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how all documentation files within this project are rendered."
+        "content": "image::chrome_save_as_pdf.png[width\u003d\"300\"]"
       },
       {
         "lineNumber": 368,
@@ -5062,14 +5062,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": "[[Docs-SiteWideDocSettings]]"
       },
       {
         "lineNumber": 370,
         "author": {
           "gitId": "-"
         },
-        "content": "Attributes left unset in the `build.gradle` file will use their *default value*, if any."
+        "content": "\u003d\u003d\u003d Site-wide Documentation Settings"
       },
       {
         "lineNumber": 371,
@@ -5083,28 +5083,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
+        "content": "The link:{repoURL}/build.gradle[`build.gradle`] file specifies some project-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how all documentation files within this project are rendered."
       },
       {
         "lineNumber": 373,
         "author": {
           "gitId": "-"
         },
-        "content": ".List of site-wide attributes"
+        "content": ""
       },
       {
         "lineNumber": 374,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 375,
         "author": {
           "gitId": "-"
         },
-        "content": "|Attribute name |Description |Default value"
+        "content": "Attributes left unset in the `build.gradle` file will use their *default value*, if any."
       },
       {
         "lineNumber": 376,
@@ -5118,28 +5118,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-name`"
+        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
       },
       {
         "lineNumber": 378,
         "author": {
           "gitId": "-"
         },
-        "content": "|The name of the website."
+        "content": ".List of site-wide attributes"
       },
       {
         "lineNumber": 379,
         "author": {
           "gitId": "-"
         },
-        "content": "If set, the name will be displayed near the top of the page."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 380,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "|Attribute name |Description |Default value"
       },
       {
         "lineNumber": 381,
@@ -5153,21 +5153,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-githuburl`"
+        "content": "|`site-name`"
       },
       {
         "lineNumber": 383,
         "author": {
           "gitId": "-"
         },
-        "content": "|URL to the site\u0027s repository on https://github.com[GitHub]."
+        "content": "|The name of the website."
       },
       {
         "lineNumber": 384,
         "author": {
           "gitId": "-"
         },
-        "content": "Setting this will add a \"View on GitHub\" link in the navigation bar."
+        "content": "If set, the name will be displayed near the top of the page."
       },
       {
         "lineNumber": 385,
@@ -5188,21 +5188,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-seedu`"
+        "content": "|`site-githuburl`"
       },
       {
         "lineNumber": 388,
         "author": {
           "gitId": "-"
         },
-        "content": "|Define this attribute if the project is an official SE-EDU project."
+        "content": "|URL to the site\u0027s repository on https://github.com[GitHub]."
       },
       {
         "lineNumber": 389,
         "author": {
           "gitId": "-"
         },
-        "content": "This will render the SE-EDU navigation bar at the top of the page, and add some SE-EDU-specific navigation items."
+        "content": "Setting this will add a \"View on GitHub\" link in the navigation bar."
       },
       {
         "lineNumber": 390,
@@ -5223,28 +5223,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "|`site-seedu`"
       },
       {
         "lineNumber": 393,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|Define this attribute if the project is an official SE-EDU project."
       },
       {
         "lineNumber": 394,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Docs-PerFileDocSettings]]"
+        "content": "This will render the SE-EDU navigation bar at the top of the page, and add some SE-EDU-specific navigation items."
       },
       {
         "lineNumber": 395,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Per-file Documentation Settings"
+        "content": "|_not set_"
       },
       {
         "lineNumber": 396,
@@ -5258,7 +5258,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Each `.adoc` file may also specify some file-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how the file is rendered."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 398,
@@ -5272,28 +5272,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Asciidoctor\u0027s https://asciidoctor.org/docs/user-manual/#builtin-attributes[built-in attributes] may be specified and used as well."
+        "content": "[[Docs-PerFileDocSettings]]"
       },
       {
         "lineNumber": 400,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Per-file Documentation Settings"
       },
       {
         "lineNumber": 401,
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": ""
       },
       {
         "lineNumber": 402,
         "author": {
           "gitId": "-"
         },
-        "content": "Attributes left unset in `.adoc` files will use their *default value*, if any."
+        "content": "Each `.adoc` file may also specify some file-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how the file is rendered."
       },
       {
         "lineNumber": 403,
@@ -5307,28 +5307,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
+        "content": "Asciidoctor\u0027s https://asciidoctor.org/docs/user-manual/#builtin-attributes[built-in attributes] may be specified and used as well."
       },
       {
         "lineNumber": 405,
         "author": {
           "gitId": "-"
         },
-        "content": ".List of per-file attributes, excluding Asciidoctor\u0027s built-in attributes"
+        "content": ""
       },
       {
         "lineNumber": 406,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 407,
         "author": {
           "gitId": "-"
         },
-        "content": "|Attribute name |Description |Default value"
+        "content": "Attributes left unset in `.adoc` files will use their *default value*, if any."
       },
       {
         "lineNumber": 408,
@@ -5342,28 +5342,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-section`"
+        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
       },
       {
         "lineNumber": 410,
         "author": {
           "gitId": "-"
         },
-        "content": "|Site section that the document belongs to."
+        "content": ".List of per-file attributes, excluding Asciidoctor\u0027s built-in attributes"
       },
       {
         "lineNumber": 411,
         "author": {
           "gitId": "-"
         },
-        "content": "This will cause the associated item in the navigation bar to be highlighted."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 412,
         "author": {
           "gitId": "-"
         },
-        "content": "One of: `UserGuide`, `DeveloperGuide`, ``LearningOutcomes``{asterisk}, `AboutUs`, `ContactUs`"
+        "content": "|Attribute name |Description |Default value"
       },
       {
         "lineNumber": 413,
@@ -5377,91 +5377,91 @@
         "author": {
           "gitId": "-"
         },
-        "content": "_{asterisk} Official SE-EDU projects only_"
+        "content": "|`site-section`"
       },
       {
         "lineNumber": 415,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "|Site section that the document belongs to."
       },
       {
         "lineNumber": 416,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "This will cause the associated item in the navigation bar to be highlighted."
       },
       {
         "lineNumber": 417,
         "author": {
           "gitId": "-"
         },
-        "content": "|`no-site-header`"
+        "content": "One of: `UserGuide`, `DeveloperGuide`, ``LearningOutcomes``{asterisk}, `AboutUs`, `ContactUs`"
       },
       {
         "lineNumber": 418,
         "author": {
           "gitId": "-"
         },
-        "content": "|Set this attribute to remove the site navigation bar."
+        "content": ""
       },
       {
         "lineNumber": 419,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "_{asterisk} Official SE-EDU projects only_"
       },
       {
         "lineNumber": 420,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|_not set_"
       },
       {
         "lineNumber": 421,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 422,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|`no-site-header`"
       },
       {
         "lineNumber": 423,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Site Template"
+        "content": "|Set this attribute to remove the site navigation bar."
       },
       {
         "lineNumber": 424,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|_not set_"
       },
       {
         "lineNumber": 425,
         "author": {
           "gitId": "-"
         },
-        "content": "The files in link:{repoURL}/docs/stylesheets[`docs/stylesheets`] are the https://developer.mozilla.org/en-US/docs/Web/CSS[CSS stylesheets] of the site."
+        "content": ""
       },
       {
         "lineNumber": 426,
         "author": {
           "gitId": "-"
         },
-        "content": "You can modify them to change some properties of the site\u0027s design."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 427,
@@ -5475,98 +5475,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": "The files in link:{repoURL}/docs/templates[`docs/templates`] controls the rendering of `.adoc` files into HTML5."
+        "content": "\u003d\u003d\u003d Site Template"
       },
       {
         "lineNumber": 429,
         "author": {
           "gitId": "-"
         },
-        "content": "These template files are written in a mixture of https://www.ruby-lang.org[Ruby] and http://slim-lang.com[Slim]."
+        "content": ""
       },
       {
         "lineNumber": 430,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The files in link:{repoURL}/docs/stylesheets[`docs/stylesheets`] are the https://developer.mozilla.org/en-US/docs/Web/CSS[CSS stylesheets] of the site."
       },
       {
         "lineNumber": 431,
         "author": {
           "gitId": "-"
         },
-        "content": "[WARNING]"
+        "content": "You can modify them to change some properties of the site\u0027s design."
       },
       {
         "lineNumber": 432,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 433,
         "author": {
           "gitId": "-"
         },
-        "content": "Modifying the template files in link:{repoURL}/docs/templates[`docs/templates`] requires some knowledge and experience with Ruby and Asciidoctor\u0027s API."
+        "content": "The files in link:{repoURL}/docs/templates[`docs/templates`] controls the rendering of `.adoc` files into HTML5."
       },
       {
         "lineNumber": 434,
         "author": {
           "gitId": "-"
         },
-        "content": "You should only modify them if you need greater control over the site\u0027s layout than what stylesheets can provide."
+        "content": "These template files are written in a mixture of https://www.ruby-lang.org[Ruby] and http://slim-lang.com[Slim]."
       },
       {
         "lineNumber": 435,
         "author": {
           "gitId": "-"
         },
-        "content": "The SE-EDU team does not provide support for modified template files."
+        "content": ""
       },
       {
         "lineNumber": 436,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "[WARNING]"
       },
       {
         "lineNumber": 437,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 438,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Testing]]"
+        "content": "Modifying the template files in link:{repoURL}/docs/templates[`docs/templates`] requires some knowledge and experience with Ruby and Asciidoctor\u0027s API."
       },
       {
         "lineNumber": 439,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Testing"
+        "content": "You should only modify them if you need greater control over the site\u0027s layout than what stylesheets can provide."
       },
       {
         "lineNumber": 440,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The SE-EDU team does not provide support for modified template files."
       },
       {
         "lineNumber": 441,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Running Tests"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 442,
@@ -5580,28 +5580,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "There are three ways to run tests."
+        "content": "[[Testing]]"
       },
       {
         "lineNumber": 444,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d Testing"
       },
       {
         "lineNumber": 445,
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": ""
       },
       {
         "lineNumber": 446,
         "author": {
           "gitId": "-"
         },
-        "content": "The most reliable way to run tests is the 3rd one. The first two methods might fail some GUI tests due to platform/resolution-specific idiosyncrasies."
+        "content": "\u003d\u003d\u003d Running Tests"
       },
       {
         "lineNumber": 447,
@@ -5615,7 +5615,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 1: Using IntelliJ JUnit test runner*"
+        "content": "There are three ways to run tests."
       },
       {
         "lineNumber": 449,
@@ -5629,14 +5629,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* To run all tests, right-click on the `src/test/java` folder and choose `Run \u0027All Tests\u0027`"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 451,
         "author": {
           "gitId": "-"
         },
-        "content": "* To run a subset of tests, you can right-click on a test package, test class, or a test and choose `Run \u0027ABC\u0027`"
+        "content": "The most reliable way to run tests is the 3rd one. The first two methods might fail some GUI tests due to platform/resolution-specific idiosyncrasies."
       },
       {
         "lineNumber": 452,
@@ -5650,7 +5650,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 2: Using Gradle*"
+        "content": "*Method 1: Using IntelliJ JUnit test runner*"
       },
       {
         "lineNumber": 454,
@@ -5664,28 +5664,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* Open a console and run the command `gradlew clean allTests` (Mac/Linux: `./gradlew clean allTests`)"
+        "content": "* To run all tests, right-click on the `src/test/java` folder and choose `Run \u0027All Tests\u0027`"
       },
       {
         "lineNumber": 456,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* To run a subset of tests, you can right-click on a test package, test class, or a test and choose `Run \u0027ABC\u0027`"
       },
       {
         "lineNumber": 457,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 458,
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e for more info on how to run tests using Gradle."
+        "content": "*Method 2: Using Gradle*"
       },
       {
         "lineNumber": 459,
@@ -5699,7 +5699,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 3: Using Gradle (headless)*"
+        "content": "* Open a console and run the command `gradlew clean allTests` (Mac/Linux: `./gradlew clean allTests`)"
       },
       {
         "lineNumber": 461,
@@ -5713,189 +5713,189 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Thanks to the https://github.com/TestFX/TestFX[TestFX] library we use, our GUI tests can be run in the _headless_ mode. In the headless mode, GUI tests do not show up on the screen. That means the developer can do other things on the Computer while the tests are running."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 463,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e for more info on how to run tests using Gradle."
       },
       {
         "lineNumber": 464,
         "author": {
           "gitId": "-"
         },
-        "content": "To run tests in headless mode, open a console and run the command `gradlew clean headless allTests` (Mac/Linux: `./gradlew clean headless allTests`)"
+        "content": ""
       },
       {
         "lineNumber": 465,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "*Method 3: Using Gradle (headless)*"
       },
       {
         "lineNumber": 466,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Types of tests"
+        "content": ""
       },
       {
         "lineNumber": 467,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Thanks to the https://github.com/TestFX/TestFX[TestFX] library we use, our GUI tests can be run in the _headless_ mode. In the headless mode, GUI tests do not show up on the screen. That means the developer can do other things on the Computer while the tests are running."
       },
       {
         "lineNumber": 468,
         "author": {
           "gitId": "-"
         },
-        "content": "We have two types of tests:"
+        "content": ""
       },
       {
         "lineNumber": 469,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "To run tests in headless mode, open a console and run the command `gradlew clean headless allTests` (Mac/Linux: `./gradlew clean headless allTests`)"
       },
       {
         "lineNumber": 470,
         "author": {
           "gitId": "-"
         },
-        "content": ".  *GUI Tests* - These are tests involving the GUI. They include,"
+        "content": ""
       },
       {
         "lineNumber": 471,
         "author": {
           "gitId": "-"
         },
-        "content": ".. _System Tests_ that test the entire App by simulating user actions on the GUI. These are in the `systemtests` package."
+        "content": "\u003d\u003d\u003d Types of tests"
       },
       {
         "lineNumber": 472,
         "author": {
           "gitId": "-"
         },
-        "content": ".. _Unit tests_ that test the individual components. These are in `seedu.address.ui` package."
+        "content": ""
       },
       {
         "lineNumber": 473,
         "author": {
           "gitId": "-"
         },
-        "content": ".  *Non-GUI Tests* - These are tests not involving the GUI. They include,"
+        "content": "We have two types of tests:"
       },
       {
         "lineNumber": 474,
         "author": {
           "gitId": "-"
         },
-        "content": "..  _Unit tests_ targeting the lowest level methods/classes. +"
+        "content": ""
       },
       {
         "lineNumber": 475,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.commons.StringUtilTest`"
+        "content": ".  *GUI Tests* - These are tests involving the GUI. They include,"
       },
       {
         "lineNumber": 476,
         "author": {
           "gitId": "-"
         },
-        "content": "..  _Integration tests_ that are checking the integration of multiple code units (those code units are assumed to be working). +"
+        "content": ".. _System Tests_ that test the entire App by simulating user actions on the GUI. These are in the `systemtests` package."
       },
       {
         "lineNumber": 477,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.storage.StorageManagerTest`"
+        "content": ".. _Unit tests_ that test the individual components. These are in `seedu.address.ui` package."
       },
       {
         "lineNumber": 478,
         "author": {
           "gitId": "-"
         },
-        "content": "..  Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together. +"
+        "content": ".  *Non-GUI Tests* - These are tests not involving the GUI. They include,"
       },
       {
         "lineNumber": 479,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.logic.LogicManagerTest`"
+        "content": "..  _Unit tests_ targeting the lowest level methods/classes. +"
       },
       {
         "lineNumber": 480,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "e.g. `seedu.address.commons.StringUtilTest`"
       },
       {
         "lineNumber": 481,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "..  _Integration tests_ that are checking the integration of multiple code units (those code units are assumed to be working). +"
       },
       {
         "lineNumber": 482,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Troubleshooting Testing"
+        "content": "e.g. `seedu.address.storage.StorageManagerTest`"
       },
       {
         "lineNumber": 483,
         "author": {
           "gitId": "-"
         },
-        "content": "**Problem: `HelpWindowTest` fails with a `NullPointerException`.**"
+        "content": "..  Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together. +"
       },
       {
         "lineNumber": 484,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "e.g. `seedu.address.logic.LogicManagerTest`"
       },
       {
         "lineNumber": 485,
         "author": {
           "gitId": "-"
         },
-        "content": "* Reason: One of its dependencies, `HelpWindow.html` in `src/main/resources/docs` is missing."
+        "content": ""
       },
       {
         "lineNumber": 486,
         "author": {
           "gitId": "-"
         },
-        "content": "* Solution: Execute Gradle task `processResources`."
+        "content": ""
       },
       {
         "lineNumber": 487,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Troubleshooting Testing"
       },
       {
         "lineNumber": 488,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Dev Ops"
+        "content": "**Problem: `HelpWindowTest` fails with a `NullPointerException`.**"
       },
       {
         "lineNumber": 489,
@@ -5909,98 +5909,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Build Automation"
+        "content": "* Reason: One of its dependencies, `HelpWindow.html` in `src/main/resources/docs` is missing."
       },
       {
         "lineNumber": 491,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* Solution: Execute Gradle task `processResources`."
       },
       {
         "lineNumber": 492,
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e to learn how to use Gradle for build automation."
+        "content": ""
       },
       {
         "lineNumber": 493,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d Dev Ops"
       },
       {
         "lineNumber": 494,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Continuous Integration"
+        "content": ""
       },
       {
         "lineNumber": 495,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Build Automation"
       },
       {
         "lineNumber": 496,
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://travis-ci.org/[Travis CI] and https://www.appveyor.com/[AppVeyor] to perform _Continuous Integration_ on our projects. See \u003c\u003cUsingTravis#, UsingTravis.adoc\u003e\u003e and \u003c\u003cUsingAppVeyor#, UsingAppVeyor.adoc\u003e\u003e for more details."
+        "content": ""
       },
       {
         "lineNumber": 497,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e to learn how to use Gradle for build automation."
       },
       {
         "lineNumber": 498,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Coverage Reporting"
+        "content": ""
       },
       {
         "lineNumber": 499,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Continuous Integration"
       },
       {
         "lineNumber": 500,
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://coveralls.io/[Coveralls] to track the code coverage of our projects. See \u003c\u003cUsingCoveralls#, UsingCoveralls.adoc\u003e\u003e for more details."
+        "content": ""
       },
       {
         "lineNumber": 501,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "We use https://travis-ci.org/[Travis CI] and https://www.appveyor.com/[AppVeyor] to perform _Continuous Integration_ on our projects. See \u003c\u003cUsingTravis#, UsingTravis.adoc\u003e\u003e and \u003c\u003cUsingAppVeyor#, UsingAppVeyor.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 502,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Documentation Previews"
+        "content": ""
       },
       {
         "lineNumber": 503,
         "author": {
           "gitId": "-"
         },
-        "content": "When a pull request has changes to asciidoc files, you can use https://www.netlify.com/[Netlify] to see a preview of how the HTML version of those asciidoc files will look like when the pull request is merged. See \u003c\u003cUsingNetlify#, UsingNetlify.adoc\u003e\u003e for more details."
+        "content": "\u003d\u003d\u003d Coverage Reporting"
       },
       {
         "lineNumber": 504,
@@ -6014,7 +6014,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Making a Release"
+        "content": "We use https://coveralls.io/[Coveralls] to track the code coverage of our projects. See \u003c\u003cUsingCoveralls#, UsingCoveralls.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 506,
@@ -6028,42 +6028,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Here are the steps to create a new release."
+        "content": "\u003d\u003d\u003d Documentation Previews"
       },
       {
         "lineNumber": 508,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "When a pull request has changes to asciidoc files, you can use https://www.netlify.com/[Netlify] to see a preview of how the HTML version of those asciidoc files will look like when the pull request is merged. See \u003c\u003cUsingNetlify#, UsingNetlify.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 509,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Update the version number in link:{repoURL}/src/main/java/seedu/address/MainApp.java[`MainApp.java`]."
+        "content": ""
       },
       {
         "lineNumber": 510,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Generate a JAR file \u003c\u003cUsingGradle#creating-the-jar-file, using Gradle\u003e\u003e."
+        "content": "\u003d\u003d\u003d Making a Release"
       },
       {
         "lineNumber": 511,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Tag the repo with the version number. e.g. `v0.1`"
+        "content": ""
       },
       {
         "lineNumber": 512,
         "author": {
           "gitId": "-"
         },
-        "content": ".  https://help.github.com/articles/creating-releases/[Create a new release using GitHub] and upload the JAR file you created."
+        "content": "Here are the steps to create a new release."
       },
       {
         "lineNumber": 513,
@@ -6077,70 +6077,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Managing Dependencies"
+        "content": ".  Update the version number in link:{repoURL}/src/main/java/seedu/address/MainApp.java[`MainApp.java`]."
       },
       {
         "lineNumber": 515,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  Generate a JAR file \u003c\u003cUsingGradle#creating-the-jar-file, using Gradle\u003e\u003e."
       },
       {
         "lineNumber": 516,
         "author": {
           "gitId": "-"
         },
-        "content": "A project often depends on third-party libraries. For example, Address Book depends on the http://wiki.fasterxml.com/JacksonHome[Jackson library] for XML parsing. Managing these _dependencies_ can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives. +"
+        "content": ".  Tag the repo with the version number. e.g. `v0.1`"
       },
       {
         "lineNumber": 517,
         "author": {
           "gitId": "-"
         },
-        "content": "a. Include those libraries in the repo (this bloats the repo size) +"
+        "content": ".  https://help.github.com/articles/creating-releases/[Create a new release using GitHub] and upload the JAR file you created."
       },
       {
         "lineNumber": 518,
         "author": {
           "gitId": "-"
         },
-        "content": "b. Require developers to download those libraries manually (this creates extra work for developers)"
+        "content": ""
       },
       {
         "lineNumber": 519,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Managing Dependencies"
       },
       {
         "lineNumber": 520,
         "author": {
           "gitId": "-"
         },
-        "content": "[appendix]"
+        "content": ""
       },
       {
         "lineNumber": 521,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Product Scope"
+        "content": "A project often depends on third-party libraries. For example, Address Book depends on the http://wiki.fasterxml.com/JacksonHome[Jackson library] for XML parsing. Managing these _dependencies_ can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives. +"
       },
       {
         "lineNumber": 522,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "a. Include those libraries in the repo (this bloats the repo size) +"
       },
       {
         "lineNumber": 523,
         "author": {
           "gitId": "-"
         },
-        "content": "*Target user profile*:"
+        "content": "b. Require developers to download those libraries manually (this creates extra work for developers)"
       },
       {
         "lineNumber": 524,
@@ -6152,79 +6152,79 @@
       {
         "lineNumber": 525,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "* needs a quick and easy way to edit images"
+        "content": "[appendix]"
       },
       {
         "lineNumber": 526,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "* has a lot of images to edit"
+        "content": "\u003d\u003d Product Scope"
       },
       {
         "lineNumber": 527,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "* appreciates the power that traditional editing software provides"
+        "content": ""
       },
       {
         "lineNumber": 528,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "* familiar with the command line"
+        "content": "*Target user profile*:"
       },
       {
         "lineNumber": 529,
         "author": {
           "gitId": "-"
         },
-        "content": "* prefers typing over mouse input"
+        "content": ""
       },
       {
         "lineNumber": 530,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "chivent"
         },
-        "content": "* is reasonably comfortable using CLI app"
+        "content": "* needs a quick and easy way to edit images"
       },
       {
         "lineNumber": 531,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "* has a lot of images to edit"
       },
       {
         "lineNumber": 532,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "*Value proposition*: view, preview and edit images quickly in a streamlined, modular and repeatable process"
+        "content": "* appreciates the power that traditional editing software provides"
       },
       {
         "lineNumber": 533,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "* familiar with the command line"
       },
       {
         "lineNumber": 534,
         "author": {
           "gitId": "-"
         },
-        "content": "[appendix]"
+        "content": "* prefers typing over mouse input"
       },
       {
         "lineNumber": 535,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "\u003d\u003d User Stories"
+        "content": "* is reasonably comfortable using CLI app"
       },
       {
         "lineNumber": 536,
@@ -6236,9 +6236,9 @@
       {
         "lineNumber": 537,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "Priorities: High (must have) - `* * \\*`, Medium (nice to have) - `* \\*`, Low (unlikely to have) - `*`"
+        "content": "*Value proposition*: view, preview and edit images quickly in a streamlined, modular and repeatable process"
       },
       {
         "lineNumber": 538,
@@ -6252,28 +6252,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[width\u003d\"59%\",cols\u003d\"22%,\u003c23%,\u003c25%,\u003c30%\",options\u003d\"header\",]"
+        "content": "[appendix]"
       },
       {
         "lineNumber": 540,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": "\u003d\u003d User Stories"
       },
       {
         "lineNumber": 541,
         "author": {
           "gitId": "-"
         },
-        "content": "|Priority |As a ... |I want to ... |So that I can..."
+        "content": ""
       },
       {
         "lineNumber": 542,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "|`* * *` |photographer |edit an image |enhance an image"
+        "content": "Priorities: High (must have) - `* * \\*`, Medium (nice to have) - `* \\*`, Low (unlikely to have) - `*`"
       },
       {
         "lineNumber": 543,
@@ -6285,142 +6285,142 @@
       {
         "lineNumber": 544,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "|`* * *` |photographer |mass edit images |avoid repeating similar tasks"
+        "content": "[width\u003d\"59%\",cols\u003d\"22%,\u003c23%,\u003c25%,\u003c30%\",options\u003d\"header\",]"
       },
       {
         "lineNumber": 545,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 546,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "|Priority |As a ... |I want to ... |So that I can..."
+      },
+      {
+        "lineNumber": 547,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "|`* * *` |photographer |edit an image |enhance an image"
+      },
+      {
+        "lineNumber": 548,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 549,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "|`* * *` |photographer |mass edit images |avoid repeating similar tasks"
+      },
+      {
+        "lineNumber": 550,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 551,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "|`* * *` |photographer |see detailed information about a photo |immidiately know what post-processing tools to apply"
       },
       {
-        "lineNumber": 547,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 548,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "|`* * *` |photographer |define my own set of transformations |avoid repetitive typing of commands"
-      },
-      {
-        "lineNumber": 549,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 550,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "|`* * *` |photographer |see the preview of the transformations before committing to disk |explore the effects of transformations"
-      },
-      {
-        "lineNumber": 551,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 552,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "|`* *` |photographer |be able to upload my photos to the cloud (Google Photos) |safely store and share my photos across devices"
+        "content": ""
       },
       {
         "lineNumber": 553,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "|`* * *` |photographer |define my own set of transformations |avoid repetitive typing of commands"
       },
       {
         "lineNumber": 554,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "|`* *` |web developer |generate static image assets |convert, compress and resize images to be ready for web deployment from raw images"
+        "content": ""
       },
       {
         "lineNumber": 555,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "|`* * *` |photographer |see the preview of the transformations before committing to disk |explore the effects of transformations"
       },
       {
         "lineNumber": 556,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "|`*` |web developer or photographer |add captions or watermarks to images |to protect my intellectual property"
+        "content": ""
       },
       {
         "lineNumber": 557,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "|`* *` |photographer |be able to upload my photos to the cloud (Google Photos) |safely store and share my photos across devices"
       },
       {
         "lineNumber": 558,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 559,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "|`* *` |web developer |generate static image assets |convert, compress and resize images to be ready for web deployment from raw images"
       },
       {
         "lineNumber": 560,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "_{More to be added}_"
+        "content": ""
       },
       {
         "lineNumber": 561,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "|`*` |web developer or photographer |add captions or watermarks to images |to protect my intellectual property"
       },
       {
         "lineNumber": 562,
         "author": {
           "gitId": "-"
         },
-        "content": "[appendix]"
+        "content": ""
       },
       {
         "lineNumber": 563,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Use Cases"
+        "content": "|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 564,
@@ -6432,9 +6432,9 @@
       {
         "lineNumber": 565,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "(For all use cases below, the *System* is `Piconso` and the *Actor* is the `user`, unless specified otherwise)"
+        "content": "_{More to be added}_"
       },
       {
         "lineNumber": 566,
@@ -6448,14 +6448,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[discrete]"
+        "content": "[appendix]"
       },
       {
         "lineNumber": 568,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Use case: Editing an image"
+        "content": "\u003d\u003d Use Cases"
       },
       {
         "lineNumber": 569,
@@ -6467,9 +6467,9 @@
       {
         "lineNumber": 570,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": "*MSS*"
+        "content": "(For all use cases below, the *System* is `Piconso` and the *Actor* is the `user`, unless specified otherwise)"
       },
       {
         "lineNumber": 571,
@@ -6481,198 +6481,198 @@
       {
         "lineNumber": 572,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "1.  User opens an image"
+        "content": "[discrete]"
       },
       {
         "lineNumber": 573,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "2.  User uses the CLI to describe a set of transformations to the image"
+        "content": "\u003d\u003d\u003d Use case: Editing an image"
       },
       {
         "lineNumber": 574,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "3.  Piconso shows a preview of the outcome"
+        "content": ""
       },
       {
         "lineNumber": 575,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "4.  User can save the outcome/transformation to disk"
+        "content": "*MSS*"
       },
       {
         "lineNumber": 576,
         "author": {
           "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 577,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "Use case ends."
+        "content": "1.  User opens an image"
       },
       {
         "lineNumber": 578,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "2.  User uses the CLI to describe a set of transformations to the image"
       },
       {
         "lineNumber": 579,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": "*Extensions*"
+        "content": "3.  Piconso shows a preview of the outcome"
       },
       {
         "lineNumber": 580,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": ""
+        "content": "4.  User can save the outcome/transformation to disk"
       },
       {
         "lineNumber": 581,
         "author": {
           "gitId": "-"
         },
-        "content": "[none]"
+        "content": "+"
       },
       {
         "lineNumber": 582,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "* 1a. The given image cannot be opened."
+        "content": "Use case ends."
       },
       {
         "lineNumber": 583,
         "author": {
           "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 584,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "[none]"
+        "content": "*Extensions*"
       },
       {
         "lineNumber": 585,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "** 1a1. Piconso shows an error message."
+        "content": ""
       },
       {
         "lineNumber": 586,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": "[none]"
       },
       {
         "lineNumber": 587,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "Use case resumes at step 1."
+        "content": "* 1a. The given image cannot be opened."
       },
       {
         "lineNumber": 588,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 589,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "* 2a. User is unsatisfied with the last transformation."
+        "content": "[none]"
       },
       {
         "lineNumber": 590,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": "+"
+        "content": "** 1a1. Piconso shows an error message."
       },
       {
         "lineNumber": 591,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "[none]"
+        "content": "+"
       },
       {
         "lineNumber": 592,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "** 2a1. User can undo the last transformation."
+        "content": "Use case resumes at step 1."
       },
       {
         "lineNumber": 593,
         "author": {
           "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 594,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "Use case resumes at step 2."
+        "content": "* 2a. User is unsatisfied with the last transformation."
       },
       {
         "lineNumber": 595,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 596,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "[discrete]"
+        "content": "[none]"
       },
       {
         "lineNumber": 597,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "\u003d\u003d\u003d Use case: Define a set of transformations"
+        "content": "** 2a1. User can undo the last transformation."
       },
       {
         "lineNumber": 598,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 599,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "*MSS*"
+        "content": "Use case resumes at step 2."
       },
       {
         "lineNumber": 600,
@@ -6686,161 +6686,161 @@
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "1.  User edits an image (from use case Editing an image)"
+        "content": "[discrete]"
       },
       {
         "lineNumber": 602,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "\u003d\u003d\u003d Use case: Define a set of transformations"
+      },
+      {
+        "lineNumber": 603,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 604,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "*MSS*"
+      },
+      {
+        "lineNumber": 605,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 606,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "1.  User edits an image (from use case Editing an image)"
+      },
+      {
+        "lineNumber": 607,
         "author": {
           "gitId": "chivent"
         },
         "content": "2.  Piconso displays transformations done on the right side pane"
       },
       {
-        "lineNumber": 603,
+        "lineNumber": 608,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "3.  User enters command to save the set of transformations"
       },
       {
-        "lineNumber": 604,
+        "lineNumber": 609,
         "author": {
           "gitId": "chivent"
         },
         "content": "4.  Piconso requests for a name for the set"
       },
       {
-        "lineNumber": 605,
+        "lineNumber": 610,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "5.  User enters a name"
       },
       {
-        "lineNumber": 606,
+        "lineNumber": 611,
         "author": {
           "gitId": "chivent"
         },
         "content": "6.  Piconso saves the set"
       },
       {
-        "lineNumber": 607,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "+"
-      },
-      {
-        "lineNumber": 608,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "Use case ends."
-      },
-      {
-        "lineNumber": 609,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 610,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "*Extensions*"
-      },
-      {
-        "lineNumber": 611,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 612,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "[none]"
+        "content": "+"
       },
       {
         "lineNumber": 613,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "* 5a. The input name is already used."
+        "content": "Use case ends."
       },
       {
         "lineNumber": 614,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 615,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "[none]"
+        "content": "*Extensions*"
       },
       {
         "lineNumber": 616,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "** 5a1. Piconso asks if user wants to overwrite to previously stored set."
+        "content": ""
       },
       {
         "lineNumber": 617,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "+"
+        "content": "[none]"
       },
       {
         "lineNumber": 618,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "Use case resumes at step 4."
+        "content": "* 5a. The input name is already used."
       },
       {
         "lineNumber": 619,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 620,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "[discrete]"
+        "content": "[none]"
       },
       {
         "lineNumber": 621,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "chivent"
         },
-        "content": "\u003d\u003d\u003d Use case: Mass edit images"
+        "content": "** 5a1. Piconso asks if user wants to overwrite to previously stored set."
       },
       {
         "lineNumber": 622,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 623,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "*MSS*"
+        "content": "Use case resumes at step 4."
       },
       {
         "lineNumber": 624,
@@ -6854,147 +6854,147 @@
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "1.  User selects a range of images"
+        "content": "[discrete]"
       },
       {
         "lineNumber": 626,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "2.  User defines an optional alternate directory to save output"
+        "content": "\u003d\u003d\u003d Use case: Mass edit images"
       },
       {
         "lineNumber": 627,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "3.  User applies a known set of transformations to the set of images"
+        "content": ""
       },
       {
         "lineNumber": 628,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "4.  Output from step 3 is saved in directory defined in step 2 and user is notified"
+        "content": "*MSS*"
       },
       {
         "lineNumber": 629,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 630,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "Use case ends."
+        "content": "1.  User selects a range of images"
       },
       {
         "lineNumber": 631,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "2.  User defines an optional alternate directory to save output"
       },
       {
         "lineNumber": 632,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "*Extensions*"
+        "content": "3.  User applies a known set of transformations to the set of images"
       },
       {
         "lineNumber": 633,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "4.  Output from step 3 is saved in directory defined in step 2 and user is notified"
       },
       {
         "lineNumber": 634,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "[none]"
+        "content": "+"
       },
       {
         "lineNumber": 635,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "* 1a. Selected range is an empty set."
+        "content": "Use case ends."
       },
       {
         "lineNumber": 636,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 637,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "[none]"
+        "content": "*Extensions*"
       },
       {
         "lineNumber": 638,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": "** 1a1. Piconso shows an error message."
+        "content": ""
       },
       {
         "lineNumber": 639,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "+"
+        "content": "[none]"
       },
       {
         "lineNumber": 640,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "Use case resumes at step 1."
+        "content": "* 1a. Selected range is an empty set."
       },
       {
         "lineNumber": 641,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 642,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "[discrete]"
+        "content": "[none]"
       },
       {
         "lineNumber": 643,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "chivent"
         },
-        "content": "\u003d\u003d\u003d Use case: Add caption or watermark to image"
+        "content": "** 1a1. Piconso shows an error message."
       },
       {
         "lineNumber": 644,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 645,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "*MSS*"
+        "content": "Use case resumes at step 1."
       },
       {
         "lineNumber": 646,
@@ -7008,84 +7008,84 @@
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "1.  User opens an image"
+        "content": "[discrete]"
       },
       {
         "lineNumber": 648,
         "author": {
-          "gitId": "chivent"
+          "gitId": "ihwk1996"
         },
-        "content": "2.  Piconso displays the image in the preview pane"
+        "content": "\u003d\u003d\u003d Use case: Add caption or watermark to image"
       },
       {
         "lineNumber": 649,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "3.  User inputs caption or watermark text into input"
+        "content": ""
       },
       {
         "lineNumber": 650,
         "author": {
-          "gitId": "chivent"
+          "gitId": "ihwk1996"
         },
-        "content": "4.  Piconso displays the caption/watermark in the preview pane"
+        "content": "*MSS*"
       },
       {
         "lineNumber": 651,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 652,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "Use case ends."
+        "content": "1.  User opens an image"
       },
       {
         "lineNumber": 653,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": ""
+        "content": "2.  Piconso displays the image in the preview pane"
       },
       {
         "lineNumber": 654,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "3.  User inputs caption or watermark text into input"
       },
       {
         "lineNumber": 655,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": "_{More to be added}_"
+        "content": "4.  Piconso displays the caption/watermark in the preview pane"
       },
       {
         "lineNumber": 656,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 657,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "[appendix]"
+        "content": "Use case ends."
       },
       {
         "lineNumber": 658,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Non Functional Requirements"
+        "content": ""
       },
       {
         "lineNumber": 659,
@@ -7097,30 +7097,30 @@
       {
         "lineNumber": 660,
         "author": {
-          "gitId": "chivent"
+          "gitId": "-"
         },
-        "content": ".  Export images in different formats and sizes."
+        "content": "_{More to be added}_"
       },
       {
         "lineNumber": 661,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": ".  Have quick access to various filter options."
+        "content": ""
       },
       {
         "lineNumber": 662,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": ".  View detailed information about images."
+        "content": "[appendix]"
       },
       {
         "lineNumber": 663,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": ".  Navigate directories efficiently."
+        "content": "\u003d\u003d Non Functional Requirements"
       },
       {
         "lineNumber": 664,
@@ -7132,30 +7132,30 @@
       {
         "lineNumber": 665,
         "author": {
-          "gitId": "-"
+          "gitId": "chivent"
         },
-        "content": "_{More to be added}_"
+        "content": ".  Export images in different formats and sizes."
       },
       {
         "lineNumber": 666,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": ".  Have quick access to various filter options."
       },
       {
         "lineNumber": 667,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "[appendix]"
+        "content": ".  View detailed information about images."
       },
       {
         "lineNumber": 668,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "\u003d\u003d Glossary"
+        "content": ".  Navigate directories efficiently."
       },
       {
         "lineNumber": 669,
@@ -7167,68 +7167,103 @@
       {
         "lineNumber": 670,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "[[current-working-set]] Current working set::"
+        "content": "_{More to be added}_"
       },
       {
         "lineNumber": 671,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "Files that are currently opened"
+        "content": ""
       },
       {
         "lineNumber": 672,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[appendix]"
       },
       {
         "lineNumber": 673,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "[[transformation]] Transformation::"
+        "content": "\u003d\u003d Glossary"
       },
       {
         "lineNumber": 674,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "Action that is performed on an image"
-      },
-      {
-        "lineNumber": 675,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 675,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "[[current-working-set]] Current working set::"
+      },
+      {
         "lineNumber": 676,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "[appendix]"
+        "content": "Files that are currently opened"
       },
       {
         "lineNumber": 677,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Instructions for Manual Testing"
+        "content": ""
       },
       {
         "lineNumber": 678,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "[[transformation]] Transformation::"
+      },
+      {
+        "lineNumber": 679,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "Action that is performed on an image"
+      },
+      {
+        "lineNumber": 680,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 679,
+        "lineNumber": 681,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[appendix]"
+      },
+      {
+        "lineNumber": 682,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Instructions for Manual Testing"
+      },
+      {
+        "lineNumber": 683,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 684,
         "author": {
           "gitId": "chivent"
         },
@@ -7237,9 +7272,9 @@
     ],
     "authorContributionMap": {
       "lancelotwillow": 26,
-      "chivent": 52,
-      "ihwk1996": 104,
-      "-": 497
+      "chivent": 57,
+      "ihwk1996": 105,
+      "-": 496
     }
   },
   {

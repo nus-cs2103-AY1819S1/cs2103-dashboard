@@ -8766,7 +8766,7 @@
       {
         "lineNumber": 1159,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "ChesterSng"
         },
         "content": "[discrete]"
       },
@@ -9542,9 +9542,9 @@
       }
     ],
     "authorContributionMap": {
-      "ChesterSng": 13,
+      "ChesterSng": 14,
       "syahiranrafi": 1,
-      "blewjy": 194,
+      "blewjy": 193,
       "-": 1061
     }
   },
@@ -30273,7 +30273,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    private final String noteContent;"
+        "content": "    private String noteContent;"
       },
       {
         "lineNumber": 11,
@@ -30385,87 +30385,73 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     */"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    @Override"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public String generate() {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String generate() {"
+        "content": "        //dissect contents of note to extract medicines dispensed"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "        //dissect contents of note to extract medicines dispensed"
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "        StringBuilder sb \u003d new StringBuilder();"
+        "content": "        sb.append(\"Name: \" + super.getName() + \"\u003cbr\u003e\");"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "        sb.append(super.generateHeaders());"
+        "content": "        sb.append(\"NRIC: \" + super.getIcNumber() + \"\u003cbr\u003e\");"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "        sb.append(super.tabFormat(\"Name: \" + super.getName() + \"\\n\"));"
+        "content": "        sb.append(\"Medicine dispensed: \u003cbr\u003e\");"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "        sb.append(super.tabFormat(\"NRIC: \" + super.getIcNumber() + \"\\n\"));"
+        "content": "        return sb.toString();"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "        sb.append(super.tabFormat(\"Medicine dispensed: \\n\"));"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return sb.toString();"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "-"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
@@ -30474,7 +30460,7 @@
     ],
     "authorContributionMap": {
       "ChesterSng": 2,
-      "-": 36
+      "-": 34
     }
   },
   {
@@ -34655,11 +34641,18 @@
           "gitId": "-"
         },
         "content": "}"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       }
     ],
     "authorContributionMap": {
       "blewjy": 75,
-      "-": 114
+      "-": 115
     }
   },
   {
