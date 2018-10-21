@@ -4117,9 +4117,9 @@
       {
         "lineNumber": 196,
         "author": {
-          "gitId": "zxjtan"
+          "gitId": "-"
         },
-        "content": "////"
+        "content": ""
       },
       {
         "lineNumber": 197,
@@ -4208,9 +4208,9 @@
       {
         "lineNumber": 209,
         "author": {
-          "gitId": "-"
+          "gitId": "zxjtan"
         },
-        "content": "* exposes an unmodifiable `ObservableList\u003cPerson\u003e` that can be \u0027observed\u0027 e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change."
+        "content": "* exposes an unmodifiable `ObservableList\u003cPerson\u003e` and `ObservableList\u003cTask\u003e` that can be \u0027observed\u0027 e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change."
       },
       {
         "lineNumber": 210,
@@ -4229,72 +4229,72 @@
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "-"
+          "gitId": "zxjtan"
         },
-        "content": "[NOTE]"
+        "content": "////"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "As a more OOP model, we can store a `Tag` list in `Address Book`, which `Person` can reference. This would allow `Address Book` to only require one `Tag` object per unique `Tag`, instead of each `Person` needing their own `Tag` object. An example of how such a model may look like is given below. +"
+        "content": "[[Design-Storage]]"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": " +"
+        "content": "\u003d\u003d\u003d Storage component"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "image:ModelClassBetterOopDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".Structure of the Storage Component"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Design-Storage]]"
+        "content": "image::StorageClassDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Storage component"
+        "content": ""
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "*API* : link:{repoURL}/src/main/java/seedu/address/storage/Storage.java[`Storage.java`]"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": ".Structure of the Storage Component"
+        "content": ""
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "image::StorageClassDiagram.png[width\u003d\"800\"]"
+        "content": "The `Storage` component,"
       },
       {
         "lineNumber": 222,
@@ -4308,21 +4308,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*API* : link:{repoURL}/src/main/java/seedu/address/storage/Storage.java[`Storage.java`]"
+        "content": "* can save `UserPref` objects in json format and read it back."
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* can save the Address Book data in xml format and read it back."
       },
       {
         "lineNumber": 225,
         "author": {
-          "gitId": "-"
+          "gitId": "zxjtan"
         },
-        "content": "The `Storage` component,"
+        "content": "////"
       },
       {
         "lineNumber": 226,
@@ -4336,42 +4336,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* can save `UserPref` objects in json format and read it back."
+        "content": "[[Design-Commons]]"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "* can save the Address Book data in xml format and read it back."
+        "content": "\u003d\u003d\u003d Common classes"
       },
       {
         "lineNumber": 229,
-        "author": {
-          "gitId": "zxjtan"
-        },
-        "content": "////"
-      },
-      {
-        "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Classes used by multiple components are in the `seedu.addressbook.commons` package."
+      },
+      {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Design-Commons]]"
+        "content": ""
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Common classes"
+        "content": "\u003d\u003d Implementation"
       },
       {
         "lineNumber": 233,
@@ -4385,7 +4385,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Classes used by multiple components are in the `seedu.addressbook.commons` package."
+        "content": "This section describes some noteworthy details on how certain features are implemented."
       },
       {
         "lineNumber": 235,
@@ -4397,205 +4397,205 @@
       {
         "lineNumber": 236,
         "author": {
-          "gitId": "-"
+          "gitId": "zxjtan"
         },
-        "content": "\u003d\u003d Implementation"
+        "content": "// tag::tasks[]"
       },
       {
         "lineNumber": 237,
         "author": {
-          "gitId": "-"
+          "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Tasks class"
       },
       {
         "lineNumber": 238,
         "author": {
-          "gitId": "-"
+          "gitId": "zxjtan"
         },
-        "content": "This section describes some noteworthy details on how certain features are implemented."
+        "content": "image::TaskComponentClassDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 239,
         "author": {
-          "gitId": "-"
+          "gitId": "zxjtan"
         },
         "content": ""
       },
       {
         "lineNumber": 240,
         "author": {
-          "gitId": "jaypeeteedee"
+          "gitId": "zxjtan"
         },
-        "content": "// tag::listfindtasks[]"
+        "content": "The `Task` class consists of list of `Tag` objects and a `Name` object, corresponding to the same classes in the `Person` namespace. It also has two `DateTime` objects, one for the start date and time and the other for the end date and time of the task."
       },
       {
         "lineNumber": 241,
         "author": {
-          "gitId": "jaypeeteedee"
-        },
-        "content": "\u003d\u003d\u003d Listing and finding of tasks"
-      },
-      {
-        "lineNumber": 242,
-        "author": {
-          "gitId": "jaypeeteedee"
-        },
-        "content": "\u003d\u003d\u003d\u003d Current Implementation"
-      },
-      {
-        "lineNumber": 243,
-        "author": {
-          "gitId": "jaypeeteedee"
+          "gitId": "zxjtan"
         },
         "content": ""
       },
       {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "The `DateTime` class encapsulates a Java `Calendar` object to store a date and time. It also includes methods to parse and validate date/time inputs from the user, and methods to return the date or time as a `String`."
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "// end::tasks[]"
+      },
+      {
         "lineNumber": 244,
         "author": {
-          "gitId": "jaypeeteedee"
+          "gitId": "zxjtan"
         },
-        "content": "Listing and finding of tasks is facilitated by `ModelManager` and displayed through `TaskListPanel`."
+        "content": ""
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "// tag::listfindtasks[]"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "`ModelManager` implements the following relevant methods:"
+        "content": "\u003d\u003d\u003d Listing and finding of tasks"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d Current Implementation"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "* `ModelManager#updateFilteredTaskList(Predicate\u003cTask\u003e predicate)` --"
+        "content": ""
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "Updates the the internal `filteredTasks` list with the predicate given. Exposed through the `Model` interface."
+        "content": "Listing and finding of tasks is facilitated by `ModelManager` and displayed through `TaskListPanel`."
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "* `ModelManager#getFilteredTaskList()` -- Returns an unmodifiable view of the internal `filteredTasks` list that"
+        "content": ""
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "updates with any changes to the baselist."
+        "content": "`ModelManager` implements the following relevant methods:"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "Exposed through the `Logic` and `Model` interfaces."
+        "content": ""
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "* `ModelManager#updateFilteredTaskList(Predicate\u003cTask\u003e predicate)` --"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "[NOTE]"
+        "content": "Updates the the internal `filteredTasks` list with the predicate given. Exposed through the `Model` interface."
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "`ModelManager#filteredTasks` is a JavaFX FilteredList around the unmodifiable list of tasks provided by `VersionedAddressBook#getTaskList())`. +"
+        "content": "* `ModelManager#getFilteredTaskList()` -- Returns an unmodifiable view of the internal `filteredTasks` list that"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "updates with any changes to the baselist."
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "Exposed through the `Logic` and `Model` interfaces."
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "`TaskListPanel` is constructed with the JavaFX ObservableList returned by"
+        "content": ""
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "`ModelManager#getFilteredTaskList()` when the application is started and displays it."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "`ModelManager#filteredTasks` is a JavaFX FilteredList around the unmodifiable list of tasks provided by `VersionedAddressBook#getTaskList())`. +"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "To find specific tasks, the appropriate predicate is passed into `ModelManager#updateFilteredTaskList()`, which updates"
+        "content": ""
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "the `filteredTasks` list, propagating the change up to the `TaskListPanel` display."
+        "content": ""
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "`TaskListPanel` is constructed with the JavaFX ObservableList returned by"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "Currently, there are 2 use cases where `ModelManager#updateFilteredTaskList()` is called, examples are given below."
+        "content": "`ModelManager#getFilteredTaskList()` when the application is started and displays it."
       },
       {
         "lineNumber": 265,
@@ -4609,42 +4609,42 @@
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "image::TaskListFindModelSequenceDiagram.png[width\u003d\"800\"]"
+        "content": "To find specific tasks, the appropriate predicate is passed into `ModelManager#updateFilteredTaskList()`, which updates"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "the `filteredTasks` list, propagating the change up to the `TaskListPanel` display."
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "Case 1: On application startup or after running `tasks list` command"
+        "content": ""
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "Currently, there are 2 use cases where `ModelManager#updateFilteredTaskList()` is called, examples are given below."
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "`ModelManager#updateFilteredTaskList()` is called with"
+        "content": ""
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "`Model#PREDICATE_SHOW_ALL_TASKS` which returns _true_ for all tasks"
+        "content": "image::TaskListFindModelSequenceDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 272,
@@ -4658,7 +4658,7 @@
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "image::TaskListLogicSequenceDiagram.png[width\u003d\"800\"]"
+        "content": "Case 1: On application startup or after running `tasks list` command"
       },
       {
         "lineNumber": 274,
@@ -4672,140 +4672,140 @@
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "Case 2: After running `tasks find [KEYWORDS]` command"
+        "content": "`ModelManager#updateFilteredTaskList()` is called with"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "`Model#PREDICATE_SHOW_ALL_TASKS` which returns _true_ for all tasks"
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "`ModelManager#updateFilteredTaskList()` is called with"
+        "content": ""
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "`NameContainsKeywordsPredicate` formed with the keywords provided,"
+        "content": "image::TaskListLogicSequenceDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "which returns true only for tasks with keywords in the name."
+        "content": ""
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "Case 2: After running `tasks find [KEYWORDS]` command"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "image::TaskFindLogicSequenceDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "`ModelManager#updateFilteredTaskList()` is called with"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "\u003d\u003d\u003d\u003d Design Considerations"
+        "content": "`NameContainsKeywordsPredicate` formed with the keywords provided,"
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "which returns true only for tasks with keywords in the name."
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "The use of `ObservableList` and `FilteredList` from JavaFX saves us the trouble of handling task list updates."
+        "content": ""
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "Under this design, addition, updates and deletion of tasks will only need to interface with `VersionedAddressBook`,"
+        "content": "image::TaskFindLogicSequenceDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "and the lists for display will be updated through JavaFX."
+        "content": ""
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d Design Considerations"
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "If we were use Java Lists instead, events will need to be raised to update lists stored for display."
+        "content": ""
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "The use of `ObservableList` and `FilteredList` from JavaFX saves us the trouble of handling task list updates."
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "\u003d\u003d\u003d\u003d Future Enhancements"
+        "content": "Under this design, addition, updates and deletion of tasks will only need to interface with `VersionedAddressBook`,"
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": ""
+        "content": "and the lists for display will be updated through JavaFX."
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "Currently, users can only search for tasks by name. Additional predicates can be added and exposed via commands to allow"
+        "content": ""
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "users to search by assigned people or dates."
+        "content": "If we were use Java Lists instead, events will need to be raised to update lists stored for display."
       },
       {
         "lineNumber": 295,
@@ -4819,7 +4819,7 @@
         "author": {
           "gitId": "jaypeeteedee"
         },
-        "content": "// end::listfindtasks[]"
+        "content": "\u003d\u003d\u003d\u003d Future Enhancements"
       },
       {
         "lineNumber": 297,
@@ -4831,212 +4831,212 @@
       {
         "lineNumber": 298,
         "author": {
-          "gitId": "-"
+          "gitId": "jaypeeteedee"
         },
-        "content": "// tag::undoredo[]"
+        "content": "Currently, users can only search for tasks by name. Additional predicates can be added and exposed via commands to allow"
       },
       {
         "lineNumber": 299,
         "author": {
-          "gitId": "-"
+          "gitId": "jaypeeteedee"
         },
-        "content": "\u003d\u003d\u003d Undo/Redo feature"
+        "content": "users to search by assigned people or dates."
       },
       {
         "lineNumber": 300,
         "author": {
-          "gitId": "-"
-        },
-        "content": "\u003d\u003d\u003d\u003d Current Implementation"
-      },
-      {
-        "lineNumber": 301,
-        "author": {
-          "gitId": "-"
+          "gitId": "jaypeeteedee"
         },
         "content": ""
       },
       {
+        "lineNumber": 301,
+        "author": {
+          "gitId": "jaypeeteedee"
+        },
+        "content": "// end::listfindtasks[]"
+      },
+      {
         "lineNumber": 302,
         "author": {
-          "gitId": "-"
+          "gitId": "jaypeeteedee"
         },
-        "content": "The undo/redo mechanism is facilitated by `VersionedAddressBook`."
+        "content": ""
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "-"
         },
-        "content": "It extends `AddressBook` with an undo/redo history, stored internally as an `addressBookStateList` and `currentStatePointer`."
+        "content": "// tag::undoredo[]"
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": "Additionally, it implements the following operations:"
+        "content": "\u003d\u003d\u003d Undo/Redo feature"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d Current Implementation"
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "-"
         },
-        "content": "* `VersionedAddressBook#commit()` -- Saves the current address book state in its history."
+        "content": ""
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "-"
         },
-        "content": "* `VersionedAddressBook#undo()` -- Restores the previous address book state from its history."
+        "content": "The undo/redo mechanism is facilitated by `VersionedAddressBook`."
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "* `VersionedAddressBook#redo()` -- Restores a previously undone address book state from its history."
+        "content": "It extends `AddressBook` with an undo/redo history, stored internally as an `addressBookStateList` and `currentStatePointer`."
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Additionally, it implements the following operations:"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "-"
         },
-        "content": "These operations are exposed in the `Model` interface as `Model#commitAddressBook()`, `Model#undoAddressBook()` and `Model#redoAddressBook()` respectively."
+        "content": ""
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `VersionedAddressBook#commit()` -- Saves the current address book state in its history."
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "-"
         },
-        "content": "Given below is an example usage scenario and how the undo/redo mechanism behaves at each step."
+        "content": "* `VersionedAddressBook#undo()` -- Restores the previous address book state from its history."
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `VersionedAddressBook#redo()` -- Restores a previously undone address book state from its history."
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "-"
         },
-        "content": "Step 1. The user launches the application for the first time. The `VersionedAddressBook` will be initialized with the initial address book state, and the `currentStatePointer` pointing to that single address book state."
+        "content": ""
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "These operations are exposed in the `Model` interface as `Model#commitAddressBook()`, `Model#undoAddressBook()` and `Model#redoAddressBook()` respectively."
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoStartingStateListDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Given below is an example usage scenario and how the undo/redo mechanism behaves at each step."
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
-        "content": "Step 2. The user executes `delete 5` command to delete the 5th person in the address book. The `delete` command calls `Model#commitAddressBook()`, causing the modified state of the address book after the `delete 5` command executes to be saved in the `addressBookStateList`, and the `currentStatePointer` is shifted to the newly inserted address book state."
+        "content": ""
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Step 1. The user launches the application for the first time. The `VersionedAddressBook` will be initialized with the initial address book state, and the `currentStatePointer` pointing to that single address book state."
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoNewCommand1StateListDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "image::UndoRedoStartingStateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "-"
         },
-        "content": "Step 3. The user executes `add n/David ...` to add a new person. The `add` command also calls `Model#commitAddressBook()`, causing another modified address book state to be saved into the `addressBookStateList`."
+        "content": ""
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Step 2. The user executes `delete 5` command to delete the 5th person in the address book. The `delete` command calls `Model#commitAddressBook()`, causing the modified state of the address book after the `delete 5` command executes to be saved in the `addressBookStateList`, and the `currentStatePointer` is shifted to the newly inserted address book state."
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoNewCommand2StateListDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "image::UndoRedoNewCommand1StateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "-"
         },
-        "content": "If a command fails its execution, it will not call `Model#commitAddressBook()`, so the address book state will not be saved into the `addressBookStateList`."
+        "content": "Step 3. The user executes `add n/David ...` to add a new person. The `add` command also calls `Model#commitAddressBook()`, causing another modified address book state to be saved into the `addressBookStateList`."
       },
       {
         "lineNumber": 328,
@@ -5050,7 +5050,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the `undo` command. The `undo` command will call `Model#undoAddressBook()`, which will shift the `currentStatePointer` once to the left, pointing it to the previous address book state, and restores the address book to that state."
+        "content": "image::UndoRedoNewCommand2StateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 330,
@@ -5064,28 +5064,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoExecuteUndoStateListDiagram.png[width\u003d\"800\"]"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 332,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "If a command fails its execution, it will not call `Model#commitAddressBook()`, so the address book state will not be saved into the `addressBookStateList`."
       },
       {
         "lineNumber": 333,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "-"
         },
-        "content": "If the `currentStatePointer` is at index 0, pointing to the initial address book state, then there are no previous address book states to restore. The `undo` command uses `Model#canUndoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo."
+        "content": "Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the `undo` command. The `undo` command will call `Model#undoAddressBook()`, which will shift the `currentStatePointer` once to the left, pointing it to the previous address book state, and restores the address book to that state."
       },
       {
         "lineNumber": 335,
@@ -5099,7 +5099,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "The following sequence diagram shows how the undo operation works:"
+        "content": "image::UndoRedoExecuteUndoStateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 337,
@@ -5113,42 +5113,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoSequenceDiagram.png[width\u003d\"800\"]"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 339,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "If the `currentStatePointer` is at index 0, pointing to the initial address book state, then there are no previous address book states to restore. The `undo` command uses `Model#canUndoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo."
       },
       {
         "lineNumber": 340,
         "author": {
           "gitId": "-"
         },
-        "content": "The `redo` command does the opposite -- it calls `Model#redoAddressBook()`, which shifts the `currentStatePointer` once to the right, pointing to the previously undone state, and restores the address book to that state."
+        "content": ""
       },
       {
         "lineNumber": 341,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The following sequence diagram shows how the undo operation works:"
       },
       {
         "lineNumber": 342,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 343,
         "author": {
           "gitId": "-"
         },
-        "content": "If the `currentStatePointer` is at index `addressBookStateList.size() - 1`, pointing to the latest address book state, then there are no undone address book states to restore. The `redo` command uses `Model#canRedoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo."
+        "content": "image::UndoRedoSequenceDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 344,
@@ -5162,7 +5162,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Step 5. The user then decides to execute the command `list`. Commands that do not modify the address book, such as `list`, will usually not call `Model#commitAddressBook()`, `Model#undoAddressBook()` or `Model#redoAddressBook()`. Thus, the `addressBookStateList` remains unchanged."
+        "content": "The `redo` command does the opposite -- it calls `Model#redoAddressBook()`, which shifts the `currentStatePointer` once to the right, pointing to the previously undone state, and restores the address book to that state."
       },
       {
         "lineNumber": 346,
@@ -5176,301 +5176,301 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoNewCommand3StateListDiagram.png[width\u003d\"800\"]"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 348,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "If the `currentStatePointer` is at index `addressBookStateList.size() - 1`, pointing to the latest address book state, then there are no undone address book states to restore. The `redo` command uses `Model#canRedoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo."
       },
       {
         "lineNumber": 349,
         "author": {
           "gitId": "-"
         },
-        "content": "Step 6. The user executes `clear`, which calls `Model#commitAddressBook()`. Since the `currentStatePointer` is not pointing at the end of the `addressBookStateList`, all address book states after the `currentStatePointer` will be purged. We designed it this way because it no longer makes sense to redo the `add n/David ...` command. This is the behavior that most modern desktop applications follow."
+        "content": ""
       },
       {
         "lineNumber": 350,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Step 5. The user then decides to execute the command `list`. Commands that do not modify the address book, such as `list`, will usually not call `Model#commitAddressBook()`, `Model#undoAddressBook()` or `Model#redoAddressBook()`. Thus, the `addressBookStateList` remains unchanged."
       },
       {
         "lineNumber": 351,
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoNewCommand4StateListDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 352,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "image::UndoRedoNewCommand3StateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 353,
         "author": {
           "gitId": "-"
         },
-        "content": "The following activity diagram summarizes what happens when a user executes a new command:"
+        "content": ""
       },
       {
         "lineNumber": 354,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Step 6. The user executes `clear`, which calls `Model#commitAddressBook()`. Since the `currentStatePointer` is not pointing at the end of the `addressBookStateList`, all address book states after the `currentStatePointer` will be purged. We designed it this way because it no longer makes sense to redo the `add n/David ...` command. This is the behavior that most modern desktop applications follow."
       },
       {
         "lineNumber": 355,
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoActivityDiagram.png[width\u003d\"650\"]"
+        "content": ""
       },
       {
         "lineNumber": 356,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "image::UndoRedoNewCommand4StateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 357,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d Design Considerations"
+        "content": ""
       },
       {
         "lineNumber": 358,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The following activity diagram summarizes what happens when a user executes a new command:"
       },
       {
         "lineNumber": 359,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: How undo \u0026 redo executes"
+        "content": ""
       },
       {
         "lineNumber": 360,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "image::UndoRedoActivityDiagram.png[width\u003d\"650\"]"
       },
       {
         "lineNumber": 361,
         "author": {
           "gitId": "-"
         },
-        "content": "* **Alternative 1 (current choice):** Saves the entire address book."
+        "content": ""
       },
       {
         "lineNumber": 362,
         "author": {
           "gitId": "-"
         },
-        "content": "** Pros: Easy to implement."
+        "content": "\u003d\u003d\u003d\u003d Design Considerations"
       },
       {
         "lineNumber": 363,
         "author": {
           "gitId": "-"
         },
-        "content": "** Cons: May have performance issues in terms of memory usage."
+        "content": ""
       },
       {
         "lineNumber": 364,
         "author": {
           "gitId": "-"
         },
-        "content": "* **Alternative 2:** Individual command knows how to undo/redo by itself."
+        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: How undo \u0026 redo executes"
       },
       {
         "lineNumber": 365,
         "author": {
           "gitId": "-"
         },
-        "content": "** Pros: Will use less memory (e.g. for `delete`, just save the person being deleted)."
+        "content": ""
       },
       {
         "lineNumber": 366,
         "author": {
           "gitId": "-"
         },
-        "content": "** Cons: We must ensure that the implementation of each individual command are correct."
+        "content": "* **Alternative 1 (current choice):** Saves the entire address book."
       },
       {
         "lineNumber": 367,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "** Pros: Easy to implement."
       },
       {
         "lineNumber": 368,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: Data structure to support the undo/redo commands"
+        "content": "** Cons: May have performance issues in terms of memory usage."
       },
       {
         "lineNumber": 369,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* **Alternative 2:** Individual command knows how to undo/redo by itself."
       },
       {
         "lineNumber": 370,
         "author": {
           "gitId": "-"
         },
-        "content": "* **Alternative 1 (current choice):** Use a list to store the history of address book states."
+        "content": "** Pros: Will use less memory (e.g. for `delete`, just save the person being deleted)."
       },
       {
         "lineNumber": 371,
         "author": {
           "gitId": "-"
         },
-        "content": "** Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project."
+        "content": "** Cons: We must ensure that the implementation of each individual command are correct."
       },
       {
         "lineNumber": 372,
         "author": {
           "gitId": "-"
         },
-        "content": "** Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both `HistoryManager` and `VersionedAddressBook`."
+        "content": ""
       },
       {
         "lineNumber": 373,
         "author": {
           "gitId": "-"
         },
-        "content": "* **Alternative 2:** Use `HistoryManager` for undo/redo"
+        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: Data structure to support the undo/redo commands"
       },
       {
         "lineNumber": 374,
         "author": {
           "gitId": "-"
         },
-        "content": "** Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase."
+        "content": ""
       },
       {
         "lineNumber": 375,
         "author": {
           "gitId": "-"
         },
-        "content": "** Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as `HistoryManager` now needs to do two different things."
+        "content": "* **Alternative 1 (current choice):** Use a list to store the history of address book states."
       },
       {
         "lineNumber": 376,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::undoredo[]"
+        "content": "** Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project."
       },
       {
         "lineNumber": 377,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "** Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both `HistoryManager` and `VersionedAddressBook`."
       },
       {
         "lineNumber": 378,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "// tag::calendarshow[]"
+        "content": "* **Alternative 2:** Use `HistoryManager` for undo/redo"
       },
       {
         "lineNumber": 379,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Calendar show feature"
+        "content": "** Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase."
       },
       {
         "lineNumber": 380,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d Current Implementation"
+        "content": "** Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as `HistoryManager` now needs to do two different things."
       },
       {
         "lineNumber": 381,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "// end::undoredo[]"
       },
       {
         "lineNumber": 382,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "The calendar show feature is facilitated by the `ModelManager`. It extends `ModelManager` with a calendar panel that allows the user to more easily view the tasks."
+        "content": ""
       },
       {
         "lineNumber": 383,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "// tag::calendarshow[]"
       },
       {
         "lineNumber": 384,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "It exposes the following operations via the `Model` interface:"
+        "content": "\u003d\u003d\u003d Calendar show feature"
       },
       {
         "lineNumber": 385,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d Current Implementation"
       },
       {
         "lineNumber": 386,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* `Model#updateCalendarMonth()` -- Saves the given calendar that encapsulates the month to be displayed in the calendar panel."
+        "content": ""
       },
       {
         "lineNumber": 387,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* `Model#getCalendarMonth()` -- Returns an `ObservableValue\u003cCalendar\u003e` for the calendar panel to identify which weekday the month begins with."
+        "content": "The calendar show feature is facilitated by the `ModelManager`. It extends `ModelManager` with a calendar panel that allows the user to more easily view the tasks."
       },
       {
         "lineNumber": 388,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* `Model#updateCalendarTaskList()` -- Updates the model with a predicate to filter the tasks that should be displayed in the calendar."
+        "content": ""
       },
       {
         "lineNumber": 389,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* `Model#getCalendarTaskList()` -- Returns an `ObservableList\u003cTask\u003e` for the calendar panel to display."
+        "content": "It exposes the following operations via the `Model` interface:"
       },
       {
         "lineNumber": 390,
@@ -5484,264 +5484,264 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Given below is an example usage scenario and how the calendar show mechanism behaves at each step."
+        "content": "* `Model#updateCalendarMonth()` -- Saves the given calendar that encapsulates the month to be displayed in the calendar panel."
       },
       {
         "lineNumber": 392,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* `Model#getCalendarMonth()` -- Returns an `ObservableValue\u003cCalendar\u003e` for the calendar panel to identify which weekday the month begins with."
       },
       {
         "lineNumber": 393,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Step 1. The user launches the application. The `MainWindow` class calls `Model#getCalendarMonth()` and `Model#getCalendarTaskList()` when creating the calendar panel. This initialises the calendar panel with an `ObservableList\u003cTask\u003e` and `ObservableValue\u003cCalendar\u003e` to allow it to perform UI updates when necessary."
+        "content": "* `Model#updateCalendarTaskList()` -- Updates the model with a predicate to filter the tasks that should be displayed in the calendar."
       },
       {
         "lineNumber": 394,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* `Model#getCalendarTaskList()` -- Returns an `ObservableList\u003cTask\u003e` for the calendar panel to display."
       },
       {
         "lineNumber": 395,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Step 2. The calendar panel constructs a `GridPane` and initialises the cells with empty containers."
+        "content": ""
       },
       {
         "lineNumber": 396,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Given below is an example usage scenario and how the calendar show mechanism behaves at each step."
       },
       {
         "lineNumber": 397,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Step 3. The calendar panel registers listeners to both the `ObservableList\u003cTask\u003e` and `ObservableValue\u003cCalendar\u003e` with a task that would empty grid cells and repopulate them with `ListView` elements that display the tasks starting on the corresponding dates."
+        "content": ""
       },
       {
         "lineNumber": 398,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Step 1. The user launches the application. The `MainWindow` class calls `Model#getCalendarMonth()` and `Model#getCalendarTaskList()` when creating the calendar panel. This initialises the calendar panel with an `ObservableList\u003cTask\u003e` and `ObservableValue\u003cCalendar\u003e` to allow it to perform UI updates when necessary."
       },
       {
         "lineNumber": 399,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Step 4. The user creates any number of tasks with start date in January 2018. The tasks will be stored appropriately."
+        "content": ""
       },
       {
         "lineNumber": 400,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Step 2. The calendar panel constructs a `GridPane` and initialises the cells with empty containers."
       },
       {
         "lineNumber": 401,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Step 5. The user executes `calendars show y/2018 m/1`. The `calendars show` command calls `Model#updateCalendarMonth()` and `Model#updateCalendarTaskList()`, listeners in the calendar panel to be notified of the changes."
+        "content": ""
       },
       {
         "lineNumber": 402,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Step 3. The calendar panel registers listeners to both the `ObservableList\u003cTask\u003e` and `ObservableValue\u003cCalendar\u003e` with a task that would empty grid cells and repopulate them with `ListView` elements that display the tasks starting on the corresponding dates."
       },
       {
         "lineNumber": 403,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d\u003d Design Considerations"
+        "content": ""
       },
       {
         "lineNumber": 404,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Step 4. The user creates any number of tasks with start date in January 2018. The tasks will be stored appropriately."
       },
       {
         "lineNumber": 405,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: Where to filter tasks by month for displaying in the calendar."
+        "content": ""
       },
       {
         "lineNumber": 406,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Step 5. The user executes `calendars show y/2018 m/1`. The `calendars show` command calls `Model#updateCalendarMonth()` and `Model#updateCalendarTaskList()`, listeners in the calendar panel to be notified of the changes."
       },
       {
         "lineNumber": 407,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* **Alternative 1 (current choice):** Done in the model"
+        "content": ""
       },
       {
         "lineNumber": 408,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Pros: Application logic does not reside in the view layer."
+        "content": "\u003d\u003d\u003d\u003d Design Considerations"
       },
       {
         "lineNumber": 409,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Cons: Repeated filtering at multiple steps. Tasks are duplicated in two data lists."
+        "content": ""
       },
       {
         "lineNumber": 410,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* **Alternative 2:** Calendar object representing current month and full task list passed to calendar pane, all filter operations done in the calendar pane."
+        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: Where to filter tasks by month for displaying in the calendar."
       },
       {
         "lineNumber": 411,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Pros: Less data duplication."
+        "content": ""
       },
       {
         "lineNumber": 412,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Cons: Poorer separation of concerns, less modularity."
+        "content": "* **Alternative 1 (current choice):** Done in the model"
       },
       {
         "lineNumber": 413,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** Pros: Application logic does not reside in the view layer."
       },
       {
         "lineNumber": 414,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: Construction of grid cell list view."
+        "content": "** Cons: Repeated filtering at multiple steps. Tasks are duplicated in two data lists."
       },
       {
         "lineNumber": 415,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* **Alternative 2:** Calendar object representing current month and full task list passed to calendar pane, all filter operations done in the calendar pane."
       },
       {
         "lineNumber": 416,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* **Alternative 1 (current choice):** Delete and regenerate `ListView` elements each time the moth is changed"
+        "content": "** Pros: Less data duplication."
       },
       {
         "lineNumber": 417,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Pros: Ease of implementation, especially since `GridPane` does not support random access."
+        "content": "** Cons: Poorer separation of concerns, less modularity."
       },
       {
         "lineNumber": 418,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Cons: Poorer performance, although this is likely insignificant since number of elements to be created/deleted is small."
+        "content": ""
       },
       {
         "lineNumber": 419,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* **Alternative 2:** Create and store `ListView` containers and reuse them."
+        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: Construction of grid cell list view."
       },
       {
         "lineNumber": 420,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Pros: Better performance, since deleting and recreating them incurs some computational cost."
+        "content": ""
       },
       {
         "lineNumber": 421,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Cons: Requires creating an auxillary data structure to store the elements to get around deficiencies in the `GridPane` API."
+        "content": "* **Alternative 1 (current choice):** Delete and regenerate `ListView` elements each time the moth is changed"
       },
       {
         "lineNumber": 422,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "// end::calendarshow[]"
+        "content": "** Pros: Ease of implementation, especially since `GridPane` does not support random access."
       },
       {
         "lineNumber": 423,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** Cons: Poorer performance, although this is likely insignificant since number of elements to be created/deleted is small."
       },
       {
         "lineNumber": 424,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": "// tag::dataencryption[]"
+        "content": "* **Alternative 2:** Create and store `ListView` containers and reuse them."
       },
       {
         "lineNumber": 425,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d [Proposed] Data Encryption"
+        "content": "** Pros: Better performance, since deleting and recreating them incurs some computational cost."
       },
       {
         "lineNumber": 426,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** Cons: Requires creating an auxillary data structure to store the elements to get around deficiencies in the `GridPane` API."
       },
       {
         "lineNumber": 427,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": "_{Explain here how the data encryption feature will be implemented}_"
+        "content": "// end::calendarshow[]"
       },
       {
         "lineNumber": 428,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
         "content": ""
       },
@@ -5750,112 +5750,112 @@
         "author": {
           "gitId": "-"
         },
-        "content": "// end::dataencryption[]"
+        "content": "// tag::dataencryption[]"
       },
       {
         "lineNumber": 430,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d [Proposed] Data Encryption"
       },
       {
         "lineNumber": 431,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Logging"
+        "content": ""
       },
       {
         "lineNumber": 432,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "_{Explain here how the data encryption feature will be implemented}_"
       },
       {
         "lineNumber": 433,
         "author": {
           "gitId": "-"
         },
-        "content": "We are using `java.util.logging` package for logging. The `LogsCenter` class is used to manage the logging levels and logging destinations."
+        "content": ""
       },
       {
         "lineNumber": 434,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "// end::dataencryption[]"
       },
       {
         "lineNumber": 435,
         "author": {
           "gitId": "-"
         },
-        "content": "* The logging level can be controlled using the `logLevel` setting in the configuration file (See \u003c\u003cImplementation-Configuration\u003e\u003e)"
+        "content": ""
       },
       {
         "lineNumber": 436,
         "author": {
           "gitId": "-"
         },
-        "content": "* The `Logger` for a class can be obtained using `LogsCenter.getLogger(Class)` which will log messages according to the specified logging level"
+        "content": "\u003d\u003d\u003d Logging"
       },
       {
         "lineNumber": 437,
         "author": {
           "gitId": "-"
         },
-        "content": "* Currently log messages are output through: `Console` and to a `.log` file."
+        "content": ""
       },
       {
         "lineNumber": 438,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "We are using `java.util.logging` package for logging. The `LogsCenter` class is used to manage the logging levels and logging destinations."
       },
       {
         "lineNumber": 439,
         "author": {
           "gitId": "-"
         },
-        "content": "*Logging Levels*"
+        "content": ""
       },
       {
         "lineNumber": 440,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* The logging level can be controlled using the `logLevel` setting in the configuration file (See \u003c\u003cImplementation-Configuration\u003e\u003e)"
       },
       {
         "lineNumber": 441,
         "author": {
           "gitId": "-"
         },
-        "content": "* `SEVERE` : Critical problem detected which may possibly cause the termination of the application"
+        "content": "* The `Logger` for a class can be obtained using `LogsCenter.getLogger(Class)` which will log messages according to the specified logging level"
       },
       {
         "lineNumber": 442,
         "author": {
           "gitId": "-"
         },
-        "content": "* `WARNING` : Can continue, but with caution"
+        "content": "* Currently log messages are output through: `Console` and to a `.log` file."
       },
       {
         "lineNumber": 443,
         "author": {
           "gitId": "-"
         },
-        "content": "* `INFO` : Information showing the noteworthy actions by the App"
+        "content": ""
       },
       {
         "lineNumber": 444,
         "author": {
           "gitId": "-"
         },
-        "content": "* `FINE` : Details that is not usually noteworthy but may be useful in debugging e.g. print the actual list instead of just its size"
+        "content": "*Logging Levels*"
       },
       {
         "lineNumber": 445,
@@ -5869,28 +5869,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[[Implementation-Configuration]]"
+        "content": "* `SEVERE` : Critical problem detected which may possibly cause the termination of the application"
       },
       {
         "lineNumber": 447,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Configuration"
+        "content": "* `WARNING` : Can continue, but with caution"
       },
       {
         "lineNumber": 448,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `INFO` : Information showing the noteworthy actions by the App"
       },
       {
         "lineNumber": 449,
         "author": {
           "gitId": "-"
         },
-        "content": "Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: `config.json`)."
+        "content": "* `FINE` : Details that is not usually noteworthy but may be useful in debugging e.g. print the actual list instead of just its size"
       },
       {
         "lineNumber": 450,
@@ -5902,119 +5902,119 @@
       {
         "lineNumber": 451,
         "author": {
-          "gitId": "indocomsoft"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Editing and Deleting Tasks"
+        "content": "[[Implementation-Configuration]]"
       },
       {
         "lineNumber": 452,
         "author": {
-          "gitId": "indocomsoft"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Configuration"
       },
       {
         "lineNumber": 453,
         "author": {
-          "gitId": "indocomsoft"
-        },
-        "content": "The code for editing and deleting tasks is actually pretty similar to how it is implemented for persons. This is a combination of adding support for two additional commands: `tasks edit` and `tasks delete` inside `TasksParser`, defining `EditCommand` and `DeleteCommand` themselves, and finally, adding `void updateTask(Task target, Task editedTask);` and `void deleteTask(Task target);` in the `Model` interface, and implementing them in the `ModelManager` class."
-      },
-      {
-        "lineNumber": 454,
-        "author": {
-          "gitId": "indocomsoft"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 454,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: `config.json`)."
+      },
+      {
         "lineNumber": 455,
         "author": {
-          "gitId": "indocomsoft"
+          "gitId": "-"
         },
-        "content": "After any task is updated/deleted, `indicateAddressBookChanged()` is called to fire off the event such that the UI is updated."
+        "content": ""
       },
       {
         "lineNumber": 456,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Editing and Deleting Tasks"
       },
       {
         "lineNumber": 457,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "To explain more clearly, you can see below a diagram of what happens when the user asked the program to edit a task:"
+        "content": ""
       },
       {
         "lineNumber": 458,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "The code for editing and deleting tasks is actually pretty similar to how it is implemented for persons. This is a combination of adding support for two additional commands: `tasks edit` and `tasks delete` inside `TasksParser`, defining `EditCommand` and `DeleteCommand` themselves, and finally, adding `void updateTask(Task target, Task editedTask);` and `void deleteTask(Task target);` in the `Model` interface, and implementing them in the `ModelManager` class."
       },
       {
         "lineNumber": 459,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "image:EditCommandParser.jpg[]"
+        "content": ""
       },
       {
         "lineNumber": 460,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "After any task is updated/deleted, `indicateAddressBookChanged()` is called to fire off the event such that the UI is updated."
       },
       {
         "lineNumber": 461,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "image:EditCommand.jpg[]"
+        "content": ""
       },
       {
         "lineNumber": 462,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "To explain more clearly, you can see below a diagram of what happens when the user asked the program to edit a task:"
       },
       {
         "lineNumber": 463,
         "author": {
-          "gitId": "taneliang"
+          "gitId": "indocomsoft"
         },
-        "content": "\u003d\u003d\u003d Assigning tasks and contacts"
+        "content": ""
       },
       {
         "lineNumber": 464,
         "author": {
-          "gitId": "taneliang"
+          "gitId": "indocomsoft"
         },
-        "content": "\u003d\u003d\u003d\u003d Current implementation"
+        "content": "image:EditCommandParser.jpg[]"
       },
       {
         "lineNumber": 465,
         "author": {
-          "gitId": "taneliang"
+          "gitId": "indocomsoft"
         },
         "content": ""
       },
       {
         "lineNumber": 466,
         "author": {
-          "gitId": "taneliang"
+          "gitId": "indocomsoft"
         },
-        "content": "Tasks and contacts can be assigned to each other using the commands `tasks assign` and `contacts assign`. This many-to-many relationship is stored simply as a list of task IDs and person IDs in the Person and Task classes respectively."
+        "content": "image:EditCommand.jpg[]"
       },
       {
         "lineNumber": 467,
         "author": {
-          "gitId": "taneliang"
+          "gitId": "indocomsoft"
         },
         "content": ""
       },
@@ -6023,112 +6023,112 @@
         "author": {
           "gitId": "taneliang"
         },
-        "content": "The commands are parsed by `AssignCommand` in both `TasksParser` and `ContactsParser`. If both the specified task and contact are found, the task and person IDs will be added to `Person.taskIds` and `Task.personIds` respectively, and the edited objects will be saved to disk. As happens when the edit commands are run, `indicateAddressBookChanged()` is called to update the UI. The data flow is similar to the one for `EditCommand` in the previous section."
+        "content": "\u003d\u003d\u003d Assigning tasks and contacts"
       },
       {
         "lineNumber": 469,
         "author": {
           "gitId": "taneliang"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d Current implementation"
       },
       {
         "lineNumber": 470,
         "author": {
           "gitId": "taneliang"
         },
-        "content": "An alternative implementation that was considered was to model the many-to-many relationship using an `Assignment` class, which will act like a join table in relational databases. This would have slightly decoupled the `Person` and `Task` classes. However, we chose not to implement it this way as a `Person` will always be assigned to a `Task`, and also because implementing such a relationship with manually managed IDs is extremely complex without a relational database to abstract away the complexity."
+        "content": ""
       },
       {
         "lineNumber": 471,
         "author": {
           "gitId": "taneliang"
         },
-        "content": ""
+        "content": "Tasks and contacts can be assigned to each other using the commands `tasks assign` and `contacts assign`. This many-to-many relationship is stored simply as a list of task IDs and person IDs in the Person and Task classes respectively."
       },
       {
         "lineNumber": 472,
         "author": {
           "gitId": "taneliang"
         },
-        "content": "\u003d\u003d\u003d\u003d Future Enhancements"
+        "content": ""
       },
       {
         "lineNumber": 473,
         "author": {
           "gitId": "taneliang"
         },
-        "content": ""
+        "content": "The commands are parsed by `AssignCommand` in both `TasksParser` and `ContactsParser`. If both the specified task and contact are found, the task and person IDs will be added to `Person.taskIds` and `Task.personIds` respectively, and the edited objects will be saved to disk. As happens when the edit commands are run, `indicateAddressBookChanged()` is called to update the UI. The data flow is similar to the one for `EditCommand` in the previous section."
       },
       {
         "lineNumber": 474,
         "author": {
           "gitId": "taneliang"
         },
-        "content": "Both implementations of `AssignCommand` are almost identical, and should be refactored."
+        "content": ""
       },
       {
         "lineNumber": 475,
         "author": {
           "gitId": "taneliang"
         },
-        "content": ""
+        "content": "An alternative implementation that was considered was to model the many-to-many relationship using an `Assignment` class, which will act like a join table in relational databases. This would have slightly decoupled the `Person` and `Task` classes. However, we chose not to implement it this way as a `Person` will always be assigned to a `Task`, and also because implementing such a relationship with manually managed IDs is extremely complex without a relational database to abstract away the complexity."
       },
       {
         "lineNumber": 476,
         "author": {
           "gitId": "taneliang"
         },
-        "content": "Currently, assignments cannot be removed. The commands that will perform this task, `tasks unassign` and `contacts unassign`, are both slated to be implemented in v1.3."
+        "content": ""
       },
       {
         "lineNumber": 477,
         "author": {
           "gitId": "taneliang"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d Future Enhancements"
       },
       {
         "lineNumber": 478,
         "author": {
-          "gitId": "-"
+          "gitId": "taneliang"
         },
-        "content": "\u003d\u003d Documentation"
+        "content": ""
       },
       {
         "lineNumber": 479,
         "author": {
-          "gitId": "-"
+          "gitId": "taneliang"
         },
-        "content": ""
+        "content": "Both implementations of `AssignCommand` are almost identical, and should be refactored."
       },
       {
         "lineNumber": 480,
         "author": {
-          "gitId": "-"
-        },
-        "content": "We use asciidoc for writing documentation."
-      },
-      {
-        "lineNumber": 481,
-        "author": {
-          "gitId": "-"
+          "gitId": "taneliang"
         },
         "content": ""
       },
       {
+        "lineNumber": 481,
+        "author": {
+          "gitId": "taneliang"
+        },
+        "content": "Currently, assignments cannot be removed. The commands that will perform this task, `tasks unassign` and `contacts unassign`, are both slated to be implemented in v1.3."
+      },
+      {
         "lineNumber": 482,
         "author": {
-          "gitId": "-"
+          "gitId": "taneliang"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 483,
         "author": {
           "gitId": "-"
         },
-        "content": "We chose asciidoc over Markdown because asciidoc, although a bit more complex than Markdown, provides more flexibility in formatting."
+        "content": "\u003d\u003d Documentation"
       },
       {
         "lineNumber": 484,
@@ -6142,7 +6142,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Editing Documentation"
+        "content": "We use asciidoc for writing documentation."
       },
       {
         "lineNumber": 486,
@@ -6156,14 +6156,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to learn how to render `.adoc` files locally to preview the end result of your edits."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 488,
         "author": {
           "gitId": "-"
         },
-        "content": "Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your `.adoc` files in real-time."
+        "content": "We chose asciidoc over Markdown because asciidoc, although a bit more complex than Markdown, provides more flexibility in formatting."
       },
       {
         "lineNumber": 489,
@@ -6177,7 +6177,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Publishing Documentation"
+        "content": "\u003d\u003d\u003d Editing Documentation"
       },
       {
         "lineNumber": 491,
@@ -6191,84 +6191,84 @@
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingTravis#deploying-github-pages, UsingTravis.adoc\u003e\u003e to learn how to deploy GitHub Pages using Travis."
+        "content": "See \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to learn how to render `.adoc` files locally to preview the end result of your edits."
       },
       {
         "lineNumber": 493,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your `.adoc` files in real-time."
       },
       {
         "lineNumber": 494,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Converting Documentation to PDF format"
+        "content": ""
       },
       {
         "lineNumber": 495,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Publishing Documentation"
       },
       {
         "lineNumber": 496,
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://www.google.com/chrome/browser/desktop/[Google Chrome] for converting documentation to PDF format, as Chrome\u0027s PDF engine preserves hyperlinks used in webpages."
+        "content": ""
       },
       {
         "lineNumber": 497,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "See \u003c\u003cUsingTravis#deploying-github-pages, UsingTravis.adoc\u003e\u003e to learn how to deploy GitHub Pages using Travis."
       },
       {
         "lineNumber": 498,
         "author": {
           "gitId": "-"
         },
-        "content": "Here are the steps to convert the project documentation files to PDF format."
+        "content": ""
       },
       {
         "lineNumber": 499,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Converting Documentation to PDF format"
       },
       {
         "lineNumber": 500,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Follow the instructions in \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to convert the AsciiDoc files in the `docs/` directory to HTML format."
+        "content": ""
       },
       {
         "lineNumber": 501,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Go to your generated HTML files in the `build/docs` folder, right click on them and select `Open with` -\u003e `Google Chrome`."
+        "content": "We use https://www.google.com/chrome/browser/desktop/[Google Chrome] for converting documentation to PDF format, as Chrome\u0027s PDF engine preserves hyperlinks used in webpages."
       },
       {
         "lineNumber": 502,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Within Chrome, click on the `Print` option in Chrome\u0027s menu."
+        "content": ""
       },
       {
         "lineNumber": 503,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below."
+        "content": "Here are the steps to convert the project documentation files to PDF format."
       },
       {
         "lineNumber": 504,
@@ -6282,49 +6282,49 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".Saving documentation as PDF files in Chrome"
+        "content": ".  Follow the instructions in \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to convert the AsciiDoc files in the `docs/` directory to HTML format."
       },
       {
         "lineNumber": 506,
         "author": {
           "gitId": "-"
         },
-        "content": "image::chrome_save_as_pdf.png[width\u003d\"300\"]"
+        "content": ".  Go to your generated HTML files in the `build/docs` folder, right click on them and select `Open with` -\u003e `Google Chrome`."
       },
       {
         "lineNumber": 507,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  Within Chrome, click on the `Print` option in Chrome\u0027s menu."
       },
       {
         "lineNumber": 508,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Docs-SiteWideDocSettings]]"
+        "content": ".  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below."
       },
       {
         "lineNumber": 509,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Site-wide Documentation Settings"
+        "content": ""
       },
       {
         "lineNumber": 510,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".Saving documentation as PDF files in Chrome"
       },
       {
         "lineNumber": 511,
         "author": {
           "gitId": "-"
         },
-        "content": "The link:{repoURL}/build.gradle[`build.gradle`] file specifies some project-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how all documentation files within this project are rendered."
+        "content": "image::chrome_save_as_pdf.png[width\u003d\"300\"]"
       },
       {
         "lineNumber": 512,
@@ -6338,14 +6338,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": "[[Docs-SiteWideDocSettings]]"
       },
       {
         "lineNumber": 514,
         "author": {
           "gitId": "-"
         },
-        "content": "Attributes left unset in the `build.gradle` file will use their *default value*, if any."
+        "content": "\u003d\u003d\u003d Site-wide Documentation Settings"
       },
       {
         "lineNumber": 515,
@@ -6359,28 +6359,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
+        "content": "The link:{repoURL}/build.gradle[`build.gradle`] file specifies some project-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how all documentation files within this project are rendered."
       },
       {
         "lineNumber": 517,
         "author": {
           "gitId": "-"
         },
-        "content": ".List of site-wide attributes"
+        "content": ""
       },
       {
         "lineNumber": 518,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 519,
         "author": {
           "gitId": "-"
         },
-        "content": "|Attribute name |Description |Default value"
+        "content": "Attributes left unset in the `build.gradle` file will use their *default value*, if any."
       },
       {
         "lineNumber": 520,
@@ -6394,28 +6394,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-name`"
+        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
       },
       {
         "lineNumber": 522,
         "author": {
           "gitId": "-"
         },
-        "content": "|The name of the website."
+        "content": ".List of site-wide attributes"
       },
       {
         "lineNumber": 523,
         "author": {
           "gitId": "-"
         },
-        "content": "If set, the name will be displayed near the top of the page."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 524,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "|Attribute name |Description |Default value"
       },
       {
         "lineNumber": 525,
@@ -6429,21 +6429,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-githuburl`"
+        "content": "|`site-name`"
       },
       {
         "lineNumber": 527,
         "author": {
           "gitId": "-"
         },
-        "content": "|URL to the site\u0027s repository on https://github.com[GitHub]."
+        "content": "|The name of the website."
       },
       {
         "lineNumber": 528,
         "author": {
           "gitId": "-"
         },
-        "content": "Setting this will add a \"View on GitHub\" link in the navigation bar."
+        "content": "If set, the name will be displayed near the top of the page."
       },
       {
         "lineNumber": 529,
@@ -6464,21 +6464,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-seedu`"
+        "content": "|`site-githuburl`"
       },
       {
         "lineNumber": 532,
         "author": {
           "gitId": "-"
         },
-        "content": "|Define this attribute if the project is an official SE-EDU project."
+        "content": "|URL to the site\u0027s repository on https://github.com[GitHub]."
       },
       {
         "lineNumber": 533,
         "author": {
           "gitId": "-"
         },
-        "content": "This will render the SE-EDU navigation bar at the top of the page, and add some SE-EDU-specific navigation items."
+        "content": "Setting this will add a \"View on GitHub\" link in the navigation bar."
       },
       {
         "lineNumber": 534,
@@ -6499,28 +6499,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "|`site-seedu`"
       },
       {
         "lineNumber": 537,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|Define this attribute if the project is an official SE-EDU project."
       },
       {
         "lineNumber": 538,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Docs-PerFileDocSettings]]"
+        "content": "This will render the SE-EDU navigation bar at the top of the page, and add some SE-EDU-specific navigation items."
       },
       {
         "lineNumber": 539,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Per-file Documentation Settings"
+        "content": "|_not set_"
       },
       {
         "lineNumber": 540,
@@ -6534,7 +6534,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Each `.adoc` file may also specify some file-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how the file is rendered."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 542,
@@ -6548,28 +6548,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Asciidoctor\u0027s https://asciidoctor.org/docs/user-manual/#builtin-attributes[built-in attributes] may be specified and used as well."
+        "content": "[[Docs-PerFileDocSettings]]"
       },
       {
         "lineNumber": 544,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Per-file Documentation Settings"
       },
       {
         "lineNumber": 545,
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": ""
       },
       {
         "lineNumber": 546,
         "author": {
           "gitId": "-"
         },
-        "content": "Attributes left unset in `.adoc` files will use their *default value*, if any."
+        "content": "Each `.adoc` file may also specify some file-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how the file is rendered."
       },
       {
         "lineNumber": 547,
@@ -6583,28 +6583,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
+        "content": "Asciidoctor\u0027s https://asciidoctor.org/docs/user-manual/#builtin-attributes[built-in attributes] may be specified and used as well."
       },
       {
         "lineNumber": 549,
         "author": {
           "gitId": "-"
         },
-        "content": ".List of per-file attributes, excluding Asciidoctor\u0027s built-in attributes"
+        "content": ""
       },
       {
         "lineNumber": 550,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 551,
         "author": {
           "gitId": "-"
         },
-        "content": "|Attribute name |Description |Default value"
+        "content": "Attributes left unset in `.adoc` files will use their *default value*, if any."
       },
       {
         "lineNumber": 552,
@@ -6618,28 +6618,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-section`"
+        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
       },
       {
         "lineNumber": 554,
         "author": {
           "gitId": "-"
         },
-        "content": "|Site section that the document belongs to."
+        "content": ".List of per-file attributes, excluding Asciidoctor\u0027s built-in attributes"
       },
       {
         "lineNumber": 555,
         "author": {
           "gitId": "-"
         },
-        "content": "This will cause the associated item in the navigation bar to be highlighted."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 556,
         "author": {
           "gitId": "-"
         },
-        "content": "One of: `UserGuide`, `DeveloperGuide`, ``LearningOutcomes``{asterisk}, `AboutUs`, `ContactUs`"
+        "content": "|Attribute name |Description |Default value"
       },
       {
         "lineNumber": 557,
@@ -6653,91 +6653,91 @@
         "author": {
           "gitId": "-"
         },
-        "content": "_{asterisk} Official SE-EDU projects only_"
+        "content": "|`site-section`"
       },
       {
         "lineNumber": 559,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "|Site section that the document belongs to."
       },
       {
         "lineNumber": 560,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "This will cause the associated item in the navigation bar to be highlighted."
       },
       {
         "lineNumber": 561,
         "author": {
           "gitId": "-"
         },
-        "content": "|`no-site-header`"
+        "content": "One of: `UserGuide`, `DeveloperGuide`, ``LearningOutcomes``{asterisk}, `AboutUs`, `ContactUs`"
       },
       {
         "lineNumber": 562,
         "author": {
           "gitId": "-"
         },
-        "content": "|Set this attribute to remove the site navigation bar."
+        "content": ""
       },
       {
         "lineNumber": 563,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "_{asterisk} Official SE-EDU projects only_"
       },
       {
         "lineNumber": 564,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|_not set_"
       },
       {
         "lineNumber": 565,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 566,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|`no-site-header`"
       },
       {
         "lineNumber": 567,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Site Template"
+        "content": "|Set this attribute to remove the site navigation bar."
       },
       {
         "lineNumber": 568,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|_not set_"
       },
       {
         "lineNumber": 569,
         "author": {
           "gitId": "-"
         },
-        "content": "The files in link:{repoURL}/docs/stylesheets[`docs/stylesheets`] are the https://developer.mozilla.org/en-US/docs/Web/CSS[CSS stylesheets] of the site."
+        "content": ""
       },
       {
         "lineNumber": 570,
         "author": {
           "gitId": "-"
         },
-        "content": "You can modify them to change some properties of the site\u0027s design."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 571,
@@ -6751,98 +6751,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": "The files in link:{repoURL}/docs/templates[`docs/templates`] controls the rendering of `.adoc` files into HTML5."
+        "content": "\u003d\u003d\u003d Site Template"
       },
       {
         "lineNumber": 573,
         "author": {
           "gitId": "-"
         },
-        "content": "These template files are written in a mixture of https://www.ruby-lang.org[Ruby] and http://slim-lang.com[Slim]."
+        "content": ""
       },
       {
         "lineNumber": 574,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The files in link:{repoURL}/docs/stylesheets[`docs/stylesheets`] are the https://developer.mozilla.org/en-US/docs/Web/CSS[CSS stylesheets] of the site."
       },
       {
         "lineNumber": 575,
         "author": {
           "gitId": "-"
         },
-        "content": "[WARNING]"
+        "content": "You can modify them to change some properties of the site\u0027s design."
       },
       {
         "lineNumber": 576,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 577,
         "author": {
           "gitId": "-"
         },
-        "content": "Modifying the template files in link:{repoURL}/docs/templates[`docs/templates`] requires some knowledge and experience with Ruby and Asciidoctor\u0027s API."
+        "content": "The files in link:{repoURL}/docs/templates[`docs/templates`] controls the rendering of `.adoc` files into HTML5."
       },
       {
         "lineNumber": 578,
         "author": {
           "gitId": "-"
         },
-        "content": "You should only modify them if you need greater control over the site\u0027s layout than what stylesheets can provide."
+        "content": "These template files are written in a mixture of https://www.ruby-lang.org[Ruby] and http://slim-lang.com[Slim]."
       },
       {
         "lineNumber": 579,
         "author": {
           "gitId": "-"
         },
-        "content": "The SE-EDU team does not provide support for modified template files."
+        "content": ""
       },
       {
         "lineNumber": 580,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "[WARNING]"
       },
       {
         "lineNumber": 581,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 582,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Testing]]"
+        "content": "Modifying the template files in link:{repoURL}/docs/templates[`docs/templates`] requires some knowledge and experience with Ruby and Asciidoctor\u0027s API."
       },
       {
         "lineNumber": 583,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Testing"
+        "content": "You should only modify them if you need greater control over the site\u0027s layout than what stylesheets can provide."
       },
       {
         "lineNumber": 584,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The SE-EDU team does not provide support for modified template files."
       },
       {
         "lineNumber": 585,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Running Tests"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 586,
@@ -6856,28 +6856,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "There are three ways to run tests."
+        "content": "[[Testing]]"
       },
       {
         "lineNumber": 588,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d Testing"
       },
       {
         "lineNumber": 589,
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": ""
       },
       {
         "lineNumber": 590,
         "author": {
           "gitId": "-"
         },
-        "content": "The most reliable way to run tests is the 3rd one. The first two methods might fail some GUI tests due to platform/resolution-specific idiosyncrasies."
+        "content": "\u003d\u003d\u003d Running Tests"
       },
       {
         "lineNumber": 591,
@@ -6891,7 +6891,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 1: Using IntelliJ JUnit test runner*"
+        "content": "There are three ways to run tests."
       },
       {
         "lineNumber": 593,
@@ -6905,14 +6905,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* To run all tests, right-click on the `src/test/java` folder and choose `Run \u0027All Tests\u0027`"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 595,
         "author": {
           "gitId": "-"
         },
-        "content": "* To run a subset of tests, you can right-click on a test package, test class, or a test and choose `Run \u0027ABC\u0027`"
+        "content": "The most reliable way to run tests is the 3rd one. The first two methods might fail some GUI tests due to platform/resolution-specific idiosyncrasies."
       },
       {
         "lineNumber": 596,
@@ -6926,7 +6926,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 2: Using Gradle*"
+        "content": "*Method 1: Using IntelliJ JUnit test runner*"
       },
       {
         "lineNumber": 598,
@@ -6940,28 +6940,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* Open a console and run the command `gradlew clean allTests` (Mac/Linux: `./gradlew clean allTests`)"
+        "content": "* To run all tests, right-click on the `src/test/java` folder and choose `Run \u0027All Tests\u0027`"
       },
       {
         "lineNumber": 600,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* To run a subset of tests, you can right-click on a test package, test class, or a test and choose `Run \u0027ABC\u0027`"
       },
       {
         "lineNumber": 601,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 602,
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e for more info on how to run tests using Gradle."
+        "content": "*Method 2: Using Gradle*"
       },
       {
         "lineNumber": 603,
@@ -6975,7 +6975,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 3: Using Gradle (headless)*"
+        "content": "* Open a console and run the command `gradlew clean allTests` (Mac/Linux: `./gradlew clean allTests`)"
       },
       {
         "lineNumber": 605,
@@ -6989,189 +6989,189 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Thanks to the https://github.com/TestFX/TestFX[TestFX] library we use, our GUI tests can be run in the _headless_ mode. In the headless mode, GUI tests do not show up on the screen. That means the developer can do other things on the Computer while the tests are running."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 607,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e for more info on how to run tests using Gradle."
       },
       {
         "lineNumber": 608,
         "author": {
           "gitId": "-"
         },
-        "content": "To run tests in headless mode, open a console and run the command `gradlew clean headless allTests` (Mac/Linux: `./gradlew clean headless allTests`)"
+        "content": ""
       },
       {
         "lineNumber": 609,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "*Method 3: Using Gradle (headless)*"
       },
       {
         "lineNumber": 610,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Types of tests"
+        "content": ""
       },
       {
         "lineNumber": 611,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Thanks to the https://github.com/TestFX/TestFX[TestFX] library we use, our GUI tests can be run in the _headless_ mode. In the headless mode, GUI tests do not show up on the screen. That means the developer can do other things on the Computer while the tests are running."
       },
       {
         "lineNumber": 612,
         "author": {
           "gitId": "-"
         },
-        "content": "We have two types of tests:"
+        "content": ""
       },
       {
         "lineNumber": 613,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "To run tests in headless mode, open a console and run the command `gradlew clean headless allTests` (Mac/Linux: `./gradlew clean headless allTests`)"
       },
       {
         "lineNumber": 614,
         "author": {
           "gitId": "-"
         },
-        "content": ".  *GUI Tests* - These are tests involving the GUI. They include,"
+        "content": ""
       },
       {
         "lineNumber": 615,
         "author": {
           "gitId": "-"
         },
-        "content": ".. _System Tests_ that test the entire App by simulating user actions on the GUI. These are in the `systemtests` package."
+        "content": "\u003d\u003d\u003d Types of tests"
       },
       {
         "lineNumber": 616,
         "author": {
           "gitId": "-"
         },
-        "content": ".. _Unit tests_ that test the individual components. These are in `seedu.address.ui` package."
+        "content": ""
       },
       {
         "lineNumber": 617,
         "author": {
           "gitId": "-"
         },
-        "content": ".  *Non-GUI Tests* - These are tests not involving the GUI. They include,"
+        "content": "We have two types of tests:"
       },
       {
         "lineNumber": 618,
         "author": {
           "gitId": "-"
         },
-        "content": "..  _Unit tests_ targeting the lowest level methods/classes. +"
+        "content": ""
       },
       {
         "lineNumber": 619,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.commons.StringUtilTest`"
+        "content": ".  *GUI Tests* - These are tests involving the GUI. They include,"
       },
       {
         "lineNumber": 620,
         "author": {
           "gitId": "-"
         },
-        "content": "..  _Integration tests_ that are checking the integration of multiple code units (those code units are assumed to be working). +"
+        "content": ".. _System Tests_ that test the entire App by simulating user actions on the GUI. These are in the `systemtests` package."
       },
       {
         "lineNumber": 621,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.storage.StorageManagerTest`"
+        "content": ".. _Unit tests_ that test the individual components. These are in `seedu.address.ui` package."
       },
       {
         "lineNumber": 622,
         "author": {
           "gitId": "-"
         },
-        "content": "..  Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together. +"
+        "content": ".  *Non-GUI Tests* - These are tests not involving the GUI. They include,"
       },
       {
         "lineNumber": 623,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.logic.LogicManagerTest`"
+        "content": "..  _Unit tests_ targeting the lowest level methods/classes. +"
       },
       {
         "lineNumber": 624,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "e.g. `seedu.address.commons.StringUtilTest`"
       },
       {
         "lineNumber": 625,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "..  _Integration tests_ that are checking the integration of multiple code units (those code units are assumed to be working). +"
       },
       {
         "lineNumber": 626,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Troubleshooting Testing"
+        "content": "e.g. `seedu.address.storage.StorageManagerTest`"
       },
       {
         "lineNumber": 627,
         "author": {
           "gitId": "-"
         },
-        "content": "**Problem: `HelpWindowTest` fails with a `NullPointerException`.**"
+        "content": "..  Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together. +"
       },
       {
         "lineNumber": 628,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "e.g. `seedu.address.logic.LogicManagerTest`"
       },
       {
         "lineNumber": 629,
         "author": {
           "gitId": "-"
         },
-        "content": "* Reason: One of its dependencies, `HelpWindow.html` in `src/main/resources/docs` is missing."
+        "content": ""
       },
       {
         "lineNumber": 630,
         "author": {
           "gitId": "-"
         },
-        "content": "* Solution: Execute Gradle task `processResources`."
+        "content": ""
       },
       {
         "lineNumber": 631,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Troubleshooting Testing"
       },
       {
         "lineNumber": 632,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Dev Ops"
+        "content": "**Problem: `HelpWindowTest` fails with a `NullPointerException`.**"
       },
       {
         "lineNumber": 633,
@@ -7185,98 +7185,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Build Automation"
+        "content": "* Reason: One of its dependencies, `HelpWindow.html` in `src/main/resources/docs` is missing."
       },
       {
         "lineNumber": 635,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* Solution: Execute Gradle task `processResources`."
       },
       {
         "lineNumber": 636,
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e to learn how to use Gradle for build automation."
+        "content": ""
       },
       {
         "lineNumber": 637,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d Dev Ops"
       },
       {
         "lineNumber": 638,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Continuous Integration"
+        "content": ""
       },
       {
         "lineNumber": 639,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Build Automation"
       },
       {
         "lineNumber": 640,
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://travis-ci.org/[Travis CI] and https://www.appveyor.com/[AppVeyor] to perform _Continuous Integration_ on our projects. See \u003c\u003cUsingTravis#, UsingTravis.adoc\u003e\u003e and \u003c\u003cUsingAppVeyor#, UsingAppVeyor.adoc\u003e\u003e for more details."
+        "content": ""
       },
       {
         "lineNumber": 641,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e to learn how to use Gradle for build automation."
       },
       {
         "lineNumber": 642,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Coverage Reporting"
+        "content": ""
       },
       {
         "lineNumber": 643,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Continuous Integration"
       },
       {
         "lineNumber": 644,
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://coveralls.io/[Coveralls] to track the code coverage of our projects. See \u003c\u003cUsingCoveralls#, UsingCoveralls.adoc\u003e\u003e for more details."
+        "content": ""
       },
       {
         "lineNumber": 645,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "We use https://travis-ci.org/[Travis CI] and https://www.appveyor.com/[AppVeyor] to perform _Continuous Integration_ on our projects. See \u003c\u003cUsingTravis#, UsingTravis.adoc\u003e\u003e and \u003c\u003cUsingAppVeyor#, UsingAppVeyor.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 646,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Documentation Previews"
+        "content": ""
       },
       {
         "lineNumber": 647,
         "author": {
           "gitId": "-"
         },
-        "content": "When a pull request has changes to asciidoc files, you can use https://www.netlify.com/[Netlify] to see a preview of how the HTML version of those asciidoc files will look like when the pull request is merged. See \u003c\u003cUsingNetlify#, UsingNetlify.adoc\u003e\u003e for more details."
+        "content": "\u003d\u003d\u003d Coverage Reporting"
       },
       {
         "lineNumber": 648,
@@ -7290,7 +7290,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Making a Release"
+        "content": "We use https://coveralls.io/[Coveralls] to track the code coverage of our projects. See \u003c\u003cUsingCoveralls#, UsingCoveralls.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 650,
@@ -7304,42 +7304,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Here are the steps to create a new release."
+        "content": "\u003d\u003d\u003d Documentation Previews"
       },
       {
         "lineNumber": 652,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "When a pull request has changes to asciidoc files, you can use https://www.netlify.com/[Netlify] to see a preview of how the HTML version of those asciidoc files will look like when the pull request is merged. See \u003c\u003cUsingNetlify#, UsingNetlify.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 653,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Update the version number in link:{repoURL}/src/main/java/seedu/address/MainApp.java[`MainApp.java`]."
+        "content": ""
       },
       {
         "lineNumber": 654,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Generate a JAR file \u003c\u003cUsingGradle#creating-the-jar-file, using Gradle\u003e\u003e."
+        "content": "\u003d\u003d\u003d Making a Release"
       },
       {
         "lineNumber": 655,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Tag the repo with the version number. e.g. `v0.1`"
+        "content": ""
       },
       {
         "lineNumber": 656,
         "author": {
           "gitId": "-"
         },
-        "content": ".  https://help.github.com/articles/creating-releases/[Create a new release using GitHub] and upload the JAR file you created."
+        "content": "Here are the steps to create a new release."
       },
       {
         "lineNumber": 657,
@@ -7353,70 +7353,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Managing Dependencies"
+        "content": ".  Update the version number in link:{repoURL}/src/main/java/seedu/address/MainApp.java[`MainApp.java`]."
       },
       {
         "lineNumber": 659,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  Generate a JAR file \u003c\u003cUsingGradle#creating-the-jar-file, using Gradle\u003e\u003e."
       },
       {
         "lineNumber": 660,
         "author": {
           "gitId": "-"
         },
-        "content": "A project often depends on third-party libraries. For example, Address Book depends on the http://wiki.fasterxml.com/JacksonHome[Jackson library] for XML parsing. Managing these _dependencies_ can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives. +"
+        "content": ".  Tag the repo with the version number. e.g. `v0.1`"
       },
       {
         "lineNumber": 661,
         "author": {
           "gitId": "-"
         },
-        "content": "a. Include those libraries in the repo (this bloats the repo size) +"
+        "content": ".  https://help.github.com/articles/creating-releases/[Create a new release using GitHub] and upload the JAR file you created."
       },
       {
         "lineNumber": 662,
         "author": {
           "gitId": "-"
         },
-        "content": "b. Require developers to download those libraries manually (this creates extra work for developers)"
+        "content": ""
       },
       {
         "lineNumber": 663,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Managing Dependencies"
       },
       {
         "lineNumber": 664,
         "author": {
           "gitId": "-"
         },
-        "content": "[appendix]"
+        "content": ""
       },
       {
         "lineNumber": 665,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d Product Scope"
+        "content": "A project often depends on third-party libraries. For example, Address Book depends on the http://wiki.fasterxml.com/JacksonHome[Jackson library] for XML parsing. Managing these _dependencies_ can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives. +"
       },
       {
         "lineNumber": 666,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "a. Include those libraries in the repo (this bloats the repo size) +"
       },
       {
         "lineNumber": 667,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "Target User: NUS Computing students doing group projects"
+        "content": "b. Require developers to download those libraries manually (this creates extra work for developers)"
       },
       {
         "lineNumber": 668,
@@ -7428,135 +7428,135 @@
       {
         "lineNumber": 669,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "Target user profile: - is a student managing a project with multiple"
+        "content": "[appendix]"
       },
       {
         "lineNumber": 670,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "team members - has a need to manage a significant number of contacts -"
+        "content": "\u003d\u003d Product Scope"
       },
       {
         "lineNumber": 671,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "has a need to manage a significant number of tasks - prefer desktop apps"
+        "content": ""
       },
       {
         "lineNumber": 672,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "over other types - can type fast - prefers typing over mouse input - is"
+        "content": "Target User: NUS Computing students doing group projects"
       },
       {
         "lineNumber": 673,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "reasonably comfortable using CLI apps"
+        "content": ""
       },
       {
         "lineNumber": 674,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Target user profile: - is a student managing a project with multiple"
       },
       {
         "lineNumber": 675,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Value proposition: manage tasks faster than a typical mouse/GUI driven"
+        "content": "team members - has a need to manage a significant number of contacts -"
       },
       {
         "lineNumber": 676,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "app"
+        "content": "has a need to manage a significant number of tasks - prefer desktop apps"
       },
       {
         "lineNumber": 677,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "over other types - can type fast - prefers typing over mouse input - is"
       },
       {
         "lineNumber": 678,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[appendix]"
+        "content": "reasonably comfortable using CLI apps"
       },
       {
         "lineNumber": 679,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d User Stories"
+        "content": ""
       },
       {
         "lineNumber": 680,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Value proposition: manage tasks faster than a typical mouse/GUI driven"
       },
       {
         "lineNumber": 681,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`,"
+        "content": "app"
       },
       {
         "lineNumber": 682,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "Low (unlikely to have) - `*`"
-      },
-      {
-        "lineNumber": 683,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 683,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "[appendix]"
+      },
+      {
         "lineNumber": 684,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[cols\u003d\",,,\",options\u003d\"header\",]"
+        "content": "\u003d\u003d User Stories"
       },
       {
         "lineNumber": 685,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 686,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|Priority |As a… |I want to… |So that I can…"
+        "content": "Priorities: High (must have) - `* * *`, Medium (nice to have) - `* *`,"
       },
       {
         "lineNumber": 687,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* * *` |user |CRUD Tasks |"
+        "content": "Low (unlikely to have) - `*`"
       },
       {
         "lineNumber": 688,
@@ -7570,112 +7570,112 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* * *` |existing user |be alerted to tasks near their deadline |will"
+        "content": "[cols\u003d\",,,\",options\u003d\"header\",]"
       },
       {
         "lineNumber": 690,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "not miss any of them and delay the completion of the project or face any"
+        "content": "|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 691,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "other consequences"
+        "content": "|Priority |As a… |I want to… |So that I can…"
       },
       {
         "lineNumber": 692,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "|`* * *` |user |CRUD Tasks |"
       },
       {
         "lineNumber": 693,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "|`* * *` |existing user |assign other tasks to people |I can track who’s"
+        "content": ""
       },
       {
         "lineNumber": 694,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "supposed to complete them and notify them (by email) that they are"
+        "content": "|`* * *` |existing user |be alerted to tasks near their deadline |will"
       },
       {
         "lineNumber": 695,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "supposed to complete the task"
+        "content": "not miss any of them and delay the completion of the project or face any"
       },
       {
         "lineNumber": 696,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "other consequences"
       },
       {
         "lineNumber": 697,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "|`* * *` |existing user |see an overview of all tasks and people"
+        "content": ""
       },
       {
         "lineNumber": 698,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "assigned |so that I can quickly get a sense of the state of my project"
+        "content": "|`* * *` |existing user |assign other tasks to people |I can track who’s"
       },
       {
         "lineNumber": 699,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "and tasks"
+        "content": "supposed to complete them and notify them (by email) that they are"
       },
       {
         "lineNumber": 700,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "supposed to complete the task"
       },
       {
         "lineNumber": 701,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "|`* * *` |existing user |sort the overview |"
+        "content": ""
       },
       {
         "lineNumber": 702,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "|`* * *` |existing user |see an overview of all tasks and people"
       },
       {
         "lineNumber": 703,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* * *` |existing user |see the tasks assigned to each person |I know"
+        "content": "assigned |so that I can quickly get a sense of the state of my project"
       },
       {
         "lineNumber": 704,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "what they’re supposed to do"
+        "content": "and tasks"
       },
       {
         "lineNumber": 705,
@@ -7689,70 +7689,70 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* * *` |existing user |group tasks according to categories/tags"
+        "content": "|`* * *` |existing user |sort the overview |"
       },
       {
         "lineNumber": 707,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "|manage a larger number of tasks easily"
+        "content": ""
       },
       {
         "lineNumber": 708,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "|`* * *` |existing user |see the tasks assigned to each person |I know"
       },
       {
         "lineNumber": 709,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* *` |user |send email notifications to people I assigned tasks to"
+        "content": "what they’re supposed to do"
       },
       {
         "lineNumber": 710,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "|send updates/reminders"
+        "content": ""
       },
       {
         "lineNumber": 711,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "|`* * *` |existing user |group tasks according to categories/tags"
       },
       {
         "lineNumber": 712,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* *` |user |see notifications on other messaging platforms"
+        "content": "|manage a larger number of tasks easily"
       },
       {
         "lineNumber": 713,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "|conveniently view my tasks"
-      },
-      {
-        "lineNumber": 714,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 714,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "|`* *` |user |send email notifications to people I assigned tasks to"
+      },
+      {
         "lineNumber": 715,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* *` |user |see all tasks in a visual manner |"
+        "content": "|send updates/reminders"
       },
       {
         "lineNumber": 716,
@@ -7766,28 +7766,28 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* *` |user |see milestones visualised using a calendar |"
+        "content": "|`* *` |user |see notifications on other messaging platforms"
       },
       {
         "lineNumber": 718,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "|conveniently view my tasks"
+      },
+      {
+        "lineNumber": 719,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 719,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "|`* *` |user |view team members’ calendars and share my own |coordinate"
-      },
-      {
         "lineNumber": 720,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "meetings and track progress"
+        "content": "|`* *` |user |see all tasks in a visual manner |"
       },
       {
         "lineNumber": 721,
@@ -7801,49 +7801,49 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* *` |user |track the extent of others’ involvement in each task"
+        "content": "|`* *` |user |see milestones visualised using a calendar |"
       },
       {
         "lineNumber": 723,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "|ensure that irresponsible do not get undue credit"
+        "content": ""
       },
       {
         "lineNumber": 724,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "|`* *` |user |view team members’ calendars and share my own |coordinate"
       },
       {
         "lineNumber": 725,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* *` |user |use this product as a web app |easily access my tasks/work"
+        "content": "meetings and track progress"
       },
       {
         "lineNumber": 726,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "on all platforms"
-      },
-      {
-        "lineNumber": 727,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 727,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "|`* *` |user |track the extent of others’ involvement in each task"
+      },
+      {
         "lineNumber": 728,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* *` |user |recurring tasks |need not to re-create recurring tasks"
+        "content": "|ensure that irresponsible do not get undue credit"
       },
       {
         "lineNumber": 729,
@@ -7857,98 +7857,98 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`* *` |user |Autocomplete when typing tags |find tags faster"
+        "content": "|`* *` |user |use this product as a web app |easily access my tasks/work"
       },
       {
         "lineNumber": 731,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "on all platforms"
       },
       {
         "lineNumber": 732,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "|`* *` |user |vim-mode CLI |use the app more efficiently"
+        "content": ""
       },
       {
         "lineNumber": 733,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "|`* *` |user |recurring tasks |need not to re-create recurring tasks"
       },
       {
         "lineNumber": 734,
         "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "|`* *` |user |emacs-mode CLI |use the app more efficiently"
-      },
-      {
-        "lineNumber": 735,
-        "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 736,
+        "lineNumber": 735,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "|`*` |a self-respecting computing user |open a window that traces each"
+        "content": "|`* *` |user |Autocomplete when typing tags |find tags faster"
+      },
+      {
+        "lineNumber": 736,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 737,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "line of code that is executed when I perform an action |"
+        "content": "|`* *` |user |vim-mode CLI |use the app more efficiently"
       },
       {
         "lineNumber": 738,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
-      },
-      {
-        "lineNumber": 739,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 740,
+        "lineNumber": 739,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[appendix]"
+        "content": "|`* *` |user |emacs-mode CLI |use the app more efficiently"
+      },
+      {
+        "lineNumber": 740,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 741,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d Use cases"
+        "content": "|`*` |a self-respecting computing user |open a window that traces each"
       },
       {
         "lineNumber": 742,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "line of code that is executed when I perform an action |"
       },
       {
         "lineNumber": 743,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Create a contact"
+        "content": "|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 744,
@@ -7962,28 +7962,28 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "[appendix]"
       },
       {
         "lineNumber": 746,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "\u003d\u003d Use cases"
+      },
+      {
+        "lineNumber": 747,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 747,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "1.  User requests to add person, together with all the attributes"
-      },
-      {
         "lineNumber": 748,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  Cow adds that person to the contacts. Use case ends"
+        "content": "\u003d\u003d\u003d Create a contact"
       },
       {
         "lineNumber": 749,
@@ -7997,7 +7997,7 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**Extensions**"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 751,
@@ -8011,91 +8011,91 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "1.  User requests to add person, together with all the attributes"
       },
       {
         "lineNumber": 753,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 1a. Invalid attribute provided"
+        "content": "2.  Cow adds that person to the contacts. Use case ends"
       },
       {
         "lineNumber": 754,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "[none]"
+        "content": ""
       },
       {
         "lineNumber": 755,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "  ** 1a1. Cow shows an error message."
+        "content": "**Extensions**"
       },
       {
         "lineNumber": 756,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 757,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "[none]"
       },
       {
         "lineNumber": 758,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* 1a. Invalid attribute provided"
       },
       {
         "lineNumber": 759,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Read contacts"
+        "content": "[none]"
       },
       {
         "lineNumber": 760,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "  ** 1a1. Cow shows an error message."
       },
       {
         "lineNumber": 761,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "1.  User requests to list persons"
+        "content": "+"
       },
       {
         "lineNumber": 762,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  Cow shows a list of persons"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 763,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 764,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "\u003d\u003d\u003d Read contacts"
       },
       {
         "lineNumber": 765,
@@ -8109,126 +8109,126 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Update a contact"
-      },
-      {
-        "lineNumber": 767,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 768,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "**MSS**"
-      },
-      {
-        "lineNumber": 769,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 770,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
         "content": "1.  User requests to list persons"
       },
       {
-        "lineNumber": 771,
+        "lineNumber": 767,
         "author": {
           "gitId": "tuesmiddt"
         },
         "content": "2.  Cow shows a list of persons"
       },
       {
-        "lineNumber": 772,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "3.  User requests to update a specific person in the list, together with"
-      },
-      {
-        "lineNumber": 773,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "the new attributes"
-      },
-      {
-        "lineNumber": 774,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "4.  Cow updates the person with the given attribute"
-      },
-      {
-        "lineNumber": 775,
+        "lineNumber": 768,
         "author": {
           "gitId": "tuesmiddt"
         },
         "content": "+"
       },
       {
-        "lineNumber": 776,
+        "lineNumber": 769,
         "author": {
           "gitId": "tuesmiddt"
         },
         "content": "Use case ends"
       },
       {
-        "lineNumber": 777,
+        "lineNumber": 770,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 771,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "\u003d\u003d\u003d Update a contact"
+      },
+      {
+        "lineNumber": 772,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 773,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "**MSS**"
+      },
+      {
+        "lineNumber": 774,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 775,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "1.  User requests to list persons"
+      },
+      {
+        "lineNumber": 776,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "2.  Cow shows a list of persons"
+      },
+      {
+        "lineNumber": 777,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "3.  User requests to update a specific person in the list, together with"
+      },
+      {
         "lineNumber": 778,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**Extensions**"
+        "content": "the new attributes"
       },
       {
         "lineNumber": 779,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "4.  Cow updates the person with the given attribute"
       },
       {
         "lineNumber": 780,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 2a. The list is empty."
+        "content": "+"
       },
       {
         "lineNumber": 781,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "+"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 782,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "Use case ends"
+        "content": ""
       },
       {
         "lineNumber": 783,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 3a. The given index is invalid."
+        "content": "**Extensions**"
       },
       {
         "lineNumber": 784,
@@ -8242,7 +8242,7 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** 3a1. AddressBook shows an error message."
+        "content": "* 2a. The list is empty."
       },
       {
         "lineNumber": 786,
@@ -8256,14 +8256,14 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case resumes at step 2"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 788,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 3a. Invalid attribute provided"
+        "content": "* 3a. The given index is invalid."
       },
       {
         "lineNumber": 789,
@@ -8277,7 +8277,7 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** 3a1. Cow shows an error message."
+        "content": "** 3a1. AddressBook shows an error message."
       },
       {
         "lineNumber": 791,
@@ -8296,135 +8296,135 @@
       {
         "lineNumber": 793,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* 3a. Invalid attribute provided"
       },
       {
         "lineNumber": 794,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Delete a contact"
+        "content": "[none]"
       },
       {
         "lineNumber": 795,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** 3a1. Cow shows an error message."
       },
       {
         "lineNumber": 796,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "+"
       },
       {
         "lineNumber": 797,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Use case resumes at step 2"
       },
       {
         "lineNumber": 798,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "1.  User requests to list persons"
+        "content": ""
       },
       {
         "lineNumber": 799,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  Cow shows a list of persons"
+        "content": "\u003d\u003d\u003d Delete a contact"
       },
       {
         "lineNumber": 800,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "3.  User requests to delete a specific person in the list"
+        "content": ""
       },
       {
         "lineNumber": 801,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "4.  Cow deletes the person"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 802,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 803,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "1.  User requests to list persons"
       },
       {
         "lineNumber": 804,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "2.  Cow shows a list of persons"
       },
       {
         "lineNumber": 805,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**Extensions**"
+        "content": "3.  User requests to delete a specific person in the list"
       },
       {
         "lineNumber": 806,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "4.  Cow deletes the person"
       },
       {
         "lineNumber": 807,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "+"
       },
       {
         "lineNumber": 808,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 2a. The list is empty."
+        "content": "Use case ends"
       },
       {
         "lineNumber": 809,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 810,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "**Extensions**"
       },
       {
         "lineNumber": 811,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "* 3a. The given index is invalid."
+        "content": ""
       },
       {
         "lineNumber": 812,
@@ -8438,7 +8438,7 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** 3a1. AddressBook shows an error message."
+        "content": "* 2a. The list is empty."
       },
       {
         "lineNumber": 814,
@@ -8452,70 +8452,70 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case resumes at step 2"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 816,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* 3a. The given index is invalid."
       },
       {
         "lineNumber": 817,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Create a task"
+        "content": "[none]"
       },
       {
         "lineNumber": 818,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** 3a1. AddressBook shows an error message."
       },
       {
         "lineNumber": 819,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "+"
       },
       {
         "lineNumber": 820,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "Use case resumes at step 2"
+      },
+      {
+        "lineNumber": 821,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 821,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "1.  User requests to add task, together with all the attributes"
-      },
-      {
         "lineNumber": 822,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  Cow adds that task."
+        "content": "\u003d\u003d\u003d Create a task"
       },
       {
         "lineNumber": 823,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 824,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 825,
@@ -8529,98 +8529,98 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**Extensions**"
+        "content": "1.  User requests to add task, together with all the attributes"
       },
       {
         "lineNumber": 827,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "2.  Cow adds that task."
       },
       {
         "lineNumber": 828,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 1a. Invalid attribute provided"
+        "content": "+"
       },
       {
         "lineNumber": 829,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 830,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "** 1a1. Cow shows an error message."
+        "content": ""
       },
       {
         "lineNumber": 831,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "+"
+        "content": "**Extensions**"
       },
       {
         "lineNumber": 832,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "[none]"
       },
       {
         "lineNumber": 833,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* 1a. Invalid attribute provided"
       },
       {
         "lineNumber": 834,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Read tasks"
+        "content": "[none]"
       },
       {
         "lineNumber": 835,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** 1a1. Cow shows an error message."
       },
       {
         "lineNumber": 836,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "1.  User requests to list tasks"
+        "content": "+"
       },
       {
         "lineNumber": 837,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  Cow shows a list of tasks"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 838,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 839,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "\u003d\u003d\u003d Read tasks"
       },
       {
         "lineNumber": 840,
@@ -8634,147 +8634,147 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Update a task"
-      },
-      {
-        "lineNumber": 842,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 843,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "**MSS**"
-      },
-      {
-        "lineNumber": 844,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 845,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
         "content": "1.  User requests to list tasks"
       },
       {
-        "lineNumber": 846,
+        "lineNumber": 842,
         "author": {
           "gitId": "tuesmiddt"
         },
         "content": "2.  Cow shows a list of tasks"
       },
       {
-        "lineNumber": 847,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "3.  User requests to update a specific task in the list, together with"
-      },
-      {
-        "lineNumber": 848,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "the new attributes"
-      },
-      {
-        "lineNumber": 849,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "4.  Cow updates the task with the given attribute"
-      },
-      {
-        "lineNumber": 850,
+        "lineNumber": 843,
         "author": {
           "gitId": "tuesmiddt"
         },
         "content": "+"
       },
       {
-        "lineNumber": 851,
+        "lineNumber": 844,
         "author": {
           "gitId": "tuesmiddt"
         },
         "content": "Use case ends"
       },
       {
-        "lineNumber": 852,
+        "lineNumber": 845,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 846,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "\u003d\u003d\u003d Update a task"
+      },
+      {
+        "lineNumber": 847,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 848,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "**MSS**"
+      },
+      {
+        "lineNumber": 849,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 850,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "1.  User requests to list tasks"
+      },
+      {
+        "lineNumber": 851,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "2.  Cow shows a list of tasks"
+      },
+      {
+        "lineNumber": 852,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "3.  User requests to update a specific task in the list, together with"
+      },
+      {
         "lineNumber": 853,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**Extensions**"
+        "content": "the new attributes"
       },
       {
         "lineNumber": 854,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "4.  Cow updates the task with the given attribute"
       },
       {
         "lineNumber": 855,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 2a. The list if empty Use case ends"
+        "content": "+"
       },
       {
         "lineNumber": 856,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 3a. The given index is invalid."
+        "content": "Use case ends"
       },
       {
         "lineNumber": 857,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "[none]"
+        "content": ""
       },
       {
         "lineNumber": 858,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** 3a1. AddressBook shows an error message."
+        "content": "**Extensions**"
       },
       {
         "lineNumber": 859,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "+"
+        "content": "[none]"
       },
       {
         "lineNumber": 860,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case resumes at step 2"
+        "content": "* 2a. The list if empty Use case ends"
       },
       {
         "lineNumber": 861,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 3a. Invalid attribute provided"
+        "content": "* 3a. The given index is invalid."
       },
       {
         "lineNumber": 862,
@@ -8788,7 +8788,7 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** 3a1. Cow shows an error message."
+        "content": "** 3a1. AddressBook shows an error message."
       },
       {
         "lineNumber": 864,
@@ -8807,135 +8807,135 @@
       {
         "lineNumber": 866,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* 3a. Invalid attribute provided"
       },
       {
         "lineNumber": 867,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Delete a task"
+        "content": "[none]"
       },
       {
         "lineNumber": 868,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** 3a1. Cow shows an error message."
       },
       {
         "lineNumber": 869,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "+"
       },
       {
         "lineNumber": 870,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Use case resumes at step 2"
       },
       {
         "lineNumber": 871,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "1.  User requests to list tasks"
+        "content": ""
       },
       {
         "lineNumber": 872,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  Cow shows a list of tasks"
+        "content": "\u003d\u003d\u003d Delete a task"
       },
       {
         "lineNumber": 873,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "3.  User requests to delete a specific task in the list"
+        "content": ""
       },
       {
         "lineNumber": 874,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "4.  Cow deletes the task"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 875,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 876,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "1.  User requests to list tasks"
       },
       {
         "lineNumber": 877,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "2.  Cow shows a list of tasks"
       },
       {
         "lineNumber": 878,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**Extensions**"
+        "content": "3.  User requests to delete a specific task in the list"
       },
       {
         "lineNumber": 879,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "4.  Cow deletes the task"
       },
       {
         "lineNumber": 880,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "+"
       },
       {
         "lineNumber": 881,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 2a. The list is empty."
+        "content": "Use case ends"
       },
       {
         "lineNumber": 882,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 883,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "**Extensions**"
       },
       {
         "lineNumber": 884,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "* 3a. The given index is invalid."
+        "content": ""
       },
       {
         "lineNumber": 885,
@@ -8949,7 +8949,7 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** 3a1. AddressBook shows an error message."
+        "content": "* 2a. The list is empty."
       },
       {
         "lineNumber": 887,
@@ -8963,280 +8963,280 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case resumes at step 2"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 889,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* 3a. The given index is invalid."
       },
       {
         "lineNumber": 890,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Assign people to tasks"
+        "content": "[none]"
       },
       {
         "lineNumber": 891,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** 3a1. AddressBook shows an error message."
       },
       {
         "lineNumber": 892,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "+"
       },
       {
         "lineNumber": 893,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Use case resumes at step 2"
       },
       {
         "lineNumber": 894,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "1.  Create a task"
+        "content": ""
       },
       {
         "lineNumber": 895,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  Assign people to task"
+        "content": "\u003d\u003d\u003d Assign people to tasks"
       },
       {
         "lineNumber": 896,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "3.  Email people involved about the task"
+        "content": ""
       },
       {
         "lineNumber": 897,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "+"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 898,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "Use case ends"
+        "content": ""
       },
       {
         "lineNumber": 899,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "1.  Create a task"
       },
       {
         "lineNumber": 900,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**Extensions**"
+        "content": "2.  Assign people to task"
       },
       {
         "lineNumber": 901,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "3.  Email people involved about the task"
       },
       {
         "lineNumber": 902,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* 3a. Email could not be sent."
+        "content": "+"
       },
       {
         "lineNumber": 903,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 904,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "** 3a1. Cow shows an error message."
+        "content": ""
       },
       {
         "lineNumber": 905,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "+"
+        "content": "**Extensions**"
       },
       {
         "lineNumber": 906,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "[none]"
       },
       {
         "lineNumber": 907,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* 3a. Email could not be sent."
       },
       {
         "lineNumber": 908,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Remove person from all tasks"
+        "content": "[none]"
       },
       {
         "lineNumber": 909,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** 3a1. Cow shows an error message."
       },
       {
         "lineNumber": 910,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "+"
       },
       {
         "lineNumber": 911,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Use case ends"
       },
       {
         "lineNumber": 912,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "1.  Find a contact by entering `find_contact \u003ccontact_name\u003e`"
+        "content": ""
       },
       {
         "lineNumber": 913,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  View tasks assigned to the contact"
+        "content": "\u003d\u003d\u003d Remove person from all tasks"
       },
       {
         "lineNumber": 914,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "3.  Unassign contact from all tasks by entering"
+        "content": ""
       },
       {
         "lineNumber": 915,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "`unassign_contact \u003ccontact_id\u003e \u003ctask_id\u003e`"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 916,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "4.  Assign new contact to all tasks by entering"
+        "content": ""
       },
       {
         "lineNumber": 917,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "`unassign_contact \u003ccontact_id\u003e \u003ctask_id\u003e`."
+        "content": "1.  Find a contact by entering `find_contact \u003ccontact_name\u003e`"
       },
       {
         "lineNumber": 918,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "5.  Use case ends"
+        "content": "2.  View tasks assigned to the contact"
       },
       {
         "lineNumber": 919,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "3.  Unassign contact from all tasks by entering"
       },
       {
         "lineNumber": 920,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d View calendar"
+        "content": "`unassign_contact \u003ccontact_id\u003e \u003ctask_id\u003e`"
       },
       {
         "lineNumber": 921,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "4.  Assign new contact to all tasks by entering"
       },
       {
         "lineNumber": 922,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "`unassign_contact \u003ccontact_id\u003e \u003ctask_id\u003e`."
       },
       {
         "lineNumber": 923,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "5.  Use case ends"
+      },
+      {
+        "lineNumber": 924,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 924,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "1.  Enter command to open calendar"
-      },
-      {
         "lineNumber": 925,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  See calendar selected"
+        "content": "\u003d\u003d\u003d View calendar"
       },
       {
         "lineNumber": 926,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 927,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 928,
@@ -9250,126 +9250,126 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d List shared calendars"
+        "content": "1.  Enter command to open calendar"
       },
       {
         "lineNumber": 930,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "2.  See calendar selected"
       },
       {
         "lineNumber": 931,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "+"
       },
       {
         "lineNumber": 932,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "Use case ends"
       },
       {
         "lineNumber": 933,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "1.  Enter command to list calendars"
+        "content": ""
       },
       {
         "lineNumber": 934,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  See list of all calendars I have access to, including shared"
+        "content": "\u003d\u003d\u003d List shared calendars"
       },
       {
         "lineNumber": 935,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "calendars"
+        "content": ""
       },
       {
         "lineNumber": 936,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "+"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 937,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "Use case ends"
+        "content": ""
       },
       {
         "lineNumber": 938,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "1.  Enter command to list calendars"
       },
       {
         "lineNumber": 939,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d\u003d Share calendar"
+        "content": "2.  See list of all calendars I have access to, including shared"
       },
       {
         "lineNumber": 940,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "calendars"
       },
       {
         "lineNumber": 941,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**MSS**"
+        "content": "+"
       },
       {
         "lineNumber": 942,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "Use case ends"
+      },
+      {
+        "lineNumber": 943,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 943,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "1.  Share calendar with a contact"
-      },
-      {
         "lineNumber": 944,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "2.  Recipient would be able to see calendar in Calendar list"
+        "content": "\u003d\u003d\u003d Share calendar"
       },
       {
         "lineNumber": 945,
         "author": {
           "gitId": "-"
         },
-        "content": "+"
+        "content": ""
       },
       {
         "lineNumber": 946,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Use case ends"
+        "content": "**MSS**"
       },
       {
         "lineNumber": 947,
@@ -9383,535 +9383,570 @@
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "**Extensions**"
+        "content": "1.  Share calendar with a contact"
       },
       {
         "lineNumber": 949,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": "[none]"
+        "content": "2.  Recipient would be able to see calendar in Calendar list"
       },
       {
         "lineNumber": 950,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* 1a. Email could not be sent."
-      },
-      {
-        "lineNumber": 951,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "[none]"
-      },
-      {
-        "lineNumber": 952,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "** 1a1. Cow shows an error message."
-      },
-      {
-        "lineNumber": 953,
         "author": {
           "gitId": "-"
         },
         "content": "+"
       },
       {
-        "lineNumber": 954,
+        "lineNumber": 951,
         "author": {
           "gitId": "tuesmiddt"
         },
         "content": "Use case ends"
       },
       {
-        "lineNumber": 955,
+        "lineNumber": 952,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 953,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "**Extensions**"
+      },
+      {
+        "lineNumber": 954,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "[none]"
+      },
+      {
+        "lineNumber": 955,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "* 1a. Email could not be sent."
       },
       {
         "lineNumber": 956,
         "author": {
           "gitId": "-"
         },
-        "content": "[appendix]"
+        "content": "[none]"
       },
       {
         "lineNumber": 957,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d Non-Functional Requirements"
+        "content": "** 1a1. Cow shows an error message."
       },
       {
         "lineNumber": 958,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "+"
       },
       {
         "lineNumber": 959,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Disability friendly"
+        "content": "Use case ends"
       },
       {
         "lineNumber": 960,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "** colour scheme"
+        "content": ""
       },
       {
         "lineNumber": 961,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "** compatibility with screen readers"
+        "content": "[appendix]"
       },
       {
         "lineNumber": 962,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** on-screen keyboard"
+        "content": "\u003d\u003d Non-Functional Requirements"
       },
       {
         "lineNumber": 963,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Infinitely scaleable (serverless backend on AWS Lambda-equivalent)"
+        "content": ""
       },
       {
         "lineNumber": 964,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Support alternative (better, faster) forms of storage"
+        "content": "* Disability friendly"
       },
       {
         "lineNumber": 965,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Should work on any mainstream OS as long as it has Java 9 or higher"
+        "content": "** colour scheme"
       },
       {
         "lineNumber": 966,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "installed."
+        "content": "** compatibility with screen readers"
       },
       {
         "lineNumber": 967,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Advanced analytics on tasks for work efficiency insights"
+        "content": "** on-screen keyboard"
       },
       {
         "lineNumber": 968,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Remove all latexmath:[$n+1$] queries and latexmath:[$\\geq O(n)$]"
+        "content": "* Infinitely scaleable (serverless backend on AWS Lambda-equivalent)"
       },
       {
         "lineNumber": 969,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "lookups"
+        "content": "* Support alternative (better, faster) forms of storage"
       },
       {
         "lineNumber": 970,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* Should work on any mainstream OS as long as it has Java 9 or higher"
       },
       {
         "lineNumber": 971,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": "[appendix]"
+        "content": "installed."
       },
       {
         "lineNumber": 972,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d Glossary"
+        "content": "* Advanced analytics on tasks for work efficiency insights"
       },
       {
         "lineNumber": 973,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* Remove all latexmath:[$n+1$] queries and latexmath:[$\\geq O(n)$]"
       },
       {
         "lineNumber": 974,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Mainstream OS"
+        "content": "lookups"
       },
       {
         "lineNumber": 975,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "** Windows, Linux, Unix, OS-X"
+        "content": ""
       },
       {
         "lineNumber": 976,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "* Tasks"
+        "content": "[appendix]"
       },
       {
         "lineNumber": 977,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "** Text describing work to be done, may be attached to one or more"
+        "content": "\u003d\u003d Glossary"
       },
       {
         "lineNumber": 978,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "contacts"
+        "content": ""
       },
       {
         "lineNumber": 979,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Alternative storage"
+        "content": "* Mainstream OS"
       },
       {
         "lineNumber": 980,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Local/Remote databses"
+        "content": "** Windows, Linux, Unix, OS-X"
       },
       {
         "lineNumber": 981,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Contact"
+        "content": "* Tasks"
       },
       {
         "lineNumber": 982,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** Represents a person, with name, email, etc."
+        "content": "** Text describing work to be done, may be attached to one or more"
       },
       {
         "lineNumber": 983,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "contacts"
       },
       {
         "lineNumber": 984,
         "author": {
-          "gitId": "-"
+          "gitId": "tuesmiddt"
         },
-        "content": "[appendix]"
+        "content": "* Alternative storage"
       },
       {
         "lineNumber": 985,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d Product survey"
+        "content": "** Local/Remote databses"
       },
       {
         "lineNumber": 986,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* Contact"
       },
       {
         "lineNumber": 987,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* GitHub/GitLab/Bitbucket Issues"
+        "content": "** Represents a person, with name, email, etc."
       },
       {
         "lineNumber": 988,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* Bugzilla"
-      },
-      {
-        "lineNumber": 989,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* Jira"
-      },
-      {
-        "lineNumber": 990,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* Launchpad"
-      },
-      {
-        "lineNumber": 991,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* Asana"
-      },
-      {
-        "lineNumber": 992,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* Trello"
-      },
-      {
-        "lineNumber": 993,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* Pen and paper"
-      },
-      {
-        "lineNumber": 994,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* Email"
-      },
-      {
-        "lineNumber": 995,
-        "author": {
-          "gitId": "tuesmiddt"
-        },
-        "content": "* Orgmode"
-      },
-      {
-        "lineNumber": 996,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 997,
+        "lineNumber": 989,
         "author": {
           "gitId": "-"
         },
         "content": "[appendix]"
       },
       {
+        "lineNumber": 990,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "\u003d\u003d Product survey"
+      },
+      {
+        "lineNumber": 991,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 992,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "* GitHub/GitLab/Bitbucket Issues"
+      },
+      {
+        "lineNumber": 993,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "* Bugzilla"
+      },
+      {
+        "lineNumber": 994,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "* Jira"
+      },
+      {
+        "lineNumber": 995,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "* Launchpad"
+      },
+      {
+        "lineNumber": 996,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "* Asana"
+      },
+      {
+        "lineNumber": 997,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "* Trello"
+      },
+      {
         "lineNumber": 998,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "\u003d\u003d Division of the labour force"
+        "content": "* Pen and paper"
       },
       {
         "lineNumber": 999,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "* Email"
       },
       {
         "lineNumber": 1000,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Jolene: Contact transfer \u0026 Tasks Add"
+        "content": "* Orgmode"
       },
       {
         "lineNumber": 1001,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "** v1.1: Create basic task addition"
+        "content": ""
       },
       {
         "lineNumber": 1002,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "-"
         },
-        "content": "** v1.2: Change existing contacts commands to fit CowBae"
+        "content": "[appendix]"
       },
       {
         "lineNumber": 1003,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.3: Refine task format"
+        "content": "\u003d\u003d Division of the labour force"
       },
       {
         "lineNumber": 1004,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Julius: Tasks Edit Delete"
+        "content": ""
       },
       {
         "lineNumber": 1005,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.1: Delete"
+        "content": "* Jolene: Contact transfer \u0026 Tasks Add"
       },
       {
         "lineNumber": 1006,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.2: Edit"
+        "content": "** v1.1: Create basic task addition"
       },
       {
         "lineNumber": 1007,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.3: Batch delete"
+        "content": "** v1.2: Change existing contacts commands to fit CowBae"
       },
       {
         "lineNumber": 1008,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* John: Tasks List Find"
+        "content": "** v1.3: Refine task format"
       },
       {
         "lineNumber": 1009,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.1: Add task GUI \u0026 task list"
+        "content": "* Julius: Tasks Edit Delete"
       },
       {
         "lineNumber": 1010,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.2: Task Find"
+        "content": "** v1.1: Delete"
       },
       {
         "lineNumber": 1011,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.3: Pagination"
+        "content": "** v1.2: Edit"
       },
       {
         "lineNumber": 1012,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* Shaowei: Calendar Show"
+        "content": "** v1.3: Batch delete"
       },
       {
         "lineNumber": 1013,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.1: Draw a grid with date numbers"
+        "content": "* John: Tasks List Find"
       },
       {
         "lineNumber": 1014,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.2: Fill in grid with contents"
+        "content": "** v1.1: Add task GUI \u0026 task list"
       },
       {
         "lineNumber": 1015,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.3: Nice formatting"
+        "content": "** v1.2: Task Find"
       },
       {
         "lineNumber": 1016,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "* E-Liang: Assign Unassign"
+        "content": "** v1.3: Pagination"
       },
       {
         "lineNumber": 1017,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.1: Contacts Assign"
+        "content": "* Shaowei: Calendar Show"
       },
       {
         "lineNumber": 1018,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.2: Task assign"
+        "content": "** v1.1: Draw a grid with date numbers"
       },
       {
         "lineNumber": 1019,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "** v1.3: Task unassign, contacts unassign"
+        "content": "** v1.2: Fill in grid with contents"
       },
       {
         "lineNumber": 1020,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": ""
+        "content": "** v1.3: Nice formatting"
       },
       {
         "lineNumber": 1021,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "__________________________________________________________________________________"
+        "content": "* E-Liang: Assign Unassign"
       },
       {
         "lineNumber": 1022,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "Seize the means of production ! Supreme leader demands that everyone do"
+        "content": "** v1.1: Contacts Assign"
       },
       {
         "lineNumber": 1023,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "their best"
+        "content": "** v1.2: Task assign"
       },
       {
         "lineNumber": 1024,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "** v1.3: Task unassign, contacts unassign"
+      },
+      {
+        "lineNumber": 1025,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 1026,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "__________________________________________________________________________________"
+      },
+      {
+        "lineNumber": 1027,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "Seize the means of production ! Supreme leader demands that everyone do"
+      },
+      {
+        "lineNumber": 1028,
+        "author": {
+          "gitId": "tuesmiddt"
+        },
+        "content": "their best"
+      },
+      {
+        "lineNumber": 1029,
         "author": {
           "gitId": "tuesmiddt"
         },
@@ -9923,8 +9958,8 @@
       "tuesmiddt": 320,
       "taneliang": 15,
       "indocomsoft": 14,
-      "zxjtan": 8,
-      "-": 609
+      "zxjtan": 18,
+      "-": 604
     }
   },
   {
