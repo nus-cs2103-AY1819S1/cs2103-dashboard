@@ -33093,7 +33093,7 @@
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "        return otherAccount.getUserName().equals(this.username)"
+        "content": "        return otherAccount.getUserName().equalsIgnoreCase(this.username)"
       },
       {
         "lineNumber": 58,
@@ -33570,11 +33570,95 @@
         "author": {
           "gitId": "NightYeti"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "                || (other instanceof AccountList // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "                \u0026\u0026 accountList.equals(((AccountList) other).accountList));"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public int hashCode() {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        return accountList.hashCode();"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "NightYeti"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "NightYeti": 64
+      "NightYeti": 76
     }
   },
   {
@@ -54064,6 +54148,387 @@
     }
   },
   {
+    "path": "src/test/data/XmlSerializableAccountListTest/duplicateAccount_AccountList.xml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" standalone\u003d\"yes\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "\u003caccountmanager\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003caccounts\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cusername\u003erootUser\u003c/username\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cpassword\u003erootPassword\u003c/password\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003crole\u003eSUPER_USER\u003c/role\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c/accounts\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003caccounts\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cusername\u003esimun\u003c/username\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cpassword\u003e@myPassword\u003c/password\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003crole\u003eSUPER_USER\u003c/role\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c/accounts\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c!-- Duplicated account with same username --\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003caccounts\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cusername\u003esimun\u003c/username\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cpassword\u003e@myPassword\u003c/password\u003e"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003crole\u003eREAD_ONLY_USER\u003c/role\u003e"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c/accounts\u003e"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "\u003c/accountmanager\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "NightYeti": 19
+    }
+  },
+  {
+    "path": "src/test/data/XmlSerializableAccountListTest/invalidAccount_AccountList.xml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" standalone\u003d\"yes\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "\u003caccountmanager\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003caccounts\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cusername\u003erootUser\u003c/username\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cpassword\u003erootPassword\u003c/password\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003crole\u003eSUPER_USER\u003c/role\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c/accounts\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c!-- Invalid account with empty username --\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003caccounts\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cusername\u003e\u003c/username\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cpassword\u003e@myPassword\u003c/password\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003crole\u003eSUPER_USER\u003c/role\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c/accounts\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "   \u003c/accountmanager\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "NightYeti": 14
+    }
+  },
+  {
+    "path": "src/test/data/XmlSerializableAccountListTest/typicalAccount_AccountList.xml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" standalone\u003d\"yes\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "\u003caccountmanager\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003caccounts\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cusername\u003erootUser\u003c/username\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cpassword\u003erootPassword\u003c/password\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003crole\u003eSUPER_USER\u003c/role\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c/accounts\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003caccounts\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cusername\u003esimun\u003c/username\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cpassword\u003e@myPassword\u003c/password\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003crole\u003eSUPER_USER\u003c/role\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c/accounts\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003caccounts\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cusername\u003ewhiterose\u003c/username\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003cpassword\u003e@myPassword\u003c/password\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        \u003crole\u003eREAD_ONLY_USER\u003c/role\u003e"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    \u003c/accounts\u003e"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "\u003c/accountmanager\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "NightYeti": 18
+    }
+  },
+  {
     "path": "src/test/data/XmlSerializableAddressBookTest/duplicatePersonAddressBook.xml",
     "lines": [
       {
@@ -73694,6 +74159,1192 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/model/account/AccountListTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "package seedu.address.model.account;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import org.junit.Rule;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import org.junit.rules.ExpectedException;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import seedu.address.testutil.TypicalAccount;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "public class AccountListTest {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Rule"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void getList() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.ROOTACCOUNT);"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.getList().size() \u003d\u003d 1);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.SIMUN);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        List\u003cAccount\u003e list \u003d accountList.getList();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(list.size() \u003d\u003d 2);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(list.get(0).equals(TypicalAccount.ROOTACCOUNT));"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(list.get(1).equals(TypicalAccount.SIMUN));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void indexOfAccount_nullAccount_throwsNullPointerException() {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.ROOTACCOUNT);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        thrown.expect(NullPointerException.class);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.indexOfAccount(null);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void indexOfAccount_success() {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.ROOTACCOUNT);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.SIMUN);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.ROSE);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.indexOfAccount(TypicalAccount.ROOTACCOUNT) \u003d\u003d 0);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.indexOfAccount(TypicalAccount.SIMUN) \u003d\u003d 1);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.indexOfAccount(TypicalAccount.ROSE) \u003d\u003d 2);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.indexOfAccount(TypicalAccount.LUNA) \u003d\u003d -1);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void indexOfAccount_emptyAccountList() {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.indexOfAccount(TypicalAccount.ROOTACCOUNT) \u003d\u003d -1);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.indexOfAccount(TypicalAccount.SIMUN) \u003d\u003d -1);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.indexOfAccount(TypicalAccount.ROSE) \u003d\u003d -1);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void hasAccount_nullAccount_throwsNullPointerException() {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.ROOTACCOUNT);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        thrown.expect(NullPointerException.class);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.hasAccount(null);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void hasAccount_success() {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.ROOTACCOUNT);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.hasAccount(TypicalAccount.ROOTACCOUNT));"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertFalse(accountList.hasAccount(TypicalAccount.SIMUN));"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(TypicalAccount.SIMUN);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.hasAccount(TypicalAccount.SIMUN));"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void hasUserName_nullUsername_throwsNullPointerException() {"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        thrown.expect(NullPointerException.class);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.hasAccount(null);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void hasUserName() {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account \u003d new Account(\"Simun\", \"P@ssw0rd\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(account);"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.hasUserName(\"Simun\"));"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.hasUserName(\"simun\"));"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.hasUserName(\"SiMuN\"));"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertFalse(accountList.hasUserName(\"Simun \"));"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertFalse(accountList.hasUserName(\" simun\"));"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertFalse(accountList.hasUserName(\"Tham\"));"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        accountList.addAccount(new Account(\"Tham\", \"P@ssw0rd\", Role.SUPER_USER));"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(accountList.hasUserName(\"Tham\"));"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertFalse(accountList.hasUserName(\"\"));"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "NightYeti": 100
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/model/account/AccountTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "package seedu.address.model.account;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static org.junit.Assert.assertNotEquals;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "public class AccountTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account1 \u003d new Account(\"testusername\", \"testP@ssw0rD\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account2 \u003d new Account(\"testusername\", \"testP@ssw0rD\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertEquals(account1, account2);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account3 \u003d new Account(\"TESTUserNaMe\", \"testP@ssw0rD\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertEquals(account2, account3);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account differentAccount \u003d new Account(\"username\", \"testP@ssw0rD\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertNotEquals(account2, differentAccount);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account differentPassword \u003d new Account(\"testusername\", \"test123\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertNotEquals(account2, differentPassword);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account roleDoesNotMatter \u003d new Account(\"testusername\", \"testP@ssw0rD\", Role.READ_ONLY_USER);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertEquals(account2, roleDoesNotMatter);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "NightYeti": 24
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/model/account/RoleTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "package seedu.address.model.account;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import seedu.address.logic.security.AccountManager;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "public class RoleTest {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void hasWritePrivilege() {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account1 \u003d new Account(\"root\", \"p@ssw0rd\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountManager.setCurrentUserRole(account1.getRole());"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(Role.hasWritePrivilege());"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account2 \u003d new Account(\"rose\", \"p@ssw0rd\", Role.READ_ONLY_USER);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountManager.setCurrentUserRole(account2.getRole());"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertFalse(Role.hasWritePrivilege());"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void hasDeletePrivilege() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account1 \u003d new Account(\"root\", \"p@ssw0rd\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountManager.setCurrentUserRole(account1.getRole());"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(Role.hasDeletePrivilege());"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account2 \u003d new Account(\"rose\", \"p@ssw0rd\", Role.READ_ONLY_USER);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountManager.setCurrentUserRole(account2.getRole());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertFalse(Role.hasDeletePrivilege());"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void hasAccountCreationPrivilege() {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account1 \u003d new Account(\"superuser\", \"p@ssw0rd\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountManager.setCurrentUserRole(account1.getRole());"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertTrue(Role.hasAccountCreationPrivilege());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        Account account2 \u003d new Account(\"readonlyuser\", \"p@ssw0rd\", Role.READ_ONLY_USER);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountManager.setCurrentUserRole(account2.getRole());"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertFalse(Role.hasAccountCreationPrivilege());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "NightYeti": 42
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/model/client/AddressTest.java",
     "lines": [
       {
@@ -81331,6 +82982,609 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/storage/XmlSerializableAccountListTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "package seedu.address.storage;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static org.junit.Assert.assertNotEquals;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static seedu.address.testutil.TypicalAccount.ROOTACCOUNT;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static seedu.address.testutil.TypicalAccount.ROSE;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import static seedu.address.testutil.TypicalAccount.SIMUN;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import java.nio.file.Path;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import java.nio.file.Paths;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import org.junit.Rule;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import org.junit.rules.ExpectedException;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import seedu.address.commons.exceptions.IllegalValueException;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import seedu.address.commons.util.XmlUtil;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import seedu.address.model.account.Account;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import seedu.address.model.account.AccountList;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "import seedu.address.testutil.TypicalAccount;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "public class XmlSerializableAccountListTest {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    private static final Path TEST_DATA_FOLDER \u003d Paths.get(\"src\", \"test\", \"data\", \"XmlSerializableAccountListTest\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    private static final Path TYPICAL_ACCOUNT_FILE \u003d TEST_DATA_FOLDER.resolve(\"typicalAccount_AccountList.xml\");"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    private static final Path INVALID_ACCOUNT_FILE \u003d TEST_DATA_FOLDER.resolve(\"invalidAccount_AccountList.xml\");"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    private static final Path DUPLICATE_ACCOUNT_FILE \u003d TEST_DATA_FOLDER.resolve(\"duplicateAccount_AccountList.xml\");"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Rule"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void toModelType_typicalAccountFile_success() throws Exception {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        XmlSerializableAccountList dataFromFile \u003d XmlUtil.getDataFromFile(TYPICAL_ACCOUNT_FILE,"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "                XmlSerializableAccountList.class);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountListFromFile \u003d dataFromFile.toModelType();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList typicalAccountAccountList \u003d TypicalAccount.getTypicalAccountList();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertEquals(accountListFromFile, typicalAccountAccountList);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void toModelType_invalidAccountFile_throwsIllegalValueException() throws Exception {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        XmlSerializableAccountList dataFromFile \u003d XmlUtil.getDataFromFile(INVALID_ACCOUNT_FILE,"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "                XmlSerializableAccountList.class);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        thrown.expect(IllegalValueException.class);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        dataFromFile.toModelType();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void toModelType_duplicateAccounts_throwsIllegalValueException() throws Exception {"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        XmlSerializableAccountList dataFromFile \u003d XmlUtil.getDataFromFile(DUPLICATE_ACCOUNT_FILE,"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "                XmlSerializableAccountList.class);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        thrown.expect(IllegalValueException.class);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        thrown.expectMessage(XmlSerializableAccountList.MESSAGE_DUPLICATE_ACCOUNT);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        dataFromFile.toModelType();"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void equals_success() {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList1 \u003d TypicalAccount.getTypicalAccountList();"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList2 \u003d TypicalAccount.getTypicalAccountList();"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        XmlSerializableAccountList xmlSerializableAccountList1 \u003d new XmlSerializableAccountList(accountList1);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        XmlSerializableAccountList xmlSerializableAccountList2 \u003d new XmlSerializableAccountList(accountList2);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertEquals(xmlSerializableAccountList1, xmlSerializableAccountList2);"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public void notEquals_success() {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        ArrayList\u003cAccount\u003e accountArrayList1 \u003d new ArrayList\u003c\u003e(Arrays.asList(ROOTACCOUNT, SIMUN, ROSE));"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        ArrayList\u003cAccount\u003e accountArrayList2 \u003d new ArrayList\u003c\u003e(Arrays.asList(ROOTACCOUNT, SIMUN));"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList1 \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList2 \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        for (Account account : accountArrayList1) {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "            accountList1.addAccount(account);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        for (Account account : accountArrayList2) {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "            accountList2.addAccount(account);"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        XmlSerializableAccountList xmlSerializableAccountList1 \u003d new XmlSerializableAccountList(accountList1);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        XmlSerializableAccountList xmlSerializableAccountList2 \u003d new XmlSerializableAccountList(accountList2);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        assertNotEquals(xmlSerializableAccountList1, xmlSerializableAccountList2);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "NightYeti": 85
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/testutil/AddressBookBuilder.java",
     "lines": [
       {
@@ -83735,80 +85989,220 @@
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "import seedu.address.model.account.Account;"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "import seedu.address.model.account.Role;"
+        "content": "import java.util.Arrays;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": ""
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": " * A utility class containing a list of {@code Account} objects to be used in tests."
+        "content": "import seedu.address.model.account.Account;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": " */"
+        "content": "import seedu.address.model.account.AccountList;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "public class TypicalAccount {"
+        "content": "import seedu.address.model.account.Role;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "    public static final Account SIMUN \u003d new Account(\"simun\", \"@myPassword\", Role.SUPER_USER);"
+        "content": "/**"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "    public static final Account ROSE \u003d new Account(\"whiterose\", \"@myPassword\", Role.READ_ONLY_USER);"
+        "content": " * A utility class containing a list of {@code Account} objects to be used in tests."
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "    public static final Account ROOTACCOUNT \u003d new Account(\"rootUser\", \"rootPassword\", Role.SUPER_USER);"
+        "content": " */"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "NightYeti"
         },
-        "content": "    public static final Account EMPTYUSERNAME_ACCOUNT \u003d new Account(\"\", \"rootPassword\", Role.SUPER_USER);"
+        "content": "public class TypicalAccount {"
       },
       {
         "lineNumber": 14,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public static final Account SIMUN \u003d new Account(\"simun\", \"@myPassword\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public static final Account ROSE \u003d new Account(\"whiterose\", \"@myPassword\", Role.READ_ONLY_USER);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public static final Account LUNA \u003d new Account(\"alex95\", \"_MyPassword\", Role.READ_ONLY_USER);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public static final Account ROOTACCOUNT \u003d new Account(\"rootUser\", \"rootPassword\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public static final Account EMPTYUSERNAME_ACCOUNT \u003d new Account(\"\", \"rootPassword\", Role.SUPER_USER);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "     * Returns an {@code Account} with all the typical Accounts."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public static AccountList getTypicalAccountList() {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        AccountList accountList \u003d new AccountList();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        for (Account account : getTypicalAccount()) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "            accountList.addAccount(account);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        return accountList;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    public static List\u003cAccount\u003e getTypicalAccount() {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "        return new ArrayList\u003c\u003e(Arrays.asList(ROOTACCOUNT, SIMUN, ROSE));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "NightYeti"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
         "author": {
           "gitId": "NightYeti"
         },
@@ -83816,7 +86210,7 @@
       }
     ],
     "authorContributionMap": {
-      "NightYeti": 14
+      "NightYeti": 34
     }
   },
   {

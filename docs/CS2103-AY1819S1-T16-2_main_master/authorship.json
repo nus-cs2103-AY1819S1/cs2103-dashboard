@@ -32102,14 +32102,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Prefix PREFIX_GENERAL_ASSIGNMENT_ID \u003d new Prefix(\"as/\");"
+        "content": "    public static final Prefix PREFIX_GENERAL_ASSIGNMENT_TITLE \u003d new Prefix(\"as/\");"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Prefix PREFIX_ASSIGNMENT_NAME \u003d new Prefix(\"n/\");"
+        "content": "    public static final Prefix PREFIX_ASSIGNMENT_TITLE \u003d new Prefix(\"n/\");"
       },
       {
         "lineNumber": 21,
@@ -34357,1113 +34357,1113 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.superta.model.student.Address;"
+        "content": "import seedu.superta.model.assignment.Title;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.superta.model.student.Email;"
+        "content": "import seedu.superta.model.student.Address;"
       },
       {
         "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.superta.model.student.Email;"
+      },
+      {
+        "lineNumber": 16,
         "author": {
           "gitId": "triger15"
         },
         "content": "import seedu.superta.model.student.Feedback;"
       },
       {
-        "lineNumber": 16,
+        "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.student.Name;"
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.student.Phone;"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.student.StudentId;"
       },
       {
-        "lineNumber": 19,
+        "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.tag.Tag;"
       },
       {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": " * Contains utility methods used for parsing strings in the various *Parser classes."
+        "content": "/**"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Contains utility methods used for parsing strings in the various *Parser classes."
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "public class ParserUtil {"
+        "content": " */"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class ParserUtil {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String MESSAGE_INVALID_INDEX \u003d \"Index is not a non-zero unsigned integer.\";"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_INVALID_INDEX \u003d \"Index is not a non-zero unsigned integer.\";"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses {@code oneBasedIndex} into an {@code Index} and returns it. Leading and trailing whitespaces will be"
+        "content": "    /**"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "     * trimmed."
+        "content": "     * Parses {@code oneBasedIndex} into an {@code Index} and returns it. Leading and trailing whitespaces will be"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the specified index is invalid (not non-zero unsigned integer)."
+        "content": "     * trimmed."
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the specified index is invalid (not non-zero unsigned integer)."
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Index parseIndex(String oneBasedIndex) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "        String trimmedIndex \u003d oneBasedIndex.trim();"
+        "content": "    public static Index parseIndex(String oneBasedIndex) throws ParseException {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!StringUtil.isNonZeroUnsignedInteger(trimmedIndex)) {"
+        "content": "        String trimmedIndex \u003d oneBasedIndex.trim();"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(MESSAGE_INVALID_INDEX);"
+        "content": "        if (!StringUtil.isNonZeroUnsignedInteger(trimmedIndex)) {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(MESSAGE_INVALID_INDEX);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Index.fromOneBased(Integer.parseInt(trimmedIndex));"
+        "content": "        }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return Index.fromOneBased(Integer.parseInt(trimmedIndex));"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses a {@code String name} into a {@code Name}."
+        "content": "    /**"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Leading and trailing whitespaces will be trimmed."
+        "content": "     * Parses a {@code String name} into a {@code Name}."
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Leading and trailing whitespaces will be trimmed."
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the given {@code name} is invalid."
+        "content": "     *"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the given {@code name} is invalid."
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Name parseName(String name) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(name);"
+        "content": "    public static Name parseName(String name) throws ParseException {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        String trimmedName \u003d name.trim();"
+        "content": "        requireNonNull(name);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!Name.isValidName(trimmedName)) {"
+        "content": "        String trimmedName \u003d name.trim();"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(Name.MESSAGE_NAME_CONSTRAINTS);"
+        "content": "        if (!Name.isValidName(trimmedName)) {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(Name.MESSAGE_NAME_CONSTRAINTS);"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new Name(trimmedName);"
+        "content": "        }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new Name(trimmedName);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses a {@code String phone} into a {@code Phone}."
+        "content": "    /**"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Leading and trailing whitespaces will be trimmed."
+        "content": "     * Parses a {@code String phone} into a {@code Phone}."
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Leading and trailing whitespaces will be trimmed."
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the given {@code phone} is invalid."
+        "content": "     *"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the given {@code phone} is invalid."
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Phone parsePhone(String phone) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(phone);"
+        "content": "    public static Phone parsePhone(String phone) throws ParseException {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        String trimmedPhone \u003d phone.trim();"
+        "content": "        requireNonNull(phone);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!Phone.isValidPhone(trimmedPhone)) {"
+        "content": "        String trimmedPhone \u003d phone.trim();"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(Phone.MESSAGE_PHONE_CONSTRAINTS);"
+        "content": "        if (!Phone.isValidPhone(trimmedPhone)) {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(Phone.MESSAGE_PHONE_CONSTRAINTS);"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new Phone(trimmedPhone);"
+        "content": "        }"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new Phone(trimmedPhone);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses a {@code String address} into an {@code Address}."
+        "content": "    /**"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Leading and trailing whitespaces will be trimmed."
+        "content": "     * Parses a {@code String address} into an {@code Address}."
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Leading and trailing whitespaces will be trimmed."
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the given {@code address} is invalid."
+        "content": "     *"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the given {@code address} is invalid."
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Address parseAddress(String address) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(address);"
+        "content": "    public static Address parseAddress(String address) throws ParseException {"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "        String trimmedAddress \u003d address.trim();"
+        "content": "        requireNonNull(address);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!Address.isValidAddress(trimmedAddress)) {"
+        "content": "        String trimmedAddress \u003d address.trim();"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(Address.MESSAGE_ADDRESS_CONSTRAINTS);"
+        "content": "        if (!Address.isValidAddress(trimmedAddress)) {"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(Address.MESSAGE_ADDRESS_CONSTRAINTS);"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new Address(trimmedAddress);"
+        "content": "        }"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new Address(trimmedAddress);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses a {@code String email} into an {@code Email}."
+        "content": "    /**"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Leading and trailing whitespaces will be trimmed."
+        "content": "     * Parses a {@code String email} into an {@code Email}."
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Leading and trailing whitespaces will be trimmed."
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the given {@code email} is invalid."
+        "content": "     *"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the given {@code email} is invalid."
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Email parseEmail(String email) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(email);"
+        "content": "    public static Email parseEmail(String email) throws ParseException {"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "        String trimmedEmail \u003d email.trim();"
+        "content": "        requireNonNull(email);"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!Email.isValidEmail(trimmedEmail)) {"
+        "content": "        String trimmedEmail \u003d email.trim();"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(Email.MESSAGE_EMAIL_CONSTRAINTS);"
+        "content": "        if (!Email.isValidEmail(trimmedEmail)) {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(Email.MESSAGE_EMAIL_CONSTRAINTS);"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new Email(trimmedEmail);"
+        "content": "        }"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new Email(trimmedEmail);"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses a {@code String studentId} into a {@code StudentId}."
+        "content": "    /**"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Leading and trailing whitespaces will be trimmed."
+        "content": "     * Parses a {@code String studentId} into a {@code StudentId}."
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Leading and trailing whitespaces will be trimmed."
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the given {@code studentId} is invalid."
+        "content": "     *"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the given {@code studentId} is invalid."
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static StudentId parseStudentId(String studentId) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(studentId);"
+        "content": "    public static StudentId parseStudentId(String studentId) throws ParseException {"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "        String trimmedStudentId \u003d studentId.trim();"
+        "content": "        requireNonNull(studentId);"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!StudentId.isValidStudentId(studentId)) {"
+        "content": "        String trimmedStudentId \u003d studentId.trim();"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(StudentId.MESSAGE_STUDENT_ID_CONSTRAINTS);"
+        "content": "        if (!StudentId.isValidStudentId(studentId)) {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(StudentId.MESSAGE_STUDENT_ID_CONSTRAINTS);"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new StudentId(trimmedStudentId);"
+        "content": "        }"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new StudentId(trimmedStudentId);"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static String parseTutorialGroupName(String tgName) {"
+        "content": ""
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "        return tgName.trim();"
+        "content": "    public static String parseTutorialGroupName(String tgName) {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return tgName.trim();"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static String parseTutorialGroupId(String tgId) {"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "        return tgId.trim();"
+        "content": "    public static String parseTutorialGroupId(String tgId) {"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return tgId.trim();"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Double parseDouble(String str) {"
+        "content": ""
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Double.parseDouble(str.trim());"
+        "content": "    /**"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     * Parses a {@code Title title} into a {@code Title}."
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * Leading and trailing whitespaces will be trimmed."
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "triger15"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 129,
-        "author": {
-          "gitId": "triger15"
-        },
-        "content": "     * Parses a {@code String feedback} into a {@code Feedback}."
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "triger15"
-        },
-        "content": "     * Leading and trailing whitespaces will be trimmed."
-      },
-      {
-        "lineNumber": 131,
-        "author": {
-          "gitId": "triger15"
+          "gitId": "-"
         },
         "content": "     *"
       },
       {
-        "lineNumber": 132,
+        "lineNumber": 129,
         "author": {
-          "gitId": "triger15"
+          "gitId": "-"
         },
-        "content": "     * @throws ParseException if the given {@code feedback} is invalid."
+        "content": "     * @throws ParseException if the given {@code title} is invalid."
       },
       {
-        "lineNumber": 133,
+        "lineNumber": 130,
         "author": {
-          "gitId": "triger15"
+          "gitId": "-"
         },
         "content": "     */"
       },
       {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static Title parseTitle(String assignmentTitle) throws ParseException {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(assignmentTitle);"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String trimmedTitle \u003d assignmentTitle.trim();"
+      },
+      {
         "lineNumber": 134,
         "author": {
-          "gitId": "triger15"
+          "gitId": "-"
         },
-        "content": "    public static Feedback parseFeedback(String feedback) {"
+        "content": "        if (!Title.isValidTitle(assignmentTitle)) {"
       },
       {
         "lineNumber": 135,
         "author": {
-          "gitId": "triger15"
+          "gitId": "-"
         },
-        "content": "        requireNonNull(feedback);"
+        "content": "            throw new ParseException(Title.MESSAGE_TITLE_CONSTRAINTS);"
       },
       {
         "lineNumber": 136,
         "author": {
-          "gitId": "triger15"
+          "gitId": "-"
         },
-        "content": "        return new Feedback(feedback.trim());"
+        "content": "        }"
       },
       {
         "lineNumber": 137,
         "author": {
-          "gitId": "triger15"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new Title(trimmedTitle);"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "triger15"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static String parseString(String str) {"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "        return str.trim();"
+        "content": "    public static Double parseDouble(String str) {"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return Double.parseDouble(str.trim());"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 144,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "     * Parses a {@code String tag} into a {@code Tag}."
+        "content": "    /**"
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "     * Leading and trailing whitespaces will be trimmed."
+        "content": "     * Parses a {@code String feedback} into a {@code Feedback}."
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "     *"
+        "content": "     * Leading and trailing whitespaces will be trimmed."
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "     * @throws ParseException if the given {@code tag} is invalid."
+        "content": "     *"
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the given {@code feedback} is invalid."
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "    public static Tag parseTag(String tag) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "        requireNonNull(tag);"
+        "content": "    public static Feedback parseFeedback(String feedback) {"
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "        String trimmedTag \u003d tag.trim();"
+        "content": "        requireNonNull(feedback);"
       },
       {
         "lineNumber": 152,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "        if (!Tag.isValidTagName(trimmedTag)) {"
+        "content": "        return new Feedback(feedback.trim());"
       },
       {
         "lineNumber": 153,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "            throw new ParseException(Tag.MESSAGE_TAG_CONSTRAINTS);"
+        "content": "    }"
       },
       {
         "lineNumber": 154,
         "author": {
-          "gitId": "-"
+          "gitId": "triger15"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new Tag(trimmedTag);"
+        "content": "    public static String parseString(String str) {"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return str.trim();"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses {@code Collection\u003cString\u003e tags} into a {@code Set\u003cTag\u003e}."
+        "content": "    /**"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Parses a {@code String tag} into a {@code Tag}."
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Set\u003cTag\u003e parseTags(Collection\u003cString\u003e tags) throws ParseException {"
+        "content": "     * Leading and trailing whitespaces will be trimmed."
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(tags);"
+        "content": "     *"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "        final Set\u003cTag\u003e tagSet \u003d new HashSet\u003c\u003e();"
+        "content": "     * @throws ParseException if the given {@code tag} is invalid."
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (String tagName : tags) {"
+        "content": "     */"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "            tagSet.add(parseTag(tagName));"
+        "content": "    public static Tag parseTag(String tag) throws ParseException {"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        requireNonNull(tag);"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "        return tagSet;"
+        "content": "        String trimmedTag \u003d tag.trim();"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        if (!Tag.isValidTagName(trimmedTag)) {"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            throw new ParseException(Tag.MESSAGE_TAG_CONSTRAINTS);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
+        "content": "        }"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
+        "content": "        return new Tag(trimmedTag);"
       },
       {
         "lineNumber": 172,
@@ -35477,12 +35477,124 @@
         "author": {
           "gitId": "-"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Parses {@code Collection\u003cString\u003e tags} into a {@code Set\u003cTag\u003e}."
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static Set\u003cTag\u003e parseTags(Collection\u003cString\u003e tags) throws ParseException {"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(tags);"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final Set\u003cTag\u003e tagSet \u003d new HashSet\u003c\u003e();"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (String tagName : tags) {"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            tagSet.add(parseTag(tagName));"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return tagSet;"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
       "triger15": 12,
-      "-": 161
+      "-": 177
     }
   },
   {
@@ -42363,547 +42475,6 @@
     }
   },
   {
-    "path": "src/main/java/seedu/superta/model/assignment/AssignmentList.java",
-    "lines": [
-      {
-        "lineNumber": 1,
-        "author": {
-          "gitId": "wenshei"
-        },
-        "content": "package seedu.superta.model.assignment;"
-      },
-      {
-        "lineNumber": 2,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 3,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import static java.util.Objects.requireNonNull;"
-      },
-      {
-        "lineNumber": 4,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 5,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import java.util.Iterator;"
-      },
-      {
-        "lineNumber": 6,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import java.util.List;"
-      },
-      {
-        "lineNumber": 7,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import java.util.stream.Collectors;"
-      },
-      {
-        "lineNumber": 8,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import javafx.collections.FXCollections;"
-      },
-      {
-        "lineNumber": 10,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import javafx.collections.ObservableList;"
-      },
-      {
-        "lineNumber": 11,
-        "author": {
-          "gitId": "wenshei"
-        },
-        "content": "import seedu.superta.model.assignment.exceptions.AssignmentNotFoundException;"
-      },
-      {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "/**"
-      },
-      {
-        "lineNumber": 14,
-        "author": {
-          "gitId": "-"
-        },
-        "content": " * Class for storing the assignments in a list."
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "-"
-        },
-        "content": " */"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "public class AssignmentList implements Iterable\u003cAssignment\u003e {"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private final ObservableList\u003cAssignment\u003e internalList \u003d FXCollections.observableArrayList();"
-      },
-      {
-        "lineNumber": 18,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public AssignmentList(List\u003cAssignment\u003e source) {"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        internalList.addAll(source);"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public AssignmentList() { }"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Method to add an assignment to the list."
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * @param toAdd the assignment to add"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public void add(Assignment toAdd) {"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        requireNonNull(toAdd);"
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        internalList.add(toAdd);"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Method to remove an assignment from the list."
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * @param toRemove the assignment to remove"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public void remove(Assignment toRemove) {"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        requireNonNull(toRemove);"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        if (!internalList.remove(toRemove)) {"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            throw new AssignmentNotFoundException();"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Method to clone this instance."
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * @return a cloned instance"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public AssignmentList clone() {"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        AssignmentList other \u003d new AssignmentList();"
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        other.internalList.addAll(internalList.stream()"
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            .map(Assignment::new)"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            .collect(Collectors.toList()));"
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return other;"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     * Returns the backing list as an unmodifiable {@code ObservableList}."
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public ObservableList\u003cAssignment\u003e asUnmodifiableObservableList() {"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return FXCollections.unmodifiableObservableList(internalList);"
-      },
-      {
-        "lineNumber": 62,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 63,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 64,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 65,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 66,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public Iterator\u003cAssignment\u003e iterator() {"
-      },
-      {
-        "lineNumber": 67,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return internalList.iterator();"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 70,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 71,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return internalList.stream()"
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            .map(Assignment::toString)"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            .collect(Collectors.joining(\"\\n\"));"
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 76,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      }
-    ],
-    "authorContributionMap": {
-      "wenshei": 2,
-      "-": 74
-    }
-  },
-  {
     "path": "src/main/java/seedu/superta/model/assignment/exceptions/AssignmentNotFoundException.java",
     "lines": [
       {
@@ -49049,656 +48620,663 @@
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "import seedu.superta.model.assignment.AssignmentList;"
+        "content": "import seedu.superta.model.assignment.Title;"
       },
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "import seedu.superta.model.student.Student;"
+        "content": "import seedu.superta.model.assignment.UniqueAssignmentList;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "import seedu.superta.model.student.UniqueStudentList;"
+        "content": "import seedu.superta.model.student.Student;"
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": ""
+        "content": "import seedu.superta.model.student.UniqueStudentList;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": " * Model for Tutorial Group."
+        "content": "/**"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Model for Tutorial Group."
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "public class TutorialGroup {"
+        "content": " */"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final String id;"
+        "content": "public class TutorialGroup {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final String name;"
+        "content": "    private final String id;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final UniqueStudentList students;"
+        "content": "    private final String name;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final AssignmentList assignments;"
+        "content": "    private final UniqueStudentList students;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private final UniqueAssignmentList assignments;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "    public TutorialGroup(String id, String name) {"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(id);"
+        "content": "    public TutorialGroup(String id, String name) {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.id \u003d id;"
+        "content": "        requireNonNull(id);"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.name \u003d name;"
+        "content": "        this.id \u003d id;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.students \u003d new UniqueStudentList();"
+        "content": "        this.name \u003d name;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.assignments \u003d new AssignmentList();"
+        "content": "        this.students \u003d new UniqueStudentList();"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.assignments \u003d new UniqueAssignmentList();"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "    public TutorialGroup(TutorialGroup toClone) {"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.id \u003d toClone.id;"
+        "content": "    public TutorialGroup(TutorialGroup toClone) {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.name \u003d toClone.name;"
+        "content": "        this.id \u003d toClone.id;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.students \u003d toClone.students.clone();"
+        "content": "        this.name \u003d toClone.name;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.assignments \u003d toClone.assignments.clone();"
+        "content": "        this.students \u003d toClone.students.clone();"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.assignments \u003d toClone.assignments.clone();"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    public TutorialGroup(String id, String name,"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "                         UniqueStudentList students,"
+        "content": "    public TutorialGroup(String id, String name,"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "                         AssignmentList assignments) {"
+        "content": "                         UniqueStudentList students,"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.id \u003d id;"
+        "content": "                         UniqueAssignmentList assignments) {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.name \u003d name;"
+        "content": "        this.id \u003d id;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.students \u003d students;"
+        "content": "        this.name \u003d name;"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.assignments \u003d assignments;"
+        "content": "        this.students \u003d students;"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.assignments \u003d assignments;"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addStudent(Student student) {"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        students.add(student);"
+        "content": "    public void addStudent(Student student) {"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        students.add(student);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void removeStudent(Student student) {"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "        students.remove(student);"
+        "content": "    public void removeStudent(Student student) {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        students.remove(student);"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addAssignment(Assignment assignment) {"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "        assignments.add(assignment);"
+        "content": "    public void addAssignment(Assignment assignment) {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assignments.add(assignment);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void removeAssignment(Assignment assignment) {"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        assignments.remove(assignment);"
+        "content": "    public void removeAssignment(Assignment assignment) {"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assignments.remove(assignment);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String getName() {"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "        return name;"
+        "content": "    public String getName() {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return name;"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String getId() {"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "        return id;"
+        "content": "    public String getId() {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return id;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    public UniqueStudentList getStudents() {"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "        return students;"
+        "content": "    public UniqueStudentList getStudents() {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return students;"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "    public AssignmentList getAssignments() {"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "        return assignments;"
+        "content": "    public UniqueAssignmentList getAssignments() {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return assignments;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Optional\u003cAssignment\u003e getAssignment(String name) {"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "        return assignments.asUnmodifiableObservableList()"
+        "content": "    public Optional\u003cAssignment\u003e getAssignment(Title title) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "            .stream()"
+        "content": "        return assignments.asUnmodifiableObservableList()"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "            .filter(as -\u003e as.getName().equals(name))"
+        "content": "            .stream()"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "            .findFirst();"
+        "content": "            .filter(as -\u003e as.getTitle().equals(title))"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            .findFirst();"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "        return id.equals(((TutorialGroup) other).id);"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return id.equals(((TutorialGroup) other).id);"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String toString() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "        return \"[Tutorial Group] ID: \" + id + \", Name: \" + name + \"\\n\""
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "            + \"Students: \""
+        "content": "        return \"[Tutorial Group] ID: \" + id + \", Name: \" + name + \"\\n\""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "            + students.asUnmodifiableObservableList()"
+        "content": "            + \"Students: \""
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "                .stream()"
+        "content": "            + students.asUnmodifiableObservableList()"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "                .map(st -\u003e st.getStudentId().toString())"
+        "content": "                .stream()"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "                .collect(Collectors.joining(\", \"))"
+        "content": "                .map(st -\u003e st.getStudentId().toString())"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "            + \"\\n\""
+        "content": "                .collect(Collectors.joining(\", \"))"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "            + \"Assignments: \\n\""
+        "content": "            + \"\\n\""
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "            + assignments;"
+        "content": "            + \"Assignments: \\n\""
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            + assignments;"
       },
       {
         "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
@@ -49706,8 +49284,8 @@
       }
     ],
     "authorContributionMap": {
-      "wenshei": 5,
-      "-": 97
+      "wenshei": 4,
+      "-": 99
     }
   },
   {
@@ -56145,9 +55723,9 @@
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "import seedu.superta.model.assignment.AssignmentList;"
+        "content": "import seedu.superta.model.assignment.UniqueAssignmentList;"
       },
       {
         "lineNumber": 13,
@@ -56546,7 +56124,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        AssignmentList assignmentList \u003d new AssignmentList(modelAssignments);"
+        "content": "        UniqueAssignmentList uniqueAssignmentList \u003d new UniqueAssignmentList(modelAssignments);"
       },
       {
         "lineNumber": 70,
@@ -56616,7 +56194,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        return new TutorialGroup(id, name, studentList, assignmentList);"
+        "content": "        return new TutorialGroup(id, name, studentList, uniqueAssignmentList);"
       },
       {
         "lineNumber": 80,
@@ -56641,8 +56219,8 @@
       }
     ],
     "authorContributionMap": {
-      "wenshei": 12,
-      "-": 70
+      "wenshei": 11,
+      "-": 71
     }
   },
   {
@@ -99520,1396 +99098,1403 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.superta.model.student.Feedback;"
+        "content": "import seedu.superta.model.assignment.Title;"
       },
       {
         "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.superta.model.student.Feedback;"
+      },
+      {
+        "lineNumber": 20,
         "author": {
           "gitId": "wenshei"
         },
         "content": "import seedu.superta.model.student.NameContainsKeywordsPredicate;"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.student.Student;"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.student.exceptions.StudentNotFoundException;"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.tutorialgroup.TutorialGroup;"
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.tutorialgroup.exceptions.TutorialGroupNotFoundException;"
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 25,
         "author": {
           "gitId": "wenshei"
         },
         "content": "import seedu.superta.testutil.SuperTaClientBuilder;"
       },
       {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "public class ModelManagerTest {"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Rule"
+        "content": "public class ModelManagerTest {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+        "content": "    @Rule"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "    private ModelManager modelManager \u003d new ModelManager();"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private ModelManager modelManager \u003d new ModelManager();"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasPerson_nullPerson_throwsNullPointerException() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(NullPointerException.class);"
+        "content": "    public void hasPerson_nullPerson_throwsNullPointerException() {"
       },
       {
         "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(NullPointerException.class);"
+      },
+      {
+        "lineNumber": 36,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        modelManager.hasStudent(null);"
       },
       {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasPerson_personNotInAddressBook_returnsFalse() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void hasPerson_personNotInAddressBook_returnsFalse() {"
+      },
+      {
+        "lineNumber": 41,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        assertFalse(modelManager.hasStudent(ALICE));"
       },
       {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasPerson_personInAddressBook_returnsTrue() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        modelManager.addStudent(ALICE);"
+        "content": "    public void hasPerson_personInAddressBook_returnsTrue() {"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        assertTrue(modelManager.hasStudent(ALICE));"
+        "content": "        modelManager.addStudent(ALICE);"
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": "    }"
+        "content": "        assertTrue(modelManager.hasStudent(ALICE));"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void getFilteredPersonList_modifyList_throwsUnsupportedOperationException() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(UnsupportedOperationException.class);"
+        "content": "    public void getFilteredPersonList_modifyList_throwsUnsupportedOperationException() {"
       },
       {
         "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(UnsupportedOperationException.class);"
+      },
+      {
+        "lineNumber": 53,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        modelManager.getFilteredStudentList().remove(0);"
       },
       {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addStudentToTutorialGroup_tutorialGroupNotFound_failure() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(TutorialGroupNotFoundException.class);"
+        "content": "    public void addStudentToTutorialGroup_tutorialGroupNotFound_failure() {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addStudent(ALICE);"
+        "content": "        thrown.expect(TutorialGroupNotFoundException.class);"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addStudentToTutorialGroup(getModelTutorialGroup().getId(), ALICE.getStudentId());"
+        "content": "        modelManager.addStudent(ALICE);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        modelManager.addStudentToTutorialGroup(getModelTutorialGroup().getId(), ALICE.getStudentId());"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addStudentToTutorialGroup_studentNotFound_failure() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(StudentNotFoundException.class);"
+        "content": "    public void addStudentToTutorialGroup_studentNotFound_failure() {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "        thrown.expect(StudentNotFoundException.class);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addTutorialGroup(tg);"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addStudentToTutorialGroup(tg.getId(), ALICE.getStudentId());"
+        "content": "        modelManager.addTutorialGroup(tg);"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        modelManager.addStudentToTutorialGroup(tg.getId(), ALICE.getStudentId());"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addStudentToTutorialGroup_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void addStudentToTutorialGroup_success() {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addTutorialGroup(tg);"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addStudent(ALICE);"
+        "content": "        modelManager.addTutorialGroup(tg);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addStudentToTutorialGroup(tg.getId(), ALICE.getStudentId());"
+        "content": "        modelManager.addStudent(ALICE);"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        modelManager.addStudentToTutorialGroup(tg.getId(), ALICE.getStudentId());"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void deleteTutorialGroup_tutorialGroupNotFound_failure() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void deleteTutorialGroup_tutorialGroupNotFound_failure() {"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(TutorialGroupNotFoundException.class);"
+        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.deleteTutorialGroup(tg);"
+        "content": "        thrown.expect(TutorialGroupNotFoundException.class);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        modelManager.deleteTutorialGroup(tg);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void deleteTutorialGroup_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void deleteTutorialGroup_success() {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addTutorialGroup(tg);"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(modelManager.hasTutorialGroup(tg.getId()));"
+        "content": "        modelManager.addTutorialGroup(tg);"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.deleteTutorialGroup(tg);"
+        "content": "        assertTrue(modelManager.hasTutorialGroup(tg.getId()));"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
+        "content": "        modelManager.deleteTutorialGroup(tg);"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addAssignment_tutorialGroupNotFound_failure() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void addAssignment_tutorialGroupNotFound_failure() {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assignment assignment \u003d getModelAssignment();"
+        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(TutorialGroupNotFoundException.class);"
+        "content": "        Assignment assignment \u003d getModelAssignment();"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addAssignment(tg.getId(), assignment);"
+        "content": "        thrown.expect(TutorialGroupNotFoundException.class);"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        modelManager.addAssignment(tg.getId(), assignment);"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addAssignment_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void addAssignment_success() {"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(!modelManager.hasTutorialGroup(tg.getId()));"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertTrue(!modelManager.hasTutorialGroup(tg.getId()));"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addTutorialGroup(tg);"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assignment assignment \u003d getModelAssignment();"
+        "content": "        modelManager.addTutorialGroup(tg);"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addAssignment(tg.getId(), assignment);"
+        "content": "        Assignment assignment \u003d getModelAssignment();"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(modelManager.getTutorialGroup(tg.getId()).get().getAssignment(assignment.getName()).isPresent());"
+        "content": "        modelManager.addAssignment(tg.getId(), assignment);"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(modelManager.getTutorialGroup(tg.getId()).get().getAssignment(assignment.getTitle()).isPresent());"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void grade_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void grade_success() {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assignment assignment \u003d getModelAssignment();"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "        Student student \u003d ALICE;"
+        "content": "        Assignment assignment \u003d getModelAssignment();"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addStudent(student);"
+        "content": "        Student student \u003d ALICE;"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addTutorialGroup(tg);"
+        "content": "        modelManager.addStudent(student);"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addStudentToTutorialGroup(tg.getId(), student.getStudentId());"
+        "content": "        modelManager.addTutorialGroup(tg);"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addAssignment(tg.getId(), assignment);"
+        "content": "        modelManager.addStudentToTutorialGroup(tg.getId(), student.getStudentId());"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        modelManager.addAssignment(tg.getId(), assignment);"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "        double marks \u003d 35.5;"
+        "content": ""
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        double marks \u003d 35.5;"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "        Grade grade \u003d new Grade(tg.getId(), assignment.getName(), student.getStudentId(), marks);"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.grade(grade);"
+        "content": "        Grade grade \u003d new Grade(tg.getId(), assignment.getTitle(), student.getStudentId(), marks);"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(modelManager.getTutorialGroup(tg.getId()).get().getAssignment(assignment.getName()).get()"
+        "content": "        modelManager.grade(grade);"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "                       .getGradebook().getGradeFor(student.getStudentId()).equals(marks));"
+        "content": "        assertTrue(modelManager.getTutorialGroup(tg.getId()).get().getAssignment(assignment.getTitle()).get()"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                       .getGradebook().getGradeFor(student.getStudentId()).equals(marks));"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addFeedback_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "        Feedback feedback \u003d new Feedback(\"Have a nice day\");"
+        "content": "    public void addFeedback_success() {"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addStudent(ALICE);"
+        "content": "        Feedback feedback \u003d new Feedback(\"Have a nice day\");"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addFeedback(feedback, ALICE.getStudentId());"
+        "content": "        modelManager.addStudent(ALICE);"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "        // TODO: Add getting feedback / student method."
+        "content": "        modelManager.addFeedback(feedback, ALICE.getStudentId());"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        // TODO: Add getting feedback / student method."
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasTutorialGroup_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void hasTutorialGroup_success() {"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addTutorialGroup(tg);"
+        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(modelManager.hasTutorialGroup(tg.getId()));"
+        "content": "        modelManager.addTutorialGroup(tg);"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(modelManager.hasTutorialGroup(tg.getId()));"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void getTutorialGroup_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void getTutorialGroup_success() {"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addTutorialGroup(tg);"
+        "content": "        assertFalse(modelManager.hasTutorialGroup(tg.getId()));"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(modelManager.getTutorialGroup(tg.getId()).get().equals(tg));"
+        "content": "        modelManager.addTutorialGroup(tg);"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(modelManager.getTutorialGroup(tg.getId()).get().equals(tg));"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void getTutorialGroup_tutorialGroupNotFound_failure() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.hasTutorialGroup(getModelTutorialGroup().getId()));"
+        "content": "    public void getTutorialGroup_tutorialGroupNotFound_failure() {"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.getTutorialGroup(getModelTutorialGroup().getId()).isPresent());"
+        "content": "        assertFalse(modelManager.hasTutorialGroup(getModelTutorialGroup().getId()));"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertFalse(modelManager.getTutorialGroup(getModelTutorialGroup().getId()).isPresent());"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void updateTutorialGroup_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
+        "content": "    public void updateTutorialGroup_success() {"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.addTutorialGroup(tg);"
+        "content": "        TutorialGroup tg \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "        String updatedName \u003d \"updated_name\";"
+        "content": "        modelManager.addTutorialGroup(tg);"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup clone \u003d new TutorialGroup(tg.getId(), updatedName);"
+        "content": "        String updatedName \u003d \"updated_name\";"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "        modelManager.updateTutorialGroup(clone);"
+        "content": "        TutorialGroup clone \u003d new TutorialGroup(tg.getId(), updatedName);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(modelManager.getTutorialGroup(tg.getId()).get().getName().equals(updatedName));"
+        "content": "        modelManager.updateTutorialGroup(clone);"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(modelManager.getTutorialGroup(tg.getId()).get().getName().equals(updatedName));"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void equals() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 175,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        SuperTaClient superTaClient \u003d new SuperTaClientBuilder().withPerson(ALICE).withPerson(BENSON).build();"
+        "content": "    public void equals() {"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        SuperTaClient differentSuperTaClient \u003d new SuperTaClient();"
+        "content": "        SuperTaClient superTaClient \u003d new SuperTaClientBuilder().withPerson(ALICE).withPerson(BENSON).build();"
       },
       {
         "lineNumber": 177,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": "        UserPrefs userPrefs \u003d new UserPrefs();"
+        "content": "        SuperTaClient differentSuperTaClient \u003d new SuperTaClient();"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        UserPrefs userPrefs \u003d new UserPrefs();"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "        // same values -\u003e returns true"
+        "content": ""
       },
       {
         "lineNumber": 180,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        modelManager \u003d new ModelManager(superTaClient, userPrefs);"
+        "content": "        // same values -\u003e returns true"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        ModelManager modelManagerCopy \u003d new ModelManager(superTaClient, userPrefs);"
+        "content": "        modelManager \u003d new ModelManager(superTaClient, userPrefs);"
       },
       {
         "lineNumber": 182,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": "        assertTrue(modelManager.equals(modelManagerCopy));"
+        "content": "        ModelManager modelManagerCopy \u003d new ModelManager(superTaClient, userPrefs);"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertTrue(modelManager.equals(modelManagerCopy));"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "        // same object -\u003e returns true"
+        "content": ""
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(modelManager.equals(modelManager));"
+        "content": "        // same object -\u003e returns true"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertTrue(modelManager.equals(modelManager));"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "        // null -\u003e returns false"
+        "content": ""
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.equals(null));"
+        "content": "        // null -\u003e returns false"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertFalse(modelManager.equals(null));"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "        // different types -\u003e returns false"
+        "content": ""
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(modelManager.equals(5));"
+        "content": "        // different types -\u003e returns false"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertFalse(modelManager.equals(5));"
       },
       {
         "lineNumber": 193,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        // different superTAClient -\u003e returns false"
+        "content": ""
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        assertFalse(modelManager.equals(new ModelManager(differentSuperTaClient, userPrefs)));"
+        "content": "        // different superTAClient -\u003e returns false"
       },
       {
         "lineNumber": 195,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": ""
+        "content": "        assertFalse(modelManager.equals(new ModelManager(differentSuperTaClient, userPrefs)));"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "        // different filteredList -\u003e returns false"
+        "content": ""
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "        String[] keywords \u003d ALICE.getName().fullName.split(\"\\\\s+\");"
+        "content": "        // different filteredList -\u003e returns false"
       },
       {
         "lineNumber": 198,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        modelManager.updateFilteredStudentList(new NameContainsKeywordsPredicate(Arrays.asList(keywords)));"
+        "content": "        String[] keywords \u003d ALICE.getName().fullName.split(\"\\\\s+\");"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        assertFalse(modelManager.equals(new ModelManager(superTaClient, userPrefs)));"
+        "content": "        modelManager.updateFilteredStudentList(new NameContainsKeywordsPredicate(Arrays.asList(keywords)));"
       },
       {
         "lineNumber": 200,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": ""
+        "content": "        assertFalse(modelManager.equals(new ModelManager(superTaClient, userPrefs)));"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "        // resets modelManager to initial state for upcoming tests"
+        "content": ""
       },
       {
         "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // resets modelManager to initial state for upcoming tests"
+      },
+      {
+        "lineNumber": 203,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        modelManager.updateFilteredStudentList(PREDICATE_SHOW_ALL_PERSONS);"
       },
       {
-        "lineNumber": 203,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "        // different userPrefs -\u003e returns true"
+        "content": ""
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "        UserPrefs differentUserPrefs \u003d new UserPrefs();"
+        "content": "        // different userPrefs -\u003e returns true"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "        differentUserPrefs.setAddressBookFilePath(Paths.get(\"differentFilePath\"));"
+        "content": "        UserPrefs differentUserPrefs \u003d new UserPrefs();"
       },
       {
         "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        differentUserPrefs.setAddressBookFilePath(Paths.get(\"differentFilePath\"));"
+      },
+      {
+        "lineNumber": 208,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        assertTrue(modelManager.equals(new ModelManager(superTaClient, differentUserPrefs)));"
       },
       {
-        "lineNumber": 208,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "    private TutorialGroup getModelTutorialGroup() {"
+        "content": ""
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new TutorialGroup(\"testing_id\", \"testing_name\");"
+        "content": "    private TutorialGroup getModelTutorialGroup() {"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new TutorialGroup(\"testing_id\", \"testing_name\");"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "    private Assignment getModelAssignment() {"
+        "content": ""
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new Assignment(\"test_assignment\", 40.0);"
+        "content": "    private Assignment getModelAssignment() {"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new Assignment(new Title(\"test assignment\"), 40.0);"
       },
       {
         "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
@@ -100918,7 +100503,7 @@
     ],
     "authorContributionMap": {
       "wenshei": 21,
-      "-": 196
+      "-": 197
     }
   },
   {
@@ -101097,1606 +100682,1627 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.superta.model.assignment.exceptions.AssignmentNotFoundException;"
+        "content": "import seedu.superta.model.assignment.Title;"
       },
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "import seedu.superta.model.student.Student;"
+        "content": "import seedu.superta.model.assignment.exceptions.AssignmentNotFoundException;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "import seedu.superta.model.student.exceptions.DuplicateStudentException;"
+        "content": "import seedu.superta.model.student.Student;"
       },
       {
         "lineNumber": 28,
+        "author": {
+          "gitId": "wenshei"
+        },
+        "content": "import seedu.superta.model.student.exceptions.DuplicateStudentException;"
+      },
+      {
+        "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.student.exceptions.StudentNotFoundException;"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 30,
         "author": {
           "gitId": "wenshei"
         },
         "content": "import seedu.superta.model.tutorialgroup.TutorialGroup;"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.superta.model.tutorialgroup.exceptions.TutorialGroupNotFoundException;"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 32,
         "author": {
           "gitId": "wenshei"
         },
         "content": "import seedu.superta.testutil.StudentBuilder;"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 34,
         "author": {
           "gitId": "wenshei"
         },
         "content": "public class SuperTaClientTest {"
       },
       {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Rule"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+        "content": "    @Rule"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
       },
       {
         "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
         "author": {
           "gitId": "wenshei"
         },
         "content": "    private final SuperTaClient superTaClient \u003d new SuperTaClient();"
       },
       {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void constructor() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void constructor() {"
+      },
+      {
+        "lineNumber": 43,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        assertEquals(Collections.emptyList(), superTaClient.getStudentList());"
       },
       {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void resetData_null_throwsNullPointerException() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(NullPointerException.class);"
+        "content": "    public void resetData_null_throwsNullPointerException() {"
       },
       {
         "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(NullPointerException.class);"
+      },
+      {
+        "lineNumber": 49,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        superTaClient.resetData(null);"
       },
       {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void resetData_withValidReadOnlyAddressBook_replacesData() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        SuperTaClient newData \u003d getTypicalSuperTaClient();"
+        "content": "    public void resetData_withValidReadOnlyAddressBook_replacesData() {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        superTaClient.resetData(newData);"
+        "content": "        SuperTaClient newData \u003d getTypicalSuperTaClient();"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        assertEquals(newData, superTaClient);"
+        "content": "        superTaClient.resetData(newData);"
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": "    }"
+        "content": "        assertEquals(newData, superTaClient);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void resetData_withDuplicatePersons_throwsDuplicatePersonException() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Two students with the same identity fields"
+        "content": "    public void resetData_withDuplicatePersons_throwsDuplicatePersonException() {"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        Student editedAlice \u003d new StudentBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)"
+        "content": "        // Two students with the same identity fields"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": "                .build();"
+        "content": "        Student editedAlice \u003d new StudentBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cStudent\u003e newStudents \u003d Arrays.asList(ALICE, editedAlice);"
+        "content": "                .build();"
       },
       {
         "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cStudent\u003e newStudents \u003d Arrays.asList(ALICE, editedAlice);"
+      },
+      {
+        "lineNumber": 65,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        SuperTaClientStub newData \u003d new SuperTaClientStub(newStudents);"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 66,
-        "author": {
-          "gitId": "wenshei"
-        },
-        "content": "        thrown.expect(DuplicateStudentException.class);"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        superTaClient.resetData(newData);"
+        "content": "        thrown.expect(DuplicateStudentException.class);"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": "    }"
+        "content": "        superTaClient.resetData(newData);"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasPerson_nullPerson_throwsNullPointerException() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(NullPointerException.class);"
+        "content": "    public void hasPerson_nullPerson_throwsNullPointerException() {"
       },
       {
         "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(NullPointerException.class);"
+      },
+      {
+        "lineNumber": 74,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        superTaClient.hasStudent(null);"
       },
       {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasPerson_personNotInAddressBook_returnsFalse() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void hasPerson_personNotInAddressBook_returnsFalse() {"
+      },
+      {
+        "lineNumber": 79,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        assertFalse(superTaClient.hasStudent(ALICE));"
       },
       {
-        "lineNumber": 79,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasPerson_personInAddressBook_returnsTrue() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        superTaClient.addStudent(ALICE);"
+        "content": "    public void hasPerson_personInAddressBook_returnsTrue() {"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        assertTrue(superTaClient.hasStudent(ALICE));"
+        "content": "        superTaClient.addStudent(ALICE);"
       },
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "-"
+          "gitId": "wenshei"
         },
-        "content": "    }"
+        "content": "        assertTrue(superTaClient.hasStudent(ALICE));"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasPerson_personWithSameIdentityFieldsInAddressBook_returnsTrue() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "        superTaClient.addStudent(ALICE);"
+        "content": "    public void hasPerson_personWithSameIdentityFieldsInAddressBook_returnsTrue() {"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "wenshei"
         },
-        "content": "        Student editedAlice \u003d new StudentBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)"
+        "content": "        superTaClient.addStudent(ALICE);"
       },
       {
         "lineNumber": 91,
+        "author": {
+          "gitId": "wenshei"
+        },
+        "content": "        Student editedAlice \u003d new StudentBuilder(ALICE).withAddress(VALID_ADDRESS_BOB).withTags(VALID_TAG_HUSBAND)"
+      },
+      {
+        "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
         "content": "                .build();"
       },
       {
-        "lineNumber": 92,
+        "lineNumber": 93,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        assertTrue(superTaClient.hasStudent(editedAlice));"
       },
       {
-        "lineNumber": 93,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void getPersonList_modifyList_throwsUnsupportedOperationException() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(UnsupportedOperationException.class);"
+        "content": "    public void getPersonList_modifyList_throwsUnsupportedOperationException() {"
       },
       {
         "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(UnsupportedOperationException.class);"
+      },
+      {
+        "lineNumber": 99,
         "author": {
           "gitId": "wenshei"
         },
         "content": "        superTaClient.getStudentList().remove(0);"
       },
       {
-        "lineNumber": 99,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hasTutorialGroup_sameTutorialGroup_returnsTrue() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void hasTutorialGroup_sameTutorialGroup_returnsTrue() {"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(superTaClient.hasTutorialGroup(tutorialGroup.getId()));"
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(superTaClient.hasTutorialGroup(tutorialGroup.getId()));"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void getTutorialGroup_getsCorrectTutorialGroup() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void getTutorialGroup_getsCorrectTutorialGroup() {"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().equals(tutorialGroup));"
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().equals(tutorialGroup));"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void getStudentWithId_getsCorrectStudent() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addStudent(ALICE);"
+        "content": "    public void getStudentWithId_getsCorrectStudent() {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(superTaClient.getStudentWithId(ALICE.getStudentId()).get().equals(ALICE));"
+        "content": "        superTaClient.addStudent(ALICE);"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(superTaClient.getStudentWithId(ALICE.getStudentId()).get().equals(ALICE));"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addStudentToTutorialGroup_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void addStudentToTutorialGroup_success() {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addStudentToTutorialGroup(tutorialGroup, ALICE);"
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().getStudents().contains(ALICE));"
+        "content": "        superTaClient.addStudentToTutorialGroup(tutorialGroup, ALICE);"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().getStudents().contains(ALICE));"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void updateTutorialGroup_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void updateTutorialGroup_success() {"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "        String updatedName \u003d \"updated_name\";"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(updatedName.equals(tutorialGroup.getName()));"
+        "content": "        String updatedName \u003d \"updated_name\";"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup updated \u003d new TutorialGroup(tutorialGroup.getId(), updatedName);"
+        "content": "        assertFalse(updatedName.equals(tutorialGroup.getName()));"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        TutorialGroup updated \u003d new TutorialGroup(tutorialGroup.getId(), updatedName);"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.updateTutorialGroup(updated);"
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().getName().equals(updatedName));"
+        "content": "        superTaClient.updateTutorialGroup(updated);"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().getName().equals(updatedName));"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void removeTutorialGroup_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void removeTutorialGroup_success() {"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(superTaClient.hasTutorialGroup(tutorialGroup.getId()));"
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.removeTutorialGroup(tutorialGroup);"
+        "content": "        assertTrue(superTaClient.hasTutorialGroup(tutorialGroup.getId()));"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(superTaClient.hasTutorialGroup(tutorialGroup.getId()));"
+        "content": "        superTaClient.removeTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertFalse(superTaClient.hasTutorialGroup(tutorialGroup.getId()));"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addAssignment_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void addAssignment_success() {"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assignment assignment \u003d getModelAssignment();"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        Assignment assignment \u003d getModelAssignment();"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addAssignment(tutorialGroup, assignment);"
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().getAssignment(assignment.getName())"
+        "content": "        superTaClient.addAssignment(tutorialGroup, assignment);"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "                       .isPresent());"
+        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().getAssignment(assignment.getTitle())"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                       .isPresent());"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void grade_noSuchTutorialGroup_failure() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void grade_noSuchTutorialGroup_failure() {"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assignment assignment \u003d getModelAssignment();"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "        Student student \u003d ALICE;"
+        "content": "        Assignment assignment \u003d getModelAssignment();"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        Student student \u003d ALICE;"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "        Grade grade \u003d new Grade(tutorialGroup.getId(), assignment.getName(), student.getStudentId(), 40.0);"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addStudent(student);"
+        "content": "        Grade grade \u003d new Grade(tutorialGroup.getId(), assignment.getTitle(), student.getStudentId(), 40.0);"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        superTaClient.addStudent(student);"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(TutorialGroupNotFoundException.class);"
+        "content": ""
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.grade(grade);"
+        "content": "        thrown.expect(TutorialGroupNotFoundException.class);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        superTaClient.grade(grade);"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void grade_noSuchAssignment_failure() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void grade_noSuchAssignment_failure() {"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assignment assignment \u003d getModelAssignment();"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "        Student student \u003d ALICE;"
+        "content": "        Assignment assignment \u003d getModelAssignment();"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        Student student \u003d ALICE;"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "        Grade grade \u003d new Grade(tutorialGroup.getId(), assignment.getName(), student.getStudentId(), 40.0);"
+        "content": ""
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addStudent(student);"
+        "content": "        Grade grade \u003d new Grade(tutorialGroup.getId(), assignment.getTitle(), student.getStudentId(), 40.0);"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        superTaClient.addStudent(student);"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(AssignmentNotFoundException.class);"
+        "content": ""
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.grade(grade);"
+        "content": "        thrown.expect(AssignmentNotFoundException.class);"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        superTaClient.grade(grade);"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void grade_noSuchStudentInTutorialGroup_failure() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void grade_noSuchStudentInTutorialGroup_failure() {"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assignment assignment \u003d getModelAssignment();"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "        tutorialGroup.addAssignment(assignment);"
+        "content": "        Assignment assignment \u003d getModelAssignment();"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "        Student student \u003d ALICE;"
+        "content": "        tutorialGroup.addAssignment(assignment);"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        Student student \u003d ALICE;"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "        Grade grade \u003d new Grade(tutorialGroup.getId(), assignment.getName(), student.getStudentId(), 40.0);"
+        "content": ""
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addStudent(student);"
+        "content": "        Grade grade \u003d new Grade(tutorialGroup.getId(), assignment.getTitle(), student.getStudentId(), 40.0);"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        superTaClient.addStudent(student);"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(StudentNotFoundException.class);"
+        "content": ""
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.grade(grade);"
+        "content": "        thrown.expect(StudentNotFoundException.class);"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        superTaClient.grade(grade);"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void grade_success() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
+        "content": "    public void grade_success() {"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "        Assignment assignment \u003d getModelAssignment();"
+        "content": "        TutorialGroup tutorialGroup \u003d getModelTutorialGroup();"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "        tutorialGroup.addAssignment(assignment);"
+        "content": "        Assignment assignment \u003d getModelAssignment();"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "        Student student \u003d ALICE;"
+        "content": "        tutorialGroup.addAssignment(assignment);"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addStudent(student);"
+        "content": "        Student student \u003d ALICE;"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
+        "content": "        superTaClient.addStudent(student);"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "        tutorialGroup.addStudent(student);"
+        "content": "        superTaClient.addTutorialGroup(tutorialGroup);"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        tutorialGroup.addStudent(student);"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "        double marks \u003d 40.0;"
+        "content": ""
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        double marks \u003d 40.0;"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "        Grade grade \u003d new Grade(tutorialGroup.getId(), assignment.getName(), student.getStudentId(), marks);"
+        "content": ""
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "        superTaClient.grade(grade);"
+        "content": "        Grade grade \u003d new Grade(tutorialGroup.getId(), assignment.getTitle(), student.getStudentId(), marks);"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        superTaClient.grade(grade);"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get().getAssignment(assignment.getName()).get()"
+        "content": ""
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "            .getGradebook().getGradeFor(student.getStudentId()).equals(marks));"
+        "content": "        assertTrue(superTaClient.getTutorialGroup(tutorialGroup.getId()).get()"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            .getAssignment(assignment.getTitle()).get()"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            .getGradebook().getGradeFor(student.getStudentId()).equals(marks));"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void hashCode_isNotNull() {"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertNotNull(superTaClient.hashCode());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public void hashCode_isNotNull() {"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertNotNull(superTaClient.hashCode());"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "    private TutorialGroup getModelTutorialGroup() {"
+        "content": "    }"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new TutorialGroup(\"testing_id\", \"Test Tutorial Group\");"
+        "content": ""
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    private TutorialGroup getModelTutorialGroup() {"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return new TutorialGroup(\"testing_id\","
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "    private Assignment getModelAssignment() {"
+        "content": "                \"Test Tutorial Group\");"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new Assignment(\"testing_name\", 40.0);"
+        "content": "    }"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private Assignment getModelAssignment() {"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        return new Assignment(new Title(\"testing name\"), 40.0);"
       },
       {
         "lineNumber": 234,
-        "author": {
-          "gitId": "wenshei"
-        },
-        "content": "     * A stub ReadOnlySuperTaClient whose students list can violate interface constraints."
-      },
-      {
-        "lineNumber": 235,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 236,
-        "author": {
-          "gitId": "wenshei"
-        },
-        "content": "    private static class SuperTaClientStub implements ReadOnlySuperTaClient {"
-      },
-      {
-        "lineNumber": 237,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        private final ObservableList\u003cStudent\u003e students \u003d FXCollections.observableArrayList();"
-      },
-      {
-        "lineNumber": 238,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 239,
-        "author": {
-          "gitId": "wenshei"
-        },
-        "content": "        SuperTaClientStub(Collection\u003cStudent\u003e students) {"
-      },
-      {
-        "lineNumber": 240,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            this.students.setAll(students);"
-      },
-      {
-        "lineNumber": 241,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 242,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 243,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        @Override"
-      },
-      {
-        "lineNumber": 244,
-        "author": {
-          "gitId": "wenshei"
-        },
-        "content": "        public ObservableList\u003cStudent\u003e getStudentList() {"
-      },
-      {
-        "lineNumber": 245,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return students;"
-      },
-      {
-        "lineNumber": 246,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 247,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 248,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        @Override"
-      },
-      {
-        "lineNumber": 249,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        public ObservableList\u003cTutorialGroup\u003e getTutorialGroupList() {"
-      },
-      {
-        "lineNumber": 250,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return null;"
-      },
-      {
-        "lineNumber": 251,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 253,
+        "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "wenshei"
+        },
+        "content": "     * A stub ReadOnlySuperTaClient whose students list can violate interface constraints."
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "wenshei"
+        },
+        "content": "    private static class SuperTaClientStub implements ReadOnlySuperTaClient {"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        private final ObservableList\u003cStudent\u003e students \u003d FXCollections.observableArrayList();"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "wenshei"
+        },
+        "content": "        SuperTaClientStub(Collection\u003cStudent\u003e students) {"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.students.setAll(students);"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        @Override"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "wenshei"
+        },
+        "content": "        public ObservableList\u003cStudent\u003e getStudentList() {"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return students;"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        @Override"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        public ObservableList\u003cTutorialGroup\u003e getTutorialGroupList() {"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return null;"
+      },
+      {
         "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
@@ -102705,7 +102311,7 @@
     ],
     "authorContributionMap": {
       "wenshei": 32,
-      "-": 222
+      "-": 225
     }
   },
   {
@@ -116745,9 +116351,9 @@
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "wenshei"
+          "gitId": "-"
         },
-        "content": "import seedu.superta.model.assignment.AssignmentList;"
+        "content": "import seedu.superta.model.assignment.UniqueAssignmentList;"
       },
       {
         "lineNumber": 5,
@@ -116852,7 +116458,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    private AssignmentList assignments;"
+        "content": "    private UniqueAssignmentList assignments;"
       },
       {
         "lineNumber": 20,
@@ -116894,7 +116500,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        assignments \u003d new AssignmentList();"
+        "content": "        assignments \u003d new UniqueAssignmentList();"
       },
       {
         "lineNumber": 26,
@@ -117353,8 +116959,8 @@
       }
     ],
     "authorContributionMap": {
-      "wenshei": 6,
-      "-": 84
+      "wenshei": 5,
+      "-": 85
     }
   },
   {

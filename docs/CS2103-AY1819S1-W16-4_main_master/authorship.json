@@ -23595,7 +23595,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Receipt generated for patient!\";"
+        "content": "    public static final String MESSAGE_GENERATE_RECEIPT_SUCCESS \u003d \"Receipt generated for patient!\";"
       },
       {
         "lineNumber": 30,
@@ -23784,7 +23784,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS));"
+        "content": "        return new CommandResult(String.format(MESSAGE_GENERATE_RECEIPT_SUCCESS));"
       },
       {
         "lineNumber": 57,
@@ -27819,339 +27819,353 @@
         "author": {
           "gitId": "-"
         },
-        "content": "            return new MedicalCertificateCommandParser().parse(arguments);"
+        "content": "        case MedicalCertificateCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new MedicalCertificateCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        case ReferralLetterCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ReferralLetterCommandParser().parse(arguments);"
+        "content": "        case ReferralLetterCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        case ReferralLetterCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 137,
         "author": {
-          "gitId": "ChesterSng"
+          "gitId": "-"
         },
-        "content": "        case DisplayQueueCommand.COMMAND_WORD:"
+        "content": "            return new ReferralLetterCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "        case DisplayQueueCommand.COMMAND_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "ChesterSng"
         },
-        "content": "            return new DisplayQueueCommand();"
+        "content": "        case DisplayQueueCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 140,
         "author": {
-          "gitId": "ChesterSng"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        case DisplayQueueCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 141,
         "author": {
-          "gitId": "-"
+          "gitId": "ChesterSng"
         },
-        "content": "        case DisplayServedPatientsCommand.COMMAND_WORD:"
+        "content": "            return new DisplayQueueCommand();"
       },
       {
         "lineNumber": 142,
         "author": {
-          "gitId": "-"
+          "gitId": "ChesterSng"
         },
-        "content": "        case DisplayServedPatientsCommand.COMMAND_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new DisplayServedPatientsCommand();"
+        "content": "        case DisplayServedPatientsCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        case DisplayServedPatientsCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "ChesterSng"
+          "gitId": "-"
         },
-        "content": "        case RegisterCommand.COMMAND_WORD:"
+        "content": "            return new DisplayServedPatientsCommand();"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        case RegisterCommand.COMMAND_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "ChesterSng"
         },
-        "content": "            return new RegisterCommandParser().parse(arguments);"
+        "content": "        case RegisterCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "ChesterSng"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        case RegisterCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "-"
+          "gitId": "ChesterSng"
         },
-        "content": "        case InsertCommand.COMMAND_WORD:"
+        "content": "            return new RegisterCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "ChesterSng"
         },
-        "content": "        case InsertCommand.COMMAND_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new InsertCommandParser().parse(arguments);"
+        "content": "        case InsertCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        case InsertCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 153,
         "author": {
-          "gitId": "ChesterSng"
+          "gitId": "-"
         },
-        "content": "        case RemoveCommand.COMMAND_WORD:"
+        "content": "            return new InsertCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "        case RemoveCommand.COMMAND_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "ChesterSng"
         },
-        "content": "            return new RemoveCommandParser().parse(arguments);"
+        "content": "        case RemoveCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case RemoveCommand.COMMAND_ALIAS:"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "            return new RemoveCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 158,
         "author": {
           "gitId": "ChesterSng"
         },
         "content": ""
       },
       {
-        "lineNumber": 157,
+        "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
         "content": "        case ServeCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 158,
+        "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
         "content": "            return new ServeCommand();"
       },
       {
-        "lineNumber": 159,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 160,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        case DocumentContentAddCommand.COMMAND_WORD:"
-      },
-      {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "        case DocumentContentAddCommand.COMMAND_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new DocumentContentAddCommandParser().parse(arguments);"
+        "content": "        case DocumentContentAddCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        case DocumentContentAddCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "        case DocumentContentDisplayCommand.COMMAND_WORD:"
+        "content": "            return new DocumentContentAddCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "        case DocumentContentDisplayCommand.COMMAND_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new DocumentContentDisplayCommand();"
+        "content": "        case DocumentContentDisplayCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        case DocumentContentDisplayCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FinishCommand.COMMAND_WORD:"
+        "content": "            return new DocumentContentDisplayCommand();"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FinishCommand();"
+        "content": ""
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        case FinishCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "        case PaymentCommand.COMMAND_WORD:"
+        "content": "            return new FinishCommand();"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "        case PaymentCommand.COMMAND_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new PaymentCommandParser().parse(arguments);"
+        "content": "        case PaymentCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        case PaymentCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "        default:"
+        "content": "            return new PaymentCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
+        "content": ""
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        default:"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
@@ -28161,7 +28175,7 @@
     "authorContributionMap": {
       "ChesterSng": 15,
       "blewjy": 3,
-      "-": 162
+      "-": 164
     }
   },
   {
@@ -30791,14 +30805,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the DeleteCommand"
+        "content": "     * Parses the given {@code String} of arguments in the context of the ReceiptCommand"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "     * and returns an DeleteCommand object for execution."
+        "content": "     * and returns an ReceiptCommand object for execution."
       },
       {
         "lineNumber": 17,
@@ -30882,19 +30896,12 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "-"
-        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
       "ChesterSng": 3,
-      "-": 26
+      "-": 25
     }
   },
   {
@@ -35269,11 +35276,46 @@
         "author": {
           "gitId": "ChesterSng"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "     * Clears the PatientQueue"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    void clear();"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "ChesterSng"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "ChesterSng": 49,
+      "ChesterSng": 54,
       "blewjy": 8,
       "-": 12
     }
@@ -35811,11 +35853,46 @@
         "author": {
           "gitId": "ChesterSng"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    public void clear() {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        patientQueue.clear();"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "ChesterSng"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "ChesterSng": 63,
+      "ChesterSng": 68,
       "blewjy": 6,
       "-": 7
     }
@@ -41133,13 +41210,41 @@
       {
         "lineNumber": 141,
         "author": {
+          "gitId": "blewjy"
+        },
+        "content": "    public String toUrlFormat() {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        return patient !\u003d null ? patient.getName().fullName : \"empty\";"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
           "gitId": "-"
         },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "blewjy": 1,
+      "blewjy": 5,
       "-": 140
     }
   },
@@ -44351,6 +44456,855 @@
     "authorContributionMap": {
       "blewjy": 1,
       "-": 52
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/person/ServedPatient.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.model.person;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.HashMap;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Map;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.medicine.Medicine;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Uncompleted class, need to add more methods and fields."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Represents a patient that has already consulted the doctor in the address book."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * It has all the necessary data needed to generate any object that inherits from document."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class ServedPatient {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final Patient patient;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String noteContent;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String referralContent;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String mcContent;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Map\u003cMedicine, Integer\u003e medicineAllocated;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    // add more fields as required"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Constructs a servedPatient object from a patient object to extract all the information"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * necessary for printing a document."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param patient A valid patient."
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public ServedPatient(Patient patient) {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(patient);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        medicineAllocated \u003d new HashMap\u003c\u003e();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.patient \u003d patient;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.noteContent \u003d \"\";"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.referralContent \u003d \"\";"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.mcContent \u003d \"\";"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Name getName() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return patient.getName();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public IcNumber getIcNumber() {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return patient.getIcNumber();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns the note content for the {@code served patient}."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String getNoteContent() {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return this.noteContent;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns the MC content for the {@code served patient}."
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String getMcContent() {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return this.mcContent;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns the referral content for the {@code served patient}."
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String getReferralContent() {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return this.referralContent;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns the medicine and quantity allocated for the {@code served patient}."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Map\u003cMedicine, Integer\u003e getMedicineAllocated() {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return medicineAllocated;"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Skeleton to add note content."
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String addNoteContent(String content) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return noteContent \u003d content;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Skeleton to add referral content."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String addReferralContent(String content) {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return referralContent \u003d content;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Skeleton to add Mc Content."
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String addMcContent(String content) {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return mcContent \u003d content;"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Add specified quantity of medicine to patient."
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param medicine to be added."
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param quantity of medicinet to be added."
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @return string representation of medicine added."
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String addMedicine(Medicine medicine, int quantity) {"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        medicineAllocated.put(medicine, quantity);"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return medicine.toString();"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Checks whether current is a specified patient."
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @return true if queue contains patient."
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean isPatient(Patient patient) {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        return (this.patient).isSamePerson(patient);"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @return a console-friendly representation of the patient."
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String toNameAndIc() {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return patient.toNameAndIc();"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "blewjy": 1,
+      "-": 119
     }
   },
   {
@@ -60138,756 +61092,756 @@
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import java.util.logging.Logger;"
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "import java.util.logging.Logger;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import com.google.common.eventbus.Subscribe;"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "import com.google.common.eventbus.Subscribe;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import javafx.application.Platform;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import javafx.event.Event;"
+        "content": "import javafx.application.Platform;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import javafx.fxml.FXML;"
+        "content": "import javafx.event.Event;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import javafx.scene.layout.Region;"
+        "content": "import javafx.fxml.FXML;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import javafx.scene.web.WebView;"
+        "content": "import javafx.scene.layout.Region;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import seedu.address.MainApp;"
+        "content": "import javafx.scene.web.WebView;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import seedu.address.commons.core.LogsCenter;"
+        "content": "import seedu.address.MainApp;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import seedu.address.commons.events.ui.QueueUpdatedEvent;"
+        "content": "import seedu.address.commons.core.LogsCenter;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import seedu.address.model.PatientQueue;"
+        "content": "import seedu.address.commons.events.ui.QueueUpdatedEvent;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import seedu.address.model.ServedPatientList;"
+        "content": "import seedu.address.model.PatientQueue;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import seedu.address.model.person.CurrentPatient;"
+        "content": "import seedu.address.model.ServedPatientList;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import seedu.address.model.person.Patient;"
+        "content": "import seedu.address.model.person.CurrentPatient;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "import seedu.address.model.person.ServedPatient;"
+        "content": "import seedu.address.model.person.Patient;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "import seedu.address.model.person.ServedPatient;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "blewjy"
         },
-        "content": " * A display panel that shows the queue information to the user."
+        "content": "/**"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "blewjy"
         },
-        "content": " */"
+        "content": " * A display panel that shows the queue information to the user."
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "public class QueueDisplay extends UiPart\u003cRegion\u003e {"
+        "content": " */"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "public class QueueDisplay extends UiPart\u003cRegion\u003e {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    public static final String DEFAULT_PAGE \u003d \"QueueDisplay.html\";"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "    public static final String DEFAULT_PAGE \u003d \"QueueDisplay.html\";"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    private static final String FXML \u003d \"QueueDisplay.fxml\";"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "    private static final String FXML \u003d \"QueueDisplay.fxml\";"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    @FXML"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    private WebView display;"
+        "content": "    @FXML"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "    private WebView display;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    public QueueDisplay() {"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        super(FXML);"
+        "content": "    public QueueDisplay() {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "        super(FXML);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        // To prevent triggering events for typing inside the loaded Web page."
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        getRoot().setOnKeyPressed(Event::consume);"
+        "content": "        // To prevent triggering events for typing inside the loaded Web page."
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "        getRoot().setOnKeyPressed(Event::consume);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        loadQueueDisplay(null, null, null);"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        registerAsAnEventHandler(this);"
+        "content": "        loadQueueDisplay(null, null, null);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    }"
+        "content": "        registerAsAnEventHandler(this);"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    public void loadPage(String url) {"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        Platform.runLater(() -\u003e display.getEngine().load(url));"
+        "content": "    public void loadPage(String url) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    }"
+        "content": "        Platform.runLater(() -\u003e display.getEngine().load(url));"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     * Loads a default HTML file with a background that matches the general theme."
+        "content": "    /**"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     */"
+        "content": "     * Loads a HTML file representing the queue display."
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    private void loadQueueDisplay(PatientQueue patientQueue, ServedPatientList servedPatientList,"
+        "content": "     */"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "                                  CurrentPatient currentPatient) {"
+        "content": "    private void loadQueueDisplay(PatientQueue patientQueue, ServedPatientList servedPatientList,"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        String patientQueueString \u003d generatePatientQueuePrettyString(patientQueue);"
+        "content": "                                  CurrentPatient currentPatient) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        String servedPatientListString \u003d generateServedPatientListPrettyString(servedPatientList);"
+        "content": "        String currentPatientString \u003d currentPatient !\u003d null"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "                ? currentPatient.toUrlFormat() : \"empty\";"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        String currentPatientString \u003d currentPatient !\u003d null"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "                ? currentPatient.toNameAndIc() : \"No current patient!\";"
+        "content": "        List\u003cPatient\u003e patientQueueList \u003d patientQueue \u003d\u003d null ? null : patientQueue.getPatientsAsList();"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "        List\u003cServedPatient\u003e servedPatients \u003d servedPatientList \u003d\u003d null ? null : servedPatientList.getPatientsAsList();"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        String queueDisplayPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE).toExternalForm();"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        queueDisplayPage +\u003d \"?queue\u003d\";"
+        "content": "        String queueDisplayPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE).toExternalForm();"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        queueDisplayPage +\u003d patientQueueString;"
+        "content": "        queueDisplayPage +\u003d \"?\";"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        queueDisplayPage +\u003d \"\u0026served\u003d\";"
+        "content": "        queueDisplayPage +\u003d generateUrlParamsFromPatientQueue(patientQueueList);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        queueDisplayPage +\u003d servedPatientListString;"
+        "content": "        queueDisplayPage +\u003d \"\u0026\";"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        queueDisplayPage +\u003d \"\u0026current\u003d\";"
+        "content": "        queueDisplayPage +\u003d generateUrlParamsFromServedPatientList(servedPatients);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        queueDisplayPage +\u003d currentPatientString;"
+        "content": "        queueDisplayPage +\u003d \"\u0026current\u003d\";"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        loadPage(queueDisplayPage);"
+        "content": "        queueDisplayPage +\u003d currentPatientString;"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    }"
+        "content": "        loadPage(queueDisplayPage);"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "        System.out.println(queueDisplayPage);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     * Frees resources allocated to the browser."
+        "content": "    }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    public void freeResources() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        display \u003d null;"
+        "content": "     * Frees resources allocated to the browser."
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "    public void freeResources() {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    @Subscribe"
+        "content": "        display \u003d null;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    private void handleQueueUpdatedEvent(QueueUpdatedEvent event) {"
+        "content": "    }"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": ""
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        loadQueueDisplay(event.getPatientQueue(), event.getServedPatientList(), event.getCurrentPatient());"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    }"
+        "content": "    private void handleQueueUpdatedEvent(QueueUpdatedEvent event) {"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    /**"
+        "content": "        loadQueueDisplay(event.getPatientQueue(), event.getServedPatientList(), event.getCurrentPatient());"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     * Convert queue object to a nice looking readable string."
+        "content": "    }"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     * @param patientQueue queue object to convert."
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "ChesterSng"
         },
-        "content": "     * @return nice readable string"
+        "content": "    /**"
       },
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "ChesterSng"
         },
-        "content": "     */"
+        "content": "     * Generate a list of patient queues separated with newline."
       },
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "ChesterSng"
         },
-        "content": "    private String generatePatientQueuePrettyString(PatientQueue patientQueue) {"
+        "content": "     * @param patientQueue list of patients waiting for doctor."
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "ChesterSng"
         },
-        "content": "        if (patientQueue \u003d\u003d null) {"
+        "content": "     * @return string representation of the list."
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "ChesterSng"
         },
-        "content": "            return \"(none)\";"
+        "content": "     */"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        }"
+        "content": "    private String generatePatientQueuePrettyString(PatientQueue patientQueue) {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "        if (patientQueue \u003d\u003d null) {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        String result \u003d \"\";"
+        "content": "            return \"(none)\";"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        for (Patient patient: patientQueue.getPatientsAsList()) {"
+        "content": "        }"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "-"
         },
-        "content": "            result +\u003d patient.toNameAndIc();"
+        "content": "        int counter \u003d 1;"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "            result +\u003d \"\u003cbr\u003e\";"
+        "content": "        String result \u003d \"\";"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        }"
+        "content": "        for (Patient patient: patientQueue.getPatientsAsList()) {"
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "-"
         },
-        "content": "        return result \u003d\u003d \"\" ? \"(none)\" : result.substring(0, result.length() - 4);"
+        "content": "            result +\u003d counter++ + \".) \";"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    }"
+        "content": "            result +\u003d patient.toNameAndIc();"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "            result +\u003d \"\u003cbr\u003e\";"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    /**"
+        "content": "        }"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "ChesterSng"
         },
-        "content": "     * Convert patient list object to a nice looking readable string"
+        "content": "        return result;"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     * @param servedPatientList list to convert"
+        "content": "    }"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     * @return nice readable string"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    private String generateServedPatientListPrettyString(ServedPatientList servedPatientList) {"
+        "content": "     * Generates URL parameters representing the patients in the list."
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        if (servedPatientList \u003d\u003d null) {"
+        "content": "     * @param list to convert to string."
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "            return \"(none)\";"
+        "content": "     * @return url string addon."
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "    private String generateUrlParamsFromPatientQueue(List\u003cPatient\u003e list) {"
       },
       {
         "lineNumber": 111,
@@ -60901,59 +61855,409 @@
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        for (ServedPatient patient: servedPatientList.getPatientsAsList()) {"
+        "content": "        for (int index \u003d 0; index \u003c 6; index++) {"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "            result +\u003d patient.toNameAndIc();"
+        "content": "            result +\u003d \"queue\";"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "            result +\u003d \"\u003cbr\u003e\";"
+        "content": "            result +\u003d (index + 1);"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        }"
+        "content": "            result +\u003d \"\u003d\";"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "        return result \u003d\u003d \"\" ? \"(none)\" : result.substring(0, result.length() - 4);"
+        "content": "            try {"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    }"
+        "content": "                result +\u003d list.get(index).getName().fullName;"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "            } catch (IndexOutOfBoundsException ioobe) {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "blewjy"
         },
-        "content": ""
+        "content": "                result +\u003d \"empty\";"
       },
       {
         "lineNumber": 120,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            } catch (NullPointerException npe) {"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "                result +\u003d \"empty\";"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            result +\u003d \"\u0026\";"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        return result;"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "     * Generate a list of patient queues separated with newline."
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "     * @param servedPatientList list of served patients."
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "     * @return string representation of the list."
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "    private String generateServedPatientListPrettyString(ServedPatientList servedPatientList) {"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        if (servedPatientList \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            return \"(none)\";"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        int counter \u003d 1;"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        String result \u003d \"\";"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        for (ServedPatient patient: servedPatientList.getPatientsAsList()) {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            result +\u003d counter++ + \".) \";"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            result +\u003d patient.toNameAndIc();"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            result +\u003d \"\u003cbr\u003e\";"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        return result;"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "     * Generates URL parameters representing the patients in the list."
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "     * @param list to convert to string."
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "     * @return url string addon."
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "    private String generateUrlParamsFromServedPatientList(List\u003cServedPatient\u003e list) {"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        String result \u003d \"\";"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        for (int index \u003d 0; index \u003c 6; index++) {"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            result +\u003d \"served\";"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            result +\u003d (index + 1);"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            result +\u003d \"\u003d\";"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            try {"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "                result +\u003d list.get(index).getName().fullName;"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            } catch (IndexOutOfBoundsException ioobe) {"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "                result +\u003d \"empty\";"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            } catch (NullPointerException npe) {"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "                result +\u003d \"empty\";"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "            result +\u003d \"\u0026\";"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        return result;"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "blewjy"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 170,
         "author": {
           "gitId": "blewjy"
         },
@@ -60961,7 +62265,9 @@
       }
     ],
     "authorContributionMap": {
-      "blewjy": 120
+      "ChesterSng": 15,
+      "blewjy": 151,
+      "-": 4
     }
   },
   {
@@ -61135,7 +62441,7 @@
         "author": {
           "gitId": "blewjy"
         },
-        "content": "         minWidth\u003d\"1000\" minHeight\u003d\"650\" onCloseRequest\u003d\"#handleExit\"\u003e"
+        "content": "         minWidth\u003d\"800\" minHeight\u003d\"650\" onCloseRequest\u003d\"#handleExit\"\u003e"
       },
       {
         "lineNumber": 16,
@@ -61289,7 +62595,7 @@
         "author": {
           "gitId": "blewjy"
         },
-        "content": "                   minHeight\u003d\"120\" prefHeight\u003d\"120\" maxHeight\u003d\"120\"\u003e"
+        "content": "                   minHeight\u003d\"140\" prefHeight\u003d\"140\" maxHeight\u003d\"140\"\u003e"
       },
       {
         "lineNumber": 38,
@@ -61895,7 +63201,7 @@
         "author": {
           "gitId": "blewjy"
         },
-        "content": "    background-color: #555555;"
+        "content": "    background-color: #404040;"
       },
       {
         "lineNumber": 3,
@@ -62630,6 +63936,106 @@
     "authorContributionMap": {
       "blewjy": 1,
       "-": 36
+    }
+  },
+  {
+    "path": "src/main/resources/view/QueueDisplay.css",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".table-header {"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    font-family: \"Apple Symbols\", \"Segoe UI\";"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    font-size: 18pt;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    color: white;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ".table-row {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    text-align: center;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    font-family: \"Apple Symbols\", \"Segoe UI\";"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    font-size: 12pt;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    color: white;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ChesterSng": 4,
+      "-": 9
     }
   },
   {
@@ -73425,6 +74831,575 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/logic/commands/DisplayQueueCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import static org.junit.Assert.assertNotEquals;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.commands.QueueCommandTestUtil.generatePatientQueue;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import org.junit.Before;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.Rule;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.rules.ExpectedException;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.model.PatientQueue;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.model.PatientQueueManager;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.model.ServedPatientList;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.model.ServedPatientListManager;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.model.person.CurrentPatient;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "import seedu.address.testutil.TypicalPersons;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "public class DisplayQueueCommandTest {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Rule"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    private Model model \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    private PatientQueue patientQueue;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    private CurrentPatient currentPatient;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    private ServedPatientList servedPatientList;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    private CommandHistory commandHistory;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    @Before"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    public void setUp() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        patientQueue \u003d new PatientQueueManager();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        currentPatient \u003d new CurrentPatient();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        servedPatientList \u003d new ServedPatientListManager();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        model \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    public void execute_listIsSame_success() throws Exception {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        patientQueue \u003d generatePatientQueue(TypicalPersons.ALICE, TypicalPersons.BOB);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        String expectedMessage \u003d patientQueue.displayQueue();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        CommandResult commandResult \u003d new DisplayQueueCommand().execute(model, patientQueue,"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "                currentPatient, servedPatientList, commandHistory);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        assertEquals(expectedMessage, commandResult.feedbackToUser);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    public void execute_listIsDifferentOrder_failure() throws Exception {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        patientQueue \u003d generatePatientQueue(TypicalPersons.ALICE, TypicalPersons.BOB);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        String wrongMessage \u003d patientQueue.displayQueue();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        patientQueue \u003d generatePatientQueue(TypicalPersons.BOB, TypicalPersons.ALICE);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        CommandResult commandResult \u003d new DisplayQueueCommand().execute(model, patientQueue,"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "                currentPatient, servedPatientList, commandHistory);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        assertNotEquals(wrongMessage, commandResult.feedbackToUser);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    public void execute_listIsDifferent_failure() throws Exception {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        patientQueue \u003d generatePatientQueue(TypicalPersons.IDA, TypicalPersons.ALICE, TypicalPersons.DANIEL);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        String wrongMessage \u003d patientQueue.displayQueue();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        patientQueue \u003d generatePatientQueue(TypicalPersons.ALICE, TypicalPersons.BOB);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        CommandResult commandResult \u003d new DisplayQueueCommand().execute(model, patientQueue,"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "                currentPatient, servedPatientList, commandHistory);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        assertNotEquals(wrongMessage, commandResult.feedbackToUser);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    public void execute_listIsEmpty_commandExceptionThrown() throws Exception {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        thrown.expect(CommandException.class);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        patientQueue \u003d generatePatientQueue();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "        new DisplayQueueCommand().execute(model, patientQueue, currentPatient, servedPatientList, commandHistory);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "ChesterSng"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ChesterSng": 74,
+      "-": 6
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/logic/commands/EditCommandTest.java",
     "lines": [
       {
@@ -78181,763 +80156,763 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.EditCommand;"
+        "content": "import seedu.address.logic.commands.DisplayServedPatientsCommand;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;"
+        "content": "import seedu.address.logic.commands.EditCommand;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.ExitCommand;"
+        "content": "import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.FindCommand;"
+        "content": "import seedu.address.logic.commands.ExitCommand;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.HelpCommand;"
+        "content": "import seedu.address.logic.commands.FindCommand;"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.HistoryCommand;"
+        "content": "import seedu.address.logic.commands.HelpCommand;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.ListCommand;"
+        "content": "import seedu.address.logic.commands.HistoryCommand;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.ReceiptCommand;"
+        "content": "import seedu.address.logic.commands.ListCommand;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.RedoCommand;"
+        "content": "import seedu.address.logic.commands.MedicalCertificateCommand;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.SelectCommand;"
+        "content": "import seedu.address.logic.commands.ReceiptCommand;"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.UndoCommand;"
+        "content": "import seedu.address.logic.commands.RedoCommand;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": "import seedu.address.logic.commands.ReferralLetterCommand;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
+        "content": "import seedu.address.logic.commands.SelectCommand;"
       },
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Patient;"
+        "content": "import seedu.address.logic.commands.UndoCommand;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.testutil.EditPersonDescriptorBuilder;"
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.testutil.PersonBuilder;"
+        "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "-"
+          "gitId": "blewjy"
         },
-        "content": "import seedu.address.testutil.PersonUtil;"
+        "content": "import seedu.address.model.person.Patient;"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.testutil.EditPersonDescriptorBuilder;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "public class AddressBookParserTest {"
+        "content": "import seedu.address.testutil.PersonBuilder;"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Rule"
+        "content": "import seedu.address.testutil.PersonUtil;"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class AddressBookParserTest {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final AddressBookParser parser \u003d new AddressBookParser();"
+        "content": "    @Rule"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_add() throws Exception {"
+        "content": "    private final AddressBookParser parser \u003d new AddressBookParser();"
       },
       {
         "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_add() throws Exception {"
+      },
+      {
+        "lineNumber": 49,
         "author": {
           "gitId": "blewjy"
         },
         "content": "        Patient patient \u003d new PersonBuilder().build();"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 50,
         "author": {
           "gitId": "blewjy"
         },
         "content": "        AddCommand command \u003d (AddCommand) parser.parseCommand(PersonUtil.getAddCommand(patient));"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 51,
         "author": {
           "gitId": "blewjy"
         },
         "content": "        assertEquals(new AddCommand(patient), command);"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Test"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_addAlias() throws Exception {"
+        "content": "    }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        Patient patient \u003d new PersonBuilder().build();"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "        AddCommand command \u003d (AddCommand) parser.parseCommand(AddCommand.COMMAND_ALIAS + \" \""
+        "content": "    @Test"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "                + PersonUtil.getPersonDetails(patient));"
+        "content": "    public void parseCommand_addAlias() throws Exception {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new AddCommand(patient), command);"
+        "content": "        Patient patient \u003d new PersonBuilder().build();"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        AddCommand command \u003d (AddCommand) parser.parseCommand(AddCommand.COMMAND_ALIAS + \" \""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                + PersonUtil.getPersonDetails(patient));"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        assertEquals(new AddCommand(patient), command);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_clear() throws Exception {"
+        "content": "    }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD) instanceof ClearCommand);"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD + \" 3\") instanceof ClearCommand);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public void parseCommand_clear() throws Exception {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD) instanceof ClearCommand);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD + \" 3\") instanceof ClearCommand);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_delete() throws Exception {"
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "        DeleteCommand command \u003d (DeleteCommand) parser.parseCommand("
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "                DeleteCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);"
+        "content": "    public void parseCommand_displayServedPatients() throws Exception {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(parser.parseCommand(DisplayServedPatientsCommand.COMMAND_WORD)"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                instanceof DisplayServedPatientsCommand);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        assertTrue(parser.parseCommand(DisplayServedPatientsCommand.COMMAND_WORD + \" 3\")"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_deleteAlias() throws Exception {"
+        "content": "                instanceof DisplayServedPatientsCommand);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "        DeleteCommand command \u003d (DeleteCommand) parser.parseCommand("
+        "content": "    }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "                DeleteCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public void parseCommand_displayServedPatientsAlias() throws Exception {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertTrue(parser.parseCommand(DisplayServedPatientsCommand.COMMAND_ALIAS)"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "                instanceof DisplayServedPatientsCommand);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_edit() throws Exception {"
+        "content": "        assertTrue(parser.parseCommand(DisplayServedPatientsCommand.COMMAND_WORD + \" 3\")"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "-"
         },
-        "content": "        Patient patient \u003d new PersonBuilder().build();"
+        "content": "                instanceof DisplayServedPatientsCommand);"
       },
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "blewjy"
+          "gitId": "-"
         },
-        "content": "        EditPersonDescriptor descriptor \u003d new EditPersonDescriptorBuilder(patient).build();"
+        "content": "    }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "        EditCommand command \u003d (EditCommand) parser.parseCommand(EditCommand.COMMAND_WORD + \" \""
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + PersonUtil.getEditPersonDescriptorDetails(descriptor));"
+        "content": "    @Test"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);"
+        "content": "    public void parseCommand_delete() throws Exception {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        DeleteCommand command \u003d (DeleteCommand) parser.parseCommand("
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                DeleteCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_editAlias() throws Exception {"
+        "content": "    }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "        Patient patient \u003d new PersonBuilder().build();"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "        EditPersonDescriptor descriptor \u003d new EditPersonDescriptorBuilder(patient).build();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "        EditCommand command \u003d (EditCommand) parser.parseCommand(EditCommand.COMMAND_ALIAS + \" \""
+        "content": "    public void parseCommand_deleteAlias() throws Exception {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + PersonUtil.getEditPersonDescriptorDetails(descriptor));"
+        "content": "        DeleteCommand command \u003d (DeleteCommand) parser.parseCommand("
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);"
+        "content": "                DeleteCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_exit() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD) instanceof ExitCommand);"
+        "content": "    public void parseCommand_edit() throws Exception {"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "-"
+          "gitId": "blewjy"
         },
-        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD + \" 3\") instanceof ExitCommand);"
+        "content": "        Patient patient \u003d new PersonBuilder().build();"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "-"
+          "gitId": "blewjy"
         },
-        "content": "    }"
+        "content": "        EditPersonDescriptor descriptor \u003d new EditPersonDescriptorBuilder(patient).build();"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        EditCommand command \u003d (EditCommand) parser.parseCommand(EditCommand.COMMAND_WORD + \" \""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + PersonUtil.getEditPersonDescriptorDetails(descriptor));"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_find() throws Exception {"
+        "content": "        assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cString\u003e keywords \u003d Arrays.asList(\"foo\", \"bar\", \"baz\");"
+        "content": "    }"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "        FindCommand command \u003d (FindCommand) parser.parseCommand("
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "                FindCommand.COMMAND_WORD + \" \" + keywords.stream().collect(Collectors.joining(\" \")));"
+        "content": "    @Test"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);"
+        "content": "    public void parseCommand_editAlias() throws Exception {"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        Patient patient \u003d new PersonBuilder().build();"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        EditPersonDescriptor descriptor \u003d new EditPersonDescriptorBuilder(patient).build();"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        EditCommand command \u003d (EditCommand) parser.parseCommand(EditCommand.COMMAND_ALIAS + \" \""
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_findAlias() throws Exception {"
+        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + PersonUtil.getEditPersonDescriptorDetails(descriptor));"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cString\u003e keywords \u003d Arrays.asList(\"foo\", \"bar\", \"baz\");"
+        "content": "        assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "        FindCommand command \u003d (FindCommand) parser.parseCommand("
+        "content": "    }"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "                FindCommand.COMMAND_ALIAS + \" \" + keywords.stream().collect(Collectors.joining(\" \")));"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public void parseCommand_exit() throws Exception {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD) instanceof ExitCommand);"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD + \" 3\") instanceof ExitCommand);"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_help() throws Exception {"
+        "content": "    }"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD) instanceof HelpCommand);"
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD + \" 3\") instanceof HelpCommand);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public void parseCommand_find() throws Exception {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        List\u003cString\u003e keywords \u003d Arrays.asList(\"foo\", \"bar\", \"baz\");"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        FindCommand command \u003d (FindCommand) parser.parseCommand("
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_history() throws Exception {"
+        "content": "                FindCommand.COMMAND_WORD + \" \" + keywords.stream().collect(Collectors.joining(\" \")));"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD) instanceof HistoryCommand);"
+        "content": "        assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD + \" 3\") instanceof HistoryCommand);"
+        "content": "    }"
       },
       {
         "lineNumber": 129,
@@ -78951,42 +80926,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "            parser.parseCommand(\"histories\");"
+        "content": "    public void parseCommand_findAlias() throws Exception {"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new AssertionError(\"The expected ParseException was not thrown.\");"
+        "content": "        List\u003cString\u003e keywords \u003d Arrays.asList(\"foo\", \"bar\", \"baz\");"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (ParseException pe) {"
+        "content": "        FindCommand command \u003d (FindCommand) parser.parseCommand("
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "            assertEquals(MESSAGE_UNKNOWN_COMMAND, pe.getMessage());"
+        "content": "                FindCommand.COMMAND_ALIAS + \" \" + keywords.stream().collect(Collectors.joining(\" \")));"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);"
       },
       {
         "lineNumber": 136,
@@ -79014,112 +80989,112 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_historyAlias() throws Exception {"
+        "content": "    public void parseCommand_help() throws Exception {"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_ALIAS) instanceof HistoryCommand);"
+        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD) instanceof HelpCommand);"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_ALIAS + \" 3\") instanceof HistoryCommand);"
+        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD + \" 3\") instanceof HelpCommand);"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": ""
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "            parser.parseCommand(\"histories\");"
+        "content": "    @Test"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new AssertionError(\"The expected ParseException was not thrown.\");"
+        "content": "    public void parseCommand_history() throws Exception {"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (ParseException pe) {"
+        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD) instanceof HistoryCommand);"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "            assertEquals(MESSAGE_UNKNOWN_COMMAND, pe.getMessage());"
+        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD + \" 3\") instanceof HistoryCommand);"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        try {"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            parser.parseCommand(\"histories\");"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "            throw new AssertionError(\"The expected ParseException was not thrown.\");"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_list() throws Exception {"
+        "content": "        } catch (ParseException pe) {"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);"
+        "content": "            assertEquals(MESSAGE_UNKNOWN_COMMAND, pe.getMessage());"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD + \" 3\") instanceof ListCommand);"
+        "content": "        }"
       },
       {
         "lineNumber": 155,
@@ -79147,70 +81122,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_listAlias() throws Exception {"
+        "content": "    public void parseCommand_historyAlias() throws Exception {"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_ALIAS) instanceof ListCommand);"
+        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_ALIAS) instanceof HistoryCommand);"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_ALIAS + \" 3\") instanceof ListCommand);"
+        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_ALIAS + \" 3\") instanceof HistoryCommand);"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        try {"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "            parser.parseCommand(\"histories\");"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_receipt() throws Exception {"
+        "content": "            throw new AssertionError(\"The expected ParseException was not thrown.\");"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "        ReceiptCommand command \u003d (ReceiptCommand) parser.parseCommand("
+        "content": "        } catch (ParseException pe) {"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "                ReceiptCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+        "content": "            assertEquals(MESSAGE_UNKNOWN_COMMAND, pe.getMessage());"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new ReceiptCommand(INDEX_FIRST_PERSON), command);"
+        "content": "        }"
       },
       {
         "lineNumber": 168,
@@ -79238,210 +81213,210 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_receiptAlias() throws Exception {"
+        "content": "    public void parseCommand_list() throws Exception {"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "        ReceiptCommand command \u003d (ReceiptCommand) parser.parseCommand("
+        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "                ReceiptCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD + \" 3\") instanceof ListCommand);"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new ReceiptCommand(INDEX_FIRST_PERSON), command);"
+        "content": "    }"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    public void parseCommand_listAlias() throws Exception {"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_select() throws Exception {"
+        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_ALIAS) instanceof ListCommand);"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "        SelectCommand command \u003d (SelectCommand) parser.parseCommand("
+        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_ALIAS + \" 3\") instanceof ListCommand);"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "                SelectCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+        "content": "    }"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);"
+        "content": ""
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    @Test"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void parseCommand_medicalCertificate() throws Exception {"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        MedicalCertificateCommand command \u003d (MedicalCertificateCommand) parser.parseCommand("
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_selectAlias() throws Exception {"
+        "content": "                MedicalCertificateCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "        SelectCommand command \u003d (SelectCommand) parser.parseCommand("
+        "content": "        assertEquals(new MedicalCertificateCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "                SelectCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+        "content": "    }"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);"
+        "content": ""
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    @Test"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void parseCommand_medicalCertificateAlias() throws Exception {"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "        MedicalCertificateCommand command \u003d (MedicalCertificateCommand) parser.parseCommand("
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_redoCommandWord_returnsRedoCommand() throws Exception {"
+        "content": "                MedicalCertificateCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_WORD) instanceof RedoCommand);"
+        "content": "        assertEquals(new MedicalCertificateCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(\"redo 1\") instanceof RedoCommand);"
+        "content": "    }"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    public void parseCommand_receipt() throws Exception {"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_redoCommandAlias_returnsRedoCommand() throws Exception {"
+        "content": "        ReceiptCommand command \u003d (ReceiptCommand) parser.parseCommand("
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_ALIAS) instanceof RedoCommand);"
+        "content": "                ReceiptCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_ALIAS + \" 1\") instanceof RedoCommand);"
+        "content": "        assertEquals(new ReceiptCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 201,
@@ -79469,171 +81444,500 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_undoCommandWord_returnsUndoCommand() throws Exception {"
+        "content": "    public void parseCommand_receiptAlias() throws Exception {"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD) instanceof UndoCommand);"
+        "content": "        ReceiptCommand command \u003d (ReceiptCommand) parser.parseCommand("
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(\"undo 3\") instanceof UndoCommand);"
+        "content": "                ReceiptCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertEquals(new ReceiptCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_undoCommandAlias_returnsUndoCommand() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_ALIAS) instanceof UndoCommand);"
+        "content": "    public void parseCommand_referralLetter() throws Exception {"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_ALIAS + \" 3\") instanceof UndoCommand);"
+        "content": "        ReferralLetterCommand command \u003d (ReferralLetterCommand) parser.parseCommand("
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                ReferralLetterCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertEquals(new ReferralLetterCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_unrecognisedInput_throwsParseException() throws Exception {"
+        "content": ""
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(ParseException.class);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expectMessage(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+        "content": "    public void parseCommand_referralLetterAlias() throws Exception {"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "        parser.parseCommand(\"\");"
+        "content": "        ReferralLetterCommand command \u003d (ReferralLetterCommand) parser.parseCommand("
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                ReferralLetterCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertEquals(new ReferralLetterCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_unknownCommand_throwsParseException() throws Exception {"
+        "content": ""
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(ParseException.class);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expectMessage(MESSAGE_UNKNOWN_COMMAND);"
+        "content": "    public void parseCommand_select() throws Exception {"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "        parser.parseCommand(\"unknownCommand\");"
+        "content": "        SelectCommand command \u003d (SelectCommand) parser.parseCommand("
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                SelectCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_selectAlias() throws Exception {"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        SelectCommand command \u003d (SelectCommand) parser.parseCommand("
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                SelectCommand.COMMAND_ALIAS + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_redoCommandWord_returnsRedoCommand() throws Exception {"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_WORD) instanceof RedoCommand);"
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(\"redo 1\") instanceof RedoCommand);"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_redoCommandAlias_returnsRedoCommand() throws Exception {"
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_ALIAS) instanceof RedoCommand);"
+      },
+      {
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_ALIAS + \" 1\") instanceof RedoCommand);"
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 251,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_undoCommandWord_returnsUndoCommand() throws Exception {"
+      },
+      {
+        "lineNumber": 252,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD) instanceof UndoCommand);"
+      },
+      {
+        "lineNumber": 253,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(\"undo 3\") instanceof UndoCommand);"
+      },
+      {
+        "lineNumber": 254,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 255,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 256,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 257,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_undoCommandAlias_returnsUndoCommand() throws Exception {"
+      },
+      {
+        "lineNumber": 258,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_ALIAS) instanceof UndoCommand);"
+      },
+      {
+        "lineNumber": 259,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_ALIAS + \" 3\") instanceof UndoCommand);"
+      },
+      {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_unrecognisedInput_throwsParseException() throws Exception {"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(ParseException.class);"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expectMessage(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        parser.parseCommand(\"\");"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_unknownCommand_throwsParseException() throws Exception {"
+      },
+      {
+        "lineNumber": 271,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(ParseException.class);"
+      },
+      {
+        "lineNumber": 272,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expectMessage(MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 273,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        parser.parseCommand(\"unknownCommand\");"
+      },
+      {
+        "lineNumber": 274,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
@@ -79642,7 +81946,7 @@
     ],
     "authorContributionMap": {
       "blewjy": 6,
-      "-": 222
+      "-": 269
     }
   },
   {

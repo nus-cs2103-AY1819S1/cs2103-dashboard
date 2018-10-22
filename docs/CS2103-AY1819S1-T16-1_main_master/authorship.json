@@ -30246,14 +30246,14 @@
         "author": {
           "gitId": "bannified"
         },
-        "content": "    public static final String MESSAGE_SAVE_EXCESS \u003d \" with %1$s in excess\";"
+        "content": "    public static final String MESSAGE_SAVE_EXCESS \u003d \" with $%1$s in excess\";"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "bannified"
         },
-        "content": "    public static final String MESSAGE_SAVE_DIFFERENCE \u003d \" with %1$s left to completion\";"
+        "content": "    public static final String MESSAGE_SAVE_DIFFERENCE \u003d \" with $%1$s left to completion\";"
       },
       {
         "lineNumber": 34,
@@ -30524,16 +30524,16 @@
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "leongshengmin"
+          "gitId": "bannified"
         },
-        "content": "            if (wishSavedDifference.value \u003c 0) {"
+        "content": "            if (wishSavedDifference.value \u003e\u003d 0) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "bannified"
         },
-        "content": "                differenceString \u003d String.format(MESSAGE_SAVE_EXCESS, wishSavedDifference);"
+        "content": "                differenceString \u003d String.format(MESSAGE_SAVE_EXCESS, wishSavedDifference.getAbsoluteAmount());"
       },
       {
         "lineNumber": 74,
@@ -30726,9 +30726,8 @@
       }
     ],
     "authorContributionMap": {
-      "bannified": 15,
-      "dioptrique": 84,
-      "leongshengmin": 1
+      "bannified": 16,
+      "dioptrique": 84
     }
   },
   {
@@ -49099,9 +49098,9 @@
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "leongshengmin"
+          "gitId": "bannified"
         },
-        "content": "        return Amount.add(new Amount(savedAmount.toString()), new Amount(price.toString()));"
+        "content": "        return Amount.add(new Amount(savedAmount.toString()), new Amount(\"-\" + price.toString()));"
       },
       {
         "lineNumber": 127,
@@ -49441,11 +49440,10 @@
       }
     ],
     "authorContributionMap": {
-      "bannified": 54,
+      "bannified": 55,
       "lionelat": 5,
       "dioptrique": 26,
-      "-": 88,
-      "leongshengmin": 1
+      "-": 88
     }
   },
   {
@@ -85551,16 +85549,16 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "leongshengmin"
+          "gitId": "bannified"
         },
-        "content": "        if (wishSavedDifference.value \u003c 0) {"
+        "content": "        if (wishSavedDifference.value \u003e\u003d 0) {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "bannified"
         },
-        "content": "            differenceString \u003d String.format(MESSAGE_SAVE_EXCESS, wishSavedDifference);"
+        "content": "            differenceString \u003d String.format(MESSAGE_SAVE_EXCESS, wishSavedDifference.getAbsoluteAmount());"
       },
       {
         "lineNumber": 59,
@@ -85789,16 +85787,16 @@
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "leongshengmin"
+          "gitId": "bannified"
         },
-        "content": "        if (wishSavedDifference.value \u003c 0) {"
+        "content": "        if (wishSavedDifference.value \u003e\u003d 0) {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "bannified"
         },
-        "content": "            differenceString \u003d String.format(MESSAGE_SAVE_EXCESS, wishSavedDifference);"
+        "content": "            differenceString \u003d String.format(MESSAGE_SAVE_EXCESS, wishSavedDifference.getAbsoluteAmount());"
       },
       {
         "lineNumber": 93,
@@ -86258,9 +86256,9 @@
       {
         "lineNumber": 158,
         "author": {
-          "gitId": "leongshengmin"
+          "gitId": "bannified"
         },
-        "content": "        if (wishSavedDifference.value \u003c 0) {"
+        "content": "        if (wishSavedDifference.value \u003e\u003d 0) {"
       },
       {
         "lineNumber": 159,
@@ -86726,9 +86724,9 @@
       }
     ],
     "authorContributionMap": {
-      "bannified": 35,
+      "bannified": 38,
       "dioptrique": 178,
-      "leongshengmin": 11
+      "leongshengmin": 8
     }
   },
   {
