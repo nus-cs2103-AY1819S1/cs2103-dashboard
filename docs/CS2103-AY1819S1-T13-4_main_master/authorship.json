@@ -32602,9 +32602,9 @@
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "-"
+          "gitId": "BugEyedBug"
         },
-        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
+        "content": "\u003d\u003d\u003d Undoing commands : `undo`"
       },
       {
         "lineNumber": 127,
@@ -32616,16 +32616,16 @@
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "-"
+          "gitId": "BugEyedBug"
         },
-        "content": "Exits the program. +"
+        "content": "Reverts changes made by the last command given. +"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `exit`"
+        "content": "Format: `undo`"
       },
       {
         "lineNumber": 130,
@@ -32637,9 +32637,9 @@
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "-"
+          "gitId": "BugEyedBug"
         },
-        "content": "\u003d\u003d\u003d Saving the data"
+        "content": "\u003d\u003d\u003d Redoing commands : `redo`"
       },
       {
         "lineNumber": 132,
@@ -32651,16 +32651,16 @@
       {
         "lineNumber": 133,
         "author": {
-          "gitId": "alexkmj"
+          "gitId": "BugEyedBug"
         },
-        "content": "CAP tracker data are saved in the hard disk automatically after any command that changes the data. +"
+        "content": "Reverts changes made by the undo command. +"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "There is no need to save manually."
+        "content": "Format: `redo`"
       },
       {
         "lineNumber": 135,
@@ -32674,7 +32674,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d FAQ"
+        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
       },
       {
         "lineNumber": 137,
@@ -32686,16 +32686,16 @@
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "alexkmj"
+          "gitId": "-"
         },
-        "content": "*Q*: I entered the wrong grade into my module. How do I change it? +"
+        "content": "Exits the program. +"
       },
       {
         "lineNumber": 139,
         "author": {
-          "gitId": "alexkmj"
+          "gitId": "-"
         },
-        "content": "*A*: Use the `edit` command to input the correct information of the module - `edit MODULE_CODE [MODULE_CODE] [YEAR SEMESTER] [GRADE]`"
+        "content": "Format: `exit`"
       },
       {
         "lineNumber": 140,
@@ -32709,7 +32709,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Command Summary"
+        "content": "\u003d\u003d\u003d Saving the data"
       },
       {
         "lineNumber": 142,
@@ -32723,52 +32723,122 @@
         "author": {
           "gitId": "alexkmj"
         },
-        "content": "* *Add* `add MODULE_CODE YEAR SEMESTER [GRADE]` +"
+        "content": "CAP tracker data are saved in the hard disk automatically after any command that changes the data. +"
       },
       {
         "lineNumber": 144,
         "author": {
-          "gitId": "alexkmj"
+          "gitId": "-"
         },
-        "content": "e.g. `add CS2103 1 2 A+`"
+        "content": "There is no need to save manually."
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "alexkmj"
+          "gitId": "-"
         },
-        "content": "* *Delete* : `delete MODULE_CODE` +"
+        "content": ""
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "alexkmj"
+          "gitId": "-"
         },
-        "content": "e.g. `delete CS2103`"
+        "content": "\u003d\u003d FAQ"
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "alexkmj"
+          "gitId": "-"
         },
-        "content": "* *Edit* : `edit MODULE_CODE [MODULE_CODE] [YEAR GRADE] [GRADE]` +"
+        "content": ""
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "alexkmj"
         },
-        "content": "e.g. `edit CS2103 2 1 CS`"
+        "content": "*Q*: I entered the wrong grade into my module. How do I change it? +"
       },
       {
         "lineNumber": 149,
+        "author": {
+          "gitId": "alexkmj"
+        },
+        "content": "*A*: Use the `edit` command to input the correct information of the module - `edit MODULE_CODE [MODULE_CODE] [YEAR SEMESTER] [GRADE]`"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Command Summary"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "alexkmj"
+        },
+        "content": "* *Add* `add MODULE_CODE YEAR SEMESTER [GRADE]` +"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "alexkmj"
+        },
+        "content": "e.g. `add CS2103 1 2 A+`"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "alexkmj"
+        },
+        "content": "* *Delete* : `delete MODULE_CODE` +"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "alexkmj"
+        },
+        "content": "e.g. `delete CS2103`"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "alexkmj"
+        },
+        "content": "* *Edit* : `edit MODULE_CODE [MODULE_CODE] [YEAR GRADE] [GRADE]` +"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "alexkmj"
+        },
+        "content": "e.g. `edit CS2103 2 1 CS`"
+      },
+      {
+        "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
         "content": "* *List* : `list`"
       },
       {
-        "lineNumber": 150,
+        "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
@@ -32777,7 +32847,8 @@
     ],
     "authorContributionMap": {
       "alexkmj": 44,
-      "-": 100,
+      "BugEyedBug": 4,
+      "-": 106,
       "jeremiah-ang": 6
     }
   },
@@ -38234,6 +38305,456 @@
     ],
     "authorContributionMap": {
       "jeremiah-ang": 46
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/commands/RedoModuleCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.model.Model.PREDICATE_SHOW_ALL_MODULES;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": " * Reverts the {@code model}\u0027s transcript to its previously undone state."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "public class RedoModuleCommand extends Command {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"redo\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Redo success!\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public static final String MESSAGE_FAILURE \u003d \"No more commands to redo!\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        if (!model.canRedoTranscript()) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "            throw new CommandException(MESSAGE_FAILURE);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        model.redoTranscript();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        model.updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        return new CommandResult(MESSAGE_SUCCESS);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BugEyedBug": 31
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/commands/UndoModuleCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.model.Model.PREDICATE_SHOW_ALL_MODULES;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": " * Reverts the {@code model}\u0027s transcript to its previous state."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "public class UndoModuleCommand extends Command {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"undo\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Undo success!\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public static final String MESSAGE_FAILURE \u003d \"No more commands to undo!\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        if (!model.canUndoTranscript()) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "            throw new CommandException(MESSAGE_FAILURE);"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        model.undoTranscript();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        model.updateFilteredModuleList(PREDICATE_SHOW_ALL_MODULES);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        return new CommandResult(MESSAGE_SUCCESS);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BugEyedBug": 31
     }
   },
   {
@@ -73077,6 +73598,1767 @@
       "jeremyyew": 1,
       "alexkmj": 261,
       "jeremiah-ang": 2
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/commands/CommandTestUtil.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.index.Index;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.AddressBook;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.module.Module;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.testutil.EditPersonDescriptorBuilder;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Contains helper methods for testing commands."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class CommandTestUtil {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_NAME_AMY \u003d \"Amy Bee\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_NAME_BOB \u003d \"Bob Choo\";"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_PHONE_AMY \u003d \"11111111\";"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_PHONE_BOB \u003d \"22222222\";"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_EMAIL_AMY \u003d \"amy@example.com\";"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_EMAIL_BOB \u003d \"bob@example.com\";"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_ADDRESS_AMY \u003d \"Block 312, Amy Street 1\";"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_ADDRESS_BOB \u003d \"Block 123, Bobby Street 3\";"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_TAG_HUSBAND \u003d \"husband\";"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String VALID_TAG_FRIEND \u003d \"friend\";"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String NAME_DESC_AMY \u003d \" \" + PREFIX_NAME + VALID_NAME_AMY;"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String NAME_DESC_BOB \u003d \" \" + PREFIX_NAME + VALID_NAME_BOB;"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String PHONE_DESC_AMY \u003d \" \" + PREFIX_PHONE + VALID_PHONE_AMY;"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String PHONE_DESC_BOB \u003d \" \" + PREFIX_PHONE + VALID_PHONE_BOB;"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String EMAIL_DESC_AMY \u003d \" \" + PREFIX_EMAIL + VALID_EMAIL_AMY;"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String EMAIL_DESC_BOB \u003d \" \" + PREFIX_EMAIL + VALID_EMAIL_BOB;"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String ADDRESS_DESC_AMY \u003d \" \" + PREFIX_ADDRESS + VALID_ADDRESS_AMY;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String ADDRESS_DESC_BOB \u003d \" \" + PREFIX_ADDRESS + VALID_ADDRESS_BOB;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String TAG_DESC_FRIEND \u003d \" \" + PREFIX_TAG + VALID_TAG_FRIEND;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String TAG_DESC_HUSBAND \u003d \" \" + PREFIX_TAG + VALID_TAG_HUSBAND;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String INVALID_NAME_DESC \u003d \" \" + PREFIX_NAME + \"James\u0026\"; // \u0027\u0026\u0027 not allowed in names"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String INVALID_PHONE_DESC \u003d \" \" + PREFIX_PHONE + \"911a\"; // \u0027a\u0027 not allowed in phones"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String INVALID_EMAIL_DESC \u003d \" \" + PREFIX_EMAIL + \"bob!yahoo\"; // missing \u0027@\u0027 symbol"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String INVALID_ADDRESS_DESC \u003d \" \" + PREFIX_ADDRESS; // empty string not allowed for addresses"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String INVALID_TAG_DESC \u003d \" \" + PREFIX_TAG + \"hubby*\"; // \u0027*\u0027 not allowed in tags"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String PREAMBLE_WHITESPACE \u003d \"\\t  \\r  \\n\";"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String PREAMBLE_NON_EMPTY \u003d \"NonEmptyPreamble\";"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final EditCommand.EditPersonDescriptor DESC_AMY;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final EditCommand.EditPersonDescriptor DESC_BOB;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    static {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        DESC_AMY \u003d new EditPersonDescriptorBuilder().withName(VALID_NAME_AMY)"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .withPhone(VALID_PHONE_AMY).withEmail(VALID_EMAIL_AMY).withAddress(VALID_ADDRESS_AMY)"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .withTags(VALID_TAG_FRIEND).build();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        DESC_BOB \u003d new EditPersonDescriptorBuilder().withName(VALID_NAME_BOB)"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .withPhone(VALID_PHONE_BOB).withEmail(VALID_EMAIL_BOB).withAddress(VALID_ADDRESS_BOB)"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .withTags(VALID_TAG_HUSBAND, VALID_TAG_FRIEND).build();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Executes the given {@code command}, confirms that \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * - the result message matches {@code expectedMessage} \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * - the {@code actualModel} matches {@code expectedModel} \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * - the {@code actualCommandHistory} remains unchanged."
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertCommandSuccess(Command command, Model actualModel, CommandHistory actualCommandHistory,"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            String expectedMessage, Model expectedModel) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        CommandHistory expectedCommandHistory \u003d new CommandHistory(actualCommandHistory);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            CommandResult result \u003d command.execute(actualModel, actualCommandHistory);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertEquals(expectedMessage, result.feedbackToUser);"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertEquals(expectedModel, actualModel);"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertEquals(expectedCommandHistory, actualCommandHistory);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (CommandException ce) {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new AssertionError(\"Execution of command should not fail.\", ce);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Executes the given {@code command}, confirms that \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * - a {@code CommandException} is thrown \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * - the CommandException message matches {@code expectedMessage} \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * - the address book and the filtered person list in the {@code actualModel} remain unchanged \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * - {@code actualCommandHistory} remains unchanged."
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertCommandFailure(Command command, Model actualModel, CommandHistory actualCommandHistory,"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            String expectedMessage) {"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // we are unable to defensively copy the model for comparison later, so we can"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // only do so by copying its components."
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        AddressBook expectedAddressBook \u003d new AddressBook(actualModel.getAddressBook());"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cPerson\u003e expectedFilteredList \u003d new ArrayList\u003c\u003e(actualModel.getFilteredPersonList());"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        CommandHistory expectedCommandHistory \u003d new CommandHistory(actualCommandHistory);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            command.execute(actualModel, actualCommandHistory);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new AssertionError(\"The expected CommandException was not thrown.\");"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (CommandException e) {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertEquals(expectedMessage, e.getMessage());"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertEquals(expectedAddressBook, actualModel.getAddressBook());"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertEquals(expectedFilteredList, actualModel.getFilteredPersonList());"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertEquals(expectedCommandHistory, actualCommandHistory);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Updates {@code model}\u0027s filtered list to show only the person at the given {@code targetIndex} in the"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * {@code model}\u0027s address book."
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void showPersonAtIndex(Model model, Index targetIndex) {"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(targetIndex.getZeroBased() \u003c model.getFilteredPersonList().size());"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Person person \u003d model.getFilteredPersonList().get(targetIndex.getZeroBased());"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final String[] splitName \u003d person.getName().fullName.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model.updateFilteredPersonList(new NameContainsKeywordsPredicate(Arrays.asList(splitName[0])));"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(1, model.getFilteredPersonList().size());"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Deletes the first person in {@code model}\u0027s filtered list from {@code model}\u0027s address book."
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void deleteFirstPerson(Model model) {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Person firstPerson \u003d model.getFilteredPersonList().get(0);"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model.deletePerson(firstPerson);"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model.commitAddressBook();"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "     * Deletes the first module in {@code model}\u0027s filtered list from {@code model}\u0027s transcript."
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public static void deleteFirstModule(Model model) {"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        Module firstModule \u003d model.getFilteredModuleList().get(0);"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        model.deleteModule(firstModule);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        model.commitTranscript();"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BugEyedBug": 9,
+      "-": 141
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/commands/RedoModuleCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.deleteFirstModule;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.testutil.TypicalModules.getTypicalTranscript;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import org.junit.Before;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "public class RedoModuleCommandTest {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    private final Model model \u003d new ModelManager(getTypicalTranscript(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    private final Model expectedModel \u003d new ModelManager(getTypicalTranscript(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    private final CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    @Before"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public void setUp() {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        // set up of both models\u0027 undo/redo history"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        deleteFirstModule(model);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        deleteFirstModule(model);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        model.undoTranscript();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        model.undoTranscript();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        deleteFirstModule(expectedModel);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        deleteFirstModule(expectedModel);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        expectedModel.undoTranscript();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        expectedModel.undoTranscript();"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public void execute() {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        // multiple redoable states in model"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        expectedModel.redoTranscript();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        assertCommandSuccess(new RedoModuleCommand(), model, commandHistory,"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "                RedoModuleCommand.MESSAGE_SUCCESS, expectedModel);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        // single redoable state in model"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        expectedModel.redoTranscript();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        assertCommandSuccess(new RedoModuleCommand(), model, commandHistory,"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "                RedoModuleCommand.MESSAGE_SUCCESS, expectedModel);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        // no redoable state in model"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        assertCommandFailure(new RedoModuleCommand(), model, commandHistory, RedoModuleCommand.MESSAGE_FAILURE);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BugEyedBug": 51
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/commands/UndoModuleCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandFailure;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.deleteFirstModule;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import static seedu.address.testutil.TypicalModules.getTypicalTranscript;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import org.junit.Before;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "public class UndoModuleCommandTest {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    private final Model model \u003d new ModelManager(getTypicalTranscript(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    private final Model expectedModel \u003d new ModelManager(getTypicalTranscript(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    private final CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    @Before"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public void setUp() {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        // set up of models\u0027 undo/redo history"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        deleteFirstModule(model);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        deleteFirstModule(model);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        deleteFirstModule(expectedModel);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        deleteFirstModule(expectedModel);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    public void execute() {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        // multiple undoable states in model"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        expectedModel.undoTranscript();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        assertCommandSuccess(new UndoModuleCommand(), model, commandHistory,"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "                UndoModuleCommand.MESSAGE_SUCCESS, expectedModel);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        // single undoable state in model"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        expectedModel.undoTranscript();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        assertCommandSuccess(new UndoModuleCommand(), model, commandHistory,"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "                UndoModuleCommand.MESSAGE_SUCCESS, expectedModel);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        // no undoable states in model"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "        assertCommandFailure(new UndoModuleCommand(), model, commandHistory, UndoModuleCommand.MESSAGE_FAILURE);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "BugEyedBug"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "BugEyedBug": 47
     }
   },
   {

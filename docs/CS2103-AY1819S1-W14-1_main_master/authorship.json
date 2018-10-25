@@ -34892,6 +34892,1128 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/model/patient/Patient.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.model.patient;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Objects;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Optional;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Set;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.appointment.Appointment;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.doctor.Doctor;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Address;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Email;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Name;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Phone;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.tag.Tag;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "//@@author iamjackslayer"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": " * Represents a patient in ClinicIO"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": " * Guarantees: Details inherited from Person, as well as NRIC must be present and not null."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": " * A patient may or may not have a preferredDoctor, consultation, medical history and appointment."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "public class Patient extends Person {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    private Optional\u003cDoctor\u003e preferredDoctor \u003d Optional.empty();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    private Optional\u003cAppointment\u003e appointment \u003d Optional.empty();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Every field must be present and not null."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public Patient(Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        super(name, phone, email, address, tags);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Contructs a patient from a given person."
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * @param person"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public static Patient buildFromPerson(Person person) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Name name \u003d person.getName();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Phone phone \u003d person.getPhone();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Email email \u003d person.getEmail();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Address address \u003d person.getAddress();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Set\u003cTag\u003e tags \u003d person.getTags();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        return new Patient(name, phone, email, address, tags);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Returns the patient\u0027s preferred doctor wrapped in {@link Optional}. The patient may not have one."
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * @return an Optional {@link Doctor}."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public Optional\u003cDoctor\u003e getPreferredDoctor() {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        return preferredDoctor;"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Returns patient\u0027s appointment. The patient may not have one."
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * @return an Optional {@link Appointment}"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public Optional\u003cAppointment\u003e getAppointment() {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        return appointment;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Assigns a specific doctor for the patient."
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * @param doctor"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public void setPreferredDoctor(Doctor doctor) {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        requireNonNull(doctor);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        preferredDoctor \u003d Optional.of(doctor);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Sets an appointment for the patient."
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * @param appointment"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public void setAppointment(Appointment appointment) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        requireNonNull(appointment);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        this.appointment \u003d Optional.of(appointment);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Checks if the patient has preferred doctor."
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public boolean hasPreferredDoctor() {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        return preferredDoctor.isPresent();"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Checks if patient has an appointment."
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public boolean hasAppointment() {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        return appointment.isPresent();"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Returns true if both patients of the same name have at least one other identity field that is the same."
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * This defines a weaker notion of equality between two patients."
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public boolean isSamePerson(Person otherPerson) {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        if (!(otherPerson instanceof Patient)) {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        if (otherPerson \u003d\u003d this) {"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Patient otherPatient \u003d (Patient) otherPerson;"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        return otherPatient !\u003d null"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getName().equals(getName())"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 (otherPatient.getPhone().equals(getPhone()) || otherPatient.getEmail().equals(getEmail()))"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getPreferredDoctor().equals(getPreferredDoctor())"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getAppointment().equals(getAppointment());"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * Returns true if both patients have the same identity and data fields."
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     * This defines a stronger notion of equality between two patients."
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        if (other \u003d\u003d this) {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        if (!(other instanceof Patient)) {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Patient otherPatient \u003d (Patient) other;"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        return otherPatient.getName().equals(getName())"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getPhone().equals(getPhone())"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getEmail().equals(getEmail())"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getAddress().equals(getAddress())"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getTags().equals(getTags())"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getPreferredDoctor().equals(getPreferredDoctor())"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "                \u0026\u0026 otherPatient.getAppointment().equals(getAppointment());"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    public int hashCode() {"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        // use this method for custom fields hashing instead of implementing your own"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Optional\u003cDoctor\u003e preferredDoctor \u003d getPreferredDoctor();"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Optional\u003cAppointment\u003e appointment \u003d getAppointment();"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Name name \u003d getName();"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Phone phone \u003d getPhone();"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Email email \u003d getEmail();"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Address address \u003d getAddress();"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        Set\u003cTag\u003e tags \u003d getTags();"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "        return Objects.hash(name, phone, email, address, tags, preferredDoctor, appointment);"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "iamjackslayer"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "iamjackslayer": 140,
+      "-": 19
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/model/patientqueue/MainQueue.java",
     "lines": [
       {
@@ -62760,619 +63882,759 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Person;"
+        "content": "import seedu.address.model.patient.Patient;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.model.person.Person;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": " * A utility class containing a list of {@code Person} objects to be used in tests."
+        "content": "/**"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * A utility class containing a list of {@code Person} objects to be used in tests."
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "public class TypicalPersons {"
+        "content": " */"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class TypicalPersons {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person ALICE \u003d new PersonBuilder().withName(\"Alice Pauline\")"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withAddress(\"123, Jurong West Ave 6, #08-111\").withEmail(\"alice@example.com\")"
+        "content": "    public static final Person ALICE \u003d new PersonBuilder().withName(\"Alice Pauline\")"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withPhone(\"94351253\")"
+        "content": "            .withAddress(\"123, Jurong West Ave 6, #08-111\").withEmail(\"alice@example.com\")"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withTags(\"friends\").build();"
+        "content": "            .withPhone(\"94351253\")"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person BENSON \u003d new PersonBuilder().withName(\"Benson Meier\")"
+        "content": "            .withTags(\"friends\").build();"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withAddress(\"311, Clementi Ave 2, #02-25\")"
+        "content": "    public static final Person BENSON \u003d new PersonBuilder().withName(\"Benson Meier\")"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(\"johnd@example.com\").withPhone(\"98765432\")"
+        "content": "            .withAddress(\"311, Clementi Ave 2, #02-25\")"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withTags(\"owesMoney\", \"friends\").build();"
+        "content": "            .withEmail(\"johnd@example.com\").withPhone(\"98765432\")"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person CARL \u003d new PersonBuilder().withName(\"Carl Kurz\").withPhone(\"95352563\")"
+        "content": "            .withTags(\"owesMoney\", \"friends\").build();"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(\"heinz@example.com\").withAddress(\"wall street\").build();"
+        "content": "    public static final Person CARL \u003d new PersonBuilder().withName(\"Carl Kurz\").withPhone(\"95352563\")"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person DANIEL \u003d new PersonBuilder().withName(\"Daniel Meier\").withPhone(\"87652533\")"
+        "content": "            .withEmail(\"heinz@example.com\").withAddress(\"wall street\").build();"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(\"cornelia@example.com\").withAddress(\"10th street\").withTags(\"friends\").build();"
+        "content": "    public static final Person DANIEL \u003d new PersonBuilder().withName(\"Daniel Meier\").withPhone(\"87652533\")"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person ELLE \u003d new PersonBuilder().withName(\"Elle Meyer\").withPhone(\"9482224\")"
+        "content": "            .withEmail(\"cornelia@example.com\").withAddress(\"10th street\").withTags(\"friends\").build();"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(\"werner@example.com\").withAddress(\"michegan ave\").build();"
+        "content": "    public static final Person ELLE \u003d new PersonBuilder().withName(\"Elle Meyer\").withPhone(\"9482224\")"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person FIONA \u003d new PersonBuilder().withName(\"Fiona Kunz\").withPhone(\"9482427\")"
+        "content": "            .withEmail(\"werner@example.com\").withAddress(\"michegan ave\").build();"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(\"lydia@example.com\").withAddress(\"little tokyo\").build();"
+        "content": "    public static final Person FIONA \u003d new PersonBuilder().withName(\"Fiona Kunz\").withPhone(\"9482427\")"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person GEORGE \u003d new PersonBuilder().withName(\"George Best\").withPhone(\"9482442\")"
+        "content": "            .withEmail(\"lydia@example.com\").withAddress(\"little tokyo\").build();"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(\"anna@example.com\").withAddress(\"4th street\").build();"
+        "content": "    public static final Person GEORGE \u003d new PersonBuilder().withName(\"George Best\").withPhone(\"9482442\")"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            .withEmail(\"anna@example.com\").withAddress(\"4th street\").build();"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Manually added"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person HOON \u003d new PersonBuilder().withName(\"Hoon Meier\").withPhone(\"8482424\")"
+        "content": "    // Manually added"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(\"stefan@example.com\").withAddress(\"little india\").build();"
+        "content": "    public static final Person HOON \u003d new PersonBuilder().withName(\"Hoon Meier\").withPhone(\"8482424\")"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person IDA \u003d new PersonBuilder().withName(\"Ida Mueller\").withPhone(\"8482131\")"
+        "content": "            .withEmail(\"stefan@example.com\").withAddress(\"little india\").build();"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(\"hans@example.com\").withAddress(\"chicago ave\").build();"
+        "content": "    public static final Person IDA \u003d new PersonBuilder().withName(\"Ida Mueller\").withPhone(\"8482131\")"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            .withEmail(\"hans@example.com\").withAddress(\"chicago ave\").build();"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Manually added - Person\u0027s details found in {@code CommandTestUtil}"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person AMY \u003d new PersonBuilder().withName(VALID_NAME_AMY).withPhone(VALID_PHONE_AMY)"
+        "content": "    // Manually added - Person\u0027s details found in {@code CommandTestUtil}"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withEmail(VALID_EMAIL_AMY).withAddress(VALID_ADDRESS_AMY).withTags(VALID_TAG_FRIEND).build();"
+        "content": "    public static final Person AMY \u003d new PersonBuilder().withName(VALID_NAME_AMY).withPhone(VALID_PHONE_AMY)"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person BOB \u003d new PersonBuilder().withName(VALID_NAME_BOB).withPhone(VALID_PHONE_BOB)"
+        "content": "            .withEmail(VALID_EMAIL_AMY).withAddress(VALID_ADDRESS_AMY).withTags(VALID_TAG_FRIEND).build();"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "jjlee050"
+          "gitId": "-"
         },
-        "content": "            .withEmail(VALID_EMAIL_BOB).withAddress(VALID_ADDRESS_BOB)"
+        "content": "    public static final Person BOB \u003d new PersonBuilder().withName(VALID_NAME_BOB).withPhone(VALID_PHONE_BOB)"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "jjlee050"
+          "gitId": "-"
         },
-        "content": "            .withTags(VALID_TAG_HUSBAND, VALID_TAG_FRIEND)"
+        "content": "            .withEmail(VALID_EMAIL_BOB).withAddress(VALID_ADDRESS_BOB)"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "            .build();"
+        "content": "            .withTags(VALID_TAG_HUSBAND, VALID_TAG_FRIEND)"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            .build();"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Doctor ADAM \u003d new DoctorBuilder().withId(VALID_ID_ADAM).withName(VALID_NAME_ADAM)"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withPassword(VALID_HASH_PASSWORD_ADAM, true).build();"
+        "content": "    // Manually added (Patient)"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Doctor BEN \u003d new DoctorBuilder().withId(VALID_ID_BEN).withName(VALID_NAME_BEN)"
+        "content": "    public static final Patient ALICE_AS_PATIENT \u003d PatientBuilder.buildFromPerson(ALICE)"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "            .withPassword(VALID_HASH_PASSWORD_BEN, true).build();"
+        "content": "            .build();"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public static final Patient BENSON_AS_PATIENT \u003d PatientBuilder.buildFromPerson(BENSON)"
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "    // Appointments"
+        "content": "            .build();"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "    public static final Appointment AMY_APPT \u003d new AppointmentBuilder().withDate(2, 10, 2018)"
+        "content": "    public static final Patient CARL_AS_PATIENT \u003d PatientBuilder.buildFromPerson(CARL)"
       },
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "            .withTime(13, 00).withPerson(AMY).build();"
+        "content": "            .build();"
       },
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "    public static final Appointment BENSON_APPT \u003d new AppointmentBuilder().withDate(3, 10, 2018)"
+        "content": "    public static final Patient DANIEL_AS_PATIENT \u003d PatientBuilder.buildFromPerson(DANIEL)"
       },
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "            .withTime(17, 45).withPerson(BENSON).build();"
+        "content": "            .build();"
       },
       {
         "lineNumber": 77,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "    public static final Appointment CARL_APPT \u003d new AppointmentBuilder().withDate(2, 10, 2018)"
+        "content": "    public static final Patient ELLE_AS_PATIENT \u003d PatientBuilder.buildFromPerson(ELLE)"
       },
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "            .withTime(18, 00).withPerson(CARL).build();"
+        "content": "            .build();"
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    public static final Patient FIONA_AS_PATIENT \u003d PatientBuilder.buildFromPerson(FIONA)"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String KEYWORD_MATCHING_MEIER \u003d \"Meier\"; // A keyword that matches MEIER"
+        "content": "            .build();"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public static final Patient GEORGE_AS_PATIENT \u003d PatientBuilder.buildFromPerson(GEORGE)"
       },
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "jjlee050"
+          "gitId": "-"
         },
-        "content": "    private TypicalPersons() {"
+        "content": "            .build();"
       },
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "jjlee050"
+          "gitId": "-"
         },
-        "content": "    } // prevents instantiation"
+        "content": "    public static final Patient AMY_AS_PATIENT \u003d PatientBuilder.buildFromPerson(AMY)"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            .build();"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns an {@code AddressBook} with all the typical persons."
+        "content": "    // Manually added (Doctor)"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    public static final Doctor ADAM \u003d new DoctorBuilder().withId(VALID_ID_ADAM).withName(VALID_NAME_ADAM)"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static AddressBook getTypicalAddressBook() {"
+        "content": "            .withPassword(VALID_HASH_PASSWORD_ADAM, true).build();"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "        AddressBook ab \u003d new AddressBook();"
+        "content": "    public static final Doctor BEN \u003d new DoctorBuilder().withId(VALID_ID_BEN).withName(VALID_NAME_BEN)"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (Person person : getTypicalPersons()) {"
+        "content": "            .withPassword(VALID_HASH_PASSWORD_BEN, true).build();"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "            ab.addPerson(person);"
+        "content": ""
       },
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "        }"
+        "content": "    // Appointments"
       },
       {
         "lineNumber": 93,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "        for (Doctor doctor : getTypicalDoctors()) {"
+        "content": "    public static final Appointment AMY_APPT \u003d new AppointmentBuilder().withDate(2, 10, 2018)"
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "            ab.addDoctor(doctor);"
+        "content": "            .withTime(13, 00).withPerson(AMY).build();"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "        }"
+        "content": "    public static final Appointment BENSON_APPT \u003d new AppointmentBuilder().withDate(3, 10, 2018)"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "gingivitiss"
         },
-        "content": "        /*"
+        "content": "            .withTime(17, 45).withPerson(BENSON).build();"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "gingivitiss"
         },
-        "content": "        for (Appointment appointment : getTypicalAppointments()) {"
+        "content": "    public static final Appointment CARL_APPT \u003d new AppointmentBuilder().withDate(2, 10, 2018)"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "gingivitiss"
         },
-        "content": "            ab.addAppointment(appointment);"
+        "content": "            .withTime(18, 00).withPerson(CARL).build();"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "gingivitiss"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "        */"
+        "content": "    public static final String KEYWORD_MATCHING_MEIER \u003d \"Meier\"; // A keyword that matches MEIER"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "        return ab;"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "-"
+          "gitId": "jjlee050"
         },
-        "content": "    }"
+        "content": "    private TypicalPersons() {"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "-"
+          "gitId": "jjlee050"
         },
-        "content": ""
+        "content": "    } // prevents instantiation"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static List\u003cPerson\u003e getTypicalPersons() {"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new ArrayList\u003c\u003e(Arrays.asList(ALICE, BENSON, CARL, DANIEL, ELLE, FIONA, GEORGE));"
+        "content": "    /**"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     * Returns an {@code AddressBook} with all the typical persons."
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static List\u003cDoctor\u003e getTypicalDoctors() {"
+        "content": "    public static AddressBook getTypicalAddressBook() {"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new ArrayList\u003c\u003e(Arrays.asList(ADAM, BEN));"
+        "content": "        AddressBook ab \u003d new AddressBook();"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        for (Person person : getTypicalPersons()) {"
       },
       {
         "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ab.addPerson(person);"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (Doctor doctor : getTypicalDoctors()) {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ab.addDoctor(doctor);"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "        /*"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "        for (Appointment appointment : getTypicalAppointments()) {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "            ab.addAppointment(appointment);"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "        */"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return ab;"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static List\u003cPerson\u003e getTypicalPersons() {"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new ArrayList\u003c\u003e(Arrays.asList(ALICE, BENSON, CARL, DANIEL, ELLE, FIONA, GEORGE));"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static List\u003cDoctor\u003e getTypicalDoctors() {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new ArrayList\u003c\u003e(Arrays.asList(ADAM, BEN));"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 131,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": ""
       },
       {
-        "lineNumber": 112,
+        "lineNumber": 132,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": "    public static List\u003cAppointment\u003e getTypicalAppointments() {"
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 133,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": "        return new ArrayList\u003c\u003e(Arrays.asList(AMY_APPT, BENSON_APPT, CARL_APPT));"
       },
       {
-        "lineNumber": 114,
+        "lineNumber": 134,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 115,
+        "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
@@ -63380,9 +64642,9 @@
       }
     ],
     "authorContributionMap": {
-      "jjlee050": 4,
+      "jjlee050": 2,
       "gingivitiss": 18,
-      "-": 93
+      "-": 115
     }
   }
 ]

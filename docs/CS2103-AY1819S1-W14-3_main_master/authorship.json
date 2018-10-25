@@ -22368,7 +22368,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.VisitorInCommand;"
+        "content": "import seedu.address.logic.commands.VisitorinCommand;"
       },
       {
         "lineNumber": 28,
@@ -22872,14 +22872,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        case VisitorInCommand.COMMAND_WORD:"
+        "content": "        case VisitorinCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new VisitorInCommandParser().parse(arguments);"
+        "content": "            return new VisitorinCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 101,
@@ -37328,7 +37328,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    private final VisitorList visitorList \u003d new VisitorList();"
+        "content": "    private final VisitorList visitorList;"
       },
       {
         "lineNumber": 37,
@@ -37438,779 +37438,779 @@
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.visitorList \u003d new VisitorList();"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "snajef"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "jeffypie369"
+          "gitId": "snajef"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "jeffypie369"
         },
-        "content": "     * Overloaded constructor to generate a person that does not have medicalhistory."
+        "content": "    /**"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "jeffypie369"
         },
-        "content": "     */"
+        "content": "     * Overloaded constructor to generate a person that does not have medicalhistory."
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "snajef"
+          "gitId": "jeffypie369"
         },
-        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
+        "content": "     */"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "jeffypie369"
+          "gitId": "snajef"
         },
-        "content": "                  PrescriptionList prescriptionList, AppointmentsList appointmentsList) {"
+        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "jeffypie369"
         },
-        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, prescriptionList, appointmentsList);"
+        "content": "                  PrescriptionList prescriptionList, AppointmentsList appointmentsList) {"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "snajef"
+          "gitId": "jeffypie369"
         },
-        "content": "        this.nric \u003d nric;"
+        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, prescriptionList, appointmentsList);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "snajef"
         },
-        "content": "        this.name \u003d name;"
+        "content": "        this.nric \u003d nric;"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "snajef"
         },
-        "content": "        this.phone \u003d phone;"
+        "content": "        this.name \u003d name;"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "snajef"
         },
-        "content": "        this.email \u003d email;"
+        "content": "        this.phone \u003d phone;"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "snajef"
         },
-        "content": "        this.address \u003d address;"
+        "content": "        this.email \u003d email;"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "snajef"
         },
-        "content": "        this.tags.addAll(tags);"
+        "content": "        this.address \u003d address;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "snajef"
         },
-        "content": "        this.prescriptionList \u003d prescriptionList;"
+        "content": "        this.tags.addAll(tags);"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "jeffypie369"
+          "gitId": "snajef"
         },
-        "content": "        this.appointmentsList \u003d appointmentsList;"
+        "content": "        this.prescriptionList \u003d prescriptionList;"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "yuntongzhang"
+          "gitId": "jeffypie369"
         },
-        "content": "        this.dietCollection \u003d new DietCollection();"
+        "content": "        this.appointmentsList \u003d appointmentsList;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "    }"
+        "content": "        this.dietCollection \u003d new DietCollection();"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "yuntongzhang"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        this.visitorList \u003d new VisitorList();"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "     * Overloaded constructor to generate a person that has existing diet requirement."
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
+        "content": "     * Overloaded constructor to generate a person that has existing diet requirement."
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "                  DietCollection dietCollection) {"
+        "content": "     */"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, dietCollection);"
+        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        this.nric \u003d nric;"
+        "content": "                  DietCollection dietCollection) {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        this.name \u003d name;"
+        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, dietCollection);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        this.phone \u003d phone;"
+        "content": "        this.nric \u003d nric;"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        this.email \u003d email;"
+        "content": "        this.name \u003d name;"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        this.address \u003d address;"
+        "content": "        this.phone \u003d phone;"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        this.tags.addAll(tags);"
+        "content": "        this.email \u003d email;"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        this.prescriptionList \u003d new PrescriptionList();"
+        "content": "        this.address \u003d address;"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "-"
+          "gitId": "yuntongzhang"
         },
-        "content": "        this.appointmentsList \u003d new AppointmentsList();"
+        "content": "        this.tags.addAll(tags);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "yuntongzhang"
         },
-        "content": "        this.dietCollection \u003d dietCollection;"
+        "content": "        this.prescriptionList \u003d new PrescriptionList();"
       },
       {
         "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.appointmentsList \u003d new AppointmentsList();"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "yuntongzhang"
+        },
+        "content": "        this.dietCollection \u003d dietCollection;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.visitorList \u003d new VisitorList();"
+      },
+      {
+        "lineNumber": 89,
         "author": {
           "gitId": "snajef"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 90,
         "author": {
           "gitId": "snajef"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 89,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "     * Overloaded constructor to generate a person that has existing medicalhistory."
-      },
-      {
-        "lineNumber": 90,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "     */"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
+        "content": "    /**"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "                  MedicalHistory medicalHistory) {"
+        "content": "     * Overloaded constructor to generate a person that has existing medicalhistory."
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, medicalHistory);"
+        "content": "     */"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        this.nric \u003d nric;"
+        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        this.name \u003d name;"
+        "content": "                  MedicalHistory medicalHistory) {"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        this.phone \u003d phone;"
+        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, medicalHistory);"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        this.email \u003d email;"
+        "content": "        this.nric \u003d nric;"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        this.address \u003d address;"
+        "content": "        this.name \u003d name;"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        this.tags.addAll(tags);"
+        "content": "        this.phone \u003d phone;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        this.medicalHistory.addAll(medicalHistory);"
+        "content": "        this.email \u003d email;"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "        this.prescriptionList \u003d new PrescriptionList();"
+        "content": "        this.address \u003d address;"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "jeffypie369"
+          "gitId": "omegafishy"
         },
-        "content": "        this.appointmentsList \u003d new AppointmentsList();"
+        "content": "        this.tags.addAll(tags);"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "yuntongzhang"
+          "gitId": "omegafishy"
         },
-        "content": "        this.dietCollection \u003d new DietCollection();"
+        "content": "        this.medicalHistory.addAll(medicalHistory);"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": "    }"
+        "content": "        this.prescriptionList \u003d new PrescriptionList();"
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "omegafishy"
+          "gitId": "jeffypie369"
         },
-        "content": ""
+        "content": "        this.appointmentsList \u003d new AppointmentsList();"
       },
       {
         "lineNumber": 106,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 107,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "     * Overloaded constructor to generate a person that has existing medicalhistory."
-      },
-      {
-        "lineNumber": 108,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 109,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
-      },
-      {
-        "lineNumber": 110,
-        "author": {
-          "gitId": "jeffypie369"
-        },
-        "content": "                  MedicalHistory medicalHistory, PrescriptionList prescriptionList, AppointmentsList appointmentsList) {"
-      },
-      {
-        "lineNumber": 111,
-        "author": {
-          "gitId": "jeffypie369"
-        },
-        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, medicalHistory, prescriptionList, appointmentsList);"
-      },
-      {
-        "lineNumber": 112,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "        this.nric \u003d nric;"
-      },
-      {
-        "lineNumber": 113,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "        this.name \u003d name;"
-      },
-      {
-        "lineNumber": 114,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "        this.phone \u003d phone;"
-      },
-      {
-        "lineNumber": 115,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "        this.email \u003d email;"
-      },
-      {
-        "lineNumber": 116,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "        this.address \u003d address;"
-      },
-      {
-        "lineNumber": 117,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "        this.tags.addAll(tags);"
-      },
-      {
-        "lineNumber": 118,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "        this.medicalHistory.addAll(medicalHistory);"
-      },
-      {
-        "lineNumber": 119,
-        "author": {
-          "gitId": "omegafishy"
-        },
-        "content": "        this.prescriptionList \u003d prescriptionList;"
-      },
-      {
-        "lineNumber": 120,
-        "author": {
-          "gitId": "jeffypie369"
-        },
-        "content": "        this.appointmentsList \u003d appointmentsList;"
-      },
-      {
-        "lineNumber": 121,
         "author": {
           "gitId": "yuntongzhang"
         },
         "content": "        this.dietCollection \u003d new DietCollection();"
       },
       {
-        "lineNumber": 122,
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.visitorList \u003d new VisitorList();"
+      },
+      {
+        "lineNumber": 108,
         "author": {
           "gitId": "omegafishy"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "     * Overloaded constructor to generate a person that has existing medicalhistory."
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "jeffypie369"
+        },
+        "content": "                  MedicalHistory medicalHistory, PrescriptionList prescriptionList, AppointmentsList appointmentsList) {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "jeffypie369"
+        },
+        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, medicalHistory, prescriptionList, appointmentsList);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "        this.nric \u003d nric;"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "        this.name \u003d name;"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "        this.phone \u003d phone;"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "        this.email \u003d email;"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "        this.address \u003d address;"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "        this.tags.addAll(tags);"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "omegafishy"
+        },
+        "content": "        this.medicalHistory.addAll(medicalHistory);"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "omegafishy"
         },
-        "content": ""
+        "content": "        this.prescriptionList \u003d prescriptionList;"
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "-"
+          "gitId": "jeffypie369"
         },
-        "content": "    /**"
+        "content": "        this.appointmentsList \u003d appointmentsList;"
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "-"
+          "gitId": "yuntongzhang"
         },
-        "content": "     * Overloaded constructor to include visitors."
+        "content": "        this.dietCollection \u003d new DietCollection();"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        this.visitorList \u003d new VisitorList();"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "-"
+          "gitId": "omegafishy"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "-"
+          "gitId": "omegafishy"
         },
-        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
+        "content": ""
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "                  VisitorList visitorList) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, visitorList);"
+        "content": "     * Overloaded constructor to include visitors."
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.nric \u003d nric;"
+        "content": "     */"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.name \u003d name;"
+        "content": ""
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.phone \u003d phone;"
+        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.email \u003d email;"
+        "content": "                  VisitorList visitorList) {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.address \u003d address;"
+        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, visitorList);"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.tags.addAll(tags);"
+        "content": "        this.nric \u003d nric;"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.visitorList.addAll(visitorList);"
+        "content": "        this.name \u003d name;"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.prescriptionList \u003d new PrescriptionList();"
+        "content": "        this.phone \u003d phone;"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.appointmentsList \u003d new AppointmentsList();"
+        "content": "        this.email \u003d email;"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.dietCollection \u003d new DietCollection();"
+        "content": "        this.address \u003d address;"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.tags.addAll(tags);"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        this.visitorList \u003d visitorList;"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
+        "content": "        this.prescriptionList \u003d new PrescriptionList();"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "                  MedicalHistory medicalHistory, PrescriptionList prescriptionList, AppointmentsList appointmentsList,"
+        "content": "        this.appointmentsList \u003d new AppointmentsList();"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "                  VisitorList visitorList) {"
+        "content": "        this.dietCollection \u003d new DietCollection();"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, medicalHistory, prescriptionList, visitorList);"
+        "content": "    }"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.nric \u003d nric;"
+        "content": ""
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.name \u003d name;"
+        "content": "    public Person(Nric nric, Name name, Phone phone, Email email, Address address, Set\u003cTag\u003e tags,"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.phone \u003d phone;"
+        "content": "                  MedicalHistory medicalHistory, PrescriptionList prescriptionList, AppointmentsList appointmentsList,"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.email \u003d email;"
+        "content": "                  VisitorList visitorList) {"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.address \u003d address;"
+        "content": "        requireAllNonNull(nric, name, phone, email, address, tags, medicalHistory, prescriptionList, visitorList);"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.tags.addAll(tags);"
+        "content": "        this.nric \u003d nric;"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.medicalHistory.addAll(medicalHistory);"
+        "content": "        this.name \u003d name;"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.prescriptionList \u003d prescriptionList;"
+        "content": "        this.phone \u003d phone;"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.appointmentsList \u003d appointmentsList;"
+        "content": "        this.email \u003d email;"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.dietCollection \u003d new DietCollection();"
+        "content": "        this.address \u003d address;"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.visitorList.addAll(visitorList);"
+        "content": "        this.tags.addAll(tags);"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.medicalHistory.addAll(medicalHistory);"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        this.prescriptionList \u003d prescriptionList;"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        this.appointmentsList \u003d appointmentsList;"
       },
       {
         "lineNumber": 161,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "    public Nric getNric() {"
+        "content": "        this.dietCollection \u003d new DietCollection();"
       },
       {
         "lineNumber": 162,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "        return nric;"
+        "content": "        this.visitorList \u003d visitorList;"
       },
       {
         "lineNumber": 163,
@@ -38231,752 +38231,787 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public Name getName() {"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
-          "gitId": "-"
+          "gitId": "snajef"
         },
-        "content": "        return name;"
+        "content": "    public Nric getNric() {"
       },
       {
         "lineNumber": 167,
         "author": {
-          "gitId": "-"
+          "gitId": "snajef"
         },
-        "content": "    }"
+        "content": "        return nric;"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Phone getPhone() {"
+        "content": ""
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "        return phone;"
+        "content": "    public Name getName() {"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return name;"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Email getEmail() {"
+        "content": ""
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "        return email;"
+        "content": "    public Phone getPhone() {"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return phone;"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Address getAddress() {"
+        "content": ""
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "        return address;"
+        "content": "    public Email getEmail() {"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return email;"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Address getAddress() {"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return address;"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 186,
         "author": {
           "gitId": "snajef"
         },
         "content": "    public PrescriptionList getPrescriptionList() {"
       },
       {
-        "lineNumber": 182,
+        "lineNumber": 187,
         "author": {
           "gitId": "snajef"
         },
         "content": "        return prescriptionList;"
       },
       {
-        "lineNumber": 183,
+        "lineNumber": 188,
         "author": {
           "gitId": "snajef"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 184,
+        "lineNumber": 189,
         "author": {
           "gitId": "snajef"
         },
         "content": ""
       },
       {
-        "lineNumber": 185,
+        "lineNumber": 190,
         "author": {
           "gitId": "omegafishy"
         },
         "content": "    public MedicalHistory getMedicalHistory() {"
       },
       {
-        "lineNumber": 186,
+        "lineNumber": 191,
         "author": {
           "gitId": "omegafishy"
         },
         "content": "        return medicalHistory;"
       },
       {
-        "lineNumber": 187,
+        "lineNumber": 192,
         "author": {
           "gitId": "omegafishy"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 188,
+        "lineNumber": 193,
         "author": {
           "gitId": "omegafishy"
         },
         "content": ""
       },
       {
-        "lineNumber": 189,
+        "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
         "content": "    public VisitorList getVisitorList() {"
       },
       {
-        "lineNumber": 190,
+        "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
         "content": "        return visitorList;"
       },
       {
-        "lineNumber": 191,
+        "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 192,
+        "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 193,
+        "lineNumber": 198,
         "author": {
           "gitId": "jeffypie369"
         },
         "content": "    public AppointmentsList getAppointmentsList() {"
       },
       {
-        "lineNumber": 194,
+        "lineNumber": 199,
         "author": {
           "gitId": "jeffypie369"
         },
         "content": "        return appointmentsList;"
       },
       {
-        "lineNumber": 195,
+        "lineNumber": 200,
         "author": {
           "gitId": "jeffypie369"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 196,
+        "lineNumber": 201,
         "author": {
           "gitId": "jeffypie369"
         },
         "content": ""
       },
       {
-        "lineNumber": 197,
+        "lineNumber": 202,
         "author": {
           "gitId": "yuntongzhang"
         },
         "content": "    public DietCollection getDietCollection() {"
       },
       {
-        "lineNumber": 198,
+        "lineNumber": 203,
         "author": {
           "gitId": "yuntongzhang"
         },
         "content": "        return this.dietCollection;"
       },
       {
-        "lineNumber": 199,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 200,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 201,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 202,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "     * Returns an immutable tag set, which throws"
-      },
-      {
-        "lineNumber": 203,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "     * {@code UnsupportedOperationException} if modification is attempted."
-      },
-      {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Set\u003cTag\u003e getTags() {"
+        "content": ""
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Collections.unmodifiableSet(tags);"
+        "content": "    /**"
       },
       {
         "lineNumber": 207,
         "author": {
-          "gitId": "-"
+          "gitId": "snajef"
         },
-        "content": "    }"
+        "content": "     * Returns an immutable tag set, which throws"
       },
       {
         "lineNumber": 208,
         "author": {
-          "gitId": "-"
+          "gitId": "snajef"
         },
-        "content": ""
+        "content": "     * {@code UnsupportedOperationException} if modification is attempted."
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     */"
       },
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "     * Returns true if both persons of the same name have at least one other"
+        "content": "    public Set\u003cTag\u003e getTags() {"
       },
       {
         "lineNumber": 211,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "     * identity field that is the same. This defines a weaker notion of equality"
+        "content": "        return Collections.unmodifiableSet(tags);"
       },
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "     * between two persons."
+        "content": "    }"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean isSamePerson(Person otherPerson) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "-"
+          "gitId": "snajef"
         },
-        "content": "        if (otherPerson \u003d\u003d this) {"
+        "content": "     * Returns true if both persons of the same name have at least one other"
       },
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "-"
+          "gitId": "snajef"
         },
-        "content": "            return true;"
+        "content": "     * identity field that is the same. This defines a weaker notion of equality"
       },
       {
         "lineNumber": 217,
         "author": {
-          "gitId": "-"
+          "gitId": "snajef"
         },
-        "content": "        }"
+        "content": "     * between two persons."
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 219,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "        return otherPerson !\u003d null \u0026\u0026 otherPerson.getNric().equals(getNric())"
+        "content": "    public boolean isSamePerson(Person otherPerson) {"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 otherPerson.getName().equals(getName())"
+        "content": "        if (otherPerson \u003d\u003d this) {"
       },
       {
         "lineNumber": 221,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "                \u0026\u0026 (otherPerson.getPhone().equals(getPhone())"
-      },
-      {
-        "lineNumber": 222,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "                        || otherPerson.getEmail().equals(getEmail()));"
-      },
-      {
-        "lineNumber": 223,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 225,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 226,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "     * Returns true if both persons have the same identity and data fields. This"
-      },
-      {
-        "lineNumber": 227,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "     * defines a stronger notion of equality between two persons."
-      },
-      {
-        "lineNumber": 228,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 229,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 230,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public boolean equals(Object other) {"
-      },
-      {
-        "lineNumber": 231,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        if (other \u003d\u003d this) {"
-      },
-      {
-        "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
         "content": "            return true;"
       },
       {
-        "lineNumber": 233,
+        "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "        return otherPerson !\u003d null \u0026\u0026 otherPerson.getNric().equals(getNric())"
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 otherPerson.getName().equals(getName())"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "                \u0026\u0026 (otherPerson.getPhone().equals(getPhone())"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "                        || otherPerson.getEmail().equals(getEmail()));"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "     * Returns true if both persons have the same identity and data fields. This"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "     * defines a stronger notion of equality between two persons."
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!(other instanceof Person)) {"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "            return false;"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            return true;"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "        Person otherPerson \u003d (Person) other;"
+        "content": ""
       },
       {
         "lineNumber": 240,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "        return otherPerson.getNric().equals(getNric())"
+        "content": "        if (!(other instanceof Person)) {"
       },
       {
         "lineNumber": 241,
         "author": {
-          "gitId": "snajef"
+          "gitId": "-"
         },
-        "content": "                \u0026\u0026 otherPerson.getName().equals(getName())"
+        "content": "            return false;"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 otherPerson.getPhone().equals(getPhone())"
+        "content": "        }"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 otherPerson.getEmail().equals(getEmail())"
+        "content": ""
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 otherPerson.getAddress().equals(getAddress())"
+        "content": "        Person otherPerson \u003d (Person) other;"
       },
       {
         "lineNumber": 245,
         "author": {
-          "gitId": "omegafishy"
+          "gitId": "snajef"
         },
-        "content": "                \u0026\u0026 otherPerson.getTags().equals(getTags())"
+        "content": "        return otherPerson.getNric().equals(getNric())"
       },
       {
         "lineNumber": 246,
         "author": {
-          "gitId": "omegafishy"
+          "gitId": "snajef"
         },
-        "content": "                \u0026\u0026 otherPerson.getMedicalHistory().equals(getMedicalHistory());"
+        "content": "                \u0026\u0026 otherPerson.getName().equals(getName())"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                \u0026\u0026 otherPerson.getPhone().equals(getPhone())"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                \u0026\u0026 otherPerson.getEmail().equals(getEmail())"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "                \u0026\u0026 otherPerson.getAddress().equals(getAddress())"
       },
       {
         "lineNumber": 250,
         "author": {
-          "gitId": "-"
+          "gitId": "omegafishy"
         },
-        "content": "    public int hashCode() {"
+        "content": "                \u0026\u0026 otherPerson.getTags().equals(getTags())"
       },
       {
         "lineNumber": 251,
         "author": {
-          "gitId": "-"
+          "gitId": "omegafishy"
         },
-        "content": "        // use this method for custom fields hashing instead of implementing your own"
+        "content": "                \u0026\u0026 otherPerson.getMedicalHistory().equals(getMedicalHistory());"
       },
       {
         "lineNumber": 252,
         "author": {
-          "gitId": "omegafishy"
+          "gitId": "-"
         },
-        "content": "        return Objects.hash(nric, name, phone, email, address, tags, medicalHistory);"
+        "content": "    }"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public int hashCode() {"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String toString() {"
+        "content": "        // use this method for custom fields hashing instead of implementing your own"
       },
       {
         "lineNumber": 257,
         "author": {
-          "gitId": "-"
+          "gitId": "omegafishy"
         },
-        "content": "        final StringBuilder builder \u003d new StringBuilder();"
+        "content": "        return Objects.hash(nric, name, phone, email, address, tags, medicalHistory);"
       },
       {
         "lineNumber": 258,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "        builder.append(getNric())"
-      },
-      {
-        "lineNumber": 259,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "               .append(\" Name: \")"
-      },
-      {
-        "lineNumber": 260,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "               .append(getName())"
-      },
-      {
-        "lineNumber": 261,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "               .append(\" Phone: \")"
-      },
-      {
-        "lineNumber": 262,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "               .append(getPhone())"
-      },
-      {
-        "lineNumber": 263,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "               .append(\" Email: \")"
-      },
-      {
-        "lineNumber": 264,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "               .append(getEmail())"
-      },
-      {
-        "lineNumber": 265,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "               .append(\" Address: \")"
-      },
-      {
-        "lineNumber": 266,
-        "author": {
-          "gitId": "snajef"
-        },
-        "content": "               .append(getAddress())"
-      },
-      {
-        "lineNumber": 267,
-        "author": {
-          "gitId": "jeffypie369"
-        },
-        "content": "               .append(\" Drug Allergies: \");"
-      },
-      {
-        "lineNumber": 268,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        getTags().forEach(builder::append);"
-      },
-      {
-        "lineNumber": 269,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        return builder.toString();"
-      },
-      {
-        "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 271,
+        "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 260,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 261,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 262,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final StringBuilder builder \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "        builder.append(getNric())"
+      },
+      {
+        "lineNumber": 264,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "               .append(\" Name: \")"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "               .append(getName())"
+      },
+      {
+        "lineNumber": 266,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "               .append(\" Phone: \")"
+      },
+      {
+        "lineNumber": 267,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "               .append(getPhone())"
+      },
+      {
+        "lineNumber": 268,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "               .append(\" Email: \")"
+      },
+      {
+        "lineNumber": 269,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "               .append(getEmail())"
+      },
+      {
+        "lineNumber": 270,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "               .append(\" Address: \")"
+      },
+      {
+        "lineNumber": 271,
+        "author": {
+          "gitId": "snajef"
+        },
+        "content": "               .append(getAddress())"
+      },
+      {
         "lineNumber": 272,
+        "author": {
+          "gitId": "jeffypie369"
+        },
+        "content": "               .append(\" Drug Allergies: \");"
+      },
+      {
+        "lineNumber": 273,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        getTags().forEach(builder::append);"
+      },
+      {
+        "lineNumber": 274,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return builder.toString();"
+      },
+      {
+        "lineNumber": 275,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 276,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
@@ -38987,7 +39022,7 @@
       "jeffypie369": 17,
       "omegafishy": 39,
       "snajef": 47,
-      "-": 144,
+      "-": 149,
       "yuntongzhang": 25
     }
   },
@@ -68847,7 +68882,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.VisitorInCommand;"
+        "content": "import seedu.address.logic.commands.VisitorinCommand;"
       },
       {
         "lineNumber": 34,
@@ -69547,21 +69582,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        VisitorInCommand command \u003d (VisitorInCommand) parser.parseCommand("
+        "content": "        VisitorinCommand command \u003d (VisitorinCommand) parser.parseCommand("
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "                VisitorUtil.getVisitorInCommand(person.getName(), visitor));"
+        "content": "                VisitorUtil.getVisitorInCommand(person.getNric(), visitor));"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new VisitorInCommand(person.getName(), visitor), command);"
+        "content": "        assertEquals(new VisitorinCommand(person.getNric(), visitor), command);"
       },
       {
         "lineNumber": 136,

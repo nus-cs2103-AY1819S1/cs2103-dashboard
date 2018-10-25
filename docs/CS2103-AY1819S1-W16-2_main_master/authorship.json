@@ -23018,6 +23018,484 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/logic/commands/DeleteCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.Messages;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.index.Index;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "import seedu.address.model.record.Record;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "import seedu.address.model.record.RecordContainsVolunteerIdPredicate;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.volunteer.Volunteer;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Deletes a volunteer identified using it\u0027s displayed index from the application."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class DeleteCommand extends Command {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"delete\";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            + \": Deletes the volunteer identified by the index number used in the displayed volunteer list.\\n\""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            + \"Parameters: INDEX (must be a positive integer)\\n\""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            + \"Example: \" + COMMAND_WORD + \" 1\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String MESSAGE_DELETE_VOLUNTEER_SUCCESS \u003d \"Deleted Volunteer: %1$s\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final Index targetIndex;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public DeleteCommand(Index targetIndex) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.targetIndex \u003d targetIndex;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cVolunteer\u003e lastShownList \u003d model.getFilteredVolunteerList();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (targetIndex.getZeroBased() \u003e\u003d lastShownList.size()) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_VOLUNTEER_DISPLAYED_INDEX);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Volunteer volunteerToDelete \u003d lastShownList.get(targetIndex.getZeroBased());"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model.deleteVolunteer(volunteerToDelete);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "        model.updateFilteredRecordList(new RecordContainsVolunteerIdPredicate(volunteerToDelete.getVolunteerId()));"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "        List\u003cRecord\u003e recordList \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "        recordList.addAll(model.getFilteredRecordList());"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "        for (Record r : recordList) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "            model.deleteRecord(r);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model.commitAddressBook();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new CommandResult(String.format(MESSAGE_DELETE_VOLUNTEER_SUCCESS, volunteerToDelete));"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                || (other instanceof DeleteCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 targetIndex.equals(((DeleteCommand) other).targetIndex)); // state check"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 10,
+      "-": 57
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/logic/commands/DeleteEventCommand.java",
     "lines": [
       {
@@ -23051,348 +23529,432 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
-        "content": "import java.util.List;"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "import seedu.address.commons.core.Messages;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "import seedu.address.commons.core.index.Index;"
+        "content": "import seedu.address.commons.core.Messages;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "import seedu.address.logic.CommandHistory;"
+        "content": "import seedu.address.commons.core.index.Index;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+        "content": "import seedu.address.logic.CommandHistory;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "import seedu.address.model.Model;"
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "import seedu.address.model.event.Event;"
+        "content": "import seedu.address.model.Model;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "import seedu.address.model.event.Event;"
       },
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
-        "content": "/**"
+        "content": "import seedu.address.model.record.Record;"
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
-        "content": " * Deletes an event identified using it\u0027s displayed index from the application."
+        "content": "import seedu.address.model.record.RecordContainsEventIdPredicate;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "Kratious"
         },
-        "content": " */"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "public class DeleteEventCommand extends Command {"
+        "content": "/**"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"delete\";"
+        "content": " * Deletes an event identified using it\u0027s displayed index from the application."
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD"
+        "content": "public class DeleteEventCommand extends Command {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "            + \": Deletes the event identified by the index number used in the displayed event list.\\n\""
+        "content": "    public static final String COMMAND_WORD \u003d \"delete\";"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "            + \"Parameters: INDEX (must be a positive integer)\\n\""
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "            + \"Example: \" + COMMAND_WORD + \" 1\";"
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "            + \": Deletes the event identified by the index number used in the displayed event list.\\n\""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    public static final String MESSAGE_DELETE_EVENT_SUCCESS \u003d \"Deleted Event: %1$s\";"
+        "content": "            + \"Parameters: INDEX (must be a positive integer)\\n\""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "            + \"Example: \" + COMMAND_WORD + \" 1\";"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    private final Index targetIndex;"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_DELETE_EVENT_SUCCESS \u003d \"Deleted Event: %1$s\";"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    public DeleteEventCommand(Index targetIndex) {"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        this.targetIndex \u003d targetIndex;"
+        "content": "    private final Index targetIndex;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    public DeleteEventCommand(Index targetIndex) {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    @Override"
+        "content": "        this.targetIndex \u003d targetIndex;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": "    }"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        requireNonNull(model);"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        List\u003cEvent\u003e lastShownList \u003d model.getFilteredEventList();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        if (targetIndex.getZeroBased() \u003e\u003d lastShownList.size()) {"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_EVENT_DISPLAYED_INDEX);"
+        "content": "        List\u003cEvent\u003e lastShownList \u003d model.getFilteredEventList();"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "        if (targetIndex.getZeroBased() \u003e\u003d lastShownList.size()) {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        Event eventToDelete \u003d lastShownList.get(targetIndex.getZeroBased());"
+        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_EVENT_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        model.deleteEvent(eventToDelete);"
+        "content": "        }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        model.commitAddressBook();"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_DELETE_EVENT_SUCCESS, eventToDelete));"
+        "content": "        Event eventToDelete \u003d lastShownList.get(targetIndex.getZeroBased());"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    }"
+        "content": "        model.deleteEvent(eventToDelete);"
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
         "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
-        "content": "    @Override"
+        "content": "        model.updateFilteredRecordList(new RecordContainsEventIdPredicate(eventToDelete.getEventId()));"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "        List\u003cRecord\u003e recordList \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "        recordList.addAll(model.getFilteredRecordList());"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
-        "content": "                || (other instanceof DeleteEventCommand // instanceof handles nulls"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "Kratious"
+          "gitId": "iMarbles"
         },
-        "content": "                \u0026\u0026 targetIndex.equals(((DeleteEventCommand) other).targetIndex)); // state check"
+        "content": "        for (Record r : recordList) {"
       },
       {
         "lineNumber": 53,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "            model.deleteRecord(r);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "        model.commitAddressBook();"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "        return new CommandResult(String.format(MESSAGE_DELETE_EVENT_SUCCESS, eventToDelete));"
+      },
+      {
+        "lineNumber": 58,
         "author": {
           "gitId": "Kratious"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 54,
+        "lineNumber": 59,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "                || (other instanceof DeleteEventCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "                \u0026\u0026 targetIndex.equals(((DeleteEventCommand) other).targetIndex)); // state check"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
         "author": {
           "gitId": "Kratious"
         },
@@ -23400,7 +23962,8 @@
       }
     ],
     "authorContributionMap": {
-      "Kratious": 54
+      "Kratious": 54,
+      "iMarbles": 12
     }
   },
   {
@@ -49003,6 +49566,217 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/model/record/RecordContainsVolunteerIdPredicate.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "package seedu.address.model.record;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "import java.util.function.Predicate;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "import seedu.address.model.volunteer.VolunteerId;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": " * Tests that a {@code Record}\u0027s {@code personId} matches the given PersonId."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "public class RecordContainsVolunteerIdPredicate implements Predicate\u003cRecord\u003e {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    private final VolunteerId volunteerId;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    public RecordContainsVolunteerIdPredicate(VolunteerId volunteerId) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "        this.volunteerId \u003d volunteerId;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    public boolean test(Record record) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "        return record.getVolunteerId().id \u003d\u003d volunteerId.id;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "                || (other instanceof RecordContainsVolunteerIdPredicate // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "                \u0026\u0026 volunteerId \u003d\u003d ((RecordContainsVolunteerIdPredicate) other).volunteerId); // state check"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "iMarbles"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "iMarbles": 29
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/model/record/Remark.java",
     "lines": [
       {
@@ -59130,7 +59904,7 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -blue-1-;"
+        "content": "    -fx-background-color: -background-;"
       },
       {
         "lineNumber": 59,
@@ -59151,140 +59925,140 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".grid-pane .stack-pane {"
+        "content": ".menu-bar .label {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -blue-1-;"
+        "content": "    -fx-font-size: 11pt;"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-font-family: \"Open Sans\";"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-text-fill: -white-1-;"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#contextIndicator {"
+        "content": "    -fx-opacity: 1;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-family: \"Open Sans\";"
+        "content": "}"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -blue-2-;"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 10 10 10 10;"
+        "content": ".context-menu {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-background-color: -background-;"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#contextIndicator .label {"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-size: 1.5em;"
+        "content": ".grid-pane {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 5 5 5 8;"
+        "content": "    -fx-background-color: -background-;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-fill: -white-1-;"
+        "content": "    -fx-border-color: transparent;"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-border-width: 0px;"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-alignment: center;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".split-pane:horizontal .split-pane-divider {"
+        "content": "}"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 1 0 1 0;"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 0;"
+        "content": ".grid-pane .stack-pane {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-color: transparent;"
+        "content": "    -fx-border-width: 0;"
       },
       {
         "lineNumber": 81,
@@ -59312,56 +60086,56 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": ".grid-pane .stack-pane .label {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".split-pane {"
+        "content": "    -fx-font-family: \"Open Sans\""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-box-boder: transparent;"
+        "content": "}"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 0;"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-inset: 0;"
+        "content": "#contextIndicator {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-radius: 0;"
+        "content": "    -fx-font-family: \"Open Sans\";"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 0;"
+        "content": "    -fx-background-color: -blue-2-;"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": "    -fx-padding: 10 10 10 10;"
       },
       {
         "lineNumber": 92,
@@ -59382,28 +60156,28 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".list-view {"
+        "content": "#contextIndicator .label {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 0;"
+        "content": "    -fx-font-size: 1.5em;"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 0px;"
+        "content": "    -fx-padding: 5 5 5 8;"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -grey-b-;"
+        "content": "    -fx-text-fill: -white-1-;"
       },
       {
         "lineNumber": 98,
@@ -59424,147 +60198,147 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".list-cell {"
+        "content": ".split-pane:horizontal .split-pane-divider {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 12px;"
+        "content": "    -fx-padding: 1 0 1 0;"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent, -white-1-;"
+        "content": "    -fx-background-insets: 0;"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 0px, 0px;"
+        "content": "    -fx-border-color: transparent;"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-radius: 1;"
+        "content": "    -fx-background-color: -background-;"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 0 0 1 0;"
+        "content": "}"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-color: -grey-b-;"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": ".split-pane {"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".list-cell:empty {"
+        "content": "    -fx-box-boder: transparent;"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 2px;"
+        "content": "    -fx-padding: 0;"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": "    -fx-background-inset: 0;"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 0;"
+        "content": "    -fx-border-radius: 0;"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-border-width: 0;"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".list-cell:filled:hover {"
+        "content": "}"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent, rgb(200.0, 200.0, 200.0);"
+        "content": ""
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": ".list-view {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-background-insets: 0;"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".list-cell:filled:selected {"
+        "content": "    -fx-padding: 0px;"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent, derive(#42A5F5, 50%);"
+        "content": "    -fx-background-color: -grey-b-;"
       },
       {
         "lineNumber": 121,
@@ -59585,91 +60359,91 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".list-cell:filled:selected #cardPane {"
+        "content": ".list-cell {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-color: #3080e8;"
+        "content": "    -fx-padding: 12px;"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 0 0 0 0;"
+        "content": "    -fx-background-color: transparent, -white-1-;"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-background-insets: 0px, 0px;"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-border-radius: 1;"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".cell_big_label {"
+        "content": "    -fx-border-width: 0 0 1 0;"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-weight: 600;"
+        "content": "    -fx-border-color: -grey-b-;"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 0 0 5 0;"
+        "content": "}"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": ".list-cell:empty {"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".list-cell .label {"
+        "content": "    -fx-padding: 2px;"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-fill: -grey-1-;"
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-family: \"IBM Plex Sans\";"
+        "content": "    -fx-background-insets: 0;"
       },
       {
         "lineNumber": 136,
@@ -59690,399 +60464,399 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".pane-with-border {"
+        "content": ".list-cell:filled:hover {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -background-;"
+        "content": "    -fx-background-color: transparent, rgb(200.0, 200.0, 200.0);"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 0;"
+        "content": "}"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": ".list-cell:filled:selected {"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".stack-pane {"
+        "content": "    -fx-background-color: transparent, derive(#42A5F5, 50%);"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -card-2-;"
+        "content": "}"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 0;"
+        "content": ""
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": ".list-cell:filled:selected #cardPane {"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-border-color: #3080e8;"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#commandTextField {"
+        "content": "    -fx-border-width: 0 0 0 0;"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": "}"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 0;"
+        "content": ""
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-color: -background-;"
+        "content": ".cell_big_label {"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-insets: 0;"
+        "content": "    -fx-font-weight: 600;"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 0.3;"
+        "content": "    -fx-padding: 0 0 5 0;"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-family: \"Open Sans\";"
+        "content": "}"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-size: 13pt;"
+        "content": ""
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": ".list-cell .label {"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-text-fill: -grey-1-;"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-font-family: \"IBM Plex Sans\";"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#resultDisplay {"
+        "content": "}"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": ""
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 0;"
+        "content": ".pane-with-border {"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-color: -background-;"
+        "content": "    -fx-background-color: -background-;"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-insets: 0;"
+        "content": "    -fx-border-width: 0;"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 0.3;"
+        "content": "}"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-family: \"Open Sans\";"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-size: 13pt;"
+        "content": ".stack-pane {"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": "    -fx-background-color: -card-2-;"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-border-width: 0;"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#resultDisplay .content {"
+        "content": ""
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent, -card-2-, transparent, -card-2-;"
+        "content": "#commandTextField {"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-background-insets: 0;"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".scroll-bar:vertical\u003e.track-background, .scroll-bar:horizontal\u003e.track-background"
+        "content": "    -fx-border-color: -background-;"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "{"
+        "content": "    -fx-border-insets: 0;"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -grey-b-;"
+        "content": "    -fx-border-width: 0.3;"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 1 0 0 0;"
+        "content": "    -fx-font-family: \"Open Sans\";"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-font-size: 13pt;"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".scroll-bar:vertical\u003e.thumb, .scroll-bar:horizontal\u003e.thumb {"
+        "content": "}"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -grey-s-;"
+        "content": ""
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 0;"
+        "content": "#resultDisplay {"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-radius: 0;"
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-background-insets: 0;"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-border-color: -background-;"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".scroll-bar\u003e.increment-button, .scroll-bar\u003e.decrement-button,"
+        "content": "    -fx-border-insets: 0;"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".scroll-bar:hover\u003e.increment-button, .scroll-bar:hover\u003e.decrement-button"
+        "content": "    -fx-border-width: 0.3;"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "{"
+        "content": "    -fx-font-family: \"Open Sans\";"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": "    -fx-font-size: 13pt;"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".scroll-bar\u003e.increment-button\u003e.increment-arrow, .scroll-bar\u003e.decrement-button\u003e.decrement-arrow"
+        "content": ""
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "{"
+        "content": "#resultDisplay .content {"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -grey-s-;"
+        "content": "    -fx-background-color: transparent, -card-2-, transparent, -card-2-;"
       },
       {
         "lineNumber": 195,
@@ -60103,70 +60877,70 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".scroll-bar\u003e.track-background {"
+        "content": ".scroll-bar:vertical\u003e.track-background, .scroll-bar:horizontal\u003e.track-background"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": "{"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-background-color: -grey-b-;"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-background-insets: 1 0 0 0;"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#browserPlaceholder {"
+        "content": "}"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 12;"
+        "content": ""
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -background-;"
+        "content": ".scroll-bar:vertical\u003e.thumb, .scroll-bar:horizontal\u003e.thumb {"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-insets: 0px, 10px;"
+        "content": "    -fx-background-color: -grey-s-;"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-radius: 2;"
+        "content": "    -fx-background-insets: 0;"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0, 1.5);"
+        "content": "    -fx-background-radius: 0;"
       },
       {
         "lineNumber": 207,
@@ -60187,147 +60961,147 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#recordEventPanel {"
+        "content": ".scroll-bar\u003e.increment-button, .scroll-bar\u003e.decrement-button,"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: -card-1-;"
+        "content": ".scroll-bar:hover\u003e.increment-button, .scroll-bar:hover\u003e.decrement-button"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 20;"
+        "content": "{"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#totalVolunteersStatus exit.label {"
+        "content": ""
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-alignment: center;"
+        "content": ".scroll-bar\u003e.increment-button\u003e.increment-arrow, .scroll-bar\u003e.decrement-button\u003e.decrement-arrow"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "{"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-background-color: -grey-s-;"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#eventNameBox .label{"
+        "content": "}"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-size: 28pt;"
+        "content": ""
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-fill: -white-1-;"
+        "content": ".scroll-bar\u003e.track-background {"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-family: \"IBM Plex Sans\";"
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 0 0 5 0;"
+        "content": "}"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": ""
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "#browserPlaceholder {"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#numOfVolunteerBox .label{"
+        "content": "    -fx-padding: 0 12 12 12;"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-size: 14pt;"
+        "content": "    -fx-background-color: -background-;"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-fill: -white-1-;"
+        "content": "    -fx-background-insets: 0px, 10px;"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-family: \"IBM Plex Sans\";"
+        "content": "    -fx-border-radius: 2;"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 0 0 20 0;"
+        "content": "    -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0, 1.5);"
       },
       {
         "lineNumber": 230,
@@ -60348,238 +61122,238 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".table-view {"
+        "content": "#recordEventPanel {"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-control-inner-background: -card-2-;"
+        "content": "    -fx-background-color: -card-1-;"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": "    -fx-padding: 20;"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-table-cell-border-color: -table-border-;"
+        "content": "}"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-table-header-border-color: -table-border-;"
+        "content": ""
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-padding: 5;"
+        "content": "#totalVolunteersStatus exit.label {"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-alignment: center;"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "}"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".table-view .column-header, .table-view .filler {"
+        "content": ""
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-size: 50;"
+        "content": "#eventNameBox .label{"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 1 0 1 0;"
+        "content": "    -fx-font-size: 28pt;"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-background-color: transparent;"
+        "content": "    -fx-text-fill: -white-1-;"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-color:"
+        "content": "    -fx-font-family: \"IBM Plex Sans\";"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "            -table-border-"
+        "content": "    -fx-padding: 0 0 5 0;"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "            transparent"
+        "content": "}"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "            -table-border-"
+        "content": ""
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "            transparent;"
+        "content": "#numOfVolunteerBox .label{"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-insets: 0;"
+        "content": "    -fx-font-size: 14pt;"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-text-fill: -white-1-;"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-font-family: \"IBM Plex Sans\";"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".table-view .column-header .label {"
+        "content": "    -fx-padding: 0 0 20 0;"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-size: 12pt;"
+        "content": "}"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-family: \"Open Sans\";"
+        "content": ""
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-weight: 600;"
+        "content": ".table-view {"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": "    -fx-control-inner-background: -card-2-;"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-alignment: center-left;"
+        "content": "    -fx-background-color: transparent;"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-opacity: 1;"
+        "content": "    -fx-table-cell-border-color: -table-border-;"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-table-header-border-color: -table-border-;"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-padding: 5;"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".table-row-cell {"
+        "content": "}"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-cell-size: 40px;"
+        "content": ""
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": ".table-view .column-header, .table-view .filler {"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-size: 50;"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".table-row-cell:empty {"
+        "content": "    -fx-border-width: 1 0 1 0;"
       },
       {
         "lineNumber": 266,
@@ -60593,122 +61367,283 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-border-color:"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "            -table-border-"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".table-row-cell:empty .table-cell {"
+        "content": "            transparent"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-width: 0px;"
+        "content": "            -table-border-"
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "            transparent;"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-border-insets: 0;"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ".table-cell {"
+        "content": "}"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-border-color: transparent;"
+        "content": ""
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-size: 12pt;"
+        "content": ".table-view .column-header .label {"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-family: \"Open Sans\";"
+        "content": "    -fx-font-size: 12pt;"
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-alignment: CENTER-LEFT;"
+        "content": "    -fx-font-family: \"Open Sans\";"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "}"
+        "content": "    -fx-font-weight: 600;"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "Kratious"
         },
-        "content": ""
+        "content": "    -fx-text-fill: white;"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "#emptyTable {"
+        "content": "    -fx-alignment: center-left;"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-alignment: center;"
+        "content": "    -fx-opacity: 1;"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-font-size: 15pt;"
+        "content": "}"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "Kratious"
         },
-        "content": "    -fx-text-fill: white;"
+        "content": ""
       },
       {
         "lineNumber": 284,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ".table-row-cell {"
+      },
+      {
+        "lineNumber": 285,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-cell-size: 40px;"
+      },
+      {
+        "lineNumber": 286,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 287,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 288,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ".table-row-cell:empty {"
+      },
+      {
+        "lineNumber": 289,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-background-color: transparent;"
+      },
+      {
+        "lineNumber": 290,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 291,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 292,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ".table-row-cell:empty .table-cell {"
+      },
+      {
+        "lineNumber": 293,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-border-width: 0px;"
+      },
+      {
+        "lineNumber": 294,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 295,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 296,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ".table-cell {"
+      },
+      {
+        "lineNumber": 297,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-border-color: transparent;"
+      },
+      {
+        "lineNumber": 298,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-font-size: 12pt;"
+      },
+      {
+        "lineNumber": 299,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-font-family: \"Open Sans\";"
+      },
+      {
+        "lineNumber": 300,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-alignment: CENTER-LEFT;"
+      },
+      {
+        "lineNumber": 301,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 302,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 303,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "#emptyTable {"
+      },
+      {
+        "lineNumber": 304,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-text-alignment: center;"
+      },
+      {
+        "lineNumber": 305,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-font-size: 15pt;"
+      },
+      {
+        "lineNumber": 306,
+        "author": {
+          "gitId": "Kratious"
+        },
+        "content": "    -fx-text-fill: white;"
+      },
+      {
+        "lineNumber": 307,
         "author": {
           "gitId": "Kratious"
         },
@@ -60716,7 +61651,7 @@
       }
     ],
     "authorContributionMap": {
-      "Kratious": 284
+      "Kratious": 307
     }
   },
   {
@@ -63715,7 +64650,7 @@
         "author": {
           "gitId": "Kratious"
         },
-        "content": "                \u003cInsets right\u003d\"10\" bottom\u003d\"5\" left\u003d\"10\" /\u003e"
+        "content": "                \u003cInsets right\u003d\"10\" left\u003d\"10\" /\u003e"
       },
       {
         "lineNumber": 57,

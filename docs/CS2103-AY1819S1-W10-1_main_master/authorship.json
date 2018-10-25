@@ -14611,7 +14611,7 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Adds a module to the address book. \""
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Adds a module to the address book. \\n\""
       },
       {
         "lineNumber": 25,
@@ -14667,35 +14667,35 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_MODULECODE + \"CS2103\""
+        "content": "            + PREFIX_MODULECODE + \"CS2103 \""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_MODULETITLE + \"SOFTWARE ENGINEERING\""
+        "content": "            + PREFIX_MODULETITLE + \"SOFTWARE ENGINEERING \""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_ACADEMICYEAR + \"AY1718\""
+        "content": "            + PREFIX_ACADEMICYEAR + \"AY1718 \""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_SEMESTER + \"1\""
+        "content": "            + PREFIX_SEMESTER + \"1 \""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_TAG + \"gg\";"
+        "content": "            + PREFIX_TAG + \"gg \";"
       },
       {
         "lineNumber": 37,
@@ -15081,7 +15081,7 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Adds a person to the address book. \""
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Adds an occasion to the address book. \\n\""
       },
       {
         "lineNumber": 23,
@@ -15130,7 +15130,7 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_OCCASION_NAME + \"neighborhood party \""
+        "content": "            + PREFIX_OCCASION_NAME + \"discussion \""
       },
       {
         "lineNumber": 30,
@@ -15142,23 +15142,23 @@
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "waytan"
+          "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_OCCASION_LOCATION + \"Cinnamon College\""
+        "content": "            + PREFIX_OCCASION_LOCATION + \"SoC \""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_TAG + \"food \""
+        "content": "            + PREFIX_TAG + \"project \""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            + PREFIX_TAG + \"games\";"
+        "content": "            + PREFIX_TAG + \"gg \";"
       },
       {
         "lineNumber": 34,
@@ -15393,8 +15393,8 @@
       }
     ],
     "authorContributionMap": {
-      "waytan": 3,
-      "xueyantian": 63
+      "waytan": 2,
+      "xueyantian": 64
     }
   },
   {
@@ -15559,7 +15559,7 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Adds a person to the address book. \""
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Adds a person to the address book. \\n\""
       },
       {
         "lineNumber": 24,
@@ -21654,70 +21654,70 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.commands.AddCommand;"
+        "content": "import seedu.address.logic.commands.AddModuleCommand;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.commands.AddModuleCommand;"
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": "import seedu.address.model.module.AcademicYear;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.module.AcademicYear;"
+        "content": "import seedu.address.model.module.Module;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.module.Module;"
+        "content": "import seedu.address.model.module.ModuleCode;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.module.ModuleCode;"
+        "content": "import seedu.address.model.module.ModuleTitle;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.module.ModuleTitle;"
+        "content": "import seedu.address.model.module.Semester;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.module.Semester;"
+        "content": "import seedu.address.model.person.UniquePersonList;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.person.UniquePersonList;"
+        "content": "import seedu.address.model.tag.Tag;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.tag.Tag;"
+        "content": ""
       },
       {
         "lineNumber": 24,
@@ -21731,283 +21731,276 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "/**"
+        "content": " * AddModuleCommandParser"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": " * AddModuleCommandParser"
+        "content": " */"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": " */"
+        "content": "public class AddModuleCommandParser implements Parser\u003cAddModuleCommand\u003e {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "public class AddModuleCommandParser implements Parser\u003cAddModuleCommand\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    /**"
+        "content": "     * Parses the given {@code String} of arguments in the context of the AddCommand"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the AddCommand"
+        "content": "     * and returns a new Module object of the given parameters."
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * and returns a new Module object of the given parameters."
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     */"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     */"
+        "content": "    public AddModuleCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    public AddModuleCommand parse(String args) throws ParseException {"
+        "content": "        ArgumentMultimap argMultimap \u003d"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        ArgumentMultimap argMultimap \u003d"
+        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_MODULECODE, PREFIX_MODULETITLE, PREFIX_ACADEMICYEAR,"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_MODULECODE, PREFIX_MODULETITLE, PREFIX_ACADEMICYEAR,"
+        "content": "                        PREFIX_SEMESTER, PREFIX_TAG);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "                        PREFIX_SEMESTER, PREFIX_TAG);"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        if (!arePrefixesPresent(argMultimap, PREFIX_MODULECODE, PREFIX_MODULETITLE, PREFIX_ACADEMICYEAR,"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        if (!arePrefixesPresent(argMultimap, PREFIX_MODULECODE, PREFIX_MODULETITLE, PREFIX_ACADEMICYEAR,"
+        "content": "                PREFIX_SEMESTER)"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "                PREFIX_SEMESTER)"
+        "content": "                || !argMultimap.getPreamble().isEmpty()) {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "                || !argMultimap.getPreamble().isEmpty()) {"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddModuleCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));"
+        "content": "        }"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        ModuleCode moduleCode \u003d ParserUtil.parseModuleCode(argMultimap.getValue(PREFIX_MODULECODE).get());"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        ModuleCode moduleCode \u003d ParserUtil.parseModuleCode(argMultimap.getValue(PREFIX_MODULECODE).get());"
+        "content": "        ModuleTitle moduleTitle \u003d ParserUtil.parseModuleTitle(argMultimap.getValue(PREFIX_MODULETITLE).get());"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        ModuleTitle moduleTitle \u003d ParserUtil.parseModuleTitle(argMultimap.getValue(PREFIX_MODULETITLE).get());"
+        "content": "        AcademicYear academicYear \u003d ParserUtil.parseAcademicYear(argMultimap.getValue(PREFIX_ACADEMICYEAR).get());"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        AcademicYear academicYear \u003d ParserUtil.parseAcademicYear(argMultimap.getValue(PREFIX_ACADEMICYEAR).get());"
+        "content": "        Semester semester \u003d ParserUtil.parseSemester(argMultimap.getValue(PREFIX_SEMESTER).get());"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Semester semester \u003d ParserUtil.parseSemester(argMultimap.getValue(PREFIX_SEMESTER).get());"
+        "content": "        UniquePersonList students \u003d new UniquePersonList();"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        UniquePersonList students \u003d new UniquePersonList();"
+        "content": "        Set\u003cTag\u003e tagList \u003d ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Set\u003cTag\u003e tagList \u003d ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        Module module \u003d new Module(moduleCode, moduleTitle, academicYear, semester, students, tagList, TypeUtil.MODULE);"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Module module \u003d new Module(moduleCode, moduleTitle, academicYear, semester, students, tagList, TypeUtil.MODULE);"
+        "content": "        return new AddModuleCommand(module);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        return new AddModuleCommand(module);"
+        "content": "    }"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    /**"
+        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
+        "content": "     * {@code ArgumentMultimap}."
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * {@code ArgumentMultimap}."
+        "content": "     */"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     */"
+        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
+        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
-      },
-      {
-        "lineNumber": 64,
-        "author": {
-          "gitId": "xueyantian"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 64,
         "author": {
           "gitId": "xueyantian"
         },
@@ -22015,7 +22008,7 @@
       }
     ],
     "authorContributionMap": {
-      "xueyantian": 65
+      "xueyantian": 64
     }
   },
   {
@@ -22110,56 +22103,56 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.commands.AddCommand;"
+        "content": "import seedu.address.logic.commands.AddOccasionCommand;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.commands.AddOccasionCommand;"
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": "import seedu.address.model.occasion.Occasion;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.occasion.Occasion;"
-      },
-      {
-        "lineNumber": 17,
-        "author": {
-          "gitId": "xueyantian"
-        },
         "content": "import seedu.address.model.occasion.OccasionDate;"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 17,
         "author": {
           "gitId": "waytan"
         },
         "content": "import seedu.address.model.occasion.OccasionLocation;"
       },
       {
-        "lineNumber": 19,
+        "lineNumber": 18,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "import seedu.address.model.occasion.OccasionName;"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 19,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "import seedu.address.model.tag.Tag;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": ""
       },
       {
         "lineNumber": 21,
@@ -22173,203 +22166,203 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "/**"
+        "content": " * AddOccasionCommandParser"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": " * AddOccasionCommandParser"
+        "content": " */"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": " */"
+        "content": "public class AddOccasionCommandParser implements Parser\u003cAddOccasionCommand\u003e {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "public class AddOccasionCommandParser implements Parser\u003cAddOccasionCommand\u003e {"
+        "content": "    /**"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    /**"
+        "content": "     * Parses the given {@code String} of arguments in the context of the AddCommand"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the AddCommand"
+        "content": "     * and returns a new Occasion object of the given parameters."
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * and returns a new Occasion object of the given parameters."
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     */"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     */"
+        "content": "    public AddOccasionCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    public AddOccasionCommand parse(String args) throws ParseException {"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "xueyantian"
-        },
         "content": "        ArgumentMultimap argMultimap \u003d"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 33,
         "author": {
           "gitId": "waytan"
         },
         "content": "                ArgumentTokenizer.tokenize(args, PREFIX_OCCASION_NAME, PREFIX_OCCASION_DATE, PREFIX_OCCASION_LOCATION,"
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 34,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "                        PREFIX_TAG);"
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 35,
         "author": {
           "gitId": "xueyantian"
         },
         "content": ""
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 36,
         "author": {
           "gitId": "waytan"
         },
         "content": "        if (!arePrefixesPresent(argMultimap, PREFIX_OCCASION_NAME, PREFIX_OCCASION_DATE, PREFIX_OCCASION_LOCATION)"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 37,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "                || !argMultimap.getPreamble().isEmpty()) {"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 38,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddOccasionCommand.MESSAGE_USAGE));"
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 39,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 40,
         "author": {
           "gitId": "xueyantian"
         },
         "content": ""
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 41,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "        OccasionName occasionName \u003d ParserUtil.parseOccasionName(argMultimap.getValue(PREFIX_OCCASION_NAME).get());"
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 42,
         "author": {
           "gitId": "waytan"
         },
         "content": "        OccasionDate occasionDate \u003d ParserUtil.parseOccasionDate(argMultimap.getValue(PREFIX_OCCASION_DATE).get());"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 43,
         "author": {
           "gitId": "waytan"
         },
         "content": "        OccasionLocation location \u003d ParserUtil.parseOccasionLocation("
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 44,
         "author": {
           "gitId": "waytan"
         },
         "content": "                argMultimap.getValue(PREFIX_OCCASION_LOCATION).get());"
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 45,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "        Set\u003cTag\u003e tagList \u003d ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 46,
         "author": {
           "gitId": "xueyantian"
         },
         "content": ""
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 47,
         "author": {
           "gitId": "waytan"
         },
         "content": "        Occasion occasion \u003d new Occasion(occasionName, occasionDate, location, tagList, TypeUtil.OCCASION);"
       },
       {
-        "lineNumber": 49,
+        "lineNumber": 48,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "        return new AddOccasionCommand(occasion);"
       },
       {
-        "lineNumber": 50,
+        "lineNumber": 49,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": ""
       },
       {
         "lineNumber": 51,
@@ -22383,66 +22376,59 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    /**"
+        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
+        "content": "     * {@code ArgumentMultimap}."
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * {@code ArgumentMultimap}."
+        "content": "     */"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     */"
+        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
+        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
+        "content": "    }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "xueyantian"
-        },
         "content": ""
       },
       {
-        "lineNumber": 61,
+        "lineNumber": 60,
         "author": {
           "gitId": "xueyantian"
         },
@@ -22451,7 +22437,7 @@
     ],
     "authorContributionMap": {
       "waytan": 8,
-      "xueyantian": 53
+      "xueyantian": 52
     }
   },
   {
@@ -22546,70 +22532,70 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.commands.AddCommand;"
+        "content": "import seedu.address.logic.commands.AddPersonCommand;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.commands.AddPersonCommand;"
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "import seedu.address.model.person.Address;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.person.Address;"
+        "content": "import seedu.address.model.person.Email;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.person.Email;"
+        "content": "import seedu.address.model.person.Name;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.person.Name;"
+        "content": "import seedu.address.model.person.Person;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.person.Person;"
+        "content": "import seedu.address.model.person.Phone;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.person.Phone;"
+        "content": "import seedu.address.model.tag.Tag;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "import seedu.address.model.tag.Tag;"
+        "content": ""
       },
       {
         "lineNumber": 23,
@@ -22623,203 +22609,203 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "/**"
+        "content": " * Parses input arguments and creates a new AddPersonCommand object"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": " * Parses input arguments and creates a new AddPersonCommand object"
+        "content": " */"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": " */"
+        "content": "public class AddPersonCommandParser implements Parser\u003cAddPersonCommand\u003e {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "public class AddPersonCommandParser implements Parser\u003cAddPersonCommand\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    /**"
+        "content": "     * Parses the given {@code String} of arguments in the context of the AddCommand"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the AddCommand"
+        "content": "     * and returns a new Person object of the given parameters."
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * and returns a new Person object of the given parameters."
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     */"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     */"
+        "content": "    public AddPersonCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    public AddPersonCommand parse(String args) throws ParseException {"
+        "content": "        ArgumentMultimap argMultimap \u003d"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        ArgumentMultimap argMultimap \u003d"
+        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS, PREFIX_TAG);"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS, PREFIX_TAG);"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        if (!arePrefixesPresent(argMultimap, PREFIX_NAME, PREFIX_ADDRESS, PREFIX_PHONE, PREFIX_EMAIL)"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        if (!arePrefixesPresent(argMultimap, PREFIX_NAME, PREFIX_ADDRESS, PREFIX_PHONE, PREFIX_EMAIL)"
+        "content": "                || !argMultimap.getPreamble().isEmpty()) {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "                || !argMultimap.getPreamble().isEmpty()) {"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddPersonCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddCommand.MESSAGE_USAGE));"
+        "content": "        }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        Name name \u003d ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Name name \u003d ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());"
+        "content": "        Phone phone \u003d ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get());"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Phone phone \u003d ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get());"
+        "content": "        Email email \u003d ParserUtil.parseEmail(argMultimap.getValue(PREFIX_EMAIL).get());"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Email email \u003d ParserUtil.parseEmail(argMultimap.getValue(PREFIX_EMAIL).get());"
+        "content": "        Address address \u003d ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get());"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Address address \u003d ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get());"
+        "content": "        Set\u003cTag\u003e tagList \u003d ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Set\u003cTag\u003e tagList \u003d ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        Person person \u003d new Person(name, phone, email, address, tagList);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        Person person \u003d new Person(name, phone, email, address, tagList);"
+        "content": "        return new AddPersonCommand(person);"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        return new AddPersonCommand(person);"
+        "content": "    }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 53,
@@ -22833,59 +22819,52 @@
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    /**"
+        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
+        "content": "     * {@code ArgumentMultimap}."
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     * {@code ArgumentMultimap}."
+        "content": "     */"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "     */"
+        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
+        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "xueyantian"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 61,
         "author": {
           "gitId": "xueyantian"
         },
@@ -22893,7 +22872,7 @@
       }
     ],
     "authorContributionMap": {
-      "xueyantian": 62
+      "xueyantian": 61
     }
   },
   {

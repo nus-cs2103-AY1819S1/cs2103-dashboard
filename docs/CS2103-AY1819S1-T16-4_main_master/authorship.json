@@ -9207,189 +9207,189 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.planner.model.util.SampleModulePlannerUtil;"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": " * Represents the in-memory model of the planner book data."
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": " * Represents the in-memory model of the planner book data."
+        "content": " */"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": "public class ModelManager extends ComponentManager implements Model {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "public class ModelManager extends ComponentManager implements Model {"
+        "content": "    private static final Logger logger \u003d LogsCenter.getLogger(ModelManager.class);"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Logger logger \u003d LogsCenter.getLogger(ModelManager.class);"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    // TODO: Delete this"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    // TODO: Delete this"
+        "content": "    private final VersionedAddressBook versionedAddressBook;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final VersionedAddressBook versionedAddressBook;"
+        "content": "    private final FilteredList\u003cPerson\u003e filteredPersons;"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final FilteredList\u003cPerson\u003e filteredPersons;"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private final ModuleInfo[] moduleInfo;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final ModuleInfo[] moduleInfo;"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private UserProfile userProfile;"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    private UserProfile userProfile;"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private final VersionedModulePlanner versionedModulePlanner;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final VersionedModulePlanner versionedModulePlanner;"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    // TODO: Delete this"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    // TODO: Delete this"
+        "content": "    /**"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Initializes a ModelManager with the given addressBook and userPrefs."
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Initializes a ModelManager with the given addressBook and userPrefs."
+        "content": "     */"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    public ModelManager(ReadOnlyAddressBook addressBook, UserPrefs userPrefs) {"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ModelManager(ReadOnlyAddressBook addressBook, UserPrefs userPrefs) {"
+        "content": "        this(addressBook, new ModulePlanner(), new ModuleInfo[] {}, userPrefs);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        this(addressBook, new ModuleInfo[] {}, userPrefs);"
+        "content": "    }"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public ModelManager(ReadOnlyAddressBook addressBook, ReadOnlyModulePlanner modulePlanner,"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ModelManager(ReadOnlyAddressBook addressBook, ModuleInfo[] moduleInfo, UserPrefs userPrefs) {"
+        "content": "                        ModuleInfo[] moduleInfo, UserPrefs userPrefs) {"
       },
       {
         "lineNumber": 53,
@@ -9459,1893 +9459,1886 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedModulePlanner \u003d new VersionedModulePlanner("
+        "content": "        versionedModulePlanner \u003d new VersionedModulePlanner(modulePlanner);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "                SampleModulePlannerUtil.genModulePlanner(new ModulePlanner()));"
+        "content": "    }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 65,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 65,
         "author": {
           "gitId": "Hilda-Ang"
         },
         "content": "    //@@author Hilda-Ang"
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 66,
         "author": {
           "gitId": "Hilda-Ang"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    /**"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "     * Initializes a ModelManager with the given modulePlanner and userPrefs."
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Initializes a ModelManager with the given modulePlanner and userPrefs."
+        "content": "     */"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "    public ModelManager(ReadOnlyModulePlanner modulePlanner, ModuleInfo[] moduleInfo, UserPrefs userPrefs) {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public ModelManager(ReadOnlyModulePlanner modulePlanner, ModuleInfo[] moduleInfo, UserPrefs userPrefs) {"
+        "content": "        super();"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        super();"
+        "content": "        requireAllNonNull(modulePlanner, userPrefs);"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        requireAllNonNull(modulePlanner, userPrefs);"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        logger.fine(\"Initializing with planner: \" + modulePlanner + \" and user prefs \" + userPrefs);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        logger.fine(\"Initializing with planner: \" + modulePlanner + \" and user prefs \" + userPrefs);"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        versionedModulePlanner \u003d new VersionedModulePlanner(modulePlanner);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        versionedModulePlanner \u003d new VersionedModulePlanner(modulePlanner);"
+        "content": "        this.moduleInfo \u003d moduleInfo;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        this.moduleInfo \u003d moduleInfo;"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        //TODO: Delete this"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        //TODO: Delete this"
+        "content": "        this.versionedAddressBook \u003d new VersionedAddressBook(new AddressBook());"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        this.versionedAddressBook \u003d new VersionedAddressBook(new AddressBook());"
+        "content": "        filteredPersons \u003d new FilteredList\u003c\u003e(versionedAddressBook.getPersonList());"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        filteredPersons \u003d new FilteredList\u003c\u003e(versionedAddressBook.getPersonList());"
+        "content": "    }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    public ModelManager() {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public ModelManager() {"
+        "content": "        this(new ModulePlanner(), new ModuleInfo[]{}, new UserPrefs());"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        this(new ModulePlanner(), new ModuleInfo[]{}, new UserPrefs());"
+        "content": "    }"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": "    public void setUpUserProfile(int year, int semester, String major, Set\u003cString\u003e focusAreas) {"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void setUpUserProfile(int year, int semester, String major, Set\u003cString\u003e focusAreas) {"
+        "content": "        UserProfile.setUp(year, semester, major, focusAreas);"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        UserProfile.setUp(year, semester, major, focusAreas);"
+        "content": "        userProfile \u003d UserProfile.getInstance();"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        userProfile \u003d UserProfile.getInstance();"
+        "content": "    }"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": "    public boolean hasMajor(String major) {"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public boolean hasMajor(String major) {"
+        "content": "        for (Major m : Major.values()) {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (Major m : Major.values()) {"
+        "content": "            if (m.toString().equals(major)) {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            if (m.toString().equals(major)) {"
+        "content": "                return true;"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                return true;"
+        "content": "            }"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "        return false;"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return false;"
+        "content": "    }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "     * Checks if the {@code focusArea} is valid."
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Checks if the {@code focusArea} is valid."
+        "content": "     * The focus area is checked against a list of available"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * The focus area is checked against a list of available"
+        "content": "     * focus areas offered by the relevant educational institution."
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * focus areas offered by the relevant educational institution."
+        "content": "     *"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": "     * @param focusArea The focus area"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @param focusArea The focus area"
+        "content": "     * @return True if the focus area is offered, else false"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @return True if the focus area is offered, else false"
+        "content": "     */"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "    private boolean hasFocusArea(String focusArea) {"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private boolean hasFocusArea(String focusArea) {"
+        "content": "        for (FocusArea fa : FocusArea.values()) {"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (FocusArea fa : FocusArea.values()) {"
+        "content": "            if (fa.toString().equals(focusArea)) {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            if (fa.toString().equals(focusArea)) {"
+        "content": "                return true;"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                return true;"
+        "content": "            }"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "        return false;"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return false;"
+        "content": "    }"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": "    public boolean hasFocusAreas(Set\u003cString\u003e focusArea) {"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public boolean hasFocusAreas(Set\u003cString\u003e focusArea) {"
+        "content": "        for (String fa : focusArea) {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (String fa : focusArea) {"
+        "content": "            if (!hasFocusArea(fa)) {"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            if (!hasFocusArea(fa)) {"
+        "content": "                return false;"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                return false;"
+        "content": "            }"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "        return true;"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return true;"
+        "content": "    }"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    //@@author"
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "-"
         },
-        "content": "    //@@author"
+        "content": ""
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void resetData(ReadOnlyAddressBook newData) {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void resetData(ReadOnlyAddressBook newData) {"
+        "content": "        versionedAddressBook.resetData(newData);"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.resetData(newData);"
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateAddressBookChanged();"
+        "content": "    }"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public ReadOnlyAddressBook getAddressBook() {"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ReadOnlyAddressBook getAddressBook() {"
+        "content": "        return versionedAddressBook;"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedAddressBook;"
+        "content": "    }"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /** Raises an event to indicate the model has changed */"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "    /** Raises an event to indicate the model has changed */"
+        "content": "    private void indicateAddressBookChanged() {"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void indicateAddressBookChanged() {"
+        "content": "        raise(new AddressBookChangedEvent(versionedAddressBook));"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "        raise(new AddressBookChangedEvent(versionedAddressBook));"
+        "content": "    }"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private void indicateModulePlannerChanged() {"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void indicateModulePlannerChanged() {"
+        "content": "        raise(new ModulePlannerChangedEvent(versionedModulePlanner));"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        raise(new ModulePlannerChangedEvent(versionedModulePlanner));"
+        "content": "    }"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Person methods \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Person methods \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public boolean hasPerson(Person person) {"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean hasPerson(Person person) {"
+        "content": "        requireNonNull(person);"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(person);"
+        "content": "        return versionedAddressBook.hasPerson(person);"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedAddressBook.hasPerson(person);"
+        "content": "    }"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void deletePerson(Person target) {"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void deletePerson(Person target) {"
+        "content": "        versionedAddressBook.removePerson(target);"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.removePerson(target);"
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateAddressBookChanged();"
+        "content": "    }"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void addPerson(Person person) {"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void addPerson(Person person) {"
+        "content": "        versionedAddressBook.addPerson(person);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.addPerson(person);"
+        "content": "        updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "        updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);"
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateAddressBookChanged();"
+        "content": "    }"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void updatePerson(Person target, Person editedPerson) {"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void updatePerson(Person target, Person editedPerson) {"
+        "content": "        requireAllNonNull(target, editedPerson);"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireAllNonNull(target, editedPerson);"
+        "content": ""
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        versionedAddressBook.updatePerson(target, editedPerson);"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.updatePerson(target, editedPerson);"
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateAddressBookChanged();"
+        "content": "    }"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Module methods \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Module methods \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public boolean hasModule(Module module) {"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean hasModule(Module module) {"
+        "content": "        requireNonNull(module);"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(module);"
+        "content": "        return versionedModulePlanner.hasModule(module);"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedModulePlanner.hasModule(module);"
+        "content": "    }"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void deleteModules(List\u003cModule\u003e moduleCodes) {"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void deleteModules(List\u003cModule\u003e moduleCodes) {"
+        "content": "        versionedModulePlanner.deleteModules(moduleCodes);"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedModulePlanner.deleteModules(moduleCodes);"
+        "content": "        indicateModulePlannerChanged();"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateModulePlannerChanged();"
+        "content": "    }"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public boolean isModuleOffered(Module module) {"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean isModuleOffered(Module module) {"
+        "content": "        return ModuleInfo.getFromModuleCode(module.getCode()).isPresent();"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "        return ModuleInfo.getFromModuleCode(module.getCode()).isPresent();"
+        "content": "    }"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Retrieves the actual module information of the {@code module}"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Retrieves the actual module information of the {@code module}"
+        "content": "     * from {@code moduleInfo} and {@code finalizes} that module"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "     * from {@code moduleInfo} and {@code finalizes} that module"
+        "content": "     * with the actual module information."
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "     * with the actual module information."
+        "content": "     *"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * @param module The module to be finalized"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param module The module to be finalized"
+        "content": "     * @return The module with the actual module information"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return The module with the actual module information"
+        "content": "     */"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    private Module finalizeModule(Module module) {"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "    private Module finalizeModule(Module module) {"
+        "content": "        Optional\u003cModuleInfo\u003e optModuleInfo \u003d ModuleInfo.getFromModuleCode(module.getCode());"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "        Optional\u003cModuleInfo\u003e optModuleInfo \u003d ModuleInfo.getFromModuleCode(module.getCode());"
+        "content": "        if (optModuleInfo.isPresent()) {"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (optModuleInfo.isPresent()) {"
+        "content": "            return new Module(ModuleType.PROGRAMME_REQUIREMENTS, optModuleInfo.get());"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new Module(ModuleType.PROGRAMME_REQUIREMENTS, optModuleInfo.get());"
+        "content": "        }"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        return new Module(\"Unknown\");"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new Module(\"Unknown\");"
+        "content": "    }"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Retrieves the actual module information of the {@code modules}"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Retrieves the actual module information of the {@code modules}"
+        "content": "     * and finalizes the modules with their actual module information."
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "     * and finalizes the modules with their actual module information."
+        "content": "     * Individual modules are finalized using the method"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Individual modules are finalized using the method"
+        "content": "     * {@link #finalizeModule(Module) finalizeModule}."
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "     * {@link #finalizeModule(Module) finalizeModule}."
+        "content": "     *"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * @param modules The modules to be finalized"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param modules The modules to be finalized"
+        "content": "     * @return The modules with their actual module information"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return The modules with their actual module information"
+        "content": "     */"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    public List\u003cModule\u003e finalizeModules(List\u003cModule\u003e modules) {"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "    public List\u003cModule\u003e finalizeModules(List\u003cModule\u003e modules) {"
+        "content": "        List\u003cModule\u003e finalizedModules \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cModule\u003e finalizedModules \u003d new ArrayList\u003c\u003e();"
+        "content": "        for (Module m : modules) {"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (Module m : modules) {"
+        "content": "            finalizedModules.add(finalizeModule(m));"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "            finalizedModules.add(finalizeModule(m));"
+        "content": "        }"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        return finalizedModules;"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "        return finalizedModules;"
+        "content": "    }"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 234,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 235,
+        "lineNumber": 234,
         "author": {
           "gitId": "RomaRomama"
         },
         "content": "    //@@author RomaRomama"
       },
       {
-        "lineNumber": 236,
+        "lineNumber": 235,
         "author": {
           "gitId": "RomaRomama"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "RomaRomama"
+        },
+        "content": "    @Override"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "RomaRomama"
         },
-        "content": "    @Override"
+        "content": "    public void addModules(List\u003cModule\u003e modules, int index) {"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "RomaRomama"
         },
-        "content": "    public void addModules(List\u003cModule\u003e modules, int index) {"
+        "content": "        List\u003cModule\u003e finalizedModules \u003d finalizeModules(modules);"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "RomaRomama"
         },
-        "content": "        List\u003cModule\u003e finalizedModules \u003d finalizeModules(modules);"
+        "content": "        versionedModulePlanner.addModules(finalizedModules, index);"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "RomaRomama"
         },
-        "content": "        versionedModulePlanner.addModules(finalizedModules, index);"
+        "content": "        indicateModulePlannerChanged();"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "RomaRomama"
         },
-        "content": "        indicateModulePlannerChanged();"
+        "content": "    }"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "RomaRomama"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "RomaRomama"
         },
-        "content": ""
+        "content": "    //@@author"
       },
       {
         "lineNumber": 244,
         "author": {
-          "gitId": "RomaRomama"
+          "gitId": "-"
         },
-        "content": "    //@@author"
+        "content": ""
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Filtered Person List Accessors \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Filtered Person List Accessors \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Returns an unmodifiable view of the list of {@code Person} backed by the internal list of"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns an unmodifiable view of the list of {@code Person} backed by the internal list of"
+        "content": "     * {@code versionedAddressBook}"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "     * {@code versionedAddressBook}"
+        "content": "     */"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    @Override"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public ObservableList\u003cPerson\u003e getFilteredPersonList() {"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ObservableList\u003cPerson\u003e getFilteredPersonList() {"
+        "content": "        return FXCollections.unmodifiableObservableList(filteredPersons);"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": "        return FXCollections.unmodifiableObservableList(filteredPersons);"
+        "content": "    }"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void updateFilteredPersonList(Predicate\u003cPerson\u003e predicate) {"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void updateFilteredPersonList(Predicate\u003cPerson\u003e predicate) {"
+        "content": "        requireNonNull(predicate);"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(predicate);"
+        "content": "        filteredPersons.setPredicate(predicate);"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
-        "content": "        filteredPersons.setPredicate(predicate);"
+        "content": "    }"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 262,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 263,
+        "lineNumber": 262,
         "author": {
           "gitId": "rongjiecomputer"
         },
         "content": "    // @@author rongjiecomputer"
       },
       {
-        "lineNumber": 264,
+        "lineNumber": 263,
         "author": {
           "gitId": "rongjiecomputer"
         },
         "content": "    public ModuleInfo[] getModuleInfo() {"
       },
       {
-        "lineNumber": 265,
+        "lineNumber": 264,
         "author": {
           "gitId": "rongjiecomputer"
         },
         "content": "        return moduleInfo;"
       },
       {
-        "lineNumber": 266,
+        "lineNumber": 265,
         "author": {
           "gitId": "rongjiecomputer"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 267,
+        "lineNumber": 266,
         "author": {
           "gitId": "rongjiecomputer"
         },
         "content": "    // @@author"
       },
       {
-        "lineNumber": 268,
+        "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 269,
+        "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
         "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Filtered Module List Accessors \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
-        "lineNumber": 270,
+        "lineNumber": 269,
         "author": {
           "gitId": "GabrielYik"
         },
         "content": "    //@@author GabrielYik"
       },
       {
-        "lineNumber": 271,
+        "lineNumber": 270,
         "author": {
           "gitId": "GabrielYik"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 271,
+        "author": {
+          "gitId": "GabrielYik"
+        },
+        "content": "    @Override"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    @Override"
+        "content": "    public ObservableList\u003cModule\u003e getFilteredTakenModuleList(int index) {"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public ObservableList\u003cModule\u003e getFilteredTakenModuleList(int index) {"
+        "content": "        return FXCollections.unmodifiableObservableList("
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        return FXCollections.unmodifiableObservableList("
+        "content": "                versionedModulePlanner.listModulesTaken(index));"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                versionedModulePlanner.listModulesTaken(index));"
+        "content": "    }"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    @Override"
+        "content": "    public ObservableList\u003cModule\u003e getFilteredAvailableModuleList(int index) {"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public ObservableList\u003cModule\u003e getFilteredAvailableModuleList(int index) {"
+        "content": "        return FXCollections.unmodifiableObservableList("
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        return FXCollections.unmodifiableObservableList("
+        "content": "                versionedModulePlanner.listModulesAvailable(index));"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                versionedModulePlanner.listModulesAvailable(index));"
+        "content": "    }"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    //@@author"
       },
       {
         "lineNumber": 284,
         "author": {
-          "gitId": "GabrielYik"
+          "gitId": "-"
         },
-        "content": "    //@@author"
+        "content": ""
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Undo/Redo \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Undo/Redo \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public boolean canUndoAddressBook() {"
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean canUndoAddressBook() {"
+        "content": "        return versionedAddressBook.canUndo();"
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedAddressBook.canUndo();"
+        "content": "    }"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public boolean canRedoAddressBook() {"
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean canRedoAddressBook() {"
+        "content": "        return versionedAddressBook.canRedo();"
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedAddressBook.canRedo();"
+        "content": "    }"
       },
       {
         "lineNumber": 296,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 298,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void undoAddressBook() {"
       },
       {
         "lineNumber": 299,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void undoAddressBook() {"
+        "content": "        versionedAddressBook.undo();"
       },
       {
         "lineNumber": 300,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.undo();"
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 301,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateAddressBookChanged();"
+        "content": "    }"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void redoAddressBook() {"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void redoAddressBook() {"
+        "content": "        versionedAddressBook.redo();"
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.redo();"
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateAddressBookChanged();"
+        "content": "    }"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void commitAddressBook() {"
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void commitAddressBook() {"
+        "content": "        versionedAddressBook.commit();"
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.commit();"
+        "content": "    }"
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public boolean equals(Object obj) {"
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object obj) {"
+        "content": "        // short circuit if same object"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "-"
         },
-        "content": "        // short circuit if same object"
+        "content": "        if (obj \u003d\u003d this) {"
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (obj \u003d\u003d this) {"
+        "content": "            return true;"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
-        "content": "            return true;"
+        "content": "        }"
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        // instanceof handles nulls"
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "-"
         },
-        "content": "        // instanceof handles nulls"
+        "content": "        if (!(obj instanceof ModelManager)) {"
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!(obj instanceof ModelManager)) {"
+        "content": "            return false;"
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
-        "content": "            return false;"
+        "content": "        }"
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        // state check"
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "-"
         },
-        "content": "        // state check"
+        "content": "        ModelManager other \u003d (ModelManager) obj;"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "-"
         },
-        "content": "        ModelManager other \u003d (ModelManager) obj;"
+        "content": "        return versionedAddressBook.equals(other.versionedAddressBook)"
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedAddressBook.equals(other.versionedAddressBook)"
+        "content": "                \u0026\u0026 filteredPersons.equals(other.filteredPersons);"
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 filteredPersons.equals(other.filteredPersons);"
-      },
-      {
-        "lineNumber": 331,
-        "author": {
-          "gitId": "-"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 332,
+        "lineNumber": 331,
         "author": {
           "gitId": "-"
         },
@@ -11356,7 +11349,7 @@
       "RomaRomama": 10,
       "GabrielYik": 15,
       "rongjiecomputer": 5,
-      "-": 235,
+      "-": 234,
       "Hilda-Ang": 67
     }
   },
@@ -11942,42 +11935,42 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        boolean result \u003d true;"
+        "content": "        for (Semester semester : semesters) {"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (Semester semester : semesters) {"
+        "content": "            if (semester.containsModule(module)) {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            result \u003d result \u0026\u0026 semester.containsModule(module);"
+        "content": "                return true;"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return result;"
+        "content": "        return false;"
       },
       {
         "lineNumber": 89,
@@ -14992,63 +14985,63 @@
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import java.net.URI;"
+        "content": "import java.io.IOException;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import java.net.URISyntaxException;"
+        "content": "import java.net.URL;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import java.nio.file.Paths;"
+        "content": "import java.util.Arrays;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import java.util.Arrays;"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import java.util.Optional;"
+        "content": "import java.util.logging.Logger;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import java.util.logging.Logger;"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "import com.fasterxml.jackson.annotation.JsonIgnore;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import com.fasterxml.jackson.annotation.JsonIgnore;"
+        "content": "import com.fasterxml.jackson.annotation.JsonProperty;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import com.fasterxml.jackson.annotation.JsonProperty;"
+        "content": "import com.google.common.base.Charsets;"
       },
       {
         "lineNumber": 16,
@@ -15076,1928 +15069,1935 @@
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "import com.google.common.io.Resources;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import seedu.planner.MainApp;"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import seedu.planner.commons.core.LogsCenter;"
+        "content": "import seedu.planner.MainApp;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import seedu.planner.commons.exceptions.DataConversionException;"
+        "content": "import seedu.planner.commons.core.LogsCenter;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "import seedu.planner.commons.util.JsonUtil;"
+        "content": "import seedu.planner.commons.exceptions.DataConversionException;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "import seedu.planner.commons.util.JsonUtil;"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": " * Represents an immutable {@code ModuleInfo} class."
+        "content": "/**"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": " * \u003cp\u003e"
+        "content": " * Represents an immutable {@code ModuleInfo} class."
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": " * REQUIRES: Module code is globally unique, no two ModuleInfo object has the same module code."
+        "content": " * \u003cp\u003e"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": " */"
+        "content": " * REQUIRES: Module code is globally unique, no two ModuleInfo object has the same module code."
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "public class ModuleInfo {"
+        "content": " */"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public static final String MESSAGE_MODULE_CODE_CONSTRAINTS \u003d \"Module codes should be of the format WX(Y)1234(Z), \""
+        "content": "public class ModuleInfo {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            + \"where WX(Y) refers to a prefix like CS or CEG that describes the type of the module, \""
+        "content": "    public static final String MESSAGE_MODULE_CODE_CONSTRAINTS \u003d \"Module codes should be of the format WX(Y)1234(Z), \""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            + \"1234 refers to a sequence of positive numbers, \""
+        "content": "            + \"where WX(Y) refers to a prefix like CS or CEG that describes the type of the module, \""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            + \"and (Z) refers to an optional postfix.\";"
+        "content": "            + \"1234 refers to a sequence of positive numbers, \""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "            + \"and (Z) refers to an optional postfix.\";"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private static ImmutableMap\u003cString, ModuleInfo\u003e codeToModuleInfoMap \u003d null;"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private static ImmutableMap\u003cString, ModuleInfo\u003e codeToModuleInfoMap \u003d null;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * Class to retrieve {@code ModuleInfo} from JSON file packaged in JAR file."
+        "content": "    /**"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": "     * Class to retrieve {@code ModuleInfo} from JSON file packaged in JAR file."
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public static class ModuleInfoRetriever {"
+        "content": "     */"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        private static final String MODULE_INFO_FILE_PATH \u003d \"/data/moduleInfo.json\";"
+        "content": "    public static class ModuleInfoRetriever {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        private static Logger logger \u003d LogsCenter.getLogger(ModuleInfoRetriever.class);"
+        "content": "        private static final String MODULE_INFO_FILE_PATH \u003d \"/data/moduleInfo.json\";"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        private static Logger logger \u003d LogsCenter.getLogger(ModuleInfoRetriever.class);"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        private static ModuleInfoRetriever instance \u003d null;"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        private static ModuleInfoRetriever instance \u003d null;"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        private ModuleInfo[] moduleInfoList;"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        private ModuleInfo[] moduleInfoList;"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        private ModuleInfoRetriever() {"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            try {"
+        "content": "        private ModuleInfoRetriever() {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                URI path \u003d MainApp.class.getResource(MODULE_INFO_FILE_PATH).toURI();"
+        "content": "            try {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                moduleInfoList \u003d JsonUtil.readJsonFile(Paths.get(path), ModuleInfo[].class).get();"
+        "content": "                URL resource \u003d MainApp.class.getResource(MODULE_INFO_FILE_PATH);"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            } catch (URISyntaxException e) {"
+        "content": "                String text \u003d Resources.toString(resource, Charsets.UTF_8);"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                logger.warning(\"Problem while reading from resource file. \""
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                    + \"Will be starting with an empty module database\");"
+        "content": "                moduleInfoList \u003d JsonUtil.fromJsonString(text, ModuleInfo[].class);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                moduleInfoList \u003d new ModuleInfo[] {};"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            } catch (DataConversionException e) {"
+        "content": "                ModuleInfo.finalizeModuleInfo(moduleInfoList);"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                logger.warning(\"Problem while reading from resource file. \""
+        "content": "            } catch (IOException e) {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                    + \"Will be starting with an empty module database\");"
+        "content": "                logger.warning(\"Problem while reading from resource file. \""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                moduleInfoList \u003d new ModuleInfo[] {};"
+        "content": "                    + \"Will be starting with an empty module database\");"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            }"
+        "content": "                moduleInfoList \u003d new ModuleInfo[] {};"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        /**"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         * Get singleton instance of {@code ModuleInfoRetriever}."
+        "content": "        /**"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         *"
+        "content": "         * Get singleton instance of {@code ModuleInfoRetriever}."
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         * @throws DataConversionException"
+        "content": "         *"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         */"
+        "content": "         * @throws DataConversionException"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        public static ModuleInfoRetriever getInstance() {"
+        "content": "         */"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            if (instance \u003d\u003d null) {"
+        "content": "        public static ModuleInfoRetriever getInstance() {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                instance \u003d new ModuleInfoRetriever();"
+        "content": "            if (instance \u003d\u003d null) {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            }"
+        "content": "                instance \u003d new ModuleInfoRetriever();"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            return instance;"
+        "content": "            }"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "            return instance;"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        public ModuleInfo[] getModuleInfoList() {"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            return moduleInfoList;"
+        "content": "        public ModuleInfo[] getModuleInfoList() {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "            return moduleInfoList;"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        /**"
+        "content": ""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         *  Map module code to {@code ModuleInfo}."
+        "content": "        /**"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         *"
+        "content": "         *  Map module code to {@code ModuleInfo}."
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         * @param moduleCode Module code"
+        "content": "         *"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         */"
+        "content": "         * @param moduleCode Module code"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        public Optional\u003cModuleInfo\u003e getFromModuleCode(String moduleCode) {"
+        "content": "         */"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            if (codeToModuleInfoMap.containsKey(moduleCode)) {"
+        "content": "        public Optional\u003cModuleInfo\u003e getFromModuleCode(String moduleCode) {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                return Optional.\u003cModuleInfo\u003eof(codeToModuleInfoMap.get(moduleCode));"
+        "content": "            if (codeToModuleInfoMap.containsKey(moduleCode)) {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            }"
+        "content": "                return Optional.\u003cModuleInfo\u003eof(codeToModuleInfoMap.get(moduleCode));"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            return Optional.empty();"
+        "content": "            }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "            return Optional.empty();"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        /**"
+        "content": ""
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         * Takes in a list of {@code ModuleInfo}s deserialzied by JSON parser and"
+        "content": "        /**"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         * finalize {@code ModuleInfo}s\u0027 internal structure."
+        "content": "         * Takes in a list of {@code ModuleInfo}s deserialzied by JSON parser and"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         *"
+        "content": "         * finalize {@code ModuleInfo}s\u0027 internal structure."
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         * @param moduleInfo List of {@code ModuleInfo}s deserialized by JSON parser."
+        "content": "         *"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         */"
+        "content": "         * @param moduleInfo List of {@code ModuleInfo}s deserialized by JSON parser."
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        public static ModuleInfo[] finalizeModuleInfo(ModuleInfo[] moduleInfo) {"
+        "content": "         */"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            ImmutableMap.Builder\u003cString, ModuleInfo\u003e builder \u003d ImmutableMap.builder();"
+        "content": "        public static ModuleInfo[] finalizeModuleInfo(ModuleInfo[] moduleInfo) {"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            for (ModuleInfo mInfo : moduleInfo) {"
+        "content": "            ImmutableMap.Builder\u003cString, ModuleInfo\u003e builder \u003d ImmutableMap.builder();"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                builder.put(mInfo.getCode(), mInfo);"
+        "content": "            for (ModuleInfo mInfo : moduleInfo) {"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            }"
+        "content": "                builder.put(mInfo.getCode(), mInfo);"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            codeToModuleInfoMap \u003d builder.build();"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "            codeToModuleInfoMap \u003d builder.build();"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            for (ModuleInfo mInfo : moduleInfo) {"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                mInfo.finalize(codeToModuleInfoMap);"
+        "content": "            for (ModuleInfo mInfo : moduleInfo) {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            }"
+        "content": "                mInfo.finalize(codeToModuleInfoMap);"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            return moduleInfo;"
+        "content": "            }"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "            return moduleInfo;"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private String code;"
+        "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private String code;"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private String name;"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private String name;"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private ModuleType[] possibleTypes;"
+        "content": ""
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private ModuleType[] possibleTypes;"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * Module credit. We set the type to be float because some modules have 0.5 MC."
+        "content": "    /**"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": "     * Module credit. We set the type to be float because some modules have 0.5 MC."
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private float creditCount;"
+        "content": "     */"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private float creditCount;"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    @JsonProperty(\"preclusions\")"
+        "content": ""
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private String[] preclusions;"
+        "content": "    @JsonProperty(\"preclusions\")"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private String[] preclusions;"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    @JsonProperty(\"prerequisites\")"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private String[] prerequisites;"
+        "content": "    @JsonProperty(\"prerequisites\")"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private String[] prerequisites;"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    @JsonIgnore"
+        "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private ImmutableList\u003cModuleInfo\u003e precluModuleInfo;"
+        "content": "    @JsonIgnore"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private ImmutableList\u003cModuleInfo\u003e precluModuleInfo;"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    @JsonIgnore"
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private ImmutableList\u003cModuleInfo\u003e prereqModuleInfo;"
+        "content": "    @JsonIgnore"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private ImmutableList\u003cModuleInfo\u003e prereqModuleInfo;"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private boolean finalized \u003d false;"
+        "content": ""
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    private boolean finalized \u003d false;"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * Default constructor required by JSON parser."
+        "content": "    /**"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": "     * Default constructor required by JSON parser."
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public ModuleInfo() {"
+        "content": "     */"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "    public ModuleInfo() {"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * Creates a new {@code ModuleInfo}."
+        "content": "    /**"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * This {@code ModuleInfo} does not have all its"
+        "content": "     * Creates a new {@code ModuleInfo}."
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * attributes initialised and is meant to be used"
+        "content": "     * This {@code ModuleInfo} does not have all its"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * as a lightweight and convenient object."
+        "content": "     * attributes initialised and is meant to be used"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     *"
+        "content": "     * as a lightweight and convenient object."
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param code The {@code Module} code"
+        "content": "     *"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": "     * @param code The {@code Module} code"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public ModuleInfo(String code) {"
+        "content": "     */"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        this.code \u003d code;"
+        "content": "    public ModuleInfo(String code) {"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "        this.code \u003d code;"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * Creates a new {@code ModuleInfo}. For testing only."
+        "content": "    /**"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     *"
+        "content": "     * Creates a new {@code ModuleInfo}. For testing only."
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param code          The {@code Module} code"
+        "content": "     *"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param name          The {@code Module} name"
+        "content": "     * @param code          The {@code Module} code"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param possibleTypes The possible {@code ModuleType}s"
+        "content": "     * @param name          The {@code Module} name"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param creditCount   The credit count"
+        "content": "     * @param possibleTypes The possible {@code ModuleType}s"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param preclusions   An array of preclusion module code strings"
+        "content": "     * @param creditCount   The credit count"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param prerequisites An array of prerequisite module code strings"
+        "content": "     * @param preclusions   An array of preclusion module code strings"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": "     * @param prerequisites An array of prerequisite module code strings"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public ModuleInfo(String code, String name, ModuleType[] possibleTypes,"
+        "content": "     */"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                      float creditCount, String[] preclusions, String[] prerequisites) {"
+        "content": "    public ModuleInfo(String code, String name, ModuleType[] possibleTypes,"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        requireAllNonNull(code, name, possibleTypes, creditCount, preclusions, prerequisites);"
+        "content": "                      float creditCount, String[] preclusions, String[] prerequisites) {"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        this.code \u003d code;"
+        "content": "        requireAllNonNull(code, name, possibleTypes, creditCount, preclusions, prerequisites);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        this.name \u003d name;"
+        "content": "        this.code \u003d code;"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        this.possibleTypes \u003d possibleTypes;"
+        "content": "        this.name \u003d name;"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        this.creditCount \u003d creditCount;"
+        "content": "        this.possibleTypes \u003d possibleTypes;"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        this.preclusions \u003d preclusions;"
+        "content": "        this.creditCount \u003d creditCount;"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        this.prerequisites \u003d prerequisites;"
+        "content": "        this.preclusions \u003d preclusions;"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "        this.prerequisites \u003d prerequisites;"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public String getCode() {"
+        "content": ""
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        return code;"
+        "content": "    public String getCode() {"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "        return code;"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public String getName() {"
+        "content": ""
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        return name;"
+        "content": "    public String getName() {"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "        return name;"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public ModuleType[] getPossibleTypes() {"
+        "content": ""
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        return possibleTypes;"
+        "content": "    public ModuleType[] getPossibleTypes() {"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "        return possibleTypes;"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public float getCreditCount() {"
+        "content": ""
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        return creditCount;"
+        "content": "    public float getCreditCount() {"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "        return creditCount;"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 193,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "GabrielYik"
         },
-        "content": "    // @@author rongjiecomputer"
+        "content": ""
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    public ImmutableList\u003cModuleInfo\u003e getPrerequisites() {"
+        "content": "    // @@author rongjiecomputer"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        Preconditions.checkState(finalized);"
+        "content": "    public ImmutableList\u003cModuleInfo\u003e getPrerequisites() {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        return prereqModuleInfo;"
+        "content": "        Preconditions.checkState(finalized);"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        return prereqModuleInfo;"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    public ImmutableList\u003cModuleInfo\u003e getPreclusions() {"
+        "content": ""
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        Preconditions.checkState(finalized);"
+        "content": "    public ImmutableList\u003cModuleInfo\u003e getPreclusions() {"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        return precluModuleInfo;"
+        "content": "        Preconditions.checkState(finalized);"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        return precluModuleInfo;"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     * Initialize internal lists of prerequisite and preclusion {@code ModuleInfo}."
+        "content": "    /**"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     *"
+        "content": "     * Initialize internal lists of prerequisite and preclusion {@code ModuleInfo}."
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     * @param map An immutable map that maps module code to {@code ModuleInfo}."
+        "content": "     *"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     */"
+        "content": "     * @param map An immutable map that maps module code to {@code ModuleInfo}."
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    private void finalize(ImmutableMap\u003cString, ModuleInfo\u003e map) {"
+        "content": "     */"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        Preconditions.checkState(!finalized);"
+        "content": "    private void finalize(ImmutableMap\u003cString, ModuleInfo\u003e map) {"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        Preconditions.checkState(!finalized);"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        prereqModuleInfo \u003d Arrays.stream(prerequisites)"
+        "content": ""
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                .map(code -\u003e map.get(code))"
+        "content": "        prereqModuleInfo \u003d Arrays.stream(prerequisites)"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                .filter(mInfo -\u003e mInfo !\u003d null)"
+        "content": "                .map(code -\u003e map.get(code))"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                .collect(ImmutableList.toImmutableList());"
+        "content": "                .filter(mInfo -\u003e mInfo !\u003d null)"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        precluModuleInfo \u003d Arrays.stream(preclusions)"
+        "content": "                .collect(ImmutableList.toImmutableList());"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                .map(code -\u003e map.get(code))"
+        "content": "        precluModuleInfo \u003d Arrays.stream(preclusions)"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                .filter(mInfo -\u003e mInfo !\u003d null)"
+        "content": "                .map(code -\u003e map.get(code))"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                .collect(ImmutableList.toImmutableList());"
+        "content": "                .filter(mInfo -\u003e mInfo !\u003d null)"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "                .collect(ImmutableList.toImmutableList());"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        finalized \u003d true;"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        finalized \u003d true;"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     * Takes in a list of {@code ModuleInfo}s deserialzied by JSON parser and"
+        "content": "    /**"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     * finalize {@code ModuleInfo}s\u0027 internal structure."
+        "content": "     * Takes in a list of {@code ModuleInfo}s deserialzied by JSON parser and"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     *"
+        "content": "     * finalize {@code ModuleInfo}s\u0027 internal structure."
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     * @param moduleInfo List of {@code ModuleInfo}s deserialized by JSON parser."
+        "content": "     *"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     */"
+        "content": "     * @param moduleInfo List of {@code ModuleInfo}s deserialized by JSON parser."
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    public static ModuleInfo[] finalizeModuleInfo(ModuleInfo[] moduleInfo) {"
+        "content": "     */"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        ImmutableMap.Builder\u003cString, ModuleInfo\u003e builder \u003d ImmutableMap.builder();"
+        "content": "    public static ModuleInfo[] finalizeModuleInfo(ModuleInfo[] moduleInfo) {"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        for (ModuleInfo mInfo : moduleInfo) {"
+        "content": "        ImmutableMap.Builder\u003cString, ModuleInfo\u003e builder \u003d ImmutableMap.builder();"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            builder.put(mInfo.getCode(), mInfo);"
+        "content": "        for (ModuleInfo mInfo : moduleInfo) {"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        }"
+        "content": "            builder.put(mInfo.getCode(), mInfo);"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        codeToModuleInfoMap \u003d builder.build();"
+        "content": ""
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        codeToModuleInfoMap \u003d builder.build();"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        for (ModuleInfo mInfo : moduleInfo) {"
+        "content": ""
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            mInfo.finalize(codeToModuleInfoMap);"
+        "content": "        for (ModuleInfo mInfo : moduleInfo) {"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        }"
+        "content": "            mInfo.finalize(codeToModuleInfoMap);"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        return moduleInfo;"
+        "content": "        }"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        return moduleInfo;"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     *  Map module code to {@code ModuleInfo}."
+        "content": "    /**"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     *"
+        "content": "     *  Map module code to {@code ModuleInfo}."
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     * @param moduleCode Module code"
+        "content": "     *"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "     */"
+        "content": "     * @param moduleCode Module code"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    public static Optional\u003cModuleInfo\u003e getFromModuleCode(String moduleCode) {"
+        "content": "     */"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        return ModuleInfoRetriever.getInstance().getFromModuleCode(moduleCode);"
+        "content": "    public static Optional\u003cModuleInfo\u003e getFromModuleCode(String moduleCode) {"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        return ModuleInfoRetriever.getInstance().getFromModuleCode(moduleCode);"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    public int hashCode() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        return code.hashCode();"
+        "content": "    public int hashCode() {"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        return code.hashCode();"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        // short circuit if same object"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": "        // short circuit if same object"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            return true;"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        }"
+        "content": "            return true;"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        // instanceof handles nulls"
+        "content": ""
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        if (!(other instanceof ModuleInfo)) {"
+        "content": "        // instanceof handles nulls"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            return false;"
+        "content": "        if (!(other instanceof ModuleInfo)) {"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        }"
+        "content": "            return false;"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        ModuleInfo otherModuleInfo \u003d (ModuleInfo) other;"
+        "content": ""
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        ModuleInfo otherModuleInfo \u003d (ModuleInfo) other;"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        // state check"
+        "content": ""
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        return code.equals(otherModuleInfo.code);"
+        "content": "        // state check"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        return code.equals(otherModuleInfo.code);"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    public String toString() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        String str \u003d \"ModuleInfo(\" + code + \") {\";"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        if (prereqModuleInfo.size() \u003e 0) {"
+        "content": "        String str \u003d \"ModuleInfo(\" + code + \") {\";"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            str +\u003d \" prereq:\";"
+        "content": "        if (prereqModuleInfo.size() \u003e 0) {"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            for (ModuleInfo prereq : prereqModuleInfo) {"
+        "content": "            str +\u003d \" prereq:\";"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                str +\u003d \" \" + prereq.code;"
+        "content": "            for (ModuleInfo prereq : prereqModuleInfo) {"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            }"
+        "content": "                str +\u003d \" \" + prereq.code;"
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        if (precluModuleInfo.size() \u003e 0) {"
+        "content": "        }"
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            str +\u003d \" preclu:\";"
+        "content": "        if (precluModuleInfo.size() \u003e 0) {"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            for (ModuleInfo preclu : precluModuleInfo) {"
+        "content": "            str +\u003d \" preclu:\";"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                str +\u003d \" \" + preclu.code;"
+        "content": "            for (ModuleInfo preclu : precluModuleInfo) {"
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            }"
+        "content": "                str +\u003d \" \" + preclu.code;"
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        return str + \" }\";"
+        "content": "        }"
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        return str + \" }\";"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    // @@author"
+        "content": "    }"
       },
       {
         "lineNumber": 294,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "    // @@author"
+      },
+      {
+        "lineNumber": 295,
         "author": {
           "gitId": "-"
         },
@@ -17005,7 +17005,7 @@
       }
     ],
     "authorContributionMap": {
-      "GabrielYik": 190,
+      "GabrielYik": 191,
       "rongjiecomputer": 101,
       "-": 3
     }

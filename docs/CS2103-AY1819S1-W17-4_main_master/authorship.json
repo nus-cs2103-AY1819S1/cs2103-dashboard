@@ -13493,7 +13493,7 @@
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
         "content": ""
       },
@@ -13514,7 +13514,7 @@
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -13717,7 +13717,7 @@
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
         "content": ""
       },
@@ -14648,93 +14648,93 @@
       {
         "lineNumber": 233,
         "author": {
-          "gitId": "btzy"
-        },
-        "content": "\u003d\u003d\u003d Filtering a list of tasks: `search`"
-      },
-      {
-        "lineNumber": 234,
-        "author": {
-          "gitId": "btzy"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 235,
-        "author": {
-          "gitId": "btzy"
-        },
-        "content": "Filters the current list of tasks with a specified filter predicate."
-      },
-      {
-        "lineNumber": 236,
-        "author": {
-          "gitId": "btzy"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 237,
-        "author": {
-          "gitId": "btzy"
-        },
-        "content": "This is an alias for `filter`.  They perform exactly the same function.  The alias is provided because it is sometimes more intuitive to think of certain filter operations as \u0027search\u0027 operations, e.g. searching for a task that has a particular name."
-      },
-      {
-        "lineNumber": 238,
-        "author": {
-          "gitId": "btzy"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 239,
-        "author": {
           "gitId": "ranaldmiao"
         },
         "content": "//TODO: Sidhant"
       },
       {
-        "lineNumber": 240,
+        "lineNumber": 234,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "\u003d\u003d\u003d Sorting a list of tasks : `sort`"
       },
       {
-        "lineNumber": 241,
+        "lineNumber": 235,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": ""
       },
       {
-        "lineNumber": 242,
+        "lineNumber": 236,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Sorts the lists of all the tasks which the user is currently viewing. Generally meant to be used in combination with `filter`. +"
       },
       {
-        "lineNumber": 243,
+        "lineNumber": 237,
         "author": {
           "gitId": "sidhant007"
         },
         "content": ""
       },
       {
-        "lineNumber": 244,
+        "lineNumber": 238,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "When this command is used, Deadline Manager will sort all the currently displayed tasks according to the user specified comparison method. +"
       },
       {
-        "lineNumber": 245,
+        "lineNumber": 239,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "Sort comparators are the core of the `sort` command.  Each sort comparator specifies a particular attribute (Example - `name`, `priority`) and a comparison direction, i.e ascending or descending."
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "sidhant007"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "sidhant007"
+        },
+        "content": "The entire sorting command is composed of a chain of sort comparators. This chain helps the user to define which tasks to show earlier and which ones to show latter. +"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "sidhant007"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "sidhant007"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "sidhant007"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "sidhant007"
+        },
+        "content": "What this means is that in case two tasks are in tie according to the first comparator, then the decision to place which task first is determined by the next comparator, and so on."
       },
       {
         "lineNumber": 246,
@@ -14748,7 +14748,7 @@
         "author": {
           "gitId": "sidhant007"
         },
-        "content": "The entire sorting command is composed of a chain of sort comparators. This chain helps the user to define which tasks to show earlier and which ones to show latter. +"
+        "content": "****"
       },
       {
         "lineNumber": 248,
@@ -14760,254 +14760,254 @@
       {
         "lineNumber": 249,
         "author": {
-          "gitId": "sidhant007"
+          "gitId": "ranaldmiao"
         },
-        "content": "****"
+        "content": "Format: `sort SORT_COMPARATOR [SORT_COMPARATORS]...` +"
       },
       {
         "lineNumber": 250,
         "author": {
-          "gitId": "sidhant007"
+          "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "sidhant007"
         },
-        "content": "What this means is that in case two tasks are in tie according to the first comparator, then the decision to place which task first is determined by the next comparator, and so on."
+        "content": "* Format of `SORT_COMPARATOR`: `(n|name|d|due|p|priority)(\u003c|\u003e)` OR `(t|tag)(\u003c|\u003e){TAG1 TAG2 TAG3 ...}"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "sidhant007"
         },
-        "content": ""
+        "content": "* Sorts the list by the 1st comparator, in case of ties, it sorts by 2nd comparator and so on."
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "sidhant007"
         },
-        "content": "****"
-      },
-      {
-        "lineNumber": 254,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 255,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "Format: `sort SORT_COMPARATOR [SORT_COMPARATORS]...` +"
-      },
-      {
-        "lineNumber": 256,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "****"
-      },
-      {
-        "lineNumber": 257,
-        "author": {
-          "gitId": "sidhant007"
-        },
-        "content": "* Format of `SORT_COMPARATOR`: `(n|name|d|due|p|priority)(\u003c|\u003e)` OR `(t|tag)(\u003c|\u003e){TAG1 TAG2 TAG3 ...}"
-      },
-      {
-        "lineNumber": 258,
-        "author": {
-          "gitId": "sidhant007"
-        },
-        "content": "* Sorts the list by the 1st comparator, in case of ties, it sorts by 2nd comparator and so on."
-      },
-      {
-        "lineNumber": 259,
-        "author": {
-          "gitId": "sidhant007"
-        },
         "content": "* Meaning of the operators for each valid key:"
       },
       {
-        "lineNumber": 260,
+        "lineNumber": 254,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "** When `key` is `n` or `name`, the task name is compared. Comparision is case-insensitive."
       },
       {
-        "lineNumber": 261,
+        "lineNumber": 255,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "** When `key` is `d` or `due`, the task\u0027s due date is compared."
       },
       {
-        "lineNumber": 262,
+        "lineNumber": 256,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "** When `key` is `p` or `priority`, the task\u0027s priority is compared. Note that 1 is the highest priority and 4 is the lowest priority."
       },
       {
-        "lineNumber": 263,
+        "lineNumber": 257,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "** When `key` is `t` or `tag`, the task\u0027s tags are compared."
       },
       {
-        "lineNumber": 264,
+        "lineNumber": 258,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "[NOTE]"
       },
       {
-        "lineNumber": 265,
+        "lineNumber": 259,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "For sorting by tags the user has to specify which tags are more important and which are less important."
       },
       {
-        "lineNumber": 266,
+        "lineNumber": 260,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "** Any other `key` will cause Deadline Manager to produce an error."
       },
       {
-        "lineNumber": 267,
+        "lineNumber": 261,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "* \u003c stands for sorting in ascending order and \u003e stands for sorting in descending order"
       },
       {
-        "lineNumber": 268,
+        "lineNumber": 262,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "****"
       },
       {
-        "lineNumber": 269,
+        "lineNumber": 263,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Examples:"
       },
       {
-        "lineNumber": 270,
+        "lineNumber": 264,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": ""
       },
       {
-        "lineNumber": 271,
+        "lineNumber": 265,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "* `sort n\u003e` +"
       },
       {
-        "lineNumber": 272,
+        "lineNumber": 266,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "Sorts the current list of tasks in view in descending order by name, where sorting is done in alphabetical order."
       },
       {
-        "lineNumber": 273,
+        "lineNumber": 267,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "* `sort due\u003c name\u003e` +"
       },
       {
-        "lineNumber": 274,
+        "lineNumber": 268,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Sorts the current list of tasks in view in ascending order by due date, where ties are broken by descending order of names."
       },
       {
-        "lineNumber": 275,
+        "lineNumber": 269,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "* `sort priority\u003c` +"
       },
       {
-        "lineNumber": 276,
+        "lineNumber": 270,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "Sorts the current list of tasks in view in ascending order by priority."
       },
       {
-        "lineNumber": 277,
+        "lineNumber": 271,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "* `sort tag\u003c{cs2100 family cs2103t}` +"
       },
       {
-        "lineNumber": 278,
+        "lineNumber": 272,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "Sorts the current list of tasks in view in ascending order by tags. In this case all the tasks with the tag `cs2100` will be placed"
       },
       {
-        "lineNumber": 279,
+        "lineNumber": 273,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "before those tasks with the tag `family`, finally followed by those tasks with the tag `cs2103t`."
       },
       {
-        "lineNumber": 280,
+        "lineNumber": 274,
         "author": {
           "gitId": "sidhant007"
         },
         "content": ""
       },
       {
-        "lineNumber": 281,
+        "lineNumber": 275,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "****"
       },
       {
-        "lineNumber": 282,
+        "lineNumber": 276,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "* In case a task does not belong to any of the tags mentioned it will be placed at the bottom of the sorted list."
       },
       {
-        "lineNumber": 283,
+        "lineNumber": 277,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "* In case a task contains more than one tag specified in the comparator, then it will be attempted to be sorted according to those tags first which place it former in the sorted list."
       },
       {
-        "lineNumber": 284,
+        "lineNumber": 278,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "****"
+      },
+      {
+        "lineNumber": 279,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 280,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "//TODO: Sidhant"
+      },
+      {
+        "lineNumber": 281,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "//Not sure if this is implemented"
+      },
+      {
+        "lineNumber": 282,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "\u003d\u003d\u003d  Resolving tasks : `resolve` (coming in v2.0)"
+      },
+      {
+        "lineNumber": 283,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "Deletes a specified task from the deadline manager. The index refers to the entries of a previous call to list or search. +"
+      },
+      {
+        "lineNumber": 284,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "Format: `resolve INDEX`"
       },
       {
         "lineNumber": 285,
@@ -15021,35 +15021,35 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "//TODO: Sidhant"
+        "content": "****"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "//Not sure if this is implemented"
+        "content": "* Deletes the task at the specified INDEX. The index refers to the index number shown in the displayed task list. The index must be a positive integer 1, 2, 3, …​"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "\u003d\u003d\u003d  Resolving tasks : `resolve` (coming in v2.0)"
+        "content": "****"
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Deletes a specified task from the deadline manager. The index refers to the entries of a previous call to list or search. +"
+        "content": ""
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Format: `resolve INDEX`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 291,
@@ -15061,23 +15061,23 @@
       {
         "lineNumber": 292,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sidhant007"
         },
-        "content": "****"
+        "content": "* `resolve 1` +"
       },
       {
         "lineNumber": 293,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sidhant007"
         },
-        "content": "* Deletes the task at the specified INDEX. The index refers to the index number shown in the displayed task list. The index must be a positive integer 1, 2, 3, …​"
+        "content": "The 1st task displayed by the deadline manager will be deleted."
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 295,
@@ -15091,28 +15091,28 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Examples:"
+        "content": "//TODO: Sidhant"
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Snoozing tasks : `snooze` (coming in v2.0)"
       },
       {
         "lineNumber": 298,
         "author": {
-          "gitId": "sidhant007"
+          "gitId": "ranaldmiao"
         },
-        "content": "* `resolve 1` +"
+        "content": "Hides a specified task from the deadline manager until the time specified in the parameter has elapsed. The index refers to the entries of a previous call to list or search. +"
       },
       {
         "lineNumber": 299,
         "author": {
-          "gitId": "sidhant007"
+          "gitId": "ranaldmiao"
         },
-        "content": "The 1st task displayed by the deadline manager will be deleted."
+        "content": "Format: `snooze INDEX d/DEADLINE`"
       },
       {
         "lineNumber": 300,
@@ -15126,35 +15126,35 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "//TODO: Sidhant"
+        "content": "* Modifies the contents of the task at the specified by INDEX to a new date `DEADLINE`. The index referes to the index number shown in the displayed task list. The index must be a positive integer 1, 2, 3, …​"
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "\u003d\u003d\u003d Snoozing tasks : `snooze` (coming in v2.0)"
+        "content": "****"
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Hides a specified task from the deadline manager until the time specified in the parameter has elapsed. The index refers to the entries of a previous call to list or search. +"
+        "content": ""
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Format: `snooze INDEX d/DEADLINE`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 306,
@@ -15168,26 +15168,26 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "****"
+        "content": "* `snooze 1 d/20/09/2018` +"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* Modifies the contents of the task at the specified by INDEX to a new date `DEADLINE`. The index referes to the index number shown in the displayed task list. The index must be a positive integer 1, 2, 3, …​"
+        "content": "A task is \u0027snoozed\u0027 as its deadline is now shifted backwards to 20th September 2018."
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 310,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
         "content": ""
       },
@@ -15196,42 +15196,42 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Examples:"
+        "content": ""
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "//TODO: Ranald"
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* `snooze 1 d/20/09/2018` +"
+        "content": "\u003d\u003d\u003d Managing attachments of a task : `attachment`"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "A task is \u0027snoozed\u0027 as its deadline is now shifted backwards to 20th September 2018."
+        "content": "Allows the user to add, list, delete and retrieve files associated with a specific task. +"
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "Deadline manager does not make a copy or backup the files added. Only the location of the files are stored and it can be modified, renamed, moved or deleted without Deadline manager\u0027s knowledge. As such, there is no guarantee for a file associated with a specific task to always exist. +"
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "Format: `INDEX COMMAND [p/FILEPATH] [n/FILENAME]`"
       },
       {
         "lineNumber": 317,
@@ -15245,222 +15245,222 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "//TODO: Ranald"
+        "content": "****"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "\u003d\u003d\u003d Managing attachments of a task : `attachment`"
+        "content": "*  Modify and manages the attachments of the task at the specified INDEX. The index refers to the index number shown in the displayed task list. The index must be a positive integer 1, 2, 3, …​"
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Allows the user to add, list, delete and retrieve files associated with a specific task. +"
+        "content": "* `COMMAND` is either `add`, `list`, `delete` or `get` +"
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Deadline manager does not make a copy or backup the files added. Only the location of the files are stored and it can be modified, renamed, moved or deleted without Deadline manager\u0027s knowledge. As such, there is no guarantee for a file associated with a specific task to always exist. +"
+        "content": "* For `add` commands, `FILEPATH` argument is required to denote the file you intend to attach to the task. A file must exist at the `FILEPATH` specified."
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Format: `INDEX COMMAND [p/FILEPATH] [n/FILENAME]`"
+        "content": "* For `list` commands, no additional arguments are required."
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "* For `delete` commands, `FILENAME` argument is required to represent the file to delete."
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "****"
+        "content": "* For `get` commands, `FILENAME` argument is required to represent the file to retrieve, `FILEPATH` argument is required to denote the destination you want the file to be exported to. If there is an existing file at `FILEPATH`, it would be overwritten without warning."
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "*  Modify and manages the attachments of the task at the specified INDEX. The index refers to the index number shown in the displayed task list. The index must be a positive integer 1, 2, 3, …​"
+        "content": "****"
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* `COMMAND` is either `add`, `list`, `delete` or `get` +"
+        "content": ""
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* For `add` commands, `FILEPATH` argument is required to denote the file you intend to attach to the task. A file must exist at the `FILEPATH` specified."
+        "content": "[TIP]"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* For `list` commands, no additional arguments are required."
+        "content": "The application does not allow adding more than one file with the same filename to the same task, even if they are in different locations on the computer."
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* For `delete` commands, `FILENAME` argument is required to represent the file to delete."
+        "content": ""
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* For `get` commands, `FILENAME` argument is required to represent the file to retrieve, `FILEPATH` argument is required to denote the destination you want the file to be exported to. If there is an existing file at `FILEPATH`, it would be overwritten without warning."
+        "content": "Examples:"
       },
       {
         "lineNumber": 331,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 332,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "* Add: `attachment 1 add p/C:\\Documents\\HelloWorld.docx` +"
       },
       {
         "lineNumber": 333,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "[TIP]"
+        "content": "Adds an attachment located at \"C:\\Documents\\HelloWorld.docx\" to the 1st task in the deadline manager."
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "The application does not allow adding more than one file with the same filename to the same task, even if they are in different locations on the computer."
+        "content": "* Get: `attachment 2 get p/C:\\Documents\\TaskAttachments.zip n/Assignment.zip` +"
       },
       {
         "lineNumber": 335,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "Saves an attachment named \"Assignment.zip\" of the 2nd task in the deadline manager to \"C:\\Documents\\TaskAttachments.zip\""
       },
       {
         "lineNumber": 336,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Examples:"
+        "content": "* List: `attachment 1 list` +"
       },
       {
         "lineNumber": 337,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "Lists all attachments currently associated with the 1st task in the deadline manager."
       },
       {
         "lineNumber": 338,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* Add: `attachment 1 add p/C:\\Documents\\HelloWorld.docx` +"
+        "content": "* Delete: `attachment 1 delete n/HelloWorld.docx`"
       },
       {
         "lineNumber": 339,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "Adds an attachment located at \"C:\\Documents\\HelloWorld.docx\" to the 1st task in the deadline manager."
+        "content": "Removes the association of the attachment named \"HelloWorld.docx\" with the 1st task in the deadline manager."
       },
       {
         "lineNumber": 340,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* Get: `attachment 2 get p/C:\\Documents\\TaskAttachments.zip n/Assignment.zip` +"
-      },
-      {
-        "lineNumber": 341,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "Saves an attachment named \"Assignment.zip\" of the 2nd task in the deadline manager to \"C:\\Documents\\TaskAttachments.zip\""
-      },
-      {
-        "lineNumber": 342,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "* List: `attachment 1 list` +"
-      },
-      {
-        "lineNumber": 343,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "Lists all attachments currently associated with the 1st task in the deadline manager."
-      },
-      {
-        "lineNumber": 344,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "* Delete: `attachment 1 delete n/HelloWorld.docx`"
-      },
-      {
-        "lineNumber": 345,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "Removes the association of the attachment named \"HelloWorld.docx\" with the 1st task in the deadline manager."
-      },
-      {
-        "lineNumber": 346,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
         "content": ""
       },
       {
-        "lineNumber": 347,
+        "lineNumber": 341,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "[NOTE]"
       },
       {
-        "lineNumber": 348,
+        "lineNumber": 342,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "The `import`, `export` commands described below do *NOT* support backing up attachments. However they will keep a link to the attachments path if any."
       },
       {
-        "lineNumber": 349,
+        "lineNumber": 343,
         "author": {
           "gitId": "sidhant007"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 344,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 345,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "\u003d\u003d\u003d Importing a set of tasks: `import`"
+      },
+      {
+        "lineNumber": 346,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "Imports tasks that were previous generated by an export command. Tasks will be retrieved from the provided `FILENAME` location."
+      },
+      {
+        "lineNumber": 347,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 348,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "Format: `import f/FILENAME [r/all | r/overwrite | r/skip]`"
+      },
+      {
+        "lineNumber": 349,
+        "author": {
+          "gitId": "ranaldmiao"
         },
         "content": ""
       },
@@ -15469,105 +15469,105 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 351,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "\u003d\u003d\u003d Importing a set of tasks: `import`"
-      },
-      {
-        "lineNumber": 352,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "Imports tasks that were previous generated by an export command. Tasks will be retrieved from the provided `FILENAME` location."
-      },
-      {
-        "lineNumber": 353,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 354,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "Format: `import f/FILENAME [r/all | r/overwrite | r/skip]`"
-      },
-      {
-        "lineNumber": 355,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 356,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
         "content": "****"
       },
       {
-        "lineNumber": 357,
+        "lineNumber": 351,
         "author": {
           "gitId": "sijie123"
         },
         "content": "* `FILENAME` must refer to an existing file on the computer in the same directory, and should only contain alphanumeric, underscore (_), or the fullstop (.) characters."
       },
       {
-        "lineNumber": 358,
+        "lineNumber": 352,
         "author": {
           "gitId": "sijie123"
         },
         "content": "* Additionally, the file must be in a readable format, such as one previously exported by Deadline Manager."
       },
       {
-        "lineNumber": 359,
+        "lineNumber": 353,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "****"
       },
       {
-        "lineNumber": 360,
+        "lineNumber": 354,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": ""
       },
       {
-        "lineNumber": 361,
+        "lineNumber": 355,
         "author": {
           "gitId": "sijie123"
         },
         "content": "Additionally, optional commands can provided to specify what Deadline Manager should do when there is an import conflict."
       },
       {
-        "lineNumber": 362,
+        "lineNumber": 356,
         "author": {
           "gitId": "sijie123"
         },
         "content": ""
       },
       {
-        "lineNumber": 363,
+        "lineNumber": 357,
         "author": {
           "gitId": "sijie123"
         },
         "content": "[NOTE]"
       },
       {
-        "lineNumber": 364,
+        "lineNumber": 358,
         "author": {
           "gitId": "sijie123"
         },
         "content": "An import conflict occurs when you try to import a task, but a similar task already exists in your Deadline Manager."
+      },
+      {
+        "lineNumber": 359,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 360,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "You can input either one of three commands to specify how to resolve an import conflict:"
+      },
+      {
+        "lineNumber": 361,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 362,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "* `r/all`: Imports the new task, and keeps both the existing and incoming tasks."
+      },
+      {
+        "lineNumber": 363,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "* `r/overwrite`: Imports the new task, and overwrites/discards the existing task."
+      },
+      {
+        "lineNumber": 364,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "* `r/skip`: Does not import the conflicting task, but keeps the existing task instead."
       },
       {
         "lineNumber": 365,
@@ -15581,189 +15581,189 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "You can input either one of three commands to specify how to resolve an import conflict:"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 367,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "If you do not specify any command, Deadline Manager uses `r/skip` by default, i.e. it will ignore new tasks that cause import conflicts."
       },
       {
         "lineNumber": 368,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "* `r/all`: Imports the new task, and keeps both the existing and incoming tasks."
+        "content": ""
       },
       {
         "lineNumber": 369,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "* `r/overwrite`: Imports the new task, and overwrites/discards the existing task."
-      },
-      {
-        "lineNumber": 370,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "* `r/skip`: Does not import the conflicting task, but keeps the existing task instead."
-      },
-      {
-        "lineNumber": 371,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 372,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "[TIP]"
-      },
-      {
-        "lineNumber": 373,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "If you do not specify any command, Deadline Manager uses `r/skip` by default, i.e. it will ignore new tasks that cause import conflicts."
-      },
-      {
-        "lineNumber": 374,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 375,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Examples:"
       },
       {
-        "lineNumber": 376,
+        "lineNumber": 370,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": ""
       },
       {
-        "lineNumber": 377,
+        "lineNumber": 371,
         "author": {
           "gitId": "sijie123"
         },
         "content": "* `import f/cs2103.txt` +"
       },
       {
-        "lineNumber": 378,
+        "lineNumber": 372,
         "author": {
           "gitId": "sijie123"
         },
         "content": "Imports all tasks from `cs2103.txt`. If an incoming task already exists in Deadline Manager, it is skipped."
       },
       {
-        "lineNumber": 379,
+        "lineNumber": 373,
         "author": {
           "gitId": "sijie123"
         },
         "content": "* `import f/cs2101.xml r/all` +"
       },
       {
-        "lineNumber": 380,
+        "lineNumber": 374,
         "author": {
           "gitId": "sijie123"
         },
         "content": "Imports all tasks from `cs2101.xml`. Even if an incoming task exists in Deadline Manager, it is still imported."
       },
       {
-        "lineNumber": 381,
+        "lineNumber": 375,
         "author": {
           "gitId": "sijie123"
         },
         "content": "* `import f/cs2101/timetable.xml` +"
       },
       {
-        "lineNumber": 382,
+        "lineNumber": 376,
         "author": {
           "gitId": "sijie123"
         },
         "content": "Fails and returns an error as `cs2101/timetable.xml` is not a valid filename."
       },
       {
-        "lineNumber": 383,
+        "lineNumber": 377,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": ""
       },
       {
-        "lineNumber": 384,
+        "lineNumber": 378,
         "author": {
           "gitId": "sijie123"
         },
         "content": "//TODO: Add a picture on what I mean by \"currently displayed\""
       },
       {
-        "lineNumber": 385,
+        "lineNumber": 379,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "\u003d\u003d\u003d Exporting a set of tasks: `export`"
       },
       {
-        "lineNumber": 386,
+        "lineNumber": 380,
         "author": {
           "gitId": "sijie123"
         },
         "content": "Exports the tasks that is currently displayed by the Deadline Manager. The tasks will be saved as a file at the provided `FILENAME` location.  +"
       },
       {
-        "lineNumber": 387,
+        "lineNumber": 381,
         "author": {
           "gitId": "sijie123"
         },
         "content": "Format: `export f/FILENAME [r/overwrite]`"
       },
       {
-        "lineNumber": 388,
+        "lineNumber": 382,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": ""
       },
       {
-        "lineNumber": 389,
+        "lineNumber": 383,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "****"
       },
       {
-        "lineNumber": 390,
+        "lineNumber": 384,
         "author": {
           "gitId": "sijie123"
         },
         "content": "* `FILENAME` must refer to a location in the same directory as Deadline Manager."
       },
       {
-        "lineNumber": 391,
+        "lineNumber": 385,
         "author": {
           "gitId": "sijie123"
         },
         "content": "* If there is an existing file at the provided location, the write command will fail to protect your data."
       },
       {
-        "lineNumber": 392,
+        "lineNumber": 386,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "****"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "[TIP]"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "You can override the default behaviour by specifying the r/overwrite argument. This will allow you to overwrite files even if they already exist. Use with caution so as not to overwrite important data."
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 393,
@@ -15775,105 +15775,105 @@
       {
         "lineNumber": 394,
         "author": {
-          "gitId": "sijie123"
+          "gitId": "ranaldmiao"
         },
-        "content": "[TIP]"
+        "content": "* `export cs2103.txt` +"
       },
       {
         "lineNumber": 395,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "You can override the default behaviour by specifying the r/overwrite argument. This will allow you to overwrite files even if they already exist. Use with caution so as not to overwrite important data."
+        "content": "Creates and exports tasks to `cs2103.txt` within the same folder as Deadline Manager."
       },
       {
         "lineNumber": 396,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "* `export cs2101.txt` (Exports a file successfully) +"
       },
       {
         "lineNumber": 397,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 398,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 399,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 400,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "* `export cs2103.txt` +"
-      },
-      {
-        "lineNumber": 401,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "Creates and exports tasks to `cs2103.txt` within the same folder as Deadline Manager."
-      },
-      {
-        "lineNumber": 402,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "* `export cs2101.txt` (Exports a file successfully) +"
-      },
-      {
-        "lineNumber": 403,
-        "author": {
-          "gitId": "sijie123"
-        },
         "content": "  `export cs2101.txt` +"
       },
       {
-        "lineNumber": 404,
+        "lineNumber": 398,
         "author": {
           "gitId": "sijie123"
         },
         "content": "Fails and returns an error as `cs2101.txt` already exists when the second command is run. To protect your data, the second export command fails."
       },
       {
-        "lineNumber": 405,
+        "lineNumber": 399,
         "author": {
           "gitId": "sijie123"
         },
         "content": ""
       },
       {
-        "lineNumber": 406,
+        "lineNumber": 400,
         "author": {
           "gitId": "sijie123"
         },
         "content": "* `export C:\\Documents\\cs2103.txt` +"
       },
       {
-        "lineNumber": 407,
+        "lineNumber": 401,
         "author": {
           "gitId": "sijie123"
         },
         "content": "Fails and returns an error as `cs2103.txt` is not in the same directory as Deadline Manager."
       },
       {
-        "lineNumber": 408,
+        "lineNumber": 402,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 404,
         "author": {
           "gitId": "ranaldmiao"
+        },
+        "content": "\u003d\u003d\u003d Deleting a task : `delete`"
+      },
+      {
+        "lineNumber": 405,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "Deletes the specified task from the deadline manager. +"
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `delete INDEX`"
+      },
+      {
+        "lineNumber": 408,
+        "author": {
+          "gitId": "-"
         },
         "content": ""
       },
@@ -15882,35 +15882,35 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 410,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "\u003d\u003d\u003d Deleting a task : `delete`"
+        "content": "* Deletes the task at the specified `INDEX`."
       },
       {
         "lineNumber": 411,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "* The index refers to the index number shown in the displayed task list."
       },
       {
         "lineNumber": 412,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "Deletes the specified task from the deadline manager. +"
+        "content": "* The index *must be a positive integer* 1, 2, 3, ..."
       },
       {
         "lineNumber": 413,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `delete INDEX`"
+        "content": "****"
       },
       {
         "lineNumber": 414,
@@ -15924,98 +15924,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "Examples:"
       },
       {
         "lineNumber": 416,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "* Deletes the task at the specified `INDEX`."
+        "content": ""
       },
       {
         "lineNumber": 417,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "* The index refers to the index number shown in the displayed task list."
-      },
-      {
-        "lineNumber": 418,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* The index *must be a positive integer* 1, 2, 3, ..."
-      },
-      {
-        "lineNumber": 419,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "****"
-      },
-      {
-        "lineNumber": 420,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 421,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 422,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 423,
         "author": {
           "gitId": "-"
         },
         "content": "* `list` +"
       },
       {
-        "lineNumber": 424,
+        "lineNumber": 418,
         "author": {
           "gitId": "-"
         },
         "content": "`delete 2` +"
       },
       {
-        "lineNumber": 425,
+        "lineNumber": 419,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Deletes the 2nd task in the deadline manager."
       },
       {
-        "lineNumber": 426,
+        "lineNumber": 420,
         "author": {
           "gitId": "sidhant007"
         },
         "content": "* `find `OP1 Assignment` +"
       },
       {
-        "lineNumber": 427,
+        "lineNumber": 421,
         "author": {
           "gitId": "-"
         },
         "content": "`delete 1` +"
       },
       {
-        "lineNumber": 428,
+        "lineNumber": 422,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Deletes the 1st task in the results of the `find` command."
+      },
+      {
+        "lineNumber": 423,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 424,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "//TODO: Ranald or Sidhant"
+      },
+      {
+        "lineNumber": 425,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "\u003d\u003d\u003d Selecting a task : `select`"
+      },
+      {
+        "lineNumber": 426,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 427,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "Selects the task identified by the index number used in the displayed task list. +"
+      },
+      {
+        "lineNumber": 428,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `select INDEX`"
       },
       {
         "lineNumber": 429,
@@ -16027,205 +16027,205 @@
       {
         "lineNumber": 430,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "//TODO: Ranald or Sidhant"
+        "content": "****"
       },
       {
         "lineNumber": 431,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "\u003d\u003d\u003d Selecting a task : `select`"
-      },
-      {
-        "lineNumber": 432,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 433,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "Selects the task identified by the index number used in the displayed task list. +"
-      },
-      {
-        "lineNumber": 434,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "Format: `select INDEX`"
-      },
-      {
-        "lineNumber": 435,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 436,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "****"
-      },
-      {
-        "lineNumber": 437,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
         "content": "* Selects the task and loads details about the task at the specified `INDEX`."
       },
       {
-        "lineNumber": 438,
+        "lineNumber": 432,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "* The index refers to the index number shown in the displayed task list. The index must be a positive integer 1, 2, 3, …​"
       },
       {
-        "lineNumber": 439,
+        "lineNumber": 433,
         "author": {
           "gitId": "-"
         },
         "content": "****"
       },
       {
-        "lineNumber": 440,
+        "lineNumber": 434,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 441,
+        "lineNumber": 435,
         "author": {
           "gitId": "-"
         },
         "content": "Examples:"
       },
       {
-        "lineNumber": 442,
+        "lineNumber": 436,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 443,
+        "lineNumber": 437,
         "author": {
           "gitId": "-"
         },
         "content": "* `list` +"
       },
       {
-        "lineNumber": 444,
+        "lineNumber": 438,
         "author": {
           "gitId": "-"
         },
         "content": "`select 2` +"
       },
       {
-        "lineNumber": 445,
+        "lineNumber": 439,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Selects the 2nd task in the deadline manager."
       },
       {
-        "lineNumber": 446,
+        "lineNumber": 440,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "* `find Assignment` +"
       },
       {
-        "lineNumber": 447,
+        "lineNumber": 441,
         "author": {
           "gitId": "-"
         },
         "content": "`select 1` +"
       },
       {
-        "lineNumber": 448,
+        "lineNumber": 442,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Selects the 1st task in the results of the `find` command."
       },
       {
-        "lineNumber": 449,
+        "lineNumber": 443,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 450,
+        "lineNumber": 444,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d Listing entered commands : `history`"
       },
       {
-        "lineNumber": 451,
+        "lineNumber": 445,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 452,
+        "lineNumber": 446,
         "author": {
           "gitId": "-"
         },
         "content": "Lists all the commands that you have entered in reverse chronological order. +"
       },
       {
-        "lineNumber": 453,
+        "lineNumber": 447,
         "author": {
           "gitId": "-"
         },
         "content": "Format: `history`"
       },
       {
-        "lineNumber": 454,
+        "lineNumber": 448,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 455,
+        "lineNumber": 449,
         "author": {
           "gitId": "-"
         },
         "content": "[NOTE]"
       },
       {
-        "lineNumber": 456,
+        "lineNumber": 450,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d\u003d"
       },
       {
-        "lineNumber": 457,
+        "lineNumber": 451,
         "author": {
           "gitId": "-"
         },
         "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
       },
       {
-        "lineNumber": 458,
+        "lineNumber": 452,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 453,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 454,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// tag::undoredo[]"
+      },
+      {
+        "lineNumber": 455,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
+      },
+      {
+        "lineNumber": 456,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 457,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "Restores the deadline manager to the state before the previous _undoable_ command was executed. +"
+      },
+      {
+        "lineNumber": 458,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `undo`"
       },
       {
         "lineNumber": 459,
@@ -16239,70 +16239,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::undoredo[]"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 461,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
-      },
-      {
-        "lineNumber": 462,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 463,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "Restores the deadline manager to the state before the previous _undoable_ command was executed. +"
-      },
-      {
-        "lineNumber": 464,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "Format: `undo`"
-      },
-      {
-        "lineNumber": 465,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 466,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "[NOTE]"
-      },
-      {
-        "lineNumber": 467,
-        "author": {
-          "gitId": "-"
-        },
         "content": "\u003d\u003d\u003d\u003d"
       },
       {
-        "lineNumber": 468,
+        "lineNumber": 462,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Undoable commands: those commands that modify the deadline manager\u0027s content (`add`, `delete`, `edit` and `clear`)."
       },
       {
-        "lineNumber": 469,
+        "lineNumber": 463,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 464,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 465,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 466,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 467,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 468,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`list` +"
+      },
+      {
+        "lineNumber": 469,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 470,
@@ -16316,140 +16316,140 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "* `select 1` +"
       },
       {
         "lineNumber": 472,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`list` +"
       },
       {
         "lineNumber": 473,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": "`undo` +"
       },
       {
         "lineNumber": 474,
         "author": {
           "gitId": "-"
         },
-        "content": "`list` +"
+        "content": "The `undo` command fails as there are no undoable commands executed previously."
       },
       {
         "lineNumber": 475,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": ""
       },
       {
         "lineNumber": 476,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 477,
         "author": {
           "gitId": "-"
         },
-        "content": "* `select 1` +"
+        "content": "`clear` +"
       },
       {
         "lineNumber": 478,
         "author": {
           "gitId": "-"
         },
-        "content": "`list` +"
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 479,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` +"
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 480,
         "author": {
           "gitId": "-"
         },
-        "content": "The `undo` command fails as there are no undoable commands executed previously."
+        "content": ""
       },
       {
         "lineNumber": 481,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
       },
       {
         "lineNumber": 482,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": ""
       },
       {
         "lineNumber": 483,
         "author": {
           "gitId": "-"
         },
-        "content": "`clear` +"
+        "content": "Reverses the most recent `undo` command. +"
       },
       {
         "lineNumber": 484,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `clear` command) +"
+        "content": "Format: `redo`"
       },
       {
         "lineNumber": 485,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": ""
       },
       {
         "lineNumber": 486,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 487,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
+        "content": ""
       },
       {
         "lineNumber": 488,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 489,
         "author": {
           "gitId": "-"
         },
-        "content": "Reverses the most recent `undo` command. +"
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 490,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `redo`"
+        "content": "`redo` (reapplies the `delete 1` command) +"
       },
       {
         "lineNumber": 491,
@@ -16463,238 +16463,238 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 493,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`redo` +"
       },
       {
         "lineNumber": 494,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": "The `redo` command fails as there are no `undo` commands executed previously."
       },
       {
         "lineNumber": 495,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": ""
       },
       {
         "lineNumber": 496,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `delete 1` command) +"
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 497,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`clear` +"
       },
       {
         "lineNumber": 498,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 499,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` +"
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 500,
         "author": {
           "gitId": "-"
         },
-        "content": "The `redo` command fails as there are no `undo` commands executed previously."
+        "content": "`redo` (reapplies the `delete 1` command) +"
       },
       {
         "lineNumber": 501,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`redo` (reapplies the `clear` command) +"
       },
       {
         "lineNumber": 502,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": "// end::undoredo[]"
       },
       {
         "lineNumber": 503,
         "author": {
           "gitId": "-"
         },
-        "content": "`clear` +"
+        "content": ""
       },
       {
         "lineNumber": 504,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": "`undo` (reverses the `clear` command) +"
+        "content": ""
       },
       {
         "lineNumber": 505,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": ""
       },
       {
         "lineNumber": 506,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `delete 1` command) +"
+        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
       },
       {
         "lineNumber": 507,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `clear` command) +"
+        "content": ""
       },
       {
         "lineNumber": 508,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "// end::undoredo[]"
-      },
-      {
-        "lineNumber": 509,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 510,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 511,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 512,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
-      },
-      {
-        "lineNumber": 513,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 514,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Clears all task entries from the deadline manager. +"
       },
       {
-        "lineNumber": 515,
+        "lineNumber": 509,
         "author": {
           "gitId": "-"
         },
         "content": "Format: `clear`"
       },
       {
-        "lineNumber": 516,
+        "lineNumber": 510,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 517,
+        "lineNumber": 511,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d Exiting the program : `exit`"
       },
       {
-        "lineNumber": 518,
+        "lineNumber": 512,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 519,
+        "lineNumber": 513,
         "author": {
           "gitId": "-"
         },
         "content": "Exits the program. +"
       },
       {
-        "lineNumber": 520,
+        "lineNumber": 514,
         "author": {
           "gitId": "-"
         },
         "content": "Format: `exit`"
       },
       {
-        "lineNumber": 521,
+        "lineNumber": 515,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 522,
+        "lineNumber": 516,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d Saving the data"
       },
       {
-        "lineNumber": 523,
+        "lineNumber": 517,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 524,
+        "lineNumber": 518,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "Deadline manager data are saved in the hard disk automatically after any command that changes the data. +"
       },
       {
-        "lineNumber": 525,
+        "lineNumber": 519,
         "author": {
           "gitId": "-"
         },
         "content": "There is no need to save manually."
+      },
+      {
+        "lineNumber": 520,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 521,
+        "author": {
+          "gitId": "sidhant007"
+        },
+        "content": "[NOTE]"
+      },
+      {
+        "lineNumber": 522,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "Attachments are merely linked in the deadline manager. A separate copy of the file will not be stored. If the original attachment file has been deleted, deadline manager will fail to retrieve it."
+      },
+      {
+        "lineNumber": 523,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 524,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// tag::dataencryption[]"
+      },
+      {
+        "lineNumber": 525,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "//\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
       },
       {
         "lineNumber": 526,
@@ -16706,21 +16706,21 @@
       {
         "lineNumber": 527,
         "author": {
-          "gitId": "sidhant007"
+          "gitId": "ranaldmiao"
         },
-        "content": "[NOTE]"
+        "content": "//_{explain how the user can enable/disable data encryption}_"
       },
       {
         "lineNumber": 528,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "Attachments are merely linked in the deadline manager. A separate copy of the file will not be stored. If the original attachment file has been deleted, deadline manager will fail to retrieve it."
+        "content": "// end::dataencryption[]"
       },
       {
         "lineNumber": 529,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -16729,126 +16729,126 @@
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::dataencryption[]"
+        "content": "\u003d\u003d FAQ"
       },
       {
         "lineNumber": 531,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "//\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
+        "content": ""
       },
       {
         "lineNumber": 532,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "*Q*: How do I transfer my data to another Computer? +"
       },
       {
         "lineNumber": 533,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "//_{explain how the user can enable/disable data encryption}_"
+        "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous deadline manager folder."
       },
       {
         "lineNumber": 534,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::dataencryption[]"
+        "content": ""
       },
       {
         "lineNumber": 535,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d Command Summary"
       },
       {
         "lineNumber": 536,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d FAQ"
+        "content": ""
       },
       {
         "lineNumber": 537,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 538,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "*Q*: How do I transfer my data to another Computer? +"
-      },
-      {
-        "lineNumber": 539,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous deadline manager folder."
-      },
-      {
-        "lineNumber": 540,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 541,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "\u003d\u003d Command Summary"
-      },
-      {
-        "lineNumber": 542,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 543,
         "author": {
           "gitId": "kc97ble"
         },
         "content": "* *Add* `add n/NAME d/DEADLINE [P/PRIORITY] [t/TAG]...` +"
       },
       {
-        "lineNumber": 544,
+        "lineNumber": 538,
         "author": {
           "gitId": "kc97ble"
         },
         "content": "e.g. `add n/CS2103 Assignment d/11/10/2018 P/2 t/java t/hard`"
       },
       {
-        "lineNumber": 545,
+        "lineNumber": 539,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": ""
       },
       {
-        "lineNumber": 546,
+        "lineNumber": 540,
         "author": {
           "gitId": "kc97ble"
         },
         "content": "* *Add Recurring*: `addr n/NAME d/DEADLINE f/FREQUENCY [P/PRIORITY] [t/TAG]...`"
       },
       {
-        "lineNumber": 547,
+        "lineNumber": 541,
         "author": {
           "gitId": "kc97ble"
         },
         "content": "e.g. `add n/CS2103 Tutorial d/1/10/2018 f/7 P/4 t/easy`"
+      },
+      {
+        "lineNumber": 542,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 543,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "* *Attachment (Add)* : `attachment INDEX add p\\FILEPATH`"
+      },
+      {
+        "lineNumber": 544,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 545,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "* *Attachment (Delete)* : `attachment INDEX delete n/FILENAME`"
+      },
+      {
+        "lineNumber": 546,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 547,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "* *Attachment (List)* : `attachment INDEX list`"
       },
       {
         "lineNumber": 548,
@@ -16862,70 +16862,70 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *Attachment (Add)* : `attachment INDEX add p\\FILEPATH`"
+        "content": "* *Attachment (Retrieve)* : `attachment INDEX get n/FILENAME p/FILEPATH`"
       },
       {
         "lineNumber": 550,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "e.g. `attachment 2 get p/C:\\Documents\\TaskAttachments.zip n/Assignment.zip`"
       },
       {
         "lineNumber": 551,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *Attachment (Delete)* : `attachment INDEX delete n/FILENAME`"
+        "content": ""
       },
       {
         "lineNumber": 552,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "* *Clear* : `clear`"
       },
       {
         "lineNumber": 553,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *Attachment (List)* : `attachment INDEX list`"
+        "content": ""
       },
       {
         "lineNumber": 554,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "* *Delete* : `delete INDEX` +"
       },
       {
         "lineNumber": 555,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "* *Attachment (Retrieve)* : `attachment INDEX get n/FILENAME p/FILEPATH`"
+        "content": "e.g. `delete 3`"
       },
       {
         "lineNumber": 556,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "e.g. `attachment 2 get p/C:\\Documents\\TaskAttachments.zip n/Assignment.zip`"
+        "content": ""
       },
       {
         "lineNumber": 557,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "* *Edit* : `edit INDEX [n/NAME] [d/DEADLINE] [t/TAG]...` +"
       },
       {
         "lineNumber": 558,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": "* *Clear* : `clear`"
+        "content": "e.g. `edit 2 n/CS2103 Assignment 2 t/easy`"
       },
       {
         "lineNumber": 559,
@@ -16937,70 +16937,70 @@
       {
         "lineNumber": 560,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": "* *Delete* : `delete INDEX` +"
+        "content": "* *Exit* : `exit`"
       },
       {
         "lineNumber": 561,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": "e.g. `delete 3`"
+        "content": ""
       },
       {
         "lineNumber": 562,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "* *Export* : `export FILEPATH`"
       },
       {
         "lineNumber": 563,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *Edit* : `edit INDEX [n/NAME] [d/DEADLINE] [t/TAG]...` +"
+        "content": ""
       },
       {
         "lineNumber": 564,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "e.g. `edit 2 n/CS2103 Assignment 2 t/easy`"
+        "content": "* *Find* : `find KEYWORD [MORE_KEYWORDS]` +"
       },
       {
         "lineNumber": 565,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "e.g. `find CS2103 CS2102`"
       },
       {
         "lineNumber": 566,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *Exit* : `exit`"
+        "content": ""
       },
       {
         "lineNumber": 567,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "btzy"
         },
-        "content": ""
+        "content": "* *Filter* : `filter FILTER_EXPRESSION`"
       },
       {
         "lineNumber": 568,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "btzy"
         },
-        "content": "* *Export* : `export FILEPATH`"
+        "content": "e.g. `filter due\u003c1/10/2018`"
       },
       {
         "lineNumber": 569,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "btzy"
         },
         "content": ""
       },
@@ -17009,40 +17009,40 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* *Find* : `find KEYWORD [MORE_KEYWORDS]` +"
+        "content": "* *Help* : `help`"
       },
       {
         "lineNumber": 571,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "e.g. `find CS2103 CS2102`"
+        "content": ""
       },
       {
         "lineNumber": 572,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "* *History* : `history`"
       },
       {
         "lineNumber": 573,
         "author": {
-          "gitId": "btzy"
+          "gitId": "ranaldmiao"
         },
-        "content": "* *Filter* : `filter FILTER_EXPRESSION`"
+        "content": ""
       },
       {
         "lineNumber": 574,
         "author": {
-          "gitId": "btzy"
+          "gitId": "ranaldmiao"
         },
-        "content": "e.g. `filter due\u003c1/10/2018`"
+        "content": "* *Import* : `import FILEPATH`"
       },
       {
         "lineNumber": 575,
         "author": {
-          "gitId": "btzy"
+          "gitId": "ranaldmiao"
         },
         "content": ""
       },
@@ -17051,7 +17051,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* *Help* : `help`"
+        "content": "* *List* : `list`"
       },
       {
         "lineNumber": 577,
@@ -17065,7 +17065,7 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *History* : `history`"
+        "content": "* *Redo* : `redo`"
       },
       {
         "lineNumber": 579,
@@ -17079,35 +17079,35 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *Import* : `import FILEPATH`"
+        "content": "* *Resolve* : `resolve INDEX` +"
       },
       {
         "lineNumber": 581,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "e.g. `resolve 1`"
       },
       {
         "lineNumber": 582,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": "* *List* : `list`"
+        "content": ""
       },
       {
         "lineNumber": 583,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
+        "content": "* *Search* : `search FILTER_EXPRESSION`"
       },
       {
         "lineNumber": 584,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *Redo* : `redo`"
+        "content": "e.g. `search due\u003c1/10/2018`"
       },
       {
         "lineNumber": 585,
@@ -17119,16 +17119,16 @@
       {
         "lineNumber": 586,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "* *Resolve* : `resolve INDEX` +"
+        "content": "* *Select* : `select INDEX` +"
       },
       {
         "lineNumber": 587,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "e.g. `resolve 1`"
+        "content": "e.g.`select 2`"
       },
       {
         "lineNumber": 588,
@@ -17142,14 +17142,14 @@
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "* *Search* : `search FILTER_EXPRESSION`"
+        "content": "* *Snooze* : `snooze INDEX d/DEADLINE` +"
       },
       {
         "lineNumber": 590,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "e.g. `search due\u003c1/10/2018`"
+        "content": "e.g.  `snooze 1 d/31/06/2018`"
       },
       {
         "lineNumber": 591,
@@ -17161,16 +17161,16 @@
       {
         "lineNumber": 592,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": "* *Select* : `select INDEX` +"
+        "content": "* *Sort* : `sort SORT_COMPARATOR [SORT_COMPARATORS]` +"
       },
       {
         "lineNumber": 593,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
-        "content": "e.g.`select 2`"
+        "content": "e.g. `sort due\u003c name\u003e`"
       },
       {
         "lineNumber": 594,
@@ -17182,89 +17182,47 @@
       {
         "lineNumber": 595,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "* *Snooze* : `snooze INDEX d/DEADLINE` +"
+        "content": "* *Undo* : `undo`"
       },
       {
         "lineNumber": 596,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "e.g.  `snooze 1 d/31/06/2018`"
+        "content": ""
       },
       {
         "lineNumber": 597,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sidhant007"
         },
         "content": ""
       },
       {
         "lineNumber": 598,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sidhant007"
         },
-        "content": "* *Sort* : `sort SORT_COMPARATOR [SORT_COMPARATORS]` +"
+        "content": "\u003d\u003d Glossary"
       },
       {
         "lineNumber": 599,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "e.g. `sort due\u003c name\u003e`"
+        "content": "* File Path: a string that defines the unique location of a file in the file system."
       },
       {
         "lineNumber": 600,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 601,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* *Undo* : `undo`"
-      },
-      {
-        "lineNumber": 602,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 603,
-        "author": {
-          "gitId": "sidhant007"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 604,
-        "author": {
-          "gitId": "sidhant007"
-        },
-        "content": "\u003d\u003d Glossary"
-      },
-      {
-        "lineNumber": 605,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "* File Path: a string that defines the unique location of a file in the file system."
-      },
-      {
-        "lineNumber": 606,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
         "content": "* Subset: a part of a larger group of related things."
       },
       {
-        "lineNumber": 607,
+        "lineNumber": 601,
         "author": {
           "gitId": "sidhant007"
         },
@@ -17272,11 +17230,11 @@
       }
     ],
     "authorContributionMap": {
-      "ranaldmiao": 236,
-      "sidhant007": 49,
-      "-": 201,
+      "ranaldmiao": 237,
+      "sidhant007": 50,
+      "-": 199,
       "kc97ble": 7,
-      "btzy": 73,
+      "btzy": 67,
       "sijie123": 41
     }
   },
