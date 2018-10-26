@@ -27766,259 +27766,259 @@
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "import static seedu.learnvocabulary.model.Model.PREDICATE_SHOW_ALL_WORDS;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "import java.util.List;"
+        "content": ""
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "danielkoh94"
         },
-        "content": "import seedu.learnvocabulary.logic.CommandHistory;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "import seedu.learnvocabulary.model.Model;"
+        "content": "import seedu.learnvocabulary.logic.CommandHistory;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "import seedu.learnvocabulary.model.word.Meaning;"
+        "content": "import seedu.learnvocabulary.model.Model;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "import seedu.learnvocabulary.model.word.Word;"
+        "content": "import seedu.learnvocabulary.model.word.Meaning;"
       },
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "danielkoh94"
+          "gitId": "russellong95"
         },
-        "content": ""
+        "content": "import seedu.learnvocabulary.model.word.Word;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": " * Sets vocabulary book to trivia mode"
+        "content": "/**"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": " */"
+        "content": " * Sets vocabulary book to trivia mode"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "public class TriviaCommand extends Command {"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "public class TriviaCommand extends Command {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"trivia\";"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "    public static final String COMMAND_WORD \u003d \"trivia\";"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Trivia started!\\n\";"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Trivia started!\\n\";"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "    public static final String MESSAGE_FAIL \u003d \"Vocabulary list is empty. Please add words in use trivia.\";"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_FAIL \u003d \"Vocabulary list is empty. Please add words in use trivia.\";"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Outputs a question with the meaning of a word.\";"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Outputs a question with the meaning of a word.\";"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        List\u003cWord\u003e lastShownList \u003d model.getFilteredWordList();"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "        model.updateFilteredWordList(PREDICATE_SHOW_ALL_WORDS);"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        if (lastShownList.size() \u003c 1) {"
+        "content": "        List\u003cWord\u003e lastShownList \u003d model.getFilteredWordList();"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "            return new CommandResult(MESSAGE_FAIL);"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        }"
+        "content": "        if (lastShownList.size() \u003c 1) {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "            return new CommandResult(MESSAGE_FAIL);"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        model.toggleTriviaMode();"
+        "content": "        }"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        model.setTriviaList();"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        Word triviaQ \u003d model.getTrivia();"
+        "content": "        model.toggleTriviaMode();"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        Meaning qMeaning \u003d triviaQ.getMeaning();"
+        "content": "        model.setTriviaList();"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "        Word triviaQ \u003d model.getTrivia();"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        return new CommandResult(MESSAGE_SUCCESS + \"Question: \" + qMeaning.toString());"
+        "content": "        Meaning qMeaning \u003d triviaQ.getMeaning();"
       },
       {
         "lineNumber": 41,
@@ -28032,7 +28032,7 @@
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": ""
+        "content": "        return new CommandResult(MESSAGE_SUCCESS + \"Question: \" + qMeaning.toString());"
       },
       {
         "lineNumber": 43,
@@ -28053,10 +28053,24 @@
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 46,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
         "author": {
           "gitId": "danielkoh94"
         },
@@ -28064,7 +28078,7 @@
       }
     ],
     "authorContributionMap": {
-      "danielkoh94": 41,
+      "danielkoh94": 43,
       "russellong95": 5
     }
   },

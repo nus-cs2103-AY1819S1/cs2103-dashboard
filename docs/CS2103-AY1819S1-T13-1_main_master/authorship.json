@@ -21032,12 +21032,61 @@
         "author": {
           "gitId": "-"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                || (other instanceof FilterByEducationCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 education.equals(((FilterByEducationCommand) other).education));"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
       "hrxiong": 5,
-      "-": 58
+      "-": 65
     }
   },
   {
@@ -21298,194 +21347,257 @@
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "    public FilterByFeeCommand(Double limit) {"
+        "content": "    public FilterByFeeCommand(String limit) {"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "        this.limit \u003d limit;"
+        "content": ""
       },
       {
         "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.limit \u003d (double) Integer.parseInt(limit);"
+      },
+      {
+        "lineNumber": 41,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 42,
         "author": {
           "gitId": "hrxiong"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Execute the display of student\u0027s fees here"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(model);"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "        model.updateFilteredPersonList(new"
+        "content": "        // Execute the display of student\u0027s fees here"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "                FeeFilterPredicate(limit));"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        model.updateFilteredPersonList(new"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        ObservableList\u003cPerson\u003e targetList \u003d model.getFilteredPersonList();"
+        "content": "                FeeFilterPredicate(limit));"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Returns the command result"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "        if (targetList.isEmpty()) {"
+        "content": "        ObservableList\u003cPerson\u003e targetList \u003d model.getFilteredPersonList();"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new CommandResult(\"Cannot find person whose fee not less than \" + limit + \" !\");"
+        "content": "        // Returns the command result"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "hrxiong"
         },
-        "content": "        }"
+        "content": "        if (targetList.isEmpty()) {"
       },
       {
         "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new CommandResult(\"Cannot find person whose fee not less than \" + limit + \" !\");"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
         "author": {
           "gitId": "hrxiong"
         },
         "content": ""
       },
       {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        List\u003cString\u003e personNameList \u003d new ArrayList\u003c\u003e();"
-      },
-      {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (Person ppl : targetList) {"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        List\u003cString\u003e personNameList \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "            personNameList.add(ppl.getName().fullName);"
+        "content": "        for (Person ppl : targetList) {"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            personNameList.add(ppl.getName().fullName);"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new CommandResult(\"The person whose fee is higher than \" + limit + \" : \" + personNameList.toString());"
+        "content": "        }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new CommandResult(\"The person whose fee is higher than \" + limit + \" : \" + personNameList.toString());"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                || (other instanceof FilterByFeeCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 limit \u003d\u003d ((FilterByFeeCommand) other).limit);"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
@@ -21493,8 +21605,8 @@
       }
     ],
     "authorContributionMap": {
-      "hrxiong": 19,
-      "-": 45
+      "hrxiong": 17,
+      "-": 56
     }
   },
   {
@@ -21596,168 +21708,168 @@
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": " * Finds and lists the list of person whose grade is between A to B."
+        "content": "/**"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Finds and lists the list of person whose grade is between A to B."
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "public class FilterByGradeCommand extends FilterCommand {"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class FilterByGradeCommand extends FilterCommand {"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"filterByGrade\";"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public static final String COMMAND_WORD \u003d \"filterByGrade\";"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Already filtered by grade!\";"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Already filtered by grade!\";"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": filter by the given range as. \""
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "            + \"Parameters: \""
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": filter by the given range as. \""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "            + \"minLimit\""
+        "content": "            + \"Parameters: \""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "            + \"maxLimit\";"
+        "content": "            + \"minLimit\""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            + \"maxLimit\";"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "    private double minLimit;"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private double minLimit;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "    private double maxLimit;"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private double maxLimit;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "     * filter by grade command"
+        "content": "    /**"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * filter by grade command"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param maxLimit"
+        "content": "     *"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param minLimit"
+        "content": "     * @param args"
       },
       {
         "lineNumber": 38,
@@ -21771,133 +21883,133 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public FilterByGradeCommand(Double minLimit, Double maxLimit) {"
+        "content": "    public FilterByGradeCommand(String args) {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.minLimit \u003d minLimit;"
+        "content": "        String[] stringCommand \u003d args.trim().split(\" \");"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.maxLimit \u003d maxLimit;"
+        "content": "        this.minLimit \u003d Integer.parseInt(stringCommand[0]);"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.maxLimit \u003d Integer.parseInt(stringCommand[1]);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Execute the display of student\u0027s grades here"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(model);"
+        "content": "        // Execute the display of student\u0027s grades here"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        model.updateFilteredPersonList(new"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "                GradeFilterPredicate(minLimit, maxLimit));"
+        "content": "        model.updateFilteredPersonList(new"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                GradeFilterPredicate(minLimit, maxLimit));"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        ObservableList\u003cPerson\u003e targetList \u003d model.getFilteredPersonList();"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Returns the command result"
+        "content": "        ObservableList\u003cPerson\u003e targetList \u003d model.getFilteredPersonList();"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (targetList.isEmpty()) {"
+        "content": "        // Returns the command result"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new CommandResult(\"Cannot find person whose grade between \" + minLimit + \" and \" + maxLimit + \" !\");"
+        "content": "        if (targetList.isEmpty()) {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            return new CommandResult(\"Cannot find person whose grade between \" + minLimit + \" and \" + maxLimit + \" !\");"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 58,
@@ -21911,66 +22023,129 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cString\u003e personNameList \u003d new ArrayList\u003c\u003e();"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (Person ppl : targetList) {"
+        "content": "        List\u003cString\u003e personNameList \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        for (Person ppl : targetList) {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "            personNameList.add(ppl.getName().fullName);"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            personNameList.add(ppl.getName().fullName);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "-"
         },
-        "content": "        return new CommandResult(\"The person whose grade between \" + minLimit + \" and \""
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "chenlu-chua"
         },
-        "content": "                + maxLimit + \" : \" + personNameList.toString());"
+        "content": "        return new CommandResult(\"The person whose grade between \" + minLimit + \" and \""
       },
       {
         "lineNumber": 67,
+        "author": {
+          "gitId": "chenlu-chua"
+        },
+        "content": "                + maxLimit + \" : \" + personNameList.toString());"
+      },
+      {
+        "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "                || (other instanceof FilterByGradeCommand"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "                    \u0026\u0026 minLimit \u003d\u003d ((FilterByGradeCommand) other).minLimit"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "                    \u0026\u0026 maxLimit \u003d\u003d ((FilterByGradeCommand) other).maxLimit);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
@@ -21978,7 +22153,8 @@
       }
     ],
     "authorContributionMap": {
-      "-": 61,
+      "CJuanvip": 4,
+      "-": 66,
       "chenlu-chua": 7
     }
   },
@@ -22214,7 +22390,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param time"
+        "content": "     * @param args"
       },
       {
         "lineNumber": 34,
@@ -22228,126 +22404,126 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public FilterByTimeCommand(Time time) {"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.time \u003d time;"
+        "content": "    public FilterByTimeCommand(String args) {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this.time \u003d new Time(args);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Execute the display of student\u0027s grades here"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(model);"
+        "content": "        // Execute the display of student\u0027s grades here"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "        model.updateFilteredPersonList(new"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "                TimeFilterPredicate(time));"
+        "content": "        model.updateFilteredPersonList(new"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                TimeFilterPredicate(time));"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        ObservableList\u003cPerson\u003e targetList \u003d model.getFilteredPersonList();"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Returns the command result"
+        "content": "        ObservableList\u003cPerson\u003e targetList \u003d model.getFilteredPersonList();"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (targetList.isEmpty()) {"
+        "content": "        // Returns the command result"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new CommandResult(\"Cannot find \" + time.toString() + \" education within the students list!\");"
+        "content": "        if (targetList.isEmpty()) {"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "        }"
+        "content": "            return new CommandResult(\"Cannot find \" + time.toString() + \" slot within the students list!\");"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 53,
@@ -22361,59 +22537,108 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        List\u003cString\u003e personNameList \u003d new ArrayList\u003c\u003e();"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (Person ppl : targetList) {"
+        "content": "        List\u003cString\u003e personNameList \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "            personNameList.add(ppl.getName().fullName);"
+        "content": "        for (Person ppl : targetList) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            personNameList.add(ppl.getName().fullName);"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "        return new CommandResult(\"The person whose education is \""
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "hrxiong"
         },
-        "content": "                + time.toString() + \" : \" + personNameList.toString());"
+        "content": "        return new CommandResult(\"The person whose education is \""
       },
       {
         "lineNumber": 61,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "                + time.toString() + \" : \" + personNameList.toString());"
+      },
+      {
+        "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "                || (other instanceof FilterByTimeCommand \u0026\u0026 time.equals(((FilterByTimeCommand) other).time));"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
@@ -22422,7 +22647,8 @@
     ],
     "authorContributionMap": {
       "hrxiong": 12,
-      "-": 50
+      "CJuanvip": 2,
+      "-": 55
     }
   },
   {
@@ -25546,21 +25772,21 @@
       {
         "lineNumber": 2,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
         "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -25576,185 +25802,192 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.FilterByTimeCommand;"
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "hrxiong"
+          "gitId": "CJuanvip"
         },
         "content": "/**"
       },
       {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": " * fiterByEducation."
+      },
+      {
         "lineNumber": 10,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "CJuanvip"
         },
-        "content": " * Filter by education command parser"
+        "content": " */"
       },
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": " */"
+        "content": "public class FilterByEducationCommandParser implements Parser\u003cFilterByEducationCommand\u003e {"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "public class FilterByEducationCommandParser {"
+        "content": "    /**"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * FilterByGradeCommand"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "     * FilterByGradeCommand"
-      },
-      {
-        "lineNumber": 15,
-        "author": {
-          "gitId": "hrxiong"
-        },
-        "content": "     *"
-      },
-      {
-        "lineNumber": 16,
-        "author": {
-          "gitId": "-"
-        },
         "content": "     * @param args"
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
         "content": "     * @return"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
         "content": "     * @throws ParseException"
       },
       {
-        "lineNumber": 19,
+        "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
         "content": "    public FilterByEducationCommand parse(String args) throws ParseException {"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "        String stringCommand \u003d args.trim();"
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 22,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "        if (stringCommand.isEmpty()) {"
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
         "content": "            throw new ParseException("
       },
       {
-        "lineNumber": 25,
+        "lineNumber": 24,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "                    String.format(\"Enter error message here\"));"
+        "content": "                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterByEducationCommand.MESSAGE_USAGE));"
       },
       {
-        "lineNumber": 26,
+        "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        if (!(\"pri\".equals(stringCommand) || \"sec\".equals(stringCommand) || \"jc\".equals(stringCommand))) {"
+      },
+      {
         "lineNumber": 27,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "CJuanvip"
         },
-        "content": "        if (!(stringCommand.equals(\"Primary\") || stringCommand.equals(\"Secondary\") || stringCommand.equals(\"JC\"))) {"
+        "content": "            throw new ParseException("
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterByTimeCommand.MESSAGE_USAGE));"
+        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterByEducationCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 31,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "        return new FilterByEducationCommand(stringCommand);"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
@@ -25762,8 +25995,9 @@
       }
     ],
     "authorContributionMap": {
-      "hrxiong": 11,
-      "-": 21
+      "hrxiong": 3,
+      "CJuanvip": 7,
+      "-": 23
     }
   },
   {
@@ -25809,164 +26043,171 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": ""
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "hrxiong"
         },
-        "content": " * FilterByFeeCommandParser"
+        "content": "/**"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "hrxiong"
         },
-        "content": " */"
+        "content": " * FilterByFeeCommandParser"
       },
       {
         "lineNumber": 11,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
         "content": "public class FilterByFeeCommandParser implements Parser\u003cFilterByFeeCommand\u003e {"
       },
       {
-        "lineNumber": 12,
+        "lineNumber": 13,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 13,
+        "lineNumber": 14,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "     * FilterByFeeCommand"
       },
       {
-        "lineNumber": 14,
+        "lineNumber": 15,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "     *"
       },
       {
-        "lineNumber": 15,
+        "lineNumber": 16,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "     * @param args"
       },
       {
-        "lineNumber": 16,
+        "lineNumber": 17,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "     * @return"
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 18,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "     * @throws ParseException"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 19,
         "author": {
           "gitId": "hrxiong"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 19,
+        "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
         "content": "    public FilterByFeeCommand parse(String args) throws ParseException {"
       },
       {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "        String trimmedArgs \u003d args.trim();"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (trimmedArgs.isEmpty()) {"
+        "content": "        String trimmedArgs \u003d args.trim();"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterByFeeCommand.MESSAGE_USAGE));"
+        "content": "        if (trimmedArgs.isEmpty()) {"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterByFeeCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new FilterByFeeCommand((double) Integer.parseInt(trimmedArgs));"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new FilterByFeeCommand((trimmedArgs));"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
@@ -25975,7 +26216,7 @@
     ],
     "authorContributionMap": {
       "hrxiong": 12,
-      "-": 17
+      "-": 18
     }
   },
   {
@@ -26056,7 +26297,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "public class FilterByGradeCommandParser {"
+        "content": "public class FilterByGradeCommandParser implements Parser\u003cFilterByGradeCommand\u003e {"
       },
       {
         "lineNumber": 12,
@@ -26159,9 +26400,9 @@
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "-"
         },
-        "content": "        return new FilterByGradeCommand(Double.parseDouble(stringCommand[0]), Double.parseDouble(stringCommand[1]));"
+        "content": "        return new FilterByGradeCommand(args.trim());"
       },
       {
         "lineNumber": 27,
@@ -26180,8 +26421,8 @@
     ],
     "authorContributionMap": {
       "hrxiong": 3,
-      "-": 19,
-      "chenlu-chua": 6
+      "-": 20,
+      "chenlu-chua": 5
     }
   },
   {
@@ -26197,201 +26438,229 @@
       {
         "lineNumber": 2,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "import seedu.address.logic.commands.FilterByTimeCommand;"
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Time;"
+        "content": "import seedu.address.logic.commands.FilterByTimeCommand;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "/**"
+        "content": "import seedu.address.model.person.Time;"
       },
       {
         "lineNumber": 8,
-        "author": {
-          "gitId": "hrxiong"
-        },
-        "content": " * Finds and lists the list of person whose time is between A to B."
-      },
-      {
-        "lineNumber": 9,
-        "author": {
-          "gitId": "hrxiong"
-        },
-        "content": " */"
-      },
-      {
-        "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "/**"
+      },
+      {
         "lineNumber": 11,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "CJuanvip"
         },
-        "content": "public class FilterByTimeCommandParser {"
+        "content": " * FilterByTime."
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "CJuanvip"
         },
-        "content": "    /**"
+        "content": " */"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "     * FilterByGradeCommand"
+        "content": "public class FilterByTimeCommandParser implements Parser\u003cFilterByTimeCommand\u003e {"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "hrxiong"
         },
-        "content": "     *"
+        "content": "    /**"
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "     * @param args"
+        "content": "     * FilterByTimeCommand"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "     * @return"
+        "content": "     *"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException"
+        "content": "     * @param args"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @return"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "    public FilterByTimeCommand parse(String args) throws ParseException {"
+        "content": "     * @throws ParseException"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public FilterByTimeCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "        Time currTime \u003d new Time(args);"
+        "content": "        try {"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (currTime.toString().isEmpty()) {"
+        "content": "            Time currTime \u003d new Time(args);"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException("
+        "content": "            if (currTime.toString().isEmpty()) {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "                    String.format(\"Enter error message here\"));"
+        "content": "                throw new ParseException("
       },
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "        }"
+        "content": "                        String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterByTimeCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new FilterByTimeCommand(currTime);"
+        "content": "            return new FilterByTimeCommand(args);"
       },
       {
         "lineNumber": 29,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "        } catch (IllegalArgumentException e) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "            throw new ParseException("
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterByTimeCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
@@ -26399,8 +26668,9 @@
       }
     ],
     "authorContributionMap": {
-      "hrxiong": 7,
-      "-": 23
+      "hrxiong": 8,
+      "CJuanvip": 7,
+      "-": 19
     }
   },
   {
@@ -43296,6 +43566,1771 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/logic/commands/FilterByEducationCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.EducationFilterPredicate;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class FilterByEducationCommandTest {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model model \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model expectedModel \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String first \u003d \"Sec\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String second \u003d \" \";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByEducationCommand filterByEducationFirstCommand \u003d new FilterByEducationCommand(first);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByEducationCommand filterByEducationSecondCommand \u003d new FilterByEducationCommand(second);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertTrue(filterByEducationFirstCommand.equals(filterByEducationFirstCommand));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same values -\u003e returns true"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByEducationCommand filterByEducationFirstCommandCopy \u003d new FilterByEducationCommand(first);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertTrue(filterByEducationFirstCommand.equals(filterByEducationFirstCommandCopy));"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // different types -\u003e returns false"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertFalse(filterByEducationFirstCommand.equals(1));"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // different person -\u003e returns false"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertFalse(filterByEducationFirstCommand.equals(filterByEducationSecondCommand));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void executeZeroKeywordsNoPersonFound() {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String expectedMessage \u003d String.format(\"Cannot find Sec education within the students list!\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        EducationFilterPredicate predicate \u003d new EducationFilterPredicate(\"Sec\");"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FilterByEducationCommand command \u003d new FilterByEducationCommand(\"Sec\");"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expectedModel.updateFilteredPersonList(predicate);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertCommandSuccess(command, model, commandHistory, expectedMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(Collections.emptyList(), model.getFilteredPersonList());"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Parses {@code userInput} into a {@code NameContainsKeywordsPredicate}."
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public NameContainsKeywordsPredicate preparePredicate(String userInput) {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new NameContainsKeywordsPredicate(Arrays.asList(userInput.split(\"\\\\s+\")));"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "CJuanvip": 12,
+      "-": 56
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/commands/FilterByFeeCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.FeeFilterPredicate;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class FilterByFeeCommandTest {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model model \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model expectedModel \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String first \u003d \"20\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String second \u003d \" \";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByFeeCommand filterByFeeFirstCommand \u003d new FilterByFeeCommand(first);"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertTrue(filterByFeeFirstCommand.equals(filterByFeeFirstCommand));"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same values -\u003e returns true"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByFeeCommand filterByEducationFirstCommandCopy \u003d new FilterByFeeCommand(first);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertTrue(filterByFeeFirstCommand.equals(filterByEducationFirstCommandCopy));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // different types -\u003e returns false"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertFalse(filterByFeeFirstCommand.equals(1));"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void executeZeroKeywordsNoPersonFound() {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String expectedMessage \u003d String.format(\"Cannot find person whose fee not less than \" + 300.00 + \" !\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FeeFilterPredicate predicate \u003d new FeeFilterPredicate(300);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FilterByFeeCommand command \u003d new FilterByFeeCommand(\"300\");"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expectedModel.updateFilteredPersonList(predicate);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertCommandSuccess(command, model, commandHistory, expectedMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(Collections.emptyList(), model.getFilteredPersonList());"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Parses {@code userInput} into a {@code NameContainsKeywordsPredicate}."
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public NameContainsKeywordsPredicate preparePredicate(String userInput) {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new NameContainsKeywordsPredicate(Arrays.asList(userInput.split(\"\\\\s+\")));"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "CJuanvip": 10,
+      "-": 51
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/commands/FilterByGradeCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.GradeFilterPredicate;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class FilterByGradeCommandTest {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model model \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model expectedModel \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        String first \u003d \"20 90\";"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByGradeCommand filterByGradeFirstCommand \u003d new FilterByGradeCommand(first);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertTrue(filterByGradeFirstCommand.equals(filterByGradeFirstCommand));"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same values -\u003e returns true"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByGradeCommand filterByGradeFirstCommandCopy \u003d new FilterByGradeCommand(first);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertTrue(filterByGradeFirstCommand.equals(filterByGradeFirstCommandCopy));"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // different types -\u003e returns false"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertFalse(filterByGradeFirstCommand.equals(1));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void executeZeroKeywordsNoPersonFound() {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        String expectedMessage \u003d String.format(\"Cannot find person whose grade between 0.0 and 0.0 !\");"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        GradeFilterPredicate predicate \u003d new GradeFilterPredicate(0, 0);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FilterByGradeCommand command \u003d new FilterByGradeCommand(\"0 0\");"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expectedModel.updateFilteredPersonList(predicate);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertCommandSuccess(command, model, commandHistory, expectedMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Parses {@code userInput} into a {@code NameContainsKeywordsPredicate}."
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public NameContainsKeywordsPredicate preparePredicate(String userInput) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new NameContainsKeywordsPredicate(Arrays.asList(userInput.split(\"\\\\s+\")));"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "CJuanvip": 16,
+      "-": 42
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/commands/FilterByTimeCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Time;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.TimeFilterPredicate;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class FilterByTimeCommandTest {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model model \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model expectedModel \u003d new ModelManager(getTypicalAddressBook(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        String first \u003d \"mon 1200 1400\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByTimeCommand filterByTimeFirstCommand \u003d new FilterByTimeCommand(first);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertTrue(filterByTimeFirstCommand.equals(filterByTimeFirstCommand));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same values -\u003e returns true"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByTimeCommand filterByTimeFirstCommandCopy \u003d new FilterByTimeCommand(first);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertTrue(filterByTimeFirstCommand.equals(filterByTimeFirstCommandCopy));"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // different types -\u003e returns false"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertFalse(filterByTimeFirstCommand.equals(1));"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void executeZeroKeywordsNoPersonFound() {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Time time \u003d new Time(\"mon 2400 0100\");"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        String expectedMessage \u003d String.format(\"Cannot find \" + time.toString()"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "                + \" slot within the students list!\");"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        TimeFilterPredicate predicate \u003d new TimeFilterPredicate(time);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FilterByTimeCommand command \u003d new FilterByTimeCommand(\"mon 2400 0100\");"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        expectedModel.updateFilteredPersonList(predicate);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertCommandSuccess(command, model, commandHistory, expectedMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Parses {@code userInput} into a {@code NameContainsKeywordsPredicate}."
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public NameContainsKeywordsPredicate preparePredicate(String userInput) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new NameContainsKeywordsPredicate(Arrays.asList(userInput.split(\"\\\\s+\")));"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "CJuanvip": 17,
+      "-": 43
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/logic/parser/AddCommandParserTest.java",
     "lines": [
       {
@@ -44408,6 +46443,855 @@
     "authorContributionMap": {
       "hrxiong": 9,
       "-": 149
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/parser/FilterByEducationCommandParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import seedu.address.logic.commands.FilterByEducationCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class FilterByEducationCommandParserTest {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private FilterByEducationCommandParser parser \u003d new FilterByEducationCommandParser();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseEmptyArgThrowsParseException() {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertParseFailure(parser, \" \", String.format("
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "            MESSAGE_INVALID_COMMAND_FORMAT, FilterByEducationCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseValidArgsReturnsFindCommand() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // no leading and trailing whitespaces"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FilterByEducationCommand expectedFindCommand \u003d"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                new FilterByEducationCommand(\"sec\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertParseSuccess(parser, \"sec\", expectedFindCommand);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "CJuanvip": 6,
+      "-": 23
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/parser/FilterByFeeCommandParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import seedu.address.logic.commands.FilterByFeeCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class FilterByFeeCommandParserTest {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private FilterByFeeCommandParser parser \u003d new FilterByFeeCommandParser();"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseEmptyArgThrowsParseException() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertParseFailure(parser, \" \", String.format("
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "            MESSAGE_INVALID_COMMAND_FORMAT, FilterByFeeCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseValidArgsReturnsFindCommand() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // no leading and trailing whitespaces"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FilterByFeeCommand expectedFindCommand \u003d"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                new FilterByFeeCommand(\"20\");"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertParseSuccess(parser, \"20\", expectedFindCommand);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "CJuanvip": 6,
+      "-": 24
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/parser/FilterByGradeCommandParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "import seedu.address.logic.commands.FilterByGradeCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class FilterByGradeCommandParserTest {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private FilterByGradeCommandParser parser \u003d new FilterByGradeCommandParser();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseEmptyArgThrowsParseException() {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertParseFailure(parser, \" \", String.format("
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "            MESSAGE_INVALID_COMMAND_FORMAT, FilterByGradeCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseValidArgsReturnsFindCommand() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // no leading and trailing whitespaces"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        FilterByGradeCommand expectedFindCommand \u003d"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "                new FilterByGradeCommand(\"3 100\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertParseSuccess(parser, \"3 100\", expectedFindCommand);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "hrxiong": 1,
+      "CJuanvip": 8,
+      "-": 19
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/parser/FilterByTimeCommandParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "import seedu.address.logic.commands.FilterByTimeCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class FilterByTimeCommandParserTest {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "    private FilterByTimeCommandParser parser \u003d new FilterByTimeCommandParser();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseEmptyArgThrowsParseException() {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertParseFailure(parser, \"  \", String.format("
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "            MESSAGE_INVALID_COMMAND_FORMAT, FilterByTimeCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseValidArgsReturnsFindCommand() {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // no leading and trailing whitespaces"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FilterByTimeCommand expectedFindCommand \u003d"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "                new FilterByTimeCommand(\"mon 1300 1400\");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "        assertParseSuccess(parser, \"mon 1300 1400\", expectedFindCommand);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "CJuanvip": 9,
+      "-": 20
     }
   },
   {

@@ -995,9 +995,9 @@
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "      \"authorNames\": [\"robertvictoreen\"]"
+        "content": "      \"authorNames\": [\"robertvictoreen\", \"Robert Victoreen\"]"
       },
       {
         "lineNumber": 28,
@@ -1022,7 +1022,8 @@
       }
     ],
     "authorContributionMap": {
-      "spencertan96": 30
+      "robertvictoreen": 1,
+      "spencertan96": 29
     }
   },
   {
@@ -2818,7 +2819,7 @@
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "-"
+          "gitId": "robertvictoreen"
         },
         "content": "image::robertvictoreen.png[width\u003d\"150\", align\u003d\"left\"]"
       },
@@ -3097,8 +3098,9 @@
       }
     ],
     "authorContributionMap": {
+      "robertvictoreen": 1,
       "spencertan96": 6,
-      "-": 47
+      "-": 46
     }
   },
   {
@@ -11520,9 +11522,9 @@
       {
         "lineNumber": 140,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "Undoable commands: those commands that modify the student list\u0027s content (`add`, `delete`, `edit`, `mark`, `unmark`, `sort`, `present`, `absent` and `clear`)."
+        "content": "Undoable commands: those commands that modify the student list\u0027s content (`add`, `delete`, `edit`, `markAssignment`, `markAttendance`, `sort` and `clear`)."
       },
       {
         "lineNumber": 141,
@@ -11849,9 +11851,9 @@
       {
         "lineNumber": 187,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "\u003d\u003d\u003d Mark a student\u0027s attendance as present: `present`"
+        "content": "\u003d\u003d\u003d Mark a student\u0027s attendance as present or absent: `markAttendance`"
       },
       {
         "lineNumber": 188,
@@ -11863,21 +11865,21 @@
       {
         "lineNumber": 189,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "Adds an entry to the attendance specifying the student at the specified index as present. +"
+        "content": "Records the attendance of a student as present or absent for a specified date. +"
       },
       {
         "lineNumber": 190,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "Format: `present INDEX`"
+        "content": "Format: `markAttendance INDEX a/BOOLEAN d/DATE`"
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
         "content": ""
       },
@@ -11886,7 +11888,7 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Mark a student\u0027s attendance as absent: `absent`"
+        "content": "\u003d\u003d\u003d Sort the student list: `sort`"
       },
       {
         "lineNumber": 193,
@@ -11900,14 +11902,14 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Adds an entry to the attendance specifying the student at the specified index as absent. +"
+        "content": "Sort the student list by alphabetical order, score, participation or attendance depending on the presence of an argument. +"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Format: `absent INDEX`"
+        "content": "Format: `sort [s/p/a]`"
       },
       {
         "lineNumber": 196,
@@ -11921,54 +11923,54 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Sort the student list: `sort`"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Students are sorted according by alphabetical order by default (with no argument)."
       },
       {
         "lineNumber": 199,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Sort the student list by alphabetical order, score, participation or attendance depending on the presence of an argument. +"
+        "content": ""
       },
       {
         "lineNumber": 200,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "Format: `sort [s/p/a]`"
+        "content": "\u003d\u003d\u003d Add an assignment: `addAssignment`"
       },
       {
         "lineNumber": 201,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
         "content": ""
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "[TIP]"
+        "content": "Adds an assignment with given assignment name, weight, deadline, maximum mark. +"
       },
       {
         "lineNumber": 203,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "Students are sorted according by alphabetical order by default (with no argument)."
+        "content": "Format: `addAssignment n/NAME w/WEIGHT d/DEADLINE m/MAX_MARK`"
       },
       {
         "lineNumber": 204,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
         "content": ""
       },
@@ -11977,238 +11979,238 @@
         "author": {
           "gitId": "HenryJk"
         },
-        "content": "\u003d\u003d\u003d Sorting students by name : `sort`"
+        "content": "\u003d\u003d\u003d Delete an assignment: `deleteAssignment`"
       },
       {
         "lineNumber": 206,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
-        "content": " Sorts all student in the address book by name. +"
+        "content": ""
       },
       {
         "lineNumber": 207,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "Format: `sort`"
-      },
-      {
-        "lineNumber": 208,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 209,
-        "author": {
-          "gitId": "HenryJk"
-        },
-        "content": "\u003d\u003d\u003d Add an assignment: `addAssignment`"
-      },
-      {
-        "lineNumber": 210,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 211,
-        "author": {
-          "gitId": "HenryJk"
-        },
-        "content": "Adds an assignment with given assignment name, weight, deadline, maximum mark. +"
-      },
-      {
-        "lineNumber": 212,
-        "author": {
-          "gitId": "HenryJk"
-        },
-        "content": "Format: `addAssignment n/NAME w/WEIGHT d/DEADLINE m/MAX_MARK`"
-      },
-      {
-        "lineNumber": 213,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 214,
-        "author": {
-          "gitId": "HenryJk"
-        },
-        "content": "\u003d\u003d\u003d Delete an assignment: `deleteAssignment`"
-      },
-      {
-        "lineNumber": 215,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 216,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "Delete an assignment with given assignment index. +"
       },
       {
-        "lineNumber": 217,
+        "lineNumber": 208,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "Format: `deleteAssignment INDEX`"
       },
       {
-        "lineNumber": 218,
+        "lineNumber": 209,
+        "author": {
+          "gitId": "HenryJk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "\u003d\u003d\u003d Record a mark for a student: `markAssignment`"
+      },
+      {
+        "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "Adds a mark for an assignment associated with a student given the mark obtained. +"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "Format: `markAssignment INDEX id/ASSIGNMENT_INDEX m/MARK`"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "\u003d\u003d\u003d Display the statistics for an assignment: `assignmentStats`"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "Display the statistics for the specified assignment. +"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "Format: `assignmentStats INDEX`"
       },
       {
         "lineNumber": 219,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Sort all assignment: `sortAssignment`"
+        "content": ""
       },
       {
         "lineNumber": 220,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Sort all assignment: `sortAssignment`"
       },
       {
         "lineNumber": 221,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": "Sort all assignment by deadline. +"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "robertvictoreen"
         },
-        "content": "Format: `sortAssignment`"
+        "content": "Sort all assignment by deadline. +"
       },
       {
         "lineNumber": 223,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "Format: `sortAssignment`"
       },
       {
         "lineNumber": 224,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Record a mark for a student: `mark`"
+        "content": ""
       },
       {
         "lineNumber": 225,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Editing a student: `edit`"
       },
       {
         "lineNumber": 226,
         "author": {
-          "gitId": "robertvictoreen"
-        },
-        "content": "Adds a mark entry associated with a student given the percentage value of mark obtained. +"
-      },
-      {
-        "lineNumber": 227,
-        "author": {
-          "gitId": "robertvictoreen"
-        },
-        "content": "Format: `mark INDEX m/MARK`"
-      },
-      {
-        "lineNumber": 228,
-        "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 229,
+        "lineNumber": 227,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d View a student\u0027s marks: `results`"
+        "content": "Edits an existing student in the student list. +"
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "Format: `edit INDEX [NAME] [p/PHONE] [e/EMAIL] [t/TAG]...`"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "_Coming in v2.0_"
+        "content": "****"
       },
       {
         "lineNumber": 231,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "* Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed student list. The index *must be a positive integer* 1, 2, 3, ..."
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "View the mark entries associated with the student at the specified index. +"
+        "content": "* At least one of the optional fields must be provided."
       },
       {
         "lineNumber": 233,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "Format: `results INDEX`"
+        "content": "* Existing values will be updated to the input values."
       },
       {
         "lineNumber": 234,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative."
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Delete a mark entry: `unmark`"
+        "content": "* You can remove all the person\u0027s tags by typing `t/` without specifying any tags after it."
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Delete the indexed mark entry in the list associated with the student at the specified index. +"
+        "content": ""
       },
       {
         "lineNumber": 238,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "Format: `unmark INDEX m/MARK`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 239,
@@ -12220,35 +12222,35 @@
       {
         "lineNumber": 240,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Record a mark for a student: `markAssignment`"
+        "content": "* `edit 1 p/91234567 e/johndoe@example.com` +"
       },
       {
         "lineNumber": 241,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively."
       },
       {
         "lineNumber": 242,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "Adds a mark for an assignment associated with a student given the mark obtained. +"
+        "content": "* `edit 2 Betsy Crower t/` +"
       },
       {
         "lineNumber": 243,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "Format: `mark INDEX id/ASSIGNMENT_INDEX m/MARK`"
+        "content": "Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags."
       },
       {
         "lineNumber": 244,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
         "content": ""
       },
@@ -12257,7 +12259,7 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Editing a student: `edit`"
+        "content": "\u003d\u003d\u003d Viewing command history : `history`"
       },
       {
         "lineNumber": 246,
@@ -12271,14 +12273,14 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Edits an existing student in the student list. +"
+        "content": "Lists all the commands that you have entered in reverse chronological order. +"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Format: `edit INDEX [NAME] [p/PHONE] [e/EMAIL] [t/TAG]...`"
+        "content": "Format: `history`"
       },
       {
         "lineNumber": 249,
@@ -12292,367 +12294,248 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "****"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed student list. The index *must be a positive integer* 1, 2, 3, ..."
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* At least one of the optional fields must be provided."
+        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* Existing values will be updated to the input values."
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 254,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative."
-      },
-      {
-        "lineNumber": 255,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "* You can remove all the person\u0027s tags by typing `t/` without specifying any tags after it."
-      },
-      {
-        "lineNumber": 256,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "****"
-      },
-      {
-        "lineNumber": 257,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 258,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 259,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 260,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "* `edit 1 p/91234567 e/johndoe@example.com` +"
-      },
-      {
-        "lineNumber": 261,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively."
-      },
-      {
-        "lineNumber": 262,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "* `edit 2 Betsy Crower t/` +"
-      },
-      {
-        "lineNumber": 263,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags."
-      },
-      {
-        "lineNumber": 264,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 265,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "\u003d\u003d\u003d Viewing command history : `history`"
-      },
-      {
-        "lineNumber": 266,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 267,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "Lists all the commands that you have entered in reverse chronological order. +"
-      },
-      {
-        "lineNumber": 268,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "Format: `history`"
-      },
-      {
-        "lineNumber": 269,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 270,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "[NOTE]"
-      },
-      {
-        "lineNumber": 271,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "\u003d\u003d\u003d\u003d"
-      },
-      {
-        "lineNumber": 272,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
-      },
-      {
-        "lineNumber": 273,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "\u003d\u003d\u003d\u003d"
-      },
-      {
-        "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 275,
+        "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d Command Summary"
       },
       {
-        "lineNumber": 276,
+        "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 277,
+        "lineNumber": 257,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "* *Absent* : `absent NAME`"
       },
       {
-        "lineNumber": 278,
+        "lineNumber": 258,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "* *Add* : `add NAME [s/INDEX p/PHONE_NUMBER e/EMAIL [t/TAG]...` +"
       },
       {
-        "lineNumber": 279,
+        "lineNumber": 259,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "e.g. `add James Ho s/1 p/22224444 e/jamesho@example.com t/friend t/colleague`"
       },
       {
-        "lineNumber": 280,
+        "lineNumber": 260,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "* *AddAssignment* : `addAssignment n/NAME w/WEIGHT d/DEADLINE m/MAX_MARK` +"
       },
       {
-        "lineNumber": 281,
+        "lineNumber": 261,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "e.g. `addAssignment n/Assignment 1 w/15 d/14/10/2019 m/100`"
       },
       {
-        "lineNumber": 282,
+        "lineNumber": 262,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "* *AssignmentStats* : `assignmentStats INDEX` +"
+      },
+      {
+        "lineNumber": 263,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "e.g. `assignmentStats 1`"
+      },
+      {
+        "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
         "content": "* *Clear* : `clear`"
       },
       {
-        "lineNumber": 283,
+        "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
         "content": "* *Delete* : `delete INDEX` +"
       },
       {
-        "lineNumber": 284,
+        "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
         "content": "e.g. `delete 3`"
       },
       {
-        "lineNumber": 285,
+        "lineNumber": 267,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "* *DeleteAssignment* : `deleteAssignment INDEX` +"
       },
       {
-        "lineNumber": 286,
+        "lineNumber": 268,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "e.g. `deleteAssignment 3`"
       },
       {
-        "lineNumber": 287,
+        "lineNumber": 269,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "* *Edit* : `edit INDEX [NAME] [p/PHONE_NUMBER] [e/EMAIL] [t/TAG]...` +"
       },
       {
-        "lineNumber": 288,
+        "lineNumber": 270,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "e.g. `edit 2 James Lee e/jameslee@example.com`"
       },
       {
-        "lineNumber": 289,
+        "lineNumber": 271,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "* *Exit* : `exit`"
       },
       {
-        "lineNumber": 290,
+        "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
         "content": "* *Help* : `help`"
       },
       {
-        "lineNumber": 291,
+        "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
         "content": "* *History* : `history`"
       },
       {
-        "lineNumber": 292,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "* *Mark* : `mark m/MARK s/INDEX o/OBTAINED m/MAX`"
-      },
-      {
-        "lineNumber": 293,
+        "lineNumber": 274,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "* *MarkAssignment* : `markAssignment INDEX id/ASSIGNMENT_INDEX m/MARK`"
       },
       {
-        "lineNumber": 294,
+        "lineNumber": 275,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "e.g. `markAssignment 1 id/1 m/53`"
+      },
+      {
+        "lineNumber": 276,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "* *MarkAttendance* : `markAttendance INDEX a/BOOLEAN d/DATE`"
+      },
+      {
+        "lineNumber": 277,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "e.g. `markAttendance 1 a/true d/14/10/2019`"
+      },
+      {
+        "lineNumber": 278,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "* *Present* : `present NAME`"
       },
       {
-        "lineNumber": 295,
+        "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
         "content": "* *Redo* : `redo`"
       },
       {
-        "lineNumber": 296,
+        "lineNumber": 280,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "* *Results* : `results INDEX`"
       },
       {
-        "lineNumber": 297,
+        "lineNumber": 281,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "* *Sort* : `sort [s/p/a]"
+        "content": "* *Sort* : `sort [s/p/a]`"
       },
       {
-        "lineNumber": 298,
+        "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
         "content": "* *Sort* : `sort`"
       },
       {
-        "lineNumber": 299,
+        "lineNumber": 283,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "* *SortAssignment* : `sortAssignment`"
       },
       {
-        "lineNumber": 300,
+        "lineNumber": 284,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "* *Undo* : `undo`"
       },
       {
-        "lineNumber": 301,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "* *Unmark* : `unmark INDEX`"
-      },
-      {
-        "lineNumber": 302,
+        "lineNumber": 285,
         "author": {
           "gitId": "spencertan96"
         },
@@ -12660,10 +12543,10 @@
       }
     ],
     "authorContributionMap": {
-      "robertvictoreen": 4,
-      "spencertan96": 98,
-      "HenryJk": 37,
-      "-": 163
+      "robertvictoreen": 19,
+      "spencertan96": 78,
+      "HenryJk": 30,
+      "-": 158
     }
   },
   {
@@ -17211,6 +17094,756 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/logic/commands/AssignmentStatsCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import java.util.DoubleSummaryStatistics;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import java.util.stream.DoubleStream;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.commons.core.Messages;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.commons.core.index.Index;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.model.assignment.Assignment;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": " * Deletes an assignment identified using it\u0027s displayed index from the address book."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "public class AssignmentStatsCommand extends Command {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"assignmentStats\";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            + \": Display the statistics for an assignment identified by the\""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            + \" index number used in the displayed assignment list.\\n\""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            + \"Parameters: INDEX (must be a positive integer)\\n\""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            + \"Example: \" + COMMAND_WORD + \" 1\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    private final Index targetIndex;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    public AssignmentStatsCommand(Index targetIndex) {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        this.targetIndex \u003d targetIndex;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        List\u003cAssignment\u003e lastShownList \u003d model.getFilteredAssignmentList();"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        if (targetIndex.getZeroBased() \u003e\u003d lastShownList.size()) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_ASSIGNMENT_DISPLAYED_INDEX);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        Assignment assignment \u003d lastShownList.get(targetIndex.getZeroBased());"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        String uniqueId \u003d assignment.getUniqueId();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        List\u003cPerson\u003e filteredPersonList \u003d model.getFilteredPersonList();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        DoubleStream markStream;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        markStream \u003d filteredPersonList.stream()"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                                        .map(Person::getMarks)"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                                        .filter((marks) -\u003e marks.containsKey(uniqueId))"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                                        .mapToDouble((marks) -\u003e marks.get(uniqueId).getValue());"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        DoubleSummaryStatistics summaryStatistics \u003d markStream.summaryStatistics();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        StringBuilder summary \u003d new StringBuilder(assignment.getName().getValue());"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        summary.append(\" Statistics\\nSubmissions: \");"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        summary.append(summaryStatistics.getCount());"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        if (summaryStatistics.getCount() \u003e 0) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            markStream \u003d filteredPersonList.stream()"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                                            .map(Person::getMarks)"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                                            .filter((marks) -\u003e marks.containsKey(uniqueId))"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                                            .mapToDouble((marks) -\u003e marks.get(uniqueId).getValue());"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            double[] marks \u003d markStream.sorted().toArray();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            double[] quartiles \u003d {0.25, 0.50, 0.75};"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            if (marks.length \u003d\u003d 1) {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                quartiles[0] \u003d quartiles[1] \u003d quartiles[2] \u003d marks[0];"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                double percentile;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                double position;"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                int index;"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                for (int i \u003d 0; i \u003c 3; i++) {"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    position \u003d quartiles[i] * marks.length;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    index \u003d (int) position;"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    percentile \u003d marks[index];"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    if (position - index \u003d\u003d 0) {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                        percentile \u003d (percentile + marks[index - 1]) / 2;"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    quartiles[i] \u003d percentile;"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            summary.append(\"\\nHighest: \").append(summaryStatistics.getMax());"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            summary.append(\", Lowest: \").append(summaryStatistics.getMin());"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            summary.append(\"\\n25th: \").append(quartiles[0]);"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            summary.append(\", 75th: \").append(quartiles[2]);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            summary.append(\"\\nAverage: \").append(summaryStatistics.getAverage());"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            summary.append(\", Median: \").append(quartiles[1]);"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        return new CommandResult(summary.toString());"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                || (other instanceof AssignmentStatsCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                \u0026\u0026 targetIndex.equals(((AssignmentStatsCommand) other).targetIndex)); // state check"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "robertvictoreen": 106
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/logic/commands/AttendanceCommand.java",
     "lines": [
       {
@@ -20167,14 +20800,14 @@
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "robertvictoreen"
         },
         "content": "    protected final Index index;"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "robertvictoreen"
         },
         "content": "    protected final EditPersonDescriptor editPersonDescriptor;"
       },
@@ -20454,7 +21087,7 @@
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "-"
+          "gitId": "robertvictoreen"
         },
         "content": "    protected Person createEditedPerson(Person personToEdit, EditPersonDescriptor editPersonDescriptor) {"
       },
@@ -21496,8 +22129,9 @@
       }
     ],
     "authorContributionMap": {
+      "robertvictoreen": 3,
       "HenryJk": 21,
-      "-": 226
+      "-": 223
     }
   },
   {
@@ -24103,7 +24737,7 @@
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "-"
+          "gitId": "robertvictoreen"
         },
         "content": "import seedu.address.logic.commands.AssignmentStatsCommand;"
       },
@@ -24145,765 +24779,765 @@
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "-"
-        },
-        "content": "import seedu.address.logic.commands.DeleteMarkCommand;"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
           "gitId": "HenryJk"
         },
         "content": "import seedu.address.logic.commands.DeleteProfilePictureCommand;"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.EditCommand;"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.ExitCommand;"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.FindCommand;"
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.HelpCommand;"
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.HistoryCommand;"
       },
       {
-        "lineNumber": 25,
+        "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.ListCommand;"
       },
       {
-        "lineNumber": 26,
+        "lineNumber": 25,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "import seedu.address.logic.commands.MarkAssignmentCommand;"
       },
       {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "import seedu.address.logic.commands.MarkCommand;"
-      },
-      {
-        "lineNumber": 28,
+        "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.RedoCommand;"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.SelectCommand;"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 28,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "import seedu.address.logic.commands.SortAssignmentCommand;"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.SortCommand;"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.UndoCommand;"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": "/**"
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
         "content": " * Parses user input."
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
         "content": " */"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
         "content": "public class AddressBookParser {"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
         "content": "     * Used for initial separation of command word and args."
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
         "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
         "content": "     * Parses user input into command for execution."
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
         "content": "     *"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
         "content": "     * @param userInput full user input string"
       },
       {
-        "lineNumber": 49,
+        "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
         "content": "     * @return the command based on the user input"
       },
       {
-        "lineNumber": 50,
+        "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
         "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
-        "lineNumber": 51,
+        "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 52,
+        "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
         "content": "    public Command parseCommand(String userInput) throws ParseException {"
       },
       {
-        "lineNumber": 53,
+        "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
         "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
       },
       {
-        "lineNumber": 54,
+        "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
         "content": "        if (!matcher.matches()) {"
       },
       {
-        "lineNumber": 55,
+        "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
         "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
       },
       {
-        "lineNumber": 56,
+        "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 57,
+        "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 58,
+        "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
         "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
       },
       {
-        "lineNumber": 59,
+        "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
         "content": "        final String arguments \u003d matcher.group(\"arguments\");"
       },
       {
-        "lineNumber": 60,
+        "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
         "content": "        switch (commandWord) {"
       },
       {
-        "lineNumber": 61,
+        "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
         "content": "        case AddCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 63,
+        "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
         "content": "            return new AddCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 64,
+        "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 63,
         "author": {
           "gitId": "zzsmao"
         },
         "content": "        case AttendanceCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 64,
         "author": {
           "gitId": "zzsmao"
         },
         "content": "            return new AttendanceCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 65,
         "author": {
           "gitId": "zzsmao"
         },
         "content": ""
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 66,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "        case AddProfilePictureCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 69,
+        "lineNumber": 67,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            return new AddPictureCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 70,
+        "lineNumber": 68,
         "author": {
           "gitId": "HenryJk"
         },
         "content": ""
       },
       {
-        "lineNumber": 71,
+        "lineNumber": 69,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "        case AddAssignmentCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 72,
+        "lineNumber": 70,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            return new AddAssignmentCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 73,
+        "lineNumber": 71,
         "author": {
           "gitId": "HenryJk"
         },
         "content": ""
       },
       {
-        "lineNumber": 74,
+        "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "robertvictoreen"
         },
         "content": "        case AssignmentStatsCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            return new AssignmentStatsCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new AssignmentStatsCommandParser().parse(arguments);"
+        "content": "        case EditCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new EditCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "        case EditCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new EditCommandParser().parse(arguments);"
+        "content": "        case SelectCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new SelectCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "        case MarkCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 81,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return new MarkCommandParser().parse(arguments);"
-      },
-      {
-        "lineNumber": 82,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 83,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        case DeleteMarkCommand.COMMAND_WORD:"
-      },
-      {
-        "lineNumber": 84,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return new DeleteMarkCommandParser().parse(arguments);"
-      },
-      {
-        "lineNumber": 85,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 86,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        case SelectCommand.COMMAND_WORD:"
-      },
-      {
-        "lineNumber": 87,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return new SelectCommandParser().parse(arguments);"
-      },
-      {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 89,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "        case DeleteAssignmentCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 90,
+        "lineNumber": 82,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            return new DeleteAssignmentCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 91,
+        "lineNumber": 83,
         "author": {
           "gitId": "HenryJk"
         },
         "content": ""
       },
       {
-        "lineNumber": 92,
+        "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
         "content": "        case DeleteCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 93,
+        "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
         "content": "            return new DeleteCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 94,
+        "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 95,
+        "lineNumber": 87,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "        case DeleteProfilePictureCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 88,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            return new DeleteProfilePictureCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 89,
         "author": {
           "gitId": "HenryJk"
         },
         "content": ""
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
         "content": "        case ClearCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
         "content": "            return new ClearCommand();"
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 101,
+        "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
         "content": "        case FindCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 102,
+        "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
         "content": "            return new FindCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 103,
+        "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 104,
+        "lineNumber": 96,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "        case MarkAssignmentCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 105,
+        "lineNumber": 97,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            return new MarkAssignmentCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 106,
+        "lineNumber": 98,
         "author": {
           "gitId": "HenryJk"
         },
         "content": ""
       },
       {
-        "lineNumber": 107,
+        "lineNumber": 99,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "        case SortAssignmentCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 108,
+        "lineNumber": 100,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            return new SortAssignmentCommand();"
       },
       {
-        "lineNumber": 109,
+        "lineNumber": 101,
         "author": {
           "gitId": "HenryJk"
         },
         "content": ""
       },
       {
-        "lineNumber": 110,
+        "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
         "content": "        case SortCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 111,
+        "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
         "content": "            return new SortCommand();"
       },
       {
-        "lineNumber": 112,
+        "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
         "content": "        case ListCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 114,
+        "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
         "content": "            return new ListCommand();"
       },
       {
-        "lineNumber": 115,
+        "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
         "content": "        case HistoryCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
         "content": "            return new HistoryCommand();"
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
         "content": "        case ExitCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 120,
+        "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
         "content": "            return new ExitCommand();"
       },
       {
-        "lineNumber": 121,
+        "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 122,
+        "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
         "content": "        case HelpCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 123,
+        "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
         "content": "            return new HelpCommand();"
       },
       {
-        "lineNumber": 124,
+        "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 125,
+        "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
         "content": "        case UndoCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 126,
+        "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
         "content": "            return new UndoCommand();"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case RedoCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new RedoCommand();"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        default:"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
       },
       {
         "lineNumber": 127,
@@ -24917,69 +25551,225 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        case RedoCommand.COMMAND_WORD:"
-      },
-      {
-        "lineNumber": 129,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return new RedoCommand();"
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 131,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        default:"
-      },
-      {
-        "lineNumber": 132,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
-      },
-      {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "-"
-        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
       "zzsmao": 4,
+      "robertvictoreen": 4,
       "HenryJk": 24,
-      "-": 108
+      "-": 96
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/parser/AssignmentStatsCommandParser.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.commons.core.index.Index;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.logic.commands.AssignmentStatsCommand;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": " * Parses input arguments and creates a new AssignmentStatsCommand object"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "public class AssignmentStatsCommandParser implements Parser\u003cAssignmentStatsCommand\u003e {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "     * Parses the given {@code String} of arguments in the context of the AssignmentStatsCommand"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "     * and returns an AssignmentStatsCommand object for execution."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    public AssignmentStatsCommand parse(String args) throws ParseException {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            Index index \u003d ParserUtil.parseIndex(args);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            return new AssignmentStatsCommand(index);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        } catch (ParseException pe) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            throw new ParseException("
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, AssignmentStatsCommand.MESSAGE_USAGE), pe);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "robertvictoreen": 29
     }
   },
   {
@@ -26080,6 +26870,589 @@
     ],
     "authorContributionMap": {
       "HenryJk": 35
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/parser/EditCommandParser.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Collection;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Optional;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Set;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.index.Index;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.EditCommand;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.commands.EditCommand.EditPersonDescriptor;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.tag.Tag;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Parses input arguments and creates a new EditCommand object"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class EditCommandParser implements Parser\u003cEditCommand\u003e {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Parses the given {@code String} of arguments in the context of the EditCommand"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * and returns an EditCommand object for execution."
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public EditCommand parse(String args) throws ParseException {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(args);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ArgumentMultimap argMultimap \u003d"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_PHONE, PREFIX_EMAIL, PREFIX_ADDRESS, PREFIX_TAG);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Index index;"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            index \u003d ParserUtil.parseIndex(argMultimap.getPreamble());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (ParseException pe) {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, EditCommand.MESSAGE_USAGE), pe);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        EditPersonDescriptor editPersonDescriptor \u003d new EditPersonDescriptor();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (argMultimap.getValue(PREFIX_NAME).isPresent()) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            editPersonDescriptor.setName(ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get()));"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (argMultimap.getValue(PREFIX_PHONE).isPresent()) {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            editPersonDescriptor.setPhone(ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get()));"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (argMultimap.getValue(PREFIX_EMAIL).isPresent()) {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            editPersonDescriptor.setEmail(ParserUtil.parseEmail(argMultimap.getValue(PREFIX_EMAIL).get()));"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (argMultimap.getValue(PREFIX_ADDRESS).isPresent()) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            editPersonDescriptor.setAddress(ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ADDRESS).get()));"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        parseTagsForEdit(argMultimap.getAllValues(PREFIX_TAG)).ifPresent(editPersonDescriptor::setTags);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!editPersonDescriptor.isAnyFieldEdited()) {"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new ParseException(EditCommand.MESSAGE_NOT_EDITED);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new EditCommand(index, editPersonDescriptor);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Parses {@code Collection\u003cString\u003e tags} into a {@code Set\u003cTag\u003e} if {@code tags} is non-empty."
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * If {@code tags} contain only one element which is an empty string, it will be parsed into a"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * {@code Set\u003cTag\u003e} containing zero tags."
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    protected Optional\u003cSet\u003cTag\u003e\u003e parseTagsForEdit(Collection\u003cString\u003e tags) throws ParseException {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assert tags !\u003d null;"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (tags.isEmpty()) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return Optional.empty();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Collection\u003cString\u003e tagSet \u003d tags.size() \u003d\u003d 1 \u0026\u0026 tags.contains(\"\") ? Collections.emptySet() : tags;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Optional.of(ParserUtil.parseTags(tagSet));"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "robertvictoreen": 1,
+      "-": 81
     }
   },
   {
@@ -46337,9 +47710,9 @@
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        Label noComponents \u003d new Label(\"\u003cNo assignments entered\u003e\");"
+        "content": "        Label noComponents \u003d new Label(\"\u003cNo student selected\u003e\");"
       },
       {
         "lineNumber": 61,
@@ -46561,299 +47934,719 @@
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            components.getColumnConstraints().add(newColumn);"
+        "content": "            newColumn.setPercentWidth(40);"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "            components.getColumnConstraints().add(newColumn);"
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            RowConstraints newRow \u003d new RowConstraints();"
+        "content": "            newColumn \u003d new ColumnConstraints();"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            components.getRowConstraints().add(newRow);"
+        "content": "            newColumn.setPercentWidth(20);"
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            isSetUp \u003d true;"
+        "content": "            components.getColumnConstraints().addAll(newColumn, newColumn, newColumn);"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "            RowConstraints newRow \u003d new RowConstraints();"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        logger.info(\"Displaying details!\\n\");"
+        "content": "            components.getRowConstraints().add(newRow);"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "            isSetUp \u003d true;"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        // remove old labels"
+        "content": "        }"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        components.getChildren().clear();"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "        logger.info(\"Displaying details!\\n\");"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        // add no. of rows equal to no. of assignments keyed in"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        // Labels set to be label-bright"
+        "content": "        // remove old labels"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        for (int i \u003d 0; i \u003c assignmentList.size(); i++) {"
+        "content": "        components.getChildren().clear();"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "            // adding assignment label"
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "            Label toAdd \u003d new Label(assignmentList.get(i).getName().getValue());"
+        "content": "        // add no. of rows equal to no. of assignments keyed in"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "            toAdd.setStyle(\"-fx-font-size: 11pt;\\n\" + \"-fx-font-family: \\\"Segoe UI Semibold\\\";\\n\""
+        "content": "        // Labels set to be label-bright"
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "                    + \"-fx-text-fill: white;\\n\" + \"-fx-opacity: 1;\");"
+        "content": "        Label label;"
       },
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            components.add(toAdd, 0, i);"
+        "content": "        String style \u003d \"-fx-font-size: 11pt;\\n\" + \"-fx-font-family: \\\"Segoe UI Semibold\\\";\\n\""
       },
       {
         "lineNumber": 112,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    + \"-fx-text-fill: white;\\n\" + \"-fx-opacity: 1;\";"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label \u003d new Label(\"Assignment\");"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label.setStyle(style);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        components.add(label, 0, 0);"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label \u003d new Label(\"Deadline\");"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label.setStyle(style);"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        components.add(label, 1, 0);"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label \u003d new Label(\"Weight\");"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label.setStyle(style);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        components.add(label, 2, 0);"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label \u003d new Label(\"Grade\");"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label.setStyle(style);"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        components.add(label, 3, 0);"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        float assignmentWeight;"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        float assignmentMark;"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        float assignmentMaxMark;"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        float totalWeight \u003d 0;"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        float weightedMarks \u003d 0;"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        int row \u003d 1;"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        Assignment assignment;"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "        for (int i \u003d 0; i \u003c assignmentList.size(); i++) {"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            assignment \u003d assignmentList.get(i);"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "            // adding assignment label"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            row \u003d i + 1;"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            label \u003d new Label(String.format(\"%d. %s\", row, assignment.getName()));"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            label.setStyle(style);"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            components.add(label, 0, row);"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            label \u003d new Label(String.valueOf(assignment.getDeadline()));"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            label.setStyle(style);"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            components.add(label, 1, row);"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            assignmentWeight \u003d assignment.getWeight().getValue();"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            totalWeight +\u003d assignmentWeight;"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            label \u003d new Label(String.valueOf(assignment.getWeight()));"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            label.setStyle(style);"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "            components.add(label, 2, row);"
+      },
+      {
+        "lineNumber": 156,
         "author": {
           "gitId": "spencertan96"
         },
         "content": ""
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 157,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "            // adding marks label"
       },
       {
-        "lineNumber": 114,
-        "author": {
-          "gitId": "HenryJk"
-        },
-        "content": "            String assignmentId \u003d assignmentList.get(i).getUniqueId();"
-      },
-      {
-        "lineNumber": 115,
-        "author": {
-          "gitId": "HenryJk"
-        },
-        "content": "            Label marksLabel;"
-      },
-      {
-        "lineNumber": 116,
+        "lineNumber": 158,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            try {"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 159,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "robertvictoreen"
         },
-        "content": "                marksLabel \u003d new Label(Float.toString(student.getMarks().get(assignmentId).getValue()));"
+        "content": "                assignmentMark \u003d student.getMarks().get(assignment.getUniqueId()).getValue();"
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 160,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                assignmentMaxMark \u003d assignment.getMaxMark().getValue();"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                label \u003d new Label(String.format(\"%s/%s\","
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    String.valueOf(assignmentMark),"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    String.valueOf(assignmentMaxMark)));"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                assignmentMark /\u003d assignmentMaxMark;"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                weightedMarks +\u003d assignmentMark * assignmentWeight;"
+      },
+      {
+        "lineNumber": 168,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            } catch (Exception e) {"
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 169,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "robertvictoreen"
         },
-        "content": "                marksLabel \u003d new Label(\"\");"
+        "content": "                label \u003d new Label(\"\");"
       },
       {
-        "lineNumber": 120,
+        "lineNumber": 170,
         "author": {
           "gitId": "HenryJk"
         },
         "content": "            }"
       },
       {
-        "lineNumber": 121,
+        "lineNumber": 171,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            marksLabel.setStyle(\"-fx-font-size: 11pt;\\n\" + \"-fx-font-family: \\\"Segoe UI Semibold\\\";\\n\""
+        "content": "            label.setStyle(style);"
       },
       {
-        "lineNumber": 122,
+        "lineNumber": 172,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "                    + \"-fx-text-fill: white;\\n\" + \"-fx-opacity: 1;\");"
+        "content": "            components.add(label, 3, row);"
       },
       {
-        "lineNumber": 123,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "            components.add(marksLabel, 1, i);"
-      },
-      {
-        "lineNumber": 124,
+        "lineNumber": 173,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 125,
+        "lineNumber": 174,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        row++;"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label \u003d new Label(\"Total\");"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label.setStyle(style);"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        components.add(label, 0, row);"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label \u003d new Label(String.format(\"%s/%s\","
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    String.valueOf(weightedMarks),"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "                    String.valueOf(totalWeight)));"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        label.setStyle(style);"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        components.add(label, 3, row);"
+      },
+      {
+        "lineNumber": 185,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 126,
+        "lineNumber": 186,
         "author": {
           "gitId": "spencertan96"
         },
         "content": ""
       },
       {
-        "lineNumber": 127,
+        "lineNumber": 187,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "    public ObservableList\u003cPerson\u003e getList() {"
       },
       {
-        "lineNumber": 128,
+        "lineNumber": 188,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "        return studentList;"
       },
       {
-        "lineNumber": 129,
+        "lineNumber": 189,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 130,
+        "lineNumber": 190,
         "author": {
           "gitId": "spencertan96"
         },
         "content": ""
       },
       {
-        "lineNumber": 131,
+        "lineNumber": 191,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "    public Person getCurrentStudent() {"
       },
       {
-        "lineNumber": 132,
+        "lineNumber": 192,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "        return currentStudent;"
       },
       {
-        "lineNumber": 133,
+        "lineNumber": 193,
         "author": {
           "gitId": "spencertan96"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 134,
+        "lineNumber": 194,
         "author": {
           "gitId": "spencertan96"
         },
@@ -46861,8 +48654,9 @@
       }
     ],
     "authorContributionMap": {
-      "spencertan96": 113,
-      "HenryJk": 21
+      "robertvictoreen": 72,
+      "spencertan96": 106,
+      "HenryJk": 16
     }
   },
   {

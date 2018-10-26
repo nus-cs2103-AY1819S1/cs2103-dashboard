@@ -23311,73 +23311,87 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    public final boolean overwrite;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public ExportRequestEvent(ReadOnlyTaskCollection data, String filename) {"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        this.data \u003d data;"
+        "content": "    public ExportRequestEvent(ReadOnlyTaskCollection data, String filename, boolean overwrite) {"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        this.filename \u003d filename;"
+        "content": "        this.data \u003d data;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "        this.filename \u003d filename;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "        this.overwrite \u003d overwrite;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public String toString() {"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sijie123"
         },
-        "content": "        return \"number of tasks \" + data.getTaskList().size();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 23,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "        return \"number of tasks \" + data.getTaskList().size();"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
         "author": {
           "gitId": "sijie123"
         },
@@ -23386,7 +23400,7 @@
     ],
     "authorContributionMap": {
       "ranaldmiao": 1,
-      "sijie123": 22
+      "sijie123": 24
     }
   },
   {
@@ -35935,7 +35949,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d \"export filename\";"
+        "content": "    public static final String MESSAGE_USAGE \u003d \"export n/FILENAME [r/overwrite]\";"
       },
       {
         "lineNumber": 22,
@@ -35956,192 +35970,262 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    private boolean overwrite;"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public ExportCommand(String filename) {"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        this.pathName \u003d filename;"
+        "content": "    public ExportCommand(String filename, boolean overwrite) {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        //this.pathName \u003d Paths.get(filename);"
+        "content": "        this.pathName \u003d filename;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "        this.overwrite \u003d overwrite;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "        //this.pathName \u003d Paths.get(filename);"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    @Override"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        EventsCenter.getInstance().registerHandler(this);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sijie123"
         },
-        "content": "        model.exportTaskCollection(pathName);"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        EventsCenter.getInstance().unregisterHandler(this);"
+        "content": "        EventsCenter.getInstance().registerHandler(this);"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        if (hasExportError()) {"
+        "content": "        model.exportTaskCollection(pathName, overwrite);"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            throw new CommandException(String.format(MESSAGE_EXPORT_ERROR, exportError));"
+        "content": "        EventsCenter.getInstance().unregisterHandler(this);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        } else {"
+        "content": "        if (hasExportError()) {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            return new CommandResult(String.format(MESSAGE_SUCCESS, pathName));"
+        "content": "            throw new CommandException(String.format(MESSAGE_EXPORT_ERROR, exportError));"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "        } else {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "            return new CommandResult(String.format(MESSAGE_SUCCESS, pathName));"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    private boolean hasExportError() {"
+        "content": "    }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        return !(exportError.equals(\"\"));"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    @Subscribe"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void handleImportExportExceptionEvent(ImportExportExceptionEvent event) {"
+        "content": "            || (other instanceof ExportCommand // instanceof handles nulls"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        exportError \u003d event.toString();"
+        "content": "            \u0026\u0026 pathName.equals(((ExportCommand) other).pathName)"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "            \u0026\u0026 overwrite \u003d\u003d ((ExportCommand) other).overwrite); // state check"
       },
       {
         "lineNumber": 51,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    private boolean hasExportError() {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        return !(exportError.equals(\"\"));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    public void handleImportExportExceptionEvent(ImportExportExceptionEvent event) {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        exportError \u003d event.toString();"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 61,
         "author": {
           "gitId": "sijie123"
         },
@@ -36149,8 +36233,7 @@
       }
     ],
     "authorContributionMap": {
-      "ranaldmiao": 1,
-      "sijie123": 50
+      "sijie123": 61
     }
   },
   {
@@ -45061,21 +45144,21 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_FILENAME;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "import seedu.address.logic.commands.ExportCommand;"
+        "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_RESOLVER;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": "import static seedu.address.logic.parser.ParserUtil.parseFileName;"
       },
       {
         "lineNumber": 7,
@@ -45089,28 +45172,28 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "/**"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "sijie123"
         },
-        "content": " * Parses input arguments and creates a new ImportCommand object"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "sijie123"
         },
-        "content": " */"
+        "content": "import seedu.address.logic.commands.ExportCommand;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "public class ExportCommandParser implements Parser\u003cExportCommand\u003e {"
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 12,
@@ -45124,84 +45207,84 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    /**"
+        "content": "/**"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the ImportCommand and returns an"
+        "content": " * Parses input arguments and creates a new ImportCommand object"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * ImportCommand object for execution."
+        "content": " */"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     *"
+        "content": "public class ExportCommandParser implements Parser\u003cExportCommand\u003e {"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * @throws ParseException if the user input does not conform to the expected format"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public ExportCommand parse(String args) throws ParseException {"
+        "content": "     * Parses the given {@code String} of arguments in the context of the ImportCommand and returns an"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        String filename \u003d args.trim();"
+        "content": "     * ImportCommand object for execution."
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        if (filename.isEmpty()) {"
+        "content": "     *"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            throw new ParseException("
+        "content": "     * @throws ParseException if the user input does not conform to the expected format"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+        "content": "     */"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "    public ExportCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 25,
@@ -45215,24 +45298,143 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        return new ExportCommand(filename);"
+        "content": "        ArgumentMultimap argMultimap \u003d"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "            ArgumentTokenizer"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "                .tokenize(args, PREFIX_FILENAME, PREFIX_RESOLVER);"
       },
       {
         "lineNumber": 29,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        String filename \u003d argMultimap.getValue(PREFIX_FILENAME).orElseThrow(() -\u003e new ParseException("
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE)));"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        String checkedFilename \u003d parseFileName(filename);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        Optional\u003cString\u003e shouldOverwriteCmd \u003d argMultimap.getValue(PREFIX_RESOLVER);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        if (!shouldOverwriteCmd.isPresent()) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            return new ExportCommand(checkedFilename, false);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        if (shouldOverwriteCmd.get().equals(\"overwrite\")) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            return new ExportCommand(checkedFilename, true);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            throw new ParseException("
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
         "author": {
           "gitId": "sijie123"
         },
@@ -45240,7 +45442,7 @@
       }
     ],
     "authorContributionMap": {
-      "sijie123": 29
+      "sijie123": 46
     }
   },
   {
@@ -52515,7 +52717,7 @@
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
         "content": "    /**"
       },
@@ -52529,7 +52731,7 @@
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
         "content": "     */"
       },
@@ -52704,7 +52906,7 @@
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "-"
+          "gitId": "ranaldmiao"
         },
         "content": "    /**"
       },
@@ -52816,7 +53018,7 @@
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "sidhant007"
+          "gitId": "-"
         },
         "content": "     */"
       },
@@ -53014,150 +53216,122 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    /*boolean importExportFailed();"
+        "content": "    /**"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "     * Exports current deadline manager to file."
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    String getLastError();*/"
+        "content": "     */"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    void exportTaskCollection(String filename, boolean shouldOverwrite);"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * Exports current deadline manager to file."
+        "content": "    /**"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     */"
+        "content": "     * Imports tasks from file to the current deadline manager."
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sijie123"
         },
-        "content": "    void exportTaskCollection(String filename);"
+        "content": "     */"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    void importTaskCollection(String filename, ImportConflictResolver mode);"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * Imports tasks from file to the current deadline manager."
+        "content": "    /**"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     */"
+        "content": "     * Handler for the return result from Storage, when import data has been read."
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    void importTaskCollection(String filename, ImportConflictResolver mode);"
+        "content": "     * @param event the import data event"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    /**"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * Handler for the return result from Storage, when import data has been read."
+        "content": "    void handleImportDataAvailableEvent(ImportDataAvailableEvent event);"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * @param event the import data event"
-      },
-      {
-        "lineNumber": 115,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 116,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "    @Subscribe"
-      },
-      {
-        "lineNumber": 117,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "    void handleImportDataAvailableEvent(ImportDataAvailableEvent event);"
-      },
-      {
-        "lineNumber": 118,
-        "author": {
-          "gitId": "sijie123"
-        },
         "content": ""
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
@@ -53165,10 +53339,10 @@
       }
     ],
     "authorContributionMap": {
-      "ranaldmiao": 31,
-      "sidhant007": 13,
-      "-": 51,
-      "sijie123": 24
+      "ranaldmiao": 33,
+      "sidhant007": 12,
+      "-": 49,
+      "sijie123": 21
     }
   },
   {
@@ -54416,9 +54590,9 @@
       {
         "lineNumber": 178,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sijie123"
         },
-        "content": "    public void exportTaskCollection(String filename) {"
+        "content": "    public void exportTaskCollection(String filename, boolean shouldOverwrite) {"
       },
       {
         "lineNumber": 179,
@@ -54453,7 +54627,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        raise(new ExportRequestEvent(exportCollection, filename));"
+        "content": "        raise(new ExportRequestEvent(exportCollection, filename, shouldOverwrite));"
       },
       {
         "lineNumber": 184,
@@ -54716,10 +54890,10 @@
       }
     ],
     "authorContributionMap": {
-      "ranaldmiao": 30,
+      "ranaldmiao": 29,
       "sidhant007": 38,
       "-": 101,
-      "sijie123": 51
+      "sijie123": 52
     }
   },
   {
@@ -65066,17 +65240,24 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    void exportTaskCollection(ReadOnlyTaskCollection taskCollection, Path filePath) throws IOException;"
+        "content": "    void exportTaskCollection(ReadOnlyTaskCollection taskCollection, Path filePath, boolean shouldOverwrite)"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "        throws IOException;"
       },
       {
         "lineNumber": 40,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
         "author": {
           "gitId": "sijie123"
         },
@@ -65084,7 +65265,7 @@
       }
     ],
     "authorContributionMap": {
-      "sijie123": 40
+      "sijie123": 41
     }
   },
   {
@@ -65573,7 +65754,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            + \" Please rename to avoid losing data.\";"
+        "content": "            + \" Please rename or force export with the r/overwrite flag.\";"
       },
       {
         "lineNumber": 22,
@@ -65853,19 +66034,19 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    void exportTaskCollection(ReadOnlyTaskCollection taskCollection, Path filePath) throws IOException;"
+        "content": "    void exportTaskCollection(ReadOnlyTaskCollection taskCollection, Path filePath, boolean shouldOverwrite)"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "        throws IOException;"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "-"
+          "gitId": "sijie123"
         },
         "content": ""
       },
@@ -65874,80 +66055,87 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "-"
         },
-        "content": "     * Saves the current version of the deadline manager to the hard disk. Creates the data file if it"
+        "content": "    /**"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "ranaldmiao"
         },
-        "content": "     * is missing. Raises {@link DataSavingExceptionEvent} if there was an error during saving."
+        "content": "     * Saves the current version of the deadline manager to the hard disk. Creates the data file if it"
       },
       {
         "lineNumber": 67,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "     * is missing. Raises {@link DataSavingExceptionEvent} if there was an error during saving."
+      },
+      {
+        "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 69,
         "author": {
           "gitId": "sijie123"
         },
         "content": "    void handleTaskCollectionChangedEvent(TaskCollectionChangedEvent abce);"
       },
       {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 70,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    void handleExportRequestEvent(ExportRequestEvent ere);"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    void handleExportRequestEvent(ExportRequestEvent ere);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    void handleImportRequestEvent(ImportRequestEvent ire);"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    void handleImportRequestEvent(ImportRequestEvent ire);"
       },
       {
         "lineNumber": 74,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
         "content": "}"
       },
       {
-        "lineNumber": 75,
+        "lineNumber": 76,
         "author": {
           "gitId": "sijie123"
         },
@@ -65957,7 +66145,7 @@
     "authorContributionMap": {
       "ranaldmiao": 3,
       "-": 33,
-      "sijie123": 39
+      "sijie123": 40
     }
   },
   {
@@ -66647,378 +66835,378 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void exportTaskCollection(ReadOnlyTaskCollection taskCollection, Path filePath) throws IOException {"
+        "content": "    public void exportTaskCollection(ReadOnlyTaskCollection taskCollection, Path filePath, boolean shouldOverwrite)"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        if (fileExists(filePath)) {"
+        "content": "        throws IOException {"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            throw new IOException(MESSAGE_WRITE_FILE_EXISTS_ERROR);"
+        "content": "        if (!shouldOverwrite \u0026\u0026 fileExists(filePath)) {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "            throw new IOException(MESSAGE_WRITE_FILE_EXISTS_ERROR);"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        TaskCollectionStorage importExportStorage \u003d new XmlTaskCollectionStorage(filePath);"
+        "content": "        }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        logger.fine(\"Attempting to export to file: \" + filePath);"
+        "content": "        TaskCollectionStorage importExportStorage \u003d new XmlTaskCollectionStorage(filePath);"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        importExportStorage.saveTaskCollection(taskCollection);"
+        "content": "        logger.fine(\"Attempting to export to file: \" + filePath);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "        importExportStorage.saveTaskCollection(taskCollection);"
       },
       {
         "lineNumber": 106,
         "author": {
-          "gitId": "-"
+          "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Subscribe"
+        "content": "    @Override"
       },
       {
         "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 110,
         "author": {
           "gitId": "sijie123"
         },
         "content": "    public void handleTaskCollectionChangedEvent(TaskCollectionChangedEvent event) {"
       },
       {
-        "lineNumber": 110,
+        "lineNumber": 111,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "        logger.info("
       },
       {
-        "lineNumber": 111,
+        "lineNumber": 112,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "            LogsCenter.getEventHandlingLogMessage(event, \"Local data changed, saving to file\"));"
       },
       {
-        "lineNumber": 112,
+        "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
         "content": "        try {"
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 114,
         "author": {
           "gitId": "sijie123"
         },
         "content": "            saveTaskCollection(event.data);"
       },
       {
-        "lineNumber": 114,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        } catch (IOException e) {"
-      },
-      {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "            raise(new DataSavingExceptionEvent(e));"
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            raise(new DataSavingExceptionEvent(e));"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "sijie123"
+          "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    @Subscribe"
+        "content": "    @Override"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void handleExportRequestEvent(ExportRequestEvent event) {"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event, \"Exporting file\"));"
+        "content": "    public void handleExportRequestEvent(ExportRequestEvent event) {"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        try {"
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event, \"Exporting file\"));"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            exportTaskCollection(event.data, getPathFromFileName(event.filename));"
+        "content": "        try {"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "            exportTaskCollection(event.data, getPathFromFileName(event.filename), event.overwrite);"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            raise(new ImportExportExceptionEvent(e));"
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "            raise(new ImportExportExceptionEvent(e));"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    @Subscribe"
+        "content": "    @Override"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void handleImportRequestEvent(ImportRequestEvent event) {"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event, \"Importing file\"));"
+        "content": "    public void handleImportRequestEvent(ImportRequestEvent event) {"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        try {"
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event, \"Importing file\"));"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            ReadOnlyTaskCollection data \u003d importTaskCollection(getPathFromFileName(event.filename)).get();"
+        "content": "        try {"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            raise(new ImportDataAvailableEvent(data));"
+        "content": "            ReadOnlyTaskCollection data \u003d importTaskCollection(getPathFromFileName(event.filename)).get();"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        } catch (IOException | DataConversionException e) {"
+        "content": "            raise(new ImportDataAvailableEvent(data));"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            raise(new ImportExportExceptionEvent(e));"
+        "content": "        } catch (IOException | DataConversionException e) {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "            raise(new ImportExportExceptionEvent(e));"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * Helper function to determine whether file exists."
+        "content": "    /**"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * @param filePath File to be inspected"
+        "content": "     * Helper function to determine whether file exists."
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     * @return true if file exists, false otherwise"
+        "content": "     * @param filePath File to be inspected"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "     */"
+        "content": "     * @return true if file exists, false otherwise"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    private static boolean fileExists(Path filePath) {"
+        "content": "     */"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        File file \u003d new File(filePath.toString());"
+        "content": "    private static boolean fileExists(Path filePath) {"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        return file.exists() \u0026\u0026 file.isFile();"
+        "content": "        File file \u003d new File(filePath.toString());"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "        return file.exists() \u0026\u0026 file.isFile();"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 152,
@@ -67032,31 +67220,38 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    private Path getPathFromFileName(String fileName) {"
+        "content": ""
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        return Paths.get(fileName);"
+        "content": "    private Path getPathFromFileName(String fileName) {"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "        return Paths.get(fileName);"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 157,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
@@ -67066,7 +67261,7 @@
     "authorContributionMap": {
       "ranaldmiao": 8,
       "-": 69,
-      "sijie123": 80
+      "sijie123": 81
     }
   },
   {
@@ -109125,7 +109320,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void execute_exportOnWorkingFile_exceptionThrown() {"
+        "content": "    public void execute_exportOnExistingFile_exceptionThrown() {"
       },
       {
         "lineNumber": 30,
@@ -109139,7 +109334,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        ExportCommand testCommand \u003d new ExportCommand(defaultFile);"
+        "content": "        ExportCommand testCommand \u003d new ExportCommand(defaultFile, false);"
       },
       {
         "lineNumber": 32,
@@ -109195,7 +109390,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        ExportCommand testCommand \u003d new ExportCommand(temporaryFilePath);"
+        "content": "        ExportCommand testCommand \u003d new ExportCommand(temporaryFilePath, false);"
       },
       {
         "lineNumber": 40,
@@ -109237,220 +109432,304 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    private class ModelStubWithExportAddressBook extends ModelStub {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        private String filename \u003d \"\";"
+        "content": "    public void execute_overwriteExportOnExistingFile_exceptionThrown() {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        private ExportCommand testCommand \u003d null;"
+        "content": "        ExportCommand testCommand \u003d new ExportCommand(defaultFile, true);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        public ModelStubWithExportAddressBook(String defaultFile) {"
+        "content": "        ModelStubWithExportAddressBook modelStub \u003d new ModelStubWithExportAddressBook(defaultFile, testCommand);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            filename \u003d defaultFile;"
+        "content": "        assertCommandSuccess(testCommand, modelStub, commandHistory,"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "            String.format(ExportCommand.MESSAGE_SUCCESS, defaultFile), modelStub);"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        public ModelStubWithExportAddressBook(String defaultFile, ExportCommand importCommand) {"
+        "content": "    }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            this(defaultFile);"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            testCommand \u003d importCommand;"
+        "content": "    private class ModelStubWithExportAddressBook extends ModelStub {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "        private String filename \u003d \"\";"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "        private ExportCommand testCommand \u003d null;"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        @Override"
+        "content": "        public ModelStubWithExportAddressBook(String defaultFile) {"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "sidhant007"
+          "gitId": "sijie123"
         },
-        "content": "        public TaskCollection getTaskCollection() {"
+        "content": "            filename \u003d defaultFile;"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            return new TaskCollection();"
+        "content": "        }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "        public ModelStubWithExportAddressBook(String defaultFile, ExportCommand importCommand) {"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "            this(defaultFile);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        @Override"
+        "content": "            testCommand \u003d importCommand;"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "sidhant007"
+          "gitId": "sijie123"
         },
-        "content": "        public ObservableList\u003cTask\u003e getFilteredTaskList() {"
+        "content": "        }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            return FXCollections.unmodifiableObservableList(new TaskCollection().getTaskList());"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "        @Override"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "sijie123"
+          "gitId": "sidhant007"
         },
-        "content": ""
+        "content": "        public TaskCollection getTaskCollection() {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        @Override"
+        "content": "            return new TaskCollection();"
       },
       {
         "lineNumber": 67,
-        "author": {
-          "gitId": "ranaldmiao"
-        },
-        "content": "        public void exportTaskCollection(String filename) {"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "            if (filename.equals(this.filename)) {"
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "                Exception fileExistException \u003d new IOException(Storage.MESSAGE_WRITE_FILE_EXISTS_ERROR);"
-      },
-      {
-        "lineNumber": 70,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "                testCommand.handleImportExportExceptionEvent(new ImportExportExceptionEvent(fileExistException));"
-      },
-      {
-        "lineNumber": 71,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "                return;"
-      },
-      {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "            //No error otherwise."
-      },
-      {
-        "lineNumber": 74,
         "author": {
           "gitId": "sijie123"
         },
         "content": "        }"
       },
       {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        @Override"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "sidhant007"
+        },
+        "content": "        public ObservableList\u003cTask\u003e getFilteredTaskList() {"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            return FXCollections.unmodifiableObservableList(new TaskCollection().getTaskList());"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        @Override"
+      },
+      {
         "lineNumber": 75,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        public void exportTaskCollection(String filename, boolean shouldOverwrite) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            if (shouldOverwrite) {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "                //No error."
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "                return;"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            if (filename.equals(this.filename)) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "                Exception fileExistException \u003d new IOException(Storage.MESSAGE_WRITE_FILE_EXISTS_ERROR);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "                testCommand.handleImportExportExceptionEvent(new ImportExportExceptionEvent(fileExistException));"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "                return;"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            //No error otherwise."
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 87,
         "author": {
           "gitId": "sijie123"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 76,
+        "lineNumber": 88,
         "author": {
           "gitId": "sijie123"
         },
@@ -109458,9 +109737,8 @@
       }
     ],
     "authorContributionMap": {
-      "ranaldmiao": 1,
       "sidhant007": 2,
-      "sijie123": 73
+      "sijie123": 86
     }
   },
   {
@@ -113362,9 +113640,9 @@
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sijie123"
         },
-        "content": "    public void exportTaskCollection(String filename) {"
+        "content": "    public void exportTaskCollection(String filename, boolean shouldOverwrite) {"
       },
       {
         "lineNumber": 91,
@@ -113466,9 +113744,9 @@
       }
     ],
     "authorContributionMap": {
-      "ranaldmiao": 6,
+      "ranaldmiao": 5,
       "sidhant007": 8,
-      "sijie123": 90
+      "sijie123": 91
     }
   },
   {
@@ -120156,6 +120434,574 @@
       "ranaldmiao": 38,
       "-": 131,
       "kc97ble": 61
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/parser/ExportCommandParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "import seedu.address.logic.commands.ExportCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": " * Test scope: Export command parser."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": " * Tests for valid and invalid filenames."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "public class ExportCommandParserTest {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    private ExportCommandParser parser \u003d new ExportCommandParser();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    public void parse_noFile_throwsParseException() {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \"\","
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    public void parse_invalidCommand_throwsParseException() {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" ab\","
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" r/all\","
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n\","
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/all r/\","
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" a*b\","
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    public void parse_invalidFileName_throwsParseException() {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/a/b\", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n//all\", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/b/\", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/a-b\", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/ \", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/文件\", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    public void parse_validFileName_returnsExportCommand() {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseSuccess(parser, \" n/ab\", new ExportCommand(\"ab\", false));"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseSuccess(parser, \" n/a_b\", new ExportCommand(\"a_b\", false));"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseSuccess(parser, \" n/veryverylongname\", new ExportCommand(\"veryverylongname\", false));"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseSuccess(parser, \" n/fullstop.txt\", new ExportCommand(\"fullstop.txt\", false));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseSuccess(parser, \" n/filename_xml.txt\", new ExportCommand(\"filename_xml.txt\", false));"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    public void parse_invalidFileNameParameters_throwsParseException() {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/ab c/what\", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/a*b r/all\", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/   r/all\", ParserUtil.MESSAGE_INVALID_FILENAME);"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/file r/override\","
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/file r/invalid\","
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseFailure(parser, \" n/wrongCommand r//all\","
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            String.format(MESSAGE_INVALID_COMMAND_FORMAT, ExportCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    public void parse_validFileNameParameters_returnsExportCommand() {"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseSuccess(parser, \" n/ab r/overwrite\","
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            new ExportCommand(\"ab\", true));"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseSuccess(parser, \" n/a_b\","
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            new ExportCommand(\"a_b\", false));"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertParseSuccess(parser, \" n/filename_xml.txt r/overwrite\","
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            new ExportCommand(\"filename_xml.txt\", true));"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "sijie123": 80
     }
   },
   {
@@ -133765,7 +134611,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void exportOnWorkingFile_exceptionThrown() throws IOException {"
+        "content": "    public void exportOnExistingFile_exceptionThrown() throws IOException {"
       },
       {
         "lineNumber": 92,
@@ -133800,7 +134646,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "                storageManager.exportTaskCollection(original, storageManager.getTaskCollectionFilePath()));"
+        "content": "                storageManager.exportTaskCollection(original, storageManager.getTaskCollectionFilePath(), false));"
       },
       {
         "lineNumber": 97,
@@ -133849,7 +134695,7 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            storageManager.exportTaskCollection(original, getTempFilePath(\"exportNewNonExistent\"));"
+        "content": "            storageManager.exportTaskCollection(original, getTempFilePath(\"exportNewNonExistent\"), false);"
       },
       {
         "lineNumber": 104,
@@ -133898,105 +134744,105 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void importNonExistingFile_exceptionThrown() {"
+        "content": "    public void overwriteExportOnExistingFile_success() throws IOException {"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        Assert.assertThrows(IOException.class, Storage.MESSAGE_READ_FILE_MISSING_ERROR, () -\u003e"
+        "content": "        // Exporting with file name equal to the working file should throw IllegalValueException."
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "                storageManager.importTaskCollection(getTempFilePath(\"nonExistent\")));"
+        "content": "        TaskCollection original \u003d getTypicalTaskCollections();"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    }"
+        "content": "        storageManager.saveTaskCollection(original);"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "sijie123"
         },
-        "content": ""
+        "content": "        try {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    @Test"
+        "content": "            storageManager.exportTaskCollection(original, storageManager.getTaskCollectionFilePath(), true);"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void importExistingFile_success() throws DataConversionException {"
+        "content": "        } catch (IOException ioe) {"
       },
       {
         "lineNumber": 117,
         "author": {
-          "gitId": "ranaldmiao"
+          "gitId": "sijie123"
         },
-        "content": "        TaskCollection original \u003d getTypicalTaskCollections();"
+        "content": "            throw new AssertionError(\"Export on non-existent file should not throw.\");"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        try {"
+        "content": "        }"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            storageManager.saveTaskCollection(original);"
+        "content": "    }"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            ReadOnlyTaskCollection read \u003d storageManager"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "                    .importTaskCollection(storageManager.getTaskCollectionFilePath()).get();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "    public void importNonExistingFile_exceptionThrown() {"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "            throw new AssertionError(\"Import on existent file should not throw.\");"
+        "content": "        Assert.assertThrows(IOException.class, Storage.MESSAGE_READ_FILE_MISSING_ERROR, () -\u003e"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        }"
+        "content": "                storageManager.importTaskCollection(getTempFilePath(\"nonExistent\")));"
       },
       {
         "lineNumber": 125,
@@ -134024,220 +134870,367 @@
         "author": {
           "gitId": "sijie123"
         },
-        "content": "    public void addressBookExportImport() throws Exception {"
+        "content": "    public void importExistingFile_success() throws DataConversionException {"
       },
       {
         "lineNumber": 129,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "        /*"
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "         * Note: This is an integration test that verifies the StorageManager is properly wired to the"
-      },
-      {
-        "lineNumber": 131,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "         * {@link XmlTaskCollectionStorage} class."
-      },
-      {
-        "lineNumber": 132,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "         * More extensive testing of importing exporting is done in {@link XmlTaskCollectionStorageTest} class."
-      },
-      {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "sijie123"
-        },
-        "content": "         */"
-      },
-      {
-        "lineNumber": 134,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "        TaskCollection original \u003d getTypicalTaskCollections();"
       },
       {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            storageManager.saveTaskCollection(original);"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            ReadOnlyTaskCollection read \u003d storageManager"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "                    .importTaskCollection(storageManager.getTaskCollectionFilePath()).get();"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
         "lineNumber": 135,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        storageManager.exportTaskCollection(original, getTempFilePath(\"dummyExport\"));"
+        "content": "            throw new AssertionError(\"Import on existent file should not throw.\");"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        ReadOnlyTaskCollection retrieved \u003d storageManager.importTaskCollection(getTempFilePath(\"dummyExport\"))"
+        "content": "        }"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "                                                         .get();"
+        "content": "    }"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "sijie123"
         },
-        "content": "        assertEquals(original, new TaskCollection(retrieved));"
+        "content": ""
       },
       {
         "lineNumber": 139,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "    public void addressBookExportImport() throws Exception {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        /*"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "         * Note: This is an integration test that verifies the StorageManager is properly wired to the"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "         * {@link XmlTaskCollectionStorage} class."
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "         * More extensive testing of importing exporting is done in {@link XmlTaskCollectionStorageTest} class."
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "         */"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "ranaldmiao"
+        },
+        "content": "        TaskCollection original \u003d getTypicalTaskCollections();"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        storageManager.exportTaskCollection(original, getTempFilePath(\"dummyExport\"), false);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        ReadOnlyTaskCollection retrieved \u003d storageManager.importTaskCollection(getTempFilePath(\"dummyExport\"))"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "                                                         .get();"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        assertEquals(original, new TaskCollection(retrieved));"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        Assert.assertThrows(IOException.class, Storage.MESSAGE_WRITE_FILE_EXISTS_ERROR, () -\u003e"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            storageManager.exportTaskCollection(original, getTempFilePath(\"dummyExport\"), false));"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            storageManager.exportTaskCollection(original, storageManager.getTaskCollectionFilePath(), true);"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        } catch (IOException ioe) {"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "            throw new AssertionError(\"Export on non-existent file should not throw.\");"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "sijie123"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 140,
+        "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 141,
+        "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 142,
+        "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 143,
+        "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
         "content": "     * A Stub class to throw an exception when the save method is called"
       },
       {
-        "lineNumber": 144,
+        "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 145,
+        "lineNumber": 166,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "    class XmlTaskCollectionStorageExceptionThrowingStub extends XmlTaskCollectionStorage {"
       },
       {
-        "lineNumber": 146,
+        "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 168,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "        public XmlTaskCollectionStorageExceptionThrowingStub(Path filePath) {"
       },
       {
-        "lineNumber": 148,
+        "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
         "content": "            super(filePath);"
       },
       {
-        "lineNumber": 149,
+        "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 150,
+        "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 151,
+        "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
         "content": "        @Override"
       },
       {
-        "lineNumber": 152,
+        "lineNumber": 173,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "        public void saveTaskCollection(ReadOnlyTaskCollection taskCollection, Path filePath)"
       },
       {
-        "lineNumber": 153,
+        "lineNumber": 174,
         "author": {
           "gitId": "ranaldmiao"
         },
         "content": "            throws IOException {"
       },
       {
-        "lineNumber": 154,
+        "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
         "content": "            throw new IOException(\"dummy exception\");"
       },
       {
-        "lineNumber": 155,
+        "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 156,
+        "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 157,
+        "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 158,
+        "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 159,
+        "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
@@ -134247,7 +135240,7 @@
     "authorContributionMap": {
       "ranaldmiao": 20,
       "-": 87,
-      "sijie123": 52
+      "sijie123": 73
     }
   },
   {

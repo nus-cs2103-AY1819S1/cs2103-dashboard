@@ -13489,7 +13489,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Adding a medicine: `add medicine`"
+        "content": "\u003d\u003d\u003d Assign a patient into the queue : `enqueuepatient`"
       },
       {
         "lineNumber": 212,
@@ -13503,14 +13503,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Adds a medicine to the medicine inventory +"
+        "content": "Assigns the patient based on the index number used in the displayed patient list. +"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `add medicine m/MEDICINE_NAME ty/MEDICINE_TYPE ed/EFFECTIVE_DOSAGE ld/LETHAL_DOSAGE q/QUANTITY [t/TAG]...`"
+        "content": "Format: `enqueuepatient INDEX`"
       },
       {
         "lineNumber": 215,
@@ -13524,56 +13524,56 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": "****"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "A medicine can have any number of tags (including 0)"
+        "content": "* Assigns the patient into the queue (first in first out manner)"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* The index refers to the index number shown in the displayed patient list."
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "Example:"
+        "content": "* The index *must be a positive integer* `1, 2, 3, ...`"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "* `add m/Paracetamol ty/tablet ed/2 ld/8 q/1000 t/take when necessary t/effects last 6 hours`"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The command is typically used in combination with other commands. +"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Finding a medicine by name: `find medicine`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 224,
@@ -13587,63 +13587,63 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Find a medicine in the medicine inventory +"
+        "content": "* `list` +"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `find medicine MEDICINE_NAME`"
+        "content": "`enqueuepatient 7` +"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Selects the 7th patient in the displayed list of patients resulting from the `list` command and assigns the patient into the queue."
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "* The search is case insensitive. e.g `ibuprofen` will match `Ibuprofen`"
+        "content": "* `find Logan` +"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "* Only the name is searched."
+        "content": "`enqueuepatient 1` +"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "* Only full words will be matched. e.g. `Ibu` will not match `Ibuprofen`"
+        "content": "Assigns the 1st patient in the displayed list of patients whose names contain *Logan* (case insensitive) resulting from the `find Logan` command and assigns the patient into the queue."
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "* Medicine with the matching name will be returned."
+        "content": ""
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "\u003d\u003d\u003d Show all patients in the queue : `showqueue`"
       },
       {
         "lineNumber": 234,
@@ -13657,28 +13657,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Example:"
+        "content": "Lists all patients in the queue."
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Format: `showqueue` +"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "* `find ibuprofen` +"
+        "content": ""
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "Returns `Ibuprofen`"
+        "content": "Example:"
       },
       {
         "lineNumber": 239,
@@ -13692,7 +13692,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Removing a medicine by name : `remove medicine`"
+        "content": "* `showqueue`"
       },
       {
         "lineNumber": 241,
@@ -13706,84 +13706,84 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Removes the specified medicine from the medicine inventory. +"
+        "content": "\u003d\u003d\u003d Removing a patient from the queue: `dequeuepatient INDEX`"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `remove medicine MEDICINE_NAME`"
+        "content": ""
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Pulls out the patient based on the index number used in the displayed patient list."
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "* The medicine name is case insensitive."
+        "content": "Examples:"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "* Medicine with the matching name will be removed."
+        "content": ""
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "* `dequeuepatient 9` +"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Removes the 9th patient in the ClinicIO record from the queue."
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "Example:"
+        "content": ""
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The command can also be used in combination with other commands such as `list` and `find`."
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "* `remove medicine Paracetemol` +"
+        "content": ""
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "Removes the Paracetemol entry from the medicine inventory."
+        "content": "Examples:"
       },
       {
         "lineNumber": 254,
@@ -13797,63 +13797,63 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Listing entered commands : `history`"
+        "content": "* `list` +"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`dequeuepatient 3` +"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "Lists all the commands that you have entered in reverse chronological order. +"
+        "content": "Removes the 3rd patient in the displayed list of patients from the queue."
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `history`"
+        "content": ""
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `find Cassandra` +"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "`dequeue 1` +"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "Selects the 1st Cassandra as displayed in the list resulting from the `find Cassandra` command and removes her from the queue."
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
-        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
+        "content": ""
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "\u003d\u003d\u003d Adding a medicine: `add medicine`"
       },
       {
         "lineNumber": 264,
@@ -13867,14 +13867,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::undoredo[]"
+        "content": "Adds a medicine to the medicine inventory +"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
+        "content": "Format: `add medicine m/MEDICINE_NAME ty/MEDICINE_TYPE ed/EFFECTIVE_DOSAGE ld/LETHAL_DOSAGE q/QUANTITY [t/TAG]...`"
       },
       {
         "lineNumber": 267,
@@ -13888,14 +13888,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Restores the clinic record to the state before the previous _undoable_ command was executed. +"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `undo`"
+        "content": "A medicine can have any number of tags (including 0)"
       },
       {
         "lineNumber": 270,
@@ -13909,105 +13909,105 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "Example:"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
-        "content": "Undoable commands: those commands that modify the clinic record\u0027s content (`add`, `delete`, `edit` and `clear`)."
+        "content": "* `add m/Paracetamol ty/tablet ed/2 ld/8 q/1000 t/take when necessary t/effects last 6 hours`"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Finding a medicine by name: `find medicine`"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": ""
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Find a medicine in the medicine inventory +"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "-"
         },
-        "content": "* `deletepatient 1` +"
+        "content": "Format: `find medicine MEDICINE_NAME`"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
-        "content": "`listpatient` +"
+        "content": ""
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `deletepatient 1` command) +"
+        "content": "****"
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* The search is case insensitive. e.g `ibuprofen` will match `Ibuprofen`"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
-        "content": "* `selectpatient 1` +"
+        "content": "* Only the name is searched."
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
-        "content": "`listpatient` +"
+        "content": "* Only full words will be matched. e.g. `Ibu` will not match `Ibuprofen`"
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` +"
+        "content": "* Medicine with the matching name will be returned."
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
-        "content": "The `undo` command fails as there are no undoable commands executed previously."
+        "content": "****"
       },
       {
         "lineNumber": 286,
@@ -14021,28 +14021,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* `deletepatient 1` +"
+        "content": "Example:"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
-        "content": "`clear` +"
+        "content": ""
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `clear` command) +"
+        "content": "* `find ibuprofen` +"
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `deletepatient 1` command) +"
+        "content": "Returns `Ibuprofen`"
       },
       {
         "lineNumber": 291,
@@ -14056,7 +14056,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
+        "content": "\u003d\u003d\u003d Removing a medicine by name : `remove medicine`"
       },
       {
         "lineNumber": 293,
@@ -14070,14 +14070,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Reverses the most recent `undo` command. +"
+        "content": "Removes the specified medicine from the medicine inventory. +"
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `redo`"
+        "content": "Format: `remove medicine MEDICINE_NAME`"
       },
       {
         "lineNumber": 296,
@@ -14091,63 +14091,63 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "****"
       },
       {
         "lineNumber": 298,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* The medicine name is case insensitive."
       },
       {
         "lineNumber": 299,
         "author": {
           "gitId": "-"
         },
-        "content": "* `deletepatient 1` +"
+        "content": "* Medicine with the matching name will be removed."
       },
       {
         "lineNumber": 300,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `deletepatient 1` command) +"
+        "content": "****"
       },
       {
         "lineNumber": 301,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `deletepatient 1` command) +"
+        "content": ""
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Example:"
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "-"
         },
-        "content": "* `deletepatient 1` +"
+        "content": ""
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` +"
+        "content": "* `remove medicine Paracetemol` +"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": "The `redo` command fails as there are no `undo` commands executed previously."
+        "content": "Removes the Paracetemol entry from the medicine inventory."
       },
       {
         "lineNumber": 306,
@@ -14161,413 +14161,413 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* `deletepatient 1` +"
+        "content": "\u003d\u003d\u003d Listing entered commands : `history`"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "`clear` +"
+        "content": ""
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `clear` command) +"
+        "content": "Lists all the commands that you have entered in reverse chronological order. +"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `deletepatient 1` command) +"
+        "content": "Format: `history`"
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `deletepatient 1` command) +"
+        "content": ""
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `clear` command) +"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::undoredo[]"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
       },
       {
         "lineNumber": 315,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Adding appointments: `addappt`"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 316,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 317,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Adds an appointment to the appointment schedule. +"
+        "content": "// tag::undoredo[]"
       },
       {
         "lineNumber": 318,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Format: `addappt d/DATE tm/TIME id/PATIENTID` [TODO: PATIENTID] +"
+        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
       },
       {
         "lineNumber": 319,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 320,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "Restores the clinic record to the state before the previous _undoable_ command was executed. +"
       },
       {
         "lineNumber": 321,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Date is in dd/mm/yyyy format and time is in military time. +"
+        "content": "Format: `undo`"
       },
       {
         "lineNumber": 322,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 323,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 324,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 325,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "* `addappt d/03042018 tm/1645 id/38920` +"
+        "content": "Undoable commands: those commands that modify the clinic record\u0027s content (`add`, `delete`, `edit` and `clear`)."
       },
       {
         "lineNumber": 326,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Adds appointment scheduled on 3 April 2018 at 4.45pm for patient 38920. +"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 327,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 328,
         "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": "* `addappt d/12122013 tm/1300 id/100` +"
-      },
-      {
-        "lineNumber": 329,
-        "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": "Adds appointment scheduled on 12 December 2013 at 1.00pm for patient 100. +"
-      },
-      {
-        "lineNumber": 330,
-        "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 331,
-        "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": "\u003d\u003d\u003d Listing Appointments by Day: `listapptday`"
-      },
-      {
-        "lineNumber": 332,
-        "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 333,
-        "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": "Shows a list of all the appointments for the specified day. +"
-      },
-      {
-        "lineNumber": 334,
-        "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": "Format: `listapptday d/DATE` +"
-      },
-      {
-        "lineNumber": 335,
-        "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 336,
-        "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": "Examples:"
       },
       {
-        "lineNumber": 337,
+        "lineNumber": 329,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 330,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `deletepatient 1` +"
+      },
+      {
+        "lineNumber": 331,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`listpatient` +"
+      },
+      {
+        "lineNumber": 332,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` (reverses the `deletepatient 1` command) +"
+      },
+      {
+        "lineNumber": 333,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 334,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `selectpatient 1` +"
+      },
+      {
+        "lineNumber": 335,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`listpatient` +"
+      },
+      {
+        "lineNumber": 336,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`undo` +"
+      },
+      {
+        "lineNumber": 337,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "The `undo` command fails as there are no undoable commands executed previously."
       },
       {
         "lineNumber": 338,
         "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": "* `listapptday d/02032017` +"
-      },
-      {
-        "lineNumber": 339,
-        "author": {
-          "gitId": "gingivitiss"
-        },
-        "content": "Lists all appointments on 2 March 2017. +"
-      },
-      {
-        "lineNumber": 340,
-        "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 339,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `deletepatient 1` +"
+      },
+      {
+        "lineNumber": 340,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`clear` +"
+      },
+      {
         "lineNumber": 341,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "* `listapptday d/01012000` +"
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 342,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Lists all appointments on 1 January 2000."
+        "content": "`undo` (reverses the `deletepatient 1` command) +"
       },
       {
         "lineNumber": 343,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 344,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Cancelling Appointments: `cancelappt`"
+        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
       },
       {
         "lineNumber": 345,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 346,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Cancels an appointment from the appointment schedule. +"
+        "content": "Reverses the most recent `undo` command. +"
       },
       {
         "lineNumber": 347,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Format: `cancelappt INDEX` +"
+        "content": "Format: `redo`"
       },
       {
         "lineNumber": 348,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 349,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "****"
+        "content": "Examples:"
       },
       {
         "lineNumber": 350,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "* Cancels the appointment with the specified `INDEX`."
+        "content": ""
       },
       {
         "lineNumber": 351,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "* The index refers to the index number shown in the displayed appointment list."
+        "content": "* `deletepatient 1` +"
       },
       {
         "lineNumber": 352,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "* The index *must be a positive integer* `1, 2, 3, ...`"
+        "content": "`undo` (reverses the `deletepatient 1` command) +"
       },
       {
         "lineNumber": 353,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "****"
+        "content": "`redo` (reapplies the `deletepatient 1` command) +"
       },
       {
         "lineNumber": 354,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 355,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "* `deletepatient 1` +"
       },
       {
         "lineNumber": 356,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "`redo` +"
       },
       {
         "lineNumber": 357,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "* `listapptday d/03042018` +"
+        "content": "The `redo` command fails as there are no `undo` commands executed previously."
       },
       {
         "lineNumber": 358,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "`cancelappt 1` +"
+        "content": ""
       },
       {
         "lineNumber": 359,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Cancels the 1st appointment in the list."
+        "content": "* `deletepatient 1` +"
       },
       {
         "lineNumber": 360,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "`clear` +"
       },
       {
         "lineNumber": 361,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "* `listapptday d/12122018` +"
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 362,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "`cancelappt 4` +"
+        "content": "`undo` (reverses the `deletepatient 1` command) +"
       },
       {
         "lineNumber": 363,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": "Cancels the 4th appointment in the list."
+        "content": "`redo` (reapplies the `deletepatient 1` command) +"
       },
       {
         "lineNumber": 364,
         "author": {
-          "gitId": "gingivitiss"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "`redo` (reapplies the `clear` command) +"
       },
       {
         "lineNumber": 365,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
+        "content": "// end::undoredo[]"
       },
       {
         "lineNumber": 366,
@@ -14579,350 +14579,350 @@
       {
         "lineNumber": 367,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "Clears all entries from the clinic record. +"
+        "content": "\u003d\u003d\u003d Adding appointments: `addappt`"
       },
       {
         "lineNumber": 368,
         "author": {
-          "gitId": "-"
-        },
-        "content": "Format: `clear`"
-      },
-      {
-        "lineNumber": 369,
-        "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": ""
       },
       {
+        "lineNumber": 369,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "Adds an appointment to the appointment schedule. +"
+      },
+      {
         "lineNumber": 370,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "\u003d\u003d\u003d Displaying patient statistics : `patientstats`"
+        "content": "Format: `addappt d/DATE tm/TIME id/PATIENTID` [TODO: PATIENTID] +"
       },
       {
         "lineNumber": 371,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": ""
       },
       {
         "lineNumber": 372,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "Displays the following information about patients:"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 373,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "****"
+        "content": "Date is in dd/mm/yyyy format and time is in military time. +"
       },
       {
         "lineNumber": 374,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "* A summary of the number of patients over various time periods."
+        "content": ""
       },
       {
         "lineNumber": 375,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "* The number of patients segmented by each day of the week."
+        "content": "Examples:"
       },
       {
         "lineNumber": 376,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "* The number of patients segmented by different time periods within a day."
+        "content": ""
       },
       {
         "lineNumber": 377,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "****"
+        "content": "* `addappt d/03042018 tm/1645 id/38920` +"
       },
       {
         "lineNumber": 378,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": ""
+        "content": "Adds appointment scheduled on 3 April 2018 at 4.45pm for patient 38920. +"
       },
       {
         "lineNumber": 379,
         "author": {
-          "gitId": "-"
-        },
-        "content": "Format: `patientstats`"
-      },
-      {
-        "lineNumber": 380,
-        "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": ""
       },
       {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "* `addappt d/12122013 tm/1300 id/100` +"
+      },
+      {
         "lineNumber": 381,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "\u003d\u003d\u003d Displaying appointment statistics : `appointmentstats`"
+        "content": "Adds appointment scheduled on 12 December 2013 at 1.00pm for patient 100. +"
       },
       {
         "lineNumber": 382,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": ""
       },
       {
         "lineNumber": 383,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "Displays the following information about appointments:"
+        "content": "\u003d\u003d\u003d Listing Appointments by Day: `listapptday`"
       },
       {
         "lineNumber": 384,
         "author": {
-          "gitId": "-"
-        },
-        "content": "****"
-      },
-      {
-        "lineNumber": 385,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* A summary of the number of scheduled appointments over various time periods."
-      },
-      {
-        "lineNumber": 386,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* The availability of appointment slots as compared to the number of scheduled appointments."
-      },
-      {
-        "lineNumber": 387,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* The proportion of appointments that are follow-ups, as opposed to walk-in."
-      },
-      {
-        "lineNumber": 388,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "****"
-      },
-      {
-        "lineNumber": 389,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "Format: `appointmentstats`"
-      },
-      {
-        "lineNumber": 390,
-        "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": ""
       },
       {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "Shows a list of all the appointments for the specified day. +"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "Format: `listapptday d/DATE` +"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "Examples:"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "* `listapptday d/02032017` +"
+      },
+      {
         "lineNumber": 391,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "\u003d\u003d\u003d Displaying doctor statistics : `doctorstats`"
+        "content": "Lists all appointments on 2 March 2017. +"
       },
       {
         "lineNumber": 392,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": ""
       },
       {
         "lineNumber": 393,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "Displays the following information about doctors:"
+        "content": "* `listapptday d/01012000` +"
       },
       {
         "lineNumber": 394,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "****"
+        "content": "Lists all appointments on 1 January 2000."
       },
       {
         "lineNumber": 395,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "* A summary of the average number of consultations per doctor over various time periods."
+        "content": ""
       },
       {
         "lineNumber": 396,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "* The number of patient preferences for each doctor."
+        "content": "\u003d\u003d\u003d Cancelling Appointments: `cancelappt`"
       },
       {
         "lineNumber": 397,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 398,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "Format: `doctorstats`"
+        "content": "Cancels an appointment from the appointment schedule. +"
       },
       {
         "lineNumber": 399,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": ""
+        "content": "Format: `cancelappt INDEX` +"
       },
       {
         "lineNumber": 400,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "\u003d\u003d\u003d Displaying medicine statistics : `medstats`"
+        "content": ""
       },
       {
         "lineNumber": 401,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 402,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "Displays the following information about medicines:"
+        "content": "* Cancels the appointment with the specified `INDEX`."
       },
       {
         "lineNumber": 403,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "****"
+        "content": "* The index refers to the index number shown in the displayed appointment list."
       },
       {
         "lineNumber": 404,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "* A summary of the quantity of medicines prescribed over various time periods."
+        "content": "* The index *must be a positive integer* `1, 2, 3, ...`"
       },
       {
         "lineNumber": 405,
         "author": {
-          "gitId": "-"
-        },
-        "content": "* The average spending on medicines per patient."
-      },
-      {
-        "lineNumber": 406,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "* A breakdown of medicines by their quantity issued."
-      },
-      {
-        "lineNumber": 407,
-        "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": "****"
       },
       {
+        "lineNumber": 406,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 407,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "Examples:"
+      },
+      {
         "lineNumber": 408,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "Format: `medstats`"
+        "content": ""
       },
       {
         "lineNumber": 409,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": ""
+        "content": "* `listapptday d/03042018` +"
       },
       {
         "lineNumber": 410,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "\u003d\u003d\u003d Exporting patient records : `export`"
+        "content": "`cancelappt 1` +"
       },
       {
         "lineNumber": 411,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": ""
+        "content": "Cancels the 1st appointment in the list."
       },
       {
         "lineNumber": 412,
         "author": {
-          "gitId": "-"
-        },
-        "content": "Exports patient data. +"
-      },
-      {
-        "lineNumber": 413,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "Format: `exportpatient`"
-      },
-      {
-        "lineNumber": 414,
-        "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": ""
       },
       {
+        "lineNumber": 413,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "* `listapptday d/12122018` +"
+      },
+      {
+        "lineNumber": 414,
+        "author": {
+          "gitId": "gingivitiss"
+        },
+        "content": "`cancelappt 4` +"
+      },
+      {
         "lineNumber": 415,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
-        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
+        "content": "Cancels the 4th appointment in the list."
       },
       {
         "lineNumber": 416,
         "author": {
-          "gitId": "-"
+          "gitId": "gingivitiss"
         },
         "content": ""
       },
@@ -14931,28 +14931,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Exits the program. +"
+        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
       },
       {
         "lineNumber": 418,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `exit`"
+        "content": ""
       },
       {
         "lineNumber": 419,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Clears all entries from the clinic record. +"
       },
       {
         "lineNumber": 420,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Saving the data"
+        "content": "Format: `clear`"
       },
       {
         "lineNumber": 421,
@@ -14966,84 +14966,84 @@
         "author": {
           "gitId": "-"
         },
-        "content": "ClinicIO data is saved in the hard disk automatically after any command that changes the data. +"
+        "content": "\u003d\u003d\u003d Displaying patient statistics : `patientstats`"
       },
       {
         "lineNumber": 423,
         "author": {
           "gitId": "-"
         },
-        "content": "There is no need to save manually."
+        "content": ""
       },
       {
         "lineNumber": 424,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Displays the following information about patients:"
       },
       {
         "lineNumber": 425,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Log out of the program : `logout` `[coming in v2.0]`"
+        "content": "****"
       },
       {
         "lineNumber": 426,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* A summary of the number of patients over various time periods."
       },
       {
         "lineNumber": 427,
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::loginUser[]"
+        "content": "* The number of patients segmented by each day of the week."
       },
       {
         "lineNumber": 428,
         "author": {
           "gitId": "-"
         },
-        "content": "[WARNING]"
+        "content": "* The number of patients segmented by different time periods within a day."
       },
       {
         "lineNumber": 429,
         "author": {
           "gitId": "-"
         },
-        "content": "You must login in order to use this feature. +"
+        "content": "****"
       },
       {
         "lineNumber": 430,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::loginUser[]"
+        "content": ""
       },
       {
         "lineNumber": 431,
         "author": {
-          "gitId": "jjlee050"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "Format: `patientstats`"
       },
       {
         "lineNumber": 432,
         "author": {
           "gitId": "-"
         },
-        "content": "Log out of the program. +"
+        "content": ""
       },
       {
         "lineNumber": 433,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `logout`"
+        "content": "\u003d\u003d\u003d Displaying appointment statistics : `appointmentstats`"
       },
       {
         "lineNumber": 434,
@@ -15057,49 +15057,49 @@
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::dataencryption[]"
+        "content": "Displays the following information about appointments:"
       },
       {
         "lineNumber": 436,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
+        "content": "****"
       },
       {
         "lineNumber": 437,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* A summary of the number of scheduled appointments over various time periods."
       },
       {
         "lineNumber": 438,
         "author": {
           "gitId": "-"
         },
-        "content": "_{explain how the user can enable/disable data encryption}_"
+        "content": "* The availability of appointment slots as compared to the number of scheduled appointments."
       },
       {
         "lineNumber": 439,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::dataencryption[]"
+        "content": "* The proportion of appointments that are follow-ups, as opposed to walk-in."
       },
       {
         "lineNumber": 440,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 441,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d FAQ"
+        "content": "Format: `appointmentstats`"
       },
       {
         "lineNumber": 442,
@@ -15113,7 +15113,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "This section is designed to help you answer any issues that are frequently asked by others."
+        "content": "\u003d\u003d\u003d Displaying doctor statistics : `doctorstats`"
       },
       {
         "lineNumber": 444,
@@ -15127,42 +15127,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Q*: How do I transfer my data to another Computer? +"
+        "content": "Displays the following information about doctors:"
       },
       {
         "lineNumber": 446,
         "author": {
           "gitId": "-"
         },
-        "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous ClinicIO folder."
+        "content": "****"
       },
       {
         "lineNumber": 447,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* A summary of the average number of consultations per doctor over various time periods."
       },
       {
         "lineNumber": 448,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Command Summary"
+        "content": "* The number of patient preferences for each doctor."
       },
       {
         "lineNumber": 449,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 450,
         "author": {
           "gitId": "-"
         },
-        "content": "This section is designed to provide a comprehensive list of commands for you."
+        "content": "Format: `doctorstats`"
       },
       {
         "lineNumber": 451,
@@ -15176,7 +15176,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d General commands"
+        "content": "\u003d\u003d\u003d Displaying medicine statistics : `medstats`"
       },
       {
         "lineNumber": 453,
@@ -15190,49 +15190,49 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* *Clear* : `clear`"
+        "content": "Displays the following information about medicines:"
       },
       {
         "lineNumber": 455,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Help* : `help`"
+        "content": "****"
       },
       {
         "lineNumber": 456,
         "author": {
           "gitId": "-"
         },
-        "content": "* *History* : `history`"
+        "content": "* A summary of the quantity of medicines prescribed over various time periods."
       },
       {
         "lineNumber": 457,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Redo* : `redo`"
+        "content": "* The average spending on medicines per patient."
       },
       {
         "lineNumber": 458,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Undo* : `undo`"
+        "content": "* A breakdown of medicines by their quantity issued."
       },
       {
         "lineNumber": 459,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 460,
         "author": {
-          "gitId": "jjlee050"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d User Authentication Commands"
+        "content": "Format: `medstats`"
       },
       {
         "lineNumber": 461,
@@ -15246,259 +15246,259 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* *Login* : `login r/ROLE n/NAME pass/PASSWORD` +"
+        "content": "\u003d\u003d\u003d Exporting patient records : `export`"
       },
       {
         "lineNumber": 463,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `login r/doctor n/Adam Bell pass/-------`"
+        "content": ""
       },
       {
         "lineNumber": 464,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Logout* : `logout`"
+        "content": "Exports patient data. +"
       },
       {
         "lineNumber": 465,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Format: `exportpatient`"
       },
       {
         "lineNumber": 466,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Patient Management Commands"
+        "content": ""
       },
       {
         "lineNumber": 467,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
       },
       {
         "lineNumber": 468,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Add patient* `addpatient n/NAME ic/NRIC p/PHONE_NUMBER e/EMAIL a/ADDRESS [medProb/MEDICAL_PROBLEMS]... [medList/MEDICATIONS]... [allergies/ALLERGIES]... [preferredDoc/PREFERRED_DOC]` +"
+        "content": ""
       },
       {
         "lineNumber": 469,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `addpatient n/John Doe ic/S1234567D p/98765432 e/johnd@example.com a/John\u0027s Lane, block 123, #01-01 allergies/Dairy Products`"
+        "content": "Exits the program. +"
       },
       {
         "lineNumber": 470,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Delete patient* : `deletepatient INDEX` +"
+        "content": "Format: `exit`"
       },
       {
         "lineNumber": 471,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `deletepatient 3`"
+        "content": ""
       },
       {
         "lineNumber": 472,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Edit patient* : `editpatient INDEX [n/NAME] [ic/NRIC] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [medProb/MEDICAL_PROBLEMS]... [medList/MEDICATIONS]... [allergies/ALLERGIES]... [preferredDoc/PREFERRED_DOC]` +"
+        "content": "\u003d\u003d\u003d Saving the data"
       },
       {
         "lineNumber": 473,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `editpatient 2 n/James Lee e/jameslee@example.com`"
+        "content": ""
       },
       {
         "lineNumber": 474,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Find patient* : `findpatient KEYWORD [MORE_KEYWORDS]` +"
+        "content": "ClinicIO data is saved in the hard disk automatically after any command that changes the data. +"
       },
       {
         "lineNumber": 475,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `findpatient James Jake`"
+        "content": "There is no need to save manually."
       },
       {
         "lineNumber": 476,
         "author": {
           "gitId": "-"
         },
-        "content": "* *List all patients* : `listpatient`"
+        "content": ""
       },
       {
         "lineNumber": 477,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Select patient* : `selectpatient INDEX` +"
+        "content": "\u003d\u003d\u003d Log out of the program : `logout` `[coming in v2.0]`"
       },
       {
         "lineNumber": 478,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g.`selectpatient 2`"
+        "content": ""
       },
       {
         "lineNumber": 479,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "// tag::loginUser[]"
       },
       {
         "lineNumber": 480,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Queue Commands"
+        "content": "[WARNING]"
       },
       {
         "lineNumber": 481,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "You must login in order to use this feature. +"
       },
       {
         "lineNumber": 482,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Queue* : `queue QINDEX` +"
+        "content": "// end::loginUser[]"
       },
       {
         "lineNumber": 483,
         "author": {
-          "gitId": "-"
+          "gitId": "jjlee050"
         },
-        "content": "e.g. `queue 2`"
+        "content": ""
       },
       {
         "lineNumber": 484,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Queues* : `queues`"
+        "content": "Log out of the program. +"
       },
       {
         "lineNumber": 485,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Enqueue* : `enqueue INDEX QINDEX` +"
+        "content": "Format: `logout`"
       },
       {
         "lineNumber": 486,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `enqueue 3 1`"
+        "content": ""
       },
       {
         "lineNumber": 487,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Dequeue* : `dequeue QINDEX` +"
+        "content": "// tag::dataencryption[]"
       },
       {
         "lineNumber": 488,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `dequeue 4`"
+        "content": "\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
       },
       {
         "lineNumber": 489,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Select* : `select INDEX` +"
+        "content": ""
       },
       {
         "lineNumber": 490,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `select 2`"
+        "content": "_{explain how the user can enable/disable data encryption}_"
       },
       {
         "lineNumber": 491,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "// end::dataencryption[]"
       },
       {
         "lineNumber": 492,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Data Commands"
+        "content": ""
       },
       {
         "lineNumber": 493,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d FAQ"
       },
       {
         "lineNumber": 494,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Patient Statistics* : `patientstats`"
+        "content": ""
       },
       {
         "lineNumber": 495,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Appointment Statistics* : `apptstats`"
+        "content": "This section is designed to help you answer any issues that are frequently asked by others."
       },
       {
         "lineNumber": 496,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Doctor Statistics* : `doctorstats`"
+        "content": ""
       },
       {
         "lineNumber": 497,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Medicine Statistics* : `medstats`"
+        "content": "*Q*: How do I transfer my data to another Computer? +"
       },
       {
         "lineNumber": 498,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Export Patient Records* : `exportpatient`"
+        "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous ClinicIO folder."
       },
       {
         "lineNumber": 499,
@@ -15512,77 +15512,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Medicine inventory Commands"
+        "content": "\u003d\u003d Command Summary"
       },
       {
         "lineNumber": 501,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Add Medicine* : `addmedicine m/MEDICINE_NAME ty/MEDICINE_TYPE ed/EFFECTIVE_DOSAGE ld/LETHAL_DOSAGE q/QUANTITY [t/TAG]...` +"
+        "content": ""
       },
       {
         "lineNumber": 502,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `addmedicine m/Paracetamol ty/tablet ed/2 ld/8 q/1000 t/take when necessary`"
+        "content": "This section is designed to provide a comprehensive list of commands for you."
       },
       {
         "lineNumber": 503,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Delete Medicine* : `deletemedicine MEDICINE_NAME` +"
+        "content": ""
       },
       {
         "lineNumber": 504,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `deletemedicine Paracetamol`"
+        "content": "\u003d\u003d\u003d General commands"
       },
       {
         "lineNumber": 505,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Find Medicine* : `findmedicine MEDICINE_NAME` +"
+        "content": ""
       },
       {
         "lineNumber": 506,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `findmedicine Paracetamol`"
+        "content": "* *Clear* : `clear`"
       },
       {
         "lineNumber": 507,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Increase Medicine Quantity* : `increasemedicine m/MEDICINE_NAME q/QUANTITY` +"
+        "content": "* *Help* : `help`"
       },
       {
         "lineNumber": 508,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `increasemedicine m/Paracetamol q/500`"
+        "content": "* *History* : `history`"
       },
       {
         "lineNumber": 509,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Decrease Medicine Quantity* : `decreasemedicine m/MEDICINE_NAME q/QUANTITY` +"
+        "content": "* *Redo* : `redo`"
       },
       {
         "lineNumber": 510,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `decreasemedicine m/Paracetamol q/20`"
+        "content": "* *Undo* : `undo`"
       },
       {
         "lineNumber": 511,
@@ -15594,47 +15594,390 @@
       {
         "lineNumber": 512,
         "author": {
+          "gitId": "jjlee050"
+        },
+        "content": "\u003d\u003d\u003d User Authentication Commands"
+      },
+      {
+        "lineNumber": 513,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 514,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Login* : `login r/ROLE n/NAME pass/PASSWORD` +"
+      },
+      {
+        "lineNumber": 515,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `login r/doctor n/Adam Bell pass/-------`"
+      },
+      {
+        "lineNumber": 516,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Logout* : `logout`"
+      },
+      {
+        "lineNumber": 517,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 518,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Patient Management Commands"
+      },
+      {
+        "lineNumber": 519,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 520,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Add patient* `addpatient n/NAME ic/NRIC p/PHONE_NUMBER e/EMAIL a/ADDRESS [medProb/MEDICAL_PROBLEMS]... [medList/MEDICATIONS]... [allergies/ALLERGIES]... [preferredDoc/PREFERRED_DOC]` +"
+      },
+      {
+        "lineNumber": 521,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `addpatient n/John Doe ic/S1234567D p/98765432 e/johnd@example.com a/John\u0027s Lane, block 123, #01-01 allergies/Dairy Products`"
+      },
+      {
+        "lineNumber": 522,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Delete patient* : `deletepatient INDEX` +"
+      },
+      {
+        "lineNumber": 523,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `deletepatient 3`"
+      },
+      {
+        "lineNumber": 524,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Edit patient* : `editpatient INDEX [n/NAME] [ic/NRIC] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [medProb/MEDICAL_PROBLEMS]... [medList/MEDICATIONS]... [allergies/ALLERGIES]... [preferredDoc/PREFERRED_DOC]` +"
+      },
+      {
+        "lineNumber": 525,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `editpatient 2 n/James Lee e/jameslee@example.com`"
+      },
+      {
+        "lineNumber": 526,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Find patient* : `findpatient KEYWORD [MORE_KEYWORDS]` +"
+      },
+      {
+        "lineNumber": 527,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `findpatient James Jake`"
+      },
+      {
+        "lineNumber": 528,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *List all patients* : `listpatient`"
+      },
+      {
+        "lineNumber": 529,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Select patient* : `selectpatient INDEX` +"
+      },
+      {
+        "lineNumber": 530,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g.`selectpatient 2`"
+      },
+      {
+        "lineNumber": 531,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 532,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Queue Commands"
+      },
+      {
+        "lineNumber": 533,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 534,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Show patients in the queue* : `queue` +"
+      },
+      {
+        "lineNumber": 535,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `queue`"
+      },
+      {
+        "lineNumber": 536,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Enqueue a patient* : `enqueuepatient INDEX` +"
+      },
+      {
+        "lineNumber": 537,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `enqueuepatient 3`"
+      },
+      {
+        "lineNumber": 538,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Remove a patient from the queue* : `dequeuepatient INDEX` +"
+      },
+      {
+        "lineNumber": 539,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `dequeuepatient 4`"
+      },
+      {
+        "lineNumber": 540,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 541,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Data Commands"
+      },
+      {
+        "lineNumber": 542,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 543,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Patient Statistics* : `patientstats`"
+      },
+      {
+        "lineNumber": 544,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Appointment Statistics* : `apptstats`"
+      },
+      {
+        "lineNumber": 545,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Doctor Statistics* : `doctorstats`"
+      },
+      {
+        "lineNumber": 546,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Medicine Statistics* : `medstats`"
+      },
+      {
+        "lineNumber": 547,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Export Patient Records* : `exportpatient`"
+      },
+      {
+        "lineNumber": 548,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 549,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d\u003d Medicine inventory Commands"
+      },
+      {
+        "lineNumber": 550,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Add Medicine* : `addmedicine m/MEDICINE_NAME ty/MEDICINE_TYPE ed/EFFECTIVE_DOSAGE ld/LETHAL_DOSAGE q/QUANTITY [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 551,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `addmedicine m/Paracetamol ty/tablet ed/2 ld/8 q/1000 t/take when necessary`"
+      },
+      {
+        "lineNumber": 552,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Delete Medicine* : `deletemedicine MEDICINE_NAME` +"
+      },
+      {
+        "lineNumber": 553,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `deletemedicine Paracetamol`"
+      },
+      {
+        "lineNumber": 554,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Find Medicine* : `findmedicine MEDICINE_NAME` +"
+      },
+      {
+        "lineNumber": 555,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `findmedicine Paracetamol`"
+      },
+      {
+        "lineNumber": 556,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Increase Medicine Quantity* : `increasemedicine m/MEDICINE_NAME q/QUANTITY` +"
+      },
+      {
+        "lineNumber": 557,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `increasemedicine m/Paracetamol q/500`"
+      },
+      {
+        "lineNumber": 558,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Decrease Medicine Quantity* : `decreasemedicine m/MEDICINE_NAME q/QUANTITY` +"
+      },
+      {
+        "lineNumber": 559,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `decreasemedicine m/Paracetamol q/20`"
+      },
+      {
+        "lineNumber": 560,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 561,
+        "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d Appointment Commands"
       },
       {
-        "lineNumber": 513,
+        "lineNumber": 562,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": "* *Add Appointment* : `addappt [d/DATE] [tm/TIME] [id/PATIENTID]` +"
       },
       {
-        "lineNumber": 514,
+        "lineNumber": 563,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": "e.g. `addappt d/01012018 tm/1430 id/39201`"
       },
       {
-        "lineNumber": 515,
+        "lineNumber": 564,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": "* *List Appointment* : `listapptday [d/DATE]` +"
       },
       {
-        "lineNumber": 516,
+        "lineNumber": 565,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": "e.g. `listapptday d/12122012`"
       },
       {
-        "lineNumber": 517,
+        "lineNumber": 566,
         "author": {
           "gitId": "gingivitiss"
         },
         "content": "* *Cancel Appointment* : `cancelappt INDEX` +"
       },
       {
-        "lineNumber": 518,
+        "lineNumber": 567,
         "author": {
           "gitId": "gingivitiss"
         },
@@ -15644,7 +15987,7 @@
     "authorContributionMap": {
       "jjlee050": 12,
       "gingivitiss": 56,
-      "-": 450
+      "-": 499
     }
   },
   {

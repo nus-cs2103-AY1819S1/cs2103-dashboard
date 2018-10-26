@@ -834,9 +834,9 @@
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "mainClassName \u003d \u0027seedu.address.MainApp\u0027"
+        "content": "mainClassName \u003d \u0027ssp.scheduleplanner.MainApp\u0027"
       },
       {
         "lineNumber": 32,
@@ -1212,9 +1212,9 @@
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "    archiveName \u003d \u0027addressbook.jar\u0027"
+        "content": "    archiveName \u003d \u0027scheduleplanner.jar\u0027"
       },
       {
         "lineNumber": 86,
@@ -1737,9 +1737,9 @@
       {
         "lineNumber": 160,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "            test.include \u0027seedu/address/**\u0027"
+        "content": "            test.include \u0027ssp/scheduleplanner/**\u0027"
       },
       {
         "lineNumber": 161,
@@ -1772,9 +1772,9 @@
       {
         "lineNumber": 165,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "            test.include \u0027seedu/address/ui/**\u0027"
+        "content": "            test.include \u0027ssp/scheduleplanner/ui/**\u0027"
       },
       {
         "lineNumber": 166,
@@ -1800,9 +1800,9 @@
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "            test.exclude \u0027seedu/address/ui/**\u0027"
+        "content": "            test.exclude \u0027ssp/scheduleplanner/ui/**\u0027"
       },
       {
         "lineNumber": 170,
@@ -2345,8 +2345,8 @@
       }
     ],
     "authorContributionMap": {
-      "CrimsonAng": 2,
-      "-": 244
+      "CrimsonAng": 7,
+      "-": 239
     }
   },
   {
@@ -18877,366 +18877,366 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "import java.io.IOException;"
+        "content": "import java.io.File;"
       },
       {
         "lineNumber": 4,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.nio.file.Path;"
+        "content": "import java.io.IOException;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.util.Optional;"
+        "content": "import java.nio.file.Path;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.util.logging.Logger;"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import java.util.logging.Logger;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": "import com.google.common.eventbus.Subscribe;"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import com.google.common.eventbus.Subscribe;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.application.Application;"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.application.Platform;"
+        "content": "import javafx.application.Application;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.stage.Stage;"
+        "content": "import javafx.application.Platform;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.commons.core.Config;"
+        "content": "import javafx.stage.Stage;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.commons.core.EventsCenter;"
+        "content": "import ssp.scheduleplanner.commons.core.Config;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.commons.core.LogsCenter;"
+        "content": "import ssp.scheduleplanner.commons.core.EventsCenter;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.commons.core.Version;"
+        "content": "import ssp.scheduleplanner.commons.core.LogsCenter;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.commons.events.ui.ExitAppRequestEvent;"
+        "content": "import ssp.scheduleplanner.commons.core.Version;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.commons.exceptions.DataConversionException;"
+        "content": "import ssp.scheduleplanner.commons.events.ui.ExitAppRequestEvent;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.commons.util.ConfigUtil;"
+        "content": "import ssp.scheduleplanner.commons.exceptions.DataConversionException;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.commons.util.StringUtil;"
+        "content": "import ssp.scheduleplanner.commons.util.ConfigUtil;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.logic.Logic;"
+        "content": "import ssp.scheduleplanner.commons.util.StringUtil;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.logic.LogicManager;"
+        "content": "import ssp.scheduleplanner.logic.Logic;"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.logic.commands.FirstDayCommand;"
+        "content": "import ssp.scheduleplanner.logic.LogicManager;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "import ssp.scheduleplanner.logic.commands.exceptions.CommandException;"
+        "content": "import ssp.scheduleplanner.logic.commands.FirstDayCommand;"
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "import ssp.scheduleplanner.model.Model;"
+        "content": "import ssp.scheduleplanner.logic.commands.exceptions.CommandException;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.model.ModelManager;"
+        "content": "import ssp.scheduleplanner.model.Model;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.model.ReadOnlySchedulePlanner;"
+        "content": "import ssp.scheduleplanner.model.ModelManager;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.model.SchedulePlanner;"
+        "content": "import ssp.scheduleplanner.model.ReadOnlySchedulePlanner;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.model.UserPrefs;"
+        "content": "import ssp.scheduleplanner.model.SchedulePlanner;"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.model.util.SampleDataUtil;"
+        "content": "import ssp.scheduleplanner.model.UserPrefs;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.storage.JsonUserPrefsStorage;"
+        "content": "import ssp.scheduleplanner.model.util.SampleDataUtil;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.storage.SchedulePlannerStorage;"
+        "content": "import ssp.scheduleplanner.storage.JsonUserPrefsStorage;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.storage.Storage;"
+        "content": "import ssp.scheduleplanner.storage.SchedulePlannerStorage;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.storage.StorageManager;"
+        "content": "import ssp.scheduleplanner.storage.Storage;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.storage.UserPrefsStorage;"
+        "content": "import ssp.scheduleplanner.storage.StorageManager;"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.storage.XmlSchedulePlannerStorage;"
+        "content": "import ssp.scheduleplanner.storage.UserPrefsStorage;"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.ui.Ui;"
+        "content": "import ssp.scheduleplanner.storage.XmlSchedulePlannerStorage;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.ui.UiManager;"
+        "content": "import ssp.scheduleplanner.ui.Ui;"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import ssp.scheduleplanner.ui.UiManager;"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": " * The main entry point to the application."
+        "content": "/**"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * The main entry point to the application."
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "public class MainApp extends Application {"
+        "content": " */"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Version VERSION \u003d new Version(0, 6, 0, true);"
+        "content": "public class MainApp extends Application {"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "    public static final Version VERSION \u003d new Version(0, 7, 0, true);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Logger logger \u003d LogsCenter.getLogger(MainApp.class);"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final Logger logger \u003d LogsCenter.getLogger(MainApp.class);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected Ui ui;"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected Logic logic;"
+        "content": "    protected Ui ui;"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected Storage storage;"
+        "content": "    protected Logic logic;"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected Model model;"
+        "content": "    protected Storage storage;"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected Config config;"
+        "content": "    protected Model model;"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected UserPrefs userPrefs;"
+        "content": "    protected Config config;"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    protected UserPrefs userPrefs;"
       },
       {
         "lineNumber": 55,
@@ -19250,1256 +19250,1368 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void init() throws Exception {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void init() throws Exception {"
+      },
+      {
+        "lineNumber": 59,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "        logger.info(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d[ Initializing SchedulePlanner ]\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\");"
       },
       {
-        "lineNumber": 59,
+        "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
         "content": "        super.init();"
       },
       {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "        AppParameters appParameters \u003d AppParameters.parse(getParameters());"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        config \u003d initConfig(appParameters.getConfigPath());"
+        "content": "        AppParameters appParameters \u003d AppParameters.parse(getParameters());"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        config \u003d initConfig(appParameters.getConfigPath());"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        UserPrefsStorage userPrefsStorage \u003d new JsonUserPrefsStorage(config.getUserPrefsFilePath());"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        userPrefs \u003d initPrefs(userPrefsStorage);"
+        "content": "        UserPrefsStorage userPrefsStorage \u003d new JsonUserPrefsStorage(config.getUserPrefsFilePath());"
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "        SchedulePlannerStorage schedulePlannerStorage \u003d"
+        "content": "        userPrefs \u003d initPrefs(userPrefsStorage);"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                new XmlSchedulePlannerStorage(userPrefs.getSchedulePlannerFilePath());"
+        "content": "        SchedulePlannerStorage schedulePlannerStorage \u003d"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        storage \u003d new StorageManager(schedulePlannerStorage, userPrefsStorage);"
+        "content": "                new XmlSchedulePlannerStorage(userPrefs.getSchedulePlannerFilePath());"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "        storage \u003d new StorageManager(schedulePlannerStorage, userPrefsStorage);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "        initLogging(config);"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        initLogging(config);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        model \u003d initModelManager(storage, userPrefs);"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        model \u003d initModelManager(storage, userPrefs);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "        logic \u003d new LogicManager(model);"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        logic \u003d new LogicManager(model);"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "        ui \u003d new UiManager(logic, config, userPrefs);"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        ui \u003d new UiManager(logic, config, userPrefs);"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        initEventsCenter();"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        initEventsCenter();"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns a {@code ModelManager} with the data from {@code storage}\u0027s schedule planner and {@code userPrefs}. \u003cbr\u003e"
+        "content": "    /**"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "     * The data from the sample schedule planner will be used instead if {@code storage}\u0027s schedule planner is not"
+        "content": "     * Returns a {@code ModelManager} with the data from {@code storage}\u0027s schedule planner and {@code userPrefs}. \u003cbr\u003e"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "     * found, or an empty schedule planner will be used instead if errors occur when reading {@code storage}\u0027s"
+        "content": "     * The data from the sample schedule planner will be used instead if {@code storage}\u0027s schedule planner is not"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "     * schedule planner."
+        "content": "     * found, or an empty schedule planner will be used instead if errors occur when reading {@code storage}\u0027s"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * schedule planner."
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    private Model initModelManager(Storage storage, UserPrefs userPrefs) {"
+        "content": "     */"
       },
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "        Optional\u003cReadOnlySchedulePlanner\u003e schedulePlannerOptional;"
+        "content": "    private Model initModelManager(Storage storage, UserPrefs userPrefs) {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        ReadOnlySchedulePlanner initialData;"
+        "content": "        Optional\u003cReadOnlySchedulePlanner\u003e schedulePlannerOptional;"
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        try {"
+        "content": "        ReadOnlySchedulePlanner initialData;"
       },
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            schedulePlannerOptional \u003d storage.readSchedulePlanner();"
+        "content": "        try {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            if (!schedulePlannerOptional.isPresent()) {"
+        "content": "            schedulePlannerOptional \u003d storage.readSchedulePlanner();"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                logger.info(\"Data file not found. Will be starting with a sample SchedulePlanner\");"
+        "content": "            if (!schedulePlannerOptional.isPresent()) {"
       },
       {
         "lineNumber": 94,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "                logger.info(\"Data file not found. Will be starting with a sample SchedulePlanner\");"
+      },
+      {
+        "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
         "content": "            }"
       },
       {
-        "lineNumber": 95,
+        "lineNumber": 96,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "            initialData \u003d schedulePlannerOptional.orElseGet(SampleDataUtil::getSampleSchedulePlanner);"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
         "content": "        } catch (DataConversionException e) {"
-      },
-      {
-        "lineNumber": 97,
-        "author": {
-          "gitId": "CrimsonAng"
-        },
-        "content": "            logger.warning(\"Data file not in the correct format. Will be starting with an empty SchedulePlanner\");"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            initialData \u003d new SchedulePlanner();"
+        "content": "            logger.warning(\"Data file not in the correct format. Will be starting with an empty SchedulePlanner\");"
       },
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "            initialData \u003d new SchedulePlanner();"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            logger.warning(\"Problem while reading from the file. Will be starting with an empty SchedulePlanner\");"
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            initialData \u003d new SchedulePlanner();"
+        "content": "            logger.warning(\"Problem while reading from the file. Will be starting with an empty SchedulePlanner\");"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        }"
+        "content": "            initialData \u003d new SchedulePlanner();"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new ModelManager(initialData, userPrefs);"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new ModelManager(initialData, userPrefs);"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void initLogging(Config config) {"
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "        LogsCenter.init(config);"
+        "content": "    private void initLogging(Config config) {"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        LogsCenter.init(config);"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns a {@code Config} using the file at {@code configFilePath}. \u003cbr\u003e"
+        "content": "    /**"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "     * The default file path {@code Config#DEFAULT_CONFIG_FILE} will be used instead"
+        "content": "     * Returns a {@code Config} using the file at {@code configFilePath}. \u003cbr\u003e"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "     * if {@code configFilePath} is null."
+        "content": "     * The default file path {@code Config#DEFAULT_CONFIG_FILE} will be used instead"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * if {@code configFilePath} is null."
       },
       {
         "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 117,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "    protected Config initConfig(Path configFilePath) throws CommandException {"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
         "content": "        Config initializedConfig;"
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
         "content": "        Path configFilePathUsed;"
       },
       {
-        "lineNumber": 119,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "        configFilePathUsed \u003d Config.DEFAULT_CONFIG_FILE;"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        configFilePathUsed \u003d Config.DEFAULT_CONFIG_FILE;"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (configFilePath !\u003d null) {"
+        "content": ""
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "            logger.info(\"Custom Config file specified \" + configFilePath);"
+        "content": "        if (configFilePath !\u003d null) {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "            configFilePathUsed \u003d configFilePath;"
+        "content": "            logger.info(\"Custom Config file specified \" + configFilePath);"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            configFilePathUsed \u003d configFilePath;"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "        logger.info(\"Using config file : \" + configFilePathUsed);"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        logger.info(\"Using config file : \" + configFilePathUsed);"
       },
       {
         "lineNumber": 129,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "        //added to update based on date range"
+        "content": ""
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        try {"
+        "content": "        //Only when \u0027rangeofweek.xml\u0027 exist then the application check for possible week description"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            Config updateConfig \u003d new Config();"
+        "content": "        //solution below adapted from"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            FirstDayCommand fdc \u003d new FirstDayCommand();"
+        "content": "        //https://stackoverflow.com/questions/1816673/how-do-i-check-if-a-file-exists-in-java"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            String[][] rangeOfWeek \u003d new String[FirstDayCommand.WEEKS_IN_SEMESTER][3];"
+        "content": "        File checkFileExist \u003d new File(\"rangeofweek.xml\");"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            rangeOfWeek \u003d fdc.retrieveRangeOfWeeks(rangeOfWeek);"
+        "content": "        if (checkFileExist.exists()) {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "            try {"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            if (fdc.isWithinDateRange(rangeOfWeek[0][0], rangeOfWeek[16][1])) {"
+        "content": "                Config updateConfig \u003d new Config();"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                updateConfig.setAppTitle(\"Schedule Planner\" + \"  - \" + fdc.retrieveWeekDescription(rangeOfWeek));"
+        "content": "                FirstDayCommand fdc \u003d new FirstDayCommand();"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                ConfigUtil.saveConfig(updateConfig, configFilePathUsed);"
+        "content": "                String[][] rangeOfWeek \u003d new String[FirstDayCommand.WEEKS_IN_SEMESTER][3];"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            } else {"
+        "content": "                rangeOfWeek \u003d fdc.retrieveRangeOfWeeks(rangeOfWeek);"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                updateConfig.setAppTitle(\"Schedule Planner\");"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            }"
+        "content": "                if (fdc.isWithinDateRange(rangeOfWeek[0][0], rangeOfWeek[16][1])) {"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            ConfigUtil.saveConfig(updateConfig, configFilePathUsed);"
+        "content": "                    updateConfig.setAppTitle(\"Schedule Planner\" + \"  - \" + fdc.retrieveWeekDescription(rangeOfWeek));"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "                    ConfigUtil.saveConfig(updateConfig, configFilePathUsed);"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            logger.warning(\"Failed to update config file : \" + StringUtil.getDetails(e));"
+        "content": "                } else {"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        }"
+        "content": "                    updateConfig.setAppTitle(\"Schedule Planner\");"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        //end added"
+        "content": "                }"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "                ConfigUtil.saveConfig(updateConfig, configFilePathUsed);"
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        try {"
+        "content": "            } catch (IOException e) {"
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "            Optional\u003cConfig\u003e configOptional \u003d ConfigUtil.readConfig(configFilePathUsed);"
+        "content": "                logger.warning(\"Failed to update config file : \" + StringUtil.getDetails(e));"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "            initializedConfig \u003d configOptional.orElse(new Config());"
+        "content": "            }"
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        } catch (DataConversionException e) {"
+        "content": "        }"
       },
       {
         "lineNumber": 152,
         "author": {
-          "gitId": "-"
-        },
-        "content": "            logger.warning(\"Config file at \" + configFilePathUsed + \" is not in the correct format. \""
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                    + \"Using default config properties\");"
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            initializedConfig \u003d new Config();"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 156,
-        "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
         "content": ""
       },
       {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "        //When user launch the application for the first time or deleted the \u0027rangeofweek.xml\u0027"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "        // generate the file to allow user to use\u0027firstday\u0027 command"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "        if (!checkFileExist.exists()) {"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "            try {"
+      },
+      {
         "lineNumber": 157,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        //Update config file in case it was missing to begin with or there are new/unused fields"
+        "content": "                checkFileExist.createNewFile();"
       },
       {
         "lineNumber": 158,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        try {"
+        "content": "            } catch (java.io.IOException e) {"
       },
       {
         "lineNumber": 159,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "            ConfigUtil.saveConfig(initializedConfig, configFilePathUsed);"
+        "content": "                logger.warning(\"Filed to create rangeofweek.xml\");"
       },
       {
         "lineNumber": 160,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "            }"
       },
       {
         "lineNumber": 161,
         "author": {
-          "gitId": "-"
-        },
-        "content": "            logger.warning(\"Failed to save config file : \" + StringUtil.getDetails(e));"
-      },
-      {
-        "lineNumber": 162,
-        "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
         "content": "        }"
       },
       {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "        //end added"
+      },
+      {
         "lineNumber": 163,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        return initializedConfig;"
+        "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        try {"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            Optional\u003cConfig\u003e configOptional \u003d ConfigUtil.readConfig(configFilePathUsed);"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "            initializedConfig \u003d configOptional.orElse(new Config());"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns a {@code UserPrefs} using the file at {@code storage}\u0027s user prefs file path,"
+        "content": "        } catch (DataConversionException e) {"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "     * or a new {@code UserPrefs} with default configuration if errors occur when"
+        "content": "            logger.warning(\"Config file at \" + configFilePathUsed + \" is not in the correct format. \""
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "     * reading from the file."
+        "content": "                    + \"Using default config properties\");"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "            initializedConfig \u003d new Config();"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected UserPrefs initPrefs(UserPrefsStorage storage) {"
+        "content": "        }"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "        Path prefsFilePath \u003d storage.getUserPrefsFilePath();"
+        "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "        logger.info(\"Using prefs file : \" + prefsFilePath);"
+        "content": "        //Update config file in case it was missing to begin with or there are new/unused fields"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        try {"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "        UserPrefs initializedPrefs;"
+        "content": "            ConfigUtil.saveConfig(initializedConfig, configFilePathUsed);"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "            Optional\u003cUserPrefs\u003e prefsOptional \u003d storage.readUserPrefs();"
+        "content": "            logger.warning(\"Failed to save config file : \" + StringUtil.getDetails(e));"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "            initializedPrefs \u003d prefsOptional.orElse(new UserPrefs());"
+        "content": "        }"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (DataConversionException e) {"
+        "content": "        return initializedConfig;"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "            logger.warning(\"UserPrefs file at \" + prefsFilePath + \" is not in the correct format. \""
+        "content": "    }"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "                    + \"Using default user prefs\");"
+        "content": ""
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "            initializedPrefs \u003d new UserPrefs();"
+        "content": "    /**"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "     * Returns a {@code UserPrefs} using the file at {@code storage}\u0027s user prefs file path,"
       },
       {
         "lineNumber": 184,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            logger.warning(\"Problem while reading from the file. Will be starting with an empty SchedulePlanner\");"
+        "content": "     * or a new {@code UserPrefs} with default configuration if errors occur when"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "            initializedPrefs \u003d new UserPrefs();"
+        "content": "     * reading from the file."
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    protected UserPrefs initPrefs(UserPrefsStorage storage) {"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "        //Update prefs file in case it was missing to begin with or there are new/unused fields"
+        "content": "        Path prefsFilePath \u003d storage.getUserPrefsFilePath();"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": "        logger.info(\"Using prefs file : \" + prefsFilePath);"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "            storage.saveUserPrefs(initializedPrefs);"
+        "content": ""
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "        UserPrefs initializedPrefs;"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "            logger.warning(\"Failed to save config file : \" + StringUtil.getDetails(e));"
+        "content": "        try {"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            Optional\u003cUserPrefs\u003e prefsOptional \u003d storage.readUserPrefs();"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            initializedPrefs \u003d prefsOptional.orElse(new UserPrefs());"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "        return initializedPrefs;"
+        "content": "        } catch (DataConversionException e) {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            logger.warning(\"UserPrefs file at \" + prefsFilePath + \" is not in the correct format. \""
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                    + \"Using default user prefs\");"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void initEventsCenter() {"
+        "content": "            initializedPrefs \u003d new UserPrefs();"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "        EventsCenter.getInstance().registerHandler(this);"
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 200,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "    }"
+        "content": "            logger.warning(\"Problem while reading from the file. Will be starting with an empty SchedulePlanner\");"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            initializedPrefs \u003d new UserPrefs();"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "        }"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void start(Stage primaryStage) {"
+        "content": ""
       },
       {
         "lineNumber": 204,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "        logger.info(\"Starting SchedulePlanner \" + MainApp.VERSION);"
+        "content": "        //Update prefs file in case it was missing to begin with or there are new/unused fields"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "        ui.start(primaryStage);"
+        "content": "        try {"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            storage.saveUserPrefs(initializedPrefs);"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "            logger.warning(\"Failed to save config file : \" + StringUtil.getDetails(e));"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void stop() {"
+        "content": "        }"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "        logger.info(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d [ Stopping Schedule Planner ] \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\");"
+        "content": ""
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": "        ui.stop();"
+        "content": "        return initializedPrefs;"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": "    }"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "            storage.saveUserPrefs(userPrefs);"
+        "content": ""
       },
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            /* edit to update when user close app"
+        "content": "    private void initEventsCenter() {"
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            Config config \u003d new Config();"
+        "content": "        EventsCenter.getInstance().registerHandler(this);"
       },
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            config.setAppTitle(\"testing123\");"
+        "content": "    }"
       },
       {
         "lineNumber": 217,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            ConfigUtil.saveConfig(config, Config.DEFAULT_CONFIG_FILE);"
+        "content": ""
       },
       {
         "lineNumber": 218,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            */"
+        "content": "    @Override"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "    public void start(Stage primaryStage) {"
       },
       {
         "lineNumber": 220,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "            logger.severe(\"Failed to save preferences \" + StringUtil.getDetails(e));"
+        "content": "        logger.info(\"Starting SchedulePlanner \" + MainApp.VERSION);"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        ui.start(primaryStage);"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "        Platform.exit();"
+        "content": "    }"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "        System.exit(0);"
+        "content": ""
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void stop() {"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Subscribe"
+        "content": "        logger.info(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d [ Stopping Schedule Planner ] \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\");"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void handleExitAppRequestEvent(ExitAppRequestEvent event) {"
+        "content": "        ui.stop();"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": "        try {"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "        stop();"
+        "content": "            storage.saveUserPrefs(userPrefs);"
       },
       {
         "lineNumber": 230,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "            /* edit to update when user close app"
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "            Config config \u003d new Config();"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "            config.setAppTitle(\"testing123\");"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "            ConfigUtil.saveConfig(config, Config.DEFAULT_CONFIG_FILE);"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "            */"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.severe(\"Failed to save preferences \" + StringUtil.getDetails(e));"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Platform.exit();"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        System.exit(0);"
+      },
+      {
+        "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 231,
+        "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 232,
+        "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void main(String[] args) {"
+        "content": "    @Subscribe"
       },
       {
-        "lineNumber": 233,
+        "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "        launch(args);"
+        "content": "    public void handleExitAppRequestEvent(ExitAppRequestEvent event) {"
       },
       {
-        "lineNumber": 234,
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        stop();"
+      },
+      {
+        "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 235,
+        "lineNumber": 247,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 248,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 249,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        launch(args);"
+      },
+      {
+        "lineNumber": 250,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
@@ -20507,8 +20619,8 @@
       }
     ],
     "authorContributionMap": {
-      "CrimsonAng": 43,
-      "-": 192
+      "CrimsonAng": 60,
+      "-": 191
     }
   },
   {
@@ -21036,6 +21148,911 @@
     "authorContributionMap": {
       "CrimsonAng": 1,
       "-": 73
+    }
+  },
+  {
+    "path": "src/main/java/ssp/scheduleplanner/commons/core/LogsCenter.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package ssp.scheduleplanner.commons.core;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.logging.ConsoleHandler;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.logging.FileHandler;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.logging.Level;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.logging.Logger;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.logging.SimpleFormatter;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import ssp.scheduleplanner.commons.events.BaseEvent;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Configures and manages loggers and handlers, including their logging level"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Named {@link Logger}s can be obtained from this class\u003cbr\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * These loggers have been configured to output messages to the console and a {@code .log} file by default,"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " *   at the {@code INFO} level. A new {@code .log} file with a new numbering will be created after the log"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " *   file reaches 5MB big, up to a maximum of 5 files.\u003cbr\u003e"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class LogsCenter {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final int MAX_FILE_COUNT \u003d 5;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final int MAX_FILE_SIZE_IN_BYTES \u003d (int) (Math.pow(2, 20) * 5); // 5MB"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "    private static final String LOG_FILE \u003d \"scheduleplanner.log\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static Level currentLogLevel \u003d Level.INFO;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final Logger logger \u003d LogsCenter.getLogger(LogsCenter.class);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static FileHandler fileHandler;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static ConsoleHandler consoleHandler;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Initializes with a custom log level (specified in the {@code config} object)"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Loggers obtained *AFTER* this initialization will have their logging level changed\u003cbr\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Logging levels for existing loggers will only be updated if the logger with the same name"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * is requested again from the LogsCenter."
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void init(Config config) {"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        currentLogLevel \u003d config.getLogLevel();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(\"currentLogLevel: \" + currentLogLevel);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Creates a logger with the given name."
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static Logger getLogger(String name) {"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Logger logger \u003d Logger.getLogger(name);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.setUseParentHandlers(false);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        removeHandlers(logger);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        addConsoleHandler(logger);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        addFileHandler(logger);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Logger.getLogger(name);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Creates a Logger for the given class name."
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static \u003cT\u003e Logger getLogger(Class\u003cT\u003e clazz) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (clazz \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return Logger.getLogger(\"\");"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return getLogger(clazz.getSimpleName());"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Adds the {@code consoleHandler} to the {@code logger}. \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Creates the {@code consoleHandler} if it is null."
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static void addConsoleHandler(Logger logger) {"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (consoleHandler \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            consoleHandler \u003d createConsoleHandler();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.addHandler(consoleHandler);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Remove all the handlers from {@code logger}."
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static void removeHandlers(Logger logger) {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Arrays.stream(logger.getHandlers())"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .forEach(logger::removeHandler);"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Adds the {@code fileHandler} to the {@code logger}. \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Creates {@code fileHandler} if it is null."
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static void addFileHandler(Logger logger) {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (fileHandler \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                fileHandler \u003d createFileHandler();"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.addHandler(fileHandler);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.warning(\"Error adding file handler for logger.\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Creates a {@code FileHandler} for the log file."
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws IOException if there are problems opening the file."
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static FileHandler createFileHandler() throws IOException {"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        FileHandler fileHandler \u003d new FileHandler(LOG_FILE, MAX_FILE_SIZE_IN_BYTES, MAX_FILE_COUNT, true);"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        fileHandler.setFormatter(new SimpleFormatter());"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        fileHandler.setLevel(currentLogLevel);"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return fileHandler;"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static ConsoleHandler createConsoleHandler() {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ConsoleHandler consoleHandler \u003d new ConsoleHandler();"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        consoleHandler.setLevel(currentLogLevel);"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return consoleHandler;"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Decorates the given string to create a log message suitable for logging event handling methods."
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static String getEventHandlingLogMessage(BaseEvent e, String message) {"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return \"---[Event handled][\" + e + \"]\" + message;"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @see #getEventHandlingLogMessage(BaseEvent, String)"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static String getEventHandlingLogMessage(BaseEvent e) {"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return getEventHandlingLogMessage(e, \"\");"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "CrimsonAng": 1,
+      "-": 127
     }
   },
   {
@@ -31868,640 +32885,668 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.logic.commands.ListWeekCommand;"
+        "content": "import ssp.scheduleplanner.logic.commands.ListOverdueCommand;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.logic.commands.RedoCommand;"
+        "content": "import ssp.scheduleplanner.logic.commands.ListWeekCommand;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.logic.commands.SelectCommand;"
+        "content": "import ssp.scheduleplanner.logic.commands.RedoCommand;"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.logic.commands.UndoCommand;"
+        "content": "import ssp.scheduleplanner.logic.commands.SelectCommand;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "import ssp.scheduleplanner.logic.parser.exceptions.ParseException;"
+        "content": "import ssp.scheduleplanner.logic.commands.UndoCommand;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import ssp.scheduleplanner.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": " * Parses user input."
+        "content": "/**"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Parses user input."
       },
       {
         "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 32,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "public class SchedulePlannerParser {"
       },
       {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Used for initial separation of command word and args."
+        "content": "    /**"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Used for initial separation of command word and args."
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
+        "content": "     */"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses user input into command for execution."
+        "content": "    /**"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Parses user input into command for execution."
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param userInput full user input string"
+        "content": "     *"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return the command based on the user input"
+        "content": "     * @param userInput full user input string"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     * @return the command based on the user input"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Command parseCommand(String userInput) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
+        "content": "    public Command parseCommand(String userInput) throws ParseException {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!matcher.matches()) {"
+        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(String.format(Messages.MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+        "content": "        if (!matcher.matches()) {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(String.format(Messages.MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
+        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        switch (commandWord) {"
+        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        switch (commandWord) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "        case AddCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new AddCommandParser().parse(arguments);"
+        "content": "        case AddCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new AddCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        case EditCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new EditCommandParser().parse(arguments);"
+        "content": "        case EditCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new EditCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "        case SelectCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new SelectCommandParser().parse(arguments);"
+        "content": "        case SelectCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new SelectCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        case DeleteCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new DeleteCommandParser().parse(arguments);"
+        "content": "        case DeleteCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new DeleteCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "Woodnsuns"
+          "gitId": "-"
         },
-        "content": "        case ArchiveCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "Woodnsuns"
         },
-        "content": "            return new ArchiveCommandParser().parse(arguments);"
+        "content": "        case ArchiveCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "Woodnsuns"
         },
-        "content": "        case ClearCommand.COMMAND_WORD:"
+        "content": "            return new ArchiveCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ClearCommand();"
+        "content": "        case ClearCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ClearCommand();"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FindCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FindCommandParser().parse(arguments);"
+        "content": "        case FindCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FindCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "        case FirstDayCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            return new FirstDayCommandParser().parse(arguments);"
+        "content": "        case FirstDayCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "            return new FirstDayCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "thaddeuslzy"
+          "gitId": "CrimsonAng"
         },
-        "content": "        case FilterCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "thaddeuslzy"
         },
-        "content": "            return new FilterCommandParser().parse(arguments);"
+        "content": "        case FilterCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "thaddeuslzy"
         },
-        "content": ""
+        "content": "            return new FilterCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "-"
+          "gitId": "thaddeuslzy"
         },
-        "content": "        case ListCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ListCommand();"
+        "content": "        case ListCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ListCommand();"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "Woodnsuns"
+          "gitId": "-"
         },
-        "content": "        case ListArchivedCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Woodnsuns"
         },
-        "content": "            return new ListArchivedCommand();"
+        "content": "        case ListArchivedCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Woodnsuns"
         },
-        "content": ""
+        "content": "            return new ListArchivedCommand();"
       },
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "Woodnsuns"
         },
-        "content": "        case ListDayCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "            return new ListDayCommand();"
+        "content": "        case ListDayCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "            return new ListDayCommand();"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        case ListWeekCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": "            return new ListWeekCommand();"
+        "content": "        case ListOverdueCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ListOverdueCommand();"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HistoryCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "            return new HistoryCommand();"
+        "content": "        case ListWeekCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "            return new ListWeekCommand();"
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "        case ExitCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ExitCommand();"
+        "content": "        case HistoryCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HistoryCommand();"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HelpCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new HelpCommand();"
+        "content": "        case ExitCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ExitCommand();"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "        case UndoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new UndoCommand();"
+        "content": "        case HelpCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HelpCommand();"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "        case RedoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new RedoCommand();"
+        "content": "        case UndoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new UndoCommand();"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "        default:"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(Messages.MESSAGE_UNKNOWN_COMMAND);"
+        "content": "        case RedoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            return new RedoCommand();"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        default:"
       },
       {
         "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new ParseException(Messages.MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
@@ -32512,7 +33557,7 @@
       "CrimsonAng": 11,
       "Woodnsuns": 8,
       "thaddeuslzy": 4,
-      "-": 90
+      "-": 94
     }
   },
   {
@@ -38006,754 +39051,761 @@
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "CrimsonAng"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "CrimsonAng"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 14,
-        "author": {
           "gitId": "hotarumin"
         },
         "content": "    public static final String MESSAGE_DATE_CONSTRAINTS \u003d"
       },
       {
-        "lineNumber": 15,
+        "lineNumber": 13,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "            \"Date should only contain numbers, and it should be exactly 6 digits long\";"
       },
       {
-        "lineNumber": 16,
+        "lineNumber": 14,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    public static final String DATE_VALIDATION_REGEX \u003d \"\\\\d{6}\";"
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 15,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "    public final String value;"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 16,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    public final int day;"
       },
       {
-        "lineNumber": 19,
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public final int yymmdd;"
+      },
+      {
+        "lineNumber": 18,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    public final int month;"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 19,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    public final int year;"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 20,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    public final String displayDate;"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 21,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    public final String[] monthNames \u003d {"
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 22,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        \"Jan\", \"Feb\", \"Mar\", \"Apr\", \"May\", \"Jun\", \"Jul\", \"Aug\", \"Sep\", \"Oct\", \"Nov\", \"Dec\""
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 23,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    };"
       },
       {
-        "lineNumber": 25,
+        "lineNumber": 24,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": "    /**"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    /**"
+        "content": "     * Constructs a {@code Date}."
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "     * Constructs a {@code Date}."
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "CrimsonAng"
-        },
         "content": "     *"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 28,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "     * @param date A valid date."
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 29,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 30,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    public Date(String date) {"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 31,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        requireNonNull(date);"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": "        checkArgument(isValidDate(date), MESSAGE_DATE_CONSTRAINTS);"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 33,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        value \u003d date;"
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 34,
         "author": {
           "gitId": "hotarumin"
         },
         "content": ""
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 35,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        String dayString \u003d date.substring(0, 2);"
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 36,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        day \u003d Integer.parseInt(dayString);"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 37,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        String monthString \u003d date.substring(2, 4);"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 38,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        month \u003d Integer.parseInt(monthString);"
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 39,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        String yearString \u003d date.substring(4, 6);"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 40,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        year \u003d Integer.parseInt(yearString) + 2000;"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 41,
         "author": {
           "gitId": "hotarumin"
         },
         "content": ""
       },
       {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        yymmdd \u003d Integer.parseInt(yearString + monthString + dayString);"
+      },
+      {
         "lineNumber": 43,
         "author": {
-          "gitId": "hotarumin"
+          "gitId": "-"
         },
-        "content": "        displayDate \u003d dayString + \" \" + monthNames[month - 1] + \" \" + year;"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "    }"
+        "content": "        displayDate \u003d dayString + \" \" + monthNames[month - 1] + \" \" + year;"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "     * Returns true if a given string is a valid date."
+        "content": "    /**"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "     */"
+        "content": "     * Returns true if a given string is a valid date."
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "    public static boolean isValidDate(String test) {"
+        "content": "     */"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        if (!test.matches(DATE_VALIDATION_REGEX)) {"
+        "content": "    public static boolean isValidDate(String test) {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return false;"
+        "content": "        if (!test.matches(DATE_VALIDATION_REGEX)) {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        }"
+        "content": "            return false;"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        String dayString \u003d test.substring(0, 2);"
+        "content": "        }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        int day \u003d Integer.parseInt(dayString);"
+        "content": "        String dayString \u003d test.substring(0, 2);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        String monthString \u003d test.substring(2, 4);"
+        "content": "        int day \u003d Integer.parseInt(dayString);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        int month \u003d Integer.parseInt(monthString);"
+        "content": "        String monthString \u003d test.substring(2, 4);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        String yearString \u003d test.substring(4, 6);"
+        "content": "        int month \u003d Integer.parseInt(monthString);"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        int year \u003d Integer.parseInt(yearString) + 2000;"
+        "content": "        String yearString \u003d test.substring(4, 6);"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        if (month \u003e 12 || month \u003d\u003d 0) {"
+        "content": "        int year \u003d Integer.parseInt(yearString) + 2000;"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return false;"
+        "content": "        if (month \u003e 12 || month \u003d\u003d 0) {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        } else if (day \u003d\u003d 0) {"
+        "content": "            return false;"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return false;"
+        "content": "        } else if (day \u003d\u003d 0) {"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        } else if (isLargeMonth(month)) {"
+        "content": "            return false;"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return day \u003c\u003d 31;"
+        "content": "        } else if (isLargeMonth(month)) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        } else if (month \u003d\u003d 2) {"
+        "content": "            return day \u003c\u003d 31;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            if (isLeapYear(year)) {"
+        "content": "        } else if (month \u003d\u003d 2) {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "                return day \u003c\u003d 29;"
+        "content": "            if (isLeapYear(year)) {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            } else {"
+        "content": "                return day \u003c\u003d 29;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "                return day \u003c\u003d 28;"
+        "content": "            } else {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            }"
+        "content": "                return day \u003c\u003d 28;"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        } else {"
+        "content": "            }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return day \u003c\u003d 30;"
+        "content": "        } else {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        }"
+        "content": "            return day \u003c\u003d 30;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "     * Returns true if a given year is a leap year."
+        "content": "    /**"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "     * @param year A year"
+        "content": "     * Returns true if a given year is a leap year."
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "     */"
+        "content": "     * @param year A year"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "    private static boolean isLeapYear(int year) {"
+        "content": "     */"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        if (year % 4 !\u003d 0) {"
+        "content": "    private static boolean isLeapYear(int year) {"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return false;"
+        "content": "        if (year % 4 !\u003d 0) {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        } else if (year % 400 \u003d\u003d 0) {"
+        "content": "            return false;"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return true;"
+        "content": "        } else if (year % 400 \u003d\u003d 0) {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        } else if (year % 100 \u003d\u003d 0) {"
+        "content": "            return true;"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return false;"
+        "content": "        } else if (year % 100 \u003d\u003d 0) {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        } else {"
+        "content": "            return false;"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "            return true;"
+        "content": "        } else {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "        }"
+        "content": "            return true;"
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "CrimsonAng"
+          "gitId": "hotarumin"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 93,
         "author": {
-          "gitId": "hotarumin"
+          "gitId": "CrimsonAng"
         },
-        "content": "     * Returns true if a given month has 31 days."
+        "content": "    /**"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "hotarumin"
         },
-        "content": "     * @param month A month"
+        "content": "     * Returns true if a given month has 31 days."
       },
       {
         "lineNumber": 95,
+        "author": {
+          "gitId": "hotarumin"
+        },
+        "content": "     * @param month A month"
+      },
+      {
+        "lineNumber": 96,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 97,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "    private static boolean isLargeMonth(int month) {"
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 98,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "        return month \u003d\u003d 1 || month \u003d\u003d 3 || month \u003d\u003d 5"
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 99,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "                || month \u003d\u003d 7 || month \u003d\u003d 8"
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 100,
         "author": {
           "gitId": "hotarumin"
         },
         "content": "                || month \u003d\u003d 10 || month \u003d\u003d 12;"
       },
       {
-        "lineNumber": 100,
-        "author": {
-          "gitId": "CrimsonAng"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 101,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    public String toString() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        return value;"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    }"
+        "content": "        return value;"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                || (other instanceof Date // instanceof handles nulls"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                \u0026\u0026 value.equals(((Date) other).value)); // state check"
+        "content": "                || (other instanceof Date // instanceof handles nulls"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    }"
+        "content": "                \u0026\u0026 value.equals(((Date) other).value)); // state check"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    public int hashCode() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "        return value.hashCode();"
+        "content": "    public int hashCode() {"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "    }"
+        "content": "        return value.hashCode();"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 119,
+        "author": {
+          "gitId": "CrimsonAng"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
         "author": {
           "gitId": "CrimsonAng"
         },
@@ -38761,8 +39813,8 @@
       }
     ],
     "authorContributionMap": {
-      "CrimsonAng": 38,
-      "-": 4,
+      "CrimsonAng": 36,
+      "-": 7,
       "hotarumin": 77
     }
   },
@@ -43196,271 +44248,187 @@
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "hotarumin"
+          "gitId": "CrimsonAng"
         },
-        "content": "            new Task(new Name(\"Alex Yeoh\"), new Date(\"121107\"), new Priority(\"1\"),"
+        "content": "            new Task(new Name(\"Homework\"), new Date(\"111118\"), new Priority(\"3\"),"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                new Venue(\"Blk 30 Geylang Street 29, #06-40\"),"
+        "content": "                new Venue(\"Home\"),"
       },
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "                getTagSet(\"friends\")),"
+        "content": "                getTagSet(\"CS2100\")),"
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "hotarumin"
+          "gitId": "CrimsonAng"
         },
-        "content": "            new Task(new Name(\"Bernice Yu\"), new Date(\"141258\"), new Priority(\"1\"),"
+        "content": "            new Task(new Name(\"Assignment\"), new Date(\"121118\"), new Priority(\"3\"),"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "CrimsonAng"
         },
-        "content": "                new Venue(\"Blk 30 Lorong 3 Serangoon Gardens, #07-18\"),"
+        "content": "                new Venue(\"Home\"),"
       },
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "-"
+          "gitId": "CrimsonAng"
         },
-        "content": "                getTagSet(\"colleagues\", \"friends\")),"
+        "content": "                getTagSet(\"CS2101\"))"
       },
       {
         "lineNumber": 28,
-        "author": {
-          "gitId": "hotarumin"
-        },
-        "content": "            new Task(new Name(\"Charlotte Oliveiro\"), new Date(\"150983\"), new Priority(\"1\"),"
-      },
-      {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "CrimsonAng"
-        },
-        "content": "                new Venue(\"Blk 11 Ang Mo Kio Street 74, #11-04\"),"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                getTagSet(\"neighbours\")),"
-      },
-      {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "hotarumin"
-        },
-        "content": "            new Task(new Name(\"David Li\"), new Date(\"120782\"), new Priority(\"1\"),"
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "CrimsonAng"
-        },
-        "content": "                new Venue(\"Blk 436 Serangoon Gardens Street 26, #16-43\"),"
-      },
-      {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                getTagSet(\"family\")),"
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "hotarumin"
-        },
-        "content": "            new Task(new Name(\"Irfan Ibrahim\"), new Date(\"230721\"), new Priority(\"1\"),"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "CrimsonAng"
-        },
-        "content": "                new Venue(\"Blk 47 Tampines Street 20, #17-35\"),"
-      },
-      {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                getTagSet(\"classmates\")),"
-      },
-      {
-        "lineNumber": 37,
-        "author": {
-          "gitId": "hotarumin"
-        },
-        "content": "            new Task(new Name(\"Roy Balakrishnan\"), new Date(\"080717\"), new Priority(\"1\"),"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "CrimsonAng"
-        },
-        "content": "                new Venue(\"Blk 45 Aljunied Street 85, #11-31\"),"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                getTagSet(\"colleagues\"))"
-      },
-      {
-        "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
         "content": "        };"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 31,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "    public static ReadOnlySchedulePlanner getSampleSchedulePlanner() {"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 32,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "        SchedulePlanner sampleAb \u003d new SchedulePlanner();"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 33,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "        for (Task sampleTask : getSampleTasks()) {"
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 34,
         "author": {
           "gitId": "CrimsonAng"
         },
         "content": "            sampleAb.addTask(sampleTask);"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
         "content": "        return sampleAb;"
       },
       {
-        "lineNumber": 49,
+        "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 50,
+        "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 51,
+        "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 52,
+        "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
         "content": "     * Returns a tag set containing the list of strings given."
       },
       {
-        "lineNumber": 53,
+        "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 54,
+        "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
         "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
       },
       {
-        "lineNumber": 55,
+        "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
         "content": "        return Arrays.stream(strings)"
       },
       {
-        "lineNumber": 56,
+        "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
         "content": "                .map(Tag::new)"
       },
       {
-        "lineNumber": 57,
+        "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
         "content": "                .collect(Collectors.toSet());"
       },
       {
-        "lineNumber": 58,
+        "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 59,
+        "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 60,
+        "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
@@ -43469,8 +44437,7 @@
     ],
     "authorContributionMap": {
       "CrimsonAng": 13,
-      "-": 41,
-      "hotarumin": 6
+      "-": 35
     }
   },
   {
