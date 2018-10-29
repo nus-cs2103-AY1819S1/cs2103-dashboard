@@ -13795,7 +13795,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Deleting a person : `delete`"
+        "content": "\u003d\u003d\u003d Locating persons by email address: `find/p`"
       },
       {
         "lineNumber": 137,
@@ -13809,14 +13809,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Deletes the specified person from the address book. +"
+        "content": "Finds a person through his/her phone number. +"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `delete INDEX`"
+        "content": "Format: `find/p PHONE_NUMBER`"
       },
       {
         "lineNumber": 140,
@@ -13837,21 +13837,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* Deletes the person at the specified `INDEX`."
+        "content": "* Only the phone number is searched."
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "* The index refers to the index number shown in the displayed person list."
+        "content": "* Only full words will be matched. e.g. `123456` will not match `12345678`"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "* The index *must be a positive integer* 1, 2, 3, ..."
+        "content": "* Person matching the phone number will be returned."
       },
       {
         "lineNumber": 145,
@@ -13886,56 +13886,56 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* `list` +"
+        "content": "* `find/p 98765432` +"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "`delete 2` +"
+        "content": "Returns `John Doe` whose phone number is `98765432`"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "Deletes the 2nd person in the address book."
+        "content": ""
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "* `find Betsy` +"
+        "content": ""
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "`delete 1` +"
+        "content": "\u003d\u003d\u003d Deleting a person : `delete`"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "Deletes the 1st person in the results of the `find` command."
+        "content": ""
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Deletes the specified person from the address book. +"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Selecting a person : `select`"
+        "content": "Format: `delete INDEX`"
       },
       {
         "lineNumber": 157,
@@ -13949,245 +13949,245 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Selects the person identified by the index number used in the displayed person list. +"
+        "content": "****"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `select INDEX`"
+        "content": "* Deletes the person at the specified `INDEX`."
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* The index refers to the index number shown in the displayed person list."
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "* The index *must be a positive integer* 1, 2, 3, ..."
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "* Selects the person and loads the Google search page the person at the specified `INDEX`."
+        "content": "****"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "* The index refers to the index number shown in the displayed person list."
+        "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "* The index *must be a positive integer* `1, 2, 3, ...`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `list` +"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "`delete 2` +"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Deletes the 2nd person in the address book."
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "* `list` +"
+        "content": "* `find Betsy` +"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "`select 2` +"
+        "content": "`delete 1` +"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "Selects the 2nd person in the address book."
+        "content": "Deletes the 1st person in the results of the `find` command."
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "* `find Betsy` +"
+        "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "`select 1` +"
+        "content": "\u003d\u003d\u003d Selecting a person : `select`"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "Selects the 1st person in the results of the `find` command."
+        "content": ""
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Selects the person identified by the index number used in the displayed person list. +"
       },
       {
         "lineNumber": 176,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "Format: `select INDEX`"
       },
       {
         "lineNumber": 177,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 178,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 179,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "* Selects the person and loads the Google search page the person at the specified `INDEX`."
       },
       {
         "lineNumber": 180,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Making list by limit fee command: `filterByFee`"
+        "content": "* The index refers to the index number shown in the displayed person list."
       },
       {
         "lineNumber": 181,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "* The index *must be a positive integer* `1, 2, 3, ...`"
       },
       {
         "lineNumber": 182,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": "Making list of according to minimal limit fee +"
+        "content": "****"
       },
       {
         "lineNumber": 183,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": "Format: `filterByFee [minimal fee to be filtered]`"
+        "content": ""
       },
       {
         "lineNumber": 184,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 185,
         "author": {
-          "gitId": "CJuanvip"
-        },
-        "content": "****"
-      },
-      {
-        "lineNumber": 186,
-        "author": {
-          "gitId": "CJuanvip"
-        },
-        "content": "* filter result: list the person\u0027s name whose fee is not less than minimal fee."
-      },
-      {
-        "lineNumber": 187,
-        "author": {
-          "gitId": "CJuanvip"
-        },
-        "content": "****"
-      },
-      {
-        "lineNumber": 188,
-        "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `list` +"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`select 2` +"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Selects the 2nd person in the address book."
+      },
+      {
         "lineNumber": 189,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "* `find Betsy` +"
       },
       {
         "lineNumber": 190,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "`select 1` +"
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": "If no one is qualified then shows cannot find."
+        "content": "Selects the 1st person in the results of the `find` command."
       },
       {
         "lineNumber": 192,
         "author": {
-          "gitId": "CJuanvip"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 193,
@@ -14199,119 +14199,119 @@
       {
         "lineNumber": 194,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
         "content": ""
       },
       {
         "lineNumber": 195,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "\u003d\u003d\u003d Making list by limit fee command: `filterByEducation`"
+        "content": ""
       },
       {
         "lineNumber": 196,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
         "content": ""
       },
       {
         "lineNumber": 197,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "Making list of students who are in the given education +"
+        "content": "\u003d\u003d\u003d Making list by limit fee command: `filterByFee`"
       },
       {
         "lineNumber": 198,
         "author": {
-          "gitId": "-"
-        },
-        "content": "Format: `filterByEducation [education level]`"
-      },
-      {
-        "lineNumber": 199,
-        "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
         "content": ""
       },
       {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "CJuanvip"
+        },
+        "content": "Making list of according to minimal limit fee +"
+      },
+      {
         "lineNumber": 200,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "****"
+        "content": "Format: `filterByFee [minimal fee to be filtered]`"
       },
       {
         "lineNumber": 201,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "* filter result: list the person\u0027s name whose education level is the same as input."
+        "content": ""
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
         "content": "****"
       },
       {
         "lineNumber": 203,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": ""
+        "content": "* filter result: list the person\u0027s name whose fee is not less than minimal fee."
       },
       {
         "lineNumber": 204,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "[NOTE]"
+        "content": "****"
       },
       {
         "lineNumber": 205,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 206,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "If no one is qualified then shows cannot find."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 207,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
         "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 208,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": ""
+        "content": "If no one is qualified then shows cannot find."
       },
       {
         "lineNumber": 209,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
-        "content": "\u003d\u003d\u003d Making list by limit fee command: `filterByGrade`"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "-"
+          "gitId": "CJuanvip"
         },
         "content": ""
       },
@@ -14320,14 +14320,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Making list of of students whose grades between minimal limit grade and maximal limit grade +"
+        "content": ""
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `filterByGrade [minimal] [maximal]`"
+        "content": "\u003d\u003d\u003d Making list by limit fee command: `filterByEducation`"
       },
       {
         "lineNumber": 213,
@@ -14341,91 +14341,91 @@
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "Making list of students who are in the given education +"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "* filter result: list the person\u0027s name whose grade is between the given range."
+        "content": "Format: `filterByEducation [education level]`"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "* filter result: list the person\u0027s name whose education level is the same as input."
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "****"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "If no one is qualified then shows cannot find."
+        "content": ""
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Making list by limit fee command: `filterByTime`"
+        "content": "If no one is qualified then shows cannot find."
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "Show the student name who taking class ar the given time +"
+        "content": ""
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `filterByTime [given TimeSlot]`"
+        "content": "\u003d\u003d\u003d Making list by limit fee command: `filterByGrade`"
       },
       {
         "lineNumber": 227,
@@ -14439,77 +14439,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "Making list of of students whose grades between minimal limit grade and maximal limit grade +"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": "* filter result: list the person\u0027s name who takes class at given time."
+        "content": "Format: `filterByGrade [minimal] [maximal]`"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "* filter result: list the person\u0027s name whose grade is between the given range."
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "****"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "If no one is qualified then shows cannot find."
+        "content": ""
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "If no one is qualified then shows cannot find."
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Edit certain class time of certain student: `EditTime`"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 239,
@@ -14523,35 +14523,35 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Edit certain class time of certain student +"
+        "content": "\u003d\u003d\u003d Making list by limit fee command: `filterByTime`"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `EditTime [student name] [ole time] [new time]`"
+        "content": ""
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Show the student name who taking class ar the given time +"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "Format: `filterByTime [given TimeSlot]`"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "* filter result: list the person\u0027s name who takes class at given time."
+        "content": ""
       },
       {
         "lineNumber": 245,
@@ -14565,28 +14565,28 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* filter result: list the person\u0027s name who takes class at given time."
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "****"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "If no one is qualified then shows cannot find."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 250,
@@ -14600,14 +14600,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "If no one is qualified then shows cannot find."
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 253,
@@ -14628,7 +14628,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Listing entered commands : `history`"
+        "content": "\u003d\u003d\u003d Edit certain class time of certain student: `EditTime`"
       },
       {
         "lineNumber": 256,
@@ -14642,14 +14642,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Lists all the commands that you have entered in reverse chronological order. +"
+        "content": "Edit certain class time of certain student +"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `history`"
+        "content": "Format: `EditTime [student name] [ole time] [new time]`"
       },
       {
         "lineNumber": 259,
@@ -14663,147 +14663,147 @@
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "****"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "* filter result: list the person\u0027s name who takes class at given time."
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
-        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
+        "content": "****"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Analyzing grades commands `[coming in v2.0]`"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 266,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "If no one is qualified then shows cannot find."
       },
       {
         "lineNumber": 267,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "Analyze the grades of students +"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 268,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "Format: `grades ACTION [parameters]`"
+        "content": ""
       },
       {
         "lineNumber": 269,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 270,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 271,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "* grades sort: list the details of students sorting by grades."
+        "content": ""
       },
       {
         "lineNumber": 272,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "****"
+        "content": "\u003d\u003d\u003d Listing entered commands : `history`"
       },
       {
         "lineNumber": 273,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 274,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "Lists all the commands that you have entered in reverse chronological order. +"
       },
       {
         "lineNumber": 275,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "Format: `history`"
       },
       {
         "lineNumber": 276,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "Regard the mark of the student who doesn\u0027t have a grade as 0."
+        "content": ""
       },
       {
         "lineNumber": 277,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 278,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 281,
@@ -14817,117 +14817,117 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Analyzing grades commands `[coming in v2.0]`"
       },
       {
         "lineNumber": 283,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "hrxiong"
         },
         "content": ""
       },
       {
         "lineNumber": 284,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "\u003d\u003d\u003d Retrieving earnings `[coming in v2.0]`"
+        "content": "Analyze the grades of students +"
       },
       {
         "lineNumber": 285,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": ""
+        "content": "Format: `grades ACTION [parameters]`"
       },
       {
         "lineNumber": 286,
         "author": {
-          "gitId": "chenlu-chua"
-        },
-        "content": "Retrieve the total earnings within a range of date in the current year. +"
-      },
-      {
-        "lineNumber": 287,
-        "author": {
-          "gitId": "chenlu-chua"
-        },
-        "content": "Format: `from/DDMM to/DDMM`"
-      },
-      {
-        "lineNumber": 288,
-        "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
         "content": ""
       },
       {
+        "lineNumber": 287,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "****"
+      },
+      {
+        "lineNumber": 288,
+        "author": {
+          "gitId": "hrxiong"
+        },
+        "content": "* grades sort: list the details of students sorting by grades."
+      },
+      {
         "lineNumber": 289,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "[NOTE]"
+        "content": "****"
       },
       {
         "lineNumber": 290,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 291,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "hrxiong"
         },
-        "content": "DDMM is the format of date to be entered"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 292,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
         "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 293,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": ""
+        "content": "Regard the mark of the student who doesn\u0027t have a grade as 0."
       },
       {
         "lineNumber": 294,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "hrxiong"
         },
-        "content": "Example:"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 295,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "hrxiong"
         },
         "content": ""
       },
       {
         "lineNumber": 296,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "-"
         },
-        "content": "* `earnings from/0204 to/2504` +"
+        "content": ""
       },
       {
         "lineNumber": 297,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "-"
         },
-        "content": "This command returns the total amount of tuition fees earned from 2 April 2018 to 25 April 2018 inclusive."
+        "content": ""
       },
       {
         "lineNumber": 298,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -14936,117 +14936,117 @@
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::undoredo[]"
+        "content": ""
       },
       {
         "lineNumber": 300,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
+        "content": ""
       },
       {
         "lineNumber": 301,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Retrieving earnings `[coming in v2.0]`"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": "Restores the address book to the state before the previous _undoable_ command was executed. +"
+        "content": ""
       },
       {
         "lineNumber": 303,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": "Format: `undo`"
+        "content": "Retrieve the total earnings within a range of date in the current year. +"
       },
       {
         "lineNumber": 304,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": ""
+        "content": "Format: `from/DDMM to/DDMM`"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "-"
         },
-        "content": "Undoable commands: those commands that modify the address book\u0027s content (`add`, `delete`, `edit` and `clear`)."
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 308,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "DDMM is the format of date to be entered"
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": ""
       },
       {
         "lineNumber": 311,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": ""
+        "content": "Example:"
       },
       {
         "lineNumber": 312,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": "* `delete 1` +"
+        "content": ""
       },
       {
         "lineNumber": 313,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": "`list` +"
+        "content": "* `earnings from/0204 to/2504` +"
       },
       {
         "lineNumber": 314,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": "This command returns the total amount of tuition fees earned from 2 April 2018 to 25 April 2018 inclusive."
       },
       {
         "lineNumber": 315,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
         "content": ""
       },
@@ -15055,112 +15055,112 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* `select 1` +"
+        "content": "// tag::undoredo[]"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "-"
         },
-        "content": "`list` +"
+        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` +"
+        "content": ""
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
-        "content": "The `undo` command fails as there are no undoable commands executed previously."
+        "content": "Restores the address book to the state before the previous _undoable_ command was executed. +"
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Format: `undo`"
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": ""
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "-"
         },
-        "content": "`clear` +"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `clear` command) +"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": "Undoable commands: those commands that modify the address book\u0027s content (`add`, `delete`, `edit` and `clear`)."
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
+        "content": ""
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "-"
         },
-        "content": "Reverses the most recent `undo` command. +"
+        "content": ""
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `redo`"
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`list` +"
       },
       {
         "lineNumber": 331,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 332,
@@ -15174,140 +15174,140 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": "* `select 1` +"
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": "`list` +"
       },
       {
         "lineNumber": 335,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `delete 1` command) +"
+        "content": "`undo` +"
       },
       {
         "lineNumber": 336,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The `undo` command fails as there are no undoable commands executed previously."
       },
       {
         "lineNumber": 337,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": ""
       },
       {
         "lineNumber": 338,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` +"
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 339,
         "author": {
           "gitId": "-"
         },
-        "content": "The `redo` command fails as there are no `undo` commands executed previously."
+        "content": "`clear` +"
       },
       {
         "lineNumber": 340,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 341,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 342,
         "author": {
           "gitId": "-"
         },
-        "content": "`clear` +"
+        "content": ""
       },
       {
         "lineNumber": 343,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `clear` command) +"
+        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
       },
       {
         "lineNumber": 344,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": ""
       },
       {
         "lineNumber": 345,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `delete 1` command) +"
+        "content": "Reverses the most recent `undo` command. +"
       },
       {
         "lineNumber": 346,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `clear` command) +"
+        "content": "Format: `redo`"
       },
       {
         "lineNumber": 347,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::undoredo[]"
+        "content": ""
       },
       {
         "lineNumber": 348,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 349,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
+        "content": ""
       },
       {
         "lineNumber": 350,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 351,
         "author": {
           "gitId": "-"
         },
-        "content": "Clears all entries from the address book. +"
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 352,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `clear`"
+        "content": "`redo` (reapplies the `delete 1` command) +"
       },
       {
         "lineNumber": 353,
@@ -15321,147 +15321,147 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Adding tuition time of a student : `addtime`"
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 355,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`redo` +"
       },
       {
         "lineNumber": 356,
         "author": {
           "gitId": "-"
         },
-        "content": "Adds a tuition time slot for a student in the address book."
+        "content": "The `redo` command fails as there are no `undo` commands executed previously."
       },
       {
         "lineNumber": 357,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `addtime [n/NAME] [ts/TIME]`"
+        "content": ""
       },
       {
         "lineNumber": 358,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 359,
         "author": {
           "gitId": "-"
         },
-        "content": "* The student with the name `NAME` must be already be in the address book."
+        "content": "`clear` +"
       },
       {
         "lineNumber": 360,
         "author": {
           "gitId": "-"
         },
-        "content": "* Adds the tuition time `TIME` for the student called `NAME`."
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 361,
         "author": {
           "gitId": "-"
         },
-        "content": "* `TIME` must not clash with any other tuition time in the address book."
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 362,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`redo` (reapplies the `delete 1` command) +"
       },
       {
         "lineNumber": 363,
         "author": {
           "gitId": "-"
         },
-        "content": "Example:"
+        "content": "`redo` (reapplies the `clear` command) +"
       },
       {
         "lineNumber": 364,
         "author": {
           "gitId": "-"
         },
-        "content": "* `addtime n/John Doe ts/mon 1300 1500` +"
+        "content": "// end::undoredo[]"
       },
       {
         "lineNumber": 365,
         "author": {
           "gitId": "-"
         },
-        "content": "Adds the tuition timing for John Doe that is on Monday which starts at 1300hour and ends at 1500hour."
+        "content": ""
       },
       {
         "lineNumber": 366,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
       },
       {
         "lineNumber": 367,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Deleting tuition time of a student : `deletetime`"
+        "content": ""
       },
       {
         "lineNumber": 368,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Clears all entries from the address book. +"
       },
       {
         "lineNumber": 369,
         "author": {
           "gitId": "-"
         },
-        "content": "Deletes a tuition time slot for a student in the address book."
+        "content": "Format: `clear`"
       },
       {
         "lineNumber": 370,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `deletetime [n/NAME] [ts/TIME]`"
+        "content": ""
       },
       {
         "lineNumber": 371,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Adding tuition time of a student : `addtime`"
       },
       {
         "lineNumber": 372,
         "author": {
           "gitId": "-"
         },
-        "content": "* The student with the name `NAME` must be already be in the address book."
+        "content": ""
       },
       {
         "lineNumber": 373,
         "author": {
           "gitId": "-"
         },
-        "content": "* `TIME` must already exist in the student\u0027s tuition timings."
+        "content": "Adds a tuition time slot for a student in the address book."
       },
       {
         "lineNumber": 374,
         "author": {
           "gitId": "-"
         },
-        "content": "* The student with the name `NAME` will have the tuition timing `TIME` deleted."
+        "content": "Format: `addtime [n/NAME] [ts/TIME]`"
       },
       {
         "lineNumber": 375,
@@ -15475,21 +15475,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Example:"
+        "content": "* The student with the name `NAME` must be already be in the address book."
       },
       {
         "lineNumber": 377,
         "author": {
           "gitId": "-"
         },
-        "content": "* `deletetime n/John Doe ts/mon 1300 1500` +"
+        "content": "* Adds the tuition time `TIME` for the student called `NAME`."
       },
       {
         "lineNumber": 378,
         "author": {
           "gitId": "-"
         },
-        "content": "Deletes the tuition timing for John Doe that is on Monday which starts at 1300hour and ends at 1500hour."
+        "content": "* `TIME` must not clash with any other tuition time in the address book."
       },
       {
         "lineNumber": 379,
@@ -15503,84 +15503,84 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
+        "content": "Example:"
       },
       {
         "lineNumber": 381,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `addtime n/John Doe ts/mon 1300 1500` +"
       },
       {
         "lineNumber": 382,
         "author": {
           "gitId": "-"
         },
-        "content": "Exits the program. +"
+        "content": "Adds the tuition timing for John Doe that is on Monday which starts at 1300hour and ends at 1500hour."
       },
       {
         "lineNumber": 383,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `exit`"
+        "content": ""
       },
       {
         "lineNumber": 384,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Deleting tuition time of a student : `deletetime`"
       },
       {
         "lineNumber": 385,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Saving the data"
+        "content": ""
       },
       {
         "lineNumber": 386,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Deletes a tuition time slot for a student in the address book."
       },
       {
         "lineNumber": 387,
         "author": {
           "gitId": "-"
         },
-        "content": "Address book data are saved in the hard disk automatically after any command that changes the data. +"
+        "content": "Format: `deletetime [n/NAME] [ts/TIME]`"
       },
       {
         "lineNumber": 388,
         "author": {
           "gitId": "-"
         },
-        "content": "There is no need to save manually."
+        "content": ""
       },
       {
         "lineNumber": 389,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* The student with the name `NAME` must be already be in the address book."
       },
       {
         "lineNumber": 390,
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::dataencryption[]"
+        "content": "* `TIME` must already exist in the student\u0027s tuition timings."
       },
       {
         "lineNumber": 391,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
+        "content": "* The student with the name `NAME` will have the tuition timing `TIME` deleted."
       },
       {
         "lineNumber": 392,
@@ -15594,234 +15594,353 @@
         "author": {
           "gitId": "-"
         },
-        "content": "_{explain how the user can enable/disable data encryption}_"
+        "content": "Example:"
       },
       {
         "lineNumber": 394,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::dataencryption[]"
+        "content": "* `deletetime n/John Doe ts/mon 1300 1500` +"
       },
       {
         "lineNumber": 395,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Deletes the tuition timing for John Doe that is on Monday which starts at 1300hour and ends at 1500hour."
       },
       {
         "lineNumber": 396,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d FAQ"
+        "content": ""
       },
       {
         "lineNumber": 397,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
       },
       {
         "lineNumber": 398,
         "author": {
           "gitId": "-"
         },
-        "content": "*Q*: How do I transfer my data to another Computer? +"
+        "content": ""
       },
       {
         "lineNumber": 399,
         "author": {
           "gitId": "-"
         },
-        "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder."
+        "content": "Exits the program. +"
       },
       {
         "lineNumber": 400,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Format: `exit`"
       },
       {
         "lineNumber": 401,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Command Summary"
+        "content": ""
       },
       {
         "lineNumber": 402,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Saving the data"
       },
       {
         "lineNumber": 403,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Add* : `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS el/EDUCATIONAL_LEVEL g/GRADE [t/TAG]` +"
+        "content": ""
       },
       {
         "lineNumber": 404,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 el/JC 1 g/85`"
+        "content": "Address book data are saved in the hard disk automatically after any command that changes the data. +"
       },
       {
         "lineNumber": 405,
         "author": {
           "gitId": "-"
         },
-        "content": "* *AddTime* : `addtime n/NAME ts/TIME` +"
+        "content": "There is no need to save manually."
       },
       {
         "lineNumber": 406,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `addtime n/James Ho ts/mon 1300 1500`"
+        "content": ""
       },
       {
         "lineNumber": 407,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Clear* : `clear`"
+        "content": "// tag::dataencryption[]"
       },
       {
         "lineNumber": 408,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Delete* : `delete INDEX` +"
+        "content": "\u003d\u003d\u003d Encrypting data files `[coming in v2.0]`"
       },
       {
         "lineNumber": 409,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `delete 3`"
+        "content": ""
       },
       {
         "lineNumber": 410,
         "author": {
           "gitId": "-"
         },
-        "content": "* *DeleteTime* : `deletetime n/NAME ts/TIME` +"
+        "content": "_{explain how the user can enable/disable data encryption}_"
       },
       {
         "lineNumber": 411,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `deletetime n/James Ho ts/mon 1300 1500`"
+        "content": "// end::dataencryption[]"
       },
       {
         "lineNumber": 412,
         "author": {
           "gitId": "-"
         },
-        "content": "* *"
+        "content": ""
       },
       {
         "lineNumber": 413,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Edit* : `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...` +"
+        "content": "\u003d\u003d FAQ"
       },
       {
         "lineNumber": 414,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `edit 2 n/James Lee e/jameslee@example.com`"
+        "content": ""
       },
       {
         "lineNumber": 415,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Find* : `find KEYWORD [MORE_KEYWORDS]` +"
+        "content": "*Q*: How do I transfer my data to another Computer? +"
       },
       {
         "lineNumber": 416,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `find James Jake`"
+        "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Address Book folder."
       },
       {
         "lineNumber": 417,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Find by e-mail* : `find/e EMAIL` +"
+        "content": ""
       },
       {
         "lineNumber": 418,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g `find tim@example.com`"
+        "content": "\u003d\u003d Command Summary"
       },
       {
         "lineNumber": 419,
         "author": {
           "gitId": "-"
         },
-        "content": "* *List* : `list`"
+        "content": ""
       },
       {
         "lineNumber": 420,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Help* : `help`"
+        "content": "* *Add* : `add n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS el/EDUCATIONAL_LEVEL g/GRADE [t/TAG]` +"
       },
       {
         "lineNumber": 421,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Select* : `select INDEX` +"
+        "content": "e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 el/JC 1 g/85`"
       },
       {
         "lineNumber": 422,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g.`select 2`"
+        "content": "* *AddTime* : `addtime n/NAME ts/TIME` +"
       },
       {
         "lineNumber": 423,
         "author": {
           "gitId": "-"
         },
-        "content": "* *filterByFee* : `filterByFee FEE`"
+        "content": "e.g. `addtime n/James Ho ts/mon 1300 1500`"
       },
       {
         "lineNumber": 424,
         "author": {
           "gitId": "-"
         },
-        "content": "* *History* : `history`"
+        "content": "* *Clear* : `clear`"
       },
       {
         "lineNumber": 425,
         "author": {
           "gitId": "-"
         },
-        "content": "* *Undo* : `undo`"
+        "content": "* *Delete* : `delete INDEX` +"
       },
       {
         "lineNumber": 426,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `delete 3`"
+      },
+      {
+        "lineNumber": 427,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *DeleteTime* : `deletetime n/NAME ts/TIME` +"
+      },
+      {
+        "lineNumber": 428,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `deletetime n/James Ho ts/mon 1300 1500`"
+      },
+      {
+        "lineNumber": 429,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *"
+      },
+      {
+        "lineNumber": 430,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Edit* : `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [a/ADDRESS] [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 431,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `edit 2 n/James Lee e/jameslee@example.com`"
+      },
+      {
+        "lineNumber": 432,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Find* : `find KEYWORD [MORE_KEYWORDS]` +"
+      },
+      {
+        "lineNumber": 433,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `find James Jake`"
+      },
+      {
+        "lineNumber": 434,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Find by e-mail* : `find/e EMAIL` +"
+      },
+      {
+        "lineNumber": 435,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g `find tim@example.com`"
+      },
+      {
+        "lineNumber": 436,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *List* : `list`"
+      },
+      {
+        "lineNumber": 437,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Help* : `help`"
+      },
+      {
+        "lineNumber": 438,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Select* : `select INDEX` +"
+      },
+      {
+        "lineNumber": 439,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g.`select 2`"
+      },
+      {
+        "lineNumber": 440,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *filterByFee* : `filterByFee FEE`"
+      },
+      {
+        "lineNumber": 441,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *History* : `history`"
+      },
+      {
+        "lineNumber": 442,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Undo* : `undo`"
+      },
+      {
+        "lineNumber": 443,
         "author": {
           "gitId": "-"
         },
@@ -15831,7 +15950,7 @@
     "authorContributionMap": {
       "hrxiong": 15,
       "CJuanvip": 18,
-      "-": 384,
+      "-": 401,
       "chenlu-chua": 9
     }
   },

@@ -33004,89 +33004,124 @@
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        salaryLabel.setText(person.getSalary().salary);"
+        "content": "        double salary \u003d Double.valueOf(person.getSalary().salary);"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        departmentLabel.setText(person.getDepartment().value);"
+        "content": "        double otPay \u003d Double.valueOf(person.getOtHours().overTimeHour)"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        managerLabel.setText(person.getManager().fullName);"
+        "content": "            * Double.valueOf(person.getOtRate().overTimeRate);"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        ratingLabel.setText(person.getRating().value);"
+        "content": "        double deductibles \u003d Double.valueOf(person.getDeductibles().payDeductibles);"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        feedbackLabel.setText(person.getFeedback().value);"
+        "content": "        double netSalary \u003d salary + otPay - deductibles;"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "    }"
+        "content": "        salaryLabel.setText(Double.toString(netSalary));"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": ""
+        "content": "        departmentLabel.setText(person.getDepartment().value);"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "    @Subscribe"
+        "content": "        managerLabel.setText(person.getManager().fullName);"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
+        "content": "        ratingLabel.setText(person.getRating().value);"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": "        feedbackLabel.setText(person.getFeedback().value);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "        loadStaffPanel(event.getNewSelection());"
+        "content": "    }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 72,
+        "author": {
+          "gitId": "DanKhoo"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "DanKhoo"
+        },
+        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "DanKhoo"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "DanKhoo"
+        },
+        "content": "        loadStaffPanel(event.getNewSelection());"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "DanKhoo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 77,
         "author": {
           "gitId": "DanKhoo"
         },
@@ -33094,7 +33129,8 @@
       }
     ],
     "authorContributionMap": {
-      "DanKhoo": 72
+      "NgeowXiuQi": 6,
+      "DanKhoo": 71
     }
   },
   {
@@ -37557,9 +37593,9 @@
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "                                \u003cLabel styleClass\u003d\"staffLabel-bright\" text\u003d\"Salary\" GridPane.rowIndex\u003d\"4\" /\u003e"
+        "content": "                                \u003cLabel styleClass\u003d\"staffLabel-bright\" text\u003d\"Net Salary\" GridPane.rowIndex\u003d\"4\" /\u003e"
       },
       {
         "lineNumber": 42,
@@ -37773,7 +37809,8 @@
       }
     ],
     "authorContributionMap": {
-      "DanKhoo": 71
+      "NgeowXiuQi": 1,
+      "DanKhoo": 70
     }
   },
   {
@@ -63297,285 +63334,320 @@
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        assertEquals(expectedPerson.getSalary().salary, actualPanel.getSalary());"
+        "content": "        double salary \u003d Double.valueOf(expectedPerson.getSalary().salary);"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        assertEquals(expectedPerson.getDepartment().value, actualPanel.getDepartment());"
+        "content": "        double otPay \u003d Double.valueOf(expectedPerson.getOtHours().overTimeHour)"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        assertEquals(expectedPerson.getManager().fullName, actualPanel.getManager());"
+        "content": "            * Double.valueOf(expectedPerson.getOtRate().overTimeRate);"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        assertEquals(expectedPerson.getRating().value, actualPanel.getRating());"
+        "content": "        double deductibles \u003d Double.valueOf(expectedPerson.getDeductibles().payDeductibles);"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "        assertEquals(expectedPerson.getFeedback().value, actualPanel.getFeedback());"
+        "content": "        double expectedNetSalary \u003d salary + otPay - deductibles;"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "    }"
+        "content": "        assertEquals(Double.toString(expectedNetSalary), actualPanel.getSalary());"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": ""
+        "content": "        assertEquals(expectedPerson.getDepartment().value, actualPanel.getDepartment());"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "    /**"
+        "content": "        assertEquals(expectedPerson.getManager().fullName, actualPanel.getManager());"
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "     * Asserts that the list in {@code personListPanelHandle} displays the details of {@code persons} correctly and"
+        "content": "        assertEquals(expectedPerson.getRating().value, actualPanel.getRating());"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "     * in the correct order."
+        "content": "        assertEquals(expectedPerson.getFeedback().value, actualPanel.getFeedback());"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static void assertListMatching(PersonListPanelHandle personListPanelHandle, Person... persons) {"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        for (int i \u003d 0; i \u003c persons.length; i++) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "            personListPanelHandle.navigateToCard(i);"
+        "content": "     * Asserts that the list in {@code personListPanelHandle} displays the details of {@code persons} correctly and"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "            assertCardDisplaysPerson(persons[i], personListPanelHandle.getPersonCardHandle(i));"
+        "content": "     * in the correct order."
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public static void assertListMatching(PersonListPanelHandle personListPanelHandle, Person... persons) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        for (int i \u003d 0; i \u003c persons.length; i++) {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "            personListPanelHandle.navigateToCard(i);"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the list in {@code personListPanelHandle} displays the details of {@code persons} correctly and"
+        "content": "            assertCardDisplaysPerson(persons[i], personListPanelHandle.getPersonCardHandle(i));"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "     * in the correct order."
+        "content": "        }"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void assertListMatching(PersonListPanelHandle personListPanelHandle, List\u003cPerson\u003e persons) {"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertListMatching(personListPanelHandle, persons.toArray(new Person[0]));"
+        "content": "    /**"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     * Asserts that the list in {@code personListPanelHandle} displays the details of {@code persons} correctly and"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * in the correct order."
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     */"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts the size of the list in {@code personListPanelHandle} equals to {@code size}."
+        "content": "    public static void assertListMatching(PersonListPanelHandle personListPanelHandle, List\u003cPerson\u003e persons) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        assertListMatching(personListPanelHandle, persons.toArray(new Person[0]));"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void assertListSize(PersonListPanelHandle personListPanelHandle, int size) {"
+        "content": "    }"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        int numberOfPeople \u003d personListPanelHandle.getListSize();"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(size, numberOfPeople);"
+        "content": "    /**"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     * Asserts the size of the list in {@code personListPanelHandle} equals to {@code size}."
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "    public static void assertListSize(PersonListPanelHandle personListPanelHandle, int size) {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts the message shown in {@code resultDisplayHandle} equals to {@code expected}."
+        "content": "        int numberOfPeople \u003d personListPanelHandle.getListSize();"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        assertEquals(size, numberOfPeople);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void assertResultMessage(ResultDisplayHandle resultDisplayHandle, String expected) {"
+        "content": "    }"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(expected, resultDisplayHandle.getText());"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    /**"
       },
       {
         "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Asserts the message shown in {@code resultDisplayHandle} equals to {@code expected}."
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertResultMessage(ResultDisplayHandle resultDisplayHandle, String expected) {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expected, resultDisplayHandle.getText());"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
@@ -63583,7 +63655,8 @@
       }
     ],
     "authorContributionMap": {
-      "DanKhoo": 18,
+      "NgeowXiuQi": 6,
+      "DanKhoo": 17,
       "-": 70
     }
   },

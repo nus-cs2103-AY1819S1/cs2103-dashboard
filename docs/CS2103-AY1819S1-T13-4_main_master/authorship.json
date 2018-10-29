@@ -28272,9 +28272,9 @@
       {
         "lineNumber": 204,
         "author": {
-          "gitId": "-"
+          "gitId": "jeremiah-ang"
         },
-        "content": "image::ModelClassDiagram.png[width\u003d\"800\"]"
+        "content": "image::ModelClassDiagram_Transcript.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 205,
@@ -28321,16 +28321,16 @@
       {
         "lineNumber": 211,
         "author": {
-          "gitId": "-"
+          "gitId": "jeremiah-ang"
         },
-        "content": "* stores the Address Book data."
+        "content": "* stores the Transcript data."
       },
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "-"
+          "gitId": "jeremiah-ang"
         },
-        "content": "* exposes an unmodifiable `ObservableList\u003cPerson\u003e` that can be \u0027observed\u0027 e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change."
+        "content": "* exposes an unmodifiable `ObservableList\u003cModule\u003e` that can be \u0027observed\u0027 e.g. the UI can be bound to this list so that the UI automatically updates when the data in the list change."
       },
       {
         "lineNumber": 213,
@@ -28342,79 +28342,79 @@
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "-"
+          "gitId": "jeremiah-ang"
         },
-        "content": ""
+        "content": "* provides filter function to filter `Module` with different kind of `Grade`"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "As a more OOP model, we can store a `Tag` list in `Address Book`, which `Person` can reference. This would allow `Address Book` to only require one `Tag` object per unique `Tag`, instead of each `Person` needing their own `Tag` object. An example of how such a model may look like is given below. +"
+        "content": "[[Design-Storage]]"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": " +"
+        "content": "\u003d\u003d\u003d Storage component"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "image:ModelClassBetterOopDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".Structure of the Storage Component"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Design-Storage]]"
+        "content": "image::StorageClassDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Storage component"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "*API* : link:{repoURL}/src/main/java/seedu/address/storage/Storage.java[`Storage.java`]"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": ".Structure of the Storage Component"
+        "content": ""
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "image::StorageClassDiagram.png[width\u003d\"800\"]"
+        "content": "The `Storage` component,"
       },
       {
         "lineNumber": 225,
@@ -28428,63 +28428,63 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*API* : link:{repoURL}/src/main/java/seedu/address/storage/Storage.java[`Storage.java`]"
+        "content": "* can save `UserPref` objects in json format and read it back."
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* can save the Address Book data in xml format and read it back."
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "The `Storage` component,"
+        "content": ""
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[[Design-Commons]]"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "* can save `UserPref` objects in json format and read it back."
+        "content": "\u003d\u003d\u003d Common classes"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "* can save the Address Book data in xml format and read it back."
+        "content": ""
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Classes used by multiple components are in the `seedu.addressbook.commons` package."
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Design-Commons]]"
+        "content": ""
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Common classes"
+        "content": "\u003d\u003d Implementation"
       },
       {
         "lineNumber": 235,
@@ -28498,7 +28498,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Classes used by multiple components are in the `seedu.addressbook.commons` package."
+        "content": "This section describes some noteworthy details on how certain features are implemented."
       },
       {
         "lineNumber": 237,
@@ -28512,21 +28512,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Implementation"
+        "content": "// tag::undoredo[]"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Undo/Redo feature"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "This section describes some noteworthy details on how certain features are implemented."
+        "content": "\u003d\u003d\u003d\u003d Current Implementation"
       },
       {
         "lineNumber": 241,
@@ -28540,21 +28540,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::undoredo[]"
+        "content": "The undo/redo mechanism is facilitated by `VersionedAddressBook`."
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Undo/Redo feature"
+        "content": "It extends `AddressBook` with an undo/redo history, stored internally as an `addressBookStateList` and `currentStatePointer`."
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d Current Implementation"
+        "content": "Additionally, it implements the following operations:"
       },
       {
         "lineNumber": 245,
@@ -28568,21 +28568,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "The undo/redo mechanism is facilitated by `VersionedAddressBook`."
+        "content": "* `VersionedAddressBook#commit()` -- Saves the current address book state in its history."
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "It extends `AddressBook` with an undo/redo history, stored internally as an `addressBookStateList` and `currentStatePointer`."
+        "content": "* `VersionedAddressBook#undo()` -- Restores the previous address book state from its history."
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "Additionally, it implements the following operations:"
+        "content": "* `VersionedAddressBook#redo()` -- Restores a previously undone address book state from its history."
       },
       {
         "lineNumber": 249,
@@ -28596,21 +28596,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* `VersionedAddressBook#commit()` -- Saves the current address book state in its history."
+        "content": "These operations are exposed in the `Model` interface as `Model#commitAddressBook()`, `Model#undoAddressBook()` and `Model#redoAddressBook()` respectively."
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "* `VersionedAddressBook#undo()` -- Restores the previous address book state from its history."
+        "content": ""
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "* `VersionedAddressBook#redo()` -- Restores a previously undone address book state from its history."
+        "content": "Given below is an example usage scenario and how the undo/redo mechanism behaves at each step."
       },
       {
         "lineNumber": 253,
@@ -28624,7 +28624,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "These operations are exposed in the `Model` interface as `Model#commitAddressBook()`, `Model#undoAddressBook()` and `Model#redoAddressBook()` respectively."
+        "content": "Step 1. The user launches the application for the first time. The `VersionedAddressBook` will be initialized with the initial address book state, and the `currentStatePointer` pointing to that single address book state."
       },
       {
         "lineNumber": 255,
@@ -28638,7 +28638,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Given below is an example usage scenario and how the undo/redo mechanism behaves at each step."
+        "content": "image::UndoRedoStartingStateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 257,
@@ -28652,7 +28652,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Step 1. The user launches the application for the first time. The `VersionedAddressBook` will be initialized with the initial address book state, and the `currentStatePointer` pointing to that single address book state."
+        "content": "Step 2. The user executes `delete 5` command to delete the 5th person in the address book. The `delete` command calls `Model#commitAddressBook()`, causing the modified state of the address book after the `delete 5` command executes to be saved in the `addressBookStateList`, and the `currentStatePointer` is shifted to the newly inserted address book state."
       },
       {
         "lineNumber": 259,
@@ -28666,7 +28666,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoStartingStateListDiagram.png[width\u003d\"800\"]"
+        "content": "image::UndoRedoNewCommand1StateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 261,
@@ -28680,7 +28680,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Step 2. The user executes `delete 5` command to delete the 5th person in the address book. The `delete` command calls `Model#commitAddressBook()`, causing the modified state of the address book after the `delete 5` command executes to be saved in the `addressBookStateList`, and the `currentStatePointer` is shifted to the newly inserted address book state."
+        "content": "Step 3. The user executes `add n/David ...` to add a new person. The `add` command also calls `Model#commitAddressBook()`, causing another modified address book state to be saved into the `addressBookStateList`."
       },
       {
         "lineNumber": 263,
@@ -28694,7 +28694,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoNewCommand1StateListDiagram.png[width\u003d\"800\"]"
+        "content": "image::UndoRedoNewCommand2StateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 265,
@@ -28708,42 +28708,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Step 3. The user executes `add n/David ...` to add a new person. The `add` command also calls `Model#commitAddressBook()`, causing another modified address book state to be saved into the `addressBookStateList`."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "If a command fails its execution, it will not call `Model#commitAddressBook()`, so the address book state will not be saved into the `addressBookStateList`."
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoNewCommand2StateListDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the `undo` command. The `undo` command will call `Model#undoAddressBook()`, which will shift the `currentStatePointer` once to the left, pointing it to the previous address book state, and restores the address book to that state."
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
-        "content": "If a command fails its execution, it will not call `Model#commitAddressBook()`, so the address book state will not be saved into the `addressBookStateList`."
+        "content": "image::UndoRedoExecuteUndoStateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 272,
@@ -28757,42 +28757,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Step 4. The user now decides that adding the person was a mistake, and decides to undo that action by executing the `undo` command. The `undo` command will call `Model#undoAddressBook()`, which will shift the `currentStatePointer` once to the left, pointing it to the previous address book state, and restores the address book to that state."
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "If the `currentStatePointer` is at index 0, pointing to the initial address book state, then there are no previous address book states to restore. The `undo` command uses `Model#canUndoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo."
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoExecuteUndoStateListDiagram.png[width\u003d\"800\"]"
+        "content": ""
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The following sequence diagram shows how the undo operation works:"
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "-"
         },
-        "content": "If the `currentStatePointer` is at index 0, pointing to the initial address book state, then there are no previous address book states to restore. The `undo` command uses `Model#canUndoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the undo."
+        "content": "image::UndoRedoSequenceDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 279,
@@ -28806,7 +28806,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "The following sequence diagram shows how the undo operation works:"
+        "content": "The `redo` command does the opposite -- it calls `Model#redoAddressBook()`, which shifts the `currentStatePointer` once to the right, pointing to the previously undone state, and restores the address book to that state."
       },
       {
         "lineNumber": 281,
@@ -28820,42 +28820,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoSequenceDiagram.png[width\u003d\"800\"]"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "If the `currentStatePointer` is at index `addressBookStateList.size() - 1`, pointing to the latest address book state, then there are no undone address book states to restore. The `redo` command uses `Model#canRedoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo."
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
-        "content": "The `redo` command does the opposite -- it calls `Model#redoAddressBook()`, which shifts the `currentStatePointer` once to the right, pointing to the previously undone state, and restores the address book to that state."
+        "content": ""
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Step 5. The user then decides to execute the command `list`. Commands that do not modify the address book, such as `list`, will usually not call `Model#commitAddressBook()`, `Model#undoAddressBook()` or `Model#redoAddressBook()`. Thus, the `addressBookStateList` remains unchanged."
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
-        "content": "If the `currentStatePointer` is at index `addressBookStateList.size() - 1`, pointing to the latest address book state, then there are no undone address book states to restore. The `redo` command uses `Model#canRedoAddressBook()` to check if this is the case. If so, it will return an error to the user rather than attempting to perform the redo."
+        "content": "image::UndoRedoNewCommand3StateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 288,
@@ -28869,7 +28869,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Step 5. The user then decides to execute the command `list`. Commands that do not modify the address book, such as `list`, will usually not call `Model#commitAddressBook()`, `Model#undoAddressBook()` or `Model#redoAddressBook()`. Thus, the `addressBookStateList` remains unchanged."
+        "content": "Step 6. The user executes `clear`, which calls `Model#commitAddressBook()`. Since the `currentStatePointer` is not pointing at the end of the `addressBookStateList`, all address book states after the `currentStatePointer` will be purged. We designed it this way because it no longer makes sense to redo the `add n/David ...` command. This is the behavior that most modern desktop applications follow."
       },
       {
         "lineNumber": 290,
@@ -28883,7 +28883,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoNewCommand3StateListDiagram.png[width\u003d\"800\"]"
+        "content": "image::UndoRedoNewCommand4StateListDiagram.png[width\u003d\"800\"]"
       },
       {
         "lineNumber": 292,
@@ -28897,7 +28897,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Step 6. The user executes `clear`, which calls `Model#commitAddressBook()`. Since the `currentStatePointer` is not pointing at the end of the `addressBookStateList`, all address book states after the `currentStatePointer` will be purged. We designed it this way because it no longer makes sense to redo the `add n/David ...` command. This is the behavior that most modern desktop applications follow."
+        "content": "The following activity diagram summarizes what happens when a user executes a new command:"
       },
       {
         "lineNumber": 294,
@@ -28911,7 +28911,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoNewCommand4StateListDiagram.png[width\u003d\"800\"]"
+        "content": "image::UndoRedoActivityDiagram.png[width\u003d\"650\"]"
       },
       {
         "lineNumber": 296,
@@ -28925,7 +28925,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "The following activity diagram summarizes what happens when a user executes a new command:"
+        "content": "\u003d\u003d\u003d\u003d Design Considerations"
       },
       {
         "lineNumber": 298,
@@ -28939,7 +28939,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "image::UndoRedoActivityDiagram.png[width\u003d\"650\"]"
+        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: How undo \u0026 redo executes"
       },
       {
         "lineNumber": 300,
@@ -28953,161 +28953,161 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d Design Considerations"
+        "content": "* **Alternative 1 (current choice):** Saves the entire address book."
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "** Pros: Easy to implement."
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: How undo \u0026 redo executes"
+        "content": "** Cons: May have performance issues in terms of memory usage."
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* **Alternative 2:** Individual command knows how to undo/redo by itself."
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "-"
         },
-        "content": "* **Alternative 1 (current choice):** Saves the entire address book."
+        "content": "** Pros: Will use less memory (e.g. for `delete`, just save the person being deleted)."
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "-"
         },
-        "content": "** Pros: Easy to implement."
+        "content": "** Cons: We must ensure that the implementation of each individual command are correct."
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "-"
         },
-        "content": "** Cons: May have performance issues in terms of memory usage."
+        "content": ""
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "-"
         },
-        "content": "* **Alternative 2:** Individual command knows how to undo/redo by itself."
+        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: Data structure to support the undo/redo commands"
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "-"
         },
-        "content": "** Pros: Will use less memory (e.g. for `delete`, just save the person being deleted)."
+        "content": ""
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "-"
         },
-        "content": "** Cons: We must ensure that the implementation of each individual command are correct."
+        "content": "* **Alternative 1 (current choice):** Use a list to store the history of address book states."
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "** Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project."
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d\u003d Aspect: Data structure to support the undo/redo commands"
+        "content": "** Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both `HistoryManager` and `VersionedAddressBook`."
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* **Alternative 2:** Use `HistoryManager` for undo/redo"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "-"
         },
-        "content": "* **Alternative 1 (current choice):** Use a list to store the history of address book states."
+        "content": "** Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase."
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "-"
         },
-        "content": "** Pros: Easy for new Computer Science student undergraduates to understand, who are likely to be the new incoming developers of our project."
+        "content": "** Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as `HistoryManager` now needs to do two different things."
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "-"
         },
-        "content": "** Cons: Logic is duplicated twice. For example, when a new command is executed, we must remember to update both `HistoryManager` and `VersionedAddressBook`."
+        "content": "// end::undoredo[]"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "-"
         },
-        "content": "* **Alternative 2:** Use `HistoryManager` for undo/redo"
+        "content": ""
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
-        "content": "** Pros: We do not need to maintain a separate list, and just reuse what is already in the codebase."
+        "content": "// tag::dataencryption[]"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
-        "content": "** Cons: Requires dealing with commands that have already been undone: We must remember to skip these commands. Violates Single Responsibility Principle and Separation of Concerns as `HistoryManager` now needs to do two different things."
+        "content": "\u003d\u003d\u003d [Proposed] Data Encryption"
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::undoredo[]"
+        "content": ""
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "_{Explain here how the data encryption feature will be implemented}_"
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::dataencryption[]"
+        "content": ""
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d [Proposed] Data Encryption"
+        "content": "// end::dataencryption[]"
       },
       {
         "lineNumber": 324,
@@ -29121,7 +29121,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "_{Explain here how the data encryption feature will be implemented}_"
+        "content": "\u003d\u003d\u003d Logging"
       },
       {
         "lineNumber": 326,
@@ -29135,7 +29135,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "// end::dataencryption[]"
+        "content": "We are using `java.util.logging` package for logging. The `LogsCenter` class is used to manage the logging levels and logging destinations."
       },
       {
         "lineNumber": 328,
@@ -29149,21 +29149,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Logging"
+        "content": "* The logging level can be controlled using the `logLevel` setting in the configuration file (See \u003c\u003cImplementation-Configuration\u003e\u003e)"
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* The `Logger` for a class can be obtained using `LogsCenter.getLogger(Class)` which will log messages according to the specified logging level"
       },
       {
         "lineNumber": 331,
         "author": {
           "gitId": "-"
         },
-        "content": "We are using `java.util.logging` package for logging. The `LogsCenter` class is used to manage the logging levels and logging destinations."
+        "content": "* Currently log messages are output through: `Console` and to a `.log` file."
       },
       {
         "lineNumber": 332,
@@ -29177,91 +29177,91 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* The logging level can be controlled using the `logLevel` setting in the configuration file (See \u003c\u003cImplementation-Configuration\u003e\u003e)"
+        "content": "*Logging Levels*"
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "-"
         },
-        "content": "* The `Logger` for a class can be obtained using `LogsCenter.getLogger(Class)` which will log messages according to the specified logging level"
+        "content": ""
       },
       {
         "lineNumber": 335,
         "author": {
           "gitId": "-"
         },
-        "content": "* Currently log messages are output through: `Console` and to a `.log` file."
+        "content": "* `SEVERE` : Critical problem detected which may possibly cause the termination of the application"
       },
       {
         "lineNumber": 336,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `WARNING` : Can continue, but with caution"
       },
       {
         "lineNumber": 337,
         "author": {
           "gitId": "-"
         },
-        "content": "*Logging Levels*"
+        "content": "* `INFO` : Information showing the noteworthy actions by the App"
       },
       {
         "lineNumber": 338,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `FINE` : Details that is not usually noteworthy but may be useful in debugging e.g. print the actual list instead of just its size"
       },
       {
         "lineNumber": 339,
         "author": {
           "gitId": "-"
         },
-        "content": "* `SEVERE` : Critical problem detected which may possibly cause the termination of the application"
+        "content": ""
       },
       {
         "lineNumber": 340,
         "author": {
           "gitId": "-"
         },
-        "content": "* `WARNING` : Can continue, but with caution"
+        "content": "[[Implementation-Configuration]]"
       },
       {
         "lineNumber": 341,
         "author": {
           "gitId": "-"
         },
-        "content": "* `INFO` : Information showing the noteworthy actions by the App"
+        "content": "\u003d\u003d\u003d Configuration"
       },
       {
         "lineNumber": 342,
         "author": {
           "gitId": "-"
         },
-        "content": "* `FINE` : Details that is not usually noteworthy but may be useful in debugging e.g. print the actual list instead of just its size"
+        "content": ""
       },
       {
         "lineNumber": 343,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: `config.json`)."
       },
       {
         "lineNumber": 344,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Implementation-Configuration]]"
+        "content": ""
       },
       {
         "lineNumber": 345,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Configuration"
+        "content": "\u003d\u003d Documentation"
       },
       {
         "lineNumber": 346,
@@ -29275,7 +29275,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Certain properties of the application can be controlled (e.g App name, logging level) through the configuration file (default: `config.json`)."
+        "content": "We use asciidoc for writing documentation."
       },
       {
         "lineNumber": 348,
@@ -29289,77 +29289,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Documentation"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 350,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "We chose asciidoc over Markdown because asciidoc, although a bit more complex than Markdown, provides more flexibility in formatting."
       },
       {
         "lineNumber": 351,
         "author": {
           "gitId": "-"
         },
-        "content": "We use asciidoc for writing documentation."
+        "content": ""
       },
       {
         "lineNumber": 352,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Editing Documentation"
       },
       {
         "lineNumber": 353,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 354,
         "author": {
           "gitId": "-"
         },
-        "content": "We chose asciidoc over Markdown because asciidoc, although a bit more complex than Markdown, provides more flexibility in formatting."
+        "content": "See \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to learn how to render `.adoc` files locally to preview the end result of your edits."
       },
       {
         "lineNumber": 355,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your `.adoc` files in real-time."
       },
       {
         "lineNumber": 356,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Editing Documentation"
+        "content": ""
       },
       {
         "lineNumber": 357,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Publishing Documentation"
       },
       {
         "lineNumber": 358,
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to learn how to render `.adoc` files locally to preview the end result of your edits."
+        "content": ""
       },
       {
         "lineNumber": 359,
         "author": {
           "gitId": "-"
         },
-        "content": "Alternatively, you can download the AsciiDoc plugin for IntelliJ, which allows you to preview the changes you have made to your `.adoc` files in real-time."
+        "content": "See \u003c\u003cUsingTravis#deploying-github-pages, UsingTravis.adoc\u003e\u003e to learn how to deploy GitHub Pages using Travis."
       },
       {
         "lineNumber": 360,
@@ -29373,7 +29373,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Publishing Documentation"
+        "content": "\u003d\u003d\u003d Converting Documentation to PDF format"
       },
       {
         "lineNumber": 362,
@@ -29387,7 +29387,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingTravis#deploying-github-pages, UsingTravis.adoc\u003e\u003e to learn how to deploy GitHub Pages using Travis."
+        "content": "We use https://www.google.com/chrome/browser/desktop/[Google Chrome] for converting documentation to PDF format, as Chrome\u0027s PDF engine preserves hyperlinks used in webpages."
       },
       {
         "lineNumber": 364,
@@ -29401,7 +29401,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Converting Documentation to PDF format"
+        "content": "Here are the steps to convert the project documentation files to PDF format."
       },
       {
         "lineNumber": 366,
@@ -29415,308 +29415,308 @@
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://www.google.com/chrome/browser/desktop/[Google Chrome] for converting documentation to PDF format, as Chrome\u0027s PDF engine preserves hyperlinks used in webpages."
+        "content": ".  Follow the instructions in \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to convert the AsciiDoc files in the `docs/` directory to HTML format."
       },
       {
         "lineNumber": 368,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  Go to your generated HTML files in the `build/docs` folder, right click on them and select `Open with` -\u003e `Google Chrome`."
       },
       {
         "lineNumber": 369,
         "author": {
           "gitId": "-"
         },
-        "content": "Here are the steps to convert the project documentation files to PDF format."
+        "content": ".  Within Chrome, click on the `Print` option in Chrome\u0027s menu."
       },
       {
         "lineNumber": 370,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below."
       },
       {
         "lineNumber": 371,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Follow the instructions in \u003c\u003cUsingGradle#rendering-asciidoc-files, UsingGradle.adoc\u003e\u003e to convert the AsciiDoc files in the `docs/` directory to HTML format."
+        "content": ""
       },
       {
         "lineNumber": 372,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Go to your generated HTML files in the `build/docs` folder, right click on them and select `Open with` -\u003e `Google Chrome`."
+        "content": ".Saving documentation as PDF files in Chrome"
       },
       {
         "lineNumber": 373,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Within Chrome, click on the `Print` option in Chrome\u0027s menu."
+        "content": "image::chrome_save_as_pdf.png[width\u003d\"300\"]"
       },
       {
         "lineNumber": 374,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Set the destination to `Save as PDF`, then click `Save` to save a copy of the file in PDF format. For best results, use the settings indicated in the screenshot below."
+        "content": ""
       },
       {
         "lineNumber": 375,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[[Docs-SiteWideDocSettings]]"
       },
       {
         "lineNumber": 376,
         "author": {
           "gitId": "-"
         },
-        "content": ".Saving documentation as PDF files in Chrome"
+        "content": "\u003d\u003d\u003d Site-wide Documentation Settings"
       },
       {
         "lineNumber": 377,
         "author": {
           "gitId": "-"
         },
-        "content": "image::chrome_save_as_pdf.png[width\u003d\"300\"]"
+        "content": ""
       },
       {
         "lineNumber": 378,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The link:{repoURL}/build.gradle[`build.gradle`] file specifies some project-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how all documentation files within this project are rendered."
       },
       {
         "lineNumber": 379,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Docs-SiteWideDocSettings]]"
+        "content": ""
       },
       {
         "lineNumber": 380,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Site-wide Documentation Settings"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 381,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Attributes left unset in the `build.gradle` file will use their *default value*, if any."
       },
       {
         "lineNumber": 382,
         "author": {
           "gitId": "-"
         },
-        "content": "The link:{repoURL}/build.gradle[`build.gradle`] file specifies some project-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how all documentation files within this project are rendered."
+        "content": ""
       },
       {
         "lineNumber": 383,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
       },
       {
         "lineNumber": 384,
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": ".List of site-wide attributes"
       },
       {
         "lineNumber": 385,
         "author": {
           "gitId": "-"
         },
-        "content": "Attributes left unset in the `build.gradle` file will use their *default value*, if any."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 386,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|Attribute name |Description |Default value"
       },
       {
         "lineNumber": 387,
         "author": {
           "gitId": "-"
         },
-        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
+        "content": ""
       },
       {
         "lineNumber": 388,
         "author": {
           "gitId": "-"
         },
-        "content": ".List of site-wide attributes"
+        "content": "|`site-name`"
       },
       {
         "lineNumber": 389,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "|The name of the website."
       },
       {
         "lineNumber": 390,
         "author": {
           "gitId": "-"
         },
-        "content": "|Attribute name |Description |Default value"
+        "content": "If set, the name will be displayed near the top of the page."
       },
       {
         "lineNumber": 391,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|_not set_"
       },
       {
         "lineNumber": 392,
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-name`"
+        "content": ""
       },
       {
         "lineNumber": 393,
         "author": {
           "gitId": "-"
         },
-        "content": "|The name of the website."
+        "content": "|`site-githuburl`"
       },
       {
         "lineNumber": 394,
         "author": {
           "gitId": "-"
         },
-        "content": "If set, the name will be displayed near the top of the page."
+        "content": "|URL to the site\u0027s repository on https://github.com[GitHub]."
       },
       {
         "lineNumber": 395,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "Setting this will add a \"View on GitHub\" link in the navigation bar."
       },
       {
         "lineNumber": 396,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|_not set_"
       },
       {
         "lineNumber": 397,
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-githuburl`"
+        "content": ""
       },
       {
         "lineNumber": 398,
         "author": {
           "gitId": "-"
         },
-        "content": "|URL to the site\u0027s repository on https://github.com[GitHub]."
+        "content": "|`site-seedu`"
       },
       {
         "lineNumber": 399,
         "author": {
           "gitId": "-"
         },
-        "content": "Setting this will add a \"View on GitHub\" link in the navigation bar."
+        "content": "|Define this attribute if the project is an official SE-EDU project."
       },
       {
         "lineNumber": 400,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "This will render the SE-EDU navigation bar at the top of the page, and add some SE-EDU-specific navigation items."
       },
       {
         "lineNumber": 401,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|_not set_"
       },
       {
         "lineNumber": 402,
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-seedu`"
+        "content": ""
       },
       {
         "lineNumber": 403,
         "author": {
           "gitId": "-"
         },
-        "content": "|Define this attribute if the project is an official SE-EDU project."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 404,
         "author": {
           "gitId": "-"
         },
-        "content": "This will render the SE-EDU navigation bar at the top of the page, and add some SE-EDU-specific navigation items."
+        "content": ""
       },
       {
         "lineNumber": 405,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "[[Docs-PerFileDocSettings]]"
       },
       {
         "lineNumber": 406,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Per-file Documentation Settings"
       },
       {
         "lineNumber": 407,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 408,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Each `.adoc` file may also specify some file-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how the file is rendered."
       },
       {
         "lineNumber": 409,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Docs-PerFileDocSettings]]"
+        "content": ""
       },
       {
         "lineNumber": 410,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Per-file Documentation Settings"
+        "content": "Asciidoctor\u0027s https://asciidoctor.org/docs/user-manual/#builtin-attributes[built-in attributes] may be specified and used as well."
       },
       {
         "lineNumber": 411,
@@ -29730,126 +29730,126 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Each `.adoc` file may also specify some file-specific https://asciidoctor.org/docs/user-manual/#attributes[asciidoc attributes] which affects how the file is rendered."
+        "content": "[TIP]"
       },
       {
         "lineNumber": 413,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Attributes left unset in `.adoc` files will use their *default value*, if any."
       },
       {
         "lineNumber": 414,
         "author": {
           "gitId": "-"
         },
-        "content": "Asciidoctor\u0027s https://asciidoctor.org/docs/user-manual/#builtin-attributes[built-in attributes] may be specified and used as well."
+        "content": ""
       },
       {
         "lineNumber": 415,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
       },
       {
         "lineNumber": 416,
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": ".List of per-file attributes, excluding Asciidoctor\u0027s built-in attributes"
       },
       {
         "lineNumber": 417,
         "author": {
           "gitId": "-"
         },
-        "content": "Attributes left unset in `.adoc` files will use their *default value*, if any."
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 418,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|Attribute name |Description |Default value"
       },
       {
         "lineNumber": 419,
         "author": {
           "gitId": "-"
         },
-        "content": "[cols\u003d\"1,2a,1\", options\u003d\"header\"]"
+        "content": ""
       },
       {
         "lineNumber": 420,
         "author": {
           "gitId": "-"
         },
-        "content": ".List of per-file attributes, excluding Asciidoctor\u0027s built-in attributes"
+        "content": "|`site-section`"
       },
       {
         "lineNumber": 421,
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "|Site section that the document belongs to."
       },
       {
         "lineNumber": 422,
         "author": {
           "gitId": "-"
         },
-        "content": "|Attribute name |Description |Default value"
+        "content": "This will cause the associated item in the navigation bar to be highlighted."
       },
       {
         "lineNumber": 423,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "One of: `UserGuide`, `DeveloperGuide`, ``LearningOutcomes``{asterisk}, `AboutUs`, `ContactUs`"
       },
       {
         "lineNumber": 424,
         "author": {
           "gitId": "-"
         },
-        "content": "|`site-section`"
+        "content": ""
       },
       {
         "lineNumber": 425,
         "author": {
           "gitId": "-"
         },
-        "content": "|Site section that the document belongs to."
+        "content": "_{asterisk} Official SE-EDU projects only_"
       },
       {
         "lineNumber": 426,
         "author": {
           "gitId": "-"
         },
-        "content": "This will cause the associated item in the navigation bar to be highlighted."
+        "content": "|_not set_"
       },
       {
         "lineNumber": 427,
         "author": {
           "gitId": "-"
         },
-        "content": "One of: `UserGuide`, `DeveloperGuide`, ``LearningOutcomes``{asterisk}, `AboutUs`, `ContactUs`"
+        "content": ""
       },
       {
         "lineNumber": 428,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "|`no-site-header`"
       },
       {
         "lineNumber": 429,
         "author": {
           "gitId": "-"
         },
-        "content": "_{asterisk} Official SE-EDU projects only_"
+        "content": "|Set this attribute to remove the site navigation bar."
       },
       {
         "lineNumber": 430,
@@ -29870,21 +29870,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|`no-site-header`"
+        "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 433,
         "author": {
           "gitId": "-"
         },
-        "content": "|Set this attribute to remove the site navigation bar."
+        "content": ""
       },
       {
         "lineNumber": 434,
         "author": {
           "gitId": "-"
         },
-        "content": "|_not set_"
+        "content": "\u003d\u003d\u003d Site Template"
       },
       {
         "lineNumber": 435,
@@ -29898,77 +29898,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "|\u003d\u003d\u003d"
+        "content": "The files in link:{repoURL}/docs/stylesheets[`docs/stylesheets`] are the https://developer.mozilla.org/en-US/docs/Web/CSS[CSS stylesheets] of the site."
       },
       {
         "lineNumber": 437,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "You can modify them to change some properties of the site\u0027s design."
       },
       {
         "lineNumber": 438,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Site Template"
+        "content": ""
       },
       {
         "lineNumber": 439,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The files in link:{repoURL}/docs/templates[`docs/templates`] controls the rendering of `.adoc` files into HTML5."
       },
       {
         "lineNumber": 440,
         "author": {
           "gitId": "-"
         },
-        "content": "The files in link:{repoURL}/docs/stylesheets[`docs/stylesheets`] are the https://developer.mozilla.org/en-US/docs/Web/CSS[CSS stylesheets] of the site."
+        "content": "These template files are written in a mixture of https://www.ruby-lang.org[Ruby] and http://slim-lang.com[Slim]."
       },
       {
         "lineNumber": 441,
         "author": {
           "gitId": "-"
         },
-        "content": "You can modify them to change some properties of the site\u0027s design."
+        "content": ""
       },
       {
         "lineNumber": 442,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[WARNING]"
       },
       {
         "lineNumber": 443,
         "author": {
           "gitId": "-"
         },
-        "content": "The files in link:{repoURL}/docs/templates[`docs/templates`] controls the rendering of `.adoc` files into HTML5."
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 444,
         "author": {
           "gitId": "-"
         },
-        "content": "These template files are written in a mixture of https://www.ruby-lang.org[Ruby] and http://slim-lang.com[Slim]."
+        "content": "Modifying the template files in link:{repoURL}/docs/templates[`docs/templates`] requires some knowledge and experience with Ruby and Asciidoctor\u0027s API."
       },
       {
         "lineNumber": 445,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "You should only modify them if you need greater control over the site\u0027s layout than what stylesheets can provide."
       },
       {
         "lineNumber": 446,
         "author": {
           "gitId": "-"
         },
-        "content": "[WARNING]"
+        "content": "The SE-EDU team does not provide support for modified template files."
       },
       {
         "lineNumber": 447,
@@ -29982,49 +29982,49 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Modifying the template files in link:{repoURL}/docs/templates[`docs/templates`] requires some knowledge and experience with Ruby and Asciidoctor\u0027s API."
+        "content": ""
       },
       {
         "lineNumber": 449,
         "author": {
           "gitId": "-"
         },
-        "content": "You should only modify them if you need greater control over the site\u0027s layout than what stylesheets can provide."
+        "content": "[[Testing]]"
       },
       {
         "lineNumber": 450,
         "author": {
           "gitId": "-"
         },
-        "content": "The SE-EDU team does not provide support for modified template files."
+        "content": "\u003d\u003d Testing"
       },
       {
         "lineNumber": 451,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 452,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Running Tests"
       },
       {
         "lineNumber": 453,
         "author": {
           "gitId": "-"
         },
-        "content": "[[Testing]]"
+        "content": ""
       },
       {
         "lineNumber": 454,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Testing"
+        "content": "There are three ways to run tests."
       },
       {
         "lineNumber": 455,
@@ -30038,77 +30038,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Running Tests"
+        "content": "[TIP]"
       },
       {
         "lineNumber": 457,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "The most reliable way to run tests is the 3rd one. The first two methods might fail some GUI tests due to platform/resolution-specific idiosyncrasies."
       },
       {
         "lineNumber": 458,
         "author": {
           "gitId": "-"
         },
-        "content": "There are three ways to run tests."
+        "content": ""
       },
       {
         "lineNumber": 459,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "*Method 1: Using IntelliJ JUnit test runner*"
       },
       {
         "lineNumber": 460,
         "author": {
           "gitId": "-"
         },
-        "content": "[TIP]"
+        "content": ""
       },
       {
         "lineNumber": 461,
         "author": {
           "gitId": "-"
         },
-        "content": "The most reliable way to run tests is the 3rd one. The first two methods might fail some GUI tests due to platform/resolution-specific idiosyncrasies."
+        "content": "* To run all tests, right-click on the `src/test/java` folder and choose `Run \u0027All Tests\u0027`"
       },
       {
         "lineNumber": 462,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* To run a subset of tests, you can right-click on a test package, test class, or a test and choose `Run \u0027ABC\u0027`"
       },
       {
         "lineNumber": 463,
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 1: Using IntelliJ JUnit test runner*"
+        "content": ""
       },
       {
         "lineNumber": 464,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "*Method 2: Using Gradle*"
       },
       {
         "lineNumber": 465,
         "author": {
           "gitId": "-"
         },
-        "content": "* To run all tests, right-click on the `src/test/java` folder and choose `Run \u0027All Tests\u0027`"
+        "content": ""
       },
       {
         "lineNumber": 466,
         "author": {
           "gitId": "-"
         },
-        "content": "* To run a subset of tests, you can right-click on a test package, test class, or a test and choose `Run \u0027ABC\u0027`"
+        "content": "* Open a console and run the command `gradlew clean allTests` (Mac/Linux: `./gradlew clean allTests`)"
       },
       {
         "lineNumber": 467,
@@ -30122,42 +30122,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 2: Using Gradle*"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 469,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e for more info on how to run tests using Gradle."
       },
       {
         "lineNumber": 470,
         "author": {
           "gitId": "-"
         },
-        "content": "* Open a console and run the command `gradlew clean allTests` (Mac/Linux: `./gradlew clean allTests`)"
+        "content": ""
       },
       {
         "lineNumber": 471,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "*Method 3: Using Gradle (headless)*"
       },
       {
         "lineNumber": 472,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 473,
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e for more info on how to run tests using Gradle."
+        "content": "Thanks to the https://github.com/TestFX/TestFX[TestFX] library we use, our GUI tests can be run in the _headless_ mode. In the headless mode, GUI tests do not show up on the screen. That means the developer can do other things on the Computer while the tests are running."
       },
       {
         "lineNumber": 474,
@@ -30171,7 +30171,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Method 3: Using Gradle (headless)*"
+        "content": "To run tests in headless mode, open a console and run the command `gradlew clean headless allTests` (Mac/Linux: `./gradlew clean headless allTests`)"
       },
       {
         "lineNumber": 476,
@@ -30185,7 +30185,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Thanks to the https://github.com/TestFX/TestFX[TestFX] library we use, our GUI tests can be run in the _headless_ mode. In the headless mode, GUI tests do not show up on the screen. That means the developer can do other things on the Computer while the tests are running."
+        "content": "\u003d\u003d\u003d Types of tests"
       },
       {
         "lineNumber": 478,
@@ -30199,7 +30199,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "To run tests in headless mode, open a console and run the command `gradlew clean headless allTests` (Mac/Linux: `./gradlew clean headless allTests`)"
+        "content": "We have two types of tests:"
       },
       {
         "lineNumber": 480,
@@ -30213,98 +30213,98 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Types of tests"
+        "content": ".  *GUI Tests* - These are tests involving the GUI. They include,"
       },
       {
         "lineNumber": 482,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".. _System Tests_ that test the entire App by simulating user actions on the GUI. These are in the `systemtests` package."
       },
       {
         "lineNumber": 483,
         "author": {
           "gitId": "-"
         },
-        "content": "We have two types of tests:"
+        "content": ".. _Unit tests_ that test the individual components. These are in `seedu.address.ui` package."
       },
       {
         "lineNumber": 484,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  *Non-GUI Tests* - These are tests not involving the GUI. They include,"
       },
       {
         "lineNumber": 485,
         "author": {
           "gitId": "-"
         },
-        "content": ".  *GUI Tests* - These are tests involving the GUI. They include,"
+        "content": "..  _Unit tests_ targeting the lowest level methods/classes. +"
       },
       {
         "lineNumber": 486,
         "author": {
           "gitId": "-"
         },
-        "content": ".. _System Tests_ that test the entire App by simulating user actions on the GUI. These are in the `systemtests` package."
+        "content": "e.g. `seedu.address.commons.StringUtilTest`"
       },
       {
         "lineNumber": 487,
         "author": {
           "gitId": "-"
         },
-        "content": ".. _Unit tests_ that test the individual components. These are in `seedu.address.ui` package."
+        "content": "..  _Integration tests_ that are checking the integration of multiple code units (those code units are assumed to be working). +"
       },
       {
         "lineNumber": 488,
         "author": {
           "gitId": "-"
         },
-        "content": ".  *Non-GUI Tests* - These are tests not involving the GUI. They include,"
+        "content": "e.g. `seedu.address.storage.StorageManagerTest`"
       },
       {
         "lineNumber": 489,
         "author": {
           "gitId": "-"
         },
-        "content": "..  _Unit tests_ targeting the lowest level methods/classes. +"
+        "content": "..  Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together. +"
       },
       {
         "lineNumber": 490,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.commons.StringUtilTest`"
+        "content": "e.g. `seedu.address.logic.LogicManagerTest`"
       },
       {
         "lineNumber": 491,
         "author": {
           "gitId": "-"
         },
-        "content": "..  _Integration tests_ that are checking the integration of multiple code units (those code units are assumed to be working). +"
+        "content": ""
       },
       {
         "lineNumber": 492,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.storage.StorageManagerTest`"
+        "content": ""
       },
       {
         "lineNumber": 493,
         "author": {
           "gitId": "-"
         },
-        "content": "..  Hybrids of unit and integration tests. These test are checking multiple code units as well as how the are connected together. +"
+        "content": "\u003d\u003d\u003d Troubleshooting Testing"
       },
       {
         "lineNumber": 494,
         "author": {
           "gitId": "-"
         },
-        "content": "e.g. `seedu.address.logic.LogicManagerTest`"
+        "content": "**Problem: `HelpWindowTest` fails with a `NullPointerException`.**"
       },
       {
         "lineNumber": 495,
@@ -30318,42 +30318,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* Reason: One of its dependencies, `HelpWindow.html` in `src/main/resources/docs` is missing."
       },
       {
         "lineNumber": 497,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Troubleshooting Testing"
+        "content": "* Solution: Execute Gradle task `processResources`."
       },
       {
         "lineNumber": 498,
         "author": {
           "gitId": "-"
         },
-        "content": "**Problem: `HelpWindowTest` fails with a `NullPointerException`.**"
+        "content": ""
       },
       {
         "lineNumber": 499,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d Dev Ops"
       },
       {
         "lineNumber": 500,
         "author": {
           "gitId": "-"
         },
-        "content": "* Reason: One of its dependencies, `HelpWindow.html` in `src/main/resources/docs` is missing."
+        "content": ""
       },
       {
         "lineNumber": 501,
         "author": {
           "gitId": "-"
         },
-        "content": "* Solution: Execute Gradle task `processResources`."
+        "content": "\u003d\u003d\u003d Build Automation"
       },
       {
         "lineNumber": 502,
@@ -30367,7 +30367,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Dev Ops"
+        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e to learn how to use Gradle for build automation."
       },
       {
         "lineNumber": 504,
@@ -30381,7 +30381,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Build Automation"
+        "content": "\u003d\u003d\u003d Continuous Integration"
       },
       {
         "lineNumber": 506,
@@ -30395,7 +30395,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "See \u003c\u003cUsingGradle#, UsingGradle.adoc\u003e\u003e to learn how to use Gradle for build automation."
+        "content": "We use https://travis-ci.org/[Travis CI] and https://www.appveyor.com/[AppVeyor] to perform _Continuous Integration_ on our projects. See \u003c\u003cUsingTravis#, UsingTravis.adoc\u003e\u003e and \u003c\u003cUsingAppVeyor#, UsingAppVeyor.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 508,
@@ -30409,7 +30409,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Continuous Integration"
+        "content": "\u003d\u003d\u003d Coverage Reporting"
       },
       {
         "lineNumber": 510,
@@ -30423,7 +30423,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://travis-ci.org/[Travis CI] and https://www.appveyor.com/[AppVeyor] to perform _Continuous Integration_ on our projects. See \u003c\u003cUsingTravis#, UsingTravis.adoc\u003e\u003e and \u003c\u003cUsingAppVeyor#, UsingAppVeyor.adoc\u003e\u003e for more details."
+        "content": "We use https://coveralls.io/[Coveralls] to track the code coverage of our projects. See \u003c\u003cUsingCoveralls#, UsingCoveralls.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 512,
@@ -30437,42 +30437,42 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Coverage Reporting"
+        "content": "\u003d\u003d\u003d Documentation Previews"
       },
       {
         "lineNumber": 514,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "When a pull request has changes to asciidoc files, you can use https://www.netlify.com/[Netlify] to see a preview of how the HTML version of those asciidoc files will look like when the pull request is merged. See \u003c\u003cUsingNetlify#, UsingNetlify.adoc\u003e\u003e for more details."
       },
       {
         "lineNumber": 515,
         "author": {
           "gitId": "-"
         },
-        "content": "We use https://coveralls.io/[Coveralls] to track the code coverage of our projects. See \u003c\u003cUsingCoveralls#, UsingCoveralls.adoc\u003e\u003e for more details."
+        "content": ""
       },
       {
         "lineNumber": 516,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Making a Release"
       },
       {
         "lineNumber": 517,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Documentation Previews"
+        "content": ""
       },
       {
         "lineNumber": 518,
         "author": {
           "gitId": "-"
         },
-        "content": "When a pull request has changes to asciidoc files, you can use https://www.netlify.com/[Netlify] to see a preview of how the HTML version of those asciidoc files will look like when the pull request is merged. See \u003c\u003cUsingNetlify#, UsingNetlify.adoc\u003e\u003e for more details."
+        "content": "Here are the steps to create a new release."
       },
       {
         "lineNumber": 519,
@@ -30486,70 +30486,70 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Making a Release"
+        "content": ".  Update the version number in link:{repoURL}/src/main/java/seedu/address/MainApp.java[`MainApp.java`]."
       },
       {
         "lineNumber": 521,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  Generate a JAR file \u003c\u003cUsingGradle#creating-the-jar-file, using Gradle\u003e\u003e."
       },
       {
         "lineNumber": 522,
         "author": {
           "gitId": "-"
         },
-        "content": "Here are the steps to create a new release."
+        "content": ".  Tag the repo with the version number. e.g. `v0.1`"
       },
       {
         "lineNumber": 523,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".  https://help.github.com/articles/creating-releases/[Create a new release using GitHub] and upload the JAR file you created."
       },
       {
         "lineNumber": 524,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Update the version number in link:{repoURL}/src/main/java/seedu/address/MainApp.java[`MainApp.java`]."
+        "content": ""
       },
       {
         "lineNumber": 525,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Generate a JAR file \u003c\u003cUsingGradle#creating-the-jar-file, using Gradle\u003e\u003e."
+        "content": "\u003d\u003d\u003d Managing Dependencies"
       },
       {
         "lineNumber": 526,
         "author": {
           "gitId": "-"
         },
-        "content": ".  Tag the repo with the version number. e.g. `v0.1`"
+        "content": ""
       },
       {
         "lineNumber": 527,
         "author": {
           "gitId": "-"
         },
-        "content": ".  https://help.github.com/articles/creating-releases/[Create a new release using GitHub] and upload the JAR file you created."
+        "content": "A project often depends on third-party libraries. For example, Address Book depends on the http://wiki.fasterxml.com/JacksonHome[Jackson library] for XML parsing. Managing these _dependencies_ can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives. +"
       },
       {
         "lineNumber": 528,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "a. Include those libraries in the repo (this bloats the repo size) +"
       },
       {
         "lineNumber": 529,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Managing Dependencies"
+        "content": "b. Require developers to download those libraries manually (this creates extra work for developers)"
       },
       {
         "lineNumber": 530,
@@ -30563,91 +30563,91 @@
         "author": {
           "gitId": "-"
         },
-        "content": "A project often depends on third-party libraries. For example, Address Book depends on the http://wiki.fasterxml.com/JacksonHome[Jackson library] for XML parsing. Managing these _dependencies_ can be automated using Gradle. For example, Gradle can download the dependencies automatically, which is better than these alternatives. +"
+        "content": "[[GetStartedProgramming]]"
       },
       {
         "lineNumber": 532,
         "author": {
           "gitId": "-"
         },
-        "content": "a. Include those libraries in the repo (this bloats the repo size) +"
+        "content": ""
       },
       {
         "lineNumber": 533,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "b. Require developers to download those libraries manually (this creates extra work for developers)"
-      },
-      {
-        "lineNumber": 534,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 535,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "[[GetStartedProgramming]]"
-      },
-      {
-        "lineNumber": 536,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 537,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "[appendix]"
       },
       {
-        "lineNumber": 538,
+        "lineNumber": 534,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "\u003d\u003d Target User Profile"
       },
       {
-        "lineNumber": 539,
+        "lineNumber": 535,
         "author": {
           "gitId": "alexkmj"
         },
         "content": "- An NUS Student who has a need to keep track of current CAP, calculate expected CAP, and grades required to achieve desired CAP."
       },
       {
-        "lineNumber": 540,
+        "lineNumber": 536,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "- Prefer desktop apps over other types."
       },
       {
-        "lineNumber": 541,
+        "lineNumber": 537,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "- Can type fast."
       },
       {
-        "lineNumber": 542,
+        "lineNumber": 538,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "- Prefers typing over mouse input."
       },
       {
-        "lineNumber": 543,
+        "lineNumber": 539,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "- Is reasonably comfortable using CLI apps."
+      },
+      {
+        "lineNumber": 540,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 541,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "[appendix]"
+      },
+      {
+        "lineNumber": 542,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "\u003d\u003d Value Proposition"
+      },
+      {
+        "lineNumber": 543,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "Helps students manage their CAP and predict what grades they need to reach their CAP goal."
       },
       {
         "lineNumber": 544,
@@ -30668,350 +30668,350 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "\u003d\u003d Value Proposition"
+        "content": "\u003d\u003d User Stories"
       },
       {
         "lineNumber": 547,
         "author": {
-          "gitId": "jeremiah-ang"
+          "gitId": "-"
         },
-        "content": "Helps students manage their CAP and predict what grades they need to reach their CAP goal."
+        "content": ""
       },
       {
         "lineNumber": 548,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 549,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
-        "content": "[appendix]"
-      },
-      {
-        "lineNumber": 550,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
-        "content": "\u003d\u003d User Stories"
-      },
-      {
-        "lineNumber": 551,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 552,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "*Must-Have*"
       },
       {
-        "lineNumber": 553,
+        "lineNumber": 549,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ""
       },
       {
-        "lineNumber": 554,
+        "lineNumber": 550,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "1.  As a user, I can add all the modules I have taken (module code,"
       },
       {
-        "lineNumber": 555,
+        "lineNumber": 551,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "*module title*, MCs, grade, semester taken) so that I can calculate"
       },
       {
-        "lineNumber": 556,
+        "lineNumber": 552,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "average mark I need to graduate with desired CAP."
       },
       {
-        "lineNumber": 557,
+        "lineNumber": 553,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "2.  As a user I can delete modules so if I change my mind or fail a"
       },
       {
-        "lineNumber": 558,
+        "lineNumber": 554,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "module I can re-calculate my average."
       },
       {
-        "lineNumber": 559,
+        "lineNumber": 555,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "3.  As a user I can delete modules so that if i entered a wrong module"
       },
       {
-        "lineNumber": 560,
+        "lineNumber": 556,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "or failed it, I can remove it."
       },
       {
-        "lineNumber": 561,
+        "lineNumber": 557,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "4.  As a user I can edit the marks I’ve entered previously so that I can"
       },
       {
-        "lineNumber": 562,
+        "lineNumber": 558,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "update my CAP."
       },
       {
-        "lineNumber": 563,
+        "lineNumber": 559,
         "author": {
           "gitId": "alexkmj"
         },
         "content": "5.  As a user, I can enter a CAP goal so that I can keep track of the"
       },
       {
-        "lineNumber": 564,
+        "lineNumber": 560,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "progress of my course"
       },
       {
-        "lineNumber": 565,
+        "lineNumber": 561,
         "author": {
           "gitId": "alexkmj"
         },
         "content": "6.  As a user, I can calculate the average mark I need across the"
       },
       {
-        "lineNumber": 566,
+        "lineNumber": 562,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "modules I’ve entered so I can see what mark I need for each module to"
       },
       {
-        "lineNumber": 567,
+        "lineNumber": 563,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "achieve my CAP goal. +"
       },
       {
-        "lineNumber": 568,
+        "lineNumber": 564,
         "author": {
           "gitId": "alexkmj"
         },
         "content": "7.  As a user, I can enter in predicted grades for modules so I can see"
       },
       {
-        "lineNumber": 569,
+        "lineNumber": 565,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "what CAP I would get if I got these grades in my modules."
       },
       {
-        "lineNumber": 570,
+        "lineNumber": 566,
         "author": {
           "gitId": "alexkmj"
         },
         "content": "8.  As a user, I can close the app and return to modify my entries so I"
       },
       {
-        "lineNumber": 571,
+        "lineNumber": 567,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "can enter my entries incrementally."
       },
       {
-        "lineNumber": 572,
+        "lineNumber": 568,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ""
       },
       {
-        "lineNumber": 573,
+        "lineNumber": 569,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "*Nice-To-Have*"
       },
       {
-        "lineNumber": 574,
+        "lineNumber": 570,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ""
       },
       {
-        "lineNumber": 575,
+        "lineNumber": 571,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "1. As a user, I can add a module without having to add the code, MCs, or semester taken so that I can quickly calculate CAP without worrying about the modules."
       },
       {
-        "lineNumber": 576,
+        "lineNumber": 572,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "2. As a user, I can still enter the same modules but get warned first so that I would not mistakenly enter the same module again"
       },
       {
-        "lineNumber": 577,
+        "lineNumber": 573,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "3. As a user, I can import all modules for this semester with NUSMods link so that my data can be consistent with NUSMods."
       },
       {
-        "lineNumber": 578,
+        "lineNumber": 574,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "4. As a user I can search for a module via keyword or module title, and select it for entering my grade so that I don’t have to remember the module code."
       },
       {
-        "lineNumber": 579,
+        "lineNumber": 575,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "5. As a user, I can adjust what marks I need for each module to achieve my CAP so I can put more emphasis on certain modules instead of expecting the same grade across all modules."
       },
       {
-        "lineNumber": 580,
+        "lineNumber": 576,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "6. As a user, I can view my current semester’s module goals and use a GUI to adjust projected grade for each module, and other modules will automatically adjust to compensate, so that I can see easily modify my data to see what grades I need for other modules."
       },
       {
-        "lineNumber": 581,
+        "lineNumber": 577,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "7. As a user, I can view total current MCs so that i can check if I meet the number of mc I need to graduate"
       },
       {
-        "lineNumber": 582,
+        "lineNumber": 578,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "8. As a user I can see if my CAP Goal is possible so I can check whether it is achievable."
       },
       {
-        "lineNumber": 583,
+        "lineNumber": 579,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "9. As a user, I can list modules taken by level as an alternative listing mode, so that it is easier to track graduation requirements."
       },
       {
-        "lineNumber": 584,
+        "lineNumber": 580,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "10. As a user, I can see what the highest possible CAP I can achieve with my current grades is so that I can set an appropriate goal."
       },
       {
-        "lineNumber": 585,
+        "lineNumber": 581,
         "author": {
           "gitId": "jeremyyew"
         },
         "content": "11. As a user, I can see what the minimum grades I need per module is to pass the year with my current grades so that I can see what the minimum about of work I need to do is."
       },
       {
-        "lineNumber": 586,
+        "lineNumber": 582,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ""
       },
       {
-        "lineNumber": 587,
+        "lineNumber": 583,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ""
       },
       {
-        "lineNumber": 588,
+        "lineNumber": 584,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "*Not-Useful*"
       },
       {
-        "lineNumber": 589,
+        "lineNumber": 585,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ""
       },
       {
-        "lineNumber": 590,
+        "lineNumber": 586,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "1. As a user, I can view the module descriptions so that I know what modules I should take"
       },
       {
-        "lineNumber": 591,
+        "lineNumber": 587,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "2. As a user I can enter the MCs for exchange I can keep track of modules that may not be mapped to our database of modules codes or isn’t the default number of MCs."
       },
       {
-        "lineNumber": 592,
+        "lineNumber": 588,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "3. As a user, I can export my timetable so that I can share it with my friend."
       },
       {
-        "lineNumber": 593,
+        "lineNumber": 589,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 594,
+        "lineNumber": 590,
         "author": {
           "gitId": "-"
         },
         "content": "[appendix]"
       },
       {
-        "lineNumber": 595,
+        "lineNumber": 591,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d Use Cases"
+      },
+      {
+        "lineNumber": 592,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 593,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "\u003d\u003d\u003d Use case: [UC1] Calculating current CAP"
+      },
+      {
+        "lineNumber": 594,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 595,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "*MSS*"
       },
       {
         "lineNumber": 596,
@@ -31025,147 +31025,147 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "\u003d\u003d\u003d Use case: [UC1] Calculating current CAP"
-      },
-      {
-        "lineNumber": 598,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 599,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
-        "content": "*MSS*"
-      },
-      {
-        "lineNumber": 600,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 601,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
         "content": "1. User enter modules"
       },
       {
-        "lineNumber": 602,
+        "lineNumber": 598,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "2. System recalculates CAP"
       },
       {
-        "lineNumber": 603,
+        "lineNumber": 599,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "3. System displays CAP"
       },
       {
-        "lineNumber": 604,
+        "lineNumber": 600,
         "author": {
           "gitId": "-"
         },
         "content": "+"
       },
       {
-        "lineNumber": 605,
+        "lineNumber": 601,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends."
       },
       {
-        "lineNumber": 606,
+        "lineNumber": 602,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 607,
+        "lineNumber": 603,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "*Extensions*"
       },
       {
-        "lineNumber": 608,
+        "lineNumber": 604,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 609,
+        "lineNumber": 605,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "* 1a. User enters invalid parameters"
       },
       {
-        "lineNumber": 610,
+        "lineNumber": 606,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "** 1a1. System shows an `Invalid entry` error message"
       },
       {
-        "lineNumber": 611,
+        "lineNumber": 607,
         "author": {
           "gitId": "-"
         },
         "content": "+"
       },
       {
-        "lineNumber": 612,
+        "lineNumber": 608,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends."
       },
       {
-        "lineNumber": 613,
+        "lineNumber": 609,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 614,
+        "lineNumber": 610,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "* 1b. User enters duplicate Module"
       },
       {
-        "lineNumber": 615,
+        "lineNumber": 611,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "** 1b1. System shows an `Duplicate Module` error message"
       },
       {
-        "lineNumber": 616,
+        "lineNumber": 612,
         "author": {
           "gitId": "-"
         },
         "content": "+"
       },
       {
-        "lineNumber": 617,
+        "lineNumber": 613,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends"
+      },
+      {
+        "lineNumber": 614,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 615,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "\u003d\u003d\u003d Use case: [UC2] View grades needed to achieve CAP goal (based on previous grades)"
+      },
+      {
+        "lineNumber": 616,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 617,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "*MSS*"
       },
       {
         "lineNumber": 618,
@@ -31179,140 +31179,140 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "\u003d\u003d\u003d Use case: [UC2] View grades needed to achieve CAP goal (based on previous grades)"
-      },
-      {
-        "lineNumber": 620,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 621,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
-        "content": "*MSS*"
-      },
-      {
-        "lineNumber": 622,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 623,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
         "content": "1. User enter CAP goal"
       },
       {
-        "lineNumber": 624,
+        "lineNumber": 620,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "2. System displays target grades for ungraded modules"
       },
       {
-        "lineNumber": 625,
+        "lineNumber": 621,
         "author": {
           "gitId": "-"
         },
         "content": "+"
       },
       {
-        "lineNumber": 626,
+        "lineNumber": 622,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends."
       },
       {
-        "lineNumber": 627,
+        "lineNumber": 623,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 628,
+        "lineNumber": 624,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "*Extensions*"
       },
       {
-        "lineNumber": 629,
+        "lineNumber": 625,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 630,
+        "lineNumber": 626,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "* 1a. CAP goal is invalid"
       },
       {
-        "lineNumber": 631,
+        "lineNumber": 627,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "** 1a1. System shows an `Invalid CAP Goal` error message"
       },
       {
-        "lineNumber": 632,
+        "lineNumber": 628,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "+"
       },
       {
-        "lineNumber": 633,
+        "lineNumber": 629,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends."
       },
       {
-        "lineNumber": 634,
+        "lineNumber": 630,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 635,
+        "lineNumber": 631,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "* 2a. CAP goal is not achievable"
       },
       {
-        "lineNumber": 636,
+        "lineNumber": 632,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "** 2a1. System shows an `Not achievable` error message"
       },
       {
-        "lineNumber": 637,
+        "lineNumber": 633,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "+"
       },
       {
-        "lineNumber": 638,
+        "lineNumber": 634,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends."
+      },
+      {
+        "lineNumber": 635,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 636,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "\u003d\u003d\u003d Use case: [UC3] Updating target grades"
+      },
+      {
+        "lineNumber": 637,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 638,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "*Pre-condition:* `[UC2]` completed"
       },
       {
         "lineNumber": 639,
@@ -31326,7 +31326,7 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "\u003d\u003d\u003d Use case: [UC3] Updating target grades"
+        "content": "*MSS*"
       },
       {
         "lineNumber": 641,
@@ -31340,112 +31340,112 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "*Pre-condition:* `[UC2]` completed"
-      },
-      {
-        "lineNumber": 643,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 644,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
-        "content": "*MSS*"
-      },
-      {
-        "lineNumber": 645,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 646,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
         "content": "1. User modify modules entries"
       },
       {
-        "lineNumber": 647,
+        "lineNumber": 643,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "2. System recalculates target grades for ungraded modules"
       },
       {
-        "lineNumber": 648,
+        "lineNumber": 644,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "3. System displays new target grades for ungraded modules"
       },
       {
-        "lineNumber": 649,
+        "lineNumber": 645,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "+"
       },
       {
-        "lineNumber": 650,
+        "lineNumber": 646,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends."
       },
       {
-        "lineNumber": 651,
+        "lineNumber": 647,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 652,
+        "lineNumber": 648,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "*Extensions*"
       },
       {
-        "lineNumber": 653,
+        "lineNumber": 649,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 654,
+        "lineNumber": 650,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "* 2a. CAP goal is not achievable with new set of modules"
       },
       {
-        "lineNumber": 655,
+        "lineNumber": 651,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "** 2a1. System shows an `Not achievable` error message"
       },
       {
-        "lineNumber": 656,
+        "lineNumber": 652,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "+"
       },
       {
-        "lineNumber": 657,
+        "lineNumber": 653,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends."
+      },
+      {
+        "lineNumber": 654,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 655,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "\u003d\u003d\u003d Use case: [UC4] Save entered module"
+      },
+      {
+        "lineNumber": 656,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 657,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*MSS*"
       },
       {
         "lineNumber": 658,
@@ -31459,56 +31459,56 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "\u003d\u003d\u003d Use case: [UC4] Save entered module"
-      },
-      {
-        "lineNumber": 660,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 661,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "*MSS*"
-      },
-      {
-        "lineNumber": 662,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 663,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
         "content": "1. User enters module"
       },
       {
-        "lineNumber": 664,
+        "lineNumber": 660,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "2. System saves the modules"
       },
       {
-        "lineNumber": 665,
+        "lineNumber": 661,
         "author": {
           "gitId": "-"
         },
         "content": "+"
       },
       {
-        "lineNumber": 666,
+        "lineNumber": 662,
         "author": {
           "gitId": "-"
         },
         "content": "Use case ends."
+      },
+      {
+        "lineNumber": 663,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 664,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "\u003d\u003d\u003d Use case: [UC5] Loading saved modules"
+      },
+      {
+        "lineNumber": 665,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 666,
+        "author": {
+          "gitId": "jeremiah-ang"
+        },
+        "content": "*Pre-conditions:* `[UC4]` completed"
       },
       {
         "lineNumber": 667,
@@ -31522,7 +31522,7 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "\u003d\u003d\u003d Use case: [UC5] Loading saved modules"
+        "content": "*MSS*"
       },
       {
         "lineNumber": 669,
@@ -31536,203 +31536,203 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "*Pre-conditions:* `[UC4]` completed"
-      },
-      {
-        "lineNumber": 671,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 672,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
-        "content": "*MSS*"
-      },
-      {
-        "lineNumber": 673,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 674,
-        "author": {
-          "gitId": "jeremiah-ang"
-        },
         "content": "1. User restarts the application"
       },
       {
-        "lineNumber": 675,
+        "lineNumber": 671,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "2. User list entered modules"
       },
       {
-        "lineNumber": 676,
+        "lineNumber": 672,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "3. System displays saved modules"
       },
       {
-        "lineNumber": 677,
+        "lineNumber": 673,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "+"
       },
       {
-        "lineNumber": 678,
+        "lineNumber": 674,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": "Use case ends"
       },
       {
-        "lineNumber": 679,
+        "lineNumber": 675,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 680,
+        "lineNumber": 676,
         "author": {
           "gitId": "-"
         },
         "content": "[appendix]"
       },
       {
-        "lineNumber": 681,
+        "lineNumber": 677,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d Non Functional Requirements"
       },
       {
-        "lineNumber": 682,
+        "lineNumber": 678,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 683,
+        "lineNumber": 679,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ". Should work on any [mainstream OS](https://github.com/nus-cs2103-AY1819S1/addressbook-level4/blob/master/docs/DeveloperGuide.adoc#mainstream-os) as long as it has Java 10 or higher installed."
       },
       {
-        "lineNumber": 684,
+        "lineNumber": 680,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ". Should be able to hold up to 100 modules without a noticeable sluggishness in performance for typical usage."
       },
       {
-        "lineNumber": 685,
+        "lineNumber": 681,
         "author": {
           "gitId": "-"
         },
         "content": ". A user with above average typing speed for regular English text (i.e. not code, not system admin commands) should be able to accomplish most of the tasks faster using commands than using the mouse."
       },
       {
-        "lineNumber": 686,
+        "lineNumber": 682,
         "author": {
           "gitId": "jeremiah-ang"
         },
         "content": ". Should calculate prediction/expected CAP in 1 seconds"
       },
       {
-        "lineNumber": 687,
+        "lineNumber": 683,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 688,
+        "lineNumber": 684,
         "author": {
           "gitId": "-"
         },
         "content": "[appendix]"
       },
       {
-        "lineNumber": 689,
+        "lineNumber": 685,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d Glossary"
       },
       {
-        "lineNumber": 690,
+        "lineNumber": 686,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 691,
+        "lineNumber": 687,
         "author": {
           "gitId": "-"
         },
         "content": "[[mainstream-os]] Mainstream OS::"
       },
       {
-        "lineNumber": 692,
+        "lineNumber": 688,
         "author": {
           "gitId": "-"
         },
         "content": "Windows, Linux, Unix, OS-X"
       },
       {
-        "lineNumber": 693,
+        "lineNumber": 689,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 694,
+        "lineNumber": 690,
         "author": {
           "gitId": "-"
         },
         "content": "[[private-contact-detail]] Private contact detail::"
       },
       {
-        "lineNumber": 695,
+        "lineNumber": 691,
         "author": {
           "gitId": "-"
         },
         "content": "A contact detail that is not meant to be shared with others"
       },
       {
-        "lineNumber": 696,
+        "lineNumber": 692,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 697,
+        "lineNumber": 693,
         "author": {
           "gitId": "-"
         },
         "content": "[appendix]"
       },
       {
-        "lineNumber": 698,
+        "lineNumber": 694,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d Product Survey"
+      },
+      {
+        "lineNumber": 695,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 696,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "*Product Name*"
+      },
+      {
+        "lineNumber": 697,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 698,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Author: ..."
       },
       {
         "lineNumber": 699,
@@ -31746,7 +31746,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "*Product Name*"
+        "content": "Pros:"
       },
       {
         "lineNumber": 701,
@@ -31760,35 +31760,35 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Author: ..."
+        "content": "* ..."
       },
       {
         "lineNumber": 703,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* ..."
       },
       {
         "lineNumber": 704,
         "author": {
           "gitId": "-"
         },
-        "content": "Pros:"
+        "content": ""
       },
       {
         "lineNumber": 705,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Cons:"
       },
       {
         "lineNumber": 706,
         "author": {
           "gitId": "-"
         },
-        "content": "* ..."
+        "content": ""
       },
       {
         "lineNumber": 707,
@@ -31802,91 +31802,91 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* ..."
       },
       {
         "lineNumber": 709,
         "author": {
           "gitId": "-"
         },
-        "content": "Cons:"
+        "content": ""
       },
       {
         "lineNumber": 710,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[appendix]"
       },
       {
         "lineNumber": 711,
         "author": {
           "gitId": "-"
         },
-        "content": "* ..."
+        "content": "\u003d\u003d Instructions for Manual Testing"
       },
       {
         "lineNumber": 712,
         "author": {
           "gitId": "-"
         },
-        "content": "* ..."
+        "content": ""
       },
       {
         "lineNumber": 713,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Given below are instructions to test the app manually."
       },
       {
         "lineNumber": 714,
         "author": {
           "gitId": "-"
         },
-        "content": "[appendix]"
+        "content": ""
       },
       {
         "lineNumber": 715,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d Instructions for Manual Testing"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 716,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "These instructions only provide a starting point for testers to work on; testers are expected to do more _exploratory_ testing."
       },
       {
         "lineNumber": 717,
         "author": {
           "gitId": "-"
         },
-        "content": "Given below are instructions to test the app manually."
+        "content": ""
       },
       {
         "lineNumber": 718,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Launch and Shutdown"
       },
       {
         "lineNumber": 719,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": ""
       },
       {
         "lineNumber": 720,
         "author": {
           "gitId": "-"
         },
-        "content": "These instructions only provide a starting point for testers to work on; testers are expected to do more _exploratory_ testing."
+        "content": ". Initial launch"
       },
       {
         "lineNumber": 721,
@@ -31900,21 +31900,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Launch and Shutdown"
+        "content": ".. Download the jar file and copy into an empty folder"
       },
       {
         "lineNumber": 723,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".. Double-click the jar file +"
       },
       {
         "lineNumber": 724,
         "author": {
           "gitId": "-"
         },
-        "content": ". Initial launch"
+        "content": "   Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum."
       },
       {
         "lineNumber": 725,
@@ -31928,35 +31928,35 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".. Download the jar file and copy into an empty folder"
+        "content": ". Saving window preferences"
       },
       {
         "lineNumber": 727,
         "author": {
           "gitId": "-"
         },
-        "content": ".. Double-click the jar file +"
+        "content": ""
       },
       {
         "lineNumber": 728,
         "author": {
           "gitId": "-"
         },
-        "content": "   Expected: Shows the GUI with a set of sample contacts. The window size may not be optimum."
+        "content": ".. Resize the window to an optimum size. Move the window to a different location. Close the window."
       },
       {
         "lineNumber": 729,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".. Re-launch the app by double-clicking the jar file. +"
       },
       {
         "lineNumber": 730,
         "author": {
           "gitId": "-"
         },
-        "content": ". Saving window preferences"
+        "content": "   Expected: The most recent window size and location is retained."
       },
       {
         "lineNumber": 731,
@@ -31970,21 +31970,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": ".. Resize the window to an optimum size. Move the window to a different location. Close the window."
+        "content": "_{ more test cases ... }_"
       },
       {
         "lineNumber": 733,
         "author": {
           "gitId": "-"
         },
-        "content": ".. Re-launch the app by double-clicking the jar file. +"
+        "content": ""
       },
       {
         "lineNumber": 734,
         "author": {
           "gitId": "-"
         },
-        "content": "   Expected: The most recent window size and location is retained."
+        "content": "\u003d\u003d\u003d Deleting a person"
       },
       {
         "lineNumber": 735,
@@ -31998,7 +31998,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "_{ more test cases ... }_"
+        "content": ". Deleting a person while all persons are listed"
       },
       {
         "lineNumber": 737,
@@ -32012,77 +32012,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Deleting a person"
+        "content": ".. Prerequisites: List all persons using the `list` command. Multiple persons in the list."
       },
       {
         "lineNumber": 739,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".. Test case: `delete 1` +"
       },
       {
         "lineNumber": 740,
         "author": {
           "gitId": "-"
         },
-        "content": ". Deleting a person while all persons are listed"
+        "content": "   Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated."
       },
       {
         "lineNumber": 741,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": ".. Test case: `delete 0` +"
       },
       {
         "lineNumber": 742,
         "author": {
           "gitId": "-"
         },
-        "content": ".. Prerequisites: List all persons using the `list` command. Multiple persons in the list."
+        "content": "   Expected: No person is deleted. Error details shown in the status message. Status bar remains the same."
       },
       {
         "lineNumber": 743,
         "author": {
           "gitId": "-"
         },
-        "content": ".. Test case: `delete 1` +"
+        "content": ".. Other incorrect delete commands to try: `delete`, `delete x` (where x is larger than the list size) _{give more}_ +"
       },
       {
         "lineNumber": 744,
         "author": {
           "gitId": "-"
         },
-        "content": "   Expected: First contact is deleted from the list. Details of the deleted contact shown in the status message. Timestamp in the status bar is updated."
+        "content": "   Expected: Similar to previous."
       },
       {
         "lineNumber": 745,
         "author": {
           "gitId": "-"
         },
-        "content": ".. Test case: `delete 0` +"
+        "content": ""
       },
       {
         "lineNumber": 746,
         "author": {
           "gitId": "-"
         },
-        "content": "   Expected: No person is deleted. Error details shown in the status message. Status bar remains the same."
+        "content": "_{ more test cases ... }_"
       },
       {
         "lineNumber": 747,
         "author": {
           "gitId": "-"
         },
-        "content": ".. Other incorrect delete commands to try: `delete`, `delete x` (where x is larger than the list size) _{give more}_ +"
+        "content": ""
       },
       {
         "lineNumber": 748,
         "author": {
           "gitId": "-"
         },
-        "content": "   Expected: Similar to previous."
+        "content": "\u003d\u003d\u003d Saving data"
       },
       {
         "lineNumber": 749,
@@ -32096,7 +32096,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "_{ more test cases ... }_"
+        "content": ". Dealing with missing/corrupted data files"
       },
       {
         "lineNumber": 751,
@@ -32110,7 +32110,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Saving data"
+        "content": ".. _{explain how to simulate a missing/corrupted file and the expected behavior}_"
       },
       {
         "lineNumber": 753,
@@ -32124,42 +32124,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": ". Dealing with missing/corrupted data files"
-      },
-      {
-        "lineNumber": 755,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 756,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ".. _{explain how to simulate a missing/corrupted file and the expected behavior}_"
-      },
-      {
-        "lineNumber": 757,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 758,
-        "author": {
-          "gitId": "-"
-        },
         "content": "_{ more test cases ... }_"
       }
     ],
     "authorContributionMap": {
       "jeremyyew": 11,
       "alexkmj": 10,
-      "-": 646,
-      "jeremiah-ang": 91
+      "-": 638,
+      "jeremiah-ang": 95
     }
   },
   {
@@ -32912,7 +32884,7 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "\u003d\u003d\u003d Computing CAP : `goal`"
+        "content": "\u003d\u003d\u003d Setting Cap Goal : `goal`"
       },
       {
         "lineNumber": 108,
@@ -32954,7 +32926,7 @@
         "author": {
           "gitId": "jeremiah-ang"
         },
-        "content": "* Set and Update the CAP goal."
+        "content": "* Sets and updates the CAP goal."
       },
       {
         "lineNumber": 114,

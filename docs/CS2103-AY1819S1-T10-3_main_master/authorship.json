@@ -28309,6 +28309,210 @@
     }
   },
   {
+    "path": "src/main/java/seedu/learnvocabulary/logic/commands/WordOfTheDayCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "package seedu.learnvocabulary.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.Model;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Word;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": " * Displays the word of the day at Dictionary.com"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "public class WordOfTheDayCommand extends Command {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"word\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Today\u0027s word on Dictionary.com: %1$s\\n\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    private final Word wordOfTheDay;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public WordOfTheDayCommand(Word word) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        requireNonNull(word);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        wordOfTheDay \u003d word;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, wordOfTheDay));"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "alexehrs": 28
+    }
+  },
+  {
     "path": "src/main/java/seedu/learnvocabulary/logic/commands/exceptions/CommandException.java",
     "lines": [
       {
@@ -32148,614 +32352,663 @@
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "import seedu.learnvocabulary.logic.parser.exceptions.ParseException;"
+        "content": "import seedu.learnvocabulary.logic.commands.WordOfTheDayCommand;"
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": ""
+        "content": "import seedu.learnvocabulary.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": " * Parses user input."
+        "content": "/**"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Parses user input."
       },
       {
         "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 34,
         "author": {
           "gitId": "russellong95"
         },
         "content": "public class LearnVocabularyParser {"
       },
       {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Used for initial separation of command word and args."
+        "content": "    /**"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Used for initial separation of command word and args."
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
+        "content": "     */"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses user input into command for execution."
+        "content": "    /**"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "alexehrs"
         },
-        "content": "     *"
+        "content": "     * Parses user or website input into command for execution."
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param userInput full user input string"
+        "content": "     *"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return the command based on the user input"
+        "content": "     * @param userInput full user input string"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     * @return the command based on the user input"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Command parseCommand(String userInput) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
+        "content": "    public Command parseCommand(String userInput) throws ParseException {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!matcher.matches()) {"
+        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+        "content": "        if (!matcher.matches()) {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
+        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "        switch (commandWord) {"
+        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        switch (commandWord) {"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "-"
         },
-        "content": "        case LearnCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return new LearnCommandParser().parse(arguments);"
+        "content": "        case LearnCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "            return new LearnCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 60,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        /*"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        * Word of the day is fetched from website and not user. Parser is needed to parse"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        * data from website Dictionary.com into a word object. */"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        case WordOfTheDayCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            return new WordOfTheDayParser().parse(\"\");"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
         "content": "        case AddCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 61,
+        "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
         "content": "            return new AddCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 63,
+        "lineNumber": 70,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "        case TriviaCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 64,
+        "lineNumber": 71,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "            return new TriviaCommand();"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 72,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": ""
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 73,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "        case TriviaAnsCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 74,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "            return new TriviaAnsCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 75,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": ""
       },
       {
-        "lineNumber": 69,
+        "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
         "content": "        case EditCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 70,
+        "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
         "content": "            return new EditCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 71,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        case SelectCommand.COMMAND_WORD:"
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return new SelectCommandParser().parse(arguments);"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        case DeleteCommand.COMMAND_WORD:"
-      },
-      {
-        "lineNumber": 76,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return new DeleteCommandParser().parse(arguments);"
-      },
-      {
-        "lineNumber": 77,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        case ClearCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ClearCommand();"
+        "content": "        case SelectCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new SelectCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FindCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FindCommandParser().parse(arguments);"
+        "content": "        case DeleteCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new DeleteCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "        case ListCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ListCommand();"
+        "content": "        case ClearCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ClearCommand();"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HistoryCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new HistoryCommand();"
+        "content": "        case FindCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FindCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "        case ExitCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ExitCommand();"
+        "content": "        case ListCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ListCommand();"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HelpCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new HelpCommand();"
+        "content": "        case HistoryCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HistoryCommand();"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "        case UndoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new UndoCommand();"
+        "content": "        case ExitCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ExitCommand();"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "        case RedoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new RedoCommand();"
+        "content": "        case HelpCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HelpCommand();"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "-"
         },
-        "content": "        case ShowCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "-"
         },
-        "content": "            return new ShowCommandParser().parse(arguments);"
+        "content": "        case UndoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new UndoCommand();"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "        case GroupdeleteCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new GroupDeleteCommandParser().parse(arguments);"
+        "content": "        case RedoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new RedoCommand();"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "        case GroupaddCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": "            return new GroupAddCommandParser().parse(arguments);"
+        "content": "        case ShowCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": ""
+        "content": "            return new ShowCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "        default:"
+        "content": ""
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
+        "content": "        case GroupdeleteCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            return new GroupDeleteCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case GroupaddCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new GroupAddCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        default:"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
@@ -32763,9 +33016,10 @@
       }
     ],
     "authorContributionMap": {
+      "alexehrs": 8,
       "danielkoh94": 6,
-      "russellong95": 27,
-      "-": 82
+      "russellong95": 28,
+      "-": 80
     }
   },
   {
@@ -34507,6 +34761,329 @@
     "authorContributionMap": {
       "danielkoh94": 25,
       "russellong95": 5
+    }
+  },
+  {
+    "path": "src/main/java/seedu/learnvocabulary/logic/parser/WordOfTheDayParser.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "package seedu.learnvocabulary.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import static seedu.learnvocabulary.commons.core.Messages.MESSAGE_OVERALL_ERROR;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import java.util.Set;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.logic.commands.WordOfTheDayCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.tag.Tag;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Dictionary;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Meaning;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Name;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Word;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": " * Parses arguments fetched from Dictionary.com and creates a new WordOfTheDay object."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "public class WordOfTheDayParser implements Parser\u003cWordOfTheDayCommand\u003e {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "     * Parses the given {@code String} of arguments in the context of the LearnCommand"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "     * and returns an LearnCommand object for execution."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public WordOfTheDayCommand parse(String args) throws ParseException {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Word word;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Dictionary dictionary \u003d new Dictionary(\"\").fetchWordOfTheDay();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            String wordOfTheDay \u003d dictionary.getWordOfTheDay();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            String definition \u003d dictionary.getDefinition();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Tag defaultTag \u003d new Tag(\"WordOfTheDay\");"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            ArrayList\u003cString\u003e stringArrayList \u003d new ArrayList\u003c\u003e(Collections.singleton(defaultTag.tagName));"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Name name \u003d ParserUtil.parseName(wordOfTheDay);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Meaning meaning \u003d ParserUtil.parseMeaning(definition);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Set\u003cTag\u003e tagList \u003d ParserUtil.parseTags(stringArrayList);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            word \u003d new Word(name, meaning, tagList);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        } catch (ParseException pe) {"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            throw new ParseException(MESSAGE_OVERALL_ERROR);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        return new WordOfTheDayCommand(word);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "alexehrs": 45
     }
   },
   {
@@ -41199,460 +41776,755 @@
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": ""
+        "content": "    public static final String NO_WORD_OF_THE_DAY \u003d"
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "    private String args;"
+        "content": "            \"The word of the day is not available at this moment\";"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    private String wordToLearn;"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    private String definition;"
+        "content": "    private String args;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "    private String wordToLearn;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public Dictionary(String args) {"
+        "content": "    private String definition;"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "        this.args \u003d args;"
+        "content": "    private String wordOfTheDay;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "    public Dictionary(String args) {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public String getWordToLearn() {"
+        "content": "        this.args \u003d args;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        return wordToLearn;"
+        "content": "    }"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "    public String getWordToLearn() {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public String getDefinition() {"
+        "content": "        return wordToLearn;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        return definition;"
+        "content": "    }"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "    public String getDefinition() {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    /**"
+        "content": "        return definition;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     * Invoke the use of \"learn\", to parse definition and put it into a meaning object."
+        "content": "    }"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "    public Dictionary invoke() throws ParseException {"
+        "content": "    public String getWordOfTheDay() {"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "        wordToLearn \u003d args;"
+        "content": "        return wordOfTheDay;"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        if (!isConnectedToInternet()) {"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "            throw new ParseException(MESSAGE_NO_INTERNET);"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        Document doc;"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        if ((doc \u003d isWordInOnlineDictionary(wordToLearn)) \u003d\u003d null) {"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "            throw new ParseException(WORD_NOT_EXIST);"
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        //Get description from document object."
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        definition \u003d doc.select(\"meta[name\u003ddescription]\").get(0)"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "                .attr(\"content\");"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        definition \u003d definition.substring(definition.indexOf(\" \") + 1);"
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        definition \u003d definition.replace(\"definition, \", \"\");"
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        definition \u003d definition.replace(\"(\", \"\");"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        definition \u003d definition.replace(\")\", \"\");"
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        definition \u003d definition.replace(\" See more.\", \"\");"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        System.out.println(definition);"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        return this;"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 58,
+        "lineNumber": 40,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
         "content": ""
       },
       {
-        "lineNumber": 59,
+        "lineNumber": 41,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 60,
+        "lineNumber": 42,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "     * Checks for Internet Connection, if its available."
+        "content": "     * Parses the wordOfTheDay document if Dictionary.com is available."
       },
       {
-        "lineNumber": 61,
+        "lineNumber": 43,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
         "content": "     */"
       },
       {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public Dictionary fetchWordOfTheDay() throws ParseException {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        if (!isConnectedToInternet()) {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            throw new ParseException(MESSAGE_NO_INTERNET);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        //Get wordoftheday from document object."
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Document doc;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        if ((doc \u003d doesWordOfTheDayExist()) \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            throw new ParseException(NO_WORD_OF_THE_DAY);"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        wordOfTheDay \u003d doc.select(\"meta[property\u003dtitle]\").get(0)"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "                .attr(\"content\");"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        wordOfTheDay \u003d wordOfTheDay.replace(\"Get the Word of the Day - \", \"\");"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        wordOfTheDay \u003d wordOfTheDay.replace(\" | Dictionary.com\", \"\");"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        args \u003d wordOfTheDay;"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        this.invoke();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        System.out.println(wordOfTheDay);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        return this;"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
         "lineNumber": 62,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "    public static boolean isConnectedToInternet() {"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        try {"
+        "content": "    /**"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            Jsoup.connect(\"https://www.dictionary.com/\").get();"
+        "content": "     * Invoke the use of \"learn\", to parse definition and put it into a meaning object."
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return true;"
+        "content": "     */"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "    public Dictionary invoke() throws ParseException {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return false;"
+        "content": "        wordToLearn \u003d args;"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        }"
+        "content": "        if (!isConnectedToInternet()) {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": "            throw new ParseException(MESSAGE_NO_INTERNET);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     * Checks for Internet Connection, if its available."
+        "content": "        Document doc;"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     */"
+        "content": "        if ((doc \u003d isWordInOnlineDictionary(wordToLearn)) \u003d\u003d null) {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public static Document isWordInOnlineDictionary(String wordToLearn) {"
+        "content": "            throw new ParseException(WORD_NOT_EXIST);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        try {"
+        "content": "        }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return Jsoup.connect(\"https://www.dictionary.com/browse/\" + wordToLearn).get();"
+        "content": "        //Get description from document object."
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "        definition \u003d doc.select(\"meta[name\u003ddescription]\").get(0)"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return null;"
+        "content": "                .attr(\"content\");"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        }"
+        "content": "        definition \u003d definition.substring(definition.indexOf(\" \") + 1);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": "        definition \u003d definition.replace(\"definition, \", \"\");"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "russellong95"
         },
+        "content": "        definition \u003d definition.replace(\"(\", \"\");"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        definition \u003d definition.replace(\")\", \"\");"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        definition \u003d definition.replace(\" See more.\", \"\");"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        System.out.println(definition);"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        return this;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     * Checks for Internet Connection, if its available."
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    public static boolean isConnectedToInternet() {"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            Jsoup.connect(\"https://www.dictionary.com/\").get();"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     * Checks for Internet Connection, if its available."
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    public static Document isWordInOnlineDictionary(String wordToLearn) {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            return Jsoup.connect(\"https://www.dictionary.com/browse/\" + wordToLearn).get();"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "     * Pulls the wordoftheday page into a document if availabe."
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public static Document doesWordOfTheDayExist() {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            return Jsoup.connect(\"https://www.dictionary.com/wordoftheday/\").get();"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "alexehrs"
+        },
         "content": "}"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
       }
     ],
     "authorContributionMap": {
+      "alexehrs": 42,
       "russellong95": 81
     }
   },
@@ -96224,12 +97096,181 @@
       {
         "lineNumber": 46,
         "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    void getWordOfTheDay() {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Dictionary dictionary \u003d new Dictionary(\"\");"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        assertNotNull(dictionary);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        //testing with a user input afterwards. SHould have no effect."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        dictionary \u003d new Dictionary(\"horse\");"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        assertNotNull(dictionary);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    void fetchWordOfTheDay() throws ParseException {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Dictionary dictionary \u003d new Dictionary(\"\");"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        dictionary.fetchWordOfTheDay();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        assertNotNull(dictionary.getWordOfTheDay());"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    void doesWordOfTheDayExist() throws ParseException {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Dictionary dictionary \u003d new Dictionary(\"\");"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        dictionary.invoke();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        assertNotNull(Dictionary.doesWordOfTheDayExist());"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
           "gitId": "russellong95"
         },
         "content": "}"
       }
     ],
     "authorContributionMap": {
+      "alexehrs": 24,
       "russellong95": 46
     }
   },
