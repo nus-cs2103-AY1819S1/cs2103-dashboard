@@ -22136,16 +22136,16 @@
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "        HelpCommand.COMMAND_WORD, HistoryCommand.COMMAND_WORD, QuickViewCommand.COMMAND_WORD, RedoCommand.COMMAND_WORD,"
+        "content": "        HelpCommand.COMMAND_WORD, HistoryCommand.COMMAND_WORD, RedoCommand.COMMAND_WORD, ViewAllCommand.COMMAND_WORD,"
       },
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "        ViewAllCommand.COMMAND_WORD, ViewCommand.COMMAND_WORD, UndoCommand.COMMAND_WORD};"
+        "content": "        ViewStatusCommand.COMMAND_WORD, ViewCommand.COMMAND_WORD, UndoCommand.COMMAND_WORD};"
       },
       {
         "lineNumber": 11,
@@ -22233,8 +22233,9 @@
       }
     ],
     "authorContributionMap": {
+      "jiajunteo": 2,
       "YuPeiHenry": 19,
-      "-": 3
+      "-": 1
     }
   },
   {
@@ -26670,6 +26671,183 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/logic/commands/ViewAllCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.model.Model.PREDICATE_SHOW_ALL_RIDES;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Lists all persons in the address book to the user."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class ViewAllCommand extends Command {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"viewall\";"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Viewed all rides\";"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model.updateFilteredRideList(PREDICATE_SHOW_ALL_RIDES);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new CommandResult(MESSAGE_SUCCESS);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiajunteo": 1,
+      "-": 23
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/logic/commands/ViewCommand.java",
     "lines": [
       {
@@ -27075,6 +27253,322 @@
     "authorContributionMap": {
       "keenlok": 3,
       "-": 54
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/commands/ViewStatusCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.commons.core.Messages;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.ride.RideStatusPredicate;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": " * View rides in thane park that are filtered by their status."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "public class ViewStatusCommand extends Command {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"viewstatus\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public static final String MESSAGE_USAGE \u003d \"Find all the rides with the status that the user \""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            + \"inputs (case-insensitive) and displays them as a list with index numbers.\\n\""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            + \"PARAMETERS: [STATUS]\\n\""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            + \"Example: \" + COMMAND_WORD + \" open\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    private final RideStatusPredicate predicate;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public ViewStatusCommand(RideStatusPredicate predicate) {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        this.predicate \u003d predicate;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        model.updateFilteredRideList(predicate);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        return new CommandResult("
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                String.format(Messages.MESSAGE_RIDES_LISTED_OVERVIEW, model.getFilteredRideList().size()));"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                || (other instanceof ViewStatusCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                \u0026\u0026 predicate.equals(((ViewStatusCommand) other).predicate)); // state check"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiajunteo": 44
     }
   },
   {
@@ -30469,49 +30963,49 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.QuickViewCommand;"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "-"
-        },
         "content": "import seedu.address.logic.commands.RedoCommand;"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 19,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "import seedu.address.logic.commands.SuggestCommand;"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.UndoCommand;"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.UpdateCommand;"
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
         "content": "import seedu.address.logic.commands.ViewAllCommand;"
       },
       {
-        "lineNumber": 24,
+        "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
         "content": "import seedu.address.logic.commands.ViewCommand;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.logic.commands.ViewStatusCommand;"
       },
       {
         "lineNumber": 25,
@@ -30910,14 +31404,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        case QuickViewCommand.COMMAND_WORD:"
+        "content": "        case RedoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new QuickViewCommand();"
+        "content": "            return new RedoCommand();"
       },
       {
         "lineNumber": 83,
@@ -30931,14 +31425,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        case RedoCommand.COMMAND_WORD:"
+        "content": "        case UndoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new RedoCommand();"
+        "content": "            return new UndoCommand();"
       },
       {
         "lineNumber": 86,
@@ -30950,21 +31444,21 @@
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "        case UndoCommand.COMMAND_WORD:"
+        "content": "        case ViewCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "            return new UndoCommand();"
+        "content": "            return new ViewCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
         "content": ""
       },
@@ -30992,16 +31486,16 @@
       {
         "lineNumber": 93,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "        case ViewCommand.COMMAND_WORD:"
+        "content": "        case ViewStatusCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "            return new ViewCommandParser().parse(arguments);"
+        "content": "            return new ViewStatusCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 95,
@@ -31083,8 +31577,9 @@
     ],
     "authorContributionMap": {
       "keenlok": 4,
+      "jiajunteo": 8,
       "YuPeiHenry": 5,
-      "-": 96
+      "-": 88
     }
   },
   {
@@ -31690,6 +32185,308 @@
       "keenlok": 1,
       "YuPeiHenry": 7,
       "-": 77
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/parser/ViewStatusCommandParser.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.commons.util.StringUtil;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.logic.commands.ViewStatusCommand;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.ride.RideStatusPredicate;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.ride.Status;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": " * Parses input arguments and creates a new ViewStatusCommand Object"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "public class ViewStatusCommandParser implements Parser\u003cViewStatusCommand\u003e {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * Parses the given {@code String} of arguments in the context of the ViewStatusCommand"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * and returns an ViewStatusCommand object for execution."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public ViewStatusCommand parse(String args) throws ParseException {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        Status status;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        String[] trimmedArgs \u003d args.trim().split(\" \");"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        String arg \u003d trimmedArgs[0];"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        if (!arg.isEmpty() \u0026\u0026 (trimmedArgs.length \u003d\u003d 1)) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            if (StringUtil.containsStringIgnoreCase(arg, \"open\")) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                status \u003d Status.OPEN;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            } else if (StringUtil.containsStringIgnoreCase(arg, \"shutdown\")) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                status \u003d Status.SHUTDOWN;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            } else if (StringUtil.containsStringIgnoreCase(arg, \"maintenance\")) {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                status \u003d Status.MAINTENANCE;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                throw new ParseException("
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                        String.format(MESSAGE_INVALID_COMMAND_FORMAT, ViewStatusCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "            return new ViewStatusCommand(new RideStatusPredicate(status));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        throw new ParseException("
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, ViewStatusCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiajunteo": 42
     }
   },
   {
@@ -40259,6 +41056,203 @@
     ],
     "authorContributionMap": {
       "keenlok": 72
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/ride/RideStatusPredicate.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "package seedu.address.model.ride;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import java.util.function.Predicate;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": " * Tests that a {@code Ride}\u0027s attributes matches the status given."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "public class RideStatusPredicate implements Predicate\u003cRide\u003e {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    private final Status status;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public RideStatusPredicate(Status status) {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        this.status \u003d status;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public boolean test(Ride ride) {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        return status.equals(ride.getStatus());"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                || (other instanceof RideStatusPredicate // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                \u0026\u0026 (status.equals(((RideStatusPredicate) other).status))); // state check"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiajunteo": 27
     }
   },
   {
@@ -75687,51 +76681,51 @@
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
-        },
-        "content": "        assertSuggestCommandSuccessBehavior(\"q\", \"quickView\");"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandSuccessBehavior(\"r\", \"redo\");"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
         "content": "        assertSuggestCommandSuccessBehavior(\"u\", \"update\", \"undo\");"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 44,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "        assertSuggestCommandSuccessBehavior(\"v\", \"viewAll\", \"view\");"
+        "content": "        assertSuggestCommandSuccessBehavior(\"v\", \"viewall\", \"viewstatus\", \"view\");"
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 45,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": ""
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 46,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandSuccessBehavior(\"a j\\\\km bu/ni i?@w 359h\", \"add\");"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 47,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "YuPeiHenry"
+        },
+        "content": ""
       },
       {
         "lineNumber": 49,
@@ -75745,276 +76739,269 @@
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    @Test"
+        "content": "    public void execute_suggestCommand_failure() throws Exception {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    public void execute_suggestCommand_failure() throws Exception {"
+        "content": "        assertSuggestCommandFailureBehavior(\"b\");"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        assertSuggestCommandFailureBehavior(\"b\");"
+        "content": "    }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": ""
+        "content": "    @Test"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    @Test"
+        "content": "    public void execute_suggestCommand2_failure() throws Exception {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    public void execute_suggestCommand2_failure() throws Exception {"
+        "content": "        assertSuggestCommandFailureBehavior(\"g\");"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        assertSuggestCommandFailureBehavior(\"g\");"
+        "content": "    }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    /**"
+        "content": "     * Verifies behavior of successful suggest."
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     * Verifies behavior of successful suggest."
+        "content": "     * @param userInput"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     * @param userInput"
+        "content": "     * @param commandWords"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     * @param commandWords"
+        "content": "     * @throws Exception"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     * @throws Exception"
+        "content": "     */"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     */"
+        "content": "    private void assertSuggestCommandSuccessBehavior(String userInput, String... commandWords) throws Exception {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    private void assertSuggestCommandSuccessBehavior(String userInput, String... commandWords) throws Exception {"
+        "content": "        Model model \u003d new ModelManager();"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        Model model \u003d new ModelManager();"
+        "content": "        CommandHistory history \u003d new CommandHistory();"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        CommandHistory history \u003d new CommandHistory();"
+        "content": "        String expectedMessage \u003d String.format(MESSAGE_SUGGEST_COMMAND_SUCCESS,"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        String expectedMessage \u003d String.format(MESSAGE_SUGGEST_COMMAND_SUCCESS,"
+        "content": "                SuggestCommand.combineCommandWords(commandWords));"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "                SuggestCommand.combineCommandWords(commandWords));"
+        "content": "        Command command \u003d parser.parseCommand(userInput);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        Command command \u003d parser.parseCommand(userInput);"
+        "content": "        assertTrue(command instanceof SuggestCommand);"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        assertTrue(command instanceof SuggestCommand);"
+        "content": "        SuggestCommand suggestCommand \u003d (SuggestCommand) command;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        SuggestCommand suggestCommand \u003d (SuggestCommand) command;"
+        "content": "        assertEquals(expectedMessage, suggestCommand.execute(model, history).feedbackToUser);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        assertEquals(expectedMessage, suggestCommand.execute(model, history).feedbackToUser);"
+        "content": "    }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    /**"
+        "content": "     * Verifies behavior of failed suggest"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     * Verifies behavior of failed suggest"
+        "content": "     * @param userInput"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     * @param userInput"
+        "content": "     * @throws Exception"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     * @throws Exception"
+        "content": "     */"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "     */"
+        "content": "    private void assertSuggestCommandFailureBehavior(String userInput) throws Exception {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    private void assertSuggestCommandFailureBehavior(String userInput) throws Exception {"
+        "content": "        thrown.expect(ParseException.class);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        thrown.expect(ParseException.class);"
+        "content": "        thrown.expectMessage(MESSAGE_UNKNOWN_COMMAND);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        thrown.expectMessage(MESSAGE_UNKNOWN_COMMAND);"
+        "content": "        parser.parseCommand(userInput);"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "        parser.parseCommand(userInput);"
+        "content": "    }"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "YuPeiHenry"
         },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "YuPeiHenry"
-        },
         "content": ""
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 88,
         "author": {
           "gitId": "YuPeiHenry"
         },
@@ -76023,8 +77010,9 @@
     ],
     "authorContributionMap": {
       "keenlok": 2,
+      "jiajunteo": 1,
       "YuPeiHenry": 83,
-      "-": 4
+      "-": 2
     }
   },
   {
@@ -80007,6 +80995,462 @@
       "keenlok": 7,
       "YuPeiHenry": 2,
       "-": 109
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/commands/ViewStatusCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_RIDES_LISTED_OVERVIEW;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.testutil.TypicalRides.getTypicalThanePark;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.ride.RideStatusPredicate;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.ride.Status;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": " * Contains integration tests (interaction with the Model) for {@code ViewStatusCommand}."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "public class ViewStatusCommandTest {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    private Model model \u003d new ModelManager(getTypicalThanePark(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    private Model expectedModel \u003d new ModelManager(getTypicalThanePark(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        RideStatusPredicate firstPredicate \u003d new RideStatusPredicate(Status.OPEN);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        RideStatusPredicate secondPredicate \u003d new RideStatusPredicate(Status.MAINTENANCE);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        ViewStatusCommand firstCommand \u003d new ViewStatusCommand(firstPredicate);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        ViewStatusCommand secondCommand \u003d new ViewStatusCommand(secondPredicate);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        ViewStatusCommand thirdCommand \u003d new ViewStatusCommand(firstPredicate);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertTrue(firstCommand.equals(firstCommand));"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // same value -\u003e returns true"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertTrue(firstCommand.equals(thirdCommand));"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // null -\u003e returns false"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertFalse(firstCommand.equals(null));"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // different type -\u003e returns false"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertFalse(firstCommand.equals(\"open\"));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // different status -\u003e returns false"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertFalse(firstCommand.equals(secondCommand));"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public void execute_noRideFound() {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        String expectedMessage \u003d String.format(MESSAGE_RIDES_LISTED_OVERVIEW, 0);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        RideStatusPredicate predicate \u003d new RideStatusPredicate(Status.MAINTENANCE);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        ViewStatusCommand command \u003d new ViewStatusCommand(predicate);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        expectedModel.updateFilteredRideList(predicate);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertCommandSuccess(command, model, commandHistory, expectedMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertEquals(Collections.emptyList(), model.getFilteredRideList());"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiajunteo": 64
     }
   },
   {
@@ -86768,6 +88212,350 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/logic/parser/ViewStatusCommandParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.logic.commands.ViewStatusCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.ride.RideStatusPredicate;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.ride.Status;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "public class ViewStatusCommandParserTest {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    private ViewStatusCommandParser parser \u003d new ViewStatusCommandParser();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public void parse_emptyArg_throwsParseException() {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertParseFailure(parser, \"\","
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, ViewStatusCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public void parse_multipleArgs_throwsParseException() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertParseFailure(parser, \"open shutdown\","
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, ViewStatusCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public void parse_invalidArgs_throwsParseException() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertParseFailure(parser, \"close\","
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, ViewStatusCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public void parse_validArg_returnsViewStatusCommand() {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        ViewStatusCommand expectedCommand \u003d new ViewStatusCommand(new RideStatusPredicate(Status.OPEN));"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // no leading or trailing whitespaces"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertParseSuccess(parser, \"open\", expectedCommand);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // contains whitespaces"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertParseSuccess(parser, \" \\n open \\t \", expectedCommand);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // mixed-case"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertParseSuccess(parser, \"OpEn\", expectedCommand);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiajunteo": 48
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/model/ModelManagerTest.java",
     "lines": [
       {
@@ -91835,6 +93623,252 @@
       "keenlok": 19,
       "YuPeiHenry": 4,
       "-": 52
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/model/ride/RideStatusPredicateTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "package seedu.address.model.ride;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "public class RideStatusPredicateTest {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        Status statusOpen \u003d Status.OPEN;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        Status statusMaintenance \u003d Status.MAINTENANCE;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        RideStatusPredicate predicateOpen \u003d new RideStatusPredicate(statusOpen);"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        RideStatusPredicate predicateOpenCopy \u003d new RideStatusPredicate(statusOpen);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        RideStatusPredicate predicateMaintenance \u003d new RideStatusPredicate(statusMaintenance);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertTrue(predicateOpen.equals(predicateOpen));"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // same value -\u003e returns true"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertTrue(predicateOpen.equals(predicateOpenCopy));"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // different type -\u003e returns false"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertFalse(predicateOpen.equals(1));"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // null -\u003e returns false"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertFalse(predicateOpen.equals(null));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        // different ride -\u003e returns false"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertFalse(predicateOpen.equals(predicateMaintenance));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiajunteo": 34
     }
   },
   {
@@ -101317,9 +103351,9 @@
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "        String thirdCommand \u003d \"viewAll\";"
+        "content": "        String thirdCommand \u003d \"viewall\";"
       },
       {
         "lineNumber": 95,
@@ -101771,8 +103805,9 @@
       }
     ],
     "authorContributionMap": {
+      "jiajunteo": 1,
       "YuPeiHenry": 1,
-      "-": 157
+      "-": 156
     }
   },
   {
@@ -114914,107 +116949,107 @@
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "-"
-        },
-        "content": "        assertSuggestCommandSuccessBehavior(\"q\", \"quickView\");"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandSuccessBehavior(\"r\", \"redo\");"
       },
       {
-        "lineNumber": 28,
+        "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
         "content": "        assertSuggestCommandSuccessBehavior(\"u\", \"update\", \"undo\");"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "jiajunteo"
         },
-        "content": "        assertSuggestCommandSuccessBehavior(\"v\", \"viewAll\", \"view\");"
+        "content": "        assertSuggestCommandSuccessBehavior(\"v\", \"viewall\", \"viewstatus\", \"view\");"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 29,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": ""
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 30,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"b\");"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 31,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"g\");"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 32,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"i\");"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 33,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"j\");"
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 34,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"k\");"
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"l\");"
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 36,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"m\");"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 37,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"n\");"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 38,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"o\");"
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 39,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        assertSuggestCommandFailureBehavior(\"p\");"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertSuggestCommandFailureBehavior(\"q\");"
       },
       {
         "lineNumber": 41,
@@ -115543,8 +117578,9 @@
       }
     ],
     "authorContributionMap": {
+      "jiajunteo": 2,
       "YuPeiHenry": 109,
-      "-": 6
+      "-": 4
     }
   },
   {
@@ -119424,6 +121460,497 @@
       "keenlok": 10,
       "YuPeiHenry": 5,
       "-": 142
+    }
+  },
+  {
+    "path": "src/test/java/systemtests/ViewStatusCommandSystemTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "package systemtests;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_RIDES_LISTED_OVERVIEW;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_UNKNOWN_COMMAND;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.logic.commands.ViewStatusCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "public class ViewStatusCommandSystemTest extends AddressBookSystemTest {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    public void viewStatus() {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        String command;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        String invalid \u003d String.format(MESSAGE_INVALID_COMMAND_FORMAT, ViewStatusCommand.MESSAGE_USAGE);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        /* Case:  lower case command word, mixed case argument -\u003e success */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        command \u003d \"viewstatus oPen\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertCommandSuccess(command, getModel());"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        /* Case: multiple arguments -\u003e rejected */"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        command \u003d \"viewstatus maintenance open\";"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertCommandFailure(command, invalid);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        /* Case: mixed case command word -\u003e rejected */"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        command \u003d \"VieWsTaTus open\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertCommandFailure(command, MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * Executes {@code command} and verifies that the command box displays an empty string, the result display"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * box displays {@code Messages#MESSAGE_RIDES_LISTED_OVERVIEW} with the number of people in the filtered list,"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * and the model related components equal to {@code expectedModel}."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * These verifications are done by"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * {@code AddressBookSystemTest#assertApplicationDisplaysExpected(String, String, Model)}.\u003cbr\u003e"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * Also verifies that the status bar remains unchanged, and the command box has the default style class, and the"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * selected card updated accordingly, depending on {@code cardStatus}."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * @see AddressBookSystemTest#assertApplicationDisplaysExpected(String, String, Model)"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    private void assertCommandSuccess(String command, Model expectedModel) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        String expectedResultMessage \u003d String.format("
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "                MESSAGE_RIDES_LISTED_OVERVIEW, expectedModel.getFilteredRideList().size());"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        executeCommand(command);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertApplicationDisplaysExpected(\"\", expectedResultMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertCommandBoxShowsDefaultStyle();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertStatusBarUnchanged();"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * Executes {@code command} and verifies that the command box displays {@code command}, the result display"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * box displays {@code expectedResultMessage} and the model related components equal to the current model."
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * These verifications are done by"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * {@code AddressBookSystemTest#assertApplicationDisplaysExpected(String, String, Model)}.\u003cbr\u003e"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * Also verifies that the browser url, selected card and status bar remain unchanged, and the command box has the"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * error style."
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     * @see AddressBookSystemTest#assertApplicationDisplaysExpected(String, String, Model)"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    private void assertCommandFailure(String command, String expectedResultMessage) {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        Model expectedModel \u003d getModel();"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        executeCommand(command);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertApplicationDisplaysExpected(command, expectedResultMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertSelectedCardUnchanged();"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertCommandBoxShowsErrorStyle();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "        assertStatusBarUnchanged();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "jiajunteo"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiajunteo": 69
     }
   }
 ]

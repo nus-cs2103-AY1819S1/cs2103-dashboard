@@ -50085,341 +50085,348 @@
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "-"
+          "gitId": "danielkoh94"
         },
-        "content": "    public static final String SEARCH_PAGE_URL \u003d"
+        "content": "    public static final String SEARCH_PAGE_URL \u003d \"WordSearchPage.html\";"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "            \"https://se-edu.github.io/addressbook-level4/DummySearchPage.html?name\u003d\";"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final String FXML \u003d \"BrowserPanel.fxml\";"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final String FXML \u003d \"BrowserPanel.fxml\";"
+        "content": ""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @FXML"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "    @FXML"
+        "content": "    private WebView browser;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "    private WebView browser;"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public BrowserPanel() {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    public BrowserPanel() {"
+        "content": "        super(FXML);"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "        super(FXML);"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        // To prevent triggering events for typing inside the loaded Web page."
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "        // To prevent triggering events for typing inside the loaded Web page."
+        "content": "        getRoot().setOnKeyPressed(Event::consume);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "        getRoot().setOnKeyPressed(Event::consume);"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        loadDefaultPage();"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "        loadDefaultPage();"
+        "content": "        registerAsAnEventHandler(this);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "        registerAsAnEventHandler(this);"
+        "content": "    }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 43,
         "author": {
           "gitId": "russellong95"
         },
         "content": "    private void loadWordPage(Word word) {"
       },
       {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        URL searchPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + SEARCH_PAGE_URL);"
+      },
+      {
         "lineNumber": 45,
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        loadPage(SEARCH_PAGE_URL + word.getName().fullName);"
+        "content": "        loadPage(searchPage.toExternalForm() + \"?name\u003d\" + word.getName().fullName"
       },
       {
         "lineNumber": 46,
         "author": {
-          "gitId": "-"
+          "gitId": "danielkoh94"
         },
-        "content": "    }"
+        "content": "                + \"\u0026meaning\u003d\" + word.getMeaning().fullMeaning);"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void loadPage(String url) {"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        Platform.runLater(() -\u003e browser.getEngine().load(url));"
+        "content": "    public void loadPage(String url) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        Platform.runLater(() -\u003e browser.getEngine().load(url));"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Loads a default HTML file with a background that matches the general theme."
+        "content": "    /**"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Loads a default HTML file with a background that matches the general theme."
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void loadDefaultPage() {"
+        "content": "     */"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "        URL defaultPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
+        "content": "    private void loadDefaultPage() {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        loadPage(defaultPage.toExternalForm());"
+        "content": "        URL defaultPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        loadPage(defaultPage.toExternalForm());"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Frees resources allocated to the browser."
+        "content": "    /**"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Frees resources allocated to the browser."
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void freeResources() {"
+        "content": "     */"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "        browser \u003d null;"
+        "content": "    public void freeResources() {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        browser \u003d null;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Subscribe"
+        "content": ""
       },
       {
         "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 69,
         "author": {
           "gitId": "russellong95"
         },
         "content": "    private void handleWordPanelSelectionChangedEvent(WordPanelSelectionChangedEvent event) {"
       },
       {
-        "lineNumber": 69,
+        "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
         "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
-        "lineNumber": 70,
+        "lineNumber": 71,
         "author": {
           "gitId": "russellong95"
         },
         "content": "        loadWordPage(event.getNewSelection());"
       },
       {
-        "lineNumber": 71,
+        "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 72,
+        "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
@@ -50427,9 +50434,9 @@
       }
     ],
     "authorContributionMap": {
-      "danielkoh94": 1,
+      "danielkoh94": 4,
       "russellong95": 9,
-      "-": 62
+      "-": 60
     }
   },
   {
@@ -60656,6 +60663,266 @@
     }
   },
   {
+    "path": "src/main/resources/view/WordSearchPage.html",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "\u003c!DOCTYPE html\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "\u003chtml\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "\u003chead\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003cmeta charset\u003d\"utf-8\"\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003ctitle\u003eDummy Search Page\u003c/title\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003cscript type\u003d\"text/javascript\"\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    function getJsonFromUrl() {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "      var query \u003d location.search.substr(1);"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "      var result \u003d {};"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "      query.split(\"\u0026\").forEach(function(part) {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        var item \u003d part.split(\"\u003d\");"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        result[item[0]] \u003d decodeURIComponent(item[1]);"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "      });"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "      return result;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    document.addEventListener(\"DOMContentLoaded\", function(event) {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "      document.getElementById(\"name\").innerHTML\u003dgetJsonFromUrl().name;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    document.addEventListener(\"DOMContentLoaded\", function(event) {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "      document.getElementById(\"meaning\").innerHTML\u003dgetJsonFromUrl().meaning;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    });"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003c/script\u003e"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "\u003c/head\u003e"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "\u003cbody\u003e"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003cfont size\u003d\"+4\" face\u003d\"Arial\"\u003e"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    \u003cspan id\u003d\"name\"\u003e\u003c/span\u003e\u003cbr\u003e"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003c/font\u003e"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003chr\u003e"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003cfont size\u003d\"+3\" face\u003d\"Arial\"\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    Meaning:\u003cbr\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003c/font\u003e"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "  \u003cfont size\u003d\"+2\" face\u003d\"Arial\"\u003e\u003cspan id\u003d\"meaning\"\u003e\u003c/span\u003e\u003c/font\u003e"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "\u003c/body\u003e"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "\u003c/html\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "danielkoh94": 36
+    }
+  },
+  {
     "path": "src/test/data/JsonUserPrefsStorageTest/ExtraValuesUserPref.json",
     "lines": [
       {
@@ -65663,9 +65930,9 @@
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "danielkoh94"
         },
-        "content": "    private Word getWord(int index) {"
+        "content": "    public Word getWord(int index) {"
       },
       {
         "lineNumber": 113,
@@ -65998,9 +66265,9 @@
       }
     ],
     "authorContributionMap": {
-      "danielkoh94": 13,
+      "danielkoh94": 14,
       "-": 121,
-      "russellong95": 25
+      "russellong95": 24
     }
   },
   {
@@ -86750,6 +87017,1155 @@
     }
   },
   {
+    "path": "src/test/java/seedu/learnvocabulary/logic/commands/TriviaCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "package seedu.learnvocabulary.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import static junit.framework.TestCase.assertTrue;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import static org.junit.Assert.assertNotEquals;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import static seedu.learnvocabulary.testutil.TypicalWords.getTypicalLearnVocabulary;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import seedu.learnvocabulary.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import seedu.learnvocabulary.model.Model;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import seedu.learnvocabulary.model.ModelManager;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import seedu.learnvocabulary.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Word;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "import seedu.learnvocabulary.testutil.WordBuilder;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "public class TriviaCommandTest {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    private Model model \u003d new ModelManager(getTypicalLearnVocabulary(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void execute_triviaMode_unsuccessful() {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Model modelNoTrivia \u003d new ModelManager();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult commandResult \u003d new TriviaCommand().execute(modelNoTrivia, commandHistory);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(TriviaCommand.MESSAGE_FAIL, commandResult.feedbackToUser);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertFalse(modelNoTrivia.isTriviaMode());"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void execute_triviaMode_successful() {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult commandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(TriviaCommand.MESSAGE_SUCCESS,"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                commandResult.feedbackToUser.substring(0, 16));"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertTrue(model.isTriviaMode());"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void answer_triviaMode_correctly() {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult triviaCommandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word triviaQuestion \u003d model.getTrivia();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult commandResult \u003d new TriviaAnsCommand(triviaQuestion.getName().toString())"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                .execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(TriviaAnsCommand.MESSAGE_SUCCESS, commandResult.feedbackToUser.substring(0, 8));"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void answer_triviaMode_wrongly() {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult triviaCommandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult commandResult \u003d new TriviaAnsCommand(\"This is wrong\").execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(TriviaAnsCommand.MESSAGE_WRONG, commandResult.feedbackToUser.substring(0, 6));"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void score_increases_correct() {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult triviaCommandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word triviaQuestion \u003d model.getTrivia();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult commandResult \u003d new TriviaAnsCommand(triviaQuestion.getName().toString())"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                .execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(1, model.currentScore());"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void score_remainsSame_wrong() {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult triviaCommandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult commandResult \u003d new TriviaAnsCommand(\"This is wrong\").execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(0, model.currentScore());"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void questions_withlessThanTenWords() {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult triviaCommandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        int questionCount \u003d 0;"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        int listSize \u003d model.getTriviaList().size();"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        while (model.isTriviaMode()) {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "            CommandResult commandResult \u003d new TriviaAnsCommand(\"This is wrong\").execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "            questionCount++;"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(listSize, questionCount);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void questions_withTenWords() {"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word hi \u003d new WordBuilder().withName(\"hi\")"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                .withMeaning(\"used as an exclamation of greeting; hello!\").build();"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word sane \u003d new WordBuilder().withName(\"sane\")"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                .withMeaning(\"free from mental derangement; having a sound, healthy mind: a sane person.\")"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word test \u003d new WordBuilder().withName(\"test\").withMeaning(\"test\").build();"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        model.addWord(hi);"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        model.addWord(sane);"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        model.addWord(test);"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult triviaCommandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        int questionCount \u003d 0;"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        int listSize \u003d model.getTriviaList().size();"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        while (model.isTriviaMode()) {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "            CommandResult commandResult \u003d new TriviaAnsCommand(\"This is wrong\").execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "            questionCount++;"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(10, listSize);"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(listSize, questionCount);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void questions_withMoreThanTenWords() {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word hi \u003d new WordBuilder().withName(\"hi\")"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                .withMeaning(\"used as an exclamation of greeting; hello!\").build();"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word sane \u003d new WordBuilder().withName(\"sane\")"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                .withMeaning(\"free from mental derangement; having a sound, healthy mind: a sane person.\")"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word test \u003d new WordBuilder().withName(\"test\").withMeaning(\"test\").build();"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        Word another \u003d new WordBuilder().withName(\"another\").withMeaning(\"another test\").build();"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        model.addWord(hi);"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        model.addWord(sane);"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        model.addWord(test);"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        model.addWord(another);"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult triviaCommandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        int questionCount \u003d 0;"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        int listSize \u003d model.getTriviaList().size();"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        while (model.isTriviaMode()) {"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "            CommandResult commandResult \u003d new TriviaAnsCommand(\"This is wrong\").execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "            questionCount++;"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertNotEquals(11, listSize);"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(listSize, questionCount);"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public void exit_triviaMode_success() {"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult triviaCommandResult \u003d new TriviaCommand().execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        CommandResult commandResult \u003d new TriviaAnsCommand(\"triviaExit\").execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(TriviaAnsCommand.MESSAGE_END, commandResult.feedbackToUser);"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "danielkoh94": 163
+    }
+  },
+  {
     "path": "src/test/java/seedu/learnvocabulary/logic/commands/UndoCommandTest.java",
     "lines": [
       {
@@ -104796,26 +106212,89 @@
       {
         "lineNumber": 31,
         "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "     * Toggles trivia mode for LearnVocabulary"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    public LearnVocabularyBuilder withTriviaMode() {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        learnVocabulary.toggleTriviaMode();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        return this;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
           "gitId": "russellong95"
         },
         "content": "    public LearnVocabulary build() {"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 41,
         "author": {
           "gitId": "russellong95"
         },
         "content": "        return learnVocabulary;"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 42,
         "author": {
           "gitId": "russellong95"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 43,
         "author": {
           "gitId": "russellong95"
         },
@@ -104823,6 +106302,7 @@
       }
     ],
     "authorContributionMap": {
+      "danielkoh94": 9,
       "russellong95": 34
     }
   },
@@ -107360,254 +108840,254 @@
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "danielkoh94"
         },
-        "content": "import static seedu.learnvocabulary.ui.UiPart.FXML_FILE_FOLDER;"
+        "content": "import static seedu.learnvocabulary.ui.BrowserPanel.SEARCH_PAGE_URL;"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": ""
+        "content": "import static seedu.learnvocabulary.ui.UiPart.FXML_FILE_FOLDER;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.net.URL;"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import java.net.URL;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.Before;"
+        "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.Test;"
+        "content": "import org.junit.Before;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import org.junit.Test;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "import guitests.guihandles.BrowserPanelHandle;"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "-"
         },
-        "content": "import seedu.learnvocabulary.MainApp;"
+        "content": "import guitests.guihandles.BrowserPanelHandle;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "import seedu.learnvocabulary.commons.events.ui.WordPanelSelectionChangedEvent;"
+        "content": "import seedu.learnvocabulary.MainApp;"
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": ""
+        "content": "import seedu.learnvocabulary.commons.events.ui.WordPanelSelectionChangedEvent;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "public class BrowserPanelTest extends GuiUnitTest {"
+        "content": ""
       },
       {
         "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class BrowserPanelTest extends GuiUnitTest {"
+      },
+      {
+        "lineNumber": 21,
         "author": {
           "gitId": "russellong95"
         },
         "content": "    private WordPanelSelectionChangedEvent selectionChangedEventStub;"
       },
       {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "    private BrowserPanel browserPanel;"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "    private BrowserPanelHandle browserPanelHandle;"
+        "content": "    private BrowserPanel browserPanel;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private BrowserPanelHandle browserPanelHandle;"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Before"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void setUp() {"
+        "content": "    @Before"
       },
       {
         "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void setUp() {"
+      },
+      {
+        "lineNumber": 28,
         "author": {
           "gitId": "russellong95"
         },
         "content": "        selectionChangedEventStub \u003d new WordPanelSelectionChangedEvent(SUMO);"
       },
       {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "        guiRobot.interact(() -\u003e browserPanel \u003d new BrowserPanel());"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "        uiPartRule.setUiPart(browserPanel);"
+        "content": "        guiRobot.interact(() -\u003e browserPanel \u003d new BrowserPanel());"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        uiPartRule.setUiPart(browserPanel);"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "        browserPanelHandle \u003d new BrowserPanelHandle(browserPanel.getRoot());"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        browserPanelHandle \u003d new BrowserPanelHandle(browserPanel.getRoot());"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void display() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "        // default web page"
+        "content": "    public void display() throws Exception {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "        URL expectedDefaultPageUrl \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
+        "content": "        // default web page"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(expectedDefaultPageUrl, browserPanelHandle.getLoadedUrl());"
+        "content": "        URL expectedDefaultPageUrl \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertEquals(expectedDefaultPageUrl, browserPanelHandle.getLoadedUrl());"
       },
       {
         "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "        // associated web page of a word"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
         "content": "        postNow(selectionChangedEventStub);"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "russellong95"
-        },
-        "content": "        URL expectedWordUrl \u003d new URL(BrowserPanel.SEARCH_PAGE_URL + SUMO.getName().fullName.replaceAll(\" \", \"%20\"));"
       },
       {
         "lineNumber": 44,
@@ -107626,19 +109106,68 @@
       {
         "lineNumber": 46,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "danielkoh94"
         },
-        "content": "        assertEquals(expectedWordUrl, browserPanelHandle.getLoadedUrl());"
+        "content": ""
       },
       {
         "lineNumber": 47,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        URL expectedWordUrl \u003d MainApp.class.getResource(FXML_FILE_FOLDER + SEARCH_PAGE_URL);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        String expectedWordUrlInString \u003d expectedWordUrl.toExternalForm() + \"?name\u003d\""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                + SUMO.getName().fullName.replaceAll(\" \", \"%20\")"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "                + \"\u0026meaning\u003d\" + SUMO.getMeaning().fullMeaning.replaceAll(\" \", \"%20\");"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "danielkoh94"
+        },
+        "content": "        assertEquals(expectedWordUrlInString, browserPanelHandle.getLoadedUrl().toExternalForm());"
+      },
+      {
+        "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
@@ -107646,8 +109175,8 @@
       }
     ],
     "authorContributionMap": {
-      "danielkoh94": 1,
-      "russellong95": 11,
+      "danielkoh94": 10,
+      "russellong95": 9,
       "-": 36
     }
   },
@@ -123333,44 +124862,44 @@
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "danielkoh94"
         },
-        "content": "import static seedu.learnvocabulary.ui.StatusBarFooter.SYNC_STATUS_INITIAL;"
+        "content": "import static seedu.learnvocabulary.ui.BrowserPanel.SEARCH_PAGE_URL;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "import static seedu.learnvocabulary.ui.StatusBarFooter.SYNC_STATUS_UPDATED;"
+        "content": "import static seedu.learnvocabulary.ui.StatusBarFooter.SYNC_STATUS_INITIAL;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "import static seedu.learnvocabulary.ui.UiPart.FXML_FILE_FOLDER;"
+        "content": "import static seedu.learnvocabulary.ui.StatusBarFooter.SYNC_STATUS_UPDATED;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "import static seedu.learnvocabulary.ui.testutil.GuiTestAssert.assertListMatching;"
+        "content": "import static seedu.learnvocabulary.ui.UiPart.FXML_FILE_FOLDER;"
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": ""
+        "content": "import static seedu.learnvocabulary.ui.testutil.GuiTestAssert.assertListMatching;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.net.MalformedURLException;"
+        "content": ""
       },
       {
         "lineNumber": 14,
@@ -123578,16 +125107,16 @@
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "danielkoh94"
         },
-        "content": "import seedu.learnvocabulary.testutil.TypicalWords;"
+        "content": "import seedu.learnvocabulary.model.word.Word;"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "import seedu.learnvocabulary.ui.BrowserPanel;"
+        "content": "import seedu.learnvocabulary.testutil.TypicalWords;"
       },
       {
         "lineNumber": 45,
@@ -124789,537 +126318,530 @@
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "danielkoh94"
         },
-        "content": "        String selectedCardName \u003d getWordListPanel().getHandleToSelectedCard().getName();"
+        "content": "        Word selectedWord \u003d getWordListPanel().getWord(getWordListPanel().getSelectedCardIndex());"
       },
       {
         "lineNumber": 217,
         "author": {
-          "gitId": "-"
+          "gitId": "danielkoh94"
         },
-        "content": "        URL expectedUrl;"
+        "content": "        URL expectedUrl \u003d MainApp.class.getResource(FXML_FILE_FOLDER + SEARCH_PAGE_URL);"
       },
       {
         "lineNumber": 218,
         "author": {
-          "gitId": "-"
+          "gitId": "danielkoh94"
         },
-        "content": "        try {"
+        "content": "        String expectedUrlInString \u003d expectedUrl.toExternalForm() + \"?name\u003d\""
       },
       {
         "lineNumber": 219,
         "author": {
-          "gitId": "-"
+          "gitId": "danielkoh94"
         },
-        "content": "            expectedUrl \u003d new URL(BrowserPanel.SEARCH_PAGE_URL + selectedCardName.replaceAll(\" \", \"%20\"));"
+        "content": "                + selectedWord.getName().fullName.replaceAll(\" \", \"%20\")"
       },
       {
         "lineNumber": 220,
         "author": {
-          "gitId": "-"
+          "gitId": "danielkoh94"
         },
-        "content": "        } catch (MalformedURLException mue) {"
+        "content": "                + \"\u0026meaning\u003d\" + selectedWord.getMeaning().fullMeaning.replaceAll(\" \", \"%20\");"
       },
       {
         "lineNumber": 221,
         "author": {
-          "gitId": "-"
+          "gitId": "danielkoh94"
         },
-        "content": "            throw new AssertionError(\"URL expected to be valid.\", mue);"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
-          "gitId": "-"
+          "gitId": "danielkoh94"
         },
-        "content": "        }"
+        "content": "        assertEquals(expectedUrlInString, getBrowserPanel().getLoadedUrl().toExternalForm());"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(expectedUrl, getBrowserPanel().getLoadedUrl());"
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 225,
+        "lineNumber": 224,
         "author": {
           "gitId": "russellong95"
         },
         "content": "        assertEquals(expectedSelectedCardIndex.getZeroBased(), getWordListPanel().getSelectedCardIndex());"
       },
       {
-        "lineNumber": 226,
+        "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 228,
-        "author": {
-          "gitId": "-"
-        },
         "content": "    /**"
       },
       {
-        "lineNumber": 229,
+        "lineNumber": 228,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "     * Asserts that the browser\u0027s url and the selected card in the word list panel remain unchanged."
       },
       {
-        "lineNumber": 230,
+        "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
         "content": "     * @see BrowserPanelHandle#isUrlChanged()"
       },
       {
-        "lineNumber": 231,
+        "lineNumber": 230,
         "author": {
           "gitId": "russellong95"
         },
         "content": "     * @see WordListPanelHandle#isSelectedWordCardChanged()"
       },
       {
-        "lineNumber": 232,
+        "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 233,
+        "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
         "content": "    protected void assertSelectedCardUnchanged() {"
       },
       {
-        "lineNumber": 234,
+        "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
         "content": "        assertFalse(getBrowserPanel().isUrlChanged());"
       },
       {
-        "lineNumber": 235,
+        "lineNumber": 234,
         "author": {
           "gitId": "russellong95"
         },
         "content": "        assertFalse(getWordListPanel().isSelectedWordCardChanged());"
       },
       {
-        "lineNumber": 236,
+        "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Asserts that the command box\u0027s shows the default style."
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the command box\u0027s shows the default style."
+        "content": "     */"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void assertCommandBoxShowsDefaultStyle() {"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertCommandBoxShowsDefaultStyle() {"
+        "content": "        assertEquals(COMMAND_BOX_DEFAULT_STYLE, getCommandBox().getStyleClass());"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(COMMAND_BOX_DEFAULT_STYLE, getCommandBox().getStyleClass());"
+        "content": "    }"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Asserts that the command box\u0027s shows the error style."
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the command box\u0027s shows the error style."
+        "content": "     */"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void assertCommandBoxShowsErrorStyle() {"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertCommandBoxShowsErrorStyle() {"
+        "content": "        assertEquals(COMMAND_BOX_ERROR_STYLE, getCommandBox().getStyleClass());"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(COMMAND_BOX_ERROR_STYLE, getCommandBox().getStyleClass());"
+        "content": "    }"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Asserts that the entire status bar remains the same."
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the entire status bar remains the same."
+        "content": "     */"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void assertStatusBarUnchanged() {"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertStatusBarUnchanged() {"
+        "content": "        StatusBarFooterHandle handle \u003d getStatusBarFooter();"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": "        StatusBarFooterHandle handle \u003d getStatusBarFooter();"
+        "content": "        assertFalse(handle.isSaveLocationChanged());"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(handle.isSaveLocationChanged());"
+        "content": "        assertFalse(handle.isSyncStatusChanged());"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(handle.isSyncStatusChanged());"
+        "content": "    }"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Asserts that only the sync status in the status bar was changed to the timing of"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that only the sync status in the status bar was changed to the timing of"
+        "content": "     * {@code ClockRule#getInjectedClock()}, while the save location remains the same."
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
-        "content": "     * {@code ClockRule#getInjectedClock()}, while the save location remains the same."
+        "content": "     */"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void assertStatusBarUnchangedExceptSyncStatus() {"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertStatusBarUnchangedExceptSyncStatus() {"
+        "content": "        StatusBarFooterHandle handle \u003d getStatusBarFooter();"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
-        "content": "        StatusBarFooterHandle handle \u003d getStatusBarFooter();"
+        "content": "        String timestamp \u003d new Date(clockRule.getInjectedClock().millis()).toString();"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
-        "content": "        String timestamp \u003d new Date(clockRule.getInjectedClock().millis()).toString();"
+        "content": "        String expectedSyncStatus \u003d String.format(SYNC_STATUS_UPDATED, timestamp);"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
-        "content": "        String expectedSyncStatus \u003d String.format(SYNC_STATUS_UPDATED, timestamp);"
+        "content": "        assertEquals(expectedSyncStatus, handle.getSyncStatus());"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(expectedSyncStatus, handle.getSyncStatus());"
+        "content": "        assertFalse(handle.isSaveLocationChanged());"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(handle.isSaveLocationChanged());"
+        "content": "    }"
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Asserts that the starting state of the application is correct."
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the starting state of the application is correct."
+        "content": "     */"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    private void assertApplicationStartingStateIsCorrect() {"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void assertApplicationStartingStateIsCorrect() {"
+        "content": "        assertEquals(\"\", getCommandBox().getInput());"
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(\"\", getCommandBox().getInput());"
-      },
-      {
-        "lineNumber": 278,
-        "author": {
-          "gitId": "-"
-        },
         "content": "        assertEquals(\"\", getResultDisplay().getText());"
       },
       {
-        "lineNumber": 279,
+        "lineNumber": 278,
         "author": {
           "gitId": "russellong95"
         },
         "content": "        assertListMatching(getWordListPanel(), getModel().getFilteredWordList());"
       },
       {
-        "lineNumber": 280,
+        "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE), getBrowserPanel().getLoadedUrl());"
       },
       {
-        "lineNumber": 281,
+        "lineNumber": 280,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(Paths.get(\".\").resolve(testApp.getStorageSaveLocation()).toString(),"
       },
       {
-        "lineNumber": 282,
+        "lineNumber": 281,
         "author": {
           "gitId": "-"
         },
         "content": "                getStatusBarFooter().getSaveLocation());"
       },
       {
-        "lineNumber": 283,
+        "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(SYNC_STATUS_INITIAL, getStatusBarFooter().getSyncStatus());"
       },
       {
-        "lineNumber": 284,
+        "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 285,
+        "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 286,
+        "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 287,
+        "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
         "content": "     * Returns a defensive copy of the current model."
       },
       {
-        "lineNumber": 288,
+        "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 289,
+        "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
         "content": "    protected Model getModel() {"
       },
       {
-        "lineNumber": 290,
+        "lineNumber": 289,
         "author": {
           "gitId": "-"
         },
         "content": "        return testApp.getModel();"
       },
       {
-        "lineNumber": 291,
+        "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 292,
+        "lineNumber": 291,
         "author": {
           "gitId": "-"
         },
@@ -125327,9 +126849,9 @@
       }
     ],
     "authorContributionMap": {
-      "danielkoh94": 5,
-      "-": 238,
-      "russellong95": 49
+      "danielkoh94": 14,
+      "-": 230,
+      "russellong95": 47
     }
   },
   {
