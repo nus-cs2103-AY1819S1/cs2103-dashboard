@@ -31256,119 +31256,119 @@
         "author": {
           "gitId": "remo5000"
         },
-        "content": "import static seedu.address.logic.parser.ListCommandParser.PREFIX_DUE_BEFORE;"
+        "content": "import static seedu.address.logic.parser.ListCommandParser.DUE_END_OF_MONTH_OPTION;"
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "jiaxiu11"
+          "gitId": "remo5000"
         },
-        "content": "import static seedu.address.model.Model.PREDICATE_SHOW_ALL_TASKS;"
+        "content": "import static seedu.address.logic.parser.ListCommandParser.DUE_END_OF_WEEK_OPTION;"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": ""
+        "content": "import static seedu.address.logic.parser.ListCommandParser.DUE_TODAY_OPTION;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "import java.util.function.Predicate;"
+        "content": "import static seedu.address.logic.parser.ListCommandParser.PREFIX_DUE_BEFORE;"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "jiaxiu11"
         },
-        "content": ""
+        "content": "import static seedu.address.model.Model.PREDICATE_SHOW_ALL_TASKS;"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "import seedu.address.commons.core.Messages;"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "import seedu.address.logic.CommandHistory;"
+        "content": "import java.util.function.Predicate;"
       },
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "import seedu.address.model.Model;"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "import seedu.address.model.task.DueDateIsBeforeTodayPredicate;"
+        "content": "import seedu.address.commons.core.Messages;"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "import seedu.address.model.task.Task;"
+        "content": "import seedu.address.logic.CommandHistory;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.model.Model;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "import seedu.address.model.task.DueDateIsBeforeEndOfMonthPredicate;"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": ""
+        "content": "import seedu.address.model.task.DueDateIsBeforeEndOfWeekPredicate;"
       },
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "/**"
+        "content": "import seedu.address.model.task.DueDateIsBeforeTodayPredicate;"
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "unsatisfiedpopcorn"
+          "gitId": "remo5000"
         },
-        "content": " * Lists all tasks in the task manager to the user."
+        "content": "import seedu.address.model.task.Task;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "public class ListCommand extends Command {"
+        "content": ""
       },
       {
         "lineNumber": 21,
@@ -31382,126 +31382,126 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"list\";"
+        "content": "/**"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": ""
+        "content": " * Lists all tasks in the task manager to the user."
       },
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "unsatisfiedpopcorn"
+          "gitId": "-"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Listed all tasks\";"
+        "content": " */"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class ListCommand extends Command {"
       },
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Lists tasks. \""
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "            + \"Parameters: \""
+        "content": "    public static final String COMMAND_WORD \u003d \"list\";"
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "            + \"[\" + PREFIX_DUE_BEFORE + \"DUE BEFORE \" + \"]\\n\""
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "unsatisfiedpopcorn"
         },
-        "content": "            + \"Example: \" + COMMAND_WORD + \" \""
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Listed all tasks\";"
       },
       {
         "lineNumber": 30,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "            + PREFIX_DUE_BEFORE + \"today\";"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Lists tasks. \""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    private final Predicate\u003cTask\u003e predicate;"
+        "content": "            + \"Parameters: \""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "            + \"[\" + PREFIX_DUE_BEFORE + \"DUE BEFORE \" + \"]\\n\""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    /**"
+        "content": "            + \"Allowed values for \\\"DUE BEFORE\\\": \""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     * Denotes the kind of filters List supports."
+        "content": "            + DUE_TODAY_OPTION + \", \""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     */"
+        "content": "            + DUE_END_OF_WEEK_OPTION + \", \""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    public enum ListFilter {"
+        "content": "            + DUE_END_OF_MONTH_OPTION + \", \" + \"\\n\""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            DUE_TODAY;"
+        "content": "            + \"Example: \" + COMMAND_WORD + \" \""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    }"
+        "content": "            + PREFIX_DUE_BEFORE + \"today\";"
       },
       {
         "lineNumber": 40,
@@ -31515,185 +31515,346 @@
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    public ListCommand() {"
+        "content": "    private final Predicate\u003cTask\u003e predicate;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        this.predicate \u003d PREDICATE_SHOW_ALL_TASKS;"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    }"
+        "content": "    /**"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "     * Denotes the kind of filters List supports."
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    public ListCommand(ListFilter listFilter) {"
+        "content": "     */"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        switch (listFilter) {"
+        "content": "    public enum ListFilter {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        case DUE_TODAY:"
+        "content": "            DUE_TODAY,"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            this.predicate \u003d new DueDateIsBeforeTodayPredicate();"
+        "content": "            DUE_END_OF_WEEK,"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            break;"
+        "content": "            DUE_END_OF_MONTH;"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        default:"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            this.predicate \u003d PREDICATE_SHOW_ALL_TASKS;"
+        "content": "    public ListCommand() {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            break;"
+        "content": "        this.predicate \u003d PREDICATE_SHOW_ALL_TASKS;"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": ""
+        "content": "    public ListCommand(ListFilter listFilter) {"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": ""
+        "content": "        switch (listFilter) {"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "    @Override"
+        "content": "        case DUE_TODAY:"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "pengnam"
+          "gitId": "remo5000"
         },
-        "content": "    public CommandResult executePrimitive(Model model, CommandHistory history) {"
+        "content": "            this.predicate \u003d new DueDateIsBeforeTodayPredicate();"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "        requireNonNull(model);"
+        "content": "            break;"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        model.updateFilteredTaskList(this.predicate);"
+        "content": "        case DUE_END_OF_WEEK:"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        return model.getFilteredTaskList().size() \u003d\u003d model.getTaskManager().getTaskList().size()"
+        "content": "            this.predicate \u003d new DueDateIsBeforeEndOfWeekPredicate();"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                ? new CommandResult(MESSAGE_SUCCESS)"
+        "content": "            break;"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                : new CommandResult(String.format(Messages.MESSAGE_TASKS_LISTED_OVERVIEW,"
+        "content": "        case DUE_END_OF_MONTH:"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                    model.getFilteredTaskList().size()));"
+        "content": "            this.predicate \u003d new DueDateIsBeforeEndOfMonthPredicate();"
       },
       {
         "lineNumber": 66,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "            break;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        default:"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "            this.predicate \u003d PREDICATE_SHOW_ALL_TASKS;"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "            break;"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "    public CommandResult executePrimitive(Model model, CommandHistory history) {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        model.updateFilteredTaskList(this.predicate);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        return model.getFilteredTaskList().size() \u003d\u003d model.getTaskManager().getTaskList().size()"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                ? new CommandResult(MESSAGE_SUCCESS)"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                : new CommandResult(String.format(Messages.MESSAGE_TASKS_LISTED_OVERVIEW,"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                    model.getFilteredTaskList().size()));"
+      },
+      {
+        "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 83,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                || (other instanceof ListCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                \u0026\u0026 predicate.equals(((ListCommand) other).predicate)); // state check"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
@@ -31701,8 +31862,8 @@
       }
     ],
     "authorContributionMap": {
-      "remo5000": 42,
-      "-": 21,
+      "remo5000": 64,
+      "-": 22,
       "pengnam": 1,
       "unsatisfiedpopcorn": 2,
       "jiaxiu11": 1
@@ -37005,276 +37166,318 @@
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "    public static final String DUE_TODAY_OPTION \u003d \"today\";"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    /**"
+        "content": "    public static final String DUE_END_OF_WEEK_OPTION \u003d \"week\";"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     * Parses a string that represents a list filter option."
+        "content": "    public static final String DUE_END_OF_MONTH_OPTION \u003d \"month\";"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     *"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     * @param s the optional string the denotes the list filter type"
+        "content": "    /**"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     * @return an Optional ListFilter, which is not present if there is no string parameter"
+        "content": "     * Parses a string that represents a list filter option."
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     * @throws ParseException if a list filter is present but the filter type is invalid"
+        "content": "     *"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     */"
+        "content": "     * @param s the optional string the denotes the list filter type"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    private Optional\u003cListCommand.ListFilter\u003e parseListFilter(Optional\u003cString\u003e s)throws ParseException {"
+        "content": "     * @return an Optional ListFilter, which is not present if there is no string parameter"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        if (s.isPresent()) {"
+        "content": "     * @throws ParseException if a list filter is present but the filter type is invalid"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            String val \u003d s.get();"
+        "content": "     */"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            switch (val) {"
+        "content": "    private Optional\u003cListCommand.ListFilter\u003e parseListFilter(Optional\u003cString\u003e s)throws ParseException {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            case \"today\":"
+        "content": "        if (s.isPresent()) {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                return Optional.of(ListCommand.ListFilter.DUE_TODAY);"
+        "content": "            String val \u003d s.get();"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "            switch (val) {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            default:"
+        "content": "            case DUE_TODAY_OPTION:"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, ListCommand.MESSAGE_USAGE));"
+        "content": "                return Optional.of(ListCommand.ListFilter.DUE_TODAY);"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            }"
+        "content": "            case DUE_END_OF_WEEK_OPTION:"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        } else {"
+        "content": "                return Optional.of(ListCommand.ListFilter.DUE_END_OF_WEEK);"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "            return Optional.empty();"
+        "content": "            case DUE_END_OF_MONTH_OPTION:"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        }"
+        "content": "                return Optional.of(ListCommand.ListFilter.DUE_END_OF_MONTH);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    }"
+        "content": "            default:"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "                throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, ListCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    /**"
+        "content": "            }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the FindCommand"
+        "content": "        } else {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     * and returns an FindCommand object for execution."
+        "content": "            return Optional.empty();"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     *"
+        "content": "        }"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "    }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    public ListCommand parse(String args) throws ParseException {"
+        "content": "    /**"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        ArgumentMultimap argMultimap \u003d"
+        "content": "     * Parses the given {@code String} of arguments in the context of the FindCommand"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_DUE_BEFORE);"
+        "content": "     * and returns an FindCommand object for execution."
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "     *"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        Optional\u003cListCommand.ListFilter\u003e listFilter \u003d parseListFilter(argMultimap.getValue(PREFIX_DUE_BEFORE));"
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        return listFilter"
+        "content": "    public ListCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                .flatMap(filter -\u003e Optional.of(new ListCommand(filter)))"
+        "content": "        ArgumentMultimap argMultimap \u003d"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                .orElseGet(() -\u003e new ListCommand());"
+        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_DUE_BEFORE);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 57,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Optional\u003cListCommand.ListFilter\u003e listFilter \u003d parseListFilter(argMultimap.getValue(PREFIX_DUE_BEFORE));"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        return listFilter"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .flatMap(filter -\u003e Optional.of(new ListCommand(filter)))"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .orElseGet(() -\u003e new ListCommand());"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
         "author": {
           "gitId": "remo5000"
         },
@@ -37282,7 +37485,7 @@
       }
     ],
     "authorContributionMap": {
-      "remo5000": 57
+      "remo5000": 63
     }
   },
   {
@@ -51649,6 +51852,463 @@
     "authorContributionMap": {
       "pengnam": 30,
       "jiaxiu11": 46
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/task/DueDateIsBeforeEndOfMonthPredicate.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "package seedu.address.model.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import java.util.Calendar;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import java.util.GregorianCalendar;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import java.util.function.Predicate;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": " * Tests that a {@code Task}\u0027s {@code DueDate} is before the end of today."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "public class DueDateIsBeforeEndOfMonthPredicate implements Predicate\u003cTask\u003e {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public boolean test(Task person) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        // Get time at the end of the month, Sunday 2359."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Calendar date \u003d new GregorianCalendar();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        int dayOfMonth \u003d Calendar.getInstance().getActualMaximum(Calendar.DAY_OF_MONTH);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.DAY_OF_MONTH, dayOfMonth);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.HOUR_OF_DAY, 23);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.MINUTE, 59);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.SECOND, 0);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.MILLISECOND, 0);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        return person.getDueDate().valueDate.before(date.getTime());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                || (other instanceof DueDateIsBeforeEndOfMonthPredicate); // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "remo5000": 32
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/task/DueDateIsBeforeEndOfWeekPredicate.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "package seedu.address.model.task;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import java.util.Calendar;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import java.util.GregorianCalendar;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import java.util.function.Predicate;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": " * Tests that a {@code Task}\u0027s {@code DueDate} is before the end of today."
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "public class DueDateIsBeforeEndOfWeekPredicate implements Predicate\u003cTask\u003e {"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public boolean test(Task person) {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        /** Get time at the end of the week, Sunday 2359. */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Calendar date \u003d new GregorianCalendar();"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY);"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.HOUR_OF_DAY, 23);"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.MINUTE, 59);"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.SECOND, 0);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        date.set(Calendar.MILLISECOND, 0);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        return person.getDueDate().valueDate.before(date.getTime());"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                || (other instanceof DueDateIsBeforeEndOfWeekPredicate); // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "remo5000": 31
     }
   },
   {
@@ -93369,28 +94029,28 @@
         "author": {
           "gitId": "remo5000"
         },
-        "content": "import java.util.Arrays;"
+        "content": "import java.text.SimpleDateFormat;"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": ""
+        "content": "import java.util.Arrays;"
       },
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "import org.junit.Before;"
+        "content": "import java.util.Calendar;"
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "import org.junit.Test;"
+        "content": "import java.util.Date;"
       },
       {
         "lineNumber": 16,
@@ -93404,388 +94064,976 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.CommandHistory;"
+        "content": "import org.junit.Before;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.Model;"
+        "content": "import org.junit.Test;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.ModelManager;"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "import seedu.address.model.TaskManager;"
+        "content": "import seedu.address.logic.CommandHistory;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.UserPrefs;"
+        "content": "import seedu.address.model.Model;"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "import seedu.address.model.task.DueDateIsBeforeTodayPredicate;"
+        "content": "import seedu.address.model.ModelManager;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "import seedu.address.testutil.TaskManagerBuilder;"
+        "content": "import seedu.address.model.TaskManager;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.model.UserPrefs;"
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "/**"
+        "content": "import seedu.address.model.task.DueDateIsBeforeEndOfMonthPredicate;"
       },
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": " * Contains integration tests (interaction with the Model) and unit tests for ListCommand."
+        "content": "import seedu.address.model.task.DueDateIsBeforeEndOfWeekPredicate;"
       },
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": " */"
+        "content": "import seedu.address.model.task.DueDateIsBeforeTodayPredicate;"
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "public class ListCommandTest {"
+        "content": "import seedu.address.model.task.Task;"
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": ""
+        "content": "import seedu.address.model.util.DateFormatUtil;"
       },
       {
         "lineNumber": 30,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "    private Model model;"
+        "content": "import seedu.address.testutil.TaskBuilder;"
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "remo5000"
         },
-        "content": "    private Model expectedModel;"
+        "content": "import seedu.address.testutil.TaskManagerBuilder;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Before"
+        "content": " * Contains integration tests (interaction with the Model) and unit tests for ListCommand."
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void setUp() {"
+        "content": " */"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "jiaxiu11"
+          "gitId": "-"
         },
-        "content": "        model \u003d new ModelManager(getTypicalTaskManager(), new UserPrefs());"
+        "content": "public class ListCommandTest {"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "jiaxiu11"
+          "gitId": "-"
         },
-        "content": "        expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    private Model model;"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private Model expectedModel;"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void execute_listIsNotFiltered_showsSameList() {"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertCommandSuccess(new ListCommand(), model, commandHistory, ListCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": "    @Before"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public void setUp() {"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "-"
+          "gitId": "jiaxiu11"
         },
-        "content": ""
+        "content": "        model \u003d new ModelManager(getTypicalTaskManager(), new UserPrefs());"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "jiaxiu11"
         },
-        "content": "    @Test"
+        "content": "        expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void execute_listIsFiltered_showsEverything() {"
+        "content": "    }"
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "pengnam"
+          "gitId": "-"
         },
-        "content": "        showTaskAtIndex(model, INDEX_FIRST_TASK);"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertCommandSuccess(new ListCommand(), model, commandHistory, ListCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public void execute_listIsNotFiltered_showsSameList() {"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        assertCommandSuccess(new ListCommand(), model, commandHistory, ListCommand.MESSAGE_SUCCESS, expectedModel);"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "remo5000"
-        },
-        "content": "    public void execute_listFiltered_beforeToday() {"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "remo5000"
-        },
-        "content": "        String expectedMessage \u003d String.format(MESSAGE_TASKS_LISTED_OVERVIEW, 1);"
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "remo5000"
-        },
-        "content": "        ListCommand.ListFilter filter \u003d ListCommand.ListFilter.DUE_TODAY;"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "remo5000"
-        },
-        "content": "        ListCommand command \u003d new ListCommand(filter);"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void execute_listIsFiltered_showsEverything() {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "pengnam"
+        },
+        "content": "        showTaskAtIndex(model, INDEX_FIRST_TASK);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertCommandSuccess(new ListCommand(), model, commandHistory, ListCommand.MESSAGE_SUCCESS, expectedModel);"
+      },
+      {
         "lineNumber": 57,
         "author": {
-          "gitId": "remo5000"
+          "gitId": "-"
         },
-        "content": "        TaskManager manager \u003d (new TaskManagerBuilder())"
+        "content": "    }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                .withTask(J_TASK)"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                .withTask(K_TASK)"
+        "content": "    @Test"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                .build();"
+        "content": "    public void execute_listFiltered_beforeToday() {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        // Build new ModelManagers to handle temporal differences"
+        "content": "        String expectedMessage \u003d String.format(MESSAGE_TASKS_LISTED_OVERVIEW, 1);"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        ModelManager modelWithExtremeTemporalTasks \u003d"
+        "content": "        ListCommand.ListFilter filter \u003d ListCommand.ListFilter.DUE_TODAY;"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                new ModelManager(manager, new UserPrefs());"
+        "content": "        ListCommand command \u003d new ListCommand(filter);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        ModelManager expectedModelWithPastTask \u003d"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                new ModelManager(modelWithExtremeTemporalTasks.getTaskManager(), new UserPrefs());"
+        "content": "        TaskManager manager \u003d (new TaskManagerBuilder())"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        expectedModelWithPastTask.updateFilteredTaskList(new DueDateIsBeforeTodayPredicate());"
+        "content": "                .withTask(J_TASK)"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "remo5000"
         },
-        "content": ""
+        "content": "                .withTask(K_TASK)"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        assertCommandSuccess(command, modelWithExtremeTemporalTasks, commandHistory,"
+        "content": "                .build();"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "                expectedMessage, expectedModelWithPastTask);"
+        "content": "        // Build new ModelManagers to handle temporal differences"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "        assertEquals(Arrays.asList(J_TASK), modelWithExtremeTemporalTasks.getFilteredTaskList());"
+        "content": "        ModelManager modelWithExtremeTemporalTasks \u003d"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "remo5000"
         },
-        "content": "    }"
+        "content": "                new ModelManager(manager, new UserPrefs());"
       },
       {
         "lineNumber": 72,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ModelManager expectedModelWithPastTask \u003d"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                new ModelManager(modelWithExtremeTemporalTasks.getTaskManager(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        expectedModelWithPastTask.updateFilteredTaskList(new DueDateIsBeforeTodayPredicate());"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertCommandSuccess(command, modelWithExtremeTemporalTasks, commandHistory,"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                expectedMessage, expectedModelWithPastTask);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertEquals(Arrays.asList(J_TASK), modelWithExtremeTemporalTasks.getFilteredTaskList());"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public void execute_listFiltered_beforeEndOfWeek() {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        String expectedMessage \u003d String.format(MESSAGE_TASKS_LISTED_OVERVIEW, 2);"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ListCommand.ListFilter filter \u003d ListCommand.ListFilter.DUE_END_OF_WEEK;"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ListCommand command \u003d new ListCommand(filter);"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        /** Get a string representation for a time almost at the end of the week. */"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Calendar c \u003d Calendar.getInstance();"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        c \u003d new Calendar.Builder()"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .setWeekDate(c.get(Calendar.YEAR), c.get(Calendar.WEEK_OF_YEAR), Calendar.SUNDAY)"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .setTimeOfDay(20, 00, 00)"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Date date \u003d c.getTime();"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        SimpleDateFormat formatter \u003d new SimpleDateFormat(\"dd-MM-YYYY HHmm\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        String strDate \u003d formatter.format(date);"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        /** Build a task with the due date as the end of the week*/"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Task taskDueThisWeek \u003d new TaskBuilder()"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withName(\"Finish my homework due this week\")"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withDueDate(strDate)"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        TaskManager manager \u003d (new TaskManagerBuilder())"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withTask(J_TASK)"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withTask(K_TASK)"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withTask(taskDueThisWeek)"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        // Build new ModelManagers to handle temporal differences"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ModelManager modelWithExtremeTemporalTasks \u003d"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                new ModelManager(manager, new UserPrefs());"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ModelManager expectedModelWithPastTask \u003d"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                new ModelManager(modelWithExtremeTemporalTasks.getTaskManager(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        expectedModelWithPastTask.updateFilteredTaskList(new DueDateIsBeforeEndOfWeekPredicate());"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertCommandSuccess(command, modelWithExtremeTemporalTasks, commandHistory,"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                expectedMessage, expectedModelWithPastTask);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertEquals(Arrays.asList(J_TASK, taskDueThisWeek), modelWithExtremeTemporalTasks.getFilteredTaskList());"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public void execute_listFiltered_beforeEndOfMonth() {"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        String expectedMessage \u003d String.format(MESSAGE_TASKS_LISTED_OVERVIEW, 2);"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ListCommand.ListFilter filter \u003d ListCommand.ListFilter.DUE_END_OF_MONTH;"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ListCommand command \u003d new ListCommand(filter);"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        /** Get a string representation for a time almost at the end of the month. */"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Calendar c \u003d Calendar.getInstance();"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        c \u003d new Calendar.Builder()"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .setDate(c.get(Calendar.YEAR), c.get(Calendar.MONTH), c.getActualMaximum(Calendar.DAY_OF_MONTH) - 1)"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .setTimeOfDay(20, 00, 00)"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Date date \u003d c.getTime();"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        SimpleDateFormat formatter \u003d new SimpleDateFormat(DateFormatUtil.DATE_FORMAT_STANDARD);"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        String strDate \u003d formatter.format(date);"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        /** Build a task with the due date near the end of the month */"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        Task taskDueThisMonth \u003d new TaskBuilder()"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withName(\"Finish my project due this month\")"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withDueDate(strDate)"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        TaskManager manager \u003d (new TaskManagerBuilder())"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withTask(J_TASK)"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withTask(K_TASK)"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .withTask(taskDueThisMonth)"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        // Build new ModelManagers to handle temporal differences"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ModelManager modelWithExtremeTemporalTasks \u003d"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                new ModelManager(manager, new UserPrefs());"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        ModelManager expectedModelWithPastTask \u003d"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                new ModelManager(modelWithExtremeTemporalTasks.getTaskManager(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        expectedModelWithPastTask.updateFilteredTaskList(new DueDateIsBeforeEndOfMonthPredicate());"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertCommandSuccess(command, modelWithExtremeTemporalTasks, commandHistory,"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                expectedMessage, expectedModelWithPastTask);"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertEquals(Arrays.asList(J_TASK, taskDueThisMonth), modelWithExtremeTemporalTasks.getFilteredTaskList());"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
@@ -93793,7 +95041,7 @@
       }
     ],
     "authorContributionMap": {
-      "remo5000": 30,
+      "remo5000": 114,
       "-": 36,
       "pengnam": 2,
       "unsatisfiedpopcorn": 1,
@@ -100095,6 +101343,231 @@
     "authorContributionMap": {
       "-": 33,
       "pengnam": 1
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/parser/ListCommandParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "import seedu.address.logic.commands.ListCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": " * Tests that the permitted filters for ListCommand work."
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "public class ListCommandParserTest {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    private ListCommandParser parser \u003d new ListCommandParser();"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public void parse_validArgs_returnsListCommand() {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertParseSuccess(parser, \"\", new ListCommand());"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertParseSuccess(parser, \" b/today\", new ListCommand(ListCommand.ListFilter.DUE_TODAY));"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertParseSuccess(parser, \" b/week\", new ListCommand(ListCommand.ListFilter.DUE_END_OF_WEEK));"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertParseSuccess(parser, \" b/month\", new ListCommand(ListCommand.ListFilter.DUE_END_OF_MONTH));"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    public void parse_invalidArgs_throwsParseException() {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "        assertParseFailure(parser, \" b/sunImplodes\", String.format(MESSAGE_INVALID_COMMAND_FORMAT,"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "                ListCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "remo5000"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "remo5000": 31
     }
   },
   {

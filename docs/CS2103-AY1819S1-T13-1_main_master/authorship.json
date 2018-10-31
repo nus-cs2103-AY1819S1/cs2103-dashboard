@@ -24557,758 +24557,758 @@
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.GradesCommand;"
+        "content": "import seedu.address.logic.commands.FindPhoneCommand;"
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "import seedu.address.logic.commands.HelpCommand;"
+        "content": "import seedu.address.logic.commands.GradesCommand;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.HistoryCommand;"
+        "content": "import seedu.address.logic.commands.HelpCommand;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.ListCommand;"
+        "content": "import seedu.address.logic.commands.HistoryCommand;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.RedoCommand;"
+        "content": "import seedu.address.logic.commands.ListCommand;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.SelectCommand;"
+        "content": "import seedu.address.logic.commands.RedoCommand;"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.TimeAddCommand;"
+        "content": "import seedu.address.logic.commands.SelectCommand;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.UndoCommand;"
+        "content": "import seedu.address.logic.commands.TimeAddCommand;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": "import seedu.address.logic.commands.UndoCommand;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": " * Parses user input."
+        "content": "/**"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Parses user input."
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "public class AddressBookParser {"
+        "content": " */"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class AddressBookParser {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Used for initial separation of command word and args."
+        "content": "    /**"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Used for initial separation of command word and args."
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
+        "content": "     */"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses user input into command for execution."
+        "content": "    /**"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Parses user input into command for execution."
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param userInput full user input string"
+        "content": "     *"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return the command based on the user input"
+        "content": "     * @param userInput full user input string"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     * @return the command based on the user input"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Command parseCommand(String userInput) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
+        "content": "    public Command parseCommand(String userInput) throws ParseException {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!matcher.matches()) {"
+        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+        "content": "        if (!matcher.matches()) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
+        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        switch (commandWord) {"
+        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        switch (commandWord) {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "        case AddCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new AddCommandParser().parse(arguments);"
+        "content": "        case AddCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new AddCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "chenlu-chua"
+          "gitId": "-"
         },
-        "content": "        case EarningsCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "chenlu-chua"
         },
-        "content": "            return new EarningsCommandParser().parse(arguments);"
+        "content": "        case EarningsCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "chenlu-chua"
         },
-        "content": ""
+        "content": "            return new EarningsCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "chenlu-chua"
         },
-        "content": "        case EditCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new EditCommandParser().parse(arguments);"
+        "content": "        case EditCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new EditCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "        case SelectCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new SelectCommandParser().parse(arguments);"
+        "content": "        case SelectCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new SelectCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "        case DeleteCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new DeleteCommandParser().parse(arguments);"
+        "content": "        case DeleteCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new DeleteCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "        case DeleteTimeCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new DeleteTimeCommandParser().parse(arguments);"
+        "content": "        case DeleteTimeCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new DeleteTimeCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "        case ClearCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ClearCommand();"
+        "content": "        case ClearCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ClearCommand();"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FindCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FindCommandParser().parse(arguments);"
+        "content": "        case FindCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FindCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FindEmailCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FindEmailCommandParser().parse(arguments);"
+        "content": "        case FindEmailCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FindEmailCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        case ListCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ListCommand();"
+        "content": "        case FindPhoneCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FindPhoneCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "        case GradesCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": "            return new GradesCommand();"
+        "content": "        case ListCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 93,
         "author": {
-          "gitId": "hrxiong"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ListCommand();"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HistoryCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "            return new HistoryCommand();"
+        "content": "        case GradesCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": ""
+        "content": "            return new GradesCommand();"
       },
       {
         "lineNumber": 97,
         "author": {
-          "gitId": "-"
+          "gitId": "hrxiong"
         },
-        "content": "        case ExitCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ExitCommand();"
+        "content": "        case HistoryCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HistoryCommand();"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HelpCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new HelpCommand();"
+        "content": "        case ExitCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ExitCommand();"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "        case TimeAddCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new TimeAddCommandParser().parse(arguments);"
+        "content": "        case HelpCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HelpCommand();"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "        case UndoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new UndoCommand();"
+        "content": "        case TimeAddCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new TimeAddCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "        case RedoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new RedoCommand();"
+        "content": "        case UndoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new UndoCommand();"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FilterByFeeCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FilterByFeeCommandParser().parse(arguments);"
+        "content": "        case RedoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new RedoCommand();"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FilterByGradeCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FilterByGradeCommandParser().parse(arguments);"
+        "content": "        case FilterByFeeCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FilterByFeeCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FilterByEducationCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FilterByEducationCommandParser().parse(arguments);"
+        "content": "        case FilterByGradeCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FilterByGradeCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "        case FilterByTimeCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new FilterByTimeCommandParser().parse(arguments);"
+        "content": "        case FilterByEducationCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FilterByEducationCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "        case EditTimeCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new EditCommandParser().parse(arguments);"
+        "content": "        case FilterByTimeCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FilterByTimeCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "        default:"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        case EditTimeCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
+        "content": "            return new EditCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        default:"
       },
       {
         "lineNumber": 132,
@@ -25322,12 +25322,40 @@
         "author": {
           "gitId": "-"
         },
+        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
       "hrxiong": 4,
-      "-": 125,
+      "-": 129,
       "chenlu-chua": 4
     }
   },
