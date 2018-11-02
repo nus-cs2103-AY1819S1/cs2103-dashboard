@@ -20515,6 +20515,1471 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/MainApp.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.io.IOException;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.nio.file.Path;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Optional;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.logging.Logger;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import com.google.common.eventbus.Subscribe;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.application.Application;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.application.Platform;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.stage.Stage;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.Config;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.EventsCenter;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.LogsCenter;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.Version;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.events.ui.ExitAppRequestEvent;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.exceptions.DataConversionException;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.util.ConfigUtil;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.util.StringUtil;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.Logic;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.logic.LogicManager;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.AddressBook;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.ReadOnlyAddressBook;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.util.SampleDataUtil;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.storage.AddressBookStorage;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.storage.JsonUserPrefsStorage;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.storage.Storage;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.storage.StorageManager;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.storage.UserPrefsStorage;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.storage.XmlAddressBookStorage;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.ui.Ui;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.ui.UiManager;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * The main entry point to the application."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class MainApp extends Application {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public static final Version VERSION \u003d new Version(1, 3, 1, true);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final Logger logger \u003d LogsCenter.getLogger(MainApp.class);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected Ui ui;"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected Logic logic;"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected Storage storage;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected Model model;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected Config config;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected UserPrefs userPrefs;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void init() throws Exception {"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d[ Initializing AddressBook ]\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\");"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        super.init();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        AppParameters appParameters \u003d AppParameters.parse(getParameters());"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        config \u003d initConfig(appParameters.getConfigPath());"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        UserPrefsStorage userPrefsStorage \u003d new JsonUserPrefsStorage(config.getUserPrefsFilePath());"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        userPrefs \u003d initPrefs(userPrefsStorage);"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        AddressBookStorage addressBookStorage \u003d new XmlAddressBookStorage(userPrefs.getAddressBookFilePath());"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        storage \u003d new StorageManager(addressBookStorage, userPrefsStorage);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        initLogging(config);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        model \u003d initModelManager(storage, userPrefs);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logic \u003d new LogicManager(model);"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ui \u003d new UiManager(logic, config, userPrefs);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        initEventsCenter();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns a {@code ModelManager} with the data from {@code storage}\u0027s address book and {@code userPrefs}. \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * The data from the sample address book will be used instead if {@code storage}\u0027s address book is not found,"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * or an empty address book will be used instead if errors occur when reading {@code storage}\u0027s address book."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Model initModelManager(Storage storage, UserPrefs userPrefs) {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Optional\u003cReadOnlyAddressBook\u003e addressBookOptional;"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ReadOnlyAddressBook initialData;"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            addressBookOptional \u003d storage.readAddressBook();"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (!addressBookOptional.isPresent()) {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                logger.info(\"Data file not found. Will be starting with a sample AddressBook\");"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            initialData \u003d addressBookOptional.orElseGet(SampleDataUtil::getSampleAddressBook);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (DataConversionException e) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.warning(\"Data file not in the correct format. Will be starting with an empty AddressBook\");"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            initialData \u003d new AddressBook();"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.warning(\"Problem while reading from the file. Will be starting with an empty AddressBook\");"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            initialData \u003d new AddressBook();"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new ModelManager(initialData, userPrefs);"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private void initLogging(Config config) {"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        LogsCenter.init(config);"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns a {@code Config} using the file at {@code configFilePath}. \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * The default file path {@code Config#DEFAULT_CONFIG_FILE} will be used instead"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * if {@code configFilePath} is null."
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected Config initConfig(Path configFilePath) {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Config initializedConfig;"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Path configFilePathUsed;"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        configFilePathUsed \u003d Config.DEFAULT_CONFIG_FILE;"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (configFilePath !\u003d null) {"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.info(\"Custom Config file specified \" + configFilePath);"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            configFilePathUsed \u003d configFilePath;"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(\"Using config file : \" + configFilePathUsed);"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            Optional\u003cConfig\u003e configOptional \u003d ConfigUtil.readConfig(configFilePathUsed);"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            initializedConfig \u003d configOptional.orElse(new Config());"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (DataConversionException e) {"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.warning(\"Config file at \" + configFilePathUsed + \" is not in the correct format. \""
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    + \"Using default config properties\");"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            initializedConfig \u003d new Config();"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        //Update config file in case it was missing to begin with or there are new/unused fields"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ConfigUtil.saveConfig(initializedConfig, configFilePathUsed);"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.warning(\"Failed to save config file : \" + StringUtil.getDetails(e));"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return initializedConfig;"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns a {@code UserPrefs} using the file at {@code storage}\u0027s user prefs file path,"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * or a new {@code UserPrefs} with default configuration if errors occur when"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * reading from the file."
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    protected UserPrefs initPrefs(UserPrefsStorage storage) {"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Path prefsFilePath \u003d storage.getUserPrefsFilePath();"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(\"Using prefs file : \" + prefsFilePath);"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        UserPrefs initializedPrefs;"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            Optional\u003cUserPrefs\u003e prefsOptional \u003d storage.readUserPrefs();"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            initializedPrefs \u003d prefsOptional.orElse(new UserPrefs());"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (DataConversionException e) {"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.warning(\"UserPrefs file at \" + prefsFilePath + \" is not in the correct format. \""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    + \"Using default user prefs\");"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            initializedPrefs \u003d new UserPrefs();"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.warning(\"Problem while reading from the file. Will be starting with an empty AddressBook\");"
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            initializedPrefs \u003d new UserPrefs();"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        //Update prefs file in case it was missing to begin with or there are new/unused fields"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            storage.saveUserPrefs(initializedPrefs);"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.warning(\"Failed to save config file : \" + StringUtil.getDetails(e));"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return initializedPrefs;"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private void initEventsCenter() {"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        EventsCenter.getInstance().registerHandler(this);"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void start(Stage primaryStage) {"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(\"Starting AddressBook \" + MainApp.VERSION);"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ui.start(primaryStage);"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void stop() {"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d [ Stopping Address Book ] \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\");"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ui.stop();"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            storage.saveUserPrefs(userPrefs);"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            logger.severe(\"Failed to save preferences \" + StringUtil.getDetails(e));"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Platform.exit();"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        System.exit(0);"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void handleExitAppRequestEvent(ExitAppRequestEvent event) {"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        stop();"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void main(String[] args) {"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        launch(args);"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "pratyayj": 1,
+      "-": 207
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/commons/core/GuiSettings.java",
     "lines": [
       {
@@ -32189,6 +33654,434 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/logic/commands/ShowLocationCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.commons.core.EventsCenter;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.commons.core.Messages;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.commons.core.index.Index;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.commons.events.ui.JumpToListRequestEvent;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": " * Shows the location of a selected person in the embedded Google Maps."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "public class ShowLocationCommand extends Command {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"showLocation\";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public static final String COMMAND_WORD_ALIAS \u003d \"sl\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \"(alias: \" + COMMAND_WORD_ALIAS + \")\""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "            + \": Shows the location of person identified by the index number used in the displayed person list.\\n\""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "            + \"Parameters: INDEX (must be a positive integer)\\n\""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "            + \"Example: \" + COMMAND_WORD + \" 1\";"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public static final String MESSAGE_SELECT_PERSON_SUCCESS \u003d \"Selected Person: %1$s\";"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    private final Index targetIndex;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public ShowLocationCommand(Index targetIndex) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        this.targetIndex \u003d targetIndex;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        List\u003cPerson\u003e filteredPersonList \u003d model.getFilteredPersonList();"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        if (targetIndex.getZeroBased() \u003e\u003d filteredPersonList.size()) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        EventsCenter.getInstance().post(new JumpToListRequestEvent(targetIndex));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        return new CommandResult(String.format(MESSAGE_SELECT_PERSON_SUCCESS, targetIndex.getOneBased()));"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "                || (other instanceof ShowLocationCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "                \u0026\u0026 targetIndex.equals(((ShowLocationCommand) other).targetIndex)); // state check"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "pratyayj": 60
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/logic/commands/UndoCommand.java",
     "lines": [
       {
@@ -33985,777 +35878,777 @@
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "-"
+          "gitId": "pratyayj"
         },
-        "content": "import seedu.address.logic.commands.UndoCommand;"
+        "content": "import seedu.address.logic.commands.ShowLocationCommand;"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+        "content": "import seedu.address.logic.commands.UndoCommand;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": " * Parses user input."
+        "content": "/**"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Parses user input."
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "public class AddressBookParser {"
+        "content": " */"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class AddressBookParser {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Used for initial separation of command word and args."
+        "content": "    /**"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Used for initial separation of command word and args."
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
+        "content": "     */"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses user input into command for execution."
+        "content": "    /**"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Parses user input into command for execution."
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param userInput full user input string"
+        "content": "     *"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return the command based on the user input"
+        "content": "     * @param userInput full user input string"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     * @return the command based on the user input"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Command parseCommand(String userInput) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
+        "content": "    public Command parseCommand(String userInput) throws ParseException {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!matcher.matches()) {"
+        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+        "content": "        if (!matcher.matches()) {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
+        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        switch (commandWord) {"
+        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        switch (commandWord) {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        case AddCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case AddCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 61,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "        case AddCommand.COMMAND_WORD_ALIAS: // test case for command alias"
       },
       {
-        "lineNumber": 61,
+        "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
         "content": "            return new AddCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 63,
+        "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
         "content": "        case EditCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 64,
+        "lineNumber": 65,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "        case EditCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
         "content": "            return new EditCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
         "content": "        case SelectCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 69,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "        case SelectCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 69,
+        "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
         "content": "            return new SelectCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 70,
+        "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 71,
+        "lineNumber": 72,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        case ShowLocationCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        case ShowLocationCommand.COMMAND_WORD_ALIAS:"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "            return new ShowLocationCommandParser().parse(arguments);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
         "content": "        case DeleteCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 72,
+        "lineNumber": 77,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "        case DeleteCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 73,
+        "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
         "content": "            return new DeleteCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 74,
+        "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 75,
+        "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
         "content": "        case ClearCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 76,
+        "lineNumber": 81,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "        case ClearCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 77,
+        "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
         "content": "            return new ClearCommand();"
       },
       {
-        "lineNumber": 78,
+        "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
         "content": "        case FindCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 85,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "        case FindCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 81,
+        "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
         "content": "            return new FindCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 82,
+        "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 83,
+        "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
         "content": "        case ListCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 84,
+        "lineNumber": 89,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "        case ListCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 85,
+        "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
         "content": "            return new ListCommand();"
       },
       {
-        "lineNumber": 86,
+        "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 87,
-        "author": {
-          "gitId": "kaitingpeck"
-        },
-        "content": "        case AddEventCommand.COMMAND_WORD:"
-      },
-      {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "kaitingpeck"
-        },
-        "content": "            return new AddEventCommandParser().parse(arguments);"
-      },
-      {
-        "lineNumber": 89,
-        "author": {
-          "gitId": "kaitingpeck"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 90,
-        "author": {
-          "gitId": "kaitingpeck"
-        },
-        "content": "        case DeleteEventCommand.COMMAND_WORD:"
-      },
-      {
-        "lineNumber": 91,
-        "author": {
-          "gitId": "kaitingpeck"
-        },
-        "content": "            return new DeleteEventCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "kaitingpeck"
         },
-        "content": ""
+        "content": "        case AddEventCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "kaitingpeck"
         },
-        "content": "        case AddEventTagCommand.COMMAND_WORD:"
+        "content": "            return new AddEventCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "kaitingpeck"
         },
-        "content": "            return new AddEventTagCommandParser().parse(arguments);"
+        "content": ""
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "kaitingpeck"
         },
-        "content": ""
+        "content": "        case DeleteEventCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "-"
+          "gitId": "kaitingpeck"
         },
-        "content": "        case HistoryCommand.COMMAND_WORD:"
+        "content": "            return new DeleteEventCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "kaitingpeck"
         },
-        "content": "        case HistoryCommand.COMMAND_WORD_ALIAS:"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "-"
+          "gitId": "kaitingpeck"
         },
-        "content": "            return new HistoryCommand();"
+        "content": "        case AddEventTagCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "-"
+          "gitId": "kaitingpeck"
         },
-        "content": ""
+        "content": "            return new AddEventTagCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "-"
+          "gitId": "kaitingpeck"
         },
-        "content": "        case ExitCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "kaitingpeck"
+          "gitId": "-"
         },
-        "content": "        case ExitCommand.COMMAND_WORD_ALIAS:"
+        "content": "        case HistoryCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "-"
+          "gitId": "kaitingpeck"
         },
-        "content": "            return new ExitCommand();"
+        "content": "        case HistoryCommand.COMMAND_WORD_ALIAS:"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HistoryCommand();"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HelpCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "kaitingpeck"
+          "gitId": "-"
         },
-        "content": "        case HelpCommand.COMMAND_WORD_ALIAS:"
+        "content": "        case ExitCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 106,
         "author": {
-          "gitId": "-"
+          "gitId": "kaitingpeck"
         },
-        "content": "            return new HelpCommand();"
+        "content": "        case ExitCommand.COMMAND_WORD_ALIAS:"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ExitCommand();"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "        case UndoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
-          "gitId": "kaitingpeck"
+          "gitId": "-"
         },
-        "content": "        case UndoCommand.COMMAND_WORD_ALIAS:"
+        "content": "        case HelpCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "-"
+          "gitId": "kaitingpeck"
         },
-        "content": "            return new UndoCommand();"
+        "content": "        case HelpCommand.COMMAND_WORD_ALIAS:"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HelpCommand();"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        case RedoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "kaitingpeck"
+          "gitId": "-"
         },
-        "content": "        case RedoCommand.COMMAND_WORD_ALIAS:"
+        "content": "        case UndoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "-"
+          "gitId": "kaitingpeck"
         },
-        "content": "            return new RedoCommand();"
+        "content": "        case UndoCommand.COMMAND_WORD_ALIAS:"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new UndoCommand();"
       },
       {
         "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case RedoCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "kaitingpeck"
+        },
+        "content": "        case RedoCommand.COMMAND_WORD_ALIAS:"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new RedoCommand();"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
         "author": {
           "gitId": "cjiefeng"
         },
         "content": "        case ImportContactsCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 122,
         "author": {
           "gitId": "cjiefeng"
         },
         "content": "            return new ImportContactsCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 123,
         "author": {
           "gitId": "cjiefeng"
         },
         "content": ""
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 124,
         "author": {
           "gitId": "ryantanwk"
         },
         "content": "        case NotificationCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 120,
+        "lineNumber": 125,
         "author": {
           "gitId": "ryantanwk"
         },
         "content": "        case NotificationCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 121,
+        "lineNumber": 126,
         "author": {
           "gitId": "ryantanwk"
         },
         "content": "            return new NotificationCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 122,
+        "lineNumber": 127,
         "author": {
           "gitId": "ryantanwk"
         },
         "content": ""
       },
       {
-        "lineNumber": 123,
+        "lineNumber": 128,
         "author": {
           "gitId": "ryantanwk"
         },
         "content": "        case FavouriteCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 124,
+        "lineNumber": 129,
         "author": {
           "gitId": "ryantanwk"
         },
         "content": "        case FavouriteCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 125,
+        "lineNumber": 130,
         "author": {
           "gitId": "ryantanwk"
         },
         "content": "            return new FavouriteCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 126,
+        "lineNumber": 131,
         "author": {
           "gitId": "ryantanwk"
         },
         "content": ""
       },
       {
-        "lineNumber": 127,
+        "lineNumber": 132,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "        case ListEventCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 128,
+        "lineNumber": 133,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": "            return new ListEventCommand();"
       },
       {
-        "lineNumber": 129,
+        "lineNumber": 134,
         "author": {
           "gitId": "kaitingpeck"
         },
         "content": ""
       },
       {
-        "lineNumber": 130,
+        "lineNumber": 135,
         "author": {
           "gitId": "pratyayj"
         },
         "content": "        case GenerateLocationCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 131,
+        "lineNumber": 136,
         "author": {
           "gitId": "pratyayj"
         },
         "content": "        case GenerateLocationCommand.COMMAND_WORD_ALIAS:"
       },
       {
-        "lineNumber": 132,
+        "lineNumber": 137,
         "author": {
           "gitId": "pratyayj"
         },
         "content": "            return new GenerateLocationCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "pratyayj"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "pratyayj"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        default:"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
-      },
-      {
-        "lineNumber": 137,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        }"
-      },
-      {
         "lineNumber": 138,
         "author": {
-          "gitId": "-"
+          "gitId": "pratyayj"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
-          "gitId": "-"
+          "gitId": "pratyayj"
         },
         "content": ""
       },
@@ -34764,11 +36657,46 @@
         "author": {
           "gitId": "-"
         },
+        "content": "        default:"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "pratyayj": 6,
+      "pratyayj": 11,
       "ryantanwk": 10,
       "kaitingpeck": 28,
       "-": 92,
@@ -38935,6 +40863,217 @@
       "kaitingpeck": 90,
       "-": 124,
       "cjiefeng": 15
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/logic/parser/ShowLocationCommandParser.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.commons.core.index.Index;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.logic.commands.ShowLocationCommand;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "import seedu.address.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": " * Parses input arguments and creates a new ShowLocationCommand object"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "public class ShowLocationCommandParser {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "     * Parses the given {@code String} of arguments in the context of the ShowLocation"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "     * and returns an ShowLocationCommand object for execution."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    public ShowLocationCommand parse(String args) throws ParseException {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "            Index index \u003d ParserUtil.parseIndex(args);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "            return new ShowLocationCommand(index);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        } catch (ParseException pe) {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "            throw new ParseException("
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, ShowLocationCommand.MESSAGE_USAGE), pe);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "pratyayj"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "pratyayj": 29
     }
   },
   {

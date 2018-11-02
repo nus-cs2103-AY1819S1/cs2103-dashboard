@@ -36418,73 +36418,80 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        EventsCenter.getInstance().post(new JumpToListRequestEvent(targetIndex));"
+        "content": "        EventsCenter.getInstance().post(new JumpToListRequestEvent(null));"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_SELECT_PERSON_SUCCESS, targetIndex.getOneBased()));"
+        "content": "        EventsCenter.getInstance().post(new JumpToListRequestEvent(targetIndex));"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return new CommandResult(String.format(MESSAGE_SELECT_PERSON_SUCCESS, targetIndex.getOneBased()));"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "agendazhang"
+          "gitId": "-"
         },
-        "content": "                || (other instanceof SelectUserCommand // instanceof handles nulls"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "agendazhang"
         },
-        "content": "                \u0026\u0026 targetIndex.equals(((SelectUserCommand) other).targetIndex)); // state check"
+        "content": "                || (other instanceof SelectUserCommand // instanceof handles nulls"
       },
       {
         "lineNumber": 61,
+        "author": {
+          "gitId": "agendazhang"
+        },
+        "content": "                \u0026\u0026 targetIndex.equals(((SelectUserCommand) other).targetIndex)); // state check"
+      },
+      {
+        "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
@@ -36494,7 +36501,7 @@
     "authorContributionMap": {
       "yao-feng": 2,
       "agendazhang": 5,
-      "-": 55
+      "-": 56
     }
   },
   {
@@ -69916,609 +69923,609 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import java.net.URL;"
+        "content": "import java.text.MessageFormat;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.text.MessageFormat;"
+        "content": "import java.util.logging.Logger;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.util.logging.Logger;"
+        "content": "import java.util.stream.Collectors;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.util.stream.Collectors;"
+        "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import com.google.common.eventbus.Subscribe;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "import com.google.common.eventbus.Subscribe;"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import javafx.application.Platform;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.application.Platform;"
+        "content": "import javafx.collections.ObservableList;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.collections.ObservableList;"
+        "content": "import javafx.event.Event;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.event.Event;"
+        "content": "import javafx.fxml.FXML;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.fxml.FXML;"
+        "content": "import javafx.scene.layout.Region;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.layout.Region;"
+        "content": "import javafx.scene.web.WebView;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.web.WebView;"
+        "content": "import seedu.address.MainApp;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.MainApp;"
+        "content": "import seedu.address.commons.core.LogsCenter;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.core.LogsCenter;"
+        "content": "import seedu.address.commons.events.ui.PersonToEventPopulateEvent;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.events.ui.PersonToEventPopulateEvent;"
+        "content": "import seedu.address.model.person.Person;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Person;"
+        "content": ""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": " * The Browser Panel of the App."
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": " * The Browser Panel of the App."
+        "content": " */"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": "public class BrowserPanel extends UiPart\u003cRegion\u003e {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "public class BrowserPanel extends UiPart\u003cRegion\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public static final String DEFAULT_PAGE \u003d \"default.html\";"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String DEFAULT_PAGE \u003d \"default.html\";"
+        "content": "    public static final String PERSON_PAGE \u003d \"browsePerson.html\";"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String PERSON_PAGE \u003d \"browsePerson.html\";"
+        "content": "    public static final String EVENT_PAGE \u003d \"browseEvent.html\";"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String EVENT_PAGE \u003d \"browseEvent.html\";"
+        "content": "    public static final String SEARCH_PAGE_URL \u003d"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String SEARCH_PAGE_URL \u003d"
+        "content": "        \"https://se-edu.github.io/addressbook-level4/DummySearchPage.html?name\u003d\";"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "        \"https://se-edu.github.io/addressbook-level4/DummySearchPage.html?name\u003d\";"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final String FXML \u003d \"BrowserPanel.fxml\";"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final String FXML \u003d \"BrowserPanel.fxml\";"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @FXML"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    @FXML"
+        "content": "    private WebView browser;"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    private WebView browser;"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public BrowserPanel() {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    public BrowserPanel() {"
+        "content": "        super(FXML);"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "        super(FXML);"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        // To prevent triggering events for typing inside the loaded Web page."
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "        // To prevent triggering events for typing inside the loaded Web page."
+        "content": "        getRoot().setOnKeyPressed(Event::consume);"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "        getRoot().setOnKeyPressed(Event::consume);"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        loadDefaultPage();"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        loadDefaultPage();"
+        "content": "        registerAsAnEventHandler(this);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "        registerAsAnEventHandler(this);"
+        "content": "    }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Load Person into browser panel"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Load Person into browser panel"
+        "content": "     *"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * @param person"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param person"
+        "content": "     */"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    private void loadPersonPage(Person person, ObservableList\u003cseedu.address.model.event.Event\u003e events) {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void loadPersonPage(Person person, ObservableList\u003cseedu.address.model.event.Event\u003e events) {"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        StringBuilder sb \u003d new StringBuilder();"
+        "content": "        try {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": "            BufferedInputStream bin \u003d new BufferedInputStream("
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "            BufferedInputStream bin \u003d new BufferedInputStream("
+        "content": "                MainApp.class.getResourceAsStream(FXML_FILE_FOLDER + PERSON_PAGE));"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "                MainApp.class.getResourceAsStream(FXML_FILE_FOLDER + PERSON_PAGE));"
+        "content": "            byte[] contents \u003d new byte[1024];"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "            byte[] contents \u003d new byte[1024];"
+        "content": "            int bytesRead \u003d 0;"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "            int bytesRead \u003d 0;"
+        "content": "            while ((bytesRead \u003d bin.read(contents)) !\u003d -1) {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "            while ((bytesRead \u003d bin.read(contents)) !\u003d -1) {"
+        "content": "                sb.append(new String(contents, 0, bytesRead));"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "                sb.append(new String(contents, 0, bytesRead));"
+        "content": "            }"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": "            bin.close();"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "            bin.close();"
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "            e.printStackTrace();"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "            e.printStackTrace();"
+        "content": "        }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        // replace the template with person stuff"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        // replace the template with person stuff"
+        "content": "        Object[] params \u003d new Object[] {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "        Object[] params \u003d new Object[] {"
+        "content": "            person.getName(),"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "            person.getName(),"
+        "content": "            person.getPhone(),"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "            person.getPhone(),"
+        "content": "            person.getEmail(),"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "            person.getEmail(),"
+        "content": "            person.getTags().stream().map(u -\u003e u.tagName).collect(Collectors.joining(\", \")),"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "            person.getTags().stream().map(u -\u003e u.tagName).collect(Collectors.joining(\", \")),"
+        "content": "            person.getAddress(),"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "            person.getAddress(),"
+        "content": "            person.getInterests().stream().map(u -\u003e u.interestName).collect(Collectors.joining(\", \")),"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "            person.getInterests().stream().map(u -\u003e u.interestName).collect(Collectors.joining(\", \")),"
-      },
-      {
-        "lineNumber": 80,
-        "author": {
-          "gitId": "-"
-        },
         "content": "            person.getFriends().stream()"
       },
       {
-        "lineNumber": 81,
+        "lineNumber": 80,
         "author": {
           "gitId": "agendazhang"
         },
         "content": "                .map(u -\u003e u.toString()).collect(Collectors.joining(\" \", \"\u003cp\u003e\", \"\u003c/p\u003e\")),"
       },
       {
-        "lineNumber": 82,
+        "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
         "content": "            events.filtered((i) -\u003e i.getPersonList().contains(person))"
       },
       {
-        "lineNumber": 83,
+        "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
         "content": "                .stream().map(u -\u003e u.getName().fullName).collect(Collectors.joining(\", \")),"
       },
       {
-        "lineNumber": 84,
+        "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
         "content": "            person.getSchedule().prettyPrint(),"
       },
       {
-        "lineNumber": 85,
+        "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
         "content": "        };"
       },
       {
-        "lineNumber": 86,
+        "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
         "content": "        String html \u003d MessageFormat.format(sb.toString(), params);"
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 88,
+        "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
         "content": "        Platform.runLater(() -\u003e {"
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
         "content": "                browser.getEngine().loadContent(html);"
       },
       {
-        "lineNumber": 90,
+        "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
         "content": "            }"
       },
       {
-        "lineNumber": 91,
+        "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
         "content": "        );"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 92,
@@ -70532,273 +70539,273 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        //loadPage(SEARCH_PAGE_URL + person.getName().fullName);"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "        //loadPage(SEARCH_PAGE_URL + person.getName().fullName);"
+        "content": "    }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    //    /**"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    /**"
+        "content": "    //     * Load Person into browser panel"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "    //     * Load Person into browser panel"
+        "content": "    //     *"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "    //     *"
+        "content": "    //     * @param event"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "    //     * @param event"
+        "content": "    //     */"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "    //     */"
+        "content": "    //    private void loadEventPage(seedu.address.model.event.Event event) {"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    private void loadEventPage(seedu.address.model.event.Event event) {"
+        "content": "    //"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "    //"
+        "content": "    //        StringBuilder sb \u003d new StringBuilder();"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        StringBuilder sb \u003d new StringBuilder();"
+        "content": "    //        URL defaultPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + EVENT_PAGE);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        URL defaultPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + EVENT_PAGE);"
+        "content": "    //        try {"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        try {"
+        "content": "    //            BufferedInputStream bin \u003d ((BufferedInputStream) defaultPage.getContent());"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            BufferedInputStream bin \u003d ((BufferedInputStream) defaultPage.getContent());"
+        "content": "    //            byte[] contents \u003d new byte[1024];"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            byte[] contents \u003d new byte[1024];"
+        "content": "    //            int bytesRead \u003d 0;"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            int bytesRead \u003d 0;"
+        "content": "    //            while ((bytesRead \u003d bin.read(contents)) !\u003d -1) {"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            while ((bytesRead \u003d bin.read(contents)) !\u003d -1) {"
+        "content": "    //                sb.append(new String(contents, 0, bytesRead));"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    //                sb.append(new String(contents, 0, bytesRead));"
+        "content": "    //            }"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            }"
+        "content": "    //            bin.close();"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            bin.close();"
+        "content": "    //        } catch (IOException e) {"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        } catch (IOException e) {"
+        "content": "    //            e.printStackTrace();"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            e.printStackTrace();"
+        "content": "    //        }"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        }"
+        "content": "    //"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    //"
+        "content": "    //        // replace the template with person stuff"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        // replace the template with person stuff"
+        "content": "    //        Object[] params \u003d new Object[] {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        Object[] params \u003d new Object[] {"
+        "content": "    //            event.getName(),"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            event.getName(),"
+        "content": "    //            event.getOrganiser().getName(),"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            event.getOrganiser().getName(),"
+        "content": "    //            event.getStartTime() \u003d\u003d null ? \"No Start time\" : event.getStartTime().toString(),"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            event.getStartTime() \u003d\u003d null ? \"No Start time\" : event.getStartTime().toString(),"
+        "content": "    //            event.getEndTime() \u003d\u003d null ? \"No End time\" : event.getEndTime().toString(),"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            event.getEndTime() \u003d\u003d null ? \"No End time\" : event.getEndTime().toString(),"
+        "content": "    //            event.getDate() \u003d\u003d null ? \"No date time\" : event.getDate().toString()"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            event.getDate() \u003d\u003d null ? \"No date time\" : event.getDate().toString()"
+        "content": "    //        };"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        };"
+        "content": "    //        String html \u003d MessageFormat.format(sb.toString(), params);"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        String html \u003d MessageFormat.format(sb.toString(), params);"
+        "content": "    //"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    //"
+        "content": "    //        Platform.runLater(() -\u003e {"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        Platform.runLater(() -\u003e {"
+        "content": "    //                browser.getEngine().loadContent(html);"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "    //                browser.getEngine().loadContent(html);"
+        "content": "    //            }"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            }"
+        "content": "    //        );"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        );"
+        "content": "    //"
       },
       {
         "lineNumber": 132,
@@ -70812,21 +70819,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    //"
+        "content": "    //        //loadPage(SEARCH_PAGE_URL + person.getName().fullName);"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        //loadPage(SEARCH_PAGE_URL + person.getName().fullName);"
+        "content": "    //    }"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    }"
+        "content": ""
       },
       {
         "lineNumber": 136,
@@ -70840,353 +70847,465 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public void loadPage(String url) {"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void loadPage(String url) {"
+        "content": "        Platform.runLater(() -\u003e browser.getEngine().load(url));"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "        Platform.runLater(() -\u003e browser.getEngine().load(url));"
+        "content": "    }"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Loads a default HTML file with a background that matches the general theme."
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Loads a default HTML file with a background that matches the general theme."
+        "content": "     */"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    private void loadDefaultPage() {"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void loadDefaultPage() {"
+        "content": ""
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        URL defaultPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
+        "content": "        StringBuilder sb \u003d new StringBuilder();"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "        loadPage(defaultPage.toExternalForm());"
+        "content": "        try {"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            BufferedInputStream bin \u003d new BufferedInputStream("
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                MainApp.class.getResourceAsStream(FXML_FILE_FOLDER + DEFAULT_PAGE));"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "            byte[] contents \u003d new byte[1022];"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Frees resources allocated to the browser."
+        "content": "            int bytesRead \u003d 0;"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "            while ((bytesRead \u003d bin.read(contents)) !\u003d -1) {"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void freeResources() {"
+        "content": "                sb.append(new String(contents, 0, bytesRead));"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "        browser \u003d null;"
+        "content": "            }"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            bin.close();"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    @Subscribe"
+        "content": "            e.printStackTrace();"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
+        "content": "        }"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": ""
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        if (event.getNewSelection() \u003d\u003d null) {"
+        "content": "        Platform.runLater(() -\u003e {"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            loadDefaultPage();"
+        "content": "                browser.getEngine().loadContent(sb.toString());"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        } else {"
+        "content": "            }"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            loadPersonPage(event.getNewSelection());"
+        "content": "        );"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        }"
+        "content": "    }"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": "    //"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    }"
+        "content": "    /**"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Subscribe"
+        "content": "     * Frees resources allocated to the browser."
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonToEventPopulateEvent event) {"
+        "content": "     */"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": "    public void freeResources() {"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (event.getNewSelection() \u003d\u003d null) {"
+        "content": "        browser \u003d null;"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "            loadDefaultPage();"
+        "content": "    }"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "        } else {"
+        "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "            loadPersonPage(event.getNewSelection(), event.getEventModel());"
+        "content": "    //    @Subscribe"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    //    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    //        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    //        if (event.getNewSelection() \u003d\u003d null) {"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    //            loadDefaultPage();"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    @Subscribe"
+        "content": "    //        } else {"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    private void handleEventPanelSelectionChangedEvent(EventPanelSelectionChangedEvent event) {"
+        "content": "    //            loadPersonPage(event.getNewSelection());"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": "    //        }"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        if (event.getNewSelection() \u003d\u003d null) {"
+        "content": "    //"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            loadDefaultPage();"
+        "content": "    //    }"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        } else {"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            loadEventPage(event.getNewSelection());"
+        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonToEventPopulateEvent event) {"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        }"
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    }"
+        "content": "        if (event.getNewSelection() \u003d\u003d null) {"
       },
       {
         "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            loadDefaultPage();"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            loadPersonPage(event.getNewSelection(), event.getEventModel());"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //    @Subscribe"
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //    private void handleEventPanelSelectionChangedEvent(EventPanelSelectionChangedEvent event) {"
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //        if (event.getNewSelection() \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //            loadDefaultPage();"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //        } else {"
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //            loadEventPage(event.getNewSelection());"
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //        }"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    //    }"
+      },
+      {
+        "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
@@ -71195,7 +71314,7 @@
     ],
     "authorContributionMap": {
       "agendazhang": 1,
-      "-": 186
+      "-": 202
     }
   },
   {
@@ -72809,136 +72928,87 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    //    @Subscribe"
+        "content": "    //"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
+        "content": "    //    @Subscribe"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        if (event.getNewSelection() \u003d\u003d null) {"
+        "content": "    //    private void handleEventPanelSelectionChangedEvent(EventPanelSelectionChangedEvent event) {"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            personListPanel.resetSelection();"
+        "content": "    //        if (event.getNewSelection() \u003d\u003d null) {"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            eventListPanel.resetSelection();"
+        "content": "    //            personListPanel.resetSelection();"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        }"
+        "content": "    //            eventListPanel.resetSelection();"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    }"
+        "content": "    //        }"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "    //"
+        "content": "    //    }"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    @Subscribe"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "    //    private void handleEventPanelSelectionChangedEvent(EventPanelSelectionChangedEvent event) {"
+        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "    //        if (event.getNewSelection() \u003d\u003d null) {"
+        "content": "        raise (new PersonToEventPopulateEvent(event.getNewSelection(), eventListPanel.getModel()));"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "    //            personListPanel.resetSelection();"
-      },
-      {
-        "lineNumber": 242,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    //            eventListPanel.resetSelection();"
-      },
-      {
-        "lineNumber": 243,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    //        }"
-      },
-      {
-        "lineNumber": 244,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    //    }"
-      },
-      {
-        "lineNumber": 245,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Subscribe"
-      },
-      {
-        "lineNumber": 246,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
-      },
-      {
-        "lineNumber": 247,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        raise (new PersonToEventPopulateEvent(event.getNewSelection(), eventListPanel.getModel()));"
-      },
-      {
-        "lineNumber": 248,
-        "author": {
-          "gitId": "-"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 249,
+        "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
@@ -72947,7 +73017,7 @@
     ],
     "authorContributionMap": {
       "yao-feng": 8,
-      "-": 241
+      "-": 234
     }
   },
   {
