@@ -10692,6 +10692,623 @@
     }
   },
   {
+    "path": "docs/team/Aadit_Project_Portfolio.adoc",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "\u003d Aadit Kamat - Project Portfolio"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "\u003d\u003d PROJECT: DebtTracker"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "\u003d\u003d Overview"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "Debt Tracker is a CLI-based desktop application that helps users manage their finances. It keeps track of the financial"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "transactions the user undertakes. The primary target audience of this application is Small and Medium Entreprises (SMEs) in Singapore since"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "they typically face budget constraints and have to maintain a good credit score. However, this application can also be used by individuals"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "who may want to maintain a database of their personal transactions."
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "\u003d\u003d Summary of contributions"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "* *Major enhancement*: added *a currency conversion utility* within the application"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** What it does: allows the user to convert amounts in different currencies to their respective amounts in the base currency, Singapore Dollars"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Justification: This feature provides users the flexibility to transact with people from different countries and saves them the hassle of using a 3rd party software to convert the amounts for each transaction."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Highlights: The implementation makes use of a free external foreign exchange API, provided by https://free.currencyconverterapi.com[Free Currency Converter API] that updates every hour according to the latest currency trends."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "               Since the API is JSON-based, the more time consuming portion of adding the command was using the right library to parse the information"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "               in an appropriate format."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Code contributed: [https://github.com/CS2103-AY1819S1-W12-2/main/pull/51/files[Functional Code Block #1]] [https://github.com/CS2103-AY1819S1-W12-2/main/pull/36/files[Functional Code Block #2]] [https://github.com/CS2103-AY1819S1-W12-2/main/blob/master/src/test/java/seedu/address/logic/commands/ConvertCommandTest.java[Test code]]"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "* *Minor enhancement*: added *an interest calculation feature*"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** What it does: allows the user to obtain the final amount that needs to be payed after calculating the interest on the principal sum of each"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "                 transaction on a monthly basis, using either the simple or the compound interest scheme."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Justification: Providing an in-built feature to calculate interests is essential since loans are usually charged the market interest rate and the user"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "                  needs to be aware of the final sum of the money owed or lent before the deadline."
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Code contributed: [https://github.com/CS2103-AY1819S1-W12-2/main/pull/72/files[Functional Code]] [https://github.com/CS2103-AY1819S1-W12-2/main/blob/master/src/test/java/seedu/address/logic/commands/SortCommandTest.java[Test code]]"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "* *Other contributions*:"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Project management:"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** Managed releases `v1.1` - `v1.3` (3 releases) on GitHub"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** Managed merging of PRs into the master branch as an administrator"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Testing:"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** Modified tests to handle change from Person model to Transaction model within the application +"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/pull/46[Pull Request #46]] +"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Documentation:"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** Added the User Stories within the Developer Guide +"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/pull/3[Pull Request #3]] +"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** Updated the relevant sections of the User Guide to reflect the current state of the application +"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/pull/3[Pull Request #3]] +"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Community:"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** PRs reviewed:"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "**** [https://github.com/CS2103-AY1819S1-W12-2/main/pull/34/[Pull Request #34]] +"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "**** [https://github.com/CS2103-AY1819S1-W12-2/main/pull/61/[Pull Request #61]] +"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "**** [https://github.com/CS2103-AY1819S1-W12-2/main/pull/68/[Pull Request #68]] +"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "**** [https://github.com/CS2103-AY1819S1-W12-2/main/pull/88/[Pull Request #88]] +"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** Issues created:"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "**** [https://github.com/CS2103-AY1819S1-W12-2/main/issues/94[Issue #94]] +"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "**** [https://github.com/CS2103-AY1819S1-W12-2/main/issues/93[Issue #93]] +"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "**** [https://github.com/CS2103-AY1819S1-W12-2/main/issues/90[Issue #90]] +"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "**** [https://github.com/CS2103-AY1819S1-W12-2/main/issues/74[Issue #74]] +"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "** Tools:"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** Integrated Travis and AppVeyor into the project"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "*** Added Coveralls to check the test coverage for the application"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "\u003d\u003d Contributions to the User Guide"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "|Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users."
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/commit/726e9b1bf4b8f2138b63e63ca6788ff805dc824e?short_path\u003dd80058c#diff-d80058c033b9f127ec727c18cc84ce4d[Pull Request#43]] +"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/commit/06243a33fee9c981b1367dfdeb1df0c95bdb0672?short_path\u003dd80058c#diff-d80058c033b9f127ec727c18cc84ce4d[Pull Request #75]] +"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/commit/63fdda59f6104aec9cac6ff4b762add500a2fd35?short_path\u003dd80058c#diff-d80058c033b9f127ec727c18cc84ce4d[Pull Request #95]] +"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "\u003d\u003d Contributions to the Developer Guide"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "|Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project."
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "|\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/commit/5d42ebc0d2396551b96b92f769114ac8482faca3#diff-d23c8091515dc18149f4f2e759e1e288[Pull Request #3]] +"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/commit/96470f5e35192a5450fac8d7a805c05736d1a7d4?short_path\u003dd23c809#diff-d23c8091515dc18149f4f2e759e1e288[Pull Request #9]] +"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "aaditkamat"
+        },
+        "content": "[https://github.com/CS2103-AY1819S1-W12-2/main/commit/726e9b1bf4b8f2138b63e63ca6788ff805dc824e#diff-d23c8091515dc18149f4f2e759e1e288[Pull Request #43]] +"
+      }
+    ],
+    "authorContributionMap": {
+      "aaditkamat": 87
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/MainApp.java",
     "lines": [
       {

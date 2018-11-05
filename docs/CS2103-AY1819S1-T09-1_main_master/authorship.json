@@ -22277,401 +22277,401 @@
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "zxjtan"
+          "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "import static seedu.address.model.task.Task.MESSAGE_START_AFTER_END;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "import seedu.address.logic.CommandHistory;"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "import seedu.address.logic.commands.Command;"
+        "content": "import seedu.address.logic.CommandHistory;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "import seedu.address.logic.commands.CommandResult;"
+        "content": "import seedu.address.logic.commands.Command;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+        "content": "import seedu.address.logic.commands.CommandResult;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "import seedu.address.model.Model;"
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "import seedu.address.model.task.Task;"
+        "content": "import seedu.address.model.Model;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "import seedu.address.model.task.Task;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": " * Adds a person to the address book."
+        "content": "/**"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": " */"
+        "content": " * Adds a person to the address book."
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "public class AddCommand extends Command {"
+        "content": " */"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "public class AddCommand extends Command {"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"add\";"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "    public static final String COMMAND_WORD \u003d \"add\";"
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "tuesmiddt"
+          "gitId": "zxjtan"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d getCommandFormat(COMMAND_WORD) + \": Adds a task.\\n\""
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "tuesmiddt"
         },
-        "content": "            + \"Parameters: \""
+        "content": "    public static final String MESSAGE_USAGE \u003d getCommandFormat(COMMAND_WORD) + \": Adds a task.\\n\""
       },
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "zxjtan"
+          "gitId": "tuesmiddt"
         },
-        "content": "            + PREFIX_NAME + \"NAME \""
+        "content": "            + \"Parameters: \""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "            + \"[\" + PREFIX_START_DATE + \"START DATE\" + \"] \""
+        "content": "            + PREFIX_NAME + \"NAME \""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "            + \"[\" + PREFIX_START_TIME + \"START TIME\" + \"] \""
+        "content": "            + \"[\" + PREFIX_START_DATE + \"START DATE\" + \"] \""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "            + PREFIX_END_DATE + \"END DATE \""
+        "content": "            + \"[\" + PREFIX_START_TIME + \"START TIME\" + \"] \""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "            + PREFIX_END_TIME + \"END TIME \""
+        "content": "            + PREFIX_END_DATE + \"END DATE \""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "            + \"[\" + PREFIX_TAG + \"TAG]...\\n\""
+        "content": "            + PREFIX_END_TIME + \"END TIME \""
       },
       {
         "lineNumber": 33,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "            + \"[\" + PREFIX_TAG + \"TAG]...\\n\""
+      },
+      {
+        "lineNumber": 34,
         "author": {
           "gitId": "indocomsoft"
         },
         "content": "            + \"Example: \" + getCommandFormat(COMMAND_WORD) + \" \""
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 35,
         "author": {
           "gitId": "zxjtan"
         },
         "content": "            + PREFIX_NAME + \"Math Assignment \""
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 36,
         "author": {
           "gitId": "zxjtan"
         },
         "content": "            + PREFIX_START_DATE + \"20180101 \""
       },
       {
-        "lineNumber": 36,
+        "lineNumber": 37,
         "author": {
           "gitId": "zxjtan"
         },
         "content": "            + PREFIX_START_TIME + \"0000 \""
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 38,
         "author": {
           "gitId": "zxjtan"
         },
         "content": "            + PREFIX_END_DATE + \"20181231 \""
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 39,
         "author": {
           "gitId": "zxjtan"
         },
         "content": "            + PREFIX_END_TIME + \"2359 \""
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 40,
         "author": {
           "gitId": "zxjtan"
         },
         "content": "            + PREFIX_TAG + \"school \""
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 41,
         "author": {
           "gitId": "zxjtan"
         },
         "content": "            + PREFIX_TAG + \"urgent\";"
       },
       {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "zxjtan"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 42,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"New task added: %1$s\";"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    public static final String MESSAGE_DUPLICATE_TASK \u003d \"This task already exists\";"
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"New task added: %1$s\";"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_DUPLICATE_TASK \u003d \"This task already exists\";"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    private final Task toAdd;"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "    private final Task toAdd;"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "     * Creates an AddCommand to add the specified {@code Task}"
+        "content": "    /**"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "     */"
+        "content": "     * Creates an AddCommand to add the specified {@code Task}"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    public AddCommand(Task task) {"
+        "content": "     */"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        requireNonNull(task);"
+        "content": "    public AddCommand(Task task) {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        toAdd \u003d task;"
+        "content": "        requireNonNull(task);"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    }"
+        "content": "        toAdd \u003d task;"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        if (model.hasTask(toAdd)) {"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "zxjtan"
+          "gitId": "indocomsoft"
         },
-        "content": "            throw new CommandException(MESSAGE_DUPLICATE_TASK);"
+        "content": "        if (!toAdd.isValidDateTimeRange()) {"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "zxjtan"
+          "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            throw new CommandException(MESSAGE_START_AFTER_END);"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "zxjtan"
+          "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "zxjtan"
+          "gitId": "indocomsoft"
         },
-        "content": "        model.addTask(toAdd);"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        model.commitAddressBook();"
+        "content": "        if (model.hasTask(toAdd)) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, toAdd));"
+        "content": "            throw new CommandException(MESSAGE_DUPLICATE_TASK);"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 67,
@@ -22685,45 +22685,80 @@
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    @Override"
+        "content": "        model.addTask(toAdd);"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "        model.commitAddressBook();"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, toAdd));"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "                || (other instanceof AddCommand // instanceof handles nulls"
+        "content": "    }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "                        \u0026\u0026 toAdd.equals(((AddCommand) other).toAdd));"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 74,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "                || (other instanceof AddCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "                        \u0026\u0026 toAdd.equals(((AddCommand) other).toAdd));"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 79,
         "author": {
           "gitId": "zxjtan"
         },
@@ -22733,7 +22768,7 @@
     "authorContributionMap": {
       "tuesmiddt": 2,
       "zxjtan": 71,
-      "indocomsoft": 1
+      "indocomsoft": 6
     }
   },
   {
@@ -24575,770 +24610,770 @@
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "import static seedu.address.model.task.Task.MESSAGE_START_AFTER_END;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import java.util.Collections;"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import java.util.HashSet;"
+        "content": "import java.util.Collections;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import java.util.List;"
+        "content": "import java.util.HashSet;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import java.util.Optional;"
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import java.util.Set;"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "import java.util.Set;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.commons.core.Messages;"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.commons.core.index.Index;"
+        "content": "import seedu.address.commons.core.Messages;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.commons.util.CollectionUtil;"
+        "content": "import seedu.address.commons.core.index.Index;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.logic.CommandHistory;"
+        "content": "import seedu.address.commons.util.CollectionUtil;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.logic.commands.Command;"
+        "content": "import seedu.address.logic.CommandHistory;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.logic.commands.CommandResult;"
+        "content": "import seedu.address.logic.commands.Command;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
+        "content": "import seedu.address.logic.commands.CommandResult;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.model.Model;"
+        "content": "import seedu.address.logic.commands.exceptions.CommandException;"
       },
       {
         "lineNumber": 25,
+        "author": {
+          "gitId": "indocomsoft"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 26,
         "author": {
           "gitId": "taneliang"
         },
         "content": "import seedu.address.model.person.PersonId;"
       },
       {
-        "lineNumber": 26,
+        "lineNumber": 27,
         "author": {
           "gitId": "indocomsoft"
         },
         "content": "import seedu.address.model.tag.Tag;"
       },
       {
-        "lineNumber": 27,
+        "lineNumber": 28,
         "author": {
           "gitId": "indocomsoft"
         },
         "content": "import seedu.address.model.task.DateTime;"
       },
       {
-        "lineNumber": 28,
+        "lineNumber": 29,
         "author": {
           "gitId": "indocomsoft"
         },
         "content": "import seedu.address.model.task.Name;"
       },
       {
-        "lineNumber": 29,
+        "lineNumber": 30,
         "author": {
           "gitId": "indocomsoft"
         },
         "content": "import seedu.address.model.task.Task;"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 31,
         "author": {
           "gitId": "taneliang"
         },
         "content": "import seedu.address.model.task.TaskId;"
       },
       {
-        "lineNumber": 31,
-        "author": {
-          "gitId": "indocomsoft"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 32,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": " * Edits the details of an existing task in the address book."
+        "content": "/**"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": " */"
+        "content": " * Edits the details of an existing task in the address book."
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "public class EditCommand extends Command {"
+        "content": " */"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "public class EditCommand extends Command {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"edit\";"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    public static final String COMMAND_WORD \u003d \"edit\";"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d getCommandFormat(COMMAND_WORD)"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \": Edits the details of the task identified \""
+        "content": "    public static final String MESSAGE_USAGE \u003d getCommandFormat(COMMAND_WORD)"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"by the index number used in the displayed task list. \""
+        "content": "            + \": Edits the details of the task identified \""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"Existing values will be overwritten by the input values.\\n\""
+        "content": "            + \"by the index number used in the displayed task list. \""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"Parameters: INDEX (must be a positive integer) \""
+        "content": "            + \"Existing values will be overwritten by the input values.\\n\""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"[\" + PREFIX_NAME + \"NAME] \""
+        "content": "            + \"Parameters: INDEX (must be a positive integer) \""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"[\" + PREFIX_START_DATE + \"START DATE] \""
+        "content": "            + \"[\" + PREFIX_NAME + \"NAME] \""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"[\" + PREFIX_START_TIME + \"START TIME] \""
+        "content": "            + \"[\" + PREFIX_START_DATE + \"START DATE] \""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"[\" + PREFIX_END_DATE + \"END DATE] \""
+        "content": "            + \"[\" + PREFIX_START_TIME + \"START TIME] \""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"[\" + PREFIX_END_TIME + \"END TIME] \""
+        "content": "            + \"[\" + PREFIX_END_DATE + \"END DATE] \""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"[\" + PREFIX_TAG + \"TAG]...\\n\""
+        "content": "            + \"[\" + PREFIX_END_TIME + \"END TIME] \""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + \"Example: \" + getCommandFormat(COMMAND_WORD) + \" 1 \""
+        "content": "            + \"[\" + PREFIX_TAG + \"TAG]...\\n\""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            + PREFIX_NAME + \"Implement Edit Tasks\";"
+        "content": "            + \"Example: \" + getCommandFormat(COMMAND_WORD) + \" 1 \""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "            + PREFIX_NAME + \"Implement Edit Tasks\";"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public static final String MESSAGE_EDIT_TASK_SUCCESS \u003d \"Edited Task: %1$s\";"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public static final String MESSAGE_NOT_EDITED \u003d \"At least one field to edit must be provided.\";"
+        "content": "    public static final String MESSAGE_EDIT_TASK_SUCCESS \u003d \"Edited Task: %1$s\";"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public static final String MESSAGE_DUPLICATE_TASK \u003d \"This task already exists in the address book.\";"
+        "content": "    public static final String MESSAGE_NOT_EDITED \u003d \"At least one field to edit must be provided.\";"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_DUPLICATE_TASK \u003d \"This task already exists in the address book.\";"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    private final Index index;"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    private final EditTaskDescriptor editTaskDescriptor;"
+        "content": "    private final Index index;"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    private final EditTaskDescriptor editTaskDescriptor;"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * @param index of the task in the filtered person list to edit"
+        "content": "    /**"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * @param editTaskDescriptor details to edit the task with"
+        "content": "     * @param index of the task in the filtered person list to edit"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     */"
+        "content": "     * @param editTaskDescriptor details to edit the task with"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public EditCommand(Index index, EditTaskDescriptor editTaskDescriptor) {"
+        "content": "     */"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        requireNonNull(index);"
+        "content": "    public EditCommand(Index index, EditTaskDescriptor editTaskDescriptor) {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        requireNonNull(editTaskDescriptor);"
+        "content": "        requireNonNull(index);"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        requireNonNull(editTaskDescriptor);"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        this.index \u003d index;"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        this.editTaskDescriptor \u003d new EditTaskDescriptor(editTaskDescriptor);"
+        "content": "        this.index \u003d index;"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    }"
+        "content": "        this.editTaskDescriptor \u003d new EditTaskDescriptor(editTaskDescriptor);"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        List\u003cTask\u003e lastShownList \u003d model.getFilteredTaskList();"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        List\u003cTask\u003e lastShownList \u003d model.getFilteredTaskList();"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (index.getZeroBased() \u003e\u003d lastShownList.size()) {"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
+        "content": "        if (index.getZeroBased() \u003e\u003d lastShownList.size()) {"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            throw new CommandException(Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        Task taskToEdit \u003d lastShownList.get(index.getZeroBased());"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        Task editedTask \u003d createEditedTask(taskToEdit, editTaskDescriptor);"
+        "content": "        Task taskToEdit \u003d lastShownList.get(index.getZeroBased());"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        Task editedTask \u003d createEditedTask(taskToEdit, editTaskDescriptor);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (!taskToEdit.isSameTask(editedTask) \u0026\u0026 model.hasTask(editedTask)) {"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            throw new CommandException(MESSAGE_DUPLICATE_TASK);"
+        "content": "        if (!editedTask.isValidDateTimeRange()) {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            throw new CommandException(MESSAGE_START_AFTER_END);"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        model.updateTask(taskToEdit, editedTask);"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        model.updateFilteredTaskList(Model.PREDICATE_SHOW_ALL_TASKS);"
+        "content": "        if (!taskToEdit.isSameTask(editedTask) \u0026\u0026 model.hasTask(editedTask)) {"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        model.commitAddressBook();"
+        "content": "            throw new CommandException(MESSAGE_DUPLICATE_TASK);"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_EDIT_TASK_SUCCESS, editedTask));"
+        "content": "        }"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        model.updateTask(taskToEdit, editedTask);"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    /**"
+        "content": "        model.updateFilteredTaskList(Model.PREDICATE_SHOW_ALL_TASKS);"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * Creates and returns a {code Task} with the details of {@code taskToEdit}"
+        "content": "        model.commitAddressBook();"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     */"
+        "content": "        return new CommandResult(String.format(MESSAGE_EDIT_TASK_SUCCESS, editedTask));"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    private static Task createEditedTask(Task taskToEdit, EditTaskDescriptor editTaskDescriptor) {"
+        "content": "    }"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        assert taskToEdit !\u003d null;"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "taneliang"
+          "gitId": "indocomsoft"
         },
-        "content": "        TaskId id \u003d taskToEdit.getId(); // ID is not editable"
+        "content": "     * Creates and returns a {code Task} with the details of {@code taskToEdit}"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        Name updatedName \u003d editTaskDescriptor.getName().orElse(taskToEdit.getName());"
+        "content": "     */"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        DateTime updatedStartDateTime \u003d editTaskDescriptor.getStartDateTime().orElse(taskToEdit.getStartDateTime());"
+        "content": "    private static Task createEditedTask(Task taskToEdit, EditTaskDescriptor editTaskDescriptor) {"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        DateTime updatedEndDateTime \u003d editTaskDescriptor.getEndDateTime().orElse(taskToEdit.getEndDateTime());"
+        "content": "        assert taskToEdit !\u003d null;"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        Set\u003cTag\u003e updatedTags \u003d editTaskDescriptor.getTags().orElse(taskToEdit.getTags());"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "taneliang"
         },
-        "content": "        Set\u003cPersonId\u003e updatedPersons \u003d taskToEdit.getPersonIds();"
+        "content": "        TaskId id \u003d taskToEdit.getId(); // ID is not editable"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        Name updatedName \u003d editTaskDescriptor.getName().orElse(taskToEdit.getName());"
       },
       {
         "lineNumber": 107,
         "author": {
-          "gitId": "taneliang"
+          "gitId": "indocomsoft"
         },
-        "content": "        return new Task(id, updatedName, updatedStartDateTime, updatedEndDateTime, updatedTags, updatedPersons);"
+        "content": "        DateTime updatedStartDateTime \u003d editTaskDescriptor.getStartDateTime().orElse(taskToEdit.getStartDateTime());"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    }"
+        "content": "        DateTime updatedEndDateTime \u003d editTaskDescriptor.getEndDateTime().orElse(taskToEdit.getEndDateTime());"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        Set\u003cTag\u003e updatedTags \u003d editTaskDescriptor.getTags().orElse(taskToEdit.getTags());"
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "indocomsoft"
+          "gitId": "taneliang"
         },
-        "content": "    @Override"
+        "content": "        Set\u003cPersonId\u003e updatedPersons \u003d taskToEdit.getPersonIds();"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": ""
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "indocomsoft"
+          "gitId": "taneliang"
         },
-        "content": "        // short circuit if same object"
+        "content": "        return new Task(id, updatedName, updatedStartDateTime, updatedEndDateTime, updatedTags, updatedPersons);"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": "    }"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return true;"
+        "content": ""
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        // instanceof handles nulls"
+        "content": "        // short circuit if same object"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (!(other instanceof EditCommand)) {"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return false;"
+        "content": "            return true;"
       },
       {
         "lineNumber": 120,
@@ -25359,588 +25394,588 @@
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        // state check"
+        "content": "        // instanceof handles nulls"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        EditCommand e \u003d (EditCommand) other;"
+        "content": "        if (!(other instanceof EditCommand)) {"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        return index.equals(e.index)"
+        "content": "            return false;"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                \u0026\u0026 editTaskDescriptor.equals(e.editTaskDescriptor);"
+        "content": "        }"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        // state check"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    /**"
+        "content": "        EditCommand e \u003d (EditCommand) other;"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * Stores the details to edit the task with. Each non-empty field value will replace the"
+        "content": "        return index.equals(e.index)"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * corresponding field value of the person"
+        "content": "                \u0026\u0026 editTaskDescriptor.equals(e.editTaskDescriptor);"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public static class EditTaskDescriptor {"
+        "content": ""
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        private Name name;"
+        "content": "    /**"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        private DateTime startDateTime;"
+        "content": "     * Stores the details to edit the task with. Each non-empty field value will replace the"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        private DateTime endDateTime;"
+        "content": "     * corresponding field value of the person"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        private Set\u003cTag\u003e tags;"
+        "content": "     */"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    public static class EditTaskDescriptor {"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public EditTaskDescriptor() {}"
+        "content": "        private Name name;"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        private DateTime startDateTime;"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        /**"
+        "content": "        private DateTime endDateTime;"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         * Copy constructor."
+        "content": "        private Set\u003cTag\u003e tags;"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         * A defensive copy of {@code tags} is used internally."
+        "content": ""
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         */"
+        "content": "        public EditTaskDescriptor() {}"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public EditTaskDescriptor(EditTaskDescriptor toCopy) {"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            setName(toCopy.name);"
+        "content": "        /**"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            setStartDateTime(toCopy.startDateTime);"
+        "content": "         * Copy constructor."
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            setEndDateTime(toCopy.endDateTime);"
+        "content": "         * A defensive copy of {@code tags} is used internally."
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            setTags(toCopy.tags);"
+        "content": "         */"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "        public EditTaskDescriptor(EditTaskDescriptor toCopy) {"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "            setName(toCopy.name);"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public boolean isAnyFieldEdited() {"
+        "content": "            setStartDateTime(toCopy.startDateTime);"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return CollectionUtil.isAnyNonNull(name, startDateTime, endDateTime, tags);"
+        "content": "            setEndDateTime(toCopy.endDateTime);"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            setTags(toCopy.tags);"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public void setName(Name name) {"
+        "content": ""
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            this.name \u003d name;"
+        "content": "        public boolean isAnyFieldEdited() {"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            return CollectionUtil.isAnyNonNull(name, startDateTime, endDateTime, tags);"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public Optional\u003cName\u003e getName() {"
+        "content": ""
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return Optional.ofNullable(name);"
+        "content": "        public void setName(Name name) {"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            this.name \u003d name;"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public void setStartDateTime(DateTime startDateTime) {"
+        "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            this.startDateTime \u003d startDateTime;"
+        "content": "        public Optional\u003cName\u003e getName() {"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            return Optional.ofNullable(name);"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public Optional\u003cDateTime\u003e getStartDateTime() {"
+        "content": ""
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return Optional.ofNullable(startDateTime);"
+        "content": "        public void setStartDateTime(DateTime startDateTime) {"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            this.startDateTime \u003d startDateTime;"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public void setEndDateTime(DateTime endDateTime) {"
+        "content": ""
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            this.endDateTime \u003d endDateTime;"
+        "content": "        public Optional\u003cDateTime\u003e getStartDateTime() {"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            return Optional.ofNullable(startDateTime);"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public Optional\u003cDateTime\u003e getEndDateTime() {"
+        "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return Optional.ofNullable(endDateTime);"
+        "content": "        public void setEndDateTime(DateTime endDateTime) {"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "            this.endDateTime \u003d endDateTime;"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        /**"
+        "content": ""
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         * Sets {@code tags} to this object\u0027s {@code tags}."
+        "content": "        public Optional\u003cDateTime\u003e getEndDateTime() {"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         * A defensive copy of {@code tags} is used internally."
+        "content": "            return Optional.ofNullable(endDateTime);"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         */"
+        "content": "        }"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public void setTags(Set\u003cTag\u003e tags) {"
+        "content": ""
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            this.tags \u003d (tags !\u003d null) ? new HashSet\u003c\u003e(tags) : null;"
+        "content": "        /**"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "         * Sets {@code tags} to this object\u0027s {@code tags}."
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "         * A defensive copy of {@code tags} is used internally."
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        /**"
+        "content": "         */"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         * Returns an unmodifiable tag set, which throws {@code UnsupportedOperationException}"
+        "content": "        public void setTags(Set\u003cTag\u003e tags) {"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         * if modification is attempted."
+        "content": "            this.tags \u003d (tags !\u003d null) ? new HashSet\u003c\u003e(tags) : null;"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         * Returns {@code Optional#empty()} if {@code tags} is null."
+        "content": "        }"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "         */"
+        "content": ""
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public Optional\u003cSet\u003cTag\u003e\u003e getTags() {"
+        "content": "        /**"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return (tags !\u003d null) ? Optional.of(Collections.unmodifiableSet(tags)) : Optional.empty();"
+        "content": "         * Returns an unmodifiable tag set, which throws {@code UnsupportedOperationException}"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "         * if modification is attempted."
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "         * Returns {@code Optional#empty()} if {@code tags} is null."
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        @Override"
+        "content": "         */"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public boolean equals(Object other) {"
+        "content": "        public Optional\u003cSet\u003cTag\u003e\u003e getTags() {"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            // short circuit"
+        "content": "            return (tags !\u003d null) ? Optional.of(Collections.unmodifiableSet(tags)) : Optional.empty();"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            if (other \u003d\u003d this) {"
+        "content": "        }"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                return true;"
+        "content": ""
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            }"
+        "content": "        @Override"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        public boolean equals(Object other) {"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            // instanceof handles nulls"
+        "content": "            // short circuit"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            if (!(other instanceof EditTaskDescriptor)) {"
+        "content": "            if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                return false;"
+        "content": "                return true;"
       },
       {
         "lineNumber": 206,
@@ -25961,94 +25996,101 @@
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            // state check"
+        "content": "            // instanceof handles nulls"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            EditTaskDescriptor e \u003d (EditTaskDescriptor) other;"
+        "content": "            if (!(other instanceof EditTaskDescriptor)) {"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "                return false;"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return getName().equals(e.getName())"
+        "content": "            }"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                    \u0026\u0026 getStartDateTime().equals(e.getStartDateTime())"
+        "content": ""
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                    \u0026\u0026 getEndDateTime().equals(e.getEndDateTime())"
+        "content": "            // state check"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                    \u0026\u0026 getTags().equals(e.getTags());"
+        "content": "            EditTaskDescriptor e \u003d (EditTaskDescriptor) other;"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "            return getName().equals(e.getName())"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        public boolean isValidDateTimeRange() {"
+        "content": "                    \u0026\u0026 getStartDateTime().equals(e.getStartDateTime())"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return startDateTime.compareTo(endDateTime) \u003c\u003d 0;"
+        "content": "                    \u0026\u0026 getEndDateTime().equals(e.getEndDateTime())"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "                    \u0026\u0026 getTags().equals(e.getTags());"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 221,
+        "author": {
+          "gitId": "indocomsoft"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 222,
         "author": {
           "gitId": "indocomsoft"
         },
@@ -26057,7 +26099,7 @@
     ],
     "authorContributionMap": {
       "taneliang": 5,
-      "indocomsoft": 216
+      "indocomsoft": 217
     }
   },
   {
@@ -27672,51 +27714,51 @@
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "indocomsoft"
+          "gitId": "-"
         },
-        "content": "    public SelectCommand(Index targetIndex) { this.targetIndex \u003d targetIndex; }"
+        "content": "    public SelectCommand(Index targetIndex) {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        this.targetIndex \u003d targetIndex;"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    @Override"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "indocomsoft"
+          "gitId": "-"
         },
-        "content": "        List\u003cTask\u003e filteredTaskList \u003d model.getFilteredTaskList();"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 41,
@@ -27730,101 +27772,115 @@
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (targetIndex.getZeroBased() \u003e\u003d filteredTaskList.size()) {"
+        "content": "        List\u003cTask\u003e filteredTaskList \u003d model.getFilteredTaskList();"
       },
       {
         "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "indocomsoft"
+        },
+        "content": "        if (targetIndex.getZeroBased() \u003e\u003d filteredTaskList.size()) {"
+      },
+      {
+        "lineNumber": 45,
         "author": {
           "gitId": "indocomsoft"
         },
         "content": "            throw new CommandException(Messages.MESSAGE_INVALID_TASK_DISPLAYED_INDEX);"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 48,
         "author": {
           "gitId": "indocomsoft"
         },
         "content": "        EventsCenter.getInstance().post(new JumpToTaskListRequestEvent(targetIndex));"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 49,
         "author": {
           "gitId": "indocomsoft"
         },
         "content": "        return new CommandResult(String.format(MESSAGE_SELECT_TASK_SUCCESS, targetIndex.getOneBased()));"
       },
       {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "    @Override"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "                || (other instanceof SelectCommand // instanceof handles nulls"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 targetIndex.equals(((SelectCommand) other).targetIndex)); // state check"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                || (other instanceof SelectCommand // instanceof handles nulls"
       },
       {
         "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 targetIndex.equals(((SelectCommand) other).targetIndex)); // state check"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
@@ -27832,8 +27888,8 @@
       }
     ],
     "authorContributionMap": {
-      "indocomsoft": 16,
-      "-": 40
+      "indocomsoft": 15,
+      "-": 43
     }
   },
   {
@@ -35849,49 +35905,49 @@
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        if (startDateTime.compareTo(endDateTime) \u003e 0) {"
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "zxjtan"
-        },
-        "content": "            throw new ParseException(Task.MESSAGE_START_AFTER_END);"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "zxjtan"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "zxjtan"
-        },
         "content": "        Set\u003cTag\u003e tagList \u003d ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 59,
         "author": {
           "gitId": "taneliang"
         },
         "content": "        Set\u003cPersonId\u003e personIds \u003d new HashSet\u003c\u003e();"
       },
       {
-        "lineNumber": 63,
+        "lineNumber": 60,
         "author": {
           "gitId": "zxjtan"
         },
         "content": ""
       },
       {
-        "lineNumber": 64,
+        "lineNumber": 61,
         "author": {
           "gitId": "taneliang"
         },
         "content": "        Task task \u003d new Task(null, name, startDateTime, endDateTime, tagList, personIds);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "        return new AddCommand(task);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "zxjtan"
+        },
+        "content": "    }"
       },
       {
         "lineNumber": 65,
@@ -35905,80 +35961,59 @@
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "        return new AddCommand(task);"
+        "content": "    /**"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    }"
+        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": ""
+        "content": "     * {@code ArgumentMultimap}."
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    /**"
+        "content": "     */"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "     * Returns true if none of the prefixes contains empty {@code Optional} values in the given"
+        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "     * {@code ArgumentMultimap}."
+        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "zxjtan"
         },
-        "content": "    private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {"
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "zxjtan"
-        },
-        "content": "        return Stream.of(prefixes).allMatch(prefix -\u003e argumentMultimap.getValue(prefix).isPresent());"
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "zxjtan"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 76,
-        "author": {
-          "gitId": "zxjtan"
-        },
         "content": ""
       },
       {
-        "lineNumber": 77,
+        "lineNumber": 74,
         "author": {
           "gitId": "zxjtan"
         },
@@ -35987,7 +36022,7 @@
     ],
     "authorContributionMap": {
       "taneliang": 4,
-      "zxjtan": 72,
+      "zxjtan": 69,
       "indocomsoft": 1
     }
   },
@@ -37133,217 +37168,217 @@
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "import seedu.address.model.task.Task;"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "/**"
+        "content": " * Parses input arguments and creates a new EditCommand object"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": " * Parses input arguments and creates a new EditCommand object"
+        "content": " */"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": " */"
+        "content": "public class EditCommandParser implements Parser\u003cEditCommand\u003e {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "public class EditCommandParser implements Parser\u003cEditCommand\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    /**"
+        "content": "     * Parses the given {@code String} of arguments in the context of the EditCommand"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the EditCommand"
+        "content": "     * and returns an EditCommand object for execution."
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * and returns an EditCommand object for execution."
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     */"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     */"
+        "content": "    public EditCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    public EditCommand parse(String args) throws ParseException {"
+        "content": "        requireNonNull(args);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        requireNonNull(args);"
+        "content": "        ArgumentMultimap argMultiMap \u003d"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        ArgumentMultimap argMultiMap \u003d"
+        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_START_DATE, PREFIX_START_TIME, PREFIX_END_DATE,"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                ArgumentTokenizer.tokenize(args, PREFIX_NAME, PREFIX_START_DATE, PREFIX_START_TIME, PREFIX_END_DATE,"
+        "content": "                        PREFIX_END_TIME, PREFIX_TAG);"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                        PREFIX_END_TIME, PREFIX_TAG);"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        Index index;"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        Index index;"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        try {"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        try {"
+        "content": "            index \u003d ParserUtil.parseIndex(argMultiMap.getPreamble());"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            index \u003d ParserUtil.parseIndex(argMultiMap.getPreamble());"
+        "content": "        } catch (ParseException pe) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        } catch (ParseException pe) {"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, EditCommand.MESSAGE_USAGE), pe,"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, EditCommand.MESSAGE_USAGE), pe,"
+        "content": "                    true);"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                    true);"
+        "content": "        }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        EditTaskDescriptor editTaskDescriptor \u003d new EditTaskDescriptor();"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        EditTaskDescriptor editTaskDescriptor \u003d new EditTaskDescriptor();"
+        "content": "        if (argMultiMap.getValue(PREFIX_NAME).isPresent()) {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (argMultiMap.getValue(PREFIX_NAME).isPresent()) {"
+        "content": "            editTaskDescriptor.setName(ParserUtil.parseName(argMultiMap.getValue(PREFIX_NAME).get()));"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            editTaskDescriptor.setName(ParserUtil.parseName(argMultiMap.getValue(PREFIX_NAME).get()));"
+        "content": "        }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 59,
@@ -37357,126 +37392,126 @@
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        if (argMultiMap.getValue(PREFIX_START_DATE).isPresent()"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (argMultiMap.getValue(PREFIX_START_DATE).isPresent()"
+        "content": "                \u0026\u0026 argMultiMap.getValue(PREFIX_START_TIME).isPresent()) {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                \u0026\u0026 argMultiMap.getValue(PREFIX_START_TIME).isPresent()) {"
+        "content": "            DateTime startDateTime \u003d ParserUtil.parseDateTime(argMultiMap.getValue(PREFIX_START_DATE).get(),"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            DateTime startDateTime \u003d ParserUtil.parseDateTime(argMultiMap.getValue(PREFIX_START_DATE).get(),"
+        "content": "                    argMultiMap.getValue(PREFIX_START_TIME).get());"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                    argMultiMap.getValue(PREFIX_START_TIME).get());"
+        "content": "            editTaskDescriptor.setStartDateTime(startDateTime);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            editTaskDescriptor.setStartDateTime(startDateTime);"
+        "content": "        }"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "        if (argMultiMap.getValue(PREFIX_END_DATE).isPresent()"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (argMultiMap.getValue(PREFIX_END_DATE).isPresent()"
+        "content": "                \u0026\u0026 argMultiMap.getValue(PREFIX_END_TIME).isPresent()) {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                \u0026\u0026 argMultiMap.getValue(PREFIX_END_TIME).isPresent()) {"
+        "content": "            DateTime endDateTime \u003d ParserUtil.parseDateTime(argMultiMap.getValue(PREFIX_END_DATE).get(),"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            DateTime endDateTime \u003d ParserUtil.parseDateTime(argMultiMap.getValue(PREFIX_END_DATE).get(),"
+        "content": "                    argMultiMap.getValue(PREFIX_END_TIME).get());"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "                    argMultiMap.getValue(PREFIX_END_TIME).get());"
+        "content": "            editTaskDescriptor.setEndDateTime(endDateTime);"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            editTaskDescriptor.setEndDateTime(endDateTime);"
+        "content": "        }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (!editTaskDescriptor.isValidDateTimeRange()) {"
+        "content": "        parseTagsForEdit(argMultiMap.getAllValues(PREFIX_TAG)).ifPresent(editTaskDescriptor::setTags);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            throw new ParseException(Task.MESSAGE_START_AFTER_END);"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": "        if (!editTaskDescriptor.isAnyFieldEdited()) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "            throw new ParseException(EditCommand.MESSAGE_NOT_EDITED);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        parseTagsForEdit(argMultiMap.getAllValues(PREFIX_TAG)).ifPresent(editTaskDescriptor::setTags);"
+        "content": "        }"
       },
       {
         "lineNumber": 78,
@@ -37490,150 +37525,122 @@
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (!editTaskDescriptor.isAnyFieldEdited()) {"
+        "content": "        return new EditCommand(index, editTaskDescriptor);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            throw new ParseException(EditCommand.MESSAGE_NOT_EDITED);"
+        "content": "    }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        return new EditCommand(index, editTaskDescriptor);"
+        "content": "     * Parses {@code Collection\u003cString\u003e tags} into a {@code Set\u003cTag\u003e} if {@code tags} is non-empty."
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    }"
+        "content": "     * If {@code tags} contain only one element which is an empty string, it will be parsed into a"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "     * {@code Set\u003cTag\u003e} containing zero tags."
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    /**"
+        "content": "     */"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * Parses {@code Collection\u003cString\u003e tags} into a {@code Set\u003cTag\u003e} if {@code tags} is non-empty."
+        "content": "    private Optional\u003cSet\u003cTag\u003e\u003e parseTagsForEdit(Collection\u003cString\u003e tags) throws ParseException {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * If {@code tags} contain only one element which is an empty string, it will be parsed into a"
+        "content": "        assert tags !\u003d null;"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     * {@code Set\u003cTag\u003e} containing zero tags."
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "     */"
+        "content": "        if (tags.isEmpty()) {"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "    private Optional\u003cSet\u003cTag\u003e\u003e parseTagsForEdit(Collection\u003cString\u003e tags) throws ParseException {"
+        "content": "            return Optional.empty();"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        assert tags !\u003d null;"
+        "content": "        }"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": ""
+        "content": "        Collection\u003cString\u003e tagSet \u003d tags.size() \u003d\u003d 1 \u0026\u0026 tags.contains(\"\") ? Collections.emptySet() : tags;"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "        if (tags.isEmpty()) {"
+        "content": "        return Optional.of(ParserUtil.parseTags(tagSet));"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "indocomsoft"
         },
-        "content": "            return Optional.empty();"
-      },
-      {
-        "lineNumber": 96,
-        "author": {
-          "gitId": "indocomsoft"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 97,
-        "author": {
-          "gitId": "indocomsoft"
-        },
-        "content": "        Collection\u003cString\u003e tagSet \u003d tags.size() \u003d\u003d 1 \u0026\u0026 tags.contains(\"\") ? Collections.emptySet() : tags;"
-      },
-      {
-        "lineNumber": 98,
-        "author": {
-          "gitId": "indocomsoft"
-        },
-        "content": "        return Optional.of(ParserUtil.parseTags(tagSet));"
-      },
-      {
-        "lineNumber": 99,
-        "author": {
-          "gitId": "indocomsoft"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 96,
         "author": {
           "gitId": "indocomsoft"
         },
@@ -37641,7 +37648,7 @@
       }
     ],
     "authorContributionMap": {
-      "indocomsoft": 100
+      "indocomsoft": 96
     }
   },
   {
@@ -49024,6 +49031,27 @@
       {
         "lineNumber": 140,
         "author": {
+          "gitId": "indocomsoft"
+        },
+        "content": "    public boolean isValidDateTimeRange() {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "indocomsoft"
+        },
+        "content": "        return startDateTime.compareTo(endDateTime) \u003c\u003d 0;"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "indocomsoft"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
           "gitId": "zxjtan"
         },
         "content": "}"
@@ -49031,7 +49059,8 @@
     ],
     "authorContributionMap": {
       "taneliang": 29,
-      "zxjtan": 111
+      "zxjtan": 111,
+      "indocomsoft": 3
     }
   },
   {

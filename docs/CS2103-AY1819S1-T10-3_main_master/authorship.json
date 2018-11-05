@@ -43586,91 +43586,91 @@
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public static final String WORD_NOT_EXIST \u003d"
+        "content": "    public static final String MESSAGE_CANNOT_BE_EMPTY \u003d \"Please don\u0027t leave the word blank.\";"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            \"Word cannot be located online (does not exist) - try respelling it.\";"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "alexehrs"
+          "gitId": "russellong95"
         },
-        "content": "    public static final String NO_WORD_OF_THE_DAY \u003d"
+        "content": "    public static final String MESSAGE_INVALID_WORD \u003d \"Please ensure word is valid - \""
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "alexehrs"
+          "gitId": "russellong95"
         },
-        "content": "            \"The word of the day is not available at this moment\";"
+        "content": "            + \"no illegal characters and numbers are allowed.\";"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "    public static final String WORD_NOT_EXIST \u003d"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    private String args;"
+        "content": "            \"Word cannot be located online (does not exist) - try respelling it.\";"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "    private String wordToLearn;"
+        "content": "    public static final String NO_WORD_OF_THE_DAY \u003d"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "    private String definition;"
+        "content": "            \"The word of the day is not available at this moment\";"
       },
       {
         "lineNumber": 23,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "    private String wordOfTheDay;"
-      },
-      {
-        "lineNumber": 24,
         "author": {
           "gitId": "russellong95"
         },
         "content": ""
       },
       {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    private String args;"
+      },
+      {
         "lineNumber": 25,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public Dictionary(String args) {"
+        "content": "    private String wordToLearn;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        this.args \u003d args;"
+        "content": "    private String definition;"
       },
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "    }"
+        "content": "    private String wordOfTheDay;"
       },
       {
         "lineNumber": 28,
@@ -43684,14 +43684,14 @@
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public String getWordToLearn() {"
+        "content": "    public Dictionary(String args) {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        return wordToLearn;"
+        "content": "        this.args \u003d args;"
       },
       {
         "lineNumber": 31,
@@ -43712,14 +43712,14 @@
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public String getDefinition() {"
+        "content": "    public String getWordToLearn() {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        return definition;"
+        "content": "        return wordToLearn;"
       },
       {
         "lineNumber": 35,
@@ -43738,28 +43738,28 @@
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "alexehrs"
+          "gitId": "russellong95"
         },
-        "content": "    public String getWordOfTheDay() {"
+        "content": "    public String getDefinition() {"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "alexehrs"
+          "gitId": "russellong95"
         },
-        "content": "        return wordOfTheDay;"
+        "content": "        return definition;"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "alexehrs"
+          "gitId": "russellong95"
         },
         "content": "    }"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "alexehrs"
+          "gitId": "russellong95"
         },
         "content": ""
       },
@@ -43768,238 +43768,238 @@
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "    /**"
+        "content": "    public String getWordOfTheDay() {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "     * Parses the wordOfTheDay document if Dictionary.com is available."
+        "content": "        return wordOfTheDay;"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "    public Dictionary fetchWordOfTheDay() throws ParseException {"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        if (!isConnectedToInternet()) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "            throw new ParseException(MESSAGE_NO_INTERNET);"
+        "content": "     * Parses the wordOfTheDay document if Dictionary.com is available."
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        //Get wordoftheday from document object."
+        "content": "    public Dictionary fetchWordOfTheDay() throws ParseException {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        Document doc;"
+        "content": "        if (!isConnectedToInternet()) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        if ((doc \u003d doesWordOfTheDayExist()) \u003d\u003d null) {"
+        "content": "            throw new ParseException(MESSAGE_NO_INTERNET);"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "            throw new ParseException(NO_WORD_OF_THE_DAY);"
+        "content": "        }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        }"
+        "content": "        //Get wordoftheday from document object."
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        wordOfTheDay \u003d doc.select(\"meta[property\u003dtitle]\").get(0)"
+        "content": "        Document doc;"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "                .attr(\"content\");"
+        "content": "        if ((doc \u003d doesWordOfTheDayExist()) \u003d\u003d null) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        wordOfTheDay \u003d wordOfTheDay.replace(\"Get the Word of the Day - \", \"\");"
+        "content": "            throw new ParseException(NO_WORD_OF_THE_DAY);"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        wordOfTheDay \u003d wordOfTheDay.replace(\" | Dictionary.com\", \"\");"
+        "content": "        }"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        args \u003d wordOfTheDay;"
+        "content": "        wordOfTheDay \u003d doc.select(\"meta[property\u003dtitle]\").get(0)"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        this.invoke();"
+        "content": "                .attr(\"content\");"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        System.out.println(wordOfTheDay);"
+        "content": "        wordOfTheDay \u003d wordOfTheDay.replace(\"Get the Word of the Day - \", \"\");"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        return this;"
+        "content": "        wordOfTheDay \u003d wordOfTheDay.replace(\" | Dictionary.com\", \"\");"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "    }"
+        "content": "        args \u003d wordOfTheDay;"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": ""
+        "content": "        this.invoke();"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "    /**"
+        "content": "        System.out.println(wordOfTheDay);"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "     * Invoke the use of \"learn\", to parse definition and put it into a meaning object."
+        "content": "        return this;"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "alexehrs"
         },
-        "content": "    public Dictionary invoke() throws ParseException {"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        wordToLearn \u003d args;"
+        "content": "    /**"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        if (!isConnectedToInternet()) {"
+        "content": "     * Invoke the use of \"learn\", to parse definition and put it into a meaning object."
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            throw new ParseException(MESSAGE_NO_INTERNET);"
+        "content": "     */"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        }"
+        "content": "    public Dictionary invoke() throws ParseException {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "        wordToLearn \u003d args.trim();"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        Document doc;"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        if ((doc \u003d isWordInOnlineDictionary(wordToLearn)) \u003d\u003d null) {"
+        "content": "        if (wordToLearn.equals(\"\")) {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            throw new ParseException(WORD_NOT_EXIST);"
+        "content": "            throw new ParseException(MESSAGE_CANNOT_BE_EMPTY);"
       },
       {
         "lineNumber": 75,
@@ -44013,332 +44013,598 @@
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        //Get description from document object."
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        definition \u003d doc.select(\"meta[name\u003ddescription]\").get(0)"
+        "content": "        wordToLearn \u003d convertWord(wordToLearn);"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "                .attr(\"content\");"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        definition \u003d definition.substring(definition.indexOf(\" \") + 1);"
+        "content": "        if (!isValidWord(wordToLearn)) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        definition \u003d definition.replace(\"definition, \", \"\");"
+        "content": "            throw new ParseException(MESSAGE_INVALID_WORD);"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        definition \u003d definition.replace(\"(\", \"\");"
+        "content": "        }"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        definition \u003d definition.replace(\")\", \"\");"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        definition \u003d definition.replace(\" See more.\", \"\");"
+        "content": "        if (!isConnectedToInternet()) {"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        System.out.println(definition);"
+        "content": "            throw new ParseException(MESSAGE_NO_INTERNET);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        return this;"
+        "content": "        }"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "        Document doc;"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    /**"
+        "content": "        if ((doc \u003d isWordInOnlineDictionary(wordToLearn)) \u003d\u003d null) {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     * Checks for Internet Connection, if its available."
+        "content": "            throw new ParseException(WORD_NOT_EXIST);"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     */"
+        "content": "        }"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public static boolean isConnectedToInternet() {"
+        "content": "        //Get description from document object."
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        try {"
+        "content": "        definition \u003d doc.select(\"meta[name\u003ddescription]\").get(0)"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            Jsoup.connect(\"https://www.dictionary.com/\").get();"
+        "content": "                .attr(\"content\");"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return true;"
+        "content": "        definition \u003d definition.substring(definition.indexOf(\" \") + 1);"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "        definition \u003d definition.replace(\"definition, \", \"\");"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return false;"
+        "content": "        definition \u003d definition.replace(\"(\", \"\");"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        }"
+        "content": "        definition \u003d definition.replace(\")\", \"\");"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": "        definition \u003d definition.replace(\" See more.\", \"\");"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "russellong95"
         },
-        "content": ""
+        "content": "        System.out.println(definition);"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    /**"
+        "content": "        return this;"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     * Checks for Internet Connection, if its available."
+        "content": "    }"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    public static Document isWordInOnlineDictionary(String wordToLearn) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        try {"
+        "content": "     * Converts the word being learnt to a readable format."
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return Jsoup.connect(\"https://www.dictionary.com/browse/\" + wordToLearn).get();"
+        "content": "     * Eg: \u0027hello\u0027 and \u0027hEllO\u0027 both becomes \u0027Hello\u0027."
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        } catch (IOException e) {"
+        "content": "     */"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "            return null;"
+        "content": "    public static String convertWord(String wordToLearn) {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "        }"
+        "content": "        wordToLearn \u003d wordToLearn.toLowerCase();"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": "        return wordToLearn.substring(0, 1).toUpperCase() + wordToLearn.substring(1);"
       },
       {
         "lineNumber": 110,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 111,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 112,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "     * Pulls the wordoftheday page into a document if availabe."
-      },
-      {
-        "lineNumber": 113,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 114,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "    public static Document doesWordOfTheDayExist() {"
-      },
-      {
-        "lineNumber": 115,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "        try {"
-      },
-      {
-        "lineNumber": 116,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "            return Jsoup.connect(\"https://www.dictionary.com/wordoftheday/\").get();"
-      },
-      {
-        "lineNumber": 117,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "        } catch (IOException e) {"
-      },
-      {
-        "lineNumber": 118,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "            return null;"
-      },
-      {
-        "lineNumber": 119,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 120,
         "author": {
           "gitId": "russellong95"
         },
         "content": "    }"
       },
       {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     * Checks for Internet Connection, if its available."
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    public static boolean isConnectedToInternet() {"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            Jsoup.connect(\"https://www.dictionary.com/\").get();"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            return false;"
+      },
+      {
         "lineNumber": 121,
         "author": {
-          "gitId": "alexehrs"
+          "gitId": "russellong95"
         },
-        "content": "}"
+        "content": "        }"
       },
       {
         "lineNumber": 122,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     * Checks if the word contains any invalid characters."
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    public static boolean isValidWord(String wordToLearn) {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        char[] chars \u003d wordToLearn.toCharArray();"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        for (char c : chars) {"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            if (!Character.isLetter(c)) {"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "                return false;"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     * Checks for Internet Connection, if its available."
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    public static Document isWordInOnlineDictionary(String wordToLearn) {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            return Jsoup.connect(\"https://www.dictionary.com/browse/\" + wordToLearn).get();"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 148,
         "author": {
           "gitId": "alexehrs"
         },
         "content": ""
       },
       {
-        "lineNumber": 123,
+        "lineNumber": 149,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "     * Pulls the wordoftheday page into a document if availabe."
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public static Document doesWordOfTheDayExist() {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            return Jsoup.connect(\"https://www.dictionary.com/wordoftheday/\").get();"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        } catch (IOException e) {"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            return null;"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "russellong95"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
         "author": {
           "gitId": "alexehrs"
         },
@@ -44347,7 +44613,7 @@
     ],
     "authorContributionMap": {
       "alexehrs": 43,
-      "russellong95": 80
+      "russellong95": 118
     }
   },
   {
@@ -44862,243 +45128,257 @@
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": "    public Name(String name) {"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(name);"
+        "content": "    public Name(String name) {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "        checkArgument(isValidName(name), MESSAGE_NAME_CONSTRAINTS);"
+        "content": "        requireNonNull(name);"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "        fullName \u003d name;"
+        "content": "        checkArgument(isValidName(name), MESSAGE_NAME_CONSTRAINTS);"
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": "        name \u003d Dictionary.convertWord(name);"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        fullName \u003d name;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if a given string is a valid name."
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static boolean isValidName(String test) {"
+        "content": "     * Returns true if a given string is a valid name."
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "        return test.matches(NAME_VALIDATION_REGEX);"
+        "content": "     */"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public static boolean isValidName(String test) {"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return test.matches(NAME_VALIDATION_REGEX);"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "-"
         },
-        "content": "    public String getFullName() {"
+        "content": "    }"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "-"
         },
-        "content": "        return fullName;"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": "    public String getFullName() {"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": ""
+        "content": "        return fullName;"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String toString() {"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        return fullName;"
+        "content": "    @Override"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return fullName;"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "    @Override"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "                || (other instanceof Name // instanceof handles nulls"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 fullName.equals(((Name) other).fullName)); // state check"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                || (other instanceof Name // instanceof handles nulls"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "                \u0026\u0026 fullName.equals(((Name) other).fullName)); // state check"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "    public int hashCode() {"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        return fullName.hashCode();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public int hashCode() {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return fullName.hashCode();"
       },
       {
         "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
@@ -45106,7 +45386,7 @@
       }
     ],
     "authorContributionMap": {
-      "russellong95": 7,
+      "russellong95": 9,
       "-": 55
     }
   },
@@ -47023,269 +47303,276 @@
         "author": {
           "gitId": "russellong95"
         },
-        "content": "                \u0026\u0026 otherWord.getName().equals(getName());"
+        "content": "                \u0026\u0026 otherWord.getName().fullName.toLowerCase()"
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": "    }"
+        "content": "                .equals(getName().fullName.toLowerCase());"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "russellong95"
+          "gitId": "-"
         },
-        "content": "     * Returns true if both words have the same identity and data fields."
+        "content": "    /**"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "russellong95"
         },
-        "content": "     * This defines a stronger notion of equality between two words."
+        "content": "     * Returns true if both words have the same identity and data fields."
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "russellong95"
         },
-        "content": "     */"
+        "content": "     * This defines a stronger notion of equality between two words."
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "     */"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "            return true;"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            return true;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "        if (!(other instanceof Word)) {"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
         "content": "            return false;"
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 81,
+        "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 82,
+        "lineNumber": 83,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "        Word otherWord \u003d (Word) other;"
       },
       {
-        "lineNumber": 83,
+        "lineNumber": 84,
         "author": {
           "gitId": "russellong95"
         },
         "content": "        return otherWord.getName().equals(getName());"
       },
       {
-        "lineNumber": 84,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    public int hashCode() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        // use this method for custom fields hashing instead of implementing your own"
+        "content": "    public int hashCode() {"
       },
       {
         "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // use this method for custom fields hashing instead of implementing your own"
+      },
+      {
+        "lineNumber": 90,
         "author": {
           "gitId": "alexehrs"
         },
         "content": "        return Objects.hash(name, meaning, tags);"
       },
       {
-        "lineNumber": 90,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String toString() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "        final StringBuilder builder \u003d new StringBuilder();"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final StringBuilder builder \u003d new StringBuilder();"
+      },
+      {
+        "lineNumber": 96,
         "author": {
           "gitId": "russellong95"
         },
         "content": "        builder.append(getName() + \"\\n\")"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 97,
         "author": {
           "gitId": "danielkoh94"
         },
         "content": "                .append(\"Meaning: \")"
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 98,
         "author": {
           "gitId": "russellong95"
         },
         "content": "                .append(getMeaning() + \"\\n\")"
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
         "content": "                .append(\"Tags: \");"
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
         "content": "        getTags().forEach(builder::append);"
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
         "content": "        return builder.toString();"
       },
       {
-        "lineNumber": 101,
+        "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 102,
+        "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 103,
+        "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
@@ -47296,7 +47583,7 @@
       "alexehrs": 3,
       "danielkoh94": 12,
       "Harryqu123": 5,
-      "russellong95": 13,
+      "russellong95": 14,
       "-": 70
     }
   },
@@ -98121,7 +98408,7 @@
         "author": {
           "gitId": "russellong95"
         },
-        "content": "                + Dictionary.WORD_NOT_EXIST + \"\\n\" + LearnCommand.MESSAGE_USAGE;"
+        "content": "                + Dictionary.MESSAGE_INVALID_WORD + \"\\n\" + LearnCommand.MESSAGE_USAGE;"
       },
       {
         "lineNumber": 32,
@@ -104948,31 +105235,17 @@
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        Dictionary dictionary \u003d new Dictionary(\"\");"
+        "content": "        assertNotNull(Dictionary.doesWordOfTheDayExist());"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "alexehrs"
         },
-        "content": "        dictionary.invoke();"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "alexehrs"
-        },
-        "content": "        assertNotNull(Dictionary.doesWordOfTheDayExist());"
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "alexehrs"
-        },
         "content": "    }"
       },
       {
-        "lineNumber": 70,
+        "lineNumber": 68,
         "author": {
           "gitId": "russellong95"
         },
@@ -104980,7 +105253,7 @@
       }
     ],
     "authorContributionMap": {
-      "alexehrs": 24,
+      "alexehrs": 22,
       "russellong95": 46
     }
   },

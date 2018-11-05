@@ -1073,9 +1073,9 @@
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "    archiveName \u003d \u0027addressbook.jar\u0027"
+        "content": "    archiveName \u003d \u0027healthbook.jar\u0027"
       },
       {
         "lineNumber": 88,
@@ -2213,8 +2213,8 @@
       }
     ],
     "authorContributionMap": {
-      "giamjuxian": 3,
-      "-": 246
+      "giamjuxian": 4,
+      "-": 245
     }
   },
   {
@@ -10423,21 +10423,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* *`list`* : lists all contacts"
+        "content": "* *`list`* : lists all patients and doctors"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "giamjuxian"
+          "gitId": "-"
         },
-        "content": "* **`add`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : adds a contact named `John Doe` to the HealthBook."
+        "content": "* **`register-patient`**`n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01` : registers a patient named `John Doe` to the HealthBook."
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "* **`delete`**`3` : deletes the 3rd contact shown in the current list"
+        "content": "* **`delete-patient`**`n/John Doe` : deletes patient named John Doe"
       },
       {
         "lineNumber": 42,
@@ -10514,1893 +10514,1886 @@
         "author": {
           "gitId": "-"
         },
-        "content": "* Words in `UPPER_CASE` are the parameters to be supplied by the user e.g. in `add n/NAME`, `NAME` is a parameter which can be used as `add n/John Doe`."
+        "content": "* Words in `UPPER_CASE` are the parameters to be supplied by the user e.g. in `register-patient n/NAME`, `NAME` is a parameter which can be used as `register-patient n/John Doe`."
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "* Items in square brackets are optional e.g `n/NAME [t/TAG]` can be used as `n/John Doe t/friend` or as `n/John Doe`."
+        "content": "* Items in square brackets are optional e.g `n/NAME [al/ALLERGIES]` can be used as `n/John Doe al/milk` or as `n/John Doe`."
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "* Items with `…`​ after them can be used multiple times including zero times e.g. `[t/TAG]...` can be used as `{nbsp}` (i.e. 0 times), `t/friend`, `t/friend t/family` etc."
+        "content": "* Parameters can be in any order e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable."
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "* Parameters can be in any order e.g. if the command specifies `n/NAME p/PHONE_NUMBER`, `p/PHONE_NUMBER n/NAME` is also acceptable."
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Viewing help : `help`"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Viewing help : `help`"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Format: `help`"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `help`"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 61,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "\u003d\u003d\u003d Registering a patient: `register-patient`"
       },
       {
-        "lineNumber": 63,
+        "lineNumber": 62,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Registers a patient to the HealthBook. Patient is automatically tagged as a \"Patient\". +"
       },
       {
-        "lineNumber": 64,
+        "lineNumber": 63,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS`"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "Examples:"
+        "content": ""
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": ""
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "giamjuxian"
-        },
         "content": "* `register-patient n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01`"
       },
       {
-        "lineNumber": 69,
+        "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 70,
+        "lineNumber": 69,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "\u003d\u003d\u003d Registering a doctor: `register-doctor`"
       },
       {
-        "lineNumber": 71,
+        "lineNumber": 70,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Registers a doctor to the HealthBook. Doctor is automatically tagged as a \"Doctor\". +"
       },
       {
-        "lineNumber": 72,
+        "lineNumber": 71,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Format: `register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS`"
       },
       {
-        "lineNumber": 73,
+        "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 76,
+        "lineNumber": 75,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `register-doctor n/Mary Jane p/98765432 e/johnd@example.com a/John street, block 123, #01-01`"
       },
       {
-        "lineNumber": 77,
+        "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 78,
+        "lineNumber": 77,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "\u003d\u003d\u003d Deleting a patient: `delete-patient`"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 78,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Deletes a patient from the HealthBook by name. +"
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 79,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `delete-patient n/NAME`"
       },
       {
-        "lineNumber": 81,
+        "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 83,
-        "author": {
-          "gitId": "giamjuxian"
-        },
         "content": ""
       },
       {
-        "lineNumber": 84,
+        "lineNumber": 83,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-patient n/John Doe`"
       },
       {
-        "lineNumber": 85,
+        "lineNumber": 84,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
       },
       {
-        "lineNumber": 86,
+        "lineNumber": 85,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "\u003d\u003d\u003d Deleting a doctor: `delete-doctor`"
       },
       {
-        "lineNumber": 87,
+        "lineNumber": 86,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Deletes a doctor from the HealthBook by name. +"
       },
       {
-        "lineNumber": 88,
+        "lineNumber": 87,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `delete-doctor n/NAME`"
       },
       {
-        "lineNumber": 89,
+        "lineNumber": 88,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 91,
-        "author": {
-          "gitId": "giamjuxian"
-        },
         "content": ""
       },
       {
-        "lineNumber": 92,
+        "lineNumber": 91,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-doctor n/Mary Jane`"
       },
       {
-        "lineNumber": 93,
+        "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 94,
+        "lineNumber": 93,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "\u003d\u003d\u003d Viewing a patient: `view-patient`"
       },
       {
-        "lineNumber": 95,
+        "lineNumber": 94,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Views a landing page of a patient on the HealthBook. This will display all information of the patient onto the HealthBook"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 95,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "including their medical history, upcoming appointment and their past appointments. +"
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 96,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Format: `view-patient n/NAME`"
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "****"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "****"
+        "content": "* Views the patient and loads the information page of the patient with the specified `NAME`."
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "* Views the patient and loads the information page of the patient with the specified `NAME`."
+        "content": "* The name refers to the name that the patient is registered under."
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "* The name refers to the name that the patient is registered under."
+        "content": "* The name must have been registered into the HealthBook."
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "* The name must have been registered into the HealthBook."
+        "content": "****"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "Examples:"
+        "content": ""
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": ""
+        "content": "* `view-patient n/John Doe`"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "* `view-patient n/John Doe`"
-      },
-      {
-        "lineNumber": 108,
-        "author": {
-          "gitId": "giamjuxian"
-        },
         "content": ""
       },
       {
-        "lineNumber": 109,
+        "lineNumber": 108,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "\u003d\u003d\u003d Viewing a doctor: `view-doctor`"
       },
       {
-        "lineNumber": 110,
+        "lineNumber": 109,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Views a landing page of a doctor on the HealthBook. This will display the doctor\u0027s upcoming appointments. +"
       },
       {
-        "lineNumber": 111,
+        "lineNumber": 110,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `view-doctor n/NAME`"
       },
       {
-        "lineNumber": 112,
+        "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
         "content": "****"
       },
       {
-        "lineNumber": 114,
+        "lineNumber": 113,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* Views the doctor\u0027s upcoming appointments with the specified `NAME`."
       },
       {
-        "lineNumber": 115,
+        "lineNumber": 114,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* The name refers to the name that the doctor is registered under."
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 115,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* The name must have been registered into the HealthBook."
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
         "content": "****"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 120,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 121,
+        "lineNumber": 120,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `view-doctor n/Mary Jane`"
       },
       {
-        "lineNumber": 122,
+        "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 123,
+        "lineNumber": 122,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "\u003d\u003d\u003d Listing all patients and doctors : `list`"
       },
       {
-        "lineNumber": 124,
+        "lineNumber": 123,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Shows a list of all patients and doctors in the HealthBook. +"
       },
       {
-        "lineNumber": 125,
+        "lineNumber": 124,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `list`"
       },
       {
-        "lineNumber": 126,
+        "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 127,
+        "lineNumber": 126,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "\u003d\u003d\u003d Booking an appointment: `add-appointment`"
       },
       {
-        "lineNumber": 128,
+        "lineNumber": 127,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Book a doctor\u0027s appointment for the patient. An ID of this appointment will be generated. +"
       },
       {
-        "lineNumber": 129,
+        "lineNumber": 128,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `add-appointment n/PATIENT_NAME doc/DOCTOR_NAME dt/DATE_TIME`"
       },
       {
-        "lineNumber": 130,
+        "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 131,
+        "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
         "content": "****"
       },
       {
-        "lineNumber": 132,
+        "lineNumber": 131,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* Date and time should be in the format `yyyy-MM-dd HH:mm`"
       },
       {
-        "lineNumber": 133,
+        "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
         "content": "****"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 137,
+        "lineNumber": 136,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `add-appointment np/John Doe np/Mary Jane d/2018-10-17 15:00`"
       },
       {
-        "lineNumber": 138,
+        "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 139,
+        "lineNumber": 138,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "\u003d\u003d\u003d Deleting an appointment `delete-appointment`"
       },
       {
-        "lineNumber": 140,
+        "lineNumber": 139,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Delete a doctor\u0027s appointment for the patient by its ID. +"
       },
       {
-        "lineNumber": 141,
+        "lineNumber": 140,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `delete-appointment APPOINTMENT_ID`"
       },
       {
-        "lineNumber": 142,
+        "lineNumber": 141,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
       },
       {
-        "lineNumber": 143,
+        "lineNumber": 142,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Examples:"
       },
       {
-        "lineNumber": 144,
+        "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 145,
+        "lineNumber": 144,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-appointment 10001`"
       },
       {
-        "lineNumber": 146,
+        "lineNumber": 145,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 146,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "\u003d\u003d\u003d Completing an appointment `complete-appointment`"
       },
       {
-        "lineNumber": 148,
+        "lineNumber": 147,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Complete an appointment. +"
       },
       {
-        "lineNumber": 149,
+        "lineNumber": 148,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `complete-appointment APPOINTMENT_ID`"
       },
       {
-        "lineNumber": 150,
+        "lineNumber": 149,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "giamjuxian"
-        },
         "content": ""
       },
       {
-        "lineNumber": 153,
+        "lineNumber": 152,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `complete-appointment 10001`"
       },
       {
-        "lineNumber": 154,
+        "lineNumber": 153,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
       },
       {
-        "lineNumber": 155,
+        "lineNumber": 154,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "\u003d\u003d\u003d Adding prescriptions to a patient\u0027s appointment: `add-prescription`"
       },
       {
-        "lineNumber": 156,
+        "lineNumber": 155,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Adds a prescription to the patient\u0027s appointment with details of medicine name, dosage and number of times to consume"
       },
       {
-        "lineNumber": 157,
+        "lineNumber": 156,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "in a day. +"
       },
       {
-        "lineNumber": 158,
+        "lineNumber": 157,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `add-prescription pi/APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY`"
       },
       {
-        "lineNumber": 159,
+        "lineNumber": 158,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 161,
-        "author": {
-          "gitId": "giamjuxian"
-        },
         "content": ""
       },
       {
-        "lineNumber": 162,
+        "lineNumber": 161,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `add-prescription pi/10001 pn/Paracetamol pd/2 pc/3`"
       },
       {
-        "lineNumber": 163,
+        "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 164,
+        "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
         "content": "****"
       },
       {
-        "lineNumber": 165,
+        "lineNumber": 164,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* Each prescription is tied to an appointment."
       },
       {
-        "lineNumber": 166,
+        "lineNumber": 165,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "* There cannot be a duplicate of drug name for that particular appointment."
       },
       {
-        "lineNumber": 167,
+        "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
         "content": "****"
       },
       {
-        "lineNumber": 168,
+        "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 169,
+        "lineNumber": 168,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "\u003d\u003d\u003d Adding prescriptions to a patient\u0027s appointment: `delete-prescription`"
       },
       {
-        "lineNumber": 170,
+        "lineNumber": 169,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Delete a prescription to the patient\u0027s appointment by appointment ID and medicine name. +"
       },
       {
-        "lineNumber": 171,
+        "lineNumber": 170,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Format: `delete-prescription pi/APPOINTMENT_ID pn/MEDICINE_NAME`"
       },
       {
-        "lineNumber": 172,
+        "lineNumber": 171,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 175,
+        "lineNumber": 174,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-prescription pi/10001 pn/Paracetamol`"
       },
       {
-        "lineNumber": 176,
+        "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 177,
+        "lineNumber": 176,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "\u003d\u003d\u003d Adding medical condition or allergy to patient: `add-medical-history`"
       },
       {
-        "lineNumber": 178,
+        "lineNumber": 177,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Add a condition or allergy to the patient\u0027s medical history. This will then be displayed on the users information page. +"
       },
       {
-        "lineNumber": 179,
+        "lineNumber": 178,
         "author": {
-          "gitId": "elroyhaw"
+          "gitId": "-"
         },
-        "content": "Format: `add-medical-history n/NAME al/ALLERGIES c/CONDITIONS`"
+        "content": "Format: `add-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]`"
       },
       {
-        "lineNumber": 180,
+        "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 182,
-        "author": {
-          "gitId": "giamjuxian"
-        },
         "content": ""
       },
       {
-        "lineNumber": 183,
+        "lineNumber": 182,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `add-medical-history n/John Doe al/penicillin, milk c/sub-healthy, hyperglycemia`"
       },
       {
-        "lineNumber": 184,
+        "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 185,
+        "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
         "content": "****"
       },
       {
-        "lineNumber": 186,
+        "lineNumber": 185,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "* Either condition or allergy must be present."
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "****"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
-      },
-      {
-        "lineNumber": 188,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 189,
+        "lineNumber": 188,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "\u003d\u003d\u003d Deleting medical condition or allergy to patient: `delete-medical-history`"
       },
       {
-        "lineNumber": 190,
+        "lineNumber": 189,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Delete a condition or allergy to the patient\u0027s medical history. This will then be removed on the patient\u0027s information page. +"
       },
       {
-        "lineNumber": 191,
+        "lineNumber": 190,
         "author": {
-          "gitId": "elroyhaw"
+          "gitId": "-"
         },
-        "content": "Format: `delete-medical-history n/NAME al/ALLERGIES c/CONDITIONS`"
+        "content": "Format: `delete-medical-history n/NAME [al/ALLERGIES] [c/CONDITIONS]`"
       },
       {
-        "lineNumber": 192,
+        "lineNumber": 191,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 194,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 195,
+        "lineNumber": 194,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-medical-history n/John Doe al/penicillin, milk c/sub-healthy, hyperglycemia`"
       },
       {
-        "lineNumber": 196,
+        "lineNumber": 195,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "****"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "****"
+        "content": "* Either condition or allergy must be present."
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "* Either condition or allergy must be present."
+        "content": "* Condition and allergy indicated must be present in the patient\u0027s records"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "giamjuxian"
         },
-        "content": "* Condition and allergy indicated must be present in the patient\u0027s records"
+        "content": "****"
       },
       {
         "lineNumber": 200,
         "author": {
-          "gitId": "giamjuxian"
+          "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Listing entered commands : `history`"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Listing entered commands : `history`"
+        "content": ""
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Lists all the commands that you have entered in reverse chronological order. +"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "Lists all the commands that you have entered in reverse chronological order. +"
+        "content": "Format: `history`"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `history`"
+        "content": ""
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "[NOTE]"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "// tag::undoredo[]"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::undoredo[]"
+        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
-      },
-      {
-        "lineNumber": 214,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 215,
+        "lineNumber": 214,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Restores the HealthBook to the state before the previous _undoable_ command was executed. +"
       },
       {
-        "lineNumber": 216,
+        "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
         "content": "Format: `undo`"
       },
       {
-        "lineNumber": 217,
+        "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 218,
+        "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
         "content": "[NOTE]"
       },
       {
-        "lineNumber": 219,
+        "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d\u003d"
       },
       {
-        "lineNumber": 220,
+        "lineNumber": 219,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Undoable commands: those commands that modify the HealthBook\u0027s content (`add`, `delete`, `edit` and `clear`)."
       },
       {
-        "lineNumber": 221,
+        "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d\u003d"
       },
       {
-        "lineNumber": 222,
+        "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Examples:"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 225,
+        "lineNumber": 224,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-patient 10001` +"
       },
       {
-        "lineNumber": 226,
+        "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
         "content": "`list` +"
       },
       {
-        "lineNumber": 227,
+        "lineNumber": 226,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "`undo` (reverses the `delete-patient 10001` command) +"
       },
       {
-        "lineNumber": 228,
+        "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 229,
+        "lineNumber": 228,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `view-patient n/John Doe` +"
       },
       {
-        "lineNumber": 230,
+        "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
         "content": "`list` +"
       },
       {
-        "lineNumber": 231,
+        "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
         "content": "`undo` +"
       },
       {
-        "lineNumber": 232,
+        "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
         "content": "The `undo` command fails as there are no undoable commands executed previously."
       },
       {
-        "lineNumber": 233,
+        "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 234,
+        "lineNumber": 233,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-patient 10001` +"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`clear` +"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "`clear` +"
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 236,
         "author": {
-          "gitId": "-"
+          "gitId": "elroyhaw"
         },
-        "content": "`undo` (reverses the `clear` command) +"
+        "content": "`undo` (reverses the `delete-patient 10001` command) +"
       },
       {
         "lineNumber": 237,
         "author": {
-          "gitId": "elroyhaw"
+          "gitId": "-"
         },
-        "content": "`undo` (reverses the `delete-patient 10001` command) +"
+        "content": ""
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
+        "content": ""
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Reverses the most recent `undo` command. +"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "Reverses the most recent `undo` command. +"
+        "content": "Format: `redo`"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `redo`"
+        "content": ""
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": ""
       },
       {
         "lineNumber": 245,
         "author": {
-          "gitId": "-"
+          "gitId": "elroyhaw"
         },
-        "content": ""
+        "content": "* `delete-patient 10001` +"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": "* `delete-patient 10001` +"
+        "content": "`undo` (reverses the `delete-patient 10001` command) +"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "elroyhaw"
         },
-        "content": "`undo` (reverses the `delete-patient 10001` command) +"
-      },
-      {
-        "lineNumber": 248,
-        "author": {
-          "gitId": "elroyhaw"
-        },
         "content": "`redo` (reapplies the `delete-patient 10001` command) +"
       },
       {
-        "lineNumber": 249,
+        "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 250,
+        "lineNumber": 249,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-patient 10001` +"
       },
       {
-        "lineNumber": 251,
+        "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
         "content": "`redo` +"
       },
       {
-        "lineNumber": 252,
+        "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
         "content": "The `redo` command fails as there are no `undo` commands executed previously."
       },
       {
-        "lineNumber": 253,
+        "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 254,
+        "lineNumber": 253,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* `delete-patient 10001` +"
       },
       {
-        "lineNumber": 255,
+        "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
         "content": "`clear` +"
       },
       {
-        "lineNumber": 256,
+        "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
         "content": "`undo` (reverses the `clear` command) +"
       },
       {
-        "lineNumber": 257,
+        "lineNumber": 256,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "`undo` (reverses the `delete-patient 10001` command) +"
       },
       {
-        "lineNumber": 258,
+        "lineNumber": 257,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "`redo` (reapplies the `delete-patient 10001` command) +"
       },
       {
-        "lineNumber": 259,
+        "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
         "content": "`redo` (reapplies the `clear` command) +"
       },
       {
-        "lineNumber": 260,
+        "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
         "content": "// end::undoredo[]"
       },
       {
-        "lineNumber": 261,
+        "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 262,
+        "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
       },
       {
-        "lineNumber": 263,
+        "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 264,
+        "lineNumber": 263,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "Clears all entries from the HealthBook. +"
       },
       {
-        "lineNumber": 265,
+        "lineNumber": 264,
         "author": {
           "gitId": "-"
         },
         "content": "Format: `clear`"
       },
       {
-        "lineNumber": 266,
+        "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 267,
+        "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d Exiting the program : `exit`"
       },
       {
-        "lineNumber": 268,
+        "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 269,
+        "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
         "content": "Exits the program. +"
       },
       {
-        "lineNumber": 270,
+        "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
         "content": "Format: `exit`"
       },
       {
-        "lineNumber": 271,
+        "lineNumber": 270,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 272,
+        "lineNumber": 271,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d\u003d Saving the data"
       },
       {
-        "lineNumber": 273,
+        "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 274,
+        "lineNumber": 273,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "HealthBook data are saved in the hard disk automatically after any command that changes the data. +"
       },
       {
-        "lineNumber": 275,
+        "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
         "content": "There is no need to save manually."
       },
       {
-        "lineNumber": 276,
+        "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 277,
+        "lineNumber": 276,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "\u003d\u003d\u003d Remind patient on their upcoming appointment `[coming soon in v2.0]`"
       },
       {
-        "lineNumber": 278,
+        "lineNumber": 277,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Remind a patient on their upcoming appointment. This will send a message to the patient via an external platform to inform"
       },
       {
-        "lineNumber": 279,
+        "lineNumber": 278,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "them about their appointment."
       },
       {
-        "lineNumber": 280,
+        "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 281,
+        "lineNumber": 280,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "\u003d\u003d\u003d Remind all patient on their upcoming appointment `[coming soon in v2.0]`"
       },
       {
-        "lineNumber": 282,
+        "lineNumber": 281,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "Remind all patient will upcoming appointment this week. This will send a message to the patient via an external platform to"
       },
       {
-        "lineNumber": 283,
+        "lineNumber": 282,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "inform them about their upcoming appointment."
       },
       {
-        "lineNumber": 284,
+        "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 285,
+        "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d FAQ"
       },
       {
-        "lineNumber": 286,
+        "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 287,
+        "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
         "content": "*Q*: How do I transfer my data to another Computer? +"
       },
       {
-        "lineNumber": 288,
+        "lineNumber": 287,
         "author": {
           "gitId": "giamjuxian"
         },
         "content": "*A*: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous HealthBook folder."
       },
       {
-        "lineNumber": 289,
+        "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 290,
+        "lineNumber": 289,
         "author": {
           "gitId": "-"
         },
         "content": "\u003d\u003d Command Summary"
       },
       {
-        "lineNumber": 291,
+        "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 292,
+        "lineNumber": 291,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Register patient* `register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS` +"
       },
       {
-        "lineNumber": 293,
+        "lineNumber": 292,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `register-patient n/John Doe p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665`"
       },
       {
-        "lineNumber": 294,
+        "lineNumber": 293,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Register doctor* `register-patient n/NAME p/PHONE_NUMBER e/EMAIL a/ADDRESS` +"
       },
       {
-        "lineNumber": 295,
+        "lineNumber": 294,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `register-doctor n/Mary Jane p/12224444 e/maryjane@example.com a/12, Clementi Rd, 1234665`"
       },
       {
-        "lineNumber": 296,
+        "lineNumber": 295,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Delete patient* : `delete-patient n/NAME` +"
       },
       {
-        "lineNumber": 297,
+        "lineNumber": 296,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `delete-patient n/John Doe`"
       },
       {
-        "lineNumber": 298,
+        "lineNumber": 297,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Delete doctor* : `delete-doctor n/NAME` +"
       },
       {
-        "lineNumber": 299,
+        "lineNumber": 298,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `delete-doctor n/Mary Jane`"
       },
       {
-        "lineNumber": 300,
+        "lineNumber": 299,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *View patient* : `view-patient n/NAME` +"
       },
       {
-        "lineNumber": 301,
+        "lineNumber": 300,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `view-patient n/John Doe`"
       },
       {
-        "lineNumber": 302,
+        "lineNumber": 301,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *View doctor* : `view-doctor n/NAME` +"
       },
       {
-        "lineNumber": 303,
+        "lineNumber": 302,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `view-doctor n/Mary Jane`"
       },
       {
-        "lineNumber": 304,
+        "lineNumber": 303,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Book appointment* : `add-appointment n/PATIENT_NAME doc/DOCTOR_NAME dt/DATE_TIME` +"
       },
       {
-        "lineNumber": 305,
+        "lineNumber": 304,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `add-appointment np/John Doe np/Mary Jane d/2018-10-17 15:00`"
       },
       {
-        "lineNumber": 306,
+        "lineNumber": 305,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Delete appointment* : `delete-appointment APPOINTMENT_ID`"
       },
       {
-        "lineNumber": 307,
+        "lineNumber": 306,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `delete-appointment 10001`"
       },
       {
-        "lineNumber": 308,
+        "lineNumber": 307,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Complete appointment* : `complete-appointment APPOINTMENT_ID`"
       },
       {
-        "lineNumber": 309,
+        "lineNumber": 308,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `complete-appointment 10001`"
       },
       {
-        "lineNumber": 310,
+        "lineNumber": 309,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Add prescriptions* : `add-prescription pi/APPOINTMENT_ID pn/MEDICINE_NAME pd/DOSAGE pc/CONSUMPTION_PER_DAY``add-prescription pi/10001 pn/Paracetamol pd/2 pc/3`"
       },
       {
-        "lineNumber": 311,
+        "lineNumber": 310,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `add-prescription pi/10001 pn/Paracetamol pd/2 pc/3`"
       },
       {
-        "lineNumber": 312,
+        "lineNumber": 311,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Delete prescriptions* : `delete-prescription pi/APPOINTMENT_ID pn/MEDICINE_NAME`"
       },
       {
-        "lineNumber": 313,
+        "lineNumber": 312,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `delete-prescription pi/10001 pn/Paracetamol`"
       },
       {
-        "lineNumber": 314,
+        "lineNumber": 313,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Add allergies or conditions* : `add-medical-history n/NAME al/ALLERGIES c/CONDITIONS`"
       },
       {
-        "lineNumber": 315,
+        "lineNumber": 314,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `add-medical-history n/John Doe al/penicillin, milk c/sub-healthy, hyperglycemia`"
       },
       {
-        "lineNumber": 316,
+        "lineNumber": 315,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Delete allergies or conditions* : `delete-medical-history n/NAME al/ALLERGIES c/CONDITIONS`"
       },
       {
-        "lineNumber": 317,
+        "lineNumber": 316,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "e.g. `delete-medical-history n/John Doe al/penicillin, milk c/sub-healthy, hyperglycemia`"
       },
       {
-        "lineNumber": 318,
+        "lineNumber": 317,
         "author": {
           "gitId": "-"
         },
         "content": "* *History* : `history`"
       },
       {
-        "lineNumber": 319,
+        "lineNumber": 318,
         "author": {
           "gitId": "-"
         },
         "content": "* *Undo* : `undo`"
       },
       {
-        "lineNumber": 320,
+        "lineNumber": 319,
         "author": {
           "gitId": "-"
         },
         "content": "* *Redo* : `redo`"
       },
       {
-        "lineNumber": 321,
+        "lineNumber": 320,
         "author": {
           "gitId": "elroyhaw"
         },
         "content": "* *Clear* : `clear`"
       },
       {
-        "lineNumber": 322,
+        "lineNumber": 321,
         "author": {
           "gitId": "elroyhaw"
         },
@@ -12408,9 +12401,9 @@
       }
     ],
     "authorContributionMap": {
-      "giamjuxian": 68,
-      "-": 162,
-      "elroyhaw": 92
+      "giamjuxian": 67,
+      "-": 164,
+      "elroyhaw": 90
     }
   },
   {
@@ -12811,9 +12804,9 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "        logger.info(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d[ Initializing AddressBook ]\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\");"
+        "content": "        logger.info(\"\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d[ Initializing HealthBook ]\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\");"
       },
       {
         "lineNumber": 58,
@@ -13874,8 +13867,8 @@
       }
     ],
     "authorContributionMap": {
-      "giamjuxian": 4,
-      "-": 203,
+      "giamjuxian": 5,
+      "-": 202,
       "elroyhaw": 1
     }
   },
@@ -55075,397 +55068,369 @@
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "import seedu.address.model.person.Address;"
+        "content": "import seedu.address.model.doctor.Doctor;"
       },
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "import seedu.address.model.person.Email;"
+        "content": "import seedu.address.model.patient.Patient;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Name;"
+        "content": "import seedu.address.model.person.Address;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Person;"
+        "content": "import seedu.address.model.person.Email;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Phone;"
+        "content": "import seedu.address.model.person.Name;"
       },
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "florafong97"
+          "gitId": "-"
         },
-        "content": "import seedu.address.model.person.Remark;"
+        "content": "import seedu.address.model.person.Person;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.tag.Tag;"
+        "content": "import seedu.address.model.person.Phone;"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "-"
+          "gitId": "florafong97"
         },
-        "content": ""
+        "content": "import seedu.address.model.person.Remark;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": "import seedu.address.model.tag.Tag;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": " * Contains utility methods for populating {@code AddressBook} with sample data."
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": "/**"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "public class SampleDataUtil {"
+        "content": " * Contains utility methods for populating {@code AddressBook} with sample data."
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "florafong97"
+          "gitId": "-"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "florafong97"
+          "gitId": "-"
         },
-        "content": "    public static final Remark EMPTY_REMARK \u003d new Remark(\"\");"
+        "content": "public class SampleDataUtil {"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "florafong97"
         },
-        "content": "    public static final Remark NON_EMPTY_REMARK \u003d new Remark(\"Likes dogs\");"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "florafong97"
         },
-        "content": ""
+        "content": "    public static final Remark EMPTY_REMARK \u003d new Remark(\"\");"
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "-"
+          "gitId": "florafong97"
         },
-        "content": "    public static Person[] getSamplePersons() {"
+        "content": "    public static final Remark NON_EMPTY_REMARK \u003d new Remark(\"Likes dogs\");"
       },
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "-"
+          "gitId": "florafong97"
         },
-        "content": "        return new Person[] {"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "            new Person(new Name(\"Alex Yeoh\"), new Phone(\"87438807\"), new Email(\"alexyeoh@example.com\"),"
+        "content": "    public static Person[] getSamplePersons() {"
       },
       {
         "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new Person[] {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "giamjuxian"
+        },
+        "content": "            new Patient(new Name(\"John Doe\"), new Phone(\"87438807\"), new Email(\"alexyeoh@example.com\"),"
+      },
+      {
+        "lineNumber": 30,
         "author": {
           "gitId": "florafong97"
         },
         "content": "                new Address(\"Blk 30 Geylang Street 29, #06-40\"), NON_EMPTY_REMARK,"
       },
       {
-        "lineNumber": 29,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                getTagSet(\"friends\")),"
-      },
-      {
-        "lineNumber": 30,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            new Person(new Name(\"Bernice Yu\"), new Phone(\"99272758\"), new Email(\"berniceyu@example.com\"),"
-      },
-      {
         "lineNumber": 31,
         "author": {
-          "gitId": "florafong97"
+          "gitId": "giamjuxian"
         },
-        "content": "                new Address(\"Blk 30 Lorong 3 Serangoon Gardens, #07-18\"), EMPTY_REMARK,"
+        "content": "                getTagSet(\"Patient\"), \"123\"),"
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "                getTagSet(\"colleagues\", \"friends\")),"
+        "content": "            new Patient(new Name(\"Jackie Chen\"), new Phone(\"91234232\"), new Email(\"jackiechen@example.com\"),"
       },
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "            new Person(new Name(\"Charlotte Oliveiro\"), new Phone(\"93210283\"), new Email(\"charlotte@example.com\"),"
+        "content": "                    new Address(\"Blk 123 Clementi Street 9, #08-20\"), EMPTY_REMARK,"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "florafong97"
+          "gitId": "giamjuxian"
         },
-        "content": "                new Address(\"Blk 11 Ang Mo Kio Street 74, #11-04\"), NON_EMPTY_REMARK,"
+        "content": "                    getTagSet(\"Patient\"), \"123\"),"
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "                getTagSet(\"neighbours\")),"
+        "content": "            new Doctor(new Name(\"Mary Jane\"), new Phone(\"98232323\"), new Email(\"maryjane@example.com\"),"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "            new Person(new Name(\"David Li\"), new Phone(\"91031282\"), new Email(\"lidavid@example.com\"),"
+        "content": "                    new Address(\"Blk 32 Yishun Street 31, #09-30\"), EMPTY_REMARK,"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "florafong97"
+          "gitId": "giamjuxian"
         },
-        "content": "                new Address(\"Blk 436 Serangoon Gardens Street 26, #16-43\"), EMPTY_REMARK,"
+        "content": "                    getTagSet(\"Doctor\")),"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "                getTagSet(\"family\")),"
+        "content": "            new Doctor(new Name(\"Tommy Tan\"), new Phone(\"82312342\"), new Email(\"tommytan@example.com\"),"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "giamjuxian"
         },
-        "content": "            new Person(new Name(\"Irfan Ibrahim\"), new Phone(\"92492021\"), new Email(\"irfan@example.com\"),"
+        "content": "                    new Address(\"Blk 11 Jurong West Street 11, #11-30\"), EMPTY_REMARK,"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "florafong97"
+          "gitId": "giamjuxian"
         },
-        "content": "                new Address(\"Blk 47 Tampines Street 20, #17-35\"), EMPTY_REMARK,"
+        "content": "                    getTagSet(\"Doctor\"))"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "                getTagSet(\"classmates\")),"
+        "content": "        };"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "            new Person(new Name(\"Roy Balakrishnan\"), new Phone(\"92624417\"), new Email(\"royb@example.com\"),"
+        "content": "    }"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "florafong97"
+          "gitId": "-"
         },
-        "content": "                new Address(\"Blk 45 Aljunied Street 85, #11-31\"), EMPTY_REMARK,"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "                getTagSet(\"colleagues\"))"
+        "content": "    public static ReadOnlyAddressBook getSampleAddressBook() {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "        };"
+        "content": "        AddressBook sampleAb \u003d new AddressBook();"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        for (Person samplePerson : getSamplePersons()) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            sampleAb.addPerson(samplePerson);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static ReadOnlyAddressBook getSampleAddressBook() {"
+        "content": "        }"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        AddressBook sampleAb \u003d new AddressBook();"
+        "content": "        return sampleAb;"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (Person samplePerson : getSamplePersons()) {"
+        "content": "    }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "            sampleAb.addPerson(samplePerson);"
+        "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    /**"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        return sampleAb;"
+        "content": "     * Returns a tag set containing the list of strings given."
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        return Arrays.stream(strings)"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns a tag set containing the list of strings given."
+        "content": "                .map(Tag::new)"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "                .collect(Collectors.toSet());"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
+        "content": "    }"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Arrays.stream(strings)"
-      },
-      {
-        "lineNumber": 61,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                .map(Tag::new)"
-      },
-      {
-        "lineNumber": 62,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                .collect(Collectors.toSet());"
-      },
-      {
-        "lineNumber": 63,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 64,
-        "author": {
-          "gitId": "-"
-        },
         "content": ""
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
@@ -55473,8 +55438,9 @@
       }
     ],
     "authorContributionMap": {
-      "-": 54,
-      "florafong97": 11
+      "giamjuxian": 13,
+      "-": 42,
+      "florafong97": 6
     }
   },
   {

@@ -18161,6 +18161,112 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/commons/events/ui/NavigateToLearnPageEvent.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "package seedu.address.commons.events.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.events.BaseEvent;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": " * An UI event to trigger a navigation to learn page."
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "public class NavigateToLearnPageEvent extends BaseEvent {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    public String toString() {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        return getClass().getSimpleName();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "JunWei96": 14
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/commons/events/ui/SetUpDisplayCardInfoEvent.java",
     "lines": [
       {
@@ -24205,77 +24311,77 @@
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "import seedu.address.logic.CommandHistory;"
+        "content": "import seedu.address.commons.core.EventsCenter;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "import seedu.address.model.Model;"
+        "content": "import seedu.address.commons.events.ui.NavigateToLearnPageEvent;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "import seedu.address.model.card.Card;"
+        "content": "import seedu.address.logic.CommandHistory;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "import seedu.address.model.card.TopicIsKeywordPredicate;"
+        "content": "import seedu.address.model.Model;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "import seedu.address.model.card.Card;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "/**"
+        "content": "import seedu.address.model.card.TopicIsKeywordPredicate;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": " * Lists all persons in the address book to the user."
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": " */"
+        "content": "/**"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "public class LearnCommand extends Command {"
+        "content": " * Lists all persons in the address book to the user."
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": " */"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"learn\";"
+        "content": "public class LearnCommand extends Command {"
       },
       {
         "lineNumber": 19,
@@ -24289,7 +24395,7 @@
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Displayed %s cards\";"
+        "content": "    public static final String COMMAND_WORD \u003d \"learn\";"
       },
       {
         "lineNumber": 21,
@@ -24303,136 +24409,157 @@
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    private Predicate\u003cCard\u003e learnCondition;"
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Displayed %s cards\";"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    private String topicKeyword;"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "    private Predicate\u003cCard\u003e learnCondition;"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    public LearnCommand() {"
+        "content": "    private String topicKeyword;"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        learnCondition \u003d PREDICATE_SHOW_ALL_CARDS;"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        topicKeyword \u003d \"all\";"
+        "content": "    public LearnCommand() {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        learnCondition \u003d PREDICATE_SHOW_ALL_CARDS;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "        topicKeyword \u003d \"all\";"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    public LearnCommand(TopicIsKeywordPredicate learnCondition) {"
+        "content": "    }"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        this.learnCondition \u003d learnCondition;"
+        "content": ""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        topicKeyword \u003d learnCondition.getTopicKeyword();"
+        "content": "    public LearnCommand(TopicIsKeywordPredicate learnCondition) {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        this.learnCondition \u003d learnCondition;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "        topicKeyword \u003d learnCondition.getTopicKeyword();"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    @Override"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        model.updateFilteredCardList(learnCondition);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, topicKeyword));"
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        model.updateFilteredCardList(learnCondition);"
       },
       {
         "lineNumber": 41,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        EventsCenter.getInstance().post(new NavigateToLearnPageEvent());"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, topicKeyword));"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
         "author": {
           "gitId": "JunWei96"
         },
@@ -24440,7 +24567,7 @@
       }
     ],
     "authorContributionMap": {
-      "JunWei96": 41
+      "JunWei96": 44
     }
   },
   {
@@ -60116,6 +60243,686 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/ui/MainDisplay.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "package seedu.address.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import java.util.logging.Logger;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import com.google.common.eventbus.Subscribe;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.fxml.FXML;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.Node;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.layout.Region;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.layout.StackPane;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.core.LogsCenter;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.events.ui.NavigateToLearnPageEvent;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.events.ui.ShowTriviaTestResultEvent;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.events.ui.ShowTriviaTestViewEvent;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.logic.Logic;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.ui.home.Homepage;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.ui.test.TriviaTestPlaceholderPage;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": " * A Ui class that is responsible for storing the placeholders for all the pages that exist in the MainDisplay."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "public class MainDisplay extends UiPart\u003cRegion\u003e {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private static final String FXML \u003d \"MainDisplay.fxml\";"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private final Homepage homepage;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private final TriviaTestPlaceholderPage triviaTestPlaceholderPage;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private StackPane mainDisplay;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private StackPane homepagePlaceholder;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private StackPane triviaTestPlaceholder;"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    public MainDisplay(Logic logic) {"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        super(FXML);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        homepage \u003d new Homepage(logic);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        homepagePlaceholder.getChildren().add(homepage.getRoot());"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestPlaceholderPage \u003d new TriviaTestPlaceholderPage();"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestPlaceholder.getChildren().add(triviaTestPlaceholderPage.getRoot());"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        bindNodesVisibilityProperty(mainDisplay);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        resetToOriginalState();"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        registerAsAnEventHandler(this);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "     * Hides all the other pages except for the homepage. The default page should be the homepage."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    public void resetToOriginalState() {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        mainDisplay.getChildren().forEach(node -\u003e node.setVisible(false));"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        homepagePlaceholder.setVisible(true);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "     * Change the given panel to the given UI region."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void changeToScene(Node changeTo) {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        mainDisplay.getChildren().forEach(node -\u003e {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            if (node.equals(changeTo)) {"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                if (changeTo.equals(homepage.getRoot())) {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                    homepage.resetToOriginalState();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                node.setVisible(true);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                node.setVisible(false);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    public void releaseResources() {"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        homepage.releaseResources();"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void handleShowTriviaTestViewEvent(ShowTriviaTestViewEvent event) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        changeToScene(triviaTestPlaceholder);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void handleShowTriviaTestResultPage(ShowTriviaTestResultEvent event) {"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        changeToScene(triviaTestPlaceholder);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void handleNavigateToLearnPageEvent(NavigateToLearnPageEvent event) {"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        changeToScene(homepagePlaceholder);"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "JunWei96": 96
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/ui/MainWindow.java",
     "lines": [
       {
@@ -60177,184 +60984,184 @@
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "import javafx.scene.Node;"
+        "content": "import javafx.scene.control.MenuItem;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.control.MenuItem;"
+        "content": "import javafx.scene.control.TextInputControl;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.control.TextInputControl;"
+        "content": "import javafx.scene.input.KeyCombination;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.input.KeyCombination;"
+        "content": "import javafx.scene.input.KeyEvent;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.input.KeyEvent;"
+        "content": "import javafx.scene.layout.StackPane;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.scene.layout.StackPane;"
+        "content": "import javafx.stage.Stage;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "import javafx.stage.Stage;"
+        "content": "import seedu.address.commons.core.Config;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.core.Config;"
+        "content": "import seedu.address.commons.core.GuiSettings;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.core.GuiSettings;"
+        "content": "import seedu.address.commons.core.LogsCenter;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.core.LogsCenter;"
-      },
-      {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "import seedu.address.commons.events.ui.CloseTriviaTestViewEvent;"
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "-"
-        },
         "content": "import seedu.address.commons.events.ui.ExitAppRequestEvent;"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.commons.events.ui.ShowHelpRequestEvent;"
       },
       {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "import seedu.address.commons.events.ui.ShowTriviaTestResultEvent;"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "import seedu.address.commons.events.ui.ShowTriviaTestViewEvent;"
-      },
-      {
-        "lineNumber": 24,
+        "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.Logic;"
       },
       {
-        "lineNumber": 25,
+        "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.model.UserPrefs;"
       },
       {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "import seedu.address.ui.home.Homepage;"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "import seedu.address.ui.test.TriviaTestPage;"
-      },
-      {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "import seedu.address.ui.test.TriviaTestResultPage;"
-      },
-      {
-        "lineNumber": 29,
+        "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
         "content": "/**"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
         "content": " * The Main Window. Provides the basic application layout containing"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
         "content": " * a menu bar and space where other JavaFX elements can be placed."
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
         "content": " */"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
         "content": "public class MainWindow extends UiPart\u003cStage\u003e {"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final String FXML \u003d \"MainWindow.fxml\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Stage primaryStage;"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private Logic logic;"
       },
       {
         "lineNumber": 35,
@@ -60368,77 +61175,77 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final String FXML \u003d \"MainWindow.fxml\";"
+        "content": "    // Independent Ui parts residing in this Ui container"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private Config config;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+        "content": "    private UserPrefs prefs;"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private HelpWindow helpWindow;"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "    private Stage primaryStage;"
+        "content": "    private MainDisplay mainDisplay;"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "    private Logic logic;"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @FXML"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "    // Independent Ui parts residing in this Ui container"
+        "content": "    private StackPane commandBoxPlaceholder;"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    private Config config;"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "    private UserPrefs prefs;"
+        "content": "    @FXML"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    private HelpWindow helpWindow;"
+        "content": "    private MenuItem helpMenuItem;"
       },
       {
         "lineNumber": 47,
@@ -60450,149 +61257,149 @@
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "    private Homepage homePage;"
+        "content": "    @FXML"
       },
       {
         "lineNumber": 49,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    private TriviaTestPage triviaTestPage;"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    private TriviaTestResultPage triviaTestResultPage;"
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @FXML"
-      },
-      {
-        "lineNumber": 53,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private StackPane commandBoxPlaceholder;"
-      },
-      {
-        "lineNumber": 54,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @FXML"
-      },
-      {
-        "lineNumber": 56,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    private MenuItem helpMenuItem;"
-      },
-      {
-        "lineNumber": 57,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @FXML"
-      },
-      {
-        "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
         "content": "    private StackPane resultDisplayPlaceholder;"
       },
       {
-        "lineNumber": 60,
+        "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 61,
+        "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
         "content": "    @FXML"
       },
       {
-        "lineNumber": 62,
+        "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
         "content": "    private StackPane statusbarPlaceholder;"
       },
       {
-        "lineNumber": 63,
+        "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 64,
+        "lineNumber": 54,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "    @FXML"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 55,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "    private StackPane displayPagePlaceHolder;"
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 56,
         "author": {
           "gitId": "JunWei96"
         },
         "content": ""
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
         "content": "    public MainWindow(Stage primaryStage, Config config, UserPrefs prefs, Logic logic) {"
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
         "content": "        super(FXML, primaryStage);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Set dependencies"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.primaryStage \u003d primaryStage;"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.logic \u003d logic;"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.config \u003d config;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.prefs \u003d prefs;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Configure the UI"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        setTitle(config.getAppTitle());"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        setWindowDefaultSize(prefs);"
       },
       {
         "lineNumber": 69,
@@ -60606,35 +61413,35 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        // Set dependencies"
+        "content": "        setAccelerators();"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.primaryStage \u003d primaryStage;"
+        "content": "        registerAsAnEventHandler(this);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.logic \u003d logic;"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.config \u003d config;"
+        "content": "        helpWindow \u003d new HelpWindow();"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "        this.prefs \u003d prefs;"
+        "content": "    }"
       },
       {
         "lineNumber": 75,
@@ -60648,21 +61455,21 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        // Configure the UI"
+        "content": "    public Stage getPrimaryStage() {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "        setTitle(config.getAppTitle());"
+        "content": "        return primaryStage;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        setWindowDefaultSize(prefs);"
+        "content": "    }"
       },
       {
         "lineNumber": 79,
@@ -60676,301 +61483,301 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        setAccelerators();"
+        "content": "    private void setAccelerators() {"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "        registerAsAnEventHandler(this);"
+        "content": "        setAccelerator(helpMenuItem, KeyCombination.valueOf(\"F1\"));"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "        helpWindow \u003d new HelpWindow();"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    /**"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * Sets the accelerator of a MenuItem."
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Stage getPrimaryStage() {"
+        "content": "     * @param keyCombination the KeyCombination value of the accelerator"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "        return primaryStage;"
+        "content": "     */"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    private void setAccelerator(MenuItem menuItem, KeyCombination keyCombination) {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        menuItem.setAccelerator(keyCombination);"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void setAccelerators() {"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "        setAccelerator(helpMenuItem, KeyCombination.valueOf(\"F1\"));"
+        "content": "        /*"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "         * TODO: the code below can be removed once the bug reported here"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "         * https://bugs.openjdk.java.net/browse/JDK-8131666"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "         * is fixed in later version of SDK."
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Sets the accelerator of a MenuItem."
+        "content": "         *"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param keyCombination the KeyCombination value of the accelerator"
+        "content": "         * According to the bug report, TextInputControl (TextField, TextArea) will"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "         * consume function-key events. Because CommandBox contains a TextField, and"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void setAccelerator(MenuItem menuItem, KeyCombination keyCombination) {"
+        "content": "         * ResultDisplay contains a TextArea, thus some accelerators (e.g F1) will"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "        menuItem.setAccelerator(keyCombination);"
+        "content": "         * not work when the focus is in them because the key event is consumed by"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "         * the TextInputControl(s)."
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "        /*"
+        "content": "         *"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "         * TODO: the code below can be removed once the bug reported here"
+        "content": "         * For now, we add following event filter to capture such key events and open"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "         * https://bugs.openjdk.java.net/browse/JDK-8131666"
+        "content": "         * help window purposely so to support accelerators even when focus is"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "         * is fixed in later version of SDK."
+        "content": "         * in CommandBox or ResultDisplay."
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "         *"
+        "content": "         */"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "         * According to the bug report, TextInputControl (TextField, TextArea) will"
+        "content": "        getRoot().addEventFilter(KeyEvent.KEY_PRESSED, event -\u003e {"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "         * consume function-key events. Because CommandBox contains a TextField, and"
+        "content": "            if (event.getTarget() instanceof TextInputControl \u0026\u0026 keyCombination.match(event)) {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "         * ResultDisplay contains a TextArea, thus some accelerators (e.g F1) will"
+        "content": "                menuItem.getOnAction().handle(new ActionEvent());"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "         * not work when the focus is in them because the key event is consumed by"
+        "content": "                event.consume();"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "         * the TextInputControl(s)."
+        "content": "            }"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "         *"
+        "content": "        });"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "         * For now, we add following event filter to capture such key events and open"
+        "content": "    }"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "         * help window purposely so to support accelerators even when focus is"
+        "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "         * in CommandBox or ResultDisplay."
+        "content": "    /**"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "         */"
+        "content": "     * Fills up all the placeholders of this window."
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        getRoot().addEventFilter(KeyEvent.KEY_PRESSED, event -\u003e {"
+        "content": "     */"
       },
       {
         "lineNumber": 117,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "            if (event.getTarget() instanceof TextInputControl \u0026\u0026 keyCombination.match(event)) {"
+        "content": "    public void fillInnerParts() {"
       },
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "                menuItem.getOnAction().handle(new ActionEvent());"
+        "content": "        CommandBox commandBox \u003d new CommandBox(logic);"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "                event.consume();"
+        "content": "        commandBoxPlaceholder.getChildren().add(commandBox.getRoot());"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "            }"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "        });"
+        "content": "        ResultDisplay resultDisplay \u003d new ResultDisplay();"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        resultDisplayPlaceholder.getChildren().add(resultDisplay.getRoot());"
       },
       {
         "lineNumber": 123,
@@ -60982,44 +61789,44 @@
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "    /**"
+        "content": "        mainDisplay \u003d new MainDisplay(logic);"
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "     * Fills up all the placeholders of this window."
+        "content": "        displayPagePlaceHolder.getChildren().add(mainDisplay.getRoot());"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    public void fillInnerParts() {"
+        "content": "        StatusBarFooter statusBarFooter \u003d new StatusBarFooter(prefs.getTriviaBundleFilePath());"
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "        CommandBox commandBox \u003d new CommandBox(logic);"
+        "content": "        statusbarPlaceholder.getChildren().add(statusBarFooter.getRoot());"
       },
       {
         "lineNumber": 129,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "        commandBoxPlaceholder.getChildren().add(commandBox.getRoot());"
+        "content": "    }"
       },
       {
         "lineNumber": 130,
@@ -61031,719 +61838,432 @@
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "        ResultDisplay resultDisplay \u003d new ResultDisplay();"
+        "content": "    public void hide() {"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "        resultDisplayPlaceholder.getChildren().add(resultDisplay.getRoot());"
+        "content": "        primaryStage.hide();"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 134,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "        homePage \u003d new Homepage(logic);"
+        "content": ""
       },
       {
         "lineNumber": 135,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        displayPagePlaceHolder.getChildren().add(homePage.getRoot());"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 137,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        StatusBarFooter statusBarFooter \u003d new StatusBarFooter(prefs.getTriviaBundleFilePath());"
-      },
-      {
-        "lineNumber": 138,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        statusbarPlaceholder.getChildren().add(statusBarFooter.getRoot());"
-      },
-      {
-        "lineNumber": 139,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 140,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    public void hide() {"
-      },
-      {
-        "lineNumber": 142,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        primaryStage.hide();"
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
         "content": "    private void setTitle(String appTitle) {"
       },
       {
-        "lineNumber": 146,
+        "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
         "content": "        primaryStage.setTitle(appTitle);"
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 148,
+        "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 149,
+        "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 150,
+        "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
         "content": "     * Sets the default size based on user preferences."
       },
       {
-        "lineNumber": 151,
+        "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 152,
+        "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
         "content": "    private void setWindowDefaultSize(UserPrefs prefs) {"
       },
       {
-        "lineNumber": 153,
+        "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
         "content": "        primaryStage.setHeight(prefs.getGuiSettings().getWindowHeight());"
       },
       {
-        "lineNumber": 154,
+        "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
         "content": "        primaryStage.setWidth(prefs.getGuiSettings().getWindowWidth());"
       },
       {
-        "lineNumber": 155,
+        "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
         "content": "        if (prefs.getGuiSettings().getWindowCoordinates() !\u003d null) {"
       },
       {
-        "lineNumber": 156,
+        "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
         "content": "            primaryStage.setX(prefs.getGuiSettings().getWindowCoordinates().getX());"
       },
       {
-        "lineNumber": 157,
+        "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
         "content": "            primaryStage.setY(prefs.getGuiSettings().getWindowCoordinates().getY());"
       },
       {
-        "lineNumber": 158,
+        "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 159,
+        "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 160,
+        "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 161,
+        "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 162,
+        "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
         "content": "     * Returns the current size and the position of the main Window."
       },
       {
-        "lineNumber": 163,
+        "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 164,
+        "lineNumber": 154,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "    public GuiSettings getCurrentGuiSetting() {"
       },
       {
-        "lineNumber": 165,
+        "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
         "content": "        return new GuiSettings(primaryStage.getWidth(), primaryStage.getHeight(),"
       },
       {
-        "lineNumber": 166,
+        "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
         "content": "                (int) primaryStage.getX(), (int) primaryStage.getY());"
       },
       {
-        "lineNumber": 167,
+        "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 168,
+        "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 169,
+        "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 170,
+        "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
         "content": "     * Opens the help window or focuses on it if it\u0027s already opened."
       },
       {
-        "lineNumber": 171,
+        "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 172,
+        "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
         "content": "    @FXML"
       },
       {
-        "lineNumber": 173,
+        "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
         "content": "    public void handleHelp() {"
       },
       {
-        "lineNumber": 174,
+        "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
         "content": "        if (!helpWindow.isShowing()) {"
       },
       {
-        "lineNumber": 175,
+        "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
         "content": "            helpWindow.show();"
       },
       {
-        "lineNumber": 176,
+        "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
         "content": "        } else {"
       },
       {
-        "lineNumber": 177,
+        "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
         "content": "            helpWindow.focus();"
       },
       {
-        "lineNumber": 178,
+        "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 179,
+        "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 180,
+        "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 181,
+        "lineNumber": 171,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "    public void releaseResources() {"
       },
       {
-        "lineNumber": 182,
+        "lineNumber": 172,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        homePage.releaseResources();"
+        "content": "        mainDisplay.releaseResources();"
       },
       {
-        "lineNumber": 183,
+        "lineNumber": 173,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 184,
+        "lineNumber": 174,
         "author": {
           "gitId": "JunWei96"
         },
         "content": ""
       },
       {
-        "lineNumber": 185,
+        "lineNumber": 175,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "    public void show() {"
       },
       {
-        "lineNumber": 186,
+        "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
         "content": "        primaryStage.show();"
       },
       {
-        "lineNumber": 187,
+        "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 188,
+        "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 189,
+        "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 190,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "     * Will change the scene displayed in {@code displayPagePlaceHolder} according to the given parameter."
-      },
-      {
-        "lineNumber": 191,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 192,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    private void changeToScene(Node region) {"
-      },
-      {
-        "lineNumber": 193,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        if (region.equals(homePage.getRoot())) {"
-      },
-      {
-        "lineNumber": 194,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "            homePage.resetToOriginalState();"
-      },
-      {
-        "lineNumber": 195,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 196,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        displayPagePlaceHolder.getChildren().clear();"
-      },
-      {
-        "lineNumber": 197,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        displayPagePlaceHolder.getChildren().add(region);"
-      },
-      {
-        "lineNumber": 198,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 199,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 200,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 201,
+        "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
         "content": "     * Closes the application."
       },
       {
-        "lineNumber": 202,
+        "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 203,
+        "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
         "content": "    @FXML"
       },
       {
-        "lineNumber": 204,
+        "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
         "content": "    private void handleExit() {"
       },
       {
-        "lineNumber": 205,
+        "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
         "content": "        raise(new ExitAppRequestEvent());"
       },
       {
-        "lineNumber": 206,
+        "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 207,
+        "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 208,
+        "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
         "content": "    @Subscribe"
       },
       {
-        "lineNumber": 209,
+        "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
         "content": "    private void handleShowHelpEvent(ShowHelpRequestEvent event) {"
       },
       {
-        "lineNumber": 210,
+        "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
         "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
-        "lineNumber": 211,
+        "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
         "content": "        handleHelp();"
       },
       {
-        "lineNumber": 212,
+        "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 213,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 214,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    @Subscribe"
-      },
-      {
-        "lineNumber": 215,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    private void handleShowTriviaTestViewEvent(ShowTriviaTestViewEvent event) {"
-      },
-      {
-        "lineNumber": 216,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
-      },
-      {
-        "lineNumber": 217,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        triviaTestPage \u003d event.getTriviaTestPage().get();"
-      },
-      {
-        "lineNumber": 218,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        changeToScene(triviaTestPage.getRoot());"
-      },
-      {
-        "lineNumber": 219,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 220,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 221,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    @Subscribe"
-      },
-      {
-        "lineNumber": 222,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    private void handleShowTriviaTestResultPage(ShowTriviaTestResultEvent event) {"
-      },
-      {
-        "lineNumber": 223,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        triviaTestResultPage \u003d event.getTriviaTestResultPage().get();"
-      },
-      {
-        "lineNumber": 225,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        changeToScene(triviaTestResultPage.getRoot());"
-      },
-      {
-        "lineNumber": 226,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 227,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 228,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Subscribe"
-      },
-      {
-        "lineNumber": 229,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    private void handleCloseTriviaTestViewEvent(CloseTriviaTestViewEvent event) {"
-      },
-      {
-        "lineNumber": 230,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
-      },
-      {
-        "lineNumber": 231,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        changeToScene(homePage.getRoot());"
-      },
-      {
-        "lineNumber": 232,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 233,
+        "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
@@ -61751,8 +62271,8 @@
       }
     ],
     "authorContributionMap": {
-      "JunWei96": 49,
-      "-": 184
+      "JunWei96": 17,
+      "-": 175
     }
   },
   {
@@ -63567,810 +64087,810 @@
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "import javafx.scene.layout.Region;"
+        "content": "import javafx.scene.layout.Pane;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "import javafx.scene.paint.Color;"
+        "content": "import javafx.scene.layout.Region;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "import javafx.util.Duration;"
+        "content": "import javafx.scene.paint.Color;"
       },
       {
         "lineNumber": 19,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.util.Duration;"
+      },
+      {
+        "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.MainApp;"
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 21,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "import seedu.address.commons.core.AsyncEventsCenter;"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.commons.core.EventsCenter;"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.commons.events.BaseEvent;"
       },
       {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": " * Represents a distinct part of the UI. e.g. Windows, dialogs, panels, status bars, etc."
+        "content": "/**"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": " * It contains a scene graph with a root node of type {@code T}."
+        "content": " * Represents a distinct part of the UI. e.g. Windows, dialogs, panels, status bars, etc."
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * It contains a scene graph with a root node of type {@code T}."
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "public abstract class UiPart\u003cT\u003e {"
+        "content": " */"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public abstract class UiPart\u003cT\u003e {"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "    /** Resource folder where FXML files are stored. */"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String FXML_FILE_FOLDER \u003d \"/view/\";"
+        "content": "    /** Resource folder where FXML files are stored. */"
       },
       {
         "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String FXML_FILE_FOLDER \u003d \"/view/\";"
+      },
+      {
+        "lineNumber": 33,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "    public static final int FLASH_TIME \u003d 500; // 0.5 second"
       },
       {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final FXMLLoader fxmlLoader \u003d new FXMLLoader();"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private final FXMLLoader fxmlLoader \u003d new FXMLLoader();"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Constructs a UiPart with the specified FXML file URL."
+        "content": "    /**"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "     * The FXML file must not specify the {@code fx:controller} attribute."
+        "content": "     * Constructs a UiPart with the specified FXML file URL."
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * The FXML file must not specify the {@code fx:controller} attribute."
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "    public UiPart(URL fxmlFileUrl) {"
+        "content": "     */"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "        loadFxmlFile(fxmlFileUrl, null);"
+        "content": "    public UiPart(URL fxmlFileUrl) {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        loadFxmlFile(fxmlFileUrl, null);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Constructs a UiPart using the specified FXML file within {@link #FXML_FILE_FOLDER}."
+        "content": "    /**"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @see #UiPart(URL)"
+        "content": "     * Constructs a UiPart using the specified FXML file within {@link #FXML_FILE_FOLDER}."
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @see #UiPart(URL)"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    public UiPart(String fxmlFileName) {"
+        "content": "     */"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "        this(getFxmlFileUrl(fxmlFileName));"
+        "content": "    public UiPart(String fxmlFileName) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this(getFxmlFileUrl(fxmlFileName));"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Constructs a UiPart with the specified FXML file URL and root object."
+        "content": "    /**"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "     * The FXML file must not specify the {@code fx:controller} attribute."
+        "content": "     * Constructs a UiPart with the specified FXML file URL and root object."
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * The FXML file must not specify the {@code fx:controller} attribute."
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    public UiPart(URL fxmlFileUrl, T root) {"
+        "content": "     */"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        loadFxmlFile(fxmlFileUrl, root);"
+        "content": "    public UiPart(URL fxmlFileUrl, T root) {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        loadFxmlFile(fxmlFileUrl, root);"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Constructs a UiPart with the specified FXML file within {@link #FXML_FILE_FOLDER} and root object."
+        "content": "    /**"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @see #UiPart(URL, T)"
+        "content": "     * Constructs a UiPart with the specified FXML file within {@link #FXML_FILE_FOLDER} and root object."
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @see #UiPart(URL, T)"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    public UiPart(String fxmlFileName, T root) {"
+        "content": "     */"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        this(getFxmlFileUrl(fxmlFileName), root);"
+        "content": "    public UiPart(String fxmlFileName, T root) {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        this(getFxmlFileUrl(fxmlFileName), root);"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the root object of the scene graph of this UiPart."
+        "content": "    /**"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Returns the root object of the scene graph of this UiPart."
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "    public T getRoot() {"
+        "content": "     */"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        return fxmlLoader.getRoot();"
+        "content": "    public T getRoot() {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return fxmlLoader.getRoot();"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Raises the event via {@link EventsCenter#post(BaseEvent)}"
+        "content": "    /**"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param event"
+        "content": "     * Raises the event via {@link EventsCenter#post(BaseEvent)}"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @param event"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void raise(BaseEvent event) {"
+        "content": "     */"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "        EventsCenter.getInstance().post(event);"
+        "content": "    protected void raise(BaseEvent event) {"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        EventsCenter.getInstance().post(event);"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Registers the object as an event handler at the {@link EventsCenter}"
+        "content": "    /**"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param handler usually {@code this}"
+        "content": "     * Registers the object as an event handler at the {@link EventsCenter}"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @param handler usually {@code this}"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void registerAsAnEventHandler(Object handler) {"
+        "content": "     */"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        EventsCenter.getInstance().registerHandler(handler);"
+        "content": "    protected void registerAsAnEventHandler(Object handler) {"
       },
       {
         "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        EventsCenter.getInstance().registerHandler(handler);"
+      },
+      {
+        "lineNumber": 90,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "        AsyncEventsCenter.getInstance().registerHandler(handler);"
       },
       {
-        "lineNumber": 90,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Loads the object hierarchy from a FXML document."
+        "content": "    /**"
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "     * @param location Location of the FXML document."
+        "content": "     * Bind each pane to the visible property, so that when the pane is hidden, the layout of the hidden pane will not"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "     * @param root Specifies the root of the object hierarchy."
+        "content": "     * be accounted for."
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
         "content": "     */"
       },
       {
         "lineNumber": 97,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "    private void loadFxmlFile(URL location, T root) {"
+        "content": "    protected void bindNodesVisibilityProperty(Pane ...panes) {"
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "        requireNonNull(location);"
+        "content": "        for (Pane p : panes) {"
       },
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "        fxmlLoader.setLocation(location);"
+        "content": "            p.getChildren().forEach(child -\u003e {"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "        fxmlLoader.setController(this);"
+        "content": "                child.managedProperty().bind(child.visibleProperty());"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "        fxmlLoader.setRoot(root);"
+        "content": "            });"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "-"
+          "gitId": "JunWei96"
         },
-        "content": "        try {"
+        "content": "        }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "            fxmlLoader.load();"
+        "content": "    }"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (IOException e) {"
+        "content": ""
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new AssertionError(e);"
+        "content": "    /**"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "     * Loads the object hierarchy from a FXML document."
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     * @param location Location of the FXML document."
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * @param root Specifies the root of the object hierarchy."
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     */"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the FXML file URL for the specified FXML file name within {@link #FXML_FILE_FOLDER}."
+        "content": "    private void loadFxmlFile(URL location, T root) {"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        requireNonNull(location);"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static URL getFxmlFileUrl(String fxmlFileName) {"
+        "content": "        fxmlLoader.setLocation(location);"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(fxmlFileName);"
+        "content": "        fxmlLoader.setController(this);"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "        String fxmlFileNameWithFolder \u003d FXML_FILE_FOLDER + fxmlFileName;"
+        "content": "        fxmlLoader.setRoot(root);"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "        URL fxmlFileUrl \u003d MainApp.class.getResource(fxmlFileNameWithFolder);"
+        "content": "        try {"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        return requireNonNull(fxmlFileUrl);"
+        "content": "            fxmlLoader.load();"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            throw new AssertionError(e);"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        }"
       },
       {
         "lineNumber": 120,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "     * A quick flash of a specified color at a certain region of the UI."
+        "content": "    }"
       },
       {
         "lineNumber": 121,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "     * @param region The region where the flash is."
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "     * @param color The color of the flash."
+        "content": "    /**"
       },
       {
         "lineNumber": 123,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Returns the FXML file URL for the specified FXML file name within {@link #FXML_FILE_FOLDER}."
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
         "content": "     */"
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "    public void flashBackgroundColor(Region region, Color color, Background originalBackground) {"
+        "content": "    private static URL getFxmlFileUrl(String fxmlFileName) {"
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "        final Animation animation \u003d new Transition() {"
+        "content": "        requireNonNull(fxmlFileName);"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "            {"
+        "content": "        String fxmlFileNameWithFolder \u003d FXML_FILE_FOLDER + fxmlFileName;"
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "                setCycleDuration(Duration.millis(FLASH_TIME));"
+        "content": "        URL fxmlFileUrl \u003d MainApp.class.getResource(fxmlFileNameWithFolder);"
       },
       {
         "lineNumber": 129,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "                setInterpolator(Interpolator.EASE_OUT);"
+        "content": "        return requireNonNull(fxmlFileUrl);"
       },
       {
         "lineNumber": 130,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
-        "content": "            }"
+        "content": "    }"
       },
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "JunWei96"
+          "gitId": "-"
         },
         "content": ""
       },
@@ -64379,101 +64899,192 @@
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            @Override"
+        "content": "    /**"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            protected void interpolate(double frac) {"
+        "content": "     * A quick flash of a specified color at a certain region of the UI."
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                Color vColor \u003d new Color(color.getRed(), color.getGreen(), color.getBlue(),"
+        "content": "     * @param region The region where the flash is."
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                        color.getOpacity() - frac);"
+        "content": "     * @param color The color of the flash."
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                region.setBackground(new Background(new BackgroundFill(vColor,"
+        "content": "     *"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                        CornerRadii.EMPTY, Insets.EMPTY)));"
+        "content": "     */"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                if (frac \u003d\u003d 1.0) {"
+        "content": "    public void flashBackgroundColor(Region region, Color color, Background originalBackground) {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                    region.setBackground(originalBackground);"
+        "content": "        final Animation animation \u003d new Transition() {"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                }"
+        "content": "            {"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            }"
+        "content": "                setCycleDuration(Duration.millis(FLASH_TIME));"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "                setInterpolator(Interpolator.EASE_OUT);"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        };"
+        "content": "            }"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        animation.play();"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "            @Override"
       },
       {
         "lineNumber": 146,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            protected void interpolate(double frac) {"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                Color vColor \u003d new Color(color.getRed(), color.getGreen(), color.getBlue(),"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        color.getOpacity() - frac);"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                region.setBackground(new Background(new BackgroundFill(vColor,"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        CornerRadii.EMPTY, Insets.EMPTY)));"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                if (frac \u003d\u003d 1.0) {"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                    region.setBackground(originalBackground);"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        };"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        animation.play();"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
@@ -64481,8 +65092,8 @@
       }
     ],
     "authorContributionMap": {
-      "JunWei96": 40,
-      "-": 106
+      "JunWei96": 50,
+      "-": 109
     }
   },
   {
@@ -68755,472 +69366,388 @@
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        bindNodesVisibilityProperty();"
+        "content": "        bindNodesVisibilityProperty(info);"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "        resetToOriginalState();"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        registerAsAnEventHandler(this);"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        registerAsAnEventHandler(this);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    public void freeResources() {"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        browserPanel.freeResources();"
+        "content": "    public void freeResources() {"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        browserPanel.freeResources();"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "     * Hides all the information in the info panel."
+        "content": "    /**"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "     */"
+        "content": "     * Hides all the information in the info panel."
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    public void resetToOriginalState() {"
+        "content": "     */"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        info.getChildren().forEach(node -\u003e {"
+        "content": "    public void resetToOriginalState() {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            node.setVisible(false);"
+        "content": "        info.getChildren().forEach(node -\u003e node.setVisible(false));"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        });"
+        "content": "    }"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    /**"
+        "content": "     * Change the given panel to the given UI region."
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "     * Bind each node to the visible property, so that when the node is hidden, the layout of the hidden node will not"
+        "content": "     */"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "     * be accounted for."
+        "content": "    private void changeToPanel(Node changeTo) {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "     */"
+        "content": "        info.getChildren().forEach(node -\u003e {"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    private void bindNodesVisibilityProperty() {"
+        "content": "            if (node.equals(changeTo)) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        info.getChildren().forEach(node -\u003e {"
+        "content": "                node.setVisible(true);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            node.managedProperty().bind(node.visibleProperty());"
+        "content": "            } else {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            node.setVisible(false);"
+        "content": "                node.setVisible(false);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        });"
+        "content": "            }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        });"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "     * Change the given panel to the given UI region."
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "     */"
+        "content": "    private void handleDisplayGoogleSearchEvent(DisplayGoogleSearchEvent event) {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    private void changeToPanel(Node changeTo) {"
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        info.getChildren().forEach(node -\u003e {"
+        "content": "        browserPanel.loadCardPage(event.getCardToGoogle());"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            if (node.equals(changeTo)) {"
+        "content": "        changeToPanel(browserPanelPlaceholder);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                node.setVisible(true);"
+        "content": "    }"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            } else {"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "                node.setVisible(false);"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "            }"
+        "content": "    private void handleDisplayImportHelpEvent(DisplayImportHelpEvent event) {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        });"
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        changeToPanel(importHelpDisplayPlaceholder);"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    @Subscribe"
+        "content": ""
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    private void handleDisplayGoogleSearchEvent(DisplayGoogleSearchEvent event) {"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": "    private void handleDisplayCardInfoEvent(DisplayCardInfoEvent event) {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        browserPanel.loadCardPage(event.getCardToGoogle());"
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        changeToPanel(browserPanelPlaceholder);"
+        "content": "        cardInfoPanel.loadCardPage(event.getCardToDisplay(), event.getAttemptsByCard());"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        changeToPanel(cardInfoPanelPlaceholder);"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    @Subscribe"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    private void handleDisplayImportHelpEvent(DisplayImportHelpEvent event) {"
+        "content": "    @Subscribe"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+        "content": "    private void handleHideCardInfoPanelEvent(HideCardInfoPanelEvent event) {"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "        changeToPanel(importHelpDisplayPlaceholder);"
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": "    }"
+        "content": "        cardInfoPanelPlaceholder.setVisible(false);"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "JunWei96"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 108,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    @Subscribe"
-      },
-      {
-        "lineNumber": 109,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    private void handleDisplayCardInfoEvent(DisplayCardInfoEvent event) {"
-      },
-      {
-        "lineNumber": 110,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
-      },
-      {
-        "lineNumber": 111,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        cardInfoPanel.loadCardPage(event.getCardToDisplay(), event.getAttemptsByCard());"
-      },
-      {
-        "lineNumber": 112,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        changeToPanel(cardInfoPanelPlaceholder);"
-      },
-      {
-        "lineNumber": 113,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 114,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 115,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    @Subscribe"
-      },
-      {
-        "lineNumber": 116,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    private void handleHideCardInfoPanelEvent(HideCardInfoPanelEvent event) {"
-      },
-      {
-        "lineNumber": 117,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
-      },
-      {
-        "lineNumber": 118,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "        cardInfoPanelPlaceholder.setVisible(false);"
-      },
-      {
-        "lineNumber": 119,
-        "author": {
-          "gitId": "JunWei96"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 120,
         "author": {
           "gitId": "JunWei96"
         },
@@ -69228,7 +69755,7 @@
       }
     ],
     "authorContributionMap": {
-      "JunWei96": 120
+      "JunWei96": 108
     }
   },
   {
@@ -70195,6 +70722,231 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/ui/test/TriviaTestMenuPage.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "package seedu.address.ui.test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import java.util.logging.Logger;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.fxml.FXML;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.control.SplitPane;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.image.ImageView;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.layout.Region;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.core.LogsCenter;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.ui.UiPart;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": " * Will display the UI for the TriviaTest\u0027s Menu page."
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "public class TriviaTestMenuPage extends UiPart\u003cRegion\u003e {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private static final String FXML \u003d \"test/TriviaTestMenuPage.fxml\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private ImageView matchTestImage;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private SplitPane testMenuSplitPane;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    public TriviaTestMenuPage() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        super(FXML);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        matchTestImage.fitWidthProperty().bind(getRoot().widthProperty());"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        testMenuSplitPane.lookupAll(\".split-pane-divider\").stream().forEach(div -\u003e div.setMouseTransparent(true));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "JunWei96": 31
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/ui/test/TriviaTestPage.java",
     "lines": [
       {
@@ -70326,6 +71078,644 @@
     ],
     "authorContributionMap": {
       "JunWei96": 18
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/ui/test/TriviaTestPlaceholderPage.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "package seedu.address.ui.test;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import java.util.logging.Logger;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import com.google.common.eventbus.Subscribe;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.fxml.FXML;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.Node;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.layout.Region;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import javafx.scene.layout.StackPane;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.core.LogsCenter;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.events.ui.CloseTriviaTestViewEvent;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.events.ui.ShowTriviaTestResultEvent;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.commons.events.ui.ShowTriviaTestViewEvent;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "import seedu.address.ui.UiPart;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": " * A class to display the different TriviaTest that 3VIA has."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "public class TriviaTestPlaceholderPage extends UiPart\u003cRegion\u003e {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private static final String FXML \u003d \"test/TriviaTestPlaceholderPage.fxml\";"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private TriviaTestPage triviaTestPage;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private TriviaTestResultPage triviaTestResultPage;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private TriviaTestMenuPage triviaTestMenuPage;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private StackPane triviaTestPlaceholderPage;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private StackPane triviaTestMenuPagePlaceholder;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private StackPane triviaTestPagePlaceholder;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private StackPane triviaTestResultPagePlaceholder;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    public TriviaTestPlaceholderPage() {"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        super(FXML);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestMenuPage \u003d new TriviaTestMenuPage();"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestMenuPagePlaceholder.getChildren().add(triviaTestMenuPage.getRoot());"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        bindNodesVisibilityProperty(triviaTestPlaceholderPage);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        resetToOriginalState();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        registerAsAnEventHandler(this);"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "     * Display only the trivia test menu page."
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void resetToOriginalState() {"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        changeToScene(triviaTestMenuPagePlaceholder);"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void handleShowTriviaTestViewEvent(ShowTriviaTestViewEvent event) {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestPage \u003d event.getTriviaTestPage().get();"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestPagePlaceholder.getChildren().add(triviaTestPage.getRoot());"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        changeToScene(triviaTestPagePlaceholder);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void handleShowTriviaTestResultPage(ShowTriviaTestResultEvent event) {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestResultPage \u003d event.getTriviaTestResultPage().get();"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestResultPagePlaceholder.getChildren().add(triviaTestResultPage.getRoot());"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        changeToScene(triviaTestResultPagePlaceholder);"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void handleCloseTriviaTestViewEvent(CloseTriviaTestViewEvent event) {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        changeToScene(triviaTestMenuPagePlaceholder);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "     * Change to the matchTest scene specified in the parameter."
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    private void changeToScene(Node changeTo) {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        triviaTestPlaceholderPage.getChildren().forEach(node -\u003e {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            if (node.equals(changeTo)) {"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                node.setVisible(true);"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            } else {"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                node.setVisible(false);"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        });"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "JunWei96": 90
     }
   },
   {
@@ -76641,6 +78031,84 @@
     }
   },
   {
+    "path": "src/main/resources/view/MainDisplay.fxml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.layout.StackPane?\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003cStackPane fx:id\u003d\"MainDisplay\" xmlns:fx\u003d\"http://javafx.com/fxml/1\" xmlns\u003d\"http://javafx.com/javafx/8.0.171\"\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "  \u003cStackPane fx:id\u003d\"mainDisplay\"\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    \u003cStackPane fx:id\u003d\"homepagePlaceholder\" /\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    \u003cStackPane fx:id\u003d\"triviaTestPlaceholder\" /\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "  \u003c/StackPane\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c/StackPane\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "JunWei96": 10
+    }
+  },
+  {
     "path": "src/main/resources/view/MainWindow.fxml",
     "lines": [
       {
@@ -79630,6 +81098,778 @@
           "gitId": "JunWei96"
         },
         "content": "    \u003cStackPane fx:id\u003d\"cardInfoPanelPlaceholder\" /\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "  \u003c/StackPane\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c/StackPane\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "JunWei96": 11
+    }
+  },
+  {
+    "path": "src/main/resources/view/test/TriviaTestMenuPage.fxml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.geometry.Insets?\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.control.Label?\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.control.SplitPane?\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.image.Image?\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.image.ImageView?\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.layout.AnchorPane?\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.layout.HBox?\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.layout.Region?\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.layout.VBox?\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003cVBox xmlns\u003d\"http://javafx.com/javafx/10.0.1\" xmlns:fx\u003d\"http://javafx.com/fxml/1\"\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "   \u003cchildren\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "      \u003cHBox alignment\u003d\"CENTER\" styleClass\u003d\"hbox\"\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "         \u003cchildren\u003e"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            \u003cLabel styleClass\u003d\"label-bright-header\" text\u003d\"3VIA-TEST\" /\u003e"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "         \u003c/children\u003e"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "         \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            \u003cInsets bottom\u003d\"5.0\" left\u003d\"5.0\" right\u003d\"5.0\" top\u003d\"5.0\" /\u003e"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "         \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "      \u003c/HBox\u003e"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "      \u003cSplitPane fx:id\u003d\"testMenuSplitPane\" dividerPositions\u003d\"0.5\" prefHeight\u003d\"160.0\" prefWidth\u003d\"200.0\" VBox.vgrow\u003d\"ALWAYS\"\u003e"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        \u003citems\u003e"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "          \u003cAnchorPane minHeight\u003d\"0.0\" minWidth\u003d\"0.0\" prefHeight\u003d\"160.0\" prefWidth\u003d\"100.0\" SplitPane.resizableWithParent\u003d\"false\"\u003e"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "               \u003cchildren\u003e"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                  \u003cVBox alignment\u003d\"TOP_CENTER\" prefHeight\u003d\"158.0\" prefWidth\u003d\"95.0\" AnchorPane.bottomAnchor\u003d\"0.0\" AnchorPane.leftAnchor\u003d\"0.0\" AnchorPane.rightAnchor\u003d\"0.0\" AnchorPane.topAnchor\u003d\"0.0\"\u003e"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                     \u003cchildren\u003e"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright-header\" text\u003d\"Open Ended Test\" underline\u003d\"true\" wrapText\u003d\"true\" VBox.vgrow\u003d\"ALWAYS\"\u003e"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets bottom\u003d\"10.0\" /\u003e"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright\" text\u003d\"Instructions:\" /\u003e"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                     \u003c/children\u003e"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                     \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cInsets bottom\u003d\"5.0\" left\u003d\"5.0\" right\u003d\"5.0\" top\u003d\"5.0\" /\u003e"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                     \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                  \u003c/VBox\u003e"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "               \u003c/children\u003e"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            \u003c/AnchorPane\u003e"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "          \u003cAnchorPane minHeight\u003d\"0.0\" minWidth\u003d\"0.0\" prefHeight\u003d\"160.0\" prefWidth\u003d\"100.0\" SplitPane.resizableWithParent\u003d\"false\"\u003e"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "               \u003cchildren\u003e"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                  \u003cVBox alignment\u003d\"TOP_CENTER\" prefHeight\u003d\"158.0\" prefWidth\u003d\"95.0\" AnchorPane.bottomAnchor\u003d\"10.0\" AnchorPane.leftAnchor\u003d\"0.0\" AnchorPane.rightAnchor\u003d\"0.0\" AnchorPane.topAnchor\u003d\"0.0\"\u003e"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                     \u003cchildren\u003e"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright-header\" text\u003d\"Match Test\" underline\u003d\"true\" wrapText\u003d\"true\" VBox.vgrow\u003d\"ALWAYS\"\u003e"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cVBox.margin\u003e"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets bottom\u003d\"10.0\" /\u003e"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/VBox.margin\u003e"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cImageView fx:id\u003d\"matchTestImage\" fitHeight\u003d\"150.0\" fitWidth\u003d\"200.0\" pickOnBounds\u003d\"true\" preserveRatio\u003d\"true\" VBox.vgrow\u003d\"ALWAYS\"\u003e"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cimage\u003e"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cImage url\u003d\"@../../images/matchtest.png\" /\u003e"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/image\u003e"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cVBox.margin\u003e"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets bottom\u003d\"10.0\" /\u003e"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/VBox.margin\u003e"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/ImageView\u003e"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright\" text\u003d\"Match the questions to their right answer!\" wrapText\u003d\"true\" VBox.vgrow\u003d\"ALWAYS\"\u003e"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cVBox.margin\u003e"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets /\u003e"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/VBox.margin\u003e"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cRegion prefHeight\u003d\"200.0\" prefWidth\u003d\"200.0\" VBox.vgrow\u003d\"ALWAYS\" /\u003e"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright-sub-header\" text\u003d\"Instructions:\" underline\u003d\"true\" wrapText\u003d\"true\"\u003e"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cVBox.margin\u003e"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets bottom\u003d\"5.0\" top\u003d\"10.0\" /\u003e"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/VBox.margin\u003e"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright\" text\u003d\"To start: testM TOPIC\" wrapText\u003d\"true\"\u003e"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets bottom\u003d\"1.0\" /\u003e"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright\" text\u003d\"To match: QUESTION_INDEX ANSWER_INDEX\" wrapText\u003d\"true\"\u003e"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets bottom\u003d\"1.0\" /\u003e"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright\" text\u003d\"To match quickly: ANSWER_INDEX\" wrapText\u003d\"true\"\u003e"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets bottom\u003d\"1.0\" /\u003e"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003cLabel styleClass\u003d\"label-bright\" text\u003d\"To End: exit\" wrapText\u003d\"true\"\u003e"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003cpadding\u003e"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                              \u003cInsets bottom\u003d\"1.0\" /\u003e"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                           \u003c/padding\u003e"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                        \u003c/Label\u003e"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                     \u003c/children\u003e"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "                  \u003c/VBox\u003e"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "               \u003c/children\u003e"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "            \u003c/AnchorPane\u003e"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "        \u003c/items\u003e"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "      \u003c/SplitPane\u003e"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "   \u003c/children\u003e"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c/VBox\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "JunWei96": 97
+    }
+  },
+  {
+    "path": "src/main/resources/view/test/TriviaTestPlaceholderPage.fxml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003c?import javafx.scene.layout.StackPane?\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "\u003cStackPane fx:id\u003d\"TriviaTestPlaceholderPage\" xmlns:fx\u003d\"http://javafx.com/fxml/1\" xmlns\u003d\"http://javafx.com/javafx/8.0.171\"\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "  \u003cStackPane fx:id\u003d\"triviaTestPlaceholderPage\"\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    \u003cStackPane fx:id\u003d\"triviaTestMenuPagePlaceholder\" /\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    \u003cStackPane fx:id\u003d\"triviaTestPagePlaceholder\" /\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "JunWei96"
+        },
+        "content": "    \u003cStackPane fx:id\u003d\"triviaTestResultPagePlaceholder\" /\u003e"
       },
       {
         "lineNumber": 10,
