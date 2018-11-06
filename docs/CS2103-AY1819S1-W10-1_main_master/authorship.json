@@ -37976,418 +37976,460 @@
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": "    /**"
+        "content": "    private boolean isEmptyYear \u003d false;"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "xueyantian"
+          "gitId": "alistairong"
         },
-        "content": "     * Empty constructor."
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "xueyantian"
+          "gitId": "-"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    public AcademicYear() {"
+        "content": "     * Empty constructor."
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "        yearNumber \u003d 0000;"
+        "content": "     */"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": "    }"
+        "content": "    public AcademicYear() {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        yearNumber \u003d 0001;"
       },
       {
         "lineNumber": 29,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        isEmptyYear \u003d true;"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
         "author": {
           "gitId": "xueyantian"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
         "content": "     * Constructs a {@code AcademicYear}."
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
         "content": "     *"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
         "content": "     * @param number The semester number."
       },
       {
-        "lineNumber": 33,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 34,
-        "author": {
-          "gitId": "alistairong"
-        },
-        "content": "    public AcademicYear(String number) {"
-      },
-      {
-        "lineNumber": 35,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        requireNonNull(number);"
-      },
-      {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "        checkArgument(isValidYear(number), MESSAGE_ACADEMICYEAR_CONSTRAINTS);"
+        "content": "     */"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        yearNumber \u003d Integer.parseInt(number);"
+        "content": "    public AcademicYear(String number) {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        requireNonNull(number);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        checkArgument(isValidYear(number), MESSAGE_ACADEMICYEAR_CONSTRAINTS);"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": "    /**"
+        "content": "        yearNumber \u003d Integer.parseInt(number);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if a given Integer is a valid AcademicYear number"
+        "content": "    }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "-"
         },
-        "content": "    public static boolean isValidYear(String number) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "-"
         },
-        "content": "        if (!number.matches(ACADEMICYEAR_VALIDATION_REGEX)) {"
+        "content": "     * Returns true if a given Integer is a valid AcademicYear number"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "-"
         },
-        "content": "            return false;"
+        "content": "     */"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        }"
+        "content": "    public static boolean isValidYear(String number) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        Integer combinedYear \u003d Integer.parseInt(number);"
+        "content": "        if (!number.matches(ACADEMICYEAR_VALIDATION_REGEX)) {"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        Integer firstYear \u003d combinedYear / 100;"
+        "content": "            return false;"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        Integer secondYear \u003d combinedYear % 100;"
+        "content": "        }"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": "        return (firstYear + 1) % 100 \u003d\u003d secondYear;"
+        "content": "        Integer combinedYear \u003d Integer.parseInt(number);"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": "    }"
+        "content": "        Integer firstYear \u003d combinedYear / 100;"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": ""
+        "content": "        Integer secondYear \u003d combinedYear % 100;"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Integer firstYear() {"
+        "content": "        return (firstYear + 1) % 100 \u003d\u003d secondYear;"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "        return yearNumber / 100;"
+        "content": "    }"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public Integer firstYear() {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Integer secondYear() {"
+        "content": "        return yearNumber / 100;"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        return yearNumber % 100;"
+        "content": "    }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public Integer secondYear() {"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "-"
         },
-        "content": "    public String toStringFull() {"
+        "content": "        return yearNumber % 100;"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        return \"AY\" + firstYear() + \"/\" + secondYear();"
+        "content": "    }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": ""
+        "content": "    public String toStringFull() {"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "        return \"AY\" + firstYear() + \"/\" + secondYear();"
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "-"
         },
-        "content": "    public String toString() {"
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "-"
         },
-        "content": "        return firstYear() + \"\" + secondYear();"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "alistairong"
         },
-        "content": ""
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": "    @Override"
+        "content": "        if (isEmptyYear) {"
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "xueyantian"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "            return \"\";"
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "xueyantian"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "        }"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": "                || (other instanceof AcademicYear // instanceof handles nulls"
+        "content": "        return firstYear() + \"\" + secondYear();"
       },
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": "                \u0026\u0026 yearNumber.equals(((AcademicYear) other).yearNumber)); // state check"
+        "content": "    }"
       },
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "-"
+          "gitId": "alistairong"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "    public int hashCode() {"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "        return yearNumber.hashCode();"
+        "content": "                || (other instanceof AcademicYear // instanceof handles nulls"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                \u0026\u0026 yearNumber.equals(((AcademicYear) other).yearNumber)); // state check"
       },
       {
         "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public int hashCode() {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return yearNumber.hashCode();"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
@@ -38396,9 +38438,9 @@
     ],
     "authorContributionMap": {
       "KongZijin": 1,
-      "xueyantian": 7,
+      "xueyantian": 9,
       "-": 56,
-      "alistairong": 17
+      "alistairong": 21
     }
   },
   {
@@ -44697,54 +44739,40 @@
       {
         "lineNumber": 135,
         "author": {
-          "gitId": "alistairong"
-        },
-        "content": "                .append(\" Attendance List: \")"
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "alistairong"
-        },
-        "content": "                .append(getAttendanceList()) // use the person\u0027s name to represent this Peron"
-      },
-      {
-        "lineNumber": 137,
-        "author": {
           "gitId": "KongZijin"
         },
         "content": "                // object."
       },
       {
-        "lineNumber": 138,
+        "lineNumber": 136,
         "author": {
           "gitId": "KongZijin"
         },
         "content": "                .append(\" Tags: \");"
       },
       {
-        "lineNumber": 139,
+        "lineNumber": 137,
         "author": {
           "gitId": "KongZijin"
         },
         "content": "        getTags().forEach(stringBuilder::append);"
       },
       {
-        "lineNumber": 140,
+        "lineNumber": 138,
         "author": {
           "gitId": "KongZijin"
         },
         "content": "        return stringBuilder.toString();"
       },
       {
-        "lineNumber": 141,
+        "lineNumber": 139,
         "author": {
           "gitId": "KongZijin"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 142,
+        "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
@@ -44757,7 +44785,7 @@
       "xueyantian": 14,
       "spikerheado1234": 24,
       "-": 8,
-      "alistairong": 16
+      "alistairong": 14
     }
   },
   {
@@ -57373,91 +57401,91 @@
       {
         "lineNumber": 107,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "        if (moduleTitle \u003d\u003d null) {"
+        "content": "        ModuleTitle modelTitle;"
       },
       {
         "lineNumber": 108,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
+        "content": "        if (this.moduleTitle \u003d\u003d null) {"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "                    ModuleTitle.class.getSimpleName()));"
+        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        }"
+        "content": "                    ModuleTitle.class.getSimpleName()));"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        if (!ModuleTitle.isValidTitle(moduleTitle)) {"
+        "content": "        }"
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "            throw new IllegalValueException(ModuleTitle.MESSAGE_MODULETITLE_CONSTRAINTS);"
+        "content": "        if (this.moduleTitle.equals(\"\")) {"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "        }"
+        "content": "            modelTitle \u003d new ModuleTitle();"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "        final ModuleTitle modelTitle \u003d new ModuleTitle(moduleTitle);"
+        "content": "        } else {"
       },
       {
         "lineNumber": 115,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "            if (!ModuleTitle.isValidTitle(this.moduleTitle)) {"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        if (academicYear \u003d\u003d null) {"
+        "content": "                throw new IllegalValueException(ModuleTitle.MESSAGE_MODULETITLE_CONSTRAINTS);"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
+        "content": "            }"
       },
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "                    AcademicYear.class.getSimpleName()));"
+        "content": "            modelTitle \u003d new ModuleTitle(this.moduleTitle);"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
         "content": "        }"
       },
@@ -57466,325 +57494,430 @@
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        if (!AcademicYear.isValidYear(academicYear)) {"
+        "content": ""
       },
       {
         "lineNumber": 121,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "            throw new IllegalValueException(AcademicYear.MESSAGE_ACADEMICYEAR_CONSTRAINTS);"
+        "content": "        AcademicYear modelAcademicYear;"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        }"
+        "content": "        if (academicYear \u003d\u003d null) {"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        final AcademicYear modelAcademicYear \u003d new AcademicYear(academicYear);"
+        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "alistairong"
         },
-        "content": ""
+        "content": "                    AcademicYear.class.getSimpleName()));"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        if (semester \u003d\u003d null) {"
+        "content": "        }"
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
+        "content": "        if (academicYear.equals(\"\")) {"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "                    Semester.class.getSimpleName()));"
+        "content": "            modelAcademicYear \u003d new AcademicYear();"
       },
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "        }"
+        "content": "        } else {"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        if (!Semester.isValidSemester(semester)) {"
+        "content": "            if (!AcademicYear.isValidYear(academicYear)) {"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "            throw new IllegalValueException(Semester.MESSAGE_SEMESTER_CONSTRAINTS);"
+        "content": "                throw new IllegalValueException(AcademicYear.MESSAGE_ACADEMICYEAR_CONSTRAINTS);"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "        final Semester modelSemester \u003d new Semester(semester);"
+        "content": "            modelAcademicYear \u003d new AcademicYear(academicYear);"
       },
       {
         "lineNumber": 133,
         "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
           "gitId": "alistairong"
         },
         "content": ""
       },
       {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "spikerheado1234"
-        },
-        "content": "        Set\u003cTag\u003e tagMap \u003d new HashSet\u003c\u003e();"
-      },
-      {
         "lineNumber": 135,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        Semester modelSemester;"
       },
       {
         "lineNumber": 136,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "alistairong"
         },
-        "content": "        if (tagged !\u003d null) {"
+        "content": "        if (semester \u003d\u003d null) {"
       },
       {
         "lineNumber": 137,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "alistairong"
         },
-        "content": ""
+        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "alistairong"
         },
-        "content": "            for (XmlAdaptedTag t : tagged) {"
+        "content": "                    Semester.class.getSimpleName()));"
       },
       {
         "lineNumber": 139,
         "author": {
-          "gitId": "spikerheado1234"
-        },
-        "content": "                tagMap.add(t.toModelType());"
-      },
-      {
-        "lineNumber": 140,
-        "author": {
-          "gitId": "spikerheado1234"
-        },
-        "content": "            }"
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "alistairong"
         },
         "content": "        }"
       },
       {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        if (semester.equals(\"\")) {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            modelSemester \u003d new Semester();"
+      },
+      {
         "lineNumber": 142,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        } else {"
       },
       {
         "lineNumber": 143,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "alistairong"
         },
-        "content": ""
+        "content": "            if (!Semester.isValidSemester(semester)) {"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        return new Module(modelCode, modelTitle, modelAcademicYear, modelSemester,"
+        "content": "                throw new IllegalValueException(Semester.MESSAGE_SEMESTER_CONSTRAINTS);"
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "alistairong"
         },
-        "content": "                loadedStudentsList, tagMap);"
+        "content": "            }"
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "    }"
+        "content": "            modelSemester \u003d new Semester(semester);"
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "        Set\u003cTag\u003e tagMap \u003d new HashSet\u003c\u003e();"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "alistairong"
-        },
-        "content": "        if (other \u003d\u003d this) {"
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "alistairong"
-        },
-        "content": "            return true;"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "alistairong"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
         "content": ""
       },
       {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "spikerheado1234"
+        },
+        "content": "        if (tagged !\u003d null) {"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "spikerheado1234"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "spikerheado1234"
+        },
+        "content": "            for (XmlAdaptedTag t : tagged) {"
+      },
+      {
         "lineNumber": 154,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "        if (!(other instanceof XmlAdaptedModule)) {"
+        "content": "                tagMap.add(t.toModelType());"
       },
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "            return false;"
+        "content": "            }"
       },
       {
         "lineNumber": 156,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
         "content": "        }"
       },
       {
         "lineNumber": 157,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
         "content": ""
       },
       {
         "lineNumber": 158,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "        XmlAdaptedModule otherModule \u003d (XmlAdaptedModule) other;"
+        "content": ""
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        return Objects.equals(moduleCode, otherModule.moduleCode)"
+        "content": "        return new Module(modelCode, modelTitle, modelAcademicYear, modelSemester,"
       },
       {
         "lineNumber": 160,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "                \u0026\u0026 Objects.equals(moduleTitle, otherModule.moduleTitle)"
+        "content": "                loadedStudentsList, tagMap);"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "                \u0026\u0026 Objects.equals(academicYear, otherModule.academicYear)"
+        "content": "    }"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "                \u0026\u0026 Objects.equals(semester, otherModule.semester)"
+        "content": ""
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "                \u0026\u0026 Objects.equals(students, otherModule.students)"
+        "content": "    @Override"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "                \u0026\u0026 tagged.equals(otherModule.tagged);"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "    }"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 166,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        if (!(other instanceof XmlAdaptedModule)) {"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        XmlAdaptedModule otherModule \u003d (XmlAdaptedModule) other;"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        return Objects.equals(moduleCode, otherModule.moduleCode)"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "                \u0026\u0026 Objects.equals(moduleTitle, otherModule.moduleTitle)"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "                \u0026\u0026 Objects.equals(academicYear, otherModule.academicYear)"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "                \u0026\u0026 Objects.equals(semester, otherModule.semester)"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "                \u0026\u0026 Objects.equals(students, otherModule.students)"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "                \u0026\u0026 tagged.equals(otherModule.tagged);"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 181,
         "author": {
           "gitId": "alistairong"
         },
@@ -57792,8 +57925,9 @@
       }
     ],
     "authorContributionMap": {
+      "xueyantian": 20,
       "spikerheado1234": 31,
-      "alistairong": 135
+      "alistairong": 130
     }
   },
   {
@@ -58418,250 +58552,313 @@
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": "        OccasionDate occasionDate \u003d new OccasionDate(this.occasionDateTime);"
+        "content": "        OccasionDate occasionDate;"
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": "        List\u003cPerson\u003e attendanceList \u003d new ArrayList\u003c\u003e();"
+        "content": "        OccasionLocation location;"
       },
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": "        for (XmlAdaptedPerson person : this.attendanceList) {"
+        "content": "        if (!this.occasionDateTime.equals(\"\")) {"
       },
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": "            attendanceList.add(person.toModelType());"
+        "content": "            occasionDate \u003d new OccasionDate(this.occasionDateTime);"
       },
       {
         "lineNumber": 93,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "        }"
+        "content": "        } else {"
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "            occasionDate \u003d new OccasionDate();"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": "        Set\u003cTag\u003e tags \u003d new HashSet\u003c\u003e();"
+        "content": "        }"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "spikerheado1234"
         },
-        "content": "        OccasionLocation location \u003d new OccasionLocation(this.location);"
+        "content": "        List\u003cPerson\u003e attendanceList \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "spikerheado1234"
         },
-        "content": ""
+        "content": "        for (XmlAdaptedPerson person : this.attendanceList) {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "spikerheado1234"
         },
-        "content": "        if (tagMap !\u003d null \u0026\u0026 tagMap.size() \u003e 0) {"
+        "content": "            attendanceList.add(person.toModelType());"
       },
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "alistairong"
         },
-        "content": "            for (XmlAdaptedTag t : tagMap) {"
+        "content": "        }"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "spikerheado1234"
         },
-        "content": "                tags.add(t.toModelType());"
+        "content": ""
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "spikerheado1234"
         },
-        "content": "            }"
+        "content": "        Set\u003cTag\u003e tags \u003d new HashSet\u003c\u003e();"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": "        }"
+        "content": "        if (!this.location.equals(\"\")) {"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "            location \u003d new OccasionLocation(this.location);"
       },
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": ""
+        "content": "        } else {"
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "xueyantian"
         },
-        "content": "        return new Occasion(occasionName, occasionDate, location, tags, TypeUtil.OCCASION);"
+        "content": "            location \u003d new OccasionLocation();"
       },
       {
         "lineNumber": 106,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "xueyantian"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 107,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
         "content": ""
       },
       {
         "lineNumber": 108,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "    @Override"
+        "content": "        if (tagMap !\u003d null \u0026\u0026 tagMap.size() \u003e 0) {"
       },
       {
         "lineNumber": 109,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "            for (XmlAdaptedTag t : tagMap) {"
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": "                tags.add(t.toModelType());"
       },
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "            return true;"
+        "content": "            }"
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
         "content": "        }"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
         "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "alistairong"
+          "gitId": "spikerheado1234"
         },
-        "content": "        if (!(other instanceof XmlAdaptedOccasion)) {"
+        "content": "        return new Occasion(occasionName, occasionDate, location, tags, TypeUtil.OCCASION);"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "            return false;"
+        "content": "    }"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "alistairong"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        XmlAdaptedOccasion otherOccasion \u003d (XmlAdaptedOccasion) other;"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "        return Objects.equals(occasionName, otherOccasion.occasionName)"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "                \u0026\u0026 Objects.equals(occasionDateTime, otherOccasion.occasionDateTime)"
+        "content": "            return true;"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "                \u0026\u0026 Objects.equals(location, otherOccasion.location)"
+        "content": "        }"
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "spikerheado1234"
+          "gitId": "alistairong"
         },
-        "content": "                \u0026\u0026 tagMap.equals(otherOccasion.tagMap);"
+        "content": ""
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "alistairong"
         },
-        "content": "    }"
+        "content": "        if (!(other instanceof XmlAdaptedOccasion)) {"
       },
       {
         "lineNumber": 124,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        XmlAdaptedOccasion otherOccasion \u003d (XmlAdaptedOccasion) other;"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "        return Objects.equals(occasionName, otherOccasion.occasionName)"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "                \u0026\u0026 Objects.equals(occasionDateTime, otherOccasion.occasionDateTime)"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "                \u0026\u0026 Objects.equals(location, otherOccasion.location)"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "spikerheado1234"
+        },
+        "content": "                \u0026\u0026 tagMap.equals(otherOccasion.tagMap);"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "alistairong"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 133,
         "author": {
           "gitId": "alistairong"
         },
@@ -58670,8 +58867,1110 @@
     ],
     "authorContributionMap": {
       "KongZijin": 1,
-      "spikerheado1234": 47,
-      "alistairong": 76
+      "xueyantian": 12,
+      "spikerheado1234": 45,
+      "alistairong": 75
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/storage/XmlAdaptedPerson.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.storage;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.HashSet;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Objects;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Set;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.stream.Collectors;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javax.xml.bind.annotation.XmlElement;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.exceptions.IllegalValueException;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Address;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Email;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Name;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Phone;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.tag.Tag;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * JAXB-friendly version of the Person."
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class XmlAdaptedPerson {"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String MISSING_FIELD_MESSAGE_FORMAT \u003d \"Person\u0027s %s field is missing!\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @XmlElement(required \u003d true)"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String name;"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @XmlElement(required \u003d true)"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String phone;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @XmlElement(required \u003d true)"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String email;"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @XmlElement(required \u003d true)"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private String address;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @XmlElement"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private List\u003cXmlAdaptedTag\u003e tagged \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Constructs an XmlAdaptedPerson."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * This is the no-arg constructor that is required by JAXB."
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public XmlAdaptedPerson() {}"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Constructs an {@code XmlAdaptedPerson} with the given person details."
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public XmlAdaptedPerson(String name, String phone, String email, String address, List\u003cXmlAdaptedTag\u003e tagged) {"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.name \u003d name;"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.phone \u003d phone;"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.email \u003d email;"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        this.address \u003d address;"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (tagged !\u003d null) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            this.tagged \u003d new ArrayList\u003c\u003e(tagged);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Converts a given Person into this class for JAXB use."
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param source future changes to this will not affect the created XmlAdaptedPerson"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public XmlAdaptedPerson(Person source) {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        name \u003d source.getName().fullName;"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        phone \u003d source.getPhone().value;"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        email \u003d source.getEmail().value;"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        address \u003d source.getAddress().value;"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        tagged \u003d source.getTags().stream()"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .map(XmlAdaptedTag::new)"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .collect(Collectors.toList());"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Converts this jaxb-friendly adapted person object into the model\u0027s Person object."
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws IllegalValueException if there were any data constraints violated in the adapted person"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Person toModelType() throws IllegalValueException {"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final List\u003cTag\u003e personTags \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (XmlAdaptedTag tag : tagged) {"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            personTags.add(tag.toModelType());"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (name \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT, Name.class.getSimpleName()));"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!Name.isValidName(name)) {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new IllegalValueException(Name.MESSAGE_NAME_CONSTRAINTS);"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final Name modelName \u003d new Name(name);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        Phone modelPhone;"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (phone \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "                    Phone.class.getSimpleName()));"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        if (phone.equals(\"\")) {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            modelPhone \u003d new Phone();"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (!Phone.isValidPhone(phone)) {"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                throw new IllegalValueException(Phone.MESSAGE_PHONE_CONSTRAINTS);"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            modelPhone \u003d new Phone(phone);"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        Email modelEmail;"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (email \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "                    Email.class.getSimpleName()));"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        if (email.equals(\"\")) {"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            modelEmail \u003d new Email();"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (!Email.isValidEmail(email)) {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                throw new IllegalValueException(Email.MESSAGE_EMAIL_CONSTRAINTS);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            modelEmail \u003d new Email(email);"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        Address modelAddress;"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (address \u003d\u003d null) {"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            throw new IllegalValueException(String.format(MISSING_FIELD_MESSAGE_FORMAT,"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "                    Address.class.getSimpleName()));"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        if (address.equals(\"\")) {"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            modelAddress \u003d new Address();"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "        } else {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            if (!Address.isValidAddress(address)) {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                throw new IllegalValueException(Address.MESSAGE_ADDRESS_CONSTRAINTS);"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": "            modelAddress \u003d new Address(address);"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "xueyantian"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        final Set\u003cTag\u003e modelTags \u003d new HashSet\u003c\u003e(personTags);"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new Person(modelName, modelPhone, modelEmail, modelAddress, modelTags);"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (other \u003d\u003d this) {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return true;"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!(other instanceof XmlAdaptedPerson)) {"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        XmlAdaptedPerson otherPerson \u003d (XmlAdaptedPerson) other;"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Objects.equals(name, otherPerson.name)"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 Objects.equals(phone, otherPerson.phone)"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 Objects.equals(email, otherPerson.email)"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 Objects.equals(address, otherPerson.address)"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 tagged.equals(otherPerson.tagged);"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "xueyantian": 22,
+      "-": 134
     }
   },
   {

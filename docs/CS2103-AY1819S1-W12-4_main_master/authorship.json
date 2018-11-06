@@ -11181,14 +11181,14 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *`add*``John Doe p/999 e/police@hotmail.com t/cops`: Adds a contact named `John Doe` to the student list`"
+        "content": "* *`add`*`n/John Doe p/999 e/police@hotmail.com t/cops`: Adds a contact named `John Doe` to the student list"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* **`view`**`1`: views 1st student shown in the student list"
+        "content": "* **`select`**`1`: views the details of the 1st student shown in the student list"
       },
       {
         "lineNumber": 43,
@@ -11459,9 +11459,9 @@
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Adding a profile photo : `addphoto`"
+        "content": "\u003d\u003d\u003d Listing all students : `list`"
       },
       {
         "lineNumber": 82,
@@ -11473,93 +11473,93 @@
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "spencertan96"
         },
-        "content": "Adds a profile photo to a student +"
+        "content": "Shows the list of all students in the student list."
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Format: `list`"
       },
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "-"
         },
-        "content": "Format: `addphoto INDEX f/FILENAME`"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Locating students by name : `find`"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "spencertan96"
         },
-        "content": "* Adds a photo at location `FILENAME` to person at the specified `INDEX`. The index refers to the index number shown in the last person listing. The index *must be a positive integer* 1, 2, 3, ..."
+        "content": "Finds students whose names contain any of the given keywords."
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "* `FILENAME` must point to a valid image file."
+        "content": "Format: find KEYWORD [MORE KEYWORDS]"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "* The search is case insensitive. e.g. `hans` will match `Hans`"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "* The order of the keywords does not matter. e.g. `Hans Bo` will match `Bo Hans`"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* Only the name is searched."
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "-"
         },
-        "content": "* `addphoto 1 f/C://Users/Zackk95/Pictures/zacharytan.jpg` +"
+        "content": "* Only full words will be matched e.g. `Han` will not match `Hans`"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "spencertan96"
         },
-        "content": "Edits the profile photo of the 1st person to be the picture at C://Users//Zackk95//Pictures//zacharytan.jpg"
+        "content": "* Persons matching at least one keyword will be returned (i.e. `OR` search) e.g. `Hans Bo` will return `Hans Gruber`, `Bo Yang`"
       },
       {
         "lineNumber": 96,
@@ -11573,112 +11573,112 @@
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
+        "content": ""
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "* `find John` +"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Clears all entries from the student list. +"
+        "content": "Returns `john` and `John Doe`"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Format: `clear`"
+        "content": "* `find Betsy Tim John` +"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Returns any person having names `Betsy`, `Tim`, or `John`"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Deleting a student : `delete`"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Clearing all entries : `clear`"
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Deletes a student from the student list. +"
+        "content": ""
       },
       {
         "lineNumber": 106,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "Format: `delete INDEX`"
+        "content": "Clears all entries from the student list. +"
       },
       {
         "lineNumber": 107,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Format: `clear`"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* Deletes the student at the specified `INDEX`."
+        "content": "\u003d\u003d\u003d Deleting a student : `delete`"
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "* The index refers to the index number shown in the displayed student list."
+        "content": ""
       },
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* The index *must be a positive integer* 1, 2, 3, ..."
+        "content": "Deletes a student from the student list. +"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "Format: `delete INDEX`"
       },
       {
         "lineNumber": 113,
@@ -11692,35 +11692,35 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": "****"
       },
       {
         "lineNumber": 115,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "* Deletes the student at the specified `INDEX`."
       },
       {
         "lineNumber": 116,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* `list` +"
+        "content": "* The index refers to the index number shown in the displayed student list."
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "`delete 2` +"
+        "content": "* The index *must be a positive integer* 1, 2, 3, ..."
       },
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Deletes the 2nd person in the student list."
+        "content": "****"
       },
       {
         "lineNumber": 119,
@@ -11732,9 +11732,9 @@
       {
         "lineNumber": 120,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Deleting a student\u0027s photo: `deleteProfilePhoto`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 121,
@@ -11746,16 +11746,16 @@
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "spencertan96"
         },
-        "content": "Delete a student\u0027s photo and sets it to the default photo. +"
+        "content": "* `delete 2` +"
       },
       {
         "lineNumber": 123,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "spencertan96"
         },
-        "content": "Format: `deleteProfilePhoto INDEX`"
+        "content": "Deletes the 2nd person in the student list."
       },
       {
         "lineNumber": 124,
@@ -11767,30 +11767,30 @@
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "****"
+        "content": "\u003d\u003d\u003d Selecting a student : `select`"
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "-"
         },
-        "content": "* Will delete a student\u0027s photo and set it to the default photo."
+        "content": ""
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "* This command is irreversible!"
+        "content": "Selects the student identified by the index number used in the displayed student list."
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "****"
+        "content": "Format: `select INDEX`"
       },
       {
         "lineNumber": 129,
@@ -11802,324 +11802,324 @@
       {
         "lineNumber": 130,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "Examples:"
+        "content": "* Selects the student and loads the Google search page the student at the specified `INDEX`."
       },
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "* The index refers to the index number shown in the displayed student list."
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "spencertan96"
         },
-        "content": "* `deleteProfilePhoto 1` +"
+        "content": "* The index **must be a positive integer** `1, 2, 3, ...`"
       },
       {
         "lineNumber": 133,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "-"
         },
-        "content": "Delete the photo of the person at index 1 and set it to the default photo."
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "// tag::undoredo[]"
+        "content": ""
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
+        "content": "* `list` +"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`select 2` +"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Restores the student list to the state before the previous _undoable_ command was executed. +"
+        "content": "Selects the 2nd student in the student list."
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "Format: `undo`"
+        "content": "* `find Betsy` +"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`select 1` +"
       },
       {
         "lineNumber": 141,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "[NOTE]"
+        "content": "Selects the 1st student in the results of the `find` command."
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Undoable commands: those commands that modify the student list\u0027s content (`add`, `delete`, `edit`, `addAssignment`, `deleteAssignment`, `markAssignment`, `attend`, `note`, `delnote`, `editnote` and `clear`)."
+        "content": "\u003d\u003d\u003d Adding a profile photo : `addphoto`"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Adds a profile photo to a student +"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "Examples:"
+        "content": ""
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Format: `addphoto INDEX f/FILENAME`"
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* `delete 1` +"
+        "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "`list` +"
+        "content": "****"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": "* Adds a photo at location `FILENAME` to person at the specified `INDEX`. The index refers to the index number shown in the last person listing. The index *must be a positive integer* 1, 2, 3, ..."
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "* `FILENAME` must point to a valid image file."
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* `results` +"
+        "content": "****"
       },
       {
         "lineNumber": 153,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "`list` +"
+        "content": ""
       },
       {
         "lineNumber": 154,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "`undo` +"
+        "content": "Examples:"
       },
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "The `undo` command fails as there are no undoable commands executed previously."
+        "content": ""
       },
       {
         "lineNumber": 156,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "* `addphoto 1 f/C://Users/Zackk95/Pictures/zacharytan.jpg` +"
       },
       {
         "lineNumber": 157,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* `delete 1` +"
+        "content": "Edits the profile photo of the 1st person to be the picture at C://Users//Zackk95//Pictures//zacharytan.jpg"
       },
       {
         "lineNumber": 158,
         "author": {
-          "gitId": "-"
-        },
-        "content": "`clear` +"
-      },
-      {
-        "lineNumber": 159,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "`undo` (reverses the `clear` command) +"
-      },
-      {
-        "lineNumber": 160,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "`undo` (reverses the `delete 1` command) +"
-      },
-      {
-        "lineNumber": 161,
-        "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
         "content": ""
       },
       {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "Zackkh95"
+        },
+        "content": "\u003d\u003d\u003d Deleting a student\u0027s photo: `deleteProfilePhoto`"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "HenryJk"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "Zackkh95"
+        },
+        "content": "Delete a student\u0027s photo and sets it to the default photo. +"
+      },
+      {
         "lineNumber": 162,
         "author": {
-          "gitId": "-"
+          "gitId": "Zackkh95"
         },
-        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
+        "content": "Format: `deleteProfilePhoto INDEX`"
       },
       {
         "lineNumber": 163,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
         "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
-        "content": "Reverses the most recent `undo` command. +"
+        "content": "****"
       },
       {
         "lineNumber": 165,
         "author": {
-          "gitId": "-"
+          "gitId": "Zackkh95"
         },
-        "content": "Format: `redo`"
+        "content": "* Will delete a student\u0027s photo and set it to the default photo."
       },
       {
         "lineNumber": 166,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
-        "content": ""
+        "content": "* This command is irreversible!"
       },
       {
         "lineNumber": 167,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
-        "content": "Examples:"
+        "content": "****"
       },
       {
         "lineNumber": 168,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
         "content": ""
       },
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
-        "content": "* `delete 1` +"
+        "content": "Examples:"
       },
       {
         "lineNumber": 170,
         "author": {
-          "gitId": "-"
+          "gitId": "HenryJk"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": ""
       },
       {
         "lineNumber": 171,
         "author": {
-          "gitId": "-"
+          "gitId": "Zackkh95"
         },
-        "content": "`redo` (reapplies the `delete 1` command) +"
+        "content": "* `deleteProfilePhoto 1` +"
       },
       {
         "lineNumber": 172,
         "author": {
-          "gitId": "-"
+          "gitId": "Zackkh95"
         },
-        "content": ""
+        "content": "Delete the photo of the person at index 1 and set it to the default photo."
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "* `delete 1` +"
+        "content": ""
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` +"
+        "content": "// tag::undoredo[]"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "The `redo` command fails as there are no `undo` commands executed previously."
+        "content": "\u003d\u003d\u003d Undoing previous command : `undo`"
       },
       {
         "lineNumber": 176,
@@ -12131,51 +12131,51 @@
       {
         "lineNumber": 177,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* `delete 1` +"
+        "content": "Restores the student list to the state before the previous _undoable_ command was executed. +"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "`clear` +"
+        "content": "Format: `undo`"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `clear` command) +"
+        "content": ""
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "`undo` (reverses the `delete 1` command) +"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "`redo` (reapplies the `delete 1` command) +"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 182,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "`redo` (reapplies the `clear` command) +"
+        "content": "Undoable commands: those commands that modify the student list\u0027s content (`add`, `delete`, `edit`, `addAssignment`, `deleteAssignment`, `markAssignment`, `attend`, `note`, `delnote`, `editnote` and `clear`)."
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "// end::undoredo[]"
+        "content": "\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 184,
@@ -12189,7 +12189,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 186,
@@ -12203,140 +12203,140 @@
         "author": {
           "gitId": "-"
         },
-        "content": "Exits the program. +"
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 188,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "Format: `exit`"
+        "content": "`select 2`"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 190,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "\u003d\u003d\u003d Mark a student\u0027s attendance as present: `attend`"
-      },
-      {
-        "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* `results` +"
+      },
+      {
         "lineNumber": 192,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Records the attendance of a student as present for a specified class. +"
+        "content": "`select 1` +"
       },
       {
         "lineNumber": 193,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Format: `attend INDEX at/CLASSNAME`"
+        "content": "`undo` +"
       },
       {
         "lineNumber": 194,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "The `undo` command fails as there are no undoable commands executed previously."
       },
       {
         "lineNumber": 195,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Mark a student\u0027s attendance as absent: `unattend` {Coming in v1.4}"
+        "content": ""
       },
       {
         "lineNumber": 196,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 197,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Records the attendance of a student as absent for a specified class. +"
+        "content": "`clear` +"
       },
       {
         "lineNumber": 198,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Format: `unattend INDEX at/CLASSNAME`"
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 199,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 200,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Sort the student list: `sort`"
+        "content": ""
       },
       {
         "lineNumber": 201,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Redoing the previously undone command : `redo`"
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "Sort the student list by alphabetical order. +"
-      },
-      {
-        "lineNumber": 203,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "Format: `sort`"
-      },
-      {
-        "lineNumber": 204,
-        "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Reverses the most recent `undo` command. +"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Format: `redo`"
+      },
+      {
         "lineNumber": 205,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "//[TIP]"
+        "content": ""
       },
       {
         "lineNumber": 206,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "//Students are sorted according by alphabetical order by default (with no argument)."
+        "content": "Examples:"
       },
       {
         "lineNumber": 207,
@@ -12348,632 +12348,632 @@
       {
         "lineNumber": 208,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": "// tag::assignment[]"
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 209,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Add an assignment: `addAssignment`"
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "`redo` (reapplies the `delete 1` command) +"
       },
       {
         "lineNumber": 211,
         "author": {
-          "gitId": "HenryJk"
-        },
-        "content": "Adds an assignment with given assignment name, weight, deadline, maximum mark. +"
-      },
-      {
-        "lineNumber": 212,
-        "author": {
-          "gitId": "HenryJk"
-        },
-        "content": "Format: `addAssignment n/NAME w/WEIGHT d/DEADLINE m/MAX_MARK`"
-      },
-      {
-        "lineNumber": 213,
-        "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* `delete 1` +"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "`redo` +"
+      },
+      {
         "lineNumber": 214,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Delete an assignment: `deleteAssignment`"
+        "content": "The `redo` command fails as there are no `undo` commands executed previously."
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": "Delete an assignment with given assignment index. +"
+        "content": "* `delete 1` +"
       },
       {
         "lineNumber": 217,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": "Format: `deleteAssignment INDEX`"
+        "content": "`clear` +"
       },
       {
         "lineNumber": 218,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "`undo` (reverses the `clear` command) +"
       },
       {
         "lineNumber": 219,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Record a mark for a student: `markAssignment`"
+        "content": "`undo` (reverses the `delete 1` command) +"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "`redo` (reapplies the `delete 1` command) +"
       },
       {
         "lineNumber": 221,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "-"
         },
-        "content": "Adds a mark for an assignment associated with a student given the mark obtained. +"
+        "content": "`redo` (reapplies the `clear` command) +"
       },
       {
         "lineNumber": 222,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "-"
         },
-        "content": "Format: `markAssignment INDEX id/ASSIGNMENT_INDEX m/MARK`"
+        "content": "// end::undoredo[]"
       },
       {
         "lineNumber": 223,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "-"
         },
-        "content": "// end::assignment[]"
+        "content": ""
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Exiting the program : `exit`"
       },
       {
         "lineNumber": 225,
         "author": {
-          "gitId": "robertvictoreen"
-        },
-        "content": "\u003d\u003d\u003d Display the statistics for an assignment: `assignmentStats`"
-      },
-      {
-        "lineNumber": 226,
-        "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "Exits the program. +"
+      },
+      {
         "lineNumber": 227,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "-"
         },
-        "content": "Display the statistics for the specified assignment. +"
+        "content": "Format: `exit`"
       },
       {
         "lineNumber": 228,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "-"
         },
-        "content": "Format: `assignmentStats INDEX`"
+        "content": ""
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Mark a student\u0027s attendance as present: `attend`"
       },
       {
         "lineNumber": 230,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "-"
         },
-        "content": "\u003d\u003d\u003d Display the statistics for an assignment: `classStats`"
+        "content": ""
       },
       {
         "lineNumber": 231,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Records the attendance of a student as present for a specified class. +"
       },
       {
         "lineNumber": 232,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "Display the statistics for the overall grades of students. +"
+        "content": "Format: `attend INDEX at/CLASSNAME`"
       },
       {
         "lineNumber": 233,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "Format: `classStats`"
+        "content": ""
       },
       {
         "lineNumber": 234,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Mark a student\u0027s attendance as absent: `unattend` {Coming in v1.4}"
       },
       {
         "lineNumber": 235,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Sort all assignment: `sortAssignment`"
+        "content": ""
       },
       {
         "lineNumber": 236,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Records the attendance of a student as absent for a specified class. +"
       },
       {
         "lineNumber": 237,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "Sort all assignment by deadline. +"
+        "content": "Format: `unattend INDEX at/CLASSNAME`"
       },
       {
         "lineNumber": 238,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "Format: `sortAssignment`"
+        "content": ""
       },
       {
         "lineNumber": 239,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Sort the student list: `sort`"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Editing a student: `edit`"
+        "content": ""
       },
       {
         "lineNumber": 241,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Sort the student list by alphabetical order. +"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Edits an existing student in the student list. +"
+        "content": "Format: `sort`"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Format: `edit INDEX [NAME] [p/PHONE] [e/EMAIL] [t/TAG]...`"
+        "content": ""
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "//[TIP]"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "****"
+        "content": "//Students are sorted according by alphabetical order by default (with no argument)."
       },
       {
         "lineNumber": 246,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "* Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed student list. The index *must be a positive integer* 1, 2, 3, ..."
+        "content": ""
       },
       {
         "lineNumber": 247,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "* At least one of the optional fields must be provided."
+        "content": "// tag::assignment[]"
       },
       {
         "lineNumber": 248,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "* Existing values will be updated to the input values."
+        "content": "\u003d\u003d\u003d Add an assignment: `addAssignment`"
       },
       {
         "lineNumber": 249,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative."
+        "content": ""
       },
       {
         "lineNumber": 250,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "* You can remove all the person\u0027s tags by typing `t/` without specifying any tags after it."
+        "content": "Adds an assignment with given assignment name, weight, deadline, maximum mark. +"
       },
       {
         "lineNumber": 251,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "****"
+        "content": "Format: `addAssignment n/NAME w/WEIGHT d/DEADLINE m/MAX_MARK`"
       },
       {
         "lineNumber": 252,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 253,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "Examples:"
+        "content": "\u003d\u003d\u003d Delete an assignment: `deleteAssignment`"
       },
       {
         "lineNumber": 254,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 255,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "* `edit 1 p/91234567 e/johndoe@example.com` +"
+        "content": "Delete an assignment with given assignment index. +"
       },
       {
         "lineNumber": 256,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively."
+        "content": "Format: `deleteAssignment INDEX`"
       },
       {
         "lineNumber": 257,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "* `edit 2 Betsy Crower t/` +"
+        "content": ""
       },
       {
         "lineNumber": 258,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags."
+        "content": "\u003d\u003d\u003d Record a mark for a student: `markAssignment`"
       },
       {
         "lineNumber": 259,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
         "content": ""
       },
       {
         "lineNumber": 260,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "\u003d\u003d\u003d Viewing command history : `history`"
+        "content": "Adds a mark for an assignment associated with a student given the mark obtained. +"
       },
       {
         "lineNumber": 261,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "Format: `markAssignment INDEX id/ASSIGNMENT_INDEX m/MARK`"
       },
       {
         "lineNumber": 262,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "Lists all the commands that you have entered in reverse chronological order. +"
+        "content": "// end::assignment[]"
       },
       {
         "lineNumber": 263,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "-"
         },
-        "content": "Format: `history`"
+        "content": ""
       },
       {
         "lineNumber": 264,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "\u003d\u003d\u003d Display the statistics for an assignment: `assignmentStats`"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "// tag::note[]"
+        "content": ""
       },
       {
         "lineNumber": 266,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "\u003d\u003d\u003d Add a note about a student : `note`"
+        "content": "Display the statistics for the specified assignment. +"
       },
       {
         "lineNumber": 267,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "Format: `assignmentStats INDEX`"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Attaches a note with `TEXT` to a student in the student list specified by his/her `INDEX`. +"
+        "content": ""
       },
       {
         "lineNumber": 269,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "Format: `note INDEX TEXT`"
+        "content": "\u003d\u003d\u003d Display the statistics for an assignment: `classStats`"
       },
       {
         "lineNumber": 270,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
         "content": ""
       },
       {
         "lineNumber": 271,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "****"
+        "content": "Display the statistics for the overall grades of students. +"
       },
       {
         "lineNumber": 272,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "* Any added note is automatically ended with a full stop even if the input text does not have one."
+        "content": "Format: `classStats`"
       },
       {
         "lineNumber": 273,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "* If a note is added to a student who already has a previous note, the previous note is changed to end with a comma before the new text is appended to the back."
+        "content": ""
       },
       {
         "lineNumber": 274,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "****"
+        "content": "\u003d\u003d\u003d Sort all assignment: `sortAssignment`"
       },
       {
         "lineNumber": 275,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
         "content": ""
       },
       {
         "lineNumber": 276,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "Examples:"
+        "content": "Sort all assignment by deadline. +"
       },
       {
         "lineNumber": 277,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "Format: `sortAssignment`"
       },
       {
         "lineNumber": 278,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "HenryJk"
         },
-        "content": "* `note 1 hardworking student` +"
+        "content": ""
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "(Adds the text `hardworking student.` to the student at index 1) +"
+        "content": "\u003d\u003d\u003d Editing a student: `edit`"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "`note 1 motivated too` +"
+        "content": ""
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "(Note for student at index 1 is now `hardworking student, motivated too.`)"
+        "content": "Edits an existing student in the student list. +"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Format: `edit INDEX [n/NAME] [p/PHONE] [e/EMAIL] [t/TAG]...`"
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Delete a student\u0027s note : `delnote`"
+        "content": ""
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Deletes the corresponding note of the student at the specified `INDEX`. +"
+        "content": "* Edits the person at the specified `INDEX`. The index refers to the index number shown in the displayed student list. The index *must be a positive integer* 1, 2, 3, ..."
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Format: `delnote 1`"
+        "content": "* At least one of the optional fields must be provided."
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "* Existing values will be updated to the input values."
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "[NOTE]"
+        "content": "* When editing tags, the existing tags of the person will be removed i.e adding of tags is not cumulative."
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "An empty note cannot be deleted!"
+        "content": "* You can remove all the person\u0027s tags by typing `t/` without specifying any tags after it."
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d Edits the note of a student : `editnote`"
+        "content": ""
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Examples:"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Edits the corresponding note of the student at the specified `INDEX` to `TEXT`. +"
+        "content": ""
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Format: `editnote 1 update tutorial attendance week 10`"
+        "content": "* `edit 1 p/91234567 e/johndoe@example.com` +"
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "Edits the phone number and email address of the 1st person to be `91234567` and `johndoe@example.com` respectively."
       },
       {
         "lineNumber": 296,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "[NOTE]"
+        "content": "* `edit 2 n/Betsy Crower t/` +"
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "An empty note cannot be edited!"
+        "content": "Edits the name of the 2nd person to be `Betsy Crower` and clears all existing tags."
       },
       {
         "lineNumber": 298,
@@ -12987,7 +12987,7 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Examples:"
+        "content": "\u003d\u003d\u003d Viewing command history : `history`"
       },
       {
         "lineNumber": 300,
@@ -13001,117 +13001,117 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* `note 1 check finals mark addition`"
+        "content": "Lists all the commands that you have entered in reverse chronological order. +"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "(Note is now: `check finals mark addition.` +"
+        "content": "Format: `history`"
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "`note 1 check midterms also`"
+        "content": ""
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "(Note is now: `check finals mark addition, check midterms also.`) +"
+        "content": "// tag::note[]"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "`editnote marks checked` +"
+        "content": "\u003d\u003d\u003d Add a note about a student : `note`"
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "(Note is now: `marks checked.`) +"
+        "content": ""
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "`delnote 1`"
+        "content": "Attaches a note with `TEXT` to a student in the student list specified by his/her `INDEX`. +"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "(Note deleted and reset to default `\u003cNo note added\u003e`)"
+        "content": "Format: `note INDEX TEXT`"
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "// end::note[]"
+        "content": ""
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "****"
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "[NOTE]"
+        "content": "* Any added note is automatically ended with a full stop even if the input text does not have one."
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": "* If a note is added to a student who already has a previous note, the previous note is changed to end with a comma before the new text is appended to the back."
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
+        "content": "****"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 315,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 316,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "\u003d\u003d Command Summary"
+        "content": "`TEXT` should not begin with a whitespace but alphanumeric and special characters are allowed."
       },
       {
         "lineNumber": 317,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
         "content": ""
       },
@@ -13120,227 +13120,591 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Add* : `add n/NAME [s/INDEX p/PHONE_NUMBER e/EMAIL t/TAG]...` +"
+        "content": "Examples:"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "e.g. `add n/James Ho s/1 p/22224444 e/jamesho@example.com t/friend t/colleague`"
+        "content": ""
       },
       {
         "lineNumber": 320,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "* *AddAssignment* : `addAssignment n/NAME w/WEIGHT d/DEADLINE m/MAX_MARK` +"
+        "content": "* `note 1 hardworking student` +"
       },
       {
         "lineNumber": 321,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "e.g. `addAssignment n/Assignment 1 w/15 d/14/10/2019 m/100`"
+        "content": "(Adds the text `hardworking student.` to the student at index 1) +"
       },
       {
         "lineNumber": 322,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "* *AssignmentStats* : `assignmentStats INDEX` +"
+        "content": "`note 1 motivated too` +"
       },
       {
         "lineNumber": 323,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "e.g. `assignmentStats 1`"
+        "content": "(Note for student at index 1 is now `hardworking student, motivated too.`)"
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Attend* : `attend INDEX at/CLASSNAME` +"
+        "content": ""
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "e.g. `attend 1 at/Tutorial 1`"
+        "content": "\u003d\u003d\u003d Delete a student\u0027s note : `delnote`"
       },
       {
         "lineNumber": 326,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "* *ClassStats* : `classStats`"
+        "content": ""
       },
       {
         "lineNumber": 327,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* *Clear* : `clear`"
+        "content": "Deletes the corresponding note of the student at the specified `INDEX`. +"
       },
       {
         "lineNumber": 328,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* *Delete* : `delete INDEX` +"
+        "content": "Format: `delnote INDEX`"
       },
       {
         "lineNumber": 329,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "e.g. `delete 3`"
+        "content": ""
       },
       {
         "lineNumber": 330,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "* *DeleteAssignment* : `deleteAssignment INDEX` +"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 331,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "e.g. `deleteAssignment 3`"
+        "content": "An empty note cannot be deleted!"
       },
       {
         "lineNumber": 332,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Delnote* : `delnote INDEX` +"
+        "content": ""
       },
       {
         "lineNumber": 333,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "e.g. `delnote 2`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Edit* : `edit INDEX [NAME] [p/PHONE_NUMBER] [e/EMAIL] [t/TAG]...` +"
+        "content": ""
       },
       {
         "lineNumber": 335,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "e.g. `edit 2 James Lee e/jameslee@example.com`"
+        "content": "* `delnote 2`"
       },
       {
         "lineNumber": 336,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Editnote* : `editnote INDEX TEXT` +"
+        "content": "(Deletes the note of the 2nd student shown, is invalid if there is less than 2 students in the shown student list.)"
       },
       {
         "lineNumber": 337,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "e.g. `editnote 1 Consult changed to 3pm`"
+        "content": ""
       },
       {
         "lineNumber": 338,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Exit* : `exit`"
+        "content": "\u003d\u003d\u003d Edits the note of a student : `editnote`"
       },
       {
         "lineNumber": 339,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* *Help* : `help`"
+        "content": ""
       },
       {
         "lineNumber": 340,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* *History* : `history`"
+        "content": "Edits the corresponding note of the student at the specified `INDEX` to `TEXT`. Refer to \u003c\u003cAdd a note about a student : `note`\u003e\u003e for details on `TEXT`. +"
       },
       {
         "lineNumber": 341,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *MarkAssignment* : `markAssignment INDEX id/ASSIGNMENT_INDEX m/MARK` +"
+        "content": "Format: `editnote INDEX TEXT`"
       },
       {
         "lineNumber": 342,
         "author": {
-          "gitId": "robertvictoreen"
+          "gitId": "spencertan96"
         },
-        "content": "e.g. `markAssignment 1 id/1 m/53`"
+        "content": ""
       },
       {
         "lineNumber": 343,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Note* : `note INDEX TEXT` +"
+        "content": "[NOTE]"
       },
       {
         "lineNumber": 344,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "e.g. `note 4 Good student`"
+        "content": "An empty note cannot be edited!"
       },
       {
         "lineNumber": 345,
         "author": {
-          "gitId": "-"
+          "gitId": "spencertan96"
         },
-        "content": "* *Redo* : `redo`"
+        "content": ""
       },
       {
         "lineNumber": 346,
         "author": {
-          "gitId": "Zackkh95"
+          "gitId": "spencertan96"
         },
-        "content": "* *Sort* : `sort`"
+        "content": "Examples:"
       },
       {
         "lineNumber": 347,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "spencertan96"
         },
-        "content": "* *SortAssignment* : `sortAssignment`"
+        "content": ""
       },
       {
         "lineNumber": 348,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Unattend* : `unattend INDEX at/CLASSNAME` {Coming in v1.4}"
+        "content": "* `note 1 check finals mark addition`"
       },
       {
         "lineNumber": 349,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "* *Undo* : `undo`"
+        "content": "(Note is now: `check finals mark addition.` +"
       },
       {
         "lineNumber": 350,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "`note 1 check midterms also`"
+      },
+      {
+        "lineNumber": 351,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "(Note is now: `check finals mark addition, check midterms also.`) +"
+      },
+      {
+        "lineNumber": 352,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "`editnote marks checked` +"
+      },
+      {
+        "lineNumber": 353,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "(Note is now: `marks checked.`) +"
+      },
+      {
+        "lineNumber": 354,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "`delnote 1`"
+      },
+      {
+        "lineNumber": 355,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "(Note deleted and reset to default `\u003cNo note added\u003e`)"
+      },
+      {
+        "lineNumber": 356,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "// end::note[]"
+      },
+      {
+        "lineNumber": 357,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 358,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "[NOTE]"
+      },
+      {
+        "lineNumber": 359,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 360,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "Pressing the kbd:[\u0026uarr;] and kbd:[\u0026darr;] arrows will display the previous and next input respectively in the command box."
+      },
+      {
+        "lineNumber": 361,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 362,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 363,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003d\u003d Command Summary"
+      },
+      {
+        "lineNumber": 364,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 365,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Add* : `add n/NAME [s/INDEX p/PHONE_NUMBER e/EMAIL t/TAG]...` +"
+      },
+      {
+        "lineNumber": 366,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "e.g. `add n/James Ho s/1 p/22224444 e/jamesho@example.com t/friend t/colleague`"
+      },
+      {
+        "lineNumber": 367,
+        "author": {
+          "gitId": "HenryJk"
+        },
+        "content": "* *AddAssignment* : `addAssignment n/NAME w/WEIGHT d/DEADLINE m/MAX_MARK` +"
+      },
+      {
+        "lineNumber": 368,
+        "author": {
+          "gitId": "HenryJk"
+        },
+        "content": "e.g. `addAssignment n/Assignment 1 w/15 d/14/10/2019 m/100`"
+      },
+      {
+        "lineNumber": 369,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "* *AssignmentStats* : `assignmentStats INDEX` +"
+      },
+      {
+        "lineNumber": 370,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "e.g. `assignmentStats 1`"
+      },
+      {
+        "lineNumber": 371,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Attend* : `attend INDEX at/CLASSNAME` +"
+      },
+      {
+        "lineNumber": 372,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "e.g. `attend 1 at/Tutorial 1`"
+      },
+      {
+        "lineNumber": 373,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "* *ClassStats* : `classStats`"
+      },
+      {
+        "lineNumber": 374,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Clear* : `clear`"
+      },
+      {
+        "lineNumber": 375,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Delete* : `delete INDEX` +"
+      },
+      {
+        "lineNumber": 376,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `delete 3`"
+      },
+      {
+        "lineNumber": 377,
+        "author": {
+          "gitId": "HenryJk"
+        },
+        "content": "* *DeleteAssignment* : `deleteAssignment INDEX` +"
+      },
+      {
+        "lineNumber": 378,
+        "author": {
+          "gitId": "HenryJk"
+        },
+        "content": "e.g. `deleteAssignment 3`"
+      },
+      {
+        "lineNumber": 379,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Delnote* : `delnote INDEX` +"
+      },
+      {
+        "lineNumber": 380,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "e.g. `delnote 2`"
+      },
+      {
+        "lineNumber": 381,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Edit* : `edit INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [t/TAG]...` +"
+      },
+      {
+        "lineNumber": 382,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `edit 2 n/James Lee e/jameslee@example.com`"
+      },
+      {
+        "lineNumber": 383,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Editnote* : `editnote INDEX TEXT` +"
+      },
+      {
+        "lineNumber": 384,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "e.g. `editnote 1 Consult changed to 3pm`"
+      },
+      {
+        "lineNumber": 385,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Exit* : `exit`"
+      },
+      {
+        "lineNumber": 386,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Find* : `find KEYWORD [MORE_KEYWORDS]"
+      },
+      {
+        "lineNumber": 387,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "e.g. `find James Jake`"
+      },
+      {
+        "lineNumber": 388,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Help* : `help`"
+      },
+      {
+        "lineNumber": 389,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *History* : `history`"
+      },
+      {
+        "lineNumber": 390,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *List* : `list`"
+      },
+      {
+        "lineNumber": 391,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *MarkAssignment* : `markAssignment INDEX id/ASSIGNMENT_INDEX m/MARK` +"
+      },
+      {
+        "lineNumber": 392,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "e.g. `markAssignment 1 id/1 m/53`"
+      },
+      {
+        "lineNumber": 393,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Note* : `note INDEX TEXT` +"
+      },
+      {
+        "lineNumber": 394,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "e.g. `note 4 Good student`"
+      },
+      {
+        "lineNumber": 395,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "* *Redo* : `redo`"
+      },
+      {
+        "lineNumber": 396,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Select* : `select INDEX`"
+      },
+      {
+        "lineNumber": 397,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "e.g. `select 2`"
+      },
+      {
+        "lineNumber": 398,
+        "author": {
+          "gitId": "Zackkh95"
+        },
+        "content": "* *Sort* : `sort`"
+      },
+      {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "HenryJk"
+        },
+        "content": "* *SortAssignment* : `sortAssignment`"
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Unattend* : `unattend INDEX at/CLASSNAME` {Coming in v1.4}"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "* *Undo* : `undo`"
+      },
+      {
+        "lineNumber": 402,
         "author": {
           "gitId": "spencertan96"
         },
@@ -13348,11 +13712,11 @@
       }
     ],
     "authorContributionMap": {
-      "robertvictoreen": 16,
-      "Zackkh95": 13,
-      "spencertan96": 146,
-      "HenryJk": 19,
-      "-": 156
+      "robertvictoreen": 18,
+      "Zackkh95": 7,
+      "spencertan96": 189,
+      "HenryJk": 24,
+      "-": 164
     }
   },
   {
@@ -28905,7 +29269,7 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "import static seedu.address.model.person.Note.NOTE_VALIDATION_REGEX;"
+        "content": "import static seedu.address.model.person.Note.NOTE_INVALIDATION_REGEX;"
       },
       {
         "lineNumber": 7,
@@ -29290,7 +29654,7 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        if (!textToAdd.matches(NOTE_VALIDATION_REGEX)) {"
+        "content": "        if (textToAdd.matches(NOTE_INVALIDATION_REGEX)) {"
       },
       {
         "lineNumber": 62,
@@ -51149,7 +51513,7 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    /*"
+        "content": "    /**"
       },
       {
         "lineNumber": 13,
@@ -51177,7 +51541,7 @@
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    public static final String NOTE_VALIDATION_REGEX \u003d \"[\\\\p{Alnum}](.*)\";"
+        "content": "    public static final String NOTE_INVALIDATION_REGEX \u003d \"[\\\\p{Space}](.*)\";"
       },
       {
         "lineNumber": 17,

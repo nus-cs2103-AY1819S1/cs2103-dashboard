@@ -14216,7 +14216,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "Filters attractions with waiting time less than 500 minutes. If no changes were made to your application"
+        "content": "Filters attractions with waiting time less than 10 minutes. If no changes were made to your application"
       },
       {
         "lineNumber": 418,
@@ -14426,14 +14426,14 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "* `find a/ street` +"
+        "content": "* `find z/ sci-fi` +"
       },
       {
         "lineNumber": 448,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "Finds and displays the list of attractions with addresses that contain the word \"street\"."
+        "content": "Finds and displays the list of attractions with zones that contain the word \"sci-fi\"."
       },
       {
         "lineNumber": 449,
@@ -14461,21 +14461,21 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "* `find zone street t/friends tag family` +"
+        "content": "* `find zone sci-fi t/popular tag rollerCoaster` +"
       },
       {
         "lineNumber": 453,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "Finds and displays the list of attractions with addresses that contain the word \"street\" and the tags \"friends\""
+        "content": "Finds and displays the list of attractions with addresses that contain the word \"sci-fi\" and the tags \"rollerCoaster\""
       },
       {
         "lineNumber": 454,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "and \"family\""
+        "content": "and \"popular\""
       },
       {
         "lineNumber": 455,
@@ -22551,9 +22551,9 @@
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "    private static final String LOG_FILE \u003d \"addressbook.log\";"
+        "content": "    private static final String LOG_FILE \u003d \"thanepark.log\";"
       },
       {
         "lineNumber": 24,
@@ -23292,8 +23292,8 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 2,
-      "-": 126
+      "keenlok": 3,
+      "-": 125
     }
   },
   {
@@ -32317,7 +32317,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                        if (word.equalsIgnoreCase(keyWord)) {"
+        "content": "                        if (keyWord.toLowerCase().contains(word.toLowerCase())) {"
       },
       {
         "lineNumber": 90,
@@ -35614,9 +35614,9 @@
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "leongengsea"
+          "gitId": "keenlok"
         },
-        "content": "        ViewCommand.COMMAND_WORD, UndoCommand.COMMAND_WORD};"
+        "content": "        ViewCommand.COMMAND_WORD, UndoCommand.COMMAND_WORD, FilterCommand.COMMAND_WORD};"
       },
       {
         "lineNumber": 12,
@@ -35704,9 +35704,9 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 1,
+      "keenlok": 2,
       "YuPeiHenry": 18,
-      "leongengsea": 4
+      "leongengsea": 3
     }
   },
   {
@@ -35815,7 +35815,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Zone book has been cleared!\";"
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Data in Thane Park has been cleared!\";"
       },
       {
         "lineNumber": 16,
@@ -43447,7 +43447,7 @@
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "-"
         },
         "content": "        return new Ride(updatedName, updatedMaintenance, updatedWaitTime, updatedZone, updatedTags);"
       },
@@ -44321,10 +44321,10 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 43,
+      "keenlok": 42,
       "leongengsea": 32,
       "YuPeiHenry": 15,
-      "-": 139
+      "-": 140
     }
   },
   {
@@ -47654,126 +47654,126 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_WAITING_TIME;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_NAME;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_TAG;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.ArrayList;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_TAG_FULL;"
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.List;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_WAITING_TIME;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.Optional;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_ZONE;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_ZONE_FULL;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import javafx.util.Pair;"
+        "content": ""
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.logic.commands.FilterCommand;"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.logic.parser.exceptions.ParseException;"
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.ride.AttributePredicate;"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.ride.Maintenance;"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.ride.RideContainsConditionPredicate;"
+        "content": "import javafx.util.Pair;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.ride.WaitTime;"
+        "content": "import seedu.thanepark.logic.commands.FilterCommand;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "import seedu.thanepark.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "/**"
+        "content": "import seedu.thanepark.model.ride.AttributePredicate;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "keenlok"
         },
-        "content": " * Parses input arguments and creates a new FilterCommand Object"
+        "content": "import seedu.thanepark.model.ride.Maintenance;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "keenlok"
         },
-        "content": " */"
+        "content": "import seedu.thanepark.model.ride.RideContainsConditionPredicate;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "public class FilterCommandParser implements Parser\u003cFilterCommand\u003e {"
+        "content": "import seedu.thanepark.model.ride.WaitTime;"
       },
       {
         "lineNumber": 23,
@@ -47787,182 +47787,182 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    /**"
+        "content": "/**"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the FilterCommand"
+        "content": " * Parses input arguments and creates a new FilterCommand Object"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * and returns an FilterCommand object for execution."
+        "content": " */"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * @throws ParseException if user input does not conform the expected format"
+        "content": "public class FilterCommandParser implements Parser\u003cFilterCommand\u003e {"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "YuPeiHenry"
+          "gitId": "keenlok"
         },
-        "content": "    @Override"
+        "content": "    public static final String MESSAGE_INVALID_PREFIXES_USED \u003d \"Invalid prefixes found! \u0027%1$s\u0027\\nPlease use use \""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    public FilterCommand parse(String args) throws ParseException {"
+        "content": "            + \"prefixes with numeric attributes instead e.g. Maintenance: m/ or WaitTime: w/ \\n\";"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        String trimmedArgs \u003d args.trim();"
+        "content": "    public static final String MESSAGE_INVALID_ARGS \u003d \"Invalid arguments found! \u0027%1$s\u0027\\nPlease use \u003e, \u003c, \u003d and \""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        if (trimmedArgs.isEmpty()) {"
+        "content": "            + \"numbers only!\\n\";"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            throw new ParseException("
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterCommand.MESSAGE_USAGE));"
+        "content": "    /**"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        }"
+        "content": "     * Parses the given {@code String} of arguments in the context of the FilterCommand"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        ArgumentMultimap argMultimap \u003d ArgumentTokenizer.tokenize(args, PREFIX_MAINTENANCE, PREFIX_WAITING_TIME);"
+        "content": "     * and returns an FilterCommand object for execution."
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        Optional\u003cList\u003cString\u003e\u003e maintenanceStrings \u003d !argMultimap.getValue(PREFIX_MAINTENANCE).isPresent()"
+        "content": "     * @throws ParseException if user input does not conform the expected format"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                ? Optional.empty()"
+        "content": "     */"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "YuPeiHenry"
         },
-        "content": "                : Optional.of(argMultimap.getAllValues(PREFIX_MAINTENANCE));"
+        "content": "    @Override"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        Optional\u003cList\u003cString\u003e\u003e waitingTimeStrings \u003d !argMultimap.getValue(PREFIX_WAITING_TIME).isPresent()"
+        "content": "    public FilterCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                ? Optional.empty()"
+        "content": "        String trimmedArgs \u003d args.trim();"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                : Optional.of(argMultimap.getAllValues(PREFIX_WAITING_TIME));"
+        "content": "        if (trimmedArgs.isEmpty()) {"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "            throw new ParseException("
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        List\u003cAttributePredicate\u003e predicates \u003d new ArrayList\u003c\u003e();"
+        "content": "                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        predicates \u003d getMaintenancePredicates(maintenanceStrings, predicates);"
+        "content": "        }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        predicates \u003d getWaitTimePredicate(waitingTimeStrings, predicates);"
+        "content": "        ArgumentMultimap argMultimap \u003d ArgumentTokenizer.tokenize(args, PREFIX_MAINTENANCE, PREFIX_WAITING_TIME,"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "                PREFIX_NAME, PREFIX_ZONE, PREFIX_ZONE_FULL, PREFIX_TAG, PREFIX_TAG_FULL);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        return new FilterCommand(new RideContainsConditionPredicate(predicates));"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "        checkForInvalidPrefixes(argMultimap);"
       },
       {
         "lineNumber": 50,
@@ -47976,378 +47976,378 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    /**"
+        "content": "        Optional\u003cList\u003cString\u003e\u003e maintenanceStrings \u003d !argMultimap.getValue(PREFIX_MAINTENANCE).isPresent()"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * Gets a list of predicates from the list of maintenance input if any is present"
+        "content": "                ? Optional.empty()"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     */"
+        "content": "                : Optional.of(argMultimap.getAllValues(PREFIX_MAINTENANCE));"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    private List\u003cAttributePredicate\u003e getWaitTimePredicate(Optional\u003cList\u003cString\u003e\u003e waitingTimeStrings,"
+        "content": "        Optional\u003cList\u003cString\u003e\u003e waitingTimeStrings \u003d !argMultimap.getValue(PREFIX_WAITING_TIME).isPresent()"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                                                          List\u003cAttributePredicate\u003e predicates) {"
+        "content": "                ? Optional.empty()"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        List\u003cAttributePredicate\u003e newPredicates \u003d new ArrayList\u003c\u003e();"
+        "content": "                : Optional.of(argMultimap.getAllValues(PREFIX_WAITING_TIME));"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        if (waitingTimeStrings.isPresent()) {"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            for (String s : waitingTimeStrings.get()) {"
+        "content": "        List\u003cAttributePredicate\u003e predicates \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                Pair\u003cString, String\u003e waitingTimeConditions \u003d getOperatorAndValues(s);"
+        "content": "        predicates \u003d getMaintenancePredicates(maintenanceStrings, predicates);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                newPredicates.add(new AttributePredicate(waitingTimeConditions.getKey(),"
+        "content": "        predicates \u003d getWaitTimePredicate(waitingTimeStrings, predicates);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                        new WaitTime(waitingTimeConditions.getValue())));"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            }"
+        "content": "        return new FilterCommand(new RideContainsConditionPredicate(predicates));"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        newPredicates.addAll(predicates);"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        return newPredicates;"
+        "content": "    /**"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "     * Check user input for invalid prefixes."
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    /**"
+        "content": "    private void checkForInvalidPrefixes(ArgumentMultimap argMultimap) throws ParseException {"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * Gets a list of predicates from the list of wait time input if any is present"
+        "content": "        String invalidTagsInInput \u003d \"\";"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     */"
+        "content": "        if (argMultimap.getValue(PREFIX_NAME).isPresent()) {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    private List\u003cAttributePredicate\u003e getMaintenancePredicates(Optional\u003cList\u003cString\u003e\u003e maintenanceStrings,"
+        "content": "            invalidTagsInInput \u003d invalidTagsInInput.concat(PREFIX_NAME.getPrefix() + \" \");"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                                                              List\u003cAttributePredicate\u003e predicates) {"
+        "content": "        }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        List\u003cAttributePredicate\u003e newPredicates \u003d new ArrayList\u003c\u003e();"
+        "content": "        if (argMultimap.getValue(PREFIX_TAG).isPresent()) {"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        if (maintenanceStrings.isPresent()) {"
+        "content": "            invalidTagsInInput \u003d invalidTagsInInput.concat(PREFIX_TAG.getPrefix() + \" \");"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            for (String s : maintenanceStrings.get()) {"
+        "content": "        }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                Pair\u003cString, String\u003e maintenanceCondition \u003d getOperatorAndValues(s);"
+        "content": "        if (argMultimap.getValue(PREFIX_TAG_FULL).isPresent()) {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                predicates.add(new AttributePredicate(maintenanceCondition.getKey(),"
+        "content": "            invalidTagsInInput \u003d invalidTagsInInput.concat(PREFIX_TAG_FULL.getPrefix() + \" \");"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                        new Maintenance(maintenanceCondition.getValue())));"
+        "content": "        }"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            }"
+        "content": "        if (argMultimap.getValue(PREFIX_ZONE).isPresent()) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        }"
+        "content": "            invalidTagsInInput \u003d invalidTagsInInput.concat(PREFIX_ZONE.getPrefix() + \" \");"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        newPredicates.addAll(predicates);"
+        "content": "        }"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        return newPredicates;"
+        "content": "        if (argMultimap.getValue(PREFIX_ZONE_FULL).isPresent()) {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "            invalidTagsInInput \u003d invalidTagsInInput.concat(PREFIX_ZONE_FULL.getPrefix());"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    /**"
+        "content": "        if (invalidTagsInInput.length() \u003e 0) {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * Returns a Pair object with the operator and input value from the user input string."
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_PREFIXES_USED, invalidTagsInInput));"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     */"
+        "content": "        }"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    private Pair\u003cString, String\u003e getOperatorAndValues(String string) {"
+        "content": "    }"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        String predicateString \u003d string.trim();"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        char[] array \u003d predicateString.toCharArray();"
+        "content": "    /**"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        String operator \u003d \"\";"
+        "content": "     * Gets a list of predicates from the list of maintenance input if any is present"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        String value \u003d \"\";"
+        "content": "     */"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        for (char c : array) {"
+        "content": "    private List\u003cAttributePredicate\u003e getWaitTimePredicate("
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            if (c \u003d\u003d \u0027 \u0027) {"
+        "content": "            Optional\u003cList\u003cString\u003e\u003e waitingTimeStrings, List\u003cAttributePredicate\u003e predicates) throws ParseException {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                continue;"
+        "content": "        List\u003cAttributePredicate\u003e newPredicates \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            }"
+        "content": "        if (waitingTimeStrings.isPresent()) {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            if (isOperator(c)) {"
+        "content": "            for (String s : waitingTimeStrings.get()) {"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                operator \u003d operator.concat(Character.toString(c));"
+        "content": "                Pair\u003cString, String\u003e waitingTimeConditions \u003d getOperatorAndValues(s);"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            }"
+        "content": "                newPredicates.add(new AttributePredicate(waitingTimeConditions.getKey(),"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            if (Character.isDigit(c)) {"
+        "content": "                        new WaitTime(waitingTimeConditions.getValue())));"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                value \u003d value.concat(Character.toString(c));"
+        "content": "            }"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            }"
+        "content": "        }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        }"
+        "content": "        newPredicates.addAll(predicates);"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        return new Pair\u003c\u003e(operator, value);"
+        "content": "        return newPredicates;"
       },
       {
         "lineNumber": 105,
@@ -48375,7 +48375,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * Checks if a character is an operator, i.e. \u003e, \u003c or \u003d"
+        "content": "     * Gets a list of predicates from the list of wait time input if any is present"
       },
       {
         "lineNumber": 109,
@@ -48389,24 +48389,367 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    private boolean isOperator(char c) {"
+        "content": "    private List\u003cAttributePredicate\u003e getMaintenancePredicates("
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        return c \u003d\u003d \u0027\u003c\u0027 || c \u003d\u003d \u0027\u003e\u0027 || c \u003d\u003d \u0027\u003d\u0027;"
+        "content": "            Optional\u003cList\u003cString\u003e\u003e maintenanceStrings, List\u003cAttributePredicate\u003e predicates) throws ParseException {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "        List\u003cAttributePredicate\u003e newPredicates \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 113,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        if (maintenanceStrings.isPresent()) {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            for (String s : maintenanceStrings.get()) {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                Pair\u003cString, String\u003e maintenanceCondition \u003d getOperatorAndValues(s);"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                predicates.add(new AttributePredicate(maintenanceCondition.getKey(),"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                        new Maintenance(maintenanceCondition.getValue())));"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        newPredicates.addAll(predicates);"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        return newPredicates;"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "     * Returns a Pair object with the operator and input value from the user input string."
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    private Pair\u003cString, String\u003e getOperatorAndValues(String string) throws ParseException {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        String predicateString \u003d string.trim();"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        char[] array \u003d predicateString.toCharArray();"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        String operator \u003d \"\";"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        String value \u003d \"\";"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        for (char c : array) {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            if (isInvalidCharacter(c)) {"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                throw new ParseException(String.format(MESSAGE_INVALID_ARGS, c));"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            if (c \u003d\u003d \u0027 \u0027) {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                continue;"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            if (isOperator(c)) {"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                operator \u003d operator.concat(Character.toString(c));"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            if (Character.isDigit(c)) {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                value \u003d value.concat(Character.toString(c));"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        return new Pair\u003c\u003e(operator, value);"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "     * Checks if a character is an operator, i.e. \u003e, \u003c or \u003d"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    private boolean isOperator(char c) {"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        return c \u003d\u003d \u0027\u003c\u0027 || c \u003d\u003d \u0027\u003e\u0027 || c \u003d\u003d \u0027\u003d\u0027;"
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "     * Checks for invalid character in user input string"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    private boolean isInvalidCharacter (char c) {"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        return !isOperator(c) \u0026\u0026 c !\u003d \u0027 \u0027 \u0026\u0026 !Character.isDigit(c);"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 162,
         "author": {
           "gitId": "keenlok"
         },
@@ -48414,7 +48757,7 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 112,
+      "keenlok": 161,
       "YuPeiHenry": 1
     }
   },
@@ -48496,357 +48839,357 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.Optional;"
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.Set;"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": ""
+        "content": "import java.util.Set;"
       },
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "-"
         },
-        "content": "import seedu.thanepark.logic.commands.FindCommand;"
+        "content": ""
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.logic.parser.exceptions.ParseException;"
+        "content": "import seedu.thanepark.logic.commands.FindCommand;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.ride.RideContainsKeywordsPredicate;"
+        "content": "import seedu.thanepark.logic.parser.exceptions.ParseException;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.ride.Zone;"
+        "content": "import seedu.thanepark.model.ride.RideContainsKeywordsPredicate;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.tag.Tag;"
+        "content": "import seedu.thanepark.model.ride.Zone;"
       },
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": ""
+        "content": "import seedu.thanepark.model.tag.Tag;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": " * Parses input arguments and creates a new FindCommand object"
+        "content": "/**"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Parses input arguments and creates a new FindCommand object"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "public class FindCommandParser implements Parser\u003cFindCommand\u003e {"
+        "content": " */"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class FindCommandParser implements Parser\u003cFindCommand\u003e {"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses the given {@code String} of arguments in the context of the FindCommand"
+        "content": "    /**"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "     * and returns an FindCommand object for execution."
+        "content": "     * Parses the given {@code String} of arguments in the context of the FindCommand"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     * and returns an FindCommand object for execution."
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 31,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "    @Override"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": "    public FindCommand parse(String args) throws ParseException {"
       },
       {
-        "lineNumber": 32,
+        "lineNumber": 33,
         "author": {
           "gitId": "keenlok"
         },
         "content": "        String trimmedArgs \u003d args.trim();"
       },
       {
-        "lineNumber": 33,
+        "lineNumber": 34,
         "author": {
           "gitId": "keenlok"
         },
         "content": "        if (trimmedArgs.isEmpty()) {"
       },
       {
-        "lineNumber": 34,
+        "lineNumber": 35,
         "author": {
           "gitId": "keenlok"
         },
         "content": "            throw new ParseException("
       },
       {
-        "lineNumber": 35,
+        "lineNumber": 36,
         "author": {
           "gitId": "keenlok"
         },
         "content": "                    String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
       },
       {
-        "lineNumber": 36,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "        }"
-      },
-      {
         "lineNumber": 37,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        ArgumentMultimap argMultimap \u003d ArgumentTokenizer.tokenize(args, PREFIX_ZONE, PREFIX_ZONE_FULL,"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                PREFIX_TAG, PREFIX_TAG_FULL);"
+        "content": "        ArgumentMultimap argMultimap \u003d ArgumentTokenizer.tokenize(args, PREFIX_ZONE, PREFIX_ZONE_FULL,"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "                PREFIX_TAG, PREFIX_TAG_FULL);"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        Optional\u003cZone\u003e address \u003d parseAndGetAddress(argMultimap);"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "        Optional\u003cZone\u003e address \u003d parseAndGetZone(argMultimap);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        Optional\u003cSet\u003cTag\u003e\u003e tags \u003d parseAndGetTags(argMultimap);"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "        Optional\u003cSet\u003cTag\u003e\u003e tags \u003d parseAndGetTags(argMultimap);"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "        String[] nameKeywords \u003d trimmedArgs.split(\"\\\\s+\");"
+        "content": ""
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        String[] nameKeywords \u003d trimmedArgs.split(\"\\\\s+\");"
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "-"
         },
-        "content": "        return new FindCommand(new RideContainsKeywordsPredicate(Arrays.asList(nameKeywords),"
+        "content": ""
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                address, tags));"
+        "content": "        nameKeywords \u003d removeOtherArguments(nameKeywords);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "        return new FindCommand(new RideContainsKeywordsPredicate(Arrays.asList(nameKeywords),"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    /**"
+        "content": "                address, tags));"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * Checks if the argument multimap contains the \"tag\" or \"t/\" prefix and returns a set of tags"
+        "content": "    }"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * if present."
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    private Optional\u003cSet\u003cTag\u003e\u003e parseAndGetTags(ArgumentMultimap argMultimap) throws ParseException {"
+        "content": "     * Checks if the argument multimap contains the \"tag\" or \"t/\" prefix and returns a set of tags"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        Set\u003cTag\u003e tagSet \u003d new HashSet\u003c\u003e();"
+        "content": "     * if present."
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        if (argMultimap.getValue(PREFIX_TAG).isPresent()) {"
+        "content": "     */"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            tagSet.addAll(ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG)));"
+        "content": "    private Optional\u003cSet\u003cTag\u003e\u003e parseAndGetTags(ArgumentMultimap argMultimap) throws ParseException {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        }"
+        "content": "        Set\u003cTag\u003e tagSet \u003d new HashSet\u003c\u003e();"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        if (argMultimap.getValue(PREFIX_TAG_FULL).isPresent()) {"
+        "content": "        if (argMultimap.getValue(PREFIX_TAG).isPresent()) {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            tagSet.addAll(ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG_FULL)));"
+        "content": "            tagSet.addAll(ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG)));"
       },
       {
         "lineNumber": 62,
@@ -48860,14 +49203,14 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        if (tagSet.isEmpty()) {"
+        "content": "        if (argMultimap.getValue(PREFIX_TAG_FULL).isPresent()) {"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            return Optional.empty();"
+        "content": "            tagSet.addAll(ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG_FULL)));"
       },
       {
         "lineNumber": 65,
@@ -48881,108 +49224,325 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        return Optional.of(tagSet);"
+        "content": "        if (tagSet.isEmpty()) {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "            return Optional.empty();"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    /**"
+        "content": "        return Optional.of(tagSet);"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * Checks if the argument multimap contains the \"thanepark\" or \"a/\" prefix and returns an Zone"
+        "content": "    }"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     * object if either are present."
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    private Optional\u003cZone\u003e parseAndGetAddress(ArgumentMultimap argMultimap) throws ParseException {"
+        "content": "     * Checks if the argument multimap contains the \"thanepark\" or \"a/\" prefix and returns an Zone"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        if (argMultimap.getValue(PREFIX_ZONE).isPresent()) {"
+        "content": "     * object if either are present."
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            return Optional.of(ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ZONE).get()));"
+        "content": "     */"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        } else if (argMultimap.getValue(PREFIX_ZONE_FULL).isPresent()) {"
+        "content": "    private Optional\u003cZone\u003e parseAndGetZone(ArgumentMultimap argMultimap) throws ParseException {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            return Optional.of(ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ZONE_FULL).get()));"
+        "content": "        if (argMultimap.getValue(PREFIX_ZONE).isPresent()) {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        }"
+        "content": "            return Optional.of(ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ZONE).get()));"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        return Optional.empty();"
+        "content": "        } else if (argMultimap.getValue(PREFIX_ZONE_FULL).isPresent()) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "            return Optional.of(ParserUtil.parseAddress(argMultimap.getValue(PREFIX_ZONE_FULL).get()));"
       },
       {
         "lineNumber": 81,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        return Optional.empty();"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "     * Removes other arguments that are not supposed to be in the name string for searching."
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    private String[] removeOtherArguments(String[] keywords) {"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        List\u003cString\u003e trimmedKeyWords \u003d Arrays.asList(keywords);"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        int[] indexes \u003d new int[4];"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        indexes[0] \u003d trimmedKeyWords.indexOf(PREFIX_TAG.getPrefix());"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        indexes[1] \u003d trimmedKeyWords.indexOf(PREFIX_TAG_FULL.getPrefix());"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        indexes[2] \u003d trimmedKeyWords.indexOf(PREFIX_ZONE.getPrefix());"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        indexes[3] \u003d trimmedKeyWords.indexOf(PREFIX_ZONE_FULL.getPrefix());"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        int smallestPositiveIndex \u003d -1;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        for (int i : indexes) {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            if (i \u003e\u003d 0 \u0026\u0026 (smallestPositiveIndex \u003d\u003d -1 || smallestPositiveIndex \u003e i)) {"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                smallestPositiveIndex \u003d i;"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        if (smallestPositiveIndex \u003d\u003d -1) {"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            return keywords;"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        int lastIndexOfNameString \u003d smallestPositiveIndex;"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        String[] trimmedArgs \u003d new String[lastIndexOfNameString];"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        for (int i \u003d 0; i \u003c lastIndexOfNameString; i++) {"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            trimmedArgs[i] \u003d trimmedKeyWords.get(i);"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        return trimmedArgs;"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
@@ -48990,7 +49550,7 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 61,
+      "keenlok": 92,
       "YuPeiHenry": 1,
       "-": 19
     }
@@ -64556,325 +65116,374 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new Zone(\"Sci-Fi City, F3\"),"
+        "content": "                new Zone(\"Sci-Fi City, F3\"), getTagSet(\"HeightLimit\")),"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                getTagSet(\"HeightLimit\")),"
+        "content": "            new Ride(new Name(\"Battlestar Galactica HUMAN\"), new Maintenance(\"58\"), new WaitTime(\"0\"),"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            new Ride(new Name(\"Battlestar Galactica HUMAN\"), new Maintenance(\"58\"), new WaitTime(\"0\"),"
+        "content": "                new Zone(\"Sci-Fi City, F1\"), getTagSet(\"Red\", \"Popular\", \"Dangerous\", \"rollerCoaster\"),"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new Zone(\"Sci-Fi City, F1\"),"
+        "content": "                Status.SHUTDOWN),"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                getTagSet(\"Red\"), Status.SHUTDOWN),"
+        "content": "            new Ride(new Name(\"Battlestar Galactica CYLON\"), new Maintenance(\"58\"), new WaitTime(\"0\"),"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            new Ride(new Name(\"Battlestar Galactica CYLON\"), new Maintenance(\"58\"), new WaitTime(\"0\"),"
+        "content": "                new Zone(\"Sci-Fi City, F2\"), getTagSet(\"GREY\", \"Popular\", \"Dangerous\", \"rollerCoaster\"),"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new Zone(\"Sci-Fi City, F2\"),"
+        "content": "                Status.SHUTDOWN),"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                getTagSet(\"GREY\"), Status.SHUTDOWN),"
+        "content": "            new Ride(new Name(\"TRANSFORMERS The Ride\"), new Maintenance(\"17\"), new WaitTime(\"18\"),"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            new Ride(new Name(\"TRANSFORMERS The Ride\"), new Maintenance(\"17\"), new WaitTime(\"18\"),"
+        "content": "                new Zone(\"Sci-Fi City, F4\"), getTagSet(\"MeetAndGreet\", \"Popular\", \"3D\")),"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new Zone(\"Sci-Fi City, F4\"),"
+        "content": "            new Ride(new Name(\"Canopy Flyer\"), new Maintenance(\"93\"), new WaitTime(\"3\"),"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                getTagSet(\"MeetAndGreet\")),"
+        "content": "                new Zone(\"The Lost World, D2\"), getTagSet(\"neighbours\")),"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            new Ride(new Name(\"Canopy Flyer\"), new Maintenance(\"93\"), new WaitTime(\"3\"),"
+        "content": "            new Ride(new Name(\"Dino Sorarin\"), new Maintenance(\"28\"), new WaitTime(\"12\"),"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new Zone(\"The Lost World, D2\"),"
+        "content": "                new Zone(\"The Lost World, D3\"), getTagSet(\"family\")),"
       },
       {
         "lineNumber": 37,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                getTagSet(\"neighbours\")),"
-      },
-      {
-        "lineNumber": 38,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "            new Ride(new Name(\"Dino Sorarin\"), new Maintenance(\"28\"), new WaitTime(\"12\"),"
-      },
-      {
-        "lineNumber": 39,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "                new Zone(\"The Lost World, D3\"),"
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "                getTagSet(\"family\")),"
-      },
-      {
-        "lineNumber": 41,
         "author": {
           "gitId": "keenlok"
         },
         "content": "            new Ride(new Name(\"WaterWorld\"), new Maintenance(\"28\"), new WaitTime(\"12\"),"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 38,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new Zone(\"The Lost World, D1\"),"
+        "content": "                new Zone(\"The Lost World, D1\"), getTagSet(\"family\")),"
       },
       {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "                getTagSet(\"family\")),"
-      },
-      {
-        "lineNumber": 44,
+        "lineNumber": 39,
         "author": {
           "gitId": "keenlok"
         },
         "content": "            new Ride(new Name(\"Amber Rock Climb\"), new Maintenance(\"28\"), new WaitTime(\"12\"),"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 40,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new Zone(\"The Lost World, D4\"),"
+        "content": "                new Zone(\"The Lost World, D4\"), getTagSet(\"family\")),"
       },
       {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "                getTagSet(\"family\")),"
-      },
-      {
-        "lineNumber": 47,
+        "lineNumber": 41,
         "author": {
           "gitId": "keenlok"
         },
         "content": "            new Ride(new Name(\"Jurassic Park Rapids Adventure\"), new Maintenance(\"21\"), new WaitTime(\"9\"),"
       },
       {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                new Zone(\"The Lost World, D5\"), getTagSet(\"classmates\")),"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            new Ride(new Name(\"Treasure Hunters\"), new Maintenance(\"5\"), new WaitTime(\"10\"),"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                    new Zone(\"Ancient Egypt, E1\"), getTagSet(\"children\")),"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            new Ride(new Name(\"Revenge of the Mummy\"), new Maintenance(\"10\"), new WaitTime(\"100\"),"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                    new Zone(\"Ancient Egypt, E2\"), getTagSet(\"Popular\", \"Dangerous\", \"rollerCoaster\")),"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "            new Ride(new Name(\"Enchanted Airways\"), new Maintenance(\"13\"), new WaitTime(\"30\"),"
+      },
+      {
         "lineNumber": 48,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new Zone(\"The Lost World, D5\"),"
+        "content": "                    new Zone(\"Far Far Away, C1\"), getTagSet(\"children\", \"junior\", \"rollerCoaster\")),"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "                getTagSet(\"classmates\")),"
+        "content": "            new Ride(new Name(\"Shrek 4D Adventure\"), new Maintenance(\"10\"), new WaitTime(\"30\"),"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "        };"
+        "content": "                    new Zone(\"Far Far Away, C2\"), getTagSet(\"4D\")),"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "            new Ride(new Name(\"Magic Potion Spin\"), new Maintenance(\"1\"), new WaitTime(\"15\"),"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": ""
+        "content": "                    new Zone(\"Far Far Away, C3\"), getTagSet(\"spin\")),"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    public static ReadOnlyThanePark getSampleThanePark() {"
+        "content": "            new Ride(new Name(\"Donkey Live\"), new Maintenance(\"51\"), new WaitTime(\"5\"),"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        ThanePark sampleAb \u003d new ThanePark();"
+        "content": "                    new Zone(\"Far Far Away, C4\"), getTagSet(\"singAlong\")),"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        for (Ride sampleRide : getSampleRides()) {"
+        "content": "            new Ride(new Name(\"Puss in Boots Giant Journey\"), new Maintenance(\"2\"), new WaitTime(\"45\"),"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            sampleAb.addRide(sampleRide);"
+        "content": "                    new Zone(\"Far Far Away, C5\"), getTagSet(\"rollerCoaster\")),"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        };"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "        return sampleAb;"
+        "content": "    }"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": ""
+        "content": "    public static ReadOnlyThanePark getSampleThanePark() {"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "    /**"
+        "content": "        ThanePark sampleAb \u003d new ThanePark();"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "     * Returns a tag set containing the list of strings given."
+        "content": "        for (Ride sampleRide : getSampleRides()) {"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "     */"
+        "content": "            sampleAb.addRide(sampleRide);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
+        "content": "        }"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Arrays.stream(strings)"
+        "content": "        return sampleAb;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "                .map(Tag::new)"
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "                .collect(Collectors.toSet());"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    /**"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * Returns a tag set containing the list of strings given."
       },
       {
         "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Arrays.stream(strings)"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .map(Tag::new)"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .collect(Collectors.toSet());"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
@@ -64882,9 +65491,9 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 40,
+      "keenlok": 50,
       "YuPeiHenry": 1,
-      "-": 29
+      "-": 26
     }
   },
   {
@@ -112151,9 +112760,9 @@
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "YuPeiHenry"
+          "gitId": "keenlok"
         },
-        "content": "        assertSuggestCommandSuccessBehavior(\"f\", \"find\");"
+        "content": "        assertSuggestCommandSuccessBehavior(\"f\", \"find\", \"filter\");"
       },
       {
         "lineNumber": 41,
@@ -112493,9 +113102,9 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 9,
+      "keenlok": 10,
       "jiajunteo": 1,
-      "YuPeiHenry": 76,
+      "YuPeiHenry": 75,
       "leongengsea": 2
     }
   },
@@ -119554,58 +120163,58 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "YuPeiHenry"
+          "gitId": "keenlok"
         },
-        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_WAITING_TIME;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_NAME;"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "YuPeiHenry"
+          "gitId": "keenlok"
         },
-        "content": "import static seedu.thanepark.logic.parser.CommandParserTestUtil.assertParseFailure;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_TAG;"
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "YuPeiHenry"
+          "gitId": "keenlok"
         },
-        "content": "import static seedu.thanepark.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_TAG_FULL;"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "YuPeiHenry"
         },
-        "content": ""
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_WAITING_TIME;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.ArrayList;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_ZONE;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.List;"
+        "content": "import static seedu.thanepark.logic.parser.CliSyntax.PREFIX_ZONE_FULL;"
       },
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "YuPeiHenry"
         },
-        "content": ""
+        "content": "import static seedu.thanepark.logic.parser.CommandParserTestUtil.assertParseFailure;"
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "YuPeiHenry"
         },
-        "content": "import org.junit.Test;"
+        "content": "import static seedu.thanepark.logic.parser.CommandParserTestUtil.assertParseSuccess;"
       },
       {
         "lineNumber": 13,
@@ -119617,100 +120226,100 @@
       {
         "lineNumber": 14,
         "author": {
+          "gitId": "keenlok"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "import seedu.thanepark.logic.commands.FilterCommand;"
       },
       {
-        "lineNumber": 15,
+        "lineNumber": 20,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "import seedu.thanepark.model.ride.AttributePredicate;"
       },
       {
-        "lineNumber": 16,
+        "lineNumber": 21,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "import seedu.thanepark.model.ride.Maintenance;"
       },
       {
-        "lineNumber": 17,
+        "lineNumber": 22,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "import seedu.thanepark.model.ride.RideContainsConditionPredicate;"
       },
       {
-        "lineNumber": 18,
+        "lineNumber": 23,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "import seedu.thanepark.model.ride.WaitTime;"
       },
       {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 20,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "public class FilterCommandParserTest {"
-      },
-      {
-        "lineNumber": 21,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 22,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "    private FilterCommandParser parser \u003d new FilterCommandParser();"
-      },
-      {
-        "lineNumber": 23,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 24,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    public void parse_emptyArg_throwsParseException() {"
+        "content": "public class FilterCommandParserTest {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        assertParseFailure(parser, \"     \", String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterCommand.MESSAGE_USAGE));"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "    private FilterCommandParser parser \u003d new FilterCommandParser();"
       },
       {
         "lineNumber": 28,
@@ -119731,199 +120340,325 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    public void parse_validArgs_returnsFilterCommand() {"
+        "content": "    public void parse_emptyArg_throwsParseException() {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        List\u003cAttributePredicate\u003e predicates \u003d new ArrayList\u003c\u003e();"
+        "content": "        assertParseFailure(parser, \"     \", String.format(MESSAGE_INVALID_COMMAND_FORMAT, FilterCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        // Tests with 2 attributes of same type for waiting time"
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "YuPeiHenry"
+          "gitId": "keenlok"
         },
-        "content": "        predicates.add(new AttributePredicate(\"\u003c\", new WaitTime(\"100\")));"
+        "content": "    @Test"
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "YuPeiHenry"
+          "gitId": "keenlok"
         },
-        "content": "        predicates.add(new AttributePredicate(\"\u003e\", new WaitTime(\"5\")));"
+        "content": "    public void parse_validArgs_returnsFilterCommand() {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        FilterCommand expectedFilterCommand \u003d new FilterCommand(new RideContainsConditionPredicate(predicates));"
+        "content": "        List\u003cAttributePredicate\u003e predicates \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        String userInput \u003d \" \" + PREFIX_WAITING_TIME + \" \u003c 100 \" + PREFIX_WAITING_TIME + \" \u003e 5\";"
+        "content": ""
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        assertParseSuccess(parser, userInput, expectedFilterCommand);"
+        "content": "        // Tests with 2 attributes of same type for waiting time"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "YuPeiHenry"
         },
-        "content": ""
+        "content": "        predicates.add(new AttributePredicate(\"\u003c\", new WaitTime(\"100\")));"
       },
       {
         "lineNumber": 40,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "        predicates.clear();"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "        // Tests with Maintenance"
-      },
-      {
-        "lineNumber": 43,
-        "author": {
-          "gitId": "YuPeiHenry"
-        },
-        "content": "        predicates.add(new AttributePredicate(\"\u003c\", new Maintenance(\"100\")));"
-      },
-      {
-        "lineNumber": 44,
-        "author": {
-          "gitId": "YuPeiHenry"
-        },
-        "content": "        predicates.add(new AttributePredicate(\"\u003e\", new Maintenance(\"5\")));"
-      },
-      {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "        expectedFilterCommand \u003d new FilterCommand(new RideContainsConditionPredicate(predicates));"
-      },
-      {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "        userInput \u003d \" \" + PREFIX_MAINTENANCE + \" \u003c 100 \" + PREFIX_MAINTENANCE + \" \u003e 5\";"
-      },
-      {
-        "lineNumber": 47,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "        assertParseSuccess(parser, userInput, expectedFilterCommand);"
-      },
-      {
-        "lineNumber": 48,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 49,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "        predicates.clear();"
-      },
-      {
-        "lineNumber": 50,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 51,
-        "author": {
-          "gitId": "keenlok"
-        },
-        "content": "        // Test with 2 different types"
-      },
-      {
-        "lineNumber": 52,
-        "author": {
-          "gitId": "YuPeiHenry"
-        },
-        "content": "        predicates.add(new AttributePredicate(\"\u003c\", new Maintenance(\"100\")));"
-      },
-      {
-        "lineNumber": 53,
         "author": {
           "gitId": "YuPeiHenry"
         },
         "content": "        predicates.add(new AttributePredicate(\"\u003e\", new WaitTime(\"5\")));"
       },
       {
-        "lineNumber": 54,
+        "lineNumber": 41,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        expectedFilterCommand \u003d new FilterCommand(new RideContainsConditionPredicate(predicates));"
+        "content": "        FilterCommand expectedFilterCommand \u003d new FilterCommand(new RideContainsConditionPredicate(predicates));"
       },
       {
-        "lineNumber": 55,
+        "lineNumber": 42,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        userInput \u003d \" \" + PREFIX_MAINTENANCE + \" \u003c 100 \" + PREFIX_WAITING_TIME + \" \u003e 5\";"
+        "content": "        String userInput \u003d \" \" + PREFIX_WAITING_TIME + \" \u003c 100 \" + PREFIX_WAITING_TIME + \" \u003e 5\";"
       },
       {
-        "lineNumber": 56,
+        "lineNumber": 43,
         "author": {
           "gitId": "keenlok"
         },
         "content": "        assertParseSuccess(parser, userInput, expectedFilterCommand);"
       },
       {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        predicates.clear();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        // Tests with Maintenance"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "YuPeiHenry"
+        },
+        "content": "        predicates.add(new AttributePredicate(\"\u003c\", new Maintenance(\"100\")));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "YuPeiHenry"
+        },
+        "content": "        predicates.add(new AttributePredicate(\"\u003e\", new Maintenance(\"5\")));"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        expectedFilterCommand \u003d new FilterCommand(new RideContainsConditionPredicate(predicates));"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        userInput \u003d \" \" + PREFIX_MAINTENANCE + \" \u003c 100 \" + PREFIX_MAINTENANCE + \" \u003e 5\";"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        assertParseSuccess(parser, userInput, expectedFilterCommand);"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        predicates.clear();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        // Test with 2 different types"
+      },
+      {
         "lineNumber": 57,
+        "author": {
+          "gitId": "YuPeiHenry"
+        },
+        "content": "        predicates.add(new AttributePredicate(\"\u003c\", new Maintenance(\"100\")));"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "YuPeiHenry"
+        },
+        "content": "        predicates.add(new AttributePredicate(\"\u003e\", new WaitTime(\"5\")));"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        expectedFilterCommand \u003d new FilterCommand(new RideContainsConditionPredicate(predicates));"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        userInput \u003d \" \" + PREFIX_MAINTENANCE + \" \u003c 100 \" + PREFIX_WAITING_TIME + \" \u003e 5\";"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        assertParseSuccess(parser, userInput, expectedFilterCommand);"
+      },
+      {
+        "lineNumber": 62,
         "author": {
           "gitId": "keenlok"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 58,
+        "lineNumber": 63,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    public void parse_invalidArgs_throwsParseException() {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        String userInput \u003d \" \" + PREFIX_MAINTENANCE + \"\u003c 1 - 2\";"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        String expectMessage \u003d String.format(FilterCommandParser.MESSAGE_INVALID_ARGS, \"-\");"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        assertParseFailure(parser, userInput, expectMessage);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        userInput \u003d \" \" + PREFIX_NAME + \" \u003c ho \" + PREFIX_ZONE + \" geo \" + PREFIX_ZONE_FULL + \" fff \" + PREFIX_TAG"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                + \" ggg \" + PREFIX_TAG_FULL + \" HHH \";"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        expectMessage \u003d String.format(FilterCommandParser.MESSAGE_INVALID_PREFIXES_USED, PREFIX_NAME"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "                + \" \" + PREFIX_TAG + \" \" + PREFIX_TAG_FULL + \" \" + PREFIX_ZONE + \" \" + PREFIX_ZONE_FULL);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "        assertParseFailure(parser, userInput, expectMessage);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "keenlok"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 76,
         "author": {
           "gitId": "keenlok"
         },
@@ -119931,7 +120666,7 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 41,
+      "keenlok": 59,
       "YuPeiHenry": 17
     }
   },
@@ -120011,289 +120746,289 @@
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "import java.util.Arrays;"
+        "content": "import java.util.ArrayList;"
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "-"
         },
-        "content": "import java.util.HashSet;"
+        "content": "import java.util.Arrays;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.List;"
+        "content": "import java.util.HashSet;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.Optional;"
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import java.util.Set;"
+        "content": "import java.util.Optional;"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": ""
+        "content": "import java.util.Set;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.Test;"
+        "content": ""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import org.junit.Test;"
       },
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "-"
         },
-        "content": "import seedu.thanepark.logic.commands.FindCommand;"
+        "content": ""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.ride.RideContainsKeywordsPredicate;"
+        "content": "import seedu.thanepark.logic.commands.FindCommand;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.ride.Zone;"
+        "content": "import seedu.thanepark.model.ride.RideContainsKeywordsPredicate;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "import seedu.thanepark.model.tag.Tag;"
+        "content": "import seedu.thanepark.model.ride.Zone;"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": ""
+        "content": "import seedu.thanepark.model.tag.Tag;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "public class FindCommandParserTest {"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class FindCommandParserTest {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "    private FindCommandParser parser \u003d new FindCommandParser();"
+        "content": ""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private FindCommandParser parser \u003d new FindCommandParser();"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parse_emptyArg_throwsParseException() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertParseFailure(parser, \"     \", String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
+        "content": "    public void parse_emptyArg_throwsParseException() {"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertParseFailure(parser, \"     \", String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parse_validArgs_returnsFindCommand() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "        // no leading and trailing whitespaces"
+        "content": "    public void parse_validArgs_returnsFindCommand() {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "        FindCommand expectedFindCommand \u003d"
+        "content": "        // no leading and trailing whitespaces"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                new FindCommand(new RideContainsKeywordsPredicate(Arrays.asList(\"Alice\", \"Bob\")));"
+        "content": "        FindCommand expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate("
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "        assertParseSuccess(parser, \"Alice Bob\", expectedFindCommand);"
+        "content": "                Arrays.asList(\"Alice\", \"Bob\")));"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertParseSuccess(parser, \"Alice Bob\", expectedFindCommand);"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "        // multiple whitespaces between keywords"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertParseSuccess(parser, \" \\n Alice \\n \\t Bob  \\t\", expectedFindCommand);"
+        "content": "        // multiple whitespaces between keywords"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "keenlok"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "        assertParseSuccess(parser, \" \\n Alice \\n \\t Bob  \\t\", expectedFindCommand);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        // input looking with thanepark prefix"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate("
+        "content": "        // input looking with thanepark prefix"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                Arrays.asList(PREFIX_ZONE.getPrefix(), \"10th\", \"street\"), Optional.of(new Zone(\"10th street\"))));"
+        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate("
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        assertParseSuccess(parser, PREFIX_ZONE.getPrefix() + \" 10th street\", expectedFindCommand);"
+        "content": "                new ArrayList\u003c\u003e(), Optional.of(new Zone(\"10th street\"))));"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "keenlok"
         },
-        "content": ""
+        "content": "        assertParseSuccess(parser, PREFIX_ZONE.getPrefix() + \" 10th street\", expectedFindCommand);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        // input with thanepark in full"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate("
+        "content": "        // input with thanepark in full"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                Arrays.asList(PREFIX_ZONE_FULL.getPrefix(), \"10th\", \"street\"),"
+        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate("
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                Optional.of(new Zone(\"10th street\"))));"
+        "content": "                new ArrayList\u003c\u003e(), Optional.of(new Zone(\"10th street\"))));"
       },
       {
         "lineNumber": 52,
@@ -120349,7 +121084,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate(list, Optional.of(tags)));"
+        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate(new ArrayList\u003c\u003e(), Optional.of(tags)));"
       },
       {
         "lineNumber": 60,
@@ -120391,7 +121126,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate(list, Optional.of(tags)));"
+        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate(new ArrayList\u003c\u003e(), Optional.of(tags)));"
       },
       {
         "lineNumber": 66,
@@ -120440,7 +121175,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate(list, Optional.of(tags)));"
+        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate(new ArrayList\u003c\u003e(), Optional.of(tags)));"
       },
       {
         "lineNumber": 73,
@@ -120482,7 +121217,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate(list, Optional.of(tags)));"
+        "content": "        expectedFindCommand \u003d new FindCommand(new RideContainsKeywordsPredicate(new ArrayList\u003c\u003e(), Optional.of(tags)));"
       },
       {
         "lineNumber": 79,
@@ -120584,8 +121319,8 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 65,
-      "-": 27
+      "keenlok": 66,
+      "-": 26
     }
   },
   {
@@ -134002,9 +134737,9 @@
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "    public void isValidAddress() {"
+        "content": "    public void isValidZone() {"
       },
       {
         "lineNumber": 25,
@@ -134099,8 +134834,8 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 12,
-      "-": 25
+      "keenlok": 13,
+      "-": 24
     }
   },
   {
@@ -159524,9 +160259,9 @@
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "YuPeiHenry"
+          "gitId": "keenlok"
         },
-        "content": "        assertSuggestCommandSuccessBehavior(\"f\", \"find\");"
+        "content": "        assertSuggestCommandSuccessBehavior(\"f\", \"find\", \"filter\");"
       },
       {
         "lineNumber": 25,
@@ -160167,9 +160902,9 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 7,
+      "keenlok": 8,
       "jiajunteo": 2,
-      "YuPeiHenry": 101,
+      "YuPeiHenry": 100,
       "leongengsea": 4,
       "-": 1
     }
