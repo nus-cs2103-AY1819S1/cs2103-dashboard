@@ -10703,7 +10703,7 @@
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "By: `Team T13-2`      Since: `Oct 2018`      Licence: `MIT`"
+        "content": "By: `Team T13-2`      Since: `Nov 2018`      Licence: `MIT`"
       },
       {
         "lineNumber": 18,
@@ -11109,7 +11109,7 @@
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "* `add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/1234567 d/Marketing m/Edmund Tan t/staff`"
+        "content": "* `add n/Betsy Crowe t/friend e/betsycrowe@example.com a/Newgate Prison p/81729817 d/Marketing m/Edmund Tan t/staff`"
       },
       {
         "lineNumber": 76,
@@ -12374,9 +12374,9 @@
       {
         "lineNumber": 256,
         "author": {
-          "gitId": "valensia0711"
+          "gitId": "IamRENCE"
         },
-        "content": "Undoable commands: those commands that modify SSENISUB\u0027s content (`add`, `delete`, `edit` and `clear`)."
+        "content": "Undoable commands: those commands that modify SSENISUB\u0027s content (`add`, `delete`, `edit`, `rate`, `feedback`, `privacy`, and `clear`)."
       },
       {
         "lineNumber": 257,
@@ -13258,7 +13258,7 @@
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "e.g. `add n/James Ho p/22224444 e/jamesho@example.com a/123, Clementi Rd, 1234665 d/Accounting m/David Choo t/staff`"
+        "content": "e.g. `add n/James Ho p/91829309 e/jamesho@example.com a/123, Clementi Rd, 1234665 d/Accounting m/David Choo t/staff`"
       },
       {
         "lineNumber": 383,
@@ -13389,89 +13389,82 @@
       {
         "lineNumber": 401,
         "author": {
-          "gitId": "DanKhoo"
-        },
-        "content": "* *Delete All* : `deleteall`"
-      },
-      {
-        "lineNumber": 402,
-        "author": {
           "gitId": "-"
         },
         "content": "* *List* : `list`"
       },
       {
-        "lineNumber": 403,
+        "lineNumber": 402,
         "author": {
           "gitId": "valensia0711"
         },
         "content": "* *Lock SSENISUB* [coming in v2.0] : `lock PASSWORD`"
       },
       {
-        "lineNumber": 404,
+        "lineNumber": 403,
         "author": {
           "gitId": "valensia0711"
         },
         "content": "* *Unlock SSENISUB* [coming in v2.0]: `unlock PASSWORD`"
       },
       {
-        "lineNumber": 405,
+        "lineNumber": 404,
         "author": {
           "gitId": "-"
         },
         "content": "* *Help* : `help`"
       },
       {
-        "lineNumber": 406,
+        "lineNumber": 405,
         "author": {
           "gitId": "-"
         },
         "content": "* *Select* : `select INDEX` +"
       },
       {
-        "lineNumber": 407,
+        "lineNumber": 406,
         "author": {
           "gitId": "-"
         },
         "content": "e.g.`select 2`"
       },
       {
-        "lineNumber": 408,
+        "lineNumber": 407,
         "author": {
           "gitId": "DanKhoo"
         },
         "content": "* *Privacy* : `privacy INDEX [p/ y or n] [e/ y or n] [a/ y or n]` +"
       },
       {
-        "lineNumber": 409,
+        "lineNumber": 408,
         "author": {
           "gitId": "DanKhoo"
         },
         "content": "e.g. `privacy 2 p/y a/n`"
       },
       {
-        "lineNumber": 410,
+        "lineNumber": 409,
         "author": {
           "gitId": "-"
         },
         "content": "* *History* : `history`"
       },
       {
-        "lineNumber": 411,
+        "lineNumber": 410,
         "author": {
           "gitId": "-"
         },
         "content": "* *Undo* : `undo`"
       },
       {
-        "lineNumber": 412,
+        "lineNumber": 411,
         "author": {
           "gitId": "-"
         },
         "content": "* *Redo* : `redo`"
       },
       {
-        "lineNumber": 413,
+        "lineNumber": 412,
         "author": {
           "gitId": "DanKhoo"
         },
@@ -13479,11 +13472,11 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 90,
+      "valensia0711": 89,
       "NgeowXiuQi": 19,
-      "IamRENCE": 23,
+      "IamRENCE": 24,
       "abtyx": 21,
-      "DanKhoo": 48,
+      "DanKhoo": 47,
       "-": 212
     }
   },
@@ -17201,311 +17194,332 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        if (!personToFavourite.getFavourite()) {"
+        "content": "        model.commitAddressBook();"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return new CommandResult(String.format(MESSAGE_FAVOURITE_PERSON_SUCCESS,"
+        "content": ""
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                    favouritedPerson.getName().fullName));"
+        "content": "        if (!personToFavourite.getFavourite()) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        } else {"
+        "content": "            return new CommandResult(String.format(MESSAGE_FAVOURITE_PERSON_SUCCESS,"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return new CommandResult(String.format(MESSAGE_FAVOURITE_PERSON_FAIL,"
+        "content": "                    favouritedPerson.getName().fullName));"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                    favouritedPerson.getName().fullName));"
+        "content": "        } else {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        }"
+        "content": "            return new CommandResult(String.format(MESSAGE_FAVOURITE_PERSON_FAIL,"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "                    favouritedPerson.getName().fullName));"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "     * Creates and returns a {@code Person} with the details of {@code personToFavourite}"
+        "content": "    }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    private static Person createFavouritedPerson(Person personToFavourite) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assert personToFavourite !\u003d null;"
+        "content": "     * Creates and returns a {@code Person} with the details of {@code personToFavourite}"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        boolean newFavourite;"
+        "content": "    private static Person createFavouritedPerson(Person personToFavourite) {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        assert personToFavourite !\u003d null;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        if (personToFavourite.getFavourite()) {"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            newFavourite \u003d personToFavourite.getFavourite();"
+        "content": "        boolean newFavourite;"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        } else {"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            newFavourite \u003d !personToFavourite.getFavourite();"
+        "content": "        if (personToFavourite.getFavourite()) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        }"
+        "content": "            newFavourite \u003d personToFavourite.getFavourite();"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        } else {"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        return new Person(personToFavourite.getName(), personToFavourite.getPhone(), personToFavourite.getEmail(),"
+        "content": "            newFavourite \u003d !personToFavourite.getFavourite();"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                personToFavourite.getAddress(), personToFavourite.getRating(), personToFavourite.getDepartment(),"
+        "content": "        }"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                personToFavourite.getManager(), personToFavourite.getSalary(), personToFavourite.getOtHours(),"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                personToFavourite.getOtRate(), personToFavourite.getDeductibles(), personToFavourite.getFeedback(),"
+        "content": "        return new Person(personToFavourite.getName(), personToFavourite.getPhone(), personToFavourite.getEmail(),"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                personToFavourite.getTags(), newFavourite);"
+        "content": "                personToFavourite.getAddress(), personToFavourite.getRating(), personToFavourite.getDepartment(),"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "                personToFavourite.getManager(), personToFavourite.getSalary(), personToFavourite.getOtHours(),"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "                personToFavourite.getOtRate(), personToFavourite.getDeductibles(), personToFavourite.getFeedback(),"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Override"
+        "content": "                personToFavourite.getTags(), newFavourite);"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    }"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // short circuit if same object"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return true;"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        }"
+        "content": "        // short circuit if same object"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // instanceof handles nulls"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        if (!(other instanceof FavouriteCommand)) {"
+        "content": "            return true;"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return false;"
+        "content": "        }"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        }"
+        "content": "        // instanceof handles nulls"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // state check"
+        "content": "        if (!(other instanceof FavouriteCommand)) {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        FavouriteCommand e \u003d (FavouriteCommand) other;"
+        "content": "            return false;"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        return index.equals(e.index);"
+        "content": "        }"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "        // state check"
       },
       {
         "lineNumber": 96,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        FavouriteCommand e \u003d (FavouriteCommand) other;"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        return index.equals(e.index);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 99,
         "author": {
           "gitId": "valensia0711"
         },
@@ -17513,7 +17527,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 96
+      "valensia0711": 99
     }
   },
   {
@@ -20402,105 +20416,105 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        if (personToUnfavourite.getFavourite()) {"
+        "content": "        model.commitAddressBook();"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return new CommandResult(String.format(MESSAGE_UNFAVOURITE_PERSON_SUCCESS,"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                    unfavouritedPerson.getName().fullName));"
+        "content": "        if (personToUnfavourite.getFavourite()) {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        } else {"
+        "content": "            return new CommandResult(String.format(MESSAGE_UNFAVOURITE_PERSON_SUCCESS,"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return new CommandResult(String.format(MESSAGE_UNFAVOURITE_PERSON_FAIL,"
+        "content": "                    unfavouritedPerson.getName().fullName));"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                    unfavouritedPerson.getName().fullName));"
+        "content": "        } else {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        }"
+        "content": "            return new CommandResult(String.format(MESSAGE_UNFAVOURITE_PERSON_FAIL,"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "                    unfavouritedPerson.getName().fullName));"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    /**"
+        "content": "        }"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "     * Creates and returns a {@code Person} with the details of {@code personToFavourite}"
+        "content": "    }"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    private static Person createFavouritedPerson(Person personToUnfavourite) {"
+        "content": "     * Creates and returns a {@code Person} with the details of {@code personToFavourite}"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assert personToUnfavourite !\u003d null;"
+        "content": "     */"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    private static Person createFavouritedPerson(Person personToUnfavourite) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        boolean newFavourite;"
+        "content": "        assert personToUnfavourite !\u003d null;"
       },
       {
         "lineNumber": 66,
@@ -20514,185 +20528,199 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        if (personToUnfavourite.getFavourite()) {"
+        "content": "        boolean newFavourite;"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            newFavourite \u003d !personToUnfavourite.getFavourite();"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        } else {"
+        "content": "        if (personToUnfavourite.getFavourite()) {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            newFavourite \u003d personToUnfavourite.getFavourite();"
+        "content": "            newFavourite \u003d !personToUnfavourite.getFavourite();"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        }"
+        "content": "        } else {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "            newFavourite \u003d personToUnfavourite.getFavourite();"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        return new Person(personToUnfavourite.getName(), personToUnfavourite.getPhone(),"
+        "content": "        }"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                personToUnfavourite.getEmail(), personToUnfavourite.getAddress(), personToUnfavourite.getRating(),"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                personToUnfavourite.getDepartment(), personToUnfavourite.getManager(), personToUnfavourite.getSalary(),"
+        "content": "        return new Person(personToUnfavourite.getName(), personToUnfavourite.getPhone(),"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                personToUnfavourite.getOtHours(), personToUnfavourite.getOtRate(), personToUnfavourite.getDeductibles(),"
+        "content": "                personToUnfavourite.getEmail(), personToUnfavourite.getAddress(), personToUnfavourite.getRating(),"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                personToUnfavourite.getFeedback(), personToUnfavourite.getTags(), newFavourite);"
+        "content": "                personToUnfavourite.getDepartment(), personToUnfavourite.getManager(), personToUnfavourite.getSalary(),"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "                personToUnfavourite.getOtHours(), personToUnfavourite.getOtRate(), personToUnfavourite.getDeductibles(),"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Override"
+        "content": "                personToUnfavourite.getFeedback(), personToUnfavourite.getTags(), newFavourite);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // short circuit if same object"
+        "content": "    @Override"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return true;"
+        "content": "        // short circuit if same object"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        }"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // instanceof handles nulls"
+        "content": "            return true;"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        if (!(other instanceof UnfavouriteCommand)) {"
+        "content": "        }"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return false;"
+        "content": "        // instanceof handles nulls"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        }"
+        "content": "        if (!(other instanceof UnfavouriteCommand)) {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // state check"
+        "content": "            return false;"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        UnfavouriteCommand e \u003d (UnfavouriteCommand) other;"
+        "content": "        }"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        return index.equals(e.index);"
+        "content": "        // state check"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "        UnfavouriteCommand e \u003d (UnfavouriteCommand) other;"
       },
       {
         "lineNumber": 93,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        return index.equals(e.index);"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 95,
         "author": {
           "gitId": "valensia0711"
         },
@@ -20700,7 +20728,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 93
+      "valensia0711": 95
     }
   },
   {
@@ -35994,474 +36022,481 @@
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "            \"Phone numbers should only contain numbers, and it should be at least 3 digits long\";"
+        "content": "            \"Phone numbers should only contain numbers, starts with digit \u00276\u0027, \u00278\u0027 or \u00279\u0027 and it should be 8 digits \""
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final String VALIDATION_REGEX \u003d \"\\\\d{3,}\";"
+        "content": "                    + \"long\";"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public final String value;"
+        "content": "    public static final String VALIDATION_REGEX \u003d \"^([6,8-9]{1})([0-9]{7})\";"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public final String value;"
       },
       {
         "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
         "author": {
           "gitId": "abtyx"
         },
         "content": "    private final boolean isPrivate;"
       },
       {
-        "lineNumber": 19,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Constructs a {@code Phone}."
+        "content": "    /**"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Constructs a {@code Phone}."
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param phone A valid phone number."
+        "content": "     *"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @param phone A valid phone number."
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Phone(String phone) {"
+        "content": "     */"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(phone);"
+        "content": "    public Phone(String phone) {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "        checkArgument(isValidPhone(phone), MESSAGE_CONSTRAINTS);"
+        "content": "        requireNonNull(phone);"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "        value \u003d phone;"
+        "content": "        checkArgument(isValidPhone(phone), MESSAGE_CONSTRAINTS);"
       },
       {
         "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        value \u003d phone;"
+      },
+      {
+        "lineNumber": 30,
         "author": {
           "gitId": "abtyx"
         },
         "content": "        isPrivate \u003d false;"
       },
       {
-        "lineNumber": 30,
+        "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 31,
+        "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 32,
-        "author": {
-          "gitId": "abtyx"
-        },
-        "content": "    /**"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "     * Constructs a private {@code Phone}."
+        "content": "    /**"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "     * @param phone A valid phone number."
+        "content": "     * Constructs a private {@code Phone}."
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "     * @param privacy states that this phone is private."
+        "content": "     * @param phone A valid phone number."
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "     */"
+        "content": "     * @param privacy states that this phone is private."
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "    public Phone(String phone, String privacy) {"
+        "content": "     */"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        requireNonNull(phone);"
+        "content": "    public Phone(String phone, String privacy) {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        checkArgument(isValidPhone(phone), MESSAGE_CONSTRAINTS);"
+        "content": "        requireNonNull(phone);"
       },
       {
         "lineNumber": 40,
+        "author": {
+          "gitId": "abtyx"
+        },
+        "content": "        checkArgument(isValidPhone(phone), MESSAGE_CONSTRAINTS);"
+      },
+      {
+        "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
         "content": "        value \u003d phone;"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 42,
         "author": {
           "gitId": "abtyx"
         },
         "content": "        if (privacy.equals(\"Y\")) {"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 43,
         "author": {
           "gitId": "abtyx"
         },
         "content": "            isPrivate \u003d true;"
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 44,
         "author": {
           "gitId": "abtyx"
         },
         "content": "        } else {"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 45,
         "author": {
           "gitId": "abtyx"
         },
         "content": "            isPrivate \u003d false;"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 46,
         "author": {
           "gitId": "abtyx"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 46,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if a given string is a valid phone number."
+        "content": "    /**"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Returns true if a given string is a valid phone number."
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static boolean isValidPhone(String test) {"
+        "content": "     */"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        return test.matches(VALIDATION_REGEX);"
+        "content": "    public static boolean isValidPhone(String test) {"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return test.matches(VALIDATION_REGEX);"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "abtyx"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "     * Getter for isPrivate"
+        "content": "    /**"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "     * @return isPrivate"
+        "content": "     * Getter for isPrivate"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "     */"
+        "content": "     * @return isPrivate"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "    public boolean isPrivate() {"
+        "content": "     */"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        return isPrivate;"
+        "content": "    public boolean isPrivate() {"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "abtyx"
         },
-        "content": "    }"
+        "content": "        return isPrivate;"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String toString() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        return value;"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return value;"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "                || (other instanceof Phone // instanceof handles nulls"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "abtyx"
+          "gitId": "-"
         },
-        "content": "                \u0026\u0026 value.equals(((Phone) other).value))"
+        "content": "                || (other instanceof Phone // instanceof handles nulls"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "                \u0026\u0026 isPrivate() \u003d\u003d ((Phone) other).isPrivate(); // state check"
+        "content": "                \u0026\u0026 value.equals(((Phone) other).value))"
       },
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "-"
+          "gitId": "abtyx"
         },
-        "content": "    }"
+        "content": "                \u0026\u0026 isPrivate() \u003d\u003d ((Phone) other).isPrivate(); // state check"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    public int hashCode() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "        return value.hashCode();"
+        "content": "    public int hashCode() {"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return value.hashCode();"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
@@ -36470,7 +36505,8 @@
     ],
     "authorContributionMap": {
       "abtyx": 23,
-      "-": 58
+      "DanKhoo": 3,
+      "-": 56
     }
   },
   {
@@ -47163,6 +47199,134 @@
     }
   },
   {
+    "path": "src/test/data/XmlAddressBookStorageTest/invalidAndValidPersonAddressBook.xml",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c?xml version\u003d\"1.0\" encoding\u003d\"UTF-8\" standalone\u003d\"yes\"?\u003e"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003caddressbook\u003e"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c!-- Valid Person --\u003e"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cpersons\u003e"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cname\u003eHans Muster\u003c/name\u003e"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "DanKhoo"
+        },
+        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e94824241\u003c/phone\u003e"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cemail isPrivate\u003d\"false\"\u003ehans@example.com\u003c/email\u003e"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003caddress isPrivate\u003d\"false\"\u003e4th street\u003c/address\u003e"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/persons\u003e"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c!-- Person with invalid phone field --\u003e"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003cpersons\u003e"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cname\u003eHans Muster\u003c/name\u003e"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e948asdf2424\u003c/phone\u003e"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003cemail isPrivate\u003d\"false\"\u003ehans@example.com\u003c/email\u003e"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003caddress isPrivate\u003d\"false\"\u003e4th street\u003c/address\u003e"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    \u003c/persons\u003e"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "\u003c/addressbook\u003e"
+      }
+    ],
+    "authorContributionMap": {
+      "DanKhoo": 1,
+      "-": 16
+    }
+  },
+  {
     "path": "src/test/data/XmlSerializableAddressBookTest/duplicatePersonAddressBook.xml",
     "lines": [
       {
@@ -47994,9 +48158,9 @@
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone\u003e9482224\u003c/phone\u003e"
+        "content": "        \u003cphone\u003e94822241\u003c/phone\u003e"
       },
       {
         "lineNumber": 67,
@@ -48092,9 +48256,9 @@
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone\u003e9482427\u003c/phone\u003e"
+        "content": "        \u003cphone\u003e94824271\u003c/phone\u003e"
       },
       {
         "lineNumber": 81,
@@ -48190,9 +48354,9 @@
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone\u003e9482442\u003c/phone\u003e"
+        "content": "        \u003cphone\u003e94824421\u003c/phone\u003e"
       },
       {
         "lineNumber": 95,
@@ -48282,8 +48446,8 @@
     "authorContributionMap": {
       "IamRENCE": 14,
       "NgeowXiuQi": 28,
-      "DanKhoo": 14,
-      "-": 50
+      "DanKhoo": 17,
+      "-": 47
     }
   },
   {
@@ -48443,9 +48607,9 @@
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    \u003cphone\u003e9482424\u003c/phone\u003e"
+        "content": "    \u003cphone\u003e94824241\u003c/phone\u003e"
       },
       {
         "lineNumber": 5,
@@ -48535,8 +48699,8 @@
     "authorContributionMap": {
       "IamRENCE": 2,
       "NgeowXiuQi": 4,
-      "DanKhoo": 2,
-      "-": 8
+      "DanKhoo": 3,
+      "-": 7
     }
   },
   {
@@ -48573,9 +48737,9 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e9482424\u003c/phone\u003e"
+        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e94824241\u003c/phone\u003e"
       },
       {
         "lineNumber": 6,
@@ -48965,9 +49129,9 @@
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e9482224\u003c/phone\u003e"
+        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e94822241\u003c/phone\u003e"
       },
       {
         "lineNumber": 62,
@@ -49063,9 +49227,9 @@
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e9482427\u003c/phone\u003e"
+        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e94824271\u003c/phone\u003e"
       },
       {
         "lineNumber": 76,
@@ -49161,9 +49325,9 @@
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e9482442\u003c/phone\u003e"
+        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e94824425\u003c/phone\u003e"
       },
       {
         "lineNumber": 90,
@@ -49259,9 +49423,9 @@
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e8482424\u003c/phone\u003e"
+        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e84824246\u003c/phone\u003e"
       },
       {
         "lineNumber": 104,
@@ -49357,9 +49521,9 @@
       {
         "lineNumber": 117,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e8482131\u003c/phone\u003e"
+        "content": "        \u003cphone isPrivate\u003d\"false\"\u003e84821312\u003c/phone\u003e"
       },
       {
         "lineNumber": 118,
@@ -49449,8 +49613,8 @@
     "authorContributionMap": {
       "IamRENCE": 18,
       "NgeowXiuQi": 36,
-      "DanKhoo": 18,
-      "-": 57
+      "DanKhoo": 24,
+      "-": 51
     }
   },
   {
@@ -49480,9 +49644,9 @@
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    \u003cphone\u003e9482424\u003c/phone\u003e"
+        "content": "    \u003cphone\u003e94824241\u003c/phone\u003e"
       },
       {
         "lineNumber": 5,
@@ -49572,8 +49736,8 @@
     "authorContributionMap": {
       "IamRENCE": 2,
       "NgeowXiuQi": 4,
-      "DanKhoo": 2,
-      "-": 8
+      "DanKhoo": 3,
+      "-": 7
     }
   },
   {
@@ -51675,9 +51839,9 @@
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    private static final String VALID_PHONE \u003d \"9482424\";"
+        "content": "    private static final String VALID_PHONE \u003d \"94824241\";"
       },
       {
         "lineNumber": 41,
@@ -52459,8 +52623,8 @@
     ],
     "authorContributionMap": {
       "valensia0711": 6,
-      "DanKhoo": 2,
-      "-": 143
+      "DanKhoo": 3,
+      "-": 142
     }
   },
   {
@@ -54249,16 +54413,16 @@
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final String VALID_PHONE_AMY \u003d \"11111111\";"
+        "content": "    public static final String VALID_PHONE_AMY \u003d \"91231234\";"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final String VALID_PHONE_BOB \u003d \"22222222\";"
+        "content": "    public static final String VALID_PHONE_BOB \u003d \"81231234\";"
       },
       {
         "lineNumber": 42,
@@ -55328,8 +55492,8 @@
     "authorContributionMap": {
       "NgeowXiuQi": 32,
       "abtyx": 6,
-      "DanKhoo": 14,
-      "-": 141
+      "DanKhoo": 16,
+      "-": 139
     }
   },
   {
@@ -55564,7 +55728,7 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void execute_validIndexUnfilteredList_success() {"
+        "content": "    public void execute_success() {"
       },
       {
         "lineNumber": 34,
@@ -65203,9 +65367,9 @@
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    private static final String VALID_PHONE \u003d \"123456\";"
+        "content": "    private static final String VALID_PHONE \u003d \"91821289\";"
       },
       {
         "lineNumber": 41,
@@ -67025,7 +67189,8 @@
       "IamRENCE": 51,
       "NgeowXiuQi": 22,
       "abtyx": 17,
-      "-": 209
+      "DanKhoo": 1,
+      "-": 208
     }
   },
   {
@@ -70567,6 +70732,540 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/model/person/NameContainsKeywordsPredicateTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.model.person;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.testutil.PersonBuilder;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class NameContainsKeywordsPredicateTest {"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cString\u003e firstPredicateKeywordList \u003d Collections.singletonList(\"first\");"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        List\u003cString\u003e secondPredicateKeywordList \u003d Arrays.asList(\"first\", \"second\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        NameContainsKeywordsPredicate firstPredicate \u003d new NameContainsKeywordsPredicate(firstPredicateKeywordList);"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        NameContainsKeywordsPredicate secondPredicate \u003d new NameContainsKeywordsPredicate(secondPredicateKeywordList);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(firstPredicate.equals(firstPredicate));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // same values -\u003e returns true"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        NameContainsKeywordsPredicate firstPredicateCopy \u003d new NameContainsKeywordsPredicate(firstPredicateKeywordList);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(firstPredicate.equals(firstPredicateCopy));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // different types -\u003e returns false"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertFalse(firstPredicate.equals(1));"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // null -\u003e returns false"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertFalse(firstPredicate.equals(null));"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // different person -\u003e returns false"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertFalse(firstPredicate.equals(secondPredicate));"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void test_nameContainsKeywords_returnsTrue() {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // One keyword"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        NameContainsKeywordsPredicate predicate \u003d new NameContainsKeywordsPredicate(Collections.singletonList(\"Alice\"));"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(predicate.test(new PersonBuilder().withName(\"Alice Bob\").build()));"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Multiple keywords"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        predicate \u003d new NameContainsKeywordsPredicate(Arrays.asList(\"Alice\", \"Bob\"));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(predicate.test(new PersonBuilder().withName(\"Alice Bob\").build()));"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Only one matching keyword"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        predicate \u003d new NameContainsKeywordsPredicate(Arrays.asList(\"Bob\", \"Carol\"));"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(predicate.test(new PersonBuilder().withName(\"Alice Carol\").build()));"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Mixed-case keywords"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        predicate \u003d new NameContainsKeywordsPredicate(Arrays.asList(\"aLIce\", \"bOB\"));"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(predicate.test(new PersonBuilder().withName(\"Alice Bob\").build()));"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void test_nameDoesNotContainKeywords_returnsFalse() {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Zero keywords"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        NameContainsKeywordsPredicate predicate \u003d new NameContainsKeywordsPredicate(Collections.emptyList());"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertFalse(predicate.test(new PersonBuilder().withName(\"Alice\").build()));"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Non-matching keyword"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        predicate \u003d new NameContainsKeywordsPredicate(Arrays.asList(\"Carol\"));"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertFalse(predicate.test(new PersonBuilder().withName(\"Alice Bob\").build()));"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Keywords match phone, email and address, but does not match name"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "DanKhoo"
+        },
+        "content": "        predicate \u003d new NameContainsKeywordsPredicate(Arrays.asList(\"98271821\", \"alice@email.com\", \"Main\", \"Street\"));"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "DanKhoo"
+        },
+        "content": "        assertFalse(predicate.test(new PersonBuilder().withName(\"Alice\").withPhone(\"98271821\")"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .withEmail(\"alice@email.com\").withAddress(\"Main Street\").build()));"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "DanKhoo": 2,
+      "-": 73
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/model/person/OtHourTest.java",
     "lines": [
       {
@@ -71625,9 +72324,9 @@
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        assertFalse(Phone.isValidPhone(\"91\")); // less than 3 numbers"
+        "content": "        assertFalse(Phone.isValidPhone(\"9112312\")); // less than 8 numbers"
       },
       {
         "lineNumber": 32,
@@ -71653,23 +72352,23 @@
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": ""
+        "content": "        assertFalse(Phone.isValidPhone(\"124293842033123\")); // long phone numbers"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "        // valid phone numbers"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(Phone.isValidPhone(\"911\")); // exactly 3 numbers"
+        "content": "        // valid phone numbers"
       },
       {
         "lineNumber": 38,
@@ -71681,117 +72380,124 @@
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "        assertTrue(Phone.isValidPhone(\"124293842033123\")); // long phone numbers"
+        "content": "        assertTrue(Phone.isValidPhone(\"83121534\"));"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "abtyx"
+          "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "    public void isPrivate() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        Phone phone \u003d new Phone(\"92349234\");"
+        "content": "    public void isPrivate() {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        //default phone"
+        "content": "        Phone phone \u003d new Phone(\"92349234\");"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        assertFalse(phone.isPrivate());"
+        "content": "        //default phone"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        phone \u003d new Phone(\"92349234\", \"N\");"
+        "content": "        assertFalse(phone.isPrivate());"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        assertFalse(phone.isPrivate());"
+        "content": "        phone \u003d new Phone(\"92349234\", \"N\");"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        phone \u003d new Phone(\"92349234\", \"Y\");"
+        "content": "        assertFalse(phone.isPrivate());"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        assertTrue(phone.isPrivate());"
+        "content": "        phone \u003d new Phone(\"92349234\", \"Y\");"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        phone \u003d new Phone(\"92349234\", \"y\");"
+        "content": "        assertTrue(phone.isPrivate());"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        assertFalse(phone.isPrivate());"
+        "content": "        phone \u003d new Phone(\"92349234\", \"y\");"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "    }"
+        "content": "        assertFalse(phone.isPrivate());"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "abtyx"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 55,
+        "author": {
+          "gitId": "abtyx"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
@@ -71800,7 +72506,8 @@
     ],
     "authorContributionMap": {
       "abtyx": 14,
-      "-": 41
+      "DanKhoo": 4,
+      "-": 38
     }
   },
   {
@@ -78109,9 +78816,9 @@
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final Person ELLE \u003d new PersonBuilder().withName(\"Elle Meyer\").withPhone(\"9482224\")"
+        "content": "    public static final Person ELLE \u003d new PersonBuilder().withName(\"Elle Meyer\").withPhone(\"94822241\")"
       },
       {
         "lineNumber": 51,
@@ -78144,9 +78851,9 @@
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final Person FIONA \u003d new PersonBuilder().withName(\"Fiona Kunz\").withPhone(\"9482427\")"
+        "content": "    public static final Person FIONA \u003d new PersonBuilder().withName(\"Fiona Kunz\").withPhone(\"94824271\")"
       },
       {
         "lineNumber": 56,
@@ -78179,9 +78886,9 @@
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final Person GEORGE \u003d new PersonBuilder().withName(\"George Best\").withPhone(\"9482442\")"
+        "content": "    public static final Person GEORGE \u003d new PersonBuilder().withName(\"George Best\").withPhone(\"94824421\")"
       },
       {
         "lineNumber": 61,
@@ -78228,9 +78935,9 @@
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final Person HOON \u003d new PersonBuilder().withName(\"Hoon Meier\").withPhone(\"8482424\")"
+        "content": "    public static final Person HOON \u003d new PersonBuilder().withName(\"Hoon Meier\").withPhone(\"84824241\")"
       },
       {
         "lineNumber": 68,
@@ -78263,9 +78970,9 @@
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final Person IDA \u003d new PersonBuilder().withName(\"Ida Mueller\").withPhone(\"8482131\")"
+        "content": "    public static final Person IDA \u003d new PersonBuilder().withName(\"Ida Mueller\").withPhone(\"84821311\")"
       },
       {
         "lineNumber": 73,
@@ -78545,8 +79252,8 @@
       "IamRENCE": 11,
       "NgeowXiuQi": 14,
       "abtyx": 5,
-      "DanKhoo": 18,
-      "-": 63
+      "DanKhoo": 23,
+      "-": 58
     }
   },
   {
@@ -79241,9 +79948,9 @@
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "            builder.append(\"\u003cphone\u003e000\u003c/phone\u003e\\n\");"
+        "content": "            builder.append(\"\u003cphone\u003e91239090\u003c/phone\u003e\\n\");"
       },
       {
         "lineNumber": 100,
@@ -79480,8 +80187,8 @@
     "authorContributionMap": {
       "IamRENCE": 2,
       "NgeowXiuQi": 4,
-      "DanKhoo": 2,
-      "-": 124
+      "DanKhoo": 3,
+      "-": 123
     }
   },
   {
