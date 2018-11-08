@@ -65538,7 +65538,7 @@
         "author": {
           "gitId": "keenlok"
         },
-        "content": "                    new Zone(\"Far Far Away, C4\"), getTagSet(\"singAlong\")),"
+        "content": "                    new Zone(\"Far Far Away, C4\"), getTagSet(\"singAlong\", \"stage\")),"
       },
       {
         "lineNumber": 55,
@@ -65557,65 +65557,65 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "        };"
+        "content": "            new Ride(new Name(\"Madagascar A Crate Adventure\"), new Maintenance(\"10\"), new WaitTime(\"5\"),"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "    }"
+        "content": "                    new Zone(\"Madagascar, B1\"), getTagSet(\"boat\", \"river\")),"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": ""
+        "content": "            new Ride(new Name(\"King Juliens Beach PartyGoRound\"), new Maintenance(\"4\"), new WaitTime(\"45\"),"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "    public static ReadOnlyThanePark getSampleThanePark() {"
+        "content": "                    new Zone(\"Madagascar, B2\"), getTagSet(\"carousel\")),"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        ThanePark sampleAb \u003d new ThanePark();"
+        "content": "            new Ride(new Name(\"Lights Camera Action By Steven Spielberg\"), new Maintenance(\"100\"), new WaitTime(\"55\"),"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "        for (Ride sampleRide : getSampleRides()) {"
+        "content": "                    new Zone(\"New York, G1\"), getTagSet(\"celebrity\", \"11am\", \"stage\")),"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "keenlok"
         },
-        "content": "            sampleAb.addRide(sampleRide);"
+        "content": "            new Ride(new Name(\"Sesame Street Spaghetti Space Chase\"), new Maintenance(\"0\"), new WaitTime(\"15\"),"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "        }"
+        "content": "                    new Zone(\"New York, G2\"), getTagSet(\"children\")),"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        return sampleAb;"
+        "content": "        };"
       },
       {
         "lineNumber": 66,
@@ -65634,68 +65634,124 @@
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "    /**"
+        "content": "    public static ReadOnlyThanePark getSampleThanePark() {"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "     * Returns a tag set containing the list of strings given."
+        "content": "        ThanePark sampleAb \u003d new ThanePark();"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "     */"
+        "content": "        for (Ride sampleRide : getSampleRides()) {"
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "keenlok"
         },
-        "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
+        "content": "            sampleAb.addRide(sampleRide);"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        return Arrays.stream(strings)"
+        "content": "        }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "                .map(Tag::new)"
+        "content": "        return sampleAb;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": "                .collect(Collectors.toSet());"
+        "content": "    }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns a tag set containing the list of strings given."
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Arrays.stream(strings)"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .map(Tag::new)"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .collect(Collectors.toSet());"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
@@ -65703,7 +65759,7 @@
       }
     ],
     "authorContributionMap": {
-      "keenlok": 50,
+      "keenlok": 58,
       "YuPeiHenry": 1,
       "-": 26
     }

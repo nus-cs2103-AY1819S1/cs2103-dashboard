@@ -43658,7 +43658,7 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private static Logger logger \u003d LogsCenter.getLogger(ModulePlanner.class);"
+        "content": "    private static final int ALL_SEMESTERS \u003d -1;"
       },
       {
         "lineNumber": 44,
@@ -43672,49 +43672,49 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private final List\u003cSemester\u003e semesters;"
+        "content": "    private static Logger logger \u003d LogsCenter.getLogger(ModulePlanner.class);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private UserProfile userProfile;"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    private final List\u003cSemester\u003e semesters;"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private final ObservableList\u003cModule\u003e availableModules \u003d FXCollections.observableArrayList();"
+        "content": "    private UserProfile userProfile;"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private final ObservableList\u003cModule\u003e takenModules \u003d FXCollections.observableArrayList();"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    private final ObservableList\u003cModule\u003e availableModules \u003d FXCollections.observableArrayList();"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private int index;"
+        "content": "    private final ObservableList\u003cModule\u003e takenModules \u003d FXCollections.observableArrayList();"
       },
       {
         "lineNumber": 52,
@@ -43728,112 +43728,112 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "    private int availableIndex;"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Constructs a {@code ModulePlanner} and initializes an array of 8 {@code Semester}"
+        "content": "    private int takenIndex;"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * to store details of each {@code Semester}."
+        "content": ""
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public ModulePlanner() {"
+        "content": "     * Constructs a {@code ModulePlanner} and initializes an array of 8 {@code Semester}"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        semesters \u003d new ArrayList\u003c\u003e(MAX_NUMBER_SEMESTERS);"
+        "content": "     * to store details of each {@code Semester}."
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        userProfile \u003d new UserProfile();"
+        "content": "     */"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    public ModulePlanner() {"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (int i \u003d 1; i \u003c\u003d MAX_NUMBER_SEMESTERS / MAX_SEMESTERS_PER_YEAR; i++) {"
+        "content": "        semesters \u003d new ArrayList\u003c\u003e(MAX_NUMBER_SEMESTERS);"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            for (int j \u003d 1; j \u003c\u003d MAX_SEMESTERS_PER_YEAR; j++) {"
+        "content": "        userProfile \u003d new UserProfile();"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                semesters.add(new Semester(i, j));"
+        "content": ""
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            }"
+        "content": "        for (int i \u003d 1; i \u003c\u003d MAX_NUMBER_SEMESTERS / MAX_SEMESTERS_PER_YEAR; i++) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "            for (int j \u003d 1; j \u003c\u003d MAX_SEMESTERS_PER_YEAR; j++) {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "                semesters.add(new Semester(i, j));"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        index \u003d 0;"
+        "content": "            }"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 69,
@@ -43847,399 +43847,399 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "        availableIndex \u003d 0;"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Creates a {@code ModulePlanner} using the {@code Module}s in the {@code toBeCopied}"
+        "content": "        takenIndex \u003d ALL_SEMESTERS;"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public ModulePlanner(ReadOnlyModulePlanner toBeCopied) {"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        this();"
+        "content": "    /**"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        resetData(toBeCopied);"
+        "content": "     * Creates a {@code ModulePlanner} using the {@code Module}s in the {@code toBeCopied}"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    public ModulePlanner(ReadOnlyModulePlanner toBeCopied) {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "        this();"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Replaces the contents of the module list with {@code modules}."
+        "content": "        resetData(toBeCopied);"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * {@code modules} must not contain duplicate modules."
+        "content": "    }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void setAvailableModules(List\u003cModule\u003e modules) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        availableModules.setAll(modules);"
+        "content": "     * Replaces the contents of the module list with {@code modules}."
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "     * {@code modules} must not contain duplicate modules."
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "    public void setAvailableModules(List\u003cModule\u003e modules) {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Add one or more module(s) to set of modules taken for the specified semester."
+        "content": "        availableModules.setAll(modules);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": "    }"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @param modules A set of valid modules to be added"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @param index   A valid semester"
+        "content": "    /**"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "     * Add one or more module(s) to set of modules taken for the specified semester."
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void addModules(Set\u003cModule\u003e modules, int index) {"
+        "content": "     *"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        semesters.get(index).addModules(modules);"
+        "content": "     * @param modules A set of valid modules to be added"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        setAvailableModules(getModulesAvailable(this.index));"
+        "content": "     * @param index   A valid semester"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    public void addModules(Set\u003cModule\u003e modules, int index) {"
       },
       {
         "lineNumber": 97,
         "author": {
-          "gitId": "GabrielYik"
+          "gitId": "Hilda-Ang"
         },
-        "content": "    //@@author GabrielYik"
+        "content": "        semesters.get(index).addModules(modules);"
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "GabrielYik"
+          "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        setAvailableModules(getModulesAvailable(availableIndex));"
       },
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "GabrielYik"
+          "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "        updateTakenModules();"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "GabrielYik"
+          "gitId": "Hilda-Ang"
         },
-        "content": "     * Delete one or more module(s) from list of modules taken for the specified semester."
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "GabrielYik"
+          "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param modules A list of valid modules to be deleted"
+        "content": "    //@@author GabrielYik"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    public void deleteModules(Set\u003cModule\u003e modules) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        // Iterate once to delete the specified modules"
+        "content": "     * Delete one or more module(s) from list of modules taken for the specified semester."
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        for (Semester semester : semesters) {"
+        "content": "     *"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            semester.deleteModules(modules);"
+        "content": "     * @param modules A list of valid modules to be deleted"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "    public void deleteModules(Set\u003cModule\u003e modules) {"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        /*"
+        "content": "        // Iterate once to delete the specified modules"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         * Delete invalidated modules repeatedly until there are no more changes"
+        "content": "        for (Semester semester : semesters) {"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         * to the total number of modules in the module planner"
+        "content": "            semester.deleteModules(modules);"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "         */"
+        "content": "        }"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        Set\u003cModule\u003e deletedModules \u003d new HashSet\u003c\u003e(modules);"
+        "content": ""
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        int previousModuleCount \u003d countModules();"
+        "content": "        /*"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        while (true) {"
+        "content": "         * Delete invalidated modules repeatedly until there are no more changes"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            for (int index \u003d 0; index \u003c MAX_NUMBER_SEMESTERS; index++) {"
+        "content": "         * to the total number of modules in the module planner"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                Semester semester \u003d semesters.get(index);"
+        "content": "         */"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                List\u003cModule\u003e invalidatedModules \u003d new ArrayList\u003c\u003e();"
+        "content": "        Set\u003cModule\u003e deletedModules \u003d new HashSet\u003c\u003e(modules);"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                invalidateModules(semester, deletedModules, invalidatedModules);"
+        "content": "        int previousModuleCount \u003d countModules();"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                deleteInvalidatedModules(semester, deletedModules, invalidatedModules);"
+        "content": "        while (true) {"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            }"
+        "content": "            for (int index \u003d 0; index \u003c MAX_NUMBER_SEMESTERS; index++) {"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "                Semester semester \u003d semesters.get(index);"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            int currentModuleCount \u003d countModules();"
+        "content": "                List\u003cModule\u003e invalidatedModules \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            if (currentModuleCount \u003d\u003d previousModuleCount) {"
+        "content": "                invalidateModules(semester, deletedModules, invalidatedModules);"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                break;"
+        "content": "                deleteInvalidatedModules(semester, deletedModules, invalidatedModules);"
       },
       {
         "lineNumber": 127,
@@ -44253,1169 +44253,1169 @@
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            if (currentModuleCount \u003c previousModuleCount) {"
+        "content": ""
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                previousModuleCount \u003d currentModuleCount;"
+        "content": "            int currentModuleCount \u003d countModules();"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            }"
+        "content": "            if (currentModuleCount \u003d\u003d previousModuleCount) {"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "                break;"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        setAvailableModules(getModulesAvailable(index));"
+        "content": "            if (currentModuleCount \u003c previousModuleCount) {"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "                previousModuleCount \u003d currentModuleCount;"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": "        }"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * Counts the number of modules in the module planner."
+        "content": ""
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     *"
+        "content": "        setAvailableModules(getModulesAvailable(availableIndex));"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @return The total number of modules"
+        "content": "        updateTakenModules();"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private int countModules() {"
+        "content": ""
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        int count \u003d 0;"
+        "content": "    /**"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        for (Semester semester : semesters) {"
+        "content": "     * Counts the number of modules in the module planner."
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            count +\u003d semester.getModules().size();"
+        "content": "     *"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "     * @return The total number of modules"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        return count;"
+        "content": "     */"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "    private int countModules() {"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        int count \u003d 0;"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": "        for (Semester semester : semesters) {"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * Checks if all the modules in {@code semester} have their prerequisites"
+        "content": "            count +\u003d semester.getModules().size();"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * fulfilled. If any of the modules do not, they will be added to"
+        "content": "        }"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * {@code invalidatedModules}."
+        "content": "        return count;"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     *"
+        "content": "    }"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param semester           The semester which modules are to be checked"
+        "content": ""
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param deletedModules     The modules to be checked against"
+        "content": "    /**"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param invalidatedModules The group of modules any of the modules in"
+        "content": "     * Checks if all the modules in {@code semester} have their prerequisites"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     *                           {@code semester} will be added to if it does not fulfill all of"
+        "content": "     * fulfilled. If any of the modules do not, they will be added to"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     *                           it\u0027s prerequisites"
+        "content": "     * {@code invalidatedModules}."
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": "     *"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private void invalidateModules(Semester semester, Set\u003cModule\u003e deletedModules, List\u003cModule\u003e invalidatedModules) {"
+        "content": "     * @param semester           The semester which modules are to be checked"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        for (Module module : semester.getModules()) {"
+        "content": "     * @param deletedModules     The modules to be checked against"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            List\u003cModuleInfo\u003e prerequisites \u003d module.getPrerequisites();"
+        "content": "     * @param invalidatedModules The group of modules any of the modules in"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            if (!prerequisites.isEmpty()) {"
+        "content": "     *                           {@code semester} will be added to if it does not fulfill all of"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                boolean hasHadPrerequisiteDeleted \u003d prerequisites.stream().anyMatch(x -\u003e"
+        "content": "     *                           it\u0027s prerequisites"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                        deletedModules.stream().anyMatch(y -\u003e x.getCode().equals(y.getCode())));"
+        "content": "     */"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                if (hasHadPrerequisiteDeleted) {"
+        "content": "    private void invalidateModules(Semester semester, Set\u003cModule\u003e deletedModules, List\u003cModule\u003e invalidatedModules) {"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                    invalidatedModules.add(module);"
+        "content": "        for (Module module : semester.getModules()) {"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                }"
+        "content": "            List\u003cModuleInfo\u003e prerequisites \u003d module.getPrerequisites();"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            }"
+        "content": "            if (!prerequisites.isEmpty()) {"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "                boolean hasHadPrerequisiteDeleted \u003d prerequisites.stream().anyMatch(x -\u003e"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "                        deletedModules.stream().anyMatch(y -\u003e x.getCode().equals(y.getCode())));"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "                if (hasHadPrerequisiteDeleted) {"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": "                    invalidatedModules.add(module);"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * Deletes the {@code invalidatedModules} from the modules {@code semester} has."
+        "content": "                }"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     *"
+        "content": "            }"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param semester           The semester which the {@code invalidatedModules} are to be"
+        "content": "        }"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     *                           deleted from"
+        "content": "    }"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     * @param invalidatedModules The invalidated modules"
+        "content": ""
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    private void deleteInvalidatedModules(Semester semester, Set\u003cModule\u003e deletedModules,"
+        "content": "     * Deletes the {@code invalidatedModules} from the modules {@code semester} has."
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "                                          List\u003cModule\u003e invalidatedModules) {"
+        "content": "     *"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        if (!invalidatedModules.isEmpty()) {"
+        "content": "     * @param semester           The semester which the {@code invalidatedModules} are to be"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            Set\u003cModule\u003e modulesToDelete \u003d new HashSet\u003c\u003e(invalidatedModules);"
+        "content": "     *                           deleted from"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            semester.deleteModules(modulesToDelete);"
+        "content": "     * @param invalidatedModules The invalidated modules"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "            deletedModules.addAll(modulesToDelete);"
+        "content": "     */"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "        }"
+        "content": "    private void deleteInvalidatedModules(Semester semester, Set\u003cModule\u003e deletedModules,"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": "    }"
+        "content": "                                          List\u003cModule\u003e invalidatedModules) {"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "        if (!invalidatedModules.isEmpty()) {"
       },
       {
         "lineNumber": 189,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "GabrielYik"
         },
-        "content": "    //@@author Hilda-Ang"
+        "content": "            Set\u003cModule\u003e modulesToDelete \u003d new HashSet\u003c\u003e(invalidatedModules);"
       },
       {
         "lineNumber": 190,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "GabrielYik"
         },
-        "content": ""
+        "content": "            semester.deleteModules(modulesToDelete);"
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "GabrielYik"
         },
-        "content": "    /**"
+        "content": "            deletedModules.addAll(modulesToDelete);"
       },
       {
         "lineNumber": 192,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "GabrielYik"
         },
-        "content": "     * Checks if the {@code Module} exists in the module planner."
+        "content": "        }"
       },
       {
         "lineNumber": 193,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "GabrielYik"
         },
-        "content": "     *"
+        "content": "    }"
       },
       {
         "lineNumber": 194,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "GabrielYik"
         },
-        "content": "     * @param module The module to check"
+        "content": ""
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @return True if the module exists, false if not"
+        "content": "    //@@author Hilda-Ang"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public boolean hasModule(Module module) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (Semester semester : semesters) {"
+        "content": "     * Checks if the {@code Module} exists in the module planner."
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            if (semester.containsModule(module)) {"
+        "content": "     *"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                return true;"
+        "content": "     * @param module The module to check"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            }"
+        "content": "     * @return True if the module exists, false if not"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return false;"
+        "content": "    public boolean hasModule(Module module) {"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        for (Semester semester : semesters) {"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "            if (semester.containsModule(module)) {"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": "                return true;"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public UserProfile getUserProfile() {"
+        "content": "            }"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return userProfile;"
+        "content": "        }"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        return false;"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void setUserProfile(UserProfile u) {"
+        "content": ""
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        userProfile \u003d u;"
+        "content": "    @Override"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "    public UserProfile getUserProfile() {"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        return userProfile;"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Returns a copy of all the {@code Semester}s."
+        "content": ""
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": "    public void setUserProfile(UserProfile u) {"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @return A list of {@code Semester}s"
+        "content": "        userProfile \u003d u;"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public List\u003cSemester\u003e getSemesters() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cSemester\u003e semestersCopy \u003d new ArrayList\u003c\u003e();"
+        "content": "     * Returns a copy of all the {@code Semester}s."
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (Semester semester : semesters) {"
+        "content": "     *"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            Semester semesterCopy \u003d new Semester(semester);"
+        "content": "     * @return A list of {@code Semester}s"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            semestersCopy.add(semesterCopy);"
+        "content": "     */"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return semestersCopy;"
+        "content": "    public List\u003cSemester\u003e getSemesters() {"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        List\u003cSemester\u003e semestersCopy \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        for (Semester semester : semesters) {"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "            Semester semesterCopy \u003d new Semester(semester);"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Returns all {@code Module}s taken in the {@code Semester} wrapped in an"
+        "content": "            semestersCopy.add(semesterCopy);"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * {@code ObservableList}."
+        "content": "        }"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": "        return semestersCopy;"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @param index A valid index."
+        "content": "    }"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @return A list of modules taken in the semester."
+        "content": ""
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": "     * Returns all {@code Module}s taken in the {@code Semester} wrapped in an"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public ObservableList\u003cModule\u003e getTakenModules(int index) {"
+        "content": "     * {@code ObservableList}."
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return FXCollections.unmodifiableObservableList("
+        "content": "     *"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                semesters.get(index).getModules());"
+        "content": "     * @param index A valid index."
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "     * @return A list of modules taken in the semester."
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "    @Override"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Updates {@code modulesTaken} to contain all modules user has taken for every semester."
+        "content": "    public ObservableList\u003cModule\u003e getTakenModules(int index) {"
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "        return FXCollections.unmodifiableObservableList("
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void listTakenModulesAll() {"
+        "content": "                semesters.get(index).getModules());"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e modules \u003d new ArrayList\u003c\u003e();"
+        "content": "    }"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (Semester s : semesters) {"
+        "content": ""
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            modules.addAll(s.getModules());"
+        "content": "    /**"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "     * Updates {@code modulesTaken} to contain all modules user has taken for every semester."
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        setTakenModules(modules);"
+        "content": "     */"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "    public void listTakenModulesAll() {"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        List\u003cModule\u003e modules \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Updates {@code modulesTaken} to contain all modules user has taken in a given year."
+        "content": "        for (Semester s : semesters) {"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": "            modules.addAll(s.getModules());"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @param year An integer between 1 to 4."
+        "content": "        }"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "        takenIndex \u003d ALL_SEMESTERS;"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void listTakenModulesYear(int year) {"
+        "content": "        setTakenModules(modules);"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        int[] indices \u003d IndexUtil.getIndicesFromYear(year);"
+        "content": "    }"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e modules \u003d new ArrayList\u003c\u003e();"
+        "content": ""
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (int i \u003d 0; i \u003c indices.length; i++) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            modules.addAll(semesters.get(indices[i]).getModules());"
+        "content": "     * Updates {@code modulesTaken} to contain all modules user has taken in a given year."
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "     *"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        setTakenModules(modules);"
+        "content": "     * @param year An integer between 1 to 4."
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    public void listTakenModulesYear(int year) {"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public ObservableList\u003cModule\u003e listTakenModules() {"
+        "content": "        int[] indices \u003d IndexUtil.getIndicesFromYear(year);"
       },
       {
         "lineNumber": 269,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return takenModules;"
+        "content": "        List\u003cModule\u003e modules \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 270,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        for (int i \u003d 0; i \u003c indices.length; i++) {"
       },
       {
         "lineNumber": 271,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "            modules.addAll(semesters.get(indices[i]).getModules());"
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private void setTakenModules(List\u003cModule\u003e modules) {"
+        "content": "        }"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        takenModules.setAll(modules);"
+        "content": "        takenIndex \u003d year;"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        setTakenModules(modules);"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Returns all {@code Module}s available wrapped in an {@code ObservableList}."
+        "content": "    public ObservableList\u003cModule\u003e listTakenModules() {"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": "        return takenModules;"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @return An {@code ObservableList} containing all the {@code Module}s"
+        "content": "    }"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 281,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public ObservableList\u003cModule\u003e getAvailableModules() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 282,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        setAvailableModules(getModulesAvailable(index));"
+        "content": "     * Update {@code takenModules} according to the latest displayed list upon add or delete command."
       },
       {
         "lineNumber": 283,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return availableModules;"
+        "content": "     */"
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "    private void updateTakenModules() {"
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        if (takenIndex \u003d\u003d ALL_SEMESTERS) {"
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "            listTakenModulesAll();"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Resets the existing data of this {@code ModulePlanner} with {@code newData}."
+        "content": "        } else {"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "            listTakenModulesYear(takenIndex);"
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void resetData(ReadOnlyModulePlanner newData) {"
+        "content": "        }"
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        requireNonNull(newData);"
+        "content": "    }"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        setAvailableModules(getModulesAvailable(index));"
+        "content": ""
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        setModulesInSemesters(newData.getSemesters());"
+        "content": "    private void setTakenModules(List\u003cModule\u003e modules) {"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        takenModules.setAll(modules);"
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 295,
@@ -45429,245 +45429,245 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void setModulesInSemesters(List\u003cSemester\u003e semesters) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 297,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (int i \u003d 0; i \u003c MAX_NUMBER_SEMESTERS; i++) {"
+        "content": "     * Returns all {@code Module}s available wrapped in an {@code ObservableList}."
       },
       {
         "lineNumber": 298,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            this.semesters.get(i).setTakenModules(semesters.get(i));"
+        "content": "     *"
       },
       {
         "lineNumber": 299,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "     * @return An {@code ObservableList} containing all the {@code Module}s"
       },
       {
         "lineNumber": 300,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 301,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "    public ObservableList\u003cModule\u003e getAvailableModules() {"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "        setAvailableModules(getModulesAvailable(availableIndex));"
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Updates the list of modules available based on given index and stores the index for add and delete commands."
+        "content": "        return availableModules;"
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": "    }"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @param index An integer from 0 to 7 inclusive indicating the year and semester to suggest."
+        "content": ""
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public void suggestModules(int index) {"
+        "content": "     * Resets the existing data of this {@code ModulePlanner} with {@code newData}."
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        this.index \u003d index;"
+        "content": "     */"
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        setAvailableModules(getModulesAvailable(index));"
+        "content": "    public void resetData(ReadOnlyModulePlanner newData) {"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        requireNonNull(newData);"
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        setAvailableModules(getModulesAvailable(availableIndex));"
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "        setModulesInSemesters(newData.getSemesters());"
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * Get a list of all the modules user can take based on the modules user has taken until given index."
+        "content": "    }"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": ""
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @param index An integer from 0 to 7 inclusive to show the current year and semester to suggest."
+        "content": ""
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @return A list of {@code Module}s the user is available to take."
+        "content": "    public void setModulesInSemesters(List\u003cSemester\u003e semesters) {"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "        for (int i \u003d 0; i \u003c MAX_NUMBER_SEMESTERS; i++) {"
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private List\u003cModule\u003e getModulesAvailable(int index) {"
+        "content": "            this.semesters.get(i).setTakenModules(semesters.get(i));"
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e modulesAvailable \u003d new ArrayList\u003c\u003e();"
+        "content": "        }"
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e modulesTaken \u003d getAllModulesTaken();"
+        "content": "    }"
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e modulesTakenBeforeIndex \u003d getAllModulesTakenBeforeIndex(index);"
+        "content": ""
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e allModules \u003d getAllModulesFromStorage();"
+        "content": "    /**"
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "     * Updates the list of modules available based on given index and stores the index for add and delete commands."
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (Module m : allModules) {"
+        "content": "     *"
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            if (ModuleUtil.isModuleAvailableToTake(modulesTaken, modulesTakenBeforeIndex, m)) {"
+        "content": "     * @param index An integer from 0 to 7 inclusive indicating the year and semester to suggest."
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                modulesAvailable.add(m);"
+        "content": "     */"
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            }"
+        "content": "    public void suggestModules(int index) {"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "        availableIndex \u003d index;"
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        setAvailableModules(getModulesAvailable(index));"
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        sortAvailableModules(modulesAvailable, userProfile);"
+        "content": "    }"
       },
       {
         "lineNumber": 331,
@@ -45681,266 +45681,266 @@
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return modulesAvailable;"
+        "content": "    /**"
       },
       {
         "lineNumber": 333,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "     * Get a list of all the modules user can take based on the modules user has taken until given index."
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "     *"
       },
       {
         "lineNumber": 335,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": "    // @@author rongjiecomputer"
+        "content": "     * @param index An integer from 0 to 7 inclusive to show the current year and semester to suggest."
       },
       {
         "lineNumber": 336,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "     * @return A list of {@code Module}s the user is available to take."
       },
       {
         "lineNumber": 337,
         "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 338,
-        "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "     * Sort {@code modulesAvailable} based on the information in {@code userProfile}."
-      },
-      {
-        "lineNumber": 339,
-        "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
         "content": "     */"
       },
       {
+        "lineNumber": 338,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    private List\u003cModule\u003e getModulesAvailable(int index) {"
+      },
+      {
+        "lineNumber": 339,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        List\u003cModule\u003e modulesAvailable \u003d new ArrayList\u003c\u003e();"
+      },
+      {
         "lineNumber": 340,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": "    private void sortAvailableModules(List\u003cModule\u003e modulesAvailable, UserProfile userProfile) {"
+        "content": "        List\u003cModule\u003e modulesTaken \u003d getAllModulesTaken();"
       },
       {
         "lineNumber": 341,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": "        Map\u003cMajor, MajorDescription\u003e map;"
+        "content": "        List\u003cModule\u003e modulesTakenBeforeIndex \u003d getAllModulesTakenBeforeIndex(index);"
       },
       {
         "lineNumber": 342,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": "        try {"
+        "content": "        List\u003cModule\u003e allModules \u003d getAllModulesFromStorage();"
       },
       {
         "lineNumber": 343,
         "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "            URL resource \u003d MainApp.class.getResource(\"/data/majorDescription.json\");"
-      },
-      {
-        "lineNumber": 344,
-        "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "            String text \u003d Resources.toString(resource, Charsets.UTF_8);"
-      },
-      {
-        "lineNumber": 345,
-        "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "            map \u003d JsonUtil.getObjectMapper().readValue(text, MajorDescription.MAP_TYPE_REF);"
-      },
-      {
-        "lineNumber": 346,
-        "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "        } catch (IOException e) {"
-      },
-      {
-        "lineNumber": 347,
-        "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "            logger.warning(\"Unable to read majorDescription file. Start with an empty map.\");"
-      },
-      {
-        "lineNumber": 348,
-        "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "            map \u003d new HashMap\u003c\u003e();"
-      },
-      {
-        "lineNumber": 349,
-        "author": {
-          "gitId": "rongjiecomputer"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 350,
-        "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
         "content": ""
       },
       {
+        "lineNumber": 344,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        for (Module m : allModules) {"
+      },
+      {
+        "lineNumber": 345,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "            if (ModuleUtil.isModuleAvailableToTake(modulesTaken, modulesTakenBeforeIndex, m)) {"
+      },
+      {
+        "lineNumber": 346,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "                modulesAvailable.add(m);"
+      },
+      {
+        "lineNumber": 347,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 348,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 349,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 350,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        sortAvailableModules(modulesAvailable, userProfile);"
+      },
+      {
         "lineNumber": 351,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": "        // Note: Collections.sort uses stable sort when sorting objects, which we are exploiting here so that"
+        "content": ""
       },
       {
         "lineNumber": 352,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": "        // we can chain our sorting and still making sure that the order created by each comparator is preserved."
+        "content": "        return modulesAvailable;"
       },
       {
         "lineNumber": 353,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": "        //"
+        "content": "    }"
       },
       {
         "lineNumber": 354,
         "author": {
-          "gitId": "rongjiecomputer"
+          "gitId": "Hilda-Ang"
         },
-        "content": "        // The order of comparators you applied to the list matters!"
+        "content": ""
       },
       {
         "lineNumber": 355,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    // @@author rongjiecomputer"
       },
       {
         "lineNumber": 356,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        // Step 1. If we have the information for this major, we stop immediately."
+        "content": ""
       },
       {
         "lineNumber": 357,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        if (!map.containsKey(userProfile.getMajor())) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 358,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            return;"
+        "content": "     * Sort {@code modulesAvailable} based on the information in {@code userProfile}."
       },
       {
         "lineNumber": 359,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 360,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    private void sortAvailableModules(List\u003cModule\u003e modulesAvailable, UserProfile userProfile) {"
       },
       {
         "lineNumber": 361,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        Major major \u003d userProfile.getMajor();"
+        "content": "        Map\u003cMajor, MajorDescription\u003e map;"
       },
       {
         "lineNumber": 362,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        MajorDescription majorDescription \u003d map.get(major);"
+        "content": "        try {"
       },
       {
         "lineNumber": 363,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "            URL resource \u003d MainApp.class.getResource(\"/data/majorDescription.json\");"
       },
       {
         "lineNumber": 364,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        logger.info(String.format(\"Requirements for user\u0027s major (%s) found. Prioritize modules start with %s.\","
+        "content": "            String text \u003d Resources.toString(resource, Charsets.UTF_8);"
       },
       {
         "lineNumber": 365,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                major, majorDescription.getPrefixes()));"
+        "content": "            map \u003d JsonUtil.getObjectMapper().readValue(text, MajorDescription.MAP_TYPE_REF);"
       },
       {
         "lineNumber": 366,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        } catch (IOException e) {"
       },
       {
         "lineNumber": 367,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        List\u003cString\u003e prefixes \u003d new ArrayList\u003c\u003e(majorDescription.getPrefixes());"
+        "content": "            logger.warning(\"Unable to read majorDescription file. Start with an empty map.\");"
       },
       {
         "lineNumber": 368,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        // Add GE module prefixes for consideration as well."
+        "content": "            map \u003d new HashMap\u003c\u003e();"
       },
       {
         "lineNumber": 369,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        prefixes.addAll(List.of(\"GER\", \"GEQ\", \"GES\", \"GET\", \"GEH\"));"
+        "content": "        }"
       },
       {
         "lineNumber": 370,
@@ -45954,133 +45954,133 @@
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        // Step 2. Move modules that matches prefixes to the front of available module list."
+        "content": "        // Note: Collections.sort uses stable sort when sorting objects, which we are exploiting here so that"
       },
       {
         "lineNumber": 372,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        Comparator\u003cModule\u003e moveFacultyModuleToFront \u003d (Module lhs, Module rhs) -\u003e {"
+        "content": "        // we can chain our sorting and still making sure that the order created by each comparator is preserved."
       },
       {
         "lineNumber": 373,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            return Integer.compare("
+        "content": "        //"
       },
       {
         "lineNumber": 374,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                    ModuleUtil.rankModuleCodePrefixes(lhs.getCode(), prefixes),"
+        "content": "        // The order of comparators you applied to the list matters!"
       },
       {
         "lineNumber": 375,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                    ModuleUtil.rankModuleCodePrefixes(rhs.getCode(), prefixes));"
+        "content": ""
       },
       {
         "lineNumber": 376,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        };"
+        "content": "        // Step 1. If we have the information for this major, we stop immediately."
       },
       {
         "lineNumber": 377,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        Collections.sort(modulesAvailable, moveFacultyModuleToFront);"
+        "content": "        if (!map.containsKey(userProfile.getMajor())) {"
       },
       {
         "lineNumber": 378,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "            return;"
       },
       {
         "lineNumber": 379,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        // Step 3. Move more prioritized modules to the front of available module list."
+        "content": "        }"
       },
       {
         "lineNumber": 380,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        Comparator\u003cModule\u003e moveImportantModuleToFront \u003d (Module lhs, Module rhs) -\u003e {"
+        "content": ""
       },
       {
         "lineNumber": 381,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            return Integer.compare("
+        "content": "        Major major \u003d userProfile.getMajor();"
       },
       {
         "lineNumber": 382,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                    ModuleUtil.rankModuleCodeFromPriorityList(lhs.getCode(), majorDescription.getModules()),"
+        "content": "        MajorDescription majorDescription \u003d map.get(major);"
       },
       {
         "lineNumber": 383,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "                    ModuleUtil.rankModuleCodeFromPriorityList(rhs.getCode(), majorDescription.getModules())"
+        "content": ""
       },
       {
         "lineNumber": 384,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "            );"
+        "content": "        logger.info(String.format(\"Requirements for user\u0027s major (%s) found. Prioritize modules start with %s.\","
       },
       {
         "lineNumber": 385,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        };"
+        "content": "                major, majorDescription.getPrefixes()));"
       },
       {
         "lineNumber": 386,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "        Collections.sort(modulesAvailable, moveImportantModuleToFront);"
+        "content": ""
       },
       {
         "lineNumber": 387,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    }"
+        "content": "        List\u003cString\u003e prefixes \u003d new ArrayList\u003c\u003e(majorDescription.getPrefixes());"
       },
       {
         "lineNumber": 388,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        // Add GE module prefixes for consideration as well."
       },
       {
         "lineNumber": 389,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    // @@author"
+        "content": "        prefixes.addAll(List.of(\"GER\", \"GEQ\", \"GES\", \"GET\", \"GEH\"));"
       },
       {
         "lineNumber": 390,
@@ -46092,383 +46092,523 @@
       {
         "lineNumber": 391,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "    /**"
+        "content": "        // Step 2. Move modules that matches prefixes to the front of available module list."
       },
       {
         "lineNumber": 392,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     * Combines the list of {@code Module}s taken from every {@code Semester}."
+        "content": "        Comparator\u003cModule\u003e moveFacultyModuleToFront \u003d (Module lhs, Module rhs) -\u003e {"
       },
       {
         "lineNumber": 393,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     *"
+        "content": "            return Integer.compare("
       },
       {
         "lineNumber": 394,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     * @return A list of all {@code Module}s the user has taken."
+        "content": "                    ModuleUtil.rankModuleCodePrefixes(lhs.getCode(), prefixes),"
       },
       {
         "lineNumber": 395,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     */"
+        "content": "                    ModuleUtil.rankModuleCodePrefixes(rhs.getCode(), prefixes));"
       },
       {
         "lineNumber": 396,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "    private List\u003cModule\u003e getAllModulesTaken() {"
+        "content": "        };"
       },
       {
         "lineNumber": 397,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "        List\u003cModule\u003e modulesTaken \u003d new ArrayList\u003c\u003e();"
+        "content": "        Collections.sort(modulesAvailable, moveFacultyModuleToFront);"
       },
       {
         "lineNumber": 398,
         "author": {
-          "gitId": "Hilda-Ang"
-        },
-        "content": "        for (Semester s : semesters) {"
-      },
-      {
-        "lineNumber": 399,
-        "author": {
-          "gitId": "GabrielYik"
-        },
-        "content": "            modulesTaken.addAll(s.getModules());"
-      },
-      {
-        "lineNumber": 400,
-        "author": {
-          "gitId": "Hilda-Ang"
-        },
-        "content": "        }"
-      },
-      {
-        "lineNumber": 401,
-        "author": {
-          "gitId": "Hilda-Ang"
-        },
-        "content": "        return modulesTaken;"
-      },
-      {
-        "lineNumber": 402,
-        "author": {
-          "gitId": "Hilda-Ang"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 403,
-        "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
         "content": ""
       },
       {
+        "lineNumber": 399,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "        // Step 3. Move more prioritized modules to the front of available module list."
+      },
+      {
+        "lineNumber": 400,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "        Comparator\u003cModule\u003e moveImportantModuleToFront \u003d (Module lhs, Module rhs) -\u003e {"
+      },
+      {
+        "lineNumber": 401,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "            return Integer.compare("
+      },
+      {
+        "lineNumber": 402,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "                    ModuleUtil.rankModuleCodeFromPriorityList(lhs.getCode(), majorDescription.getModules()),"
+      },
+      {
+        "lineNumber": 403,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "                    ModuleUtil.rankModuleCodeFromPriorityList(rhs.getCode(), majorDescription.getModules())"
+      },
+      {
         "lineNumber": 404,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "    /**"
+        "content": "            );"
       },
       {
         "lineNumber": 405,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     * Combines the list of {@code Module}s taken for every {@code Semester} until current index."
+        "content": "        };"
       },
       {
         "lineNumber": 406,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     *"
+        "content": "        Collections.sort(modulesAvailable, moveImportantModuleToFront);"
       },
       {
         "lineNumber": 407,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     * @param index The current index user is at."
+        "content": "    }"
       },
       {
         "lineNumber": 408,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     * @return A list of all {@code Module}s the user has taken until the specified index."
+        "content": ""
       },
       {
         "lineNumber": 409,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "     */"
+        "content": "    // @@author"
       },
       {
         "lineNumber": 410,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "rongjiecomputer"
         },
-        "content": "    private List\u003cModule\u003e getAllModulesTakenBeforeIndex(int index) {"
+        "content": ""
       },
       {
         "lineNumber": 411,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e modulesTaken \u003d new ArrayList\u003c\u003e();"
+        "content": "    /**"
       },
       {
         "lineNumber": 412,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (int i \u003d 0; i \u003c index; i++) {"
+        "content": "     * Combines the list of {@code Module}s taken from every {@code Semester}."
       },
       {
         "lineNumber": 413,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            modulesTaken.addAll(semesters.get(i).getModules());"
+        "content": "     *"
       },
       {
         "lineNumber": 414,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "     * @return A list of all {@code Module}s the user has taken."
       },
       {
         "lineNumber": 415,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return modulesTaken;"
+        "content": "     */"
       },
       {
         "lineNumber": 416,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "    private List\u003cModule\u003e getAllModulesTaken() {"
       },
       {
         "lineNumber": 417,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "        List\u003cModule\u003e modulesTaken \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 418,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    /**"
+        "content": "        for (Semester s : semesters) {"
       },
       {
         "lineNumber": 419,
         "author": {
-          "gitId": "Hilda-Ang"
+          "gitId": "GabrielYik"
         },
-        "content": "     * Get a list of all {@code Module}s data stored."
+        "content": "            modulesTaken.addAll(s.getModules());"
       },
       {
         "lineNumber": 420,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     *"
+        "content": "        }"
       },
       {
         "lineNumber": 421,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     * @return A list of all {@code Module}s in the storage."
+        "content": "        return modulesTaken;"
       },
       {
         "lineNumber": 422,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 423,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    private List\u003cModule\u003e getAllModulesFromStorage() {"
+        "content": ""
       },
       {
         "lineNumber": 424,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        ModuleInfo[] allModuleInfo \u003d ModuleInfo.getModuleInfoList();"
+        "content": "    /**"
       },
       {
         "lineNumber": 425,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        List\u003cModule\u003e allModules \u003d new ArrayList\u003c\u003e();"
+        "content": "     * Combines the list of {@code Module}s taken for every {@code Semester} until current index."
       },
       {
         "lineNumber": 426,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "     *"
       },
       {
         "lineNumber": 427,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        for (ModuleInfo mi : allModuleInfo) {"
+        "content": "     * @param index The current index user is at."
       },
       {
         "lineNumber": 428,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            Module m \u003d new Module(mi.getCode());"
+        "content": "     * @return A list of all {@code Module}s the user has taken until the specified index."
       },
       {
         "lineNumber": 429,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "            allModules.add(m);"
+        "content": "     */"
       },
       {
         "lineNumber": 430,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        }"
+        "content": "    private List\u003cModule\u003e getAllModulesTakenBeforeIndex(int index) {"
       },
       {
         "lineNumber": 431,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return allModules;"
+        "content": "        List\u003cModule\u003e modulesTaken \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 432,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        for (int i \u003d 0; i \u003c index; i++) {"
       },
       {
         "lineNumber": 433,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "            modulesTaken.addAll(semesters.get(i).getModules());"
       },
       {
         "lineNumber": 434,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": "        }"
       },
       {
         "lineNumber": 435,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "        return modulesTaken;"
       },
       {
         "lineNumber": 436,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "    }"
       },
       {
         "lineNumber": 437,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                || (other instanceof ModulePlanner // instanceof handles nulls"
+        "content": ""
       },
       {
         "lineNumber": 438,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "                \u0026\u0026 semesters.equals(((ModulePlanner) other).semesters));"
+        "content": "    /**"
       },
       {
         "lineNumber": 439,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "     * Get a list of all {@code Module}s data stored."
       },
       {
         "lineNumber": 440,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": ""
+        "content": "     *"
       },
       {
         "lineNumber": 441,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    @Override"
+        "content": "     * @return A list of all {@code Module}s in the storage."
       },
       {
         "lineNumber": 442,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    public int hashCode() {"
+        "content": "     */"
       },
       {
         "lineNumber": 443,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "        return semesters.hashCode();"
+        "content": "    private List\u003cModule\u003e getAllModulesFromStorage() {"
       },
       {
         "lineNumber": 444,
         "author": {
           "gitId": "Hilda-Ang"
         },
-        "content": "    }"
+        "content": "        ModuleInfo[] allModuleInfo \u003d ModuleInfo.getModuleInfoList();"
       },
       {
         "lineNumber": 445,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        List\u003cModule\u003e allModules \u003d new ArrayList\u003c\u003e();"
+      },
+      {
+        "lineNumber": 446,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 447,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        for (ModuleInfo mi : allModuleInfo) {"
+      },
+      {
+        "lineNumber": 448,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "            Module m \u003d new Module(mi.getCode());"
+      },
+      {
+        "lineNumber": 449,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "            allModules.add(m);"
+      },
+      {
+        "lineNumber": 450,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 451,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        return allModules;"
+      },
+      {
+        "lineNumber": 452,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 453,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 454,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 455,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 456,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 457,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "                || (other instanceof ModulePlanner // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 458,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "                \u0026\u0026 semesters.equals(((ModulePlanner) other).semesters));"
+      },
+      {
+        "lineNumber": 459,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 460,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 461,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 462,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    public int hashCode() {"
+      },
+      {
+        "lineNumber": 463,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "        return semesters.hashCode();"
+      },
+      {
+        "lineNumber": 464,
+        "author": {
+          "gitId": "Hilda-Ang"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 465,
         "author": {
           "gitId": "Hilda-Ang"
         },
@@ -46476,9 +46616,9 @@
       }
     ],
     "authorContributionMap": {
-      "GabrielYik": 99,
+      "GabrielYik": 100,
       "rongjiecomputer": 75,
-      "Hilda-Ang": 271
+      "Hilda-Ang": 290
     }
   },
   {
@@ -122816,189 +122956,189 @@
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "OUTPUT_JSON \u003d os.path.join(CURRENT_DIR, \"..\", \"src\", \"main\", \"resources\", \"data\", \"moduleInfo.json\")"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "WHITELISTS \u003d [\"CS\", \"CEG\", \"IS\", \"MA\", \"GE\"]"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "def notNull(str):"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "def filterModule(moduleCode):"
+        "content": "  return str.lower() !\u003d \"nil\""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  return True"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  for w in WHITELISTS:"
+        "content": "if not os.path.exists(NUSMODS_JSON):"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    if moduleCode.startswith(w):"
+        "content": "  req \u003d urllib.request.Request(\"https://api.nusmods.com/2018-2019/moduleInformation.json\")"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "      return True"
+        "content": "  res \u003d urllib.request.urlopen(req)"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  return False"
+        "content": "  data \u003d res.read()"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "  with open(NUSMODS_JSON, \"w\", encoding\u003d\"utf8\") as f:"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "def notNull(str):"
+        "content": "    f.write(data.decode(\"utf8\"))"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  return str.lower() !\u003d \"nil\""
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "with open(NUSMODS_JSON, \"r\", encoding\u003d\"utf8\") as f:"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "if not os.path.exists(NUSMODS_JSON):"
+        "content": "  obj \u003d json.load(f)"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  req \u003d urllib.request.Request(\"https://api.nusmods.com/2018-2019/moduleInformation.json\")"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  res \u003d urllib.request.urlopen(req)"
+        "content": "newObj \u003d []"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  data \u003d res.read()"
+        "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  with open(NUSMODS_JSON, \"w\", encoding\u003d\"utf8\") as f:"
+        "content": "modulePattern \u003d re.compile(r\"([A-Z]{2,3})(\\d{4})([A-Z]{0,2})\")"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    f.write(data.decode(\"utf8\"))"
+        "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "def scrapeAllModules(str):"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "with open(NUSMODS_JSON, \"r\", encoding\u003d\"utf8\") as f:"
+        "content": "  x \u003d []"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  obj \u003d json.load(f)"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "  if str:"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "newObj \u003d []"
+        "content": "    match \u003d modulePattern.search(str)"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "count \u003d 0"
+        "content": "    while match:"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "      x.append(match.group(0))"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "modulePattern \u003d re.compile(r\"([A-Z]{2,3})(\\d{4})([A-Z]{0,2})\")"
+        "content": "      match \u003d modulePattern.search(str, match.end())"
       },
       {
         "lineNumber": 41,
@@ -123012,280 +123152,280 @@
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "def scrapeAllModules(str):"
+        "content": "  return x"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  x \u003d []"
+        "content": ""
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "S \u003d set()"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  if str:"
+        "content": "Map \u003d {}"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    match \u003d modulePattern.search(str)"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    while match:"
+        "content": "for mod in obj:"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "      x.append(match.group(0))"
+        "content": "  newMod \u003d {}"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "      match \u003d modulePattern.search(str, match.end())"
+        "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "  moduleCode \u003d mod[\"ModuleCode\"]"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  return x"
+        "content": "  S.add(moduleCode)"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "  newMod[\"code\"] \u003d moduleCode"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "S \u003d set()"
+        "content": "  newMod[\"name\"] \u003d mod[\"ModuleTitle\"]"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "  newMod[\"creditCount\"] \u003d float(mod[\"ModuleCredit\"])"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "for mod in obj:"
+        "content": "  newMod[\"description\"] \u003d mod.get(\"ModuleDescription\", \"\")"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  newMod \u003d {}"
+        "content": "  newMod[\"preclusions\"] \u003d scrapeAllModules(mod.get(\"Preclusion\", \"\"))"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "  newMod[\"prerequisites\"] \u003d scrapeAllModules(mod.get(\"Prerequisite\", \"\"))"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  moduleCode \u003d mod[\"ModuleCode\"]"
+        "content": "  newObj.append(newMod)"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  S.add(moduleCode)"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  if filterModule(moduleCode):"
+        "content": "  Map[moduleCode] \u003d newMod"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    newMod[\"code\"] \u003d moduleCode"
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    newMod[\"name\"] \u003d mod[\"ModuleTitle\"]"
+        "content": "# Remove module codes that do not have its module info entry"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    newMod[\"creditCount\"] \u003d float(mod[\"ModuleCredit\"])"
+        "content": "def deleteModules(newObj):"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    newMod[\"description\"] \u003d mod.get(\"ModuleDescription\", \"\")"
+        "content": "  res \u003d 0"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    newMod[\"preclusions\"] \u003d scrapeAllModules(mod.get(\"Preclusion\", \"\"))"
+        "content": "  for module in newObj:"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    newMod[\"prerequisites\"] \u003d scrapeAllModules(mod.get(\"Prerequisite\", \"\"))"
+        "content": "    prereq \u003d module[\"prerequisites\"]"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    newObj.append(newMod)"
+        "content": "    for m in prereq:"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    count +\u003d 1"
+        "content": "      if m not in S:"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        res +\u003d 1"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "for module in newObj:"
+        "content": "        prereq.remove(m)"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  prereq \u003d module[\"prerequisites\"]"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  for m in prereq:"
+        "content": "    preclu \u003d module[\"preclusions\"]"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    if m not in S:"
+        "content": "    for m in preclu:"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "      prereq.remove(m)"
+        "content": "      if m not in S:"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "        res +\u003d 1"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  preclu \u003d module[\"preclusions\"]"
+        "content": "        preclu.remove(m)"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  for m in preclu:"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "    if m not in S:"
+        "content": "  return res"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "      preclu.remove(m)"
+        "content": ""
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "while deleteModules(newObj) \u003e 0:"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "print(count)"
+        "content": "  pass"
       },
       {
         "lineNumber": 82,
@@ -123299,45 +123439,150 @@
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "output \u003d os.path.join(CURRENT_DIR, \"..\", \"src\", \"main\", \"resources\", \"data\", \"moduleInfo.json\")"
+        "content": "# Ensure backward preclusion relationship"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "for module in newObj:"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "with open(output, \"w\", encoding\u003d\"utf8\") as f:"
+        "content": "  preclu \u003d module[\"preclusions\"]"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "  json.dump(newObj, f, separators\u003d(\u0027,\u0027,\u0027:\u0027)) # indent\u003d2"
+        "content": "  for moduleCode in preclu:"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": ""
+        "content": "    m \u003d Map[moduleCode]"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "rongjiecomputer"
         },
-        "content": "with open(output, \"a\", encoding\u003d\"utf8\") as f:"
+        "content": "    if module[\"code\"] not in m[\"preclusions\"]:"
       },
       {
         "lineNumber": 89,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "      m[\"preclusions\"].append(module[\"code\"])"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "# Remove MA1301 and MA1301X as prereq"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "A_LEVEL_MATHS \u003d [\"MA1301\", \"MA1301X\"]"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "for module in newObj:"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "  for ma in [\"MA1301\", \"MA1301X\"]:"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "    if ma in module[\"prerequisites\"] and module[\"code\"] not in A_LEVEL_MATHS:"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "      module[\"prerequisites\"].remove(ma)"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "print(len(newObj))"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "with open(OUTPUT_JSON, \"w\", encoding\u003d\"utf8\") as f:"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "  json.dump(newObj, f, separators\u003d(\u0027,\u0027,\u0027:\u0027)) # indent\u003d2"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "rongjiecomputer"
+        },
+        "content": "with open(OUTPUT_JSON, \"a\", encoding\u003d\"utf8\") as f:"
+      },
+      {
+        "lineNumber": 104,
         "author": {
           "gitId": "rongjiecomputer"
         },
@@ -123345,7 +123590,7 @@
       }
     ],
     "authorContributionMap": {
-      "rongjiecomputer": 89
+      "rongjiecomputer": 104
     }
   }
 ]

@@ -24206,329 +24206,329 @@
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "import seedu.address.model.portation.exceptions.InvalidImportFileException;"
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": " * Import cards from specified location to the trivia bundle."
+        "content": "/**"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": " */"
+        "content": " * Import cards from specified location to the trivia bundle."
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "public class ImportCommand extends Command {"
+        "content": " */"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "public class ImportCommand extends Command {"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String COMMAND_WORD \u003d \"import\";"
+        "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Imports cards to the trivia. \""
+        "content": "    public static final String COMMAND_WORD \u003d \"import\";"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            + \"Parameters: \""
+        "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Imports cards to the trivia. \""
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            + \"File path\\n\""
+        "content": "            + \"Parameters: \""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            + \"Example: \" + COMMAND_WORD + \" \""
+        "content": "            + \"File path\\n\""
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            + \"C:\\\\Users\\\\username\\\\Desktop\\\\cards.txt\";"
+        "content": "            + \"Example: \" + COMMAND_WORD + \" \""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "            + \"C:\\\\Users\\\\username\\\\Desktop\\\\cards.txt\";"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"%1$s card(s) imported from: %2$s.\";"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_INVALID_IMPORT_FILE_FORMAT \u003d \"Invalid import file format.\";"
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"%1$s card(s) imported from: %2$s.\";"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_INVALID_IMPORT_FILE_NO_CARDS_FOUND \u003d \"No cards found.\";"
+        "content": "    public static final String MESSAGE_FAIL \u003d \"The file failed to import: %1$s\";"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_DUPLICATE_CARD \u003d \"Some cards already exists in the trivia bundle.\";"
+        "content": "    public static final String MESSAGE_INVALID_IMPORT_FILE_NO_CARDS_FOUND \u003d \"No cards found.\";"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    private final ImportFile importFile;"
+        "content": "    public static final String MESSAGE_DUPLICATE_CARD \u003d \"Some cards already exists in the trivia bundle.\";"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    private final ImportFile importFile;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * Creates an ImportCommand with the file name {@code fileName} to import the cards {@code cards}"
+        "content": "    /**"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     */"
+        "content": "     * Creates an ImportCommand with the file name {@code fileName} to import the cards {@code cards}"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public ImportCommand(ImportFile file) {"
+        "content": "     */"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        requireNonNull(file);"
+        "content": "    public ImportCommand(ImportFile file) {"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        importFile \u003d file;"
+        "content": "        requireNonNull(file);"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        importFile \u003d file;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        if (!importFile.isFileValid()) {"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            throw new CommandException(MESSAGE_INVALID_IMPORT_FILE_FORMAT);"
+        "content": "        try {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        }"
+        "content": "            importFile.isFileValid();"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        } catch (InvalidImportFileException ife) {"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        UniqueCardList cardsToImport \u003d importFile.parseFileToCards();"
+        "content": "            throw new CommandException(String.format(MESSAGE_FAIL, ife.getMessage()));"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        if (cardsToImport.isEmpty()) {"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            throw new CommandException(MESSAGE_INVALID_IMPORT_FILE_NO_CARDS_FOUND);"
+        "content": "        UniqueCardList cardsToImport \u003d importFile.parseFileToCards();"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        if (cardsToImport.isEmpty()) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        if (model.haveAnyCard(cardsToImport)) {"
+        "content": "            throw new CommandException(MESSAGE_INVALID_IMPORT_FILE_NO_CARDS_FOUND);"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            throw new CommandException(MESSAGE_DUPLICATE_CARD);"
+        "content": "        }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        if (model.haveAnyCard(cardsToImport)) {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        model.addMultipleCards(cardsToImport);"
+        "content": "            throw new CommandException(MESSAGE_DUPLICATE_CARD);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        model.commitTriviaBundle();"
+        "content": "        }"
       },
       {
         "lineNumber": 56,
@@ -24542,14 +24542,14 @@
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, cardsToImport.size(), importFile.getFileName()));"
+        "content": "        model.addMultipleCards(cardsToImport);"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        model.commitTriviaBundle();"
       },
       {
         "lineNumber": 59,
@@ -24563,45 +24563,66 @@
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Override"
+        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, cardsToImport.size(), importFile.getFileName()));"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                || (other instanceof ImportCommand // instanceof handles nulls"
+        "content": "    @Override"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                \u0026\u0026 importFile.equals(((ImportCommand) other).importFile));"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 66,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "                || (other instanceof ImportCommand // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "                \u0026\u0026 importFile.equals(((ImportCommand) other).importFile));"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
         "author": {
           "gitId": "hozongsien"
         },
@@ -24609,7 +24630,7 @@
       }
     ],
     "authorContributionMap": {
-      "hozongsien": 66
+      "hozongsien": 69
     }
   },
   {
@@ -43664,84 +43685,84 @@
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import seedu.address.model.topic.Topic;"
+        "content": "import seedu.address.model.portation.exceptions.InvalidImportFileException;"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "import seedu.address.model.topic.Topic;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": " * Represents a file to be imported."
+        "content": "/**"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": " */"
+        "content": " * Represents a file to be imported."
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "public class ImportFile {"
+        "content": " */"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_INVALID_FILE \u003d \"Invalid file.\";"
+        "content": "public class ImportFile {"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_INVALID_FILE_FORMAT \u003d \"Invalid file format.\";"
+        "content": "    public static final String MESSAGE_INVALID_FILE \u003d \"Invalid file.\";"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_INVALID_FILE_UNABLE_TO_READ \u003d \"Unable to read file.\";"
+        "content": "    public static final String MESSAGE_INVALID_FILE_TYPE \u003d \"Invalid file type.\";"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public static final String MESSAGE_DUPLICATE_CARDS_FOUND \u003d \"Duplicate questions in file.\";"
+        "content": "    public static final String MESSAGE_INVALID_FILE_FORMAT \u003d \"Invalid file format.\";"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    public static final String MESSAGE_INVALID_FILE_UNABLE_TO_READ \u003d \"Unable to read file.\";"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    private final File importFile;"
+        "content": "    public static final String MESSAGE_DUPLICATE_CARDS_FOUND \u003d \"Duplicate questions in file.\";"
       },
       {
         "lineNumber": 32,
@@ -43755,920 +43776,927 @@
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public ImportFile(String filePath) {"
+        "content": "    private final File importFile;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        requireNonNull(filePath);"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        importFile \u003d new File(filePath);"
+        "content": "    public ImportFile(String filePath) {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        requireNonNull(filePath);"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        importFile \u003d new File(filePath);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * Ensures the file to be imported is valid, readable and non empty."
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public boolean isFileValid() {"
+        "content": "     * Ensures the file to be imported is valid, readable and non empty."
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        if (!isValidFile()) {"
+        "content": "     */"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            return false;"
+        "content": "    public void isFileValid() throws InvalidImportFileException {"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        } else if (!isValidFileType()) {"
+        "content": "        if (!isValidFile()) {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            return false;"
+        "content": "            throw new InvalidImportFileException(MESSAGE_INVALID_FILE);"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        } else if (!isValidFileFormat()) {"
+        "content": "        } else if (!isValidFileType()) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            return false;"
+        "content": "            throw new InvalidImportFileException(MESSAGE_INVALID_FILE_TYPE);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        }"
+        "content": "        } else if (!isValidFileFormat()) {"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return true;"
+        "content": "            throw new InvalidImportFileException(MESSAGE_INVALID_FILE_FORMAT);"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * Returns true if the import file is a file and is not empty."
+        "content": "    /**"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     */"
+        "content": "     * Returns true if the import file is a file and is not empty."
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    private boolean isValidFile() {"
+        "content": "     */"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        if (!importFile.isFile()) {"
+        "content": "    private boolean isValidFile() {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            return false;"
+        "content": "        if (!importFile.isFile()) {"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        } else if (importFile.length() \u003d\u003d 0) {"
+        "content": "            return false;"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            return false;"
+        "content": "        } else if (importFile.length() \u003d\u003d 0) {"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        }"
+        "content": "            return false;"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return true;"
+        "content": "        }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        return true;"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * Checks if file is a readable .txt format."
+        "content": "    /**"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * @return true if file is a readable text file."
+        "content": "     * Checks if file is a readable .txt format."
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     */"
+        "content": "     * @return true if file is a readable text file."
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    private boolean isValidFileType() {"
+        "content": "     */"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        try {"
+        "content": "    private boolean isValidFileType() {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            String fileType \u003d Files.probeContentType(importFile.toPath());"
+        "content": "        try {"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            if (!fileType.equals(\"text/plain\")) {"
+        "content": "            String fileType \u003d Files.probeContentType(importFile.toPath());"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                return false;"
+        "content": "            if (!fileType.equals(\"text/plain\")) {"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            }"
+        "content": "                return false;"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        } catch (IOException ioe) {"
+        "content": "            }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            return false;"
+        "content": "        } catch (IOException ioe) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        }"
+        "content": "            return false;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return true;"
+        "content": "        }"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        return true;"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * Returns true if the file is in the correct import file format."
+        "content": "    /**"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     */"
+        "content": "     * Returns true if the file is in the correct import file format."
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    private boolean isValidFileFormat() {"
+        "content": "     */"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        try (BufferedReader br \u003d new BufferedReader(new FileReader(importFile))) {"
+        "content": "    private boolean isValidFileFormat() {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            String line;"
+        "content": "        try (BufferedReader br \u003d new BufferedReader(new FileReader(importFile))) {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            while ((line \u003d br.readLine()) !\u003d null) {"
+        "content": "            String line;"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                if (FileParserUtil.isEmpty(line) || FileParserUtil.isTopicValidFormat(line)"
+        "content": "            while ((line \u003d br.readLine()) !\u003d null) {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                        || FileParserUtil.isQuestionAnswerValidFormat(line)) {"
+        "content": "                if (FileParserUtil.isEmpty(line) || FileParserUtil.isTopicValidFormat(line)"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                    continue;"
+        "content": "                        || FileParserUtil.isQuestionAnswerValidFormat(line)) {"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                }"
+        "content": "                    continue;"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "                }"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                raiseExtraInformationDisplayEvent();"
+        "content": ""
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                return false;"
+        "content": "                raiseExtraInformationDisplayEvent();"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            }"
+        "content": "                return false;"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        } catch (IOException ioe) {"
+        "content": "            }"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            return false;"
+        "content": "        } catch (IOException ioe) {"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        }"
+        "content": "            return false;"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return true;"
+        "content": "        }"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        return true;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    // TODO: write the format here"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    /**"
+        "content": "    // TODO: write the format here"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * Parses a file in a specific format into a set of cards."
+        "content": "    /**"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * @return The set of cards to be imported."
+        "content": "     * Parses a file in a specific format into a set of cards."
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * @throws FileParseException If the format of the file is different from expected."
+        "content": "     * @return The set of cards to be imported."
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     */"
+        "content": "     * @throws FileParseException If the format of the file is different from expected."
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public UniqueCardList parseFileToCards() throws FileParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        UniqueCardList cards \u003d new UniqueCardList();"
+        "content": "    public UniqueCardList parseFileToCards() throws FileParseException {"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        Set\u003cTopic\u003e topicSet \u003d new HashSet\u003c\u003e();"
+        "content": "        UniqueCardList cards \u003d new UniqueCardList();"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        Set\u003cTopic\u003e topicSet \u003d new HashSet\u003c\u003e();"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        try (BufferedReader br \u003d new BufferedReader(new FileReader(importFile))) {"
+        "content": ""
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            String line;"
+        "content": "        try (BufferedReader br \u003d new BufferedReader(new FileReader(importFile))) {"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            while ((line \u003d br.readLine()) !\u003d null) {"
+        "content": "            String line;"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                if (FileParserUtil.isEmpty(line)) { // allows new line between cards and topics"
+        "content": "            while ((line \u003d br.readLine()) !\u003d null) {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                    continue;"
+        "content": "                if (FileParserUtil.isEmpty(line)) { // allows new line between cards and topics"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                }"
+        "content": "                    continue;"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "                }"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                if (FileParserUtil.isTopic(line)) {"
+        "content": ""
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                    topicSet \u003d FileParserUtil.parseLineToTopicSet(line);"
+        "content": "                if (FileParserUtil.isTopic(line)) {"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                } else {"
+        "content": "                    topicSet \u003d FileParserUtil.parseLineToTopicSet(line);"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                    String[] cardString \u003d FileParserUtil.parseLineToQuestionAnswerPair(line);"
+        "content": "                } else {"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                    Card cardToAdd \u003d FileParserUtil.stringToCard(cardString, topicSet);"
+        "content": "                    String[] cardString \u003d FileParserUtil.parseLineToQuestionAnswerPair(line);"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                    cards.add(cardToAdd);"
+        "content": "                    Card cardToAdd \u003d FileParserUtil.stringToCard(cardString, topicSet);"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                }"
+        "content": "                    cards.add(cardToAdd);"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            }"
+        "content": "                }"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        } catch (IOException ioe) {"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            throw new FileParseException(MESSAGE_INVALID_FILE_UNABLE_TO_READ, ioe);"
+        "content": "        } catch (IOException ioe) {"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        } catch (FileParseException fpe) {"
+        "content": "            throw new FileParseException(MESSAGE_INVALID_FILE_UNABLE_TO_READ, ioe);"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            throw new FileParseException(MESSAGE_INVALID_FILE_FORMAT, fpe);"
+        "content": "        } catch (FileParseException fpe) {"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        } catch (DuplicateCardException dce) {"
+        "content": "            throw new FileParseException(MESSAGE_INVALID_FILE_FORMAT, fpe);"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "            throw new FileParseException(MESSAGE_DUPLICATE_CARDS_FOUND, dce);"
+        "content": "        } catch (DuplicateCardException dce) {"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        }"
+        "content": "            throw new FileParseException(MESSAGE_DUPLICATE_CARDS_FOUND, dce);"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return cards;"
+        "content": ""
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        return cards;"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * Raises an new event to display the import help display UI."
+        "content": "    /**"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     */"
+        "content": "     * Raises an new event to display the import help display UI."
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    private void raiseExtraInformationDisplayEvent() {"
+        "content": "     */"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        EventsCenter.getInstance()"
+        "content": "    private void raiseExtraInformationDisplayEvent() {"
       },
       {
         "lineNumber": 143,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "        EventsCenter.getInstance()"
+      },
+      {
+        "lineNumber": 144,
         "author": {
           "gitId": "JunWei96"
         },
         "content": "                    .post(new DisplayImportHelpEvent());"
       },
       {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "hozongsien"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 145,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     * Returns name of import file."
+        "content": "    /**"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "     */"
+        "content": "     * Returns name of import file."
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public String getFileName() {"
+        "content": "     */"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return importFile.getName();"
+        "content": "    public String getFileName() {"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        return importFile.getName();"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public String toString() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return importFile.toString();"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        return importFile.toString();"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                || (other instanceof ImportFile"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "                \u0026\u0026 importFile.equals(((ImportFile) other).importFile));"
+        "content": "                || (other instanceof ImportFile"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "                \u0026\u0026 importFile.equals(((ImportFile) other).importFile));"
       },
       {
         "lineNumber": 164,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 165,
         "author": {
           "gitId": "hozongsien"
         },
@@ -44677,7 +44705,120 @@
     ],
     "authorContributionMap": {
       "JunWei96": 2,
-      "hozongsien": 162
+      "hozongsien": 163
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/portation/exceptions/InvalidImportFileException.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "package seedu.address.model.portation.exceptions;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": " * Represents an error of the file to be imported."
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "public class InvalidImportFileException extends Exception {"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    public InvalidImportFileException(String message) {"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "        super(message);"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    public InvalidImportFileException(String message, Throwable cause) {"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "        super(message, cause);"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "hozongsien": 15
     }
   },
   {
@@ -126295,84 +126436,84 @@
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import static org.junit.Assert.assertFalse;"
+        "content": "import static seedu.address.testutil.ImportFileUtil.INVALID_EMPTY_FILE;"
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import static org.junit.Assert.assertTrue;"
+        "content": "import static seedu.address.testutil.ImportFileUtil.INVALID_FILE_TYPE;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "import static seedu.address.testutil.ImportFileUtil.INVALID_NOT_A_FILE;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import org.junit.Test;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "import org.junit.Test;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import seedu.address.logic.parser.fileparser.exceptions.FileParseException;"
+        "content": ""
       },
       {
         "lineNumber": 10,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import seedu.address.model.card.UniqueCardList;"
+        "content": "import seedu.address.logic.parser.fileparser.exceptions.FileParseException;"
       },
       {
         "lineNumber": 11,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import seedu.address.testutil.Assert;"
+        "content": "import seedu.address.model.card.UniqueCardList;"
       },
       {
         "lineNumber": 12,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import seedu.address.testutil.CardBuilder;"
+        "content": "import seedu.address.model.portation.exceptions.InvalidImportFileException;"
       },
       {
         "lineNumber": 13,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "import seedu.address.testutil.ImportFileUtil;"
+        "content": "import seedu.address.testutil.Assert;"
       },
       {
         "lineNumber": 14,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "import seedu.address.testutil.CardBuilder;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "public class ImportFileTest {"
+        "content": "import seedu.address.testutil.ImportFileUtil;"
       },
       {
         "lineNumber": 16,
@@ -126386,311 +126527,374 @@
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Test"
+        "content": "public class ImportFileTest {"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public void constructor_null_throwsNullPointerException() {"
+        "content": ""
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        Assert.assertThrows(NullPointerException.class, () -\u003e new ImportFile(null));"
+        "content": "    @Test"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "    public void constructor_null_throwsNullPointerException() {"
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        Assert.assertThrows(NullPointerException.class, () -\u003e new ImportFile(null));"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public void isFileValid() {"
+        "content": ""
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        // invalid"
+        "content": "    @Test"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        assertFalse(ImportFileUtil.getInvalidImportFileType().isFileValid());"
+        "content": "    public void isFileValid_invalidFileType_throwsInvalidImportFileException() {"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        assertFalse(ImportFileUtil.getInvalidImportFileNotFile().isFileValid());"
+        "content": "        ImportFile invalid \u003d new ImportFile(INVALID_FILE_TYPE.toString());"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        assertFalse(ImportFileUtil.getEmptyImportFile().isFileValid());"
+        "content": "        Assert.assertThrows(InvalidImportFileException.class, () -\u003e invalid.isFileValid());"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        // valid"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        assertTrue(ImportFileUtil.getTypicalImportFile().isFileValid());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "    public void isFileValid_invalidEmptyFile_throwsInvalidImportFileException() {"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        ImportFile invalid \u003d new ImportFile(INVALID_EMPTY_FILE.toString());"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    // no cards throw, duplicate card throw, invalid format, valid, valid no topic"
+        "content": "        Assert.assertThrows(InvalidImportFileException.class, () -\u003e invalid.isFileValid());"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public void parseFileToCard_noCardsParsed_throwsFileParseException() {"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        ImportFile noCardsFile \u003d ImportFileUtil.getValidImportFileNoCards();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        Assert.assertThrows(FileParseException.class, () -\u003e noCardsFile.parseFileToCards());"
+        "content": "    public void isFileValid_invalidNotFile_throwsInvalidImportFileException() {"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "        ImportFile invalid \u003d new ImportFile(INVALID_NOT_A_FILE.toString());"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        Assert.assertThrows(InvalidImportFileException.class, () -\u003e invalid.isFileValid());"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public void parseFileToCard_duplicateCardParsed_throwsFileParseException() {"
+        "content": ""
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        ImportFile duplicateCardsFile \u003d ImportFileUtil.getValidImportFileDuplicateCards();"
+        "content": "    // no cards throw, duplicate card throw, invalid format, valid, valid no topic"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        Assert.assertThrows(FileParseException.class, () -\u003e duplicateCardsFile.parseFileToCards());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "    public void parseFileToCard_noCardsParsed_throwsFileParseException() {"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        ImportFile noCardsFile \u003d ImportFileUtil.getValidImportFileNoCards();"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Test"
+        "content": "        Assert.assertThrows(FileParseException.class, () -\u003e noCardsFile.parseFileToCards());"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public void parseFileToCard_invalidFileFormat_throwsFileParseException() {"
+        "content": "    }"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        ImportFile invalidFileFormat \u003d ImportFileUtil.getInvalidImportFileInvalidFormat();"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        Assert.assertThrows(FileParseException.class, () -\u003e invalidFileFormat.parseFileToCards());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": "    public void parseFileToCard_duplicateCardParsed_throwsFileParseException() {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        ImportFile duplicateCardsFile \u003d ImportFileUtil.getValidImportFileDuplicateCards();"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    @Test"
+        "content": "        Assert.assertThrows(FileParseException.class, () -\u003e duplicateCardsFile.parseFileToCards());"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    public void parseFileToCard_validFileWithTopic_returnsUniqueCardList() {"
+        "content": "    }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        ImportFile validImportFile \u003d ImportFileUtil.getValidWithTopicImportFile();"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        UniqueCardList expectedList \u003d new UniqueCardList();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        expectedList.add(new CardBuilder().withQuestion(\"question\").withAnswer(\"answer\").withTopics(\"topic\").build());"
+        "content": "    public void parseFileToCard_invalidFileFormat_throwsFileParseException() {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        UniqueCardList actualList \u003d validImportFile.parseFileToCards();"
+        "content": "        ImportFile invalidFileFormat \u003d ImportFileUtil.getInvalidImportFileInvalidFormat();"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": ""
+        "content": "        Assert.assertThrows(FileParseException.class, () -\u003e invalidFileFormat.parseFileToCards());"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "        assertEquals(expectedList, actualList);"
+        "content": "    }"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "hozongsien"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 61,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    public void parseFileToCard_validFileWithTopic_returnsUniqueCardList() {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "        ImportFile validImportFile \u003d ImportFileUtil.getValidWithTopicImportFile();"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "        UniqueCardList expectedList \u003d new UniqueCardList();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "        expectedList.add(new CardBuilder().withQuestion(\"question\").withAnswer(\"answer\").withTopics(\"topic\").build());"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "        UniqueCardList actualList \u003d validImportFile.parseFileToCards();"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "        assertEquals(expectedList, actualList);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "hozongsien"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
         "author": {
           "gitId": "hozongsien"
         },
@@ -126698,7 +126902,7 @@
       }
     ],
     "authorContributionMap": {
-      "hozongsien": 61
+      "hozongsien": 70
     }
   },
   {

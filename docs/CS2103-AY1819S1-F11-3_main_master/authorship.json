@@ -87654,6 +87654,777 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/logic/commands/AchievementsCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import static seedu.address.testutil.TypicalTasks.getTypicalTaskManager;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import seedu.address.model.ModelManager;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import seedu.address.model.UserPrefs;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import seedu.address.model.achievement.AchievementRecord;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": " * Contains integration tests (interaction with the Model, UndoCommand and RedoCommand) and unit tests for"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": " * {@code AchievementsCommand}."
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "public class AchievementsCommandTest {"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    private Model model \u003d new ModelManager(getTypicalTaskManager(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    public void executePrimitive_validThisWeekOption_success() {"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // achievements command set the display option of achievement record to be 3 (this week)"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        AchievementsCommand achievementsCommand \u003d new AchievementsCommand(AchievementsCommand.THIS_WEEK_OPTION);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        String expectedMessage \u003d String.format(AchievementsCommand.MESSAGE_DISPLAY_ACHIEVEMENT_SUCCESS,"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "                AchievementsCommand.THIS_WEEK_OPTION);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        ModelManager expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.updateAchievementDisplayOption(AchievementRecord.DISPLAY_THIS_WEEK);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.commitTaskManager();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertCommandSuccess(achievementsCommand, model, commandHistory, expectedMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    public void executePrimitive_validTodayOption_success() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // achievements command set the display option of achievement record to be 2 (today)"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        AchievementsCommand achievementsCommand \u003d new AchievementsCommand(AchievementsCommand.TODAY_OPTION);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        String expectedMessage \u003d String.format(AchievementsCommand.MESSAGE_DISPLAY_ACHIEVEMENT_SUCCESS,"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "                AchievementsCommand.TODAY_OPTION);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        ModelManager expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.updateAchievementDisplayOption(AchievementRecord.DISPLAY_TODAY);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.commitTaskManager();"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertCommandSuccess(achievementsCommand, model, commandHistory, expectedMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    public void executePrimitive_validAllTimeOption_success() {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // achievements command set the display option of achievement record to be 1 (all-time)"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        AchievementsCommand achievementsCommand \u003d new AchievementsCommand(AchievementsCommand.ALL_TIME_OPTION);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        String expectedMessage \u003d String.format(AchievementsCommand.MESSAGE_DISPLAY_ACHIEVEMENT_SUCCESS,"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "                AchievementsCommand.ALL_TIME_OPTION);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        ModelManager expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.updateAchievementDisplayOption(AchievementRecord.DISPLAY_ALL_TIME);"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.commitTaskManager();"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertCommandSuccess(achievementsCommand, model, commandHistory, expectedMessage, expectedModel);"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    public void executeUndoRedo() {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        AchievementsCommand achievementsCommand \u003d new AchievementsCommand(AchievementsCommand.TODAY_OPTION);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        String expectedMessage \u003d String.format(AchievementsCommand.MESSAGE_DISPLAY_ACHIEVEMENT_SUCCESS,"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "                AchievementsCommand.TODAY_OPTION);"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        ModelManager expectedModel \u003d new ModelManager(model.getTaskManager(), new UserPrefs());"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.updateAchievementDisplayOption(AchievementRecord.DISPLAY_TODAY);"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.commitTaskManager();"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // achievements command set display option to 2 (today)"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        achievementsCommand.executePrimitive(model, commandHistory);"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // undo -\u003e reverts task manager to previous state and display option of the achievement record to 1 (all-time)"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.undoTaskManager();"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertCommandSuccess(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_SUCCESS, expectedModel);"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // redo -\u003e achievement record display option set to 2 (today) again"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        expectedModel.redoTaskManager();"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertCommandSuccess(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_SUCCESS, expectedModel);"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        AchievementsCommand displayAllTimeCommand \u003d new AchievementsCommand(AchievementsCommand.ALL_TIME_OPTION);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        AchievementsCommand displayTodayCommand \u003d new AchievementsCommand(AchievementsCommand.TODAY_OPTION);"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertTrue(displayAllTimeCommand.equals(displayAllTimeCommand));"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // same value -\u003e returns true"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        AchievementsCommand displayAllTimeCommandCopy \u003d new AchievementsCommand(AchievementsCommand.ALL_TIME_OPTION);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertTrue(displayAllTimeCommand.equals(displayAllTimeCommandCopy));"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // different types -\u003e returns false"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertFalse(displayAllTimeCommand.equals(1));"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // null -\u003e returns false"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertFalse(displayAllTimeCommand.equals(null));"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // different value -\u003e returns false"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertFalse(displayAllTimeCommand.equals(displayTodayCommand));"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiaxiu11": 109
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/logic/commands/AddCommandIntegrationTest.java",
     "lines": [
       {
@@ -102895,6 +103666,231 @@
       "-": 35,
       "unsatisfiedpopcorn": 5,
       "jiaxiu11": 5
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/logic/parser/AchievementsCommandParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "package seedu.address.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import static seedu.address.commons.core.Messages.MESSAGE_INVALID_COMMAND_FORMAT;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseFailure;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import static seedu.address.logic.parser.CommandParserTestUtil.assertParseSuccess;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "import seedu.address.logic.commands.AchievementsCommand;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "public class AchievementsCommandParserTest {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    private AchievementsCommandParser parser \u003d new AchievementsCommandParser();"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    public void parse_validArgs_returnsAchievementCommand() {"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertParseSuccess(parser, \"all-time\", new AchievementsCommand(AchievementsCommand.ALL_TIME_OPTION));"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertParseSuccess(parser, \"today\", new AchievementsCommand(AchievementsCommand.TODAY_OPTION));"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertParseSuccess(parser, \"this week\", new AchievementsCommand(AchievementsCommand.THIS_WEEK_OPTION));"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    public void parse_invalidArgs_throwsParseException() {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // empty string"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertParseFailure(parser, \"\","
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, AchievementsCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        // invalid string"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "        assertParseFailure(parser, \"all time\","
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, AchievementsCommand.MESSAGE_USAGE));"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "jiaxiu11"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "jiaxiu11": 31
     }
   },
   {

@@ -28765,7 +28765,7 @@
         "author": {
           "gitId": "danielkoh94"
         },
-        "content": "        correct \u003d triviaQ.getName().toString().equals(answer);"
+        "content": "        correct \u003d triviaQ.getName().toString().toLowerCase().equals(answer.toLowerCase());"
       },
       {
         "lineNumber": 72,
@@ -94398,6 +94398,294 @@
     }
   },
   {
+    "path": "src/test/java/seedu/learnvocabulary/logic/commands/WordOfTheDayCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "package seedu.learnvocabulary.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import static org.junit.Assert.assertNotNull;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import org.junit.Rule;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import org.junit.rules.ExpectedException;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.Model;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.ModelManager;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Word;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.testutil.WordBuilder;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "public class WordOfTheDayCommandTest {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    @Rule"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    private CommandHistory commandHistory \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public void constructor_nullWord_throwsNullPointerException() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        thrown.expect(NullPointerException.class);"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        new WordOfTheDayCommand(null);"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public void execute_displayWordOfTheDay_successful() {"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Model model \u003d new ModelManager();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Word validWord \u003d new WordBuilder().build();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        String validOutput \u003d WordOfTheDayCommand.MESSAGE_SUCCESS.replace(\"%1$s\\n\", validWord.toString());"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        validOutput +\u003d \"\\n\";"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        CommandResult commandResult \u003d new WordOfTheDayCommand(validWord).execute(model, commandHistory);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        assertNotNull(commandResult.feedbackToUser);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        assertEquals(validOutput, commandResult.feedbackToUser);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "alexehrs": 40
+    }
+  },
+  {
     "path": "src/test/java/seedu/learnvocabulary/logic/parser/AddCommandParserTest.java",
     "lines": [
       {
@@ -101319,6 +101607,392 @@
     ],
     "authorContributionMap": {
       "russellong95": 35
+    }
+  },
+  {
+    "path": "src/test/java/seedu/learnvocabulary/logic/parser/WordOfTheDayParserTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "package seedu.learnvocabulary.logic.parser;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import java.util.ArrayList;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import java.util.Collections;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import java.util.Set;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.logic.commands.CommandResult;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.logic.commands.WordOfTheDayCommand;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.logic.parser.exceptions.ParseException;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.Model;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.ModelManager;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.tag.Tag;"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Dictionary;"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Meaning;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Name;"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "import seedu.learnvocabulary.model.word.Word;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "public class WordOfTheDayParserTest {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    private WordOfTheDayParser parser \u003d new WordOfTheDayParser();"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    public void parse_success() {"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        String empty \u003d \"\";"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Dictionary dictionary;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        Word word;"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            dictionary \u003d new Dictionary(empty);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            dictionary.fetchWordOfTheDay();"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            String wordOfTheDay \u003d dictionary.getWordOfTheDay();"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            String definition \u003d dictionary.getDefinition();"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Tag defaultTag \u003d new Tag(\"WordOfTheDay\");"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            ArrayList\u003cString\u003e stringArrayList \u003d new ArrayList\u003c\u003e(Collections.singleton(defaultTag.tagName));"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Name name \u003d ParserUtil.parseName(wordOfTheDay);"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Meaning meaning \u003d ParserUtil.parseMeaning(definition);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Set\u003cTag\u003e tagList \u003d ParserUtil.parseTags(stringArrayList);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            word \u003d new Word(name, meaning, tagList);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            Model model \u003d new ModelManager();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            CommandHistory history \u003d new CommandHistory();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            CommandResult commandResult1 \u003d parser.parse(empty).execute(model, history);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            CommandResult commandResult2 \u003d new WordOfTheDayCommand(word).execute(model, history);"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            assertEquals(commandResult1.feedbackToUser, commandResult2.feedbackToUser);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        } catch (ParseException e) {"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "            e.printStackTrace();"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "alexehrs"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "alexehrs": 54
     }
   },
   {
