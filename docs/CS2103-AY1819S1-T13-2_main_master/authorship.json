@@ -21039,6 +21039,182 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/logic/commands/SortCommand.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import seedu.address.logic.CommandHistory;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import seedu.address.model.Model;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": " * Sort the list of deck in lexicographical order."
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "public class SortCommand extends Command {"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    public static final String COMMAND_WORD \u003d \"sort\";"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Sorted all persons\";"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    public CommandResult execute(Model model, CommandHistory history) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        requireNonNull(model);"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        model.sort();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        model.commitAddressBook();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        return new CommandResult(MESSAGE_SUCCESS);"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "valensia0711": 24
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/logic/commands/UndoCommand.java",
     "lines": [
       {
@@ -23174,628 +23350,656 @@
       {
         "lineNumber": 25,
         "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import seedu.address.logic.commands.SortCommand;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.UndoCommand;"
       },
       {
-        "lineNumber": 26,
+        "lineNumber": 27,
         "author": {
           "gitId": "valensia0711"
         },
         "content": "import seedu.address.logic.commands.UnfavouriteCommand;"
       },
       {
-        "lineNumber": 27,
+        "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
-        "lineNumber": 28,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": " * Parses user input."
+        "content": "/**"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": " * Parses user input."
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "public class AddressBookParser {"
+        "content": " */"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "public class AddressBookParser {"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Used for initial separation of command word and args."
+        "content": "    /**"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * Used for initial separation of command word and args."
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
+        "content": "     */"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final Pattern BASIC_COMMAND_FORMAT \u003d Pattern.compile(\"(?\u003ccommandWord\u003e\\\\S+)(?\u003carguments\u003e.*)\");"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Parses user input into command for execution."
+        "content": "    /**"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "     *"
+        "content": "     * Parses user input into command for execution."
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @param userInput full user input string"
+        "content": "     *"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @return the command based on the user input"
+        "content": "     * @param userInput full user input string"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws ParseException if the user input does not conform the expected format"
+        "content": "     * @return the command based on the user input"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "     * @throws ParseException if the user input does not conform the expected format"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "    public Command parseCommand(String userInput) throws ParseException {"
+        "content": "     */"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
+        "content": "    public Command parseCommand(String userInput) throws ParseException {"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!matcher.matches()) {"
+        "content": "        final Matcher matcher \u003d BASIC_COMMAND_FORMAT.matcher(userInput.trim());"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+        "content": "        if (!matcher.matches()) {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "            throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
+        "content": "        final String commandWord \u003d matcher.group(\"commandWord\");"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "        switch (commandWord) {"
+        "content": "        final String arguments \u003d matcher.group(\"arguments\");"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        switch (commandWord) {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "        case AddCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new AddCommandParser().parse(arguments);"
+        "content": "        case AddCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new AddCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": "        case EditCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new EditCommandParser().parse(arguments);"
+        "content": "        case EditCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new EditCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "        case SelectCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new SelectCommandParser().parse(arguments);"
+        "content": "        case SelectCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new SelectCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "        case DeleteCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new DeleteCommandParser().parse(arguments);"
+        "content": "        case DeleteCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new DeleteCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": "        case ClearCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ClearCommand();"
+        "content": "        case ClearCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ClearCommand();"
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "valensia0711"
+          "gitId": "-"
         },
-        "content": "        case FavouriteCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        case FavouriteCommand.COMMAND_ALIAS:"
+        "content": "        case FavouriteCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return new FavouriteCommandParser().parse(arguments);"
+        "content": "        case FavouriteCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "            return new FavouriteCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        case UnfavouriteCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        case UnfavouriteCommand.COMMAND_ALIAS:"
+        "content": "        case UnfavouriteCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "            return new UnfavouriteCommandParser().parse(arguments);"
+        "content": "        case UnfavouriteCommand.COMMAND_ALIAS:"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "            return new UnfavouriteCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "-"
-        },
-        "content": "        case FindCommand.COMMAND_WORD:"
-      },
-      {
-        "lineNumber": 80,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "            return new FindCommandParser().parse(arguments);"
-      },
-      {
-        "lineNumber": 81,
-        "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": ""
       },
       {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        case SortCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "            return new SortCommand();"
+      },
+      {
         "lineNumber": 82,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "        case ListCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ListCommand();"
+        "content": "        case FindCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new FindCommandParser().parse(arguments);"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HistoryCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new HistoryCommand();"
+        "content": "        case ListCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ListCommand();"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        case ExitCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new ExitCommand();"
+        "content": "        case HistoryCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HistoryCommand();"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "        case HelpCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new HelpCommand();"
+        "content": "        case ExitCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new ExitCommand();"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "        case UndoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new UndoCommand();"
+        "content": "        case HelpCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new HelpCommand();"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "        case RedoCommand.COMMAND_WORD:"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new RedoCommand();"
+        "content": "        case UndoCommand.COMMAND_WORD:"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return new UndoCommand();"
       },
       {
         "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        case RedoCommand.COMMAND_WORD:"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new RedoCommand();"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 104,
         "author": {
           "gitId": "IamRENCE"
         },
         "content": "        case RateCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 101,
+        "lineNumber": 105,
         "author": {
           "gitId": "IamRENCE"
         },
         "content": "            return new RateCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 102,
+        "lineNumber": 106,
         "author": {
           "gitId": "IamRENCE"
         },
         "content": ""
       },
       {
-        "lineNumber": 103,
+        "lineNumber": 107,
         "author": {
           "gitId": "abtyx"
         },
         "content": "        case PrivacyCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 104,
+        "lineNumber": 108,
         "author": {
           "gitId": "abtyx"
         },
         "content": "            return new PrivacyCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 105,
+        "lineNumber": 109,
         "author": {
           "gitId": "abtyx"
         },
         "content": ""
       },
       {
-        "lineNumber": 106,
+        "lineNumber": 110,
         "author": {
           "gitId": "IamRENCE"
         },
         "content": "        case FeedbackCommand.COMMAND_WORD:"
       },
       {
-        "lineNumber": 107,
+        "lineNumber": 111,
         "author": {
           "gitId": "IamRENCE"
         },
         "content": "            return new FeedbackCommandParser().parse(arguments);"
       },
       {
-        "lineNumber": 108,
+        "lineNumber": 112,
         "author": {
           "gitId": "IamRENCE"
         },
         "content": ""
       },
       {
-        "lineNumber": 109,
+        "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
         "content": "        default:"
       },
       {
-        "lineNumber": 110,
+        "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
         "content": "            throw new ParseException(MESSAGE_UNKNOWN_COMMAND);"
       },
       {
-        "lineNumber": 111,
+        "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 112,
+        "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 114,
+        "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
@@ -23803,7 +24007,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 10,
+      "valensia0711": 14,
       "IamRENCE": 8,
       "abtyx": 4,
       "-": 92
@@ -29273,177 +29477,177 @@
       {
         "lineNumber": 123,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "     * Removes {@code key} from this {@code AddressBook}."
+        "content": "     * Sorts the person list"
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "-"
-        },
-        "content": "     * {@code key} must exist in the address book."
-      },
-      {
-        "lineNumber": 125,
-        "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": "     */"
       },
       {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    public void sort() {"
+      },
+      {
         "lineNumber": 126,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "    public void removePerson(Person key) {"
+        "content": "        persons.sort();"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "-"
-        },
-        "content": "        persons.remove(key);"
-      },
-      {
-        "lineNumber": 128,
-        "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 129,
+        "lineNumber": 128,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    /**"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "    //// util methods"
+        "content": "     * Removes {@code key} from this {@code AddressBook}."
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * {@code key} must exist in the address book."
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "     */"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "    public String toString() {"
+        "content": "    public void removePerson(Person key) {"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        return persons.asUnmodifiableObservableList().size() + \" persons\";"
+        "content": "        persons.remove(key);"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "        // TODO: refine later"
+        "content": "    }"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    //// util methods"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ObservableList\u003cPerson\u003e getPersonList() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "        return persons.asUnmodifiableObservableList();"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return persons.asUnmodifiableObservableList().size() + \" persons\";"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        // TODO: refine later"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "        return other \u003d\u003d this // short circuit if same object"
+        "content": "    @Override"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "                || (other instanceof AddressBook // instanceof handles nulls"
+        "content": "    public ObservableList\u003cPerson\u003e getPersonList() {"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 persons.equals(((AddressBook) other).persons));"
+        "content": "        return persons.asUnmodifiableObservableList();"
       },
       {
         "lineNumber": 148,
@@ -29471,24 +29675,73 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public int hashCode() {"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "        return persons.hashCode();"
+        "content": "        return other \u003d\u003d this // short circuit if same object"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "                || (other instanceof AddressBook // instanceof handles nulls"
       },
       {
         "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 persons.equals(((AddressBook) other).persons));"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public int hashCode() {"
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return persons.hashCode();"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
@@ -29496,7 +29749,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 34,
+      "valensia0711": 41,
       "-": 120
     }
   },
@@ -29823,7 +30076,7 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "     * Add the given person to favourite."
+        "content": "     * Adds the given person to favourite."
       },
       {
         "lineNumber": 47,
@@ -29865,7 +30118,7 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "     * Remove the given person from favourite."
+        "content": "     * Removes the given person from favourite."
       },
       {
         "lineNumber": 53,
@@ -29898,79 +30151,79 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
-        },
-        "content": "    /** Returns an unmodifiable view of the filtered person list */"
-      },
-      {
-        "lineNumber": 58,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    ObservableList\u003cPerson\u003e getFilteredPersonList();"
-      },
-      {
-        "lineNumber": 59,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": "    /**"
       },
       {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "     * Sorts the person list"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    void sort();"
+      },
+      {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "     * Updates the filter of the filtered person list to filter by the given {@code predicate}."
+        "content": ""
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @throws NullPointerException if {@code predicate} is null."
+        "content": "    /** Returns an unmodifiable view of the filtered person list */"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    ObservableList\u003cPerson\u003e getFilteredPersonList();"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    void updateFilteredPersonList(Predicate\u003cPerson\u003e predicate);"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Updates the filter of the filtered person list to filter by the given {@code predicate}."
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if the model has previous address book states to restore."
+        "content": "     * @throws NullPointerException if {@code predicate} is null."
       },
       {
         "lineNumber": 68,
@@ -29984,7 +30237,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    boolean canUndoAddressBook();"
+        "content": "    void updateFilteredPersonList(Predicate\u003cPerson\u003e predicate);"
       },
       {
         "lineNumber": 70,
@@ -30005,7 +30258,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns true if the model has undone address book states to restore."
+        "content": "     * Returns true if the model has previous address book states to restore."
       },
       {
         "lineNumber": 73,
@@ -30019,7 +30272,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    boolean canRedoAddressBook();"
+        "content": "    boolean canUndoAddressBook();"
       },
       {
         "lineNumber": 75,
@@ -30040,7 +30293,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     * Restores the model\u0027s address book to its previous state."
+        "content": "     * Returns true if the model has undone address book states to restore."
       },
       {
         "lineNumber": 78,
@@ -30054,7 +30307,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    void undoAddressBook();"
+        "content": "    boolean canRedoAddressBook();"
       },
       {
         "lineNumber": 80,
@@ -30075,7 +30328,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     * Restores the model\u0027s address book to its previously undone state."
+        "content": "     * Restores the model\u0027s address book to its previous state."
       },
       {
         "lineNumber": 83,
@@ -30089,7 +30342,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    void redoAddressBook();"
+        "content": "    void undoAddressBook();"
       },
       {
         "lineNumber": 85,
@@ -30110,7 +30363,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "     * Saves the current address book state for undo/redo."
+        "content": "     * Restores the model\u0027s address book to its previously undone state."
       },
       {
         "lineNumber": 88,
@@ -30124,10 +30377,45 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    void commitAddressBook();"
+        "content": "    void redoAddressBook();"
       },
       {
         "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Saves the current address book state for undo/redo."
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    void commitAddressBook();"
+      },
+      {
+        "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
@@ -30135,7 +30423,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 12,
+      "valensia0711": 17,
       "-": 78
     }
   },
@@ -30852,156 +31140,156 @@
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Filtered Person List Accessors \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": "    @Override"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    public void sort() {"
       },
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "    /**"
+        "content": "        versionedAddressBook.sort();"
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "     * Returns an unmodifiable view of the list of {@code Person} backed by the internal list of"
+        "content": "        updateFilteredPersonList(PREDICATE_SHOW_ALL_PERSONS);"
       },
       {
         "lineNumber": 106,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "     * {@code versionedAddressBook}"
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 107,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 108,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ObservableList\u003cPerson\u003e getFilteredPersonList() {"
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Filtered Person List Accessors \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "        return FXCollections.unmodifiableObservableList(filteredPersons);"
+        "content": ""
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    /**"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * Returns an unmodifiable view of the list of {@code Person} backed by the internal list of"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "     * {@code versionedAddressBook}"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void updateFilteredPersonList(Predicate\u003cPerson\u003e predicate) {"
+        "content": "     */"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "        requireNonNull(predicate);"
+        "content": "    @Override"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        filteredPersons.setPredicate(predicate);"
+        "content": "    public ObservableList\u003cPerson\u003e getFilteredPersonList() {"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return FXCollections.unmodifiableObservableList(filteredPersons);"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Undo/Redo \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Override"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    public void updateFilteredPersonList(Predicate\u003cPerson\u003e predicate) {"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean canUndoAddressBook() {"
+        "content": "        requireNonNull(predicate);"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedAddressBook.canUndo();"
+        "content": "        filteredPersons.setPredicate(predicate);"
       },
       {
         "lineNumber": 124,
@@ -31022,196 +31310,196 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Undo/Redo \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean canRedoAddressBook() {"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedAddressBook.canRedo();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "    public boolean canUndoAddressBook() {"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        return versionedAddressBook.canUndo();"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void undoAddressBook() {"
+        "content": ""
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.undo();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateAddressBookChanged();"
+        "content": "    public boolean canRedoAddressBook() {"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return versionedAddressBook.canRedo();"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void redoAddressBook() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.redo();"
+        "content": "    public void undoAddressBook() {"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "        indicateAddressBookChanged();"
+        "content": "        versionedAddressBook.undo();"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void commitAddressBook() {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "        versionedAddressBook.commit();"
+        "content": "    public void redoAddressBook() {"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        versionedAddressBook.redo();"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        indicateAddressBookChanged();"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": "    public boolean equals(Object obj) {"
+        "content": ""
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "        // short circuit if same object"
+        "content": "    @Override"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (obj \u003d\u003d this) {"
+        "content": "    public void commitAddressBook() {"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "            return true;"
+        "content": "        versionedAddressBook.commit();"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 154,
@@ -31225,80 +31513,129 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        // instanceof handles nulls"
+        "content": "    @Override"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "        if (!(obj instanceof ModelManager)) {"
+        "content": "    public boolean equals(Object obj) {"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "            return false;"
+        "content": "        // short circuit if same object"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        if (obj \u003d\u003d this) {"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "            return true;"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "        // state check"
+        "content": "        }"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "        ModelManager other \u003d (ModelManager) obj;"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "        return versionedAddressBook.equals(other.versionedAddressBook)"
+        "content": "        // instanceof handles nulls"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "                \u0026\u0026 filteredPersons.equals(other.filteredPersons);"
+        "content": "        if (!(obj instanceof ModelManager)) {"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "            return false;"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // state check"
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        ModelManager other \u003d (ModelManager) obj;"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return versionedAddressBook.equals(other.versionedAddressBook)"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0026\u0026 filteredPersons.equals(other.filteredPersons);"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
@@ -31306,7 +31643,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 16,
+      "valensia0711": 23,
       "-": 150
     }
   },
@@ -38928,6 +39265,1072 @@
     ],
     "authorContributionMap": {
       "NgeowXiuQi": 44
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/model/person/UniquePersonList.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.model.person;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import java.util.Comparator;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Iterator;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.collections.FXCollections;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.collections.ObservableList;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.exceptions.DuplicatePersonException;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.exceptions.PersonNotFoundException;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * A list of persons that enforces uniqueness between its elements and does not allow nulls."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * A person is considered unique by comparing using {@code Person#isSamePerson(Person)}. As such, adding and updating of"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * persons uses Person#isSamePerson(Person) for equality so as to ensure that the person being added or updated is"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * unique in terms of identity in the UniquePersonList. However, the removal of a person uses Person#equals(Object) so"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * as to ensure that the person with exactly the same fields will be removed."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Supports a minimal set of list operations."
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " *"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * @see Person#isSamePerson(Person)"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class UniquePersonList implements Iterable\u003cPerson\u003e {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final ObservableList\u003cPerson\u003e internalList \u003d FXCollections.observableArrayList();"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns true if the list contains an equivalent person as the given argument."
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean contains(Person toCheck) {"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(toCheck);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return internalList.stream().anyMatch(toCheck::isSamePerson);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Adds a person to the list."
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * The person must not already exist in the list."
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void add(Person toAdd) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(toAdd);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (contains(toAdd)) {"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new DuplicatePersonException();"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        internalList.add(toAdd);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Replaces the person {@code target} in the list with {@code editedPerson}."
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * {@code target} must exist in the list."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * The person identity of {@code editedPerson} must not be the same as another existing person in the list."
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void setPerson(Person target, Person editedPerson) {"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireAllNonNull(target, editedPerson);"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        int index \u003d internalList.indexOf(target);"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (index \u003d\u003d -1) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new PersonNotFoundException();"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!target.isSamePerson(editedPerson) \u0026\u0026 contains(editedPerson)) {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new DuplicatePersonException();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        internalList.set(index, editedPerson);"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Removes the equivalent person from the list."
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * The person must exist in the list."
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void remove(Person toRemove) {"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(toRemove);"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!internalList.remove(toRemove)) {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new PersonNotFoundException();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "     * Sorts the person list."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    public void sort() {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        Comparator\u003cPerson\u003e byName \u003d Comparator.comparing(person -\u003e person.getName().toString());"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        Comparator\u003cPerson\u003e byFavReversed \u003d Comparator.comparing(person -\u003e String.valueOf(person.getFavourite()));"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        Comparator\u003cPerson\u003e byFav \u003d byFavReversed.reversed();"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        Comparator\u003cPerson\u003e byFavthenName \u003d byFav.thenComparing(byName);"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        internalList.sort(byFavthenName);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void setPersons(UniquePersonList replacement) {"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(replacement);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        internalList.setAll(replacement.internalList);"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Replaces the contents of this list with {@code persons}."
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * {@code persons} must not contain duplicate persons."
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void setPersons(List\u003cPerson\u003e persons) {"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireAllNonNull(persons);"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!personsAreUnique(persons)) {"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            throw new DuplicatePersonException();"
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        internalList.setAll(persons);"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns the backing list as an unmodifiable {@code ObservableList}."
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public ObservableList\u003cPerson\u003e asUnmodifiableObservableList() {"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return FXCollections.unmodifiableObservableList(internalList);"
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public Iterator\u003cPerson\u003e iterator() {"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return internalList.iterator();"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public boolean equals(Object other) {"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return other \u003d\u003d this // short circuit if same object"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                || (other instanceof UniquePersonList // instanceof handles nulls"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                        \u0026\u0026 internalList.equals(((UniquePersonList) other).internalList));"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public int hashCode() {"
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return internalList.hashCode();"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns true if {@code persons} contains only unique persons."
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private boolean personsAreUnique(List\u003cPerson\u003e persons) {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (int i \u003d 0; i \u003c persons.size() - 1; i++) {"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            for (int j \u003d i + 1; j \u003c persons.size(); j++) {"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                if (persons.get(i).isSamePerson(persons.get(j))) {"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                    return false;"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                }"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            }"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return true;"
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "valensia0711": 16,
+      "-": 135
     }
   },
   {
@@ -55262,35 +56665,35 @@
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "        public ObservableList\u003cPerson\u003e getFilteredPersonList() {"
+        "content": "        public void sort() {"
       },
       {
         "lineNumber": 133,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": "            throw new AssertionError(\"This method should not be called.\");"
       },
       {
         "lineNumber": 134,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": "        }"
       },
       {
         "lineNumber": 135,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": ""
       },
       {
         "lineNumber": 136,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": "        @Override"
       },
@@ -55299,7 +56702,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        public void updateFilteredPersonList(Predicate\u003cPerson\u003e predicate) {"
+        "content": "        public ObservableList\u003cPerson\u003e getFilteredPersonList() {"
       },
       {
         "lineNumber": 138,
@@ -55334,7 +56737,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        public boolean canUndoAddressBook() {"
+        "content": "        public void updateFilteredPersonList(Predicate\u003cPerson\u003e predicate) {"
       },
       {
         "lineNumber": 143,
@@ -55369,7 +56772,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        public boolean canRedoAddressBook() {"
+        "content": "        public boolean canUndoAddressBook() {"
       },
       {
         "lineNumber": 148,
@@ -55404,7 +56807,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        public void undoAddressBook() {"
+        "content": "        public boolean canRedoAddressBook() {"
       },
       {
         "lineNumber": 153,
@@ -55439,7 +56842,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        public void redoAddressBook() {"
+        "content": "        public void undoAddressBook() {"
       },
       {
         "lineNumber": 158,
@@ -55474,7 +56877,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        public void commitAddressBook() {"
+        "content": "        public void redoAddressBook() {"
       },
       {
         "lineNumber": 163,
@@ -55495,84 +56898,84 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        @Override"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        public void commitAddressBook() {"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "     * A Model stub that contains a single person."
+        "content": "            throw new AssertionError(\"This method should not be called.\");"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        }"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "    private class ModelStubWithPerson extends ModelStub {"
+        "content": "    }"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "        private final Person person;"
+        "content": ""
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": "        ModelStubWithPerson(Person person) {"
+        "content": "     * A Model stub that contains a single person."
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "            requireNonNull(person);"
+        "content": "     */"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "            this.person \u003d person;"
+        "content": "    private class ModelStubWithPerson extends ModelStub {"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        private final Person person;"
       },
       {
         "lineNumber": 177,
@@ -55586,196 +56989,196 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        @Override"
+        "content": "        ModelStubWithPerson(Person person) {"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "        public boolean hasPerson(Person person) {"
+        "content": "            requireNonNull(person);"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "            requireNonNull(person);"
+        "content": "            this.person \u003d person;"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "            return this.person.isSamePerson(person);"
+        "content": "        }"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        @Override"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        public boolean hasPerson(Person person) {"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "            requireNonNull(person);"
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": "     * A Model stub that always accept the person being added."
+        "content": "            return this.person.isSamePerson(person);"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "        }"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "    private class ModelStubAcceptingPersonAdded extends ModelStub {"
+        "content": "    }"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "        final ArrayList\u003cPerson\u003e personsAdded \u003d new ArrayList\u003c\u003e();"
+        "content": ""
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "        @Override"
+        "content": "     * A Model stub that always accept the person being added."
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "        public boolean hasPerson(Person person) {"
+        "content": "     */"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "            requireNonNull(person);"
+        "content": "    private class ModelStubAcceptingPersonAdded extends ModelStub {"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "            return personsAdded.stream().anyMatch(person::isSamePerson);"
+        "content": "        final ArrayList\u003cPerson\u003e personsAdded \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        @Override"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
-        "content": "        @Override"
+        "content": "        public boolean hasPerson(Person person) {"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "-"
         },
-        "content": "        public void addPerson(Person person) {"
+        "content": "            requireNonNull(person);"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": "            requireNonNull(person);"
+        "content": "            return personsAdded.stream().anyMatch(person::isSamePerson);"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "            personsAdded.add(person);"
+        "content": "        }"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        @Override"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "        @Override"
+        "content": "        public void addPerson(Person person) {"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "        public void commitAddressBook() {"
+        "content": "            requireNonNull(person);"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "            // called by {@code AddCommand#execute()}"
+        "content": "            personsAdded.add(person);"
       },
       {
         "lineNumber": 206,
@@ -55803,14 +57206,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        public ReadOnlyAddressBook getAddressBook() {"
+        "content": "        public void commitAddressBook() {"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "-"
         },
-        "content": "            return new AddressBook();"
+        "content": "            // called by {@code AddCommand#execute()}"
       },
       {
         "lineNumber": 211,
@@ -55824,17 +57227,52 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        @Override"
       },
       {
         "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        public ReadOnlyAddressBook getAddressBook() {"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return new AddressBook();"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 219,
         "author": {
           "gitId": "-"
         },
@@ -55842,7 +57280,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 10,
+      "valensia0711": 15,
       "-": 204
     }
   },
@@ -57671,280 +59109,280 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    /*"
+        "content": "    @Test"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Test"
+        "content": "    public void execute_invalidIndexFilteredList_throwsCommandException() {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void execute_validIndexFilteredList_success() {"
+        "content": "        showPersonAtIndex(model, INDEX_FIRST_PERSON);"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        showPersonAtIndex(model, INDEX_FIRST_PERSON);"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        Index outOfBoundIndex \u003d INDEX_SECOND_PERSON;"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Person personToFavourite \u003d model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());"
+        "content": "        // ensures that outOfBoundIndex is still in bounds of address book list"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Person favouritedPerson \u003d new PersonBuilder().build();"
+        "content": "        assertTrue(outOfBoundIndex.getZeroBased() \u003c model.getAddressBook().getPersonList().size());"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        FavouriteCommand favouriteCommand \u003d new FavouriteCommand(INDEX_FIRST_PERSON);"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        FavouriteCommand favouriteCommand \u003d new FavouriteCommand(outOfBoundIndex);"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        String expectedMessage \u003d String.format(FavouriteCommand.MESSAGE_FAVOURITE_PERSON_SUCCESS,"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                favouritedPerson.getName().fullName);"
+        "content": "        assertCommandFailure(favouriteCommand, model, commandHistory, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Model expectedModel \u003d new ModelManager(new AddressBook(model.getAddressBook()), new UserPrefs());"
+        "content": ""
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.favouritePerson(personToFavourite, favouritedPerson);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.commitAddressBook();"
+        "content": "    public void executeUndoRedo_invalidIndexUnfilteredList_failure() {"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        Index outOfBoundIndex \u003d Index.fromOneBased(model.getFilteredPersonList().size() + 1);"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertCommandSuccess(favouriteCommand, model, commandHistory, expectedMessage, expectedModel);"
+        "content": "        FavouriteCommand favouriteCommand \u003d new FavouriteCommand(outOfBoundIndex);"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    */"
+        "content": "        // execution failed -\u003e address book state not added into model"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        assertCommandFailure(favouriteCommand, model, commandHistory, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void execute_invalidIndexFilteredList_throwsCommandException() {"
+        "content": "        // single address book state in model -\u003e undoCommand and redoCommand fail"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        showPersonAtIndex(model, INDEX_FIRST_PERSON);"
+        "content": "        assertCommandFailure(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_FAILURE);"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        assertCommandFailure(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_FAILURE);"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Index outOfBoundIndex \u003d INDEX_SECOND_PERSON;"
+        "content": "    }"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // ensures that outOfBoundIndex is still in bounds of address book list"
+        "content": ""
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertTrue(outOfBoundIndex.getZeroBased() \u003c model.getAddressBook().getPersonList().size());"
+        "content": "    @Test"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    public void equals() {"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        FavouriteCommand favouriteCommand \u003d new FavouriteCommand(outOfBoundIndex);"
+        "content": "        FavouriteCommand favouriteFirstCommand \u003d new FavouriteCommand(INDEX_FIRST_PERSON);"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        FavouriteCommand favouriteSecondCommand \u003d new FavouriteCommand(INDEX_SECOND_PERSON);"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertCommandFailure(favouriteCommand, model, commandHistory, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
+        "content": ""
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "        // same object -\u003e returns true"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        assertTrue(favouriteFirstCommand.equals(favouriteFirstCommand));"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    /*"
+        "content": ""
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Test"
+        "content": "        // same values -\u003e returns true"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void executeUndoRedo_validIndexUnfilteredList_success() throws Exception {"
+        "content": "        FavouriteCommand favouriteFirstCommandCopy \u003d new FavouriteCommand(INDEX_FIRST_PERSON);"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Person personToFavourite \u003d model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());"
+        "content": "        assertTrue(favouriteFirstCommand.equals(favouriteFirstCommandCopy));"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Person favouritedPerson \u003d new PersonBuilder().build();"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        FavouriteCommand favouriteCommand \u003d new FavouriteCommand(INDEX_FIRST_PERSON);"
+        "content": "        // different types -\u003e returns false"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Model expectedModel \u003d new ModelManager(new AddressBook(model.getAddressBook()), new UserPrefs());"
+        "content": "        assertFalse(favouriteFirstCommand.equals(1));"
       },
       {
         "lineNumber": 106,
@@ -57958,14 +59396,14 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.favouritePerson(personToFavourite, favouritedPerson);"
+        "content": "        // null -\u003e returns false"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.commitAddressBook();"
+        "content": "        assertFalse(favouriteFirstCommand.equals(null));"
       },
       {
         "lineNumber": 109,
@@ -57979,395 +59417,87 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // delete -\u003e first person favourited"
+        "content": "        // different person -\u003e returns false"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        favouriteCommand.execute(model, commandHistory);"
+        "content": "        assertFalse(favouriteFirstCommand.equals(favouriteSecondCommand));"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // undo -\u003e reverts addressbook back to previous state and filtered person list to show all persons"
+        "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.undoAddressBook();"
+        "content": "    /**"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertCommandSuccess(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": "     * Updates {@code model}\u0027s filtered list to show no one."
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "     */"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // redo -\u003e same first person favourited again"
+        "content": "    private void showNoPerson(Model model) {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.redoAddressBook();"
+        "content": "        model.updateFilteredPersonList(p -\u003e false);"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertCommandSuccess(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "        assertTrue(model.getFilteredPersonList().isEmpty());"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    */"
+        "content": "    }"
       },
       {
         "lineNumber": 122,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 123,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 124,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    public void executeUndoRedo_invalidIndexUnfilteredList_failure() {"
-      },
-      {
-        "lineNumber": 125,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        Index outOfBoundIndex \u003d Index.fromOneBased(model.getFilteredPersonList().size() + 1);"
-      },
-      {
-        "lineNumber": 126,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        FavouriteCommand favouriteCommand \u003d new FavouriteCommand(outOfBoundIndex);"
-      },
-      {
-        "lineNumber": 127,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 128,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // execution failed -\u003e address book state not added into model"
-      },
-      {
-        "lineNumber": 129,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertCommandFailure(favouriteCommand, model, commandHistory, Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
-      },
-      {
-        "lineNumber": 130,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 131,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // single address book state in model -\u003e undoCommand and redoCommand fail"
-      },
-      {
-        "lineNumber": 132,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertCommandFailure(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_FAILURE);"
-      },
-      {
-        "lineNumber": 133,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertCommandFailure(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_FAILURE);"
-      },
-      {
-        "lineNumber": 134,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 136,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 137,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    public void equals() {"
-      },
-      {
-        "lineNumber": 138,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        FavouriteCommand favouriteFirstCommand \u003d new FavouriteCommand(INDEX_FIRST_PERSON);"
-      },
-      {
-        "lineNumber": 139,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        FavouriteCommand favouriteSecondCommand \u003d new FavouriteCommand(INDEX_SECOND_PERSON);"
-      },
-      {
-        "lineNumber": 140,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // same object -\u003e returns true"
-      },
-      {
-        "lineNumber": 142,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertTrue(favouriteFirstCommand.equals(favouriteFirstCommand));"
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // same values -\u003e returns true"
-      },
-      {
-        "lineNumber": 145,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        FavouriteCommand favouriteFirstCommandCopy \u003d new FavouriteCommand(INDEX_FIRST_PERSON);"
-      },
-      {
-        "lineNumber": 146,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertTrue(favouriteFirstCommand.equals(favouriteFirstCommandCopy));"
-      },
-      {
-        "lineNumber": 147,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 148,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // different types -\u003e returns false"
-      },
-      {
-        "lineNumber": 149,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertFalse(favouriteFirstCommand.equals(1));"
-      },
-      {
-        "lineNumber": 150,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // null -\u003e returns false"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertFalse(favouriteFirstCommand.equals(null));"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // different person -\u003e returns false"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertFalse(favouriteFirstCommand.equals(favouriteSecondCommand));"
-      },
-      {
-        "lineNumber": 156,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 157,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 158,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 159,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "     * Updates {@code model}\u0027s filtered list to show no one."
-      },
-      {
-        "lineNumber": 160,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 161,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    private void showNoPerson(Model model) {"
-      },
-      {
-        "lineNumber": 162,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        model.updateFilteredPersonList(p -\u003e false);"
-      },
-      {
-        "lineNumber": 163,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 164,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertTrue(model.getFilteredPersonList().isEmpty());"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 166,
         "author": {
           "gitId": "valensia0711"
         },
@@ -58375,7 +59505,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 166
+      "valensia0711": 122
     }
   },
   {
@@ -60517,6 +61647,252 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/logic/commands/SortCommandTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "package seedu.address.logic.commands;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.ALICE;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.BOB;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.HARRY;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import seedu.address.model.AddressBook;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import seedu.address.testutil.AddressBookBuilder;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "public class SortCommandTest {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    public void execute_sortList() {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        AddressBook addressBook \u003d new AddressBookBuilder().withPerson(BOB).withPerson(ALICE).build();"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        AddressBook expectedAddressBook \u003d new AddressBookBuilder().withPerson(ALICE).withPerson(BOB).build();"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        addressBook.sort();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        assertEquals(addressBook, expectedAddressBook);"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    public void execute_sortListWithFavourite() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        // typical person Carl is set to be favourited"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        AddressBook addressBook \u003d new AddressBookBuilder().withPerson(BOB).withPerson(ALICE).withPerson(HARRY).build();"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        AddressBook expectedAddressBook \u003d new AddressBookBuilder().withPerson(HARRY).withPerson(ALICE)"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "                .withPerson(BOB).build();"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        addressBook.sort();"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "        assertEquals(addressBook, expectedAddressBook);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "valensia0711": 34
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/logic/commands/UnfavouriteCommandTest.java",
     "lines": [
       {
@@ -60748,7 +62124,7 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void execute_validIndexUnfilteredList_success() {"
+        "content": "    public void execute_success() {"
       },
       {
         "lineNumber": 34,
@@ -61105,189 +62481,189 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    /*"
+        "content": "    @Test"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Test"
+        "content": "    public void execute_invalidIndexFilteredList_throwsCommandException() {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void execute_validIndexFilteredList_success() {"
+        "content": "        showPersonAtIndex(model, INDEX_FIRST_PERSON);"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        showPersonAtIndex(model, INDEX_FIRST_PERSON);"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        Index outOfBoundIndex \u003d INDEX_SECOND_PERSON;"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Person personToFavourite \u003d model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());"
+        "content": "        // ensures that outOfBoundIndex is still in bounds of address book list"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Person favouritedPerson \u003d new PersonBuilder().build();"
+        "content": "        assertTrue(outOfBoundIndex.getZeroBased() \u003c model.getAddressBook().getPersonList().size());"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        FavouriteCommand favouriteCommand \u003d new FavouriteCommand(INDEX_FIRST_PERSON);"
+        "content": ""
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        UnfavouriteCommand unfavouriteCommand \u003d new UnfavouriteCommand(outOfBoundIndex);"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        String expectedMessage \u003d String.format(FavouriteCommand.MESSAGE_FAVOURITE_PERSON_SUCCESS,"
+        "content": ""
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                favouritedPerson.getName().fullName);"
+        "content": "        assertCommandFailure(unfavouriteCommand, model, commandHistory,"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "                Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Model expectedModel \u003d new ModelManager(new AddressBook(model.getAddressBook()), new UserPrefs());"
+        "content": "    }"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.favouritePerson(personToFavourite, favouritedPerson);"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.commitAddressBook();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    public void executeUndoRedo_invalidIndexUnfilteredList_failure() {"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertCommandSuccess(favouriteCommand, model, commandHistory, expectedMessage, expectedModel);"
+        "content": "        Index outOfBoundIndex \u003d Index.fromOneBased(model.getFilteredPersonList().size() + 1);"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "        UnfavouriteCommand unfavouriteCommand \u003d new UnfavouriteCommand(outOfBoundIndex);"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    */"
+        "content": ""
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        // execution failed -\u003e address book state not added into model"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Test"
+        "content": "        assertCommandFailure(unfavouriteCommand, model, commandHistory,"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void execute_invalidIndexFilteredList_throwsCommandException() {"
+        "content": "                Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        showPersonAtIndex(model, INDEX_FIRST_PERSON);"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        // single address book state in model -\u003e undoCommand and redoCommand fail"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Index outOfBoundIndex \u003d INDEX_SECOND_PERSON;"
+        "content": "        assertCommandFailure(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_FAILURE);"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // ensures that outOfBoundIndex is still in bounds of address book list"
+        "content": "        assertCommandFailure(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_FAILURE);"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertTrue(outOfBoundIndex.getZeroBased() \u003c model.getAddressBook().getPersonList().size());"
+        "content": "    }"
       },
       {
         "lineNumber": 111,
@@ -61301,521 +62677,213 @@
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        UnfavouriteCommand unfavouriteCommand \u003d new UnfavouriteCommand(outOfBoundIndex);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    public void equals() {"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertCommandFailure(unfavouriteCommand, model, commandHistory,"
+        "content": "        UnfavouriteCommand unfavouriteFirstCommand \u003d new UnfavouriteCommand(INDEX_FIRST_PERSON);"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "                Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
+        "content": "        UnfavouriteCommand unfavouriteSecondCommand \u003d new UnfavouriteCommand(INDEX_SECOND_PERSON);"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        // same object -\u003e returns true"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    /*"
+        "content": "        assertTrue(unfavouriteFirstCommand.equals(unfavouriteFirstCommand));"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void executeUndoRedo_validIndexUnfilteredList_success() throws Exception {"
+        "content": "        // same values -\u003e returns true"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Person personToFavourite \u003d model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());"
+        "content": "        UnfavouriteCommand unfavouriteFirstCommandCopy \u003d new UnfavouriteCommand(INDEX_FIRST_PERSON);"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Person favouritedPerson \u003d new PersonBuilder().build();"
+        "content": "        assertTrue(unfavouriteFirstCommand.equals(unfavouriteFirstCommandCopy));"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        FavouriteCommand favouriteCommand \u003d new FavouriteCommand(INDEX_FIRST_PERSON);"
+        "content": ""
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        Model expectedModel \u003d new ModelManager(new AddressBook(model.getAddressBook()), new UserPrefs());"
+        "content": "        // different types -\u003e returns false"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        assertFalse(unfavouriteFirstCommand.equals(1));"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.favouritePerson(personToFavourite, favouritedPerson);"
+        "content": ""
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.commitAddressBook();"
+        "content": "        // null -\u003e returns false"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        assertFalse(unfavouriteFirstCommand.equals(null));"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // delete -\u003e first person favourited"
+        "content": ""
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        favouriteCommand.execute(model, commandHistory);"
+        "content": "        // different person -\u003e returns false"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "        assertFalse(unfavouriteFirstCommand.equals(unfavouriteSecondCommand));"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // undo -\u003e reverts addressbook back to previous state and filtered person list to show all persons"
+        "content": "    }"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.undoAddressBook();"
+        "content": ""
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertCommandSuccess(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": "    /**"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "     * Updates {@code model}\u0027s filtered list to show no one."
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        // redo -\u003e same first person favourited again"
+        "content": "     */"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        expectedModel.redoAddressBook();"
+        "content": "    private void showNoPerson(Model model) {"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertCommandSuccess(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_SUCCESS, expectedModel);"
+        "content": "        model.updateFilteredPersonList(p -\u003e false);"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    */"
+        "content": "        assertTrue(model.getFilteredPersonList().isEmpty());"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 142,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 143,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    public void executeUndoRedo_invalidIndexUnfilteredList_failure() {"
-      },
-      {
-        "lineNumber": 144,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        Index outOfBoundIndex \u003d Index.fromOneBased(model.getFilteredPersonList().size() + 1);"
-      },
-      {
-        "lineNumber": 145,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        UnfavouriteCommand unfavouriteCommand \u003d new UnfavouriteCommand(outOfBoundIndex);"
-      },
-      {
-        "lineNumber": 146,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 147,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // execution failed -\u003e address book state not added into model"
-      },
-      {
-        "lineNumber": 148,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertCommandFailure(unfavouriteCommand, model, commandHistory,"
-      },
-      {
-        "lineNumber": 149,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "                Messages.MESSAGE_INVALID_PERSON_DISPLAYED_INDEX);"
-      },
-      {
-        "lineNumber": 150,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // single address book state in model -\u003e undoCommand and redoCommand fail"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertCommandFailure(new UndoCommand(), model, commandHistory, UndoCommand.MESSAGE_FAILURE);"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertCommandFailure(new RedoCommand(), model, commandHistory, RedoCommand.MESSAGE_FAILURE);"
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 156,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 157,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    public void equals() {"
-      },
-      {
-        "lineNumber": 158,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        UnfavouriteCommand unfavouriteFirstCommand \u003d new UnfavouriteCommand(INDEX_FIRST_PERSON);"
-      },
-      {
-        "lineNumber": 159,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        UnfavouriteCommand unfavouriteSecondCommand \u003d new UnfavouriteCommand(INDEX_SECOND_PERSON);"
-      },
-      {
-        "lineNumber": 160,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 161,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // same object -\u003e returns true"
-      },
-      {
-        "lineNumber": 162,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertTrue(unfavouriteFirstCommand.equals(unfavouriteFirstCommand));"
-      },
-      {
-        "lineNumber": 163,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 164,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // same values -\u003e returns true"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        UnfavouriteCommand unfavouriteFirstCommandCopy \u003d new UnfavouriteCommand(INDEX_FIRST_PERSON);"
-      },
-      {
-        "lineNumber": 166,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertTrue(unfavouriteFirstCommand.equals(unfavouriteFirstCommandCopy));"
-      },
-      {
-        "lineNumber": 167,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 168,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // different types -\u003e returns false"
-      },
-      {
-        "lineNumber": 169,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertFalse(unfavouriteFirstCommand.equals(1));"
-      },
-      {
-        "lineNumber": 170,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 171,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // null -\u003e returns false"
-      },
-      {
-        "lineNumber": 172,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertFalse(unfavouriteFirstCommand.equals(null));"
-      },
-      {
-        "lineNumber": 173,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        // different person -\u003e returns false"
-      },
-      {
-        "lineNumber": 175,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertFalse(unfavouriteFirstCommand.equals(unfavouriteSecondCommand));"
-      },
-      {
-        "lineNumber": 176,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 177,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 178,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 179,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "     * Updates {@code model}\u0027s filtered list to show no one."
-      },
-      {
-        "lineNumber": 180,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 181,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    private void showNoPerson(Model model) {"
-      },
-      {
-        "lineNumber": 182,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        model.updateFilteredPersonList(p -\u003e false);"
-      },
-      {
-        "lineNumber": 183,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 184,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "        assertTrue(model.getFilteredPersonList().isEmpty());"
-      },
-      {
-        "lineNumber": 185,
-        "author": {
-          "gitId": "valensia0711"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 186,
         "author": {
           "gitId": "valensia0711"
         },
@@ -61823,7 +62891,7 @@
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 186
+      "valensia0711": 142
     }
   },
   {
@@ -63494,779 +64562,779 @@
       {
         "lineNumber": 36,
         "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "import seedu.address.logic.commands.SortCommand;"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.commands.UndoCommand;"
       },
       {
-        "lineNumber": 37,
+        "lineNumber": 38,
         "author": {
           "gitId": "valensia0711"
         },
         "content": "import seedu.address.logic.commands.UnfavouriteCommand;"
       },
       {
-        "lineNumber": 38,
+        "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.logic.parser.exceptions.ParseException;"
       },
       {
-        "lineNumber": 39,
+        "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.model.person.NameContainsKeywordsPredicate;"
       },
       {
-        "lineNumber": 40,
+        "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.model.person.Person;"
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.testutil.EditPersonDescriptorBuilder;"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 43,
         "author": {
           "gitId": "abtyx"
         },
         "content": "import seedu.address.testutil.FieldsToChangeBuilder;"
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.testutil.PersonBuilder;"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
         "content": "import seedu.address.testutil.PersonUtil;"
       },
       {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "public class AddressBookParserTest {"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Rule"
+        "content": "public class AddressBookParserTest {"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
+        "content": "    @Rule"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": "    private final AddressBookParser parser \u003d new AddressBookParser();"
+        "content": ""
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private final AddressBookParser parser \u003d new AddressBookParser();"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 54,
         "author": {
           "gitId": "abtyx"
         },
         "content": "    public void parseCommand_privacy() throws Exception {"
       },
       {
-        "lineNumber": 54,
+        "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
         "content": "        Person person \u003d new PersonBuilder().build();"
-      },
-      {
-        "lineNumber": 55,
-        "author": {
-          "gitId": "abtyx"
-        },
-        "content": "        FieldsToChange fieldsToChange \u003d new FieldsToChangeBuilder().withPrivateAddress().build();"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        PrivacyCommand command \u003d (PrivacyCommand) parser.parseCommand(PrivacyCommand.COMMAND_WORD + \" \""
+        "content": "        FieldsToChange fieldsToChange \u003d new FieldsToChangeBuilder().withPrivateAddress().build();"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + \"a/y\");"
+        "content": "        PrivacyCommand command \u003d (PrivacyCommand) parser.parseCommand(PrivacyCommand.COMMAND_WORD + \" \""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "        assertEquals(new PrivacyCommand(INDEX_FIRST_PERSON, fieldsToChange), command);"
+        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + \"a/y\");"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "abtyx"
         },
-        "content": ""
+        "content": "        assertEquals(new PrivacyCommand(INDEX_FIRST_PERSON, fieldsToChange), command);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "abtyx"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "abtyx"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 63,
+        "author": {
+          "gitId": "abtyx"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
         "content": "    public void parseCommand_add() throws Exception {"
       },
       {
-        "lineNumber": 64,
+        "lineNumber": 65,
         "author": {
           "gitId": "IamRENCE"
         },
         "content": "        Person person \u003d new PersonBuilder().withRating(\"0\").build(); // Rating set to 0 to simulate newly added staff"
       },
       {
-        "lineNumber": 65,
+        "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
         "content": "        AddCommand command \u003d (AddCommand) parser.parseCommand(PersonUtil.getAddCommand(person));"
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(new AddCommand(person), command);"
       },
       {
-        "lineNumber": 67,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    }"
-      },
-      {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_clear() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD) instanceof ClearCommand);"
+        "content": "    public void parseCommand_clear() throws Exception {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD + \" 3\") instanceof ClearCommand);"
+        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD) instanceof ClearCommand);"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(parser.parseCommand(ClearCommand.COMMAND_WORD + \" 3\") instanceof ClearCommand);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_delete() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "        DeleteCommand command \u003d (DeleteCommand) parser.parseCommand("
+        "content": "    public void parseCommand_delete() throws Exception {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": "                DeleteCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+        "content": "        DeleteCommand command \u003d (DeleteCommand) parser.parseCommand("
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);"
+        "content": "                DeleteCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertEquals(new DeleteCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_edit() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": "        Person person \u003d new PersonBuilder().build();"
+        "content": "    public void parseCommand_edit() throws Exception {"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "        EditPersonDescriptor descriptor \u003d new EditPersonDescriptorBuilder(person).build();"
+        "content": "        Person person \u003d new PersonBuilder().build();"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "        EditCommand command \u003d (EditCommand) parser.parseCommand(EditCommand.COMMAND_WORD + \" \""
+        "content": "        EditPersonDescriptor descriptor \u003d new EditPersonDescriptorBuilder(person).build();"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + PersonUtil.getEditPersonDescriptorDetails(descriptor));"
+        "content": "        EditCommand command \u003d (EditCommand) parser.parseCommand(EditCommand.COMMAND_WORD + \" \""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);"
+        "content": "                + INDEX_FIRST_PERSON.getOneBased() + \" \" + PersonUtil.getEditPersonDescriptorDetails(descriptor));"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertEquals(new EditCommand(INDEX_FIRST_PERSON, descriptor), command);"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_exit() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD) instanceof ExitCommand);"
+        "content": "    public void parseCommand_exit() throws Exception {"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD + \" 3\") instanceof ExitCommand);"
+        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD) instanceof ExitCommand);"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(parser.parseCommand(ExitCommand.COMMAND_WORD + \" 3\") instanceof ExitCommand);"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "valensia0711"
+          "gitId": "-"
         },
-        "content": "    public void parseCommand_favourite() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        String command \u003d FavouriteCommand.COMMAND_WORD + \" 1 \";"
+        "content": "    public void parseCommand_favourite() throws Exception {"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertTrue(parser.parseCommand(command) instanceof FavouriteCommand);"
+        "content": "        String command \u003d FavouriteCommand.COMMAND_WORD + \" 1 \";"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "        assertTrue(parser.parseCommand(command) instanceof FavouriteCommand);"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    public void parseCommand_unfavourite() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        String command \u003d UnfavouriteCommand.COMMAND_WORD + \" 1 \";"
+        "content": "    public void parseCommand_unfavourite() throws Exception {"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "        assertTrue(parser.parseCommand(command) instanceof UnfavouriteCommand);"
+        "content": "        String command \u003d UnfavouriteCommand.COMMAND_WORD + \" 1 \";"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    }"
+        "content": "        assertTrue(parser.parseCommand(command) instanceof UnfavouriteCommand);"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "valensia0711"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "    public void parseCommand_find() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "        List\u003cString\u003e keywords \u003d Arrays.asList(\"foo\", \"bar\", \"baz\");"
+        "content": "    public void parseCommand_sort() throws Exception {"
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "        FindCommand command \u003d (FindCommand) parser.parseCommand("
+        "content": "        assertTrue(parser.parseCommand(SortCommand.COMMAND_WORD) instanceof SortCommand);"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
-        "content": "                FindCommand.COMMAND_WORD + \" \" + keywords.stream().collect(Collectors.joining(\" \")));"
+        "content": "        assertTrue(parser.parseCommand(SortCommand.COMMAND_WORD + \" 3\") instanceof SortCommand);"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "-"
-        },
-        "content": "        assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);"
-      },
-      {
-        "lineNumber": 115,
-        "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 115,
         "author": {
-          "gitId": "-"
+          "gitId": "valensia0711"
         },
         "content": ""
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    @Test"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "    public void parseCommand_find() throws Exception {"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_help() throws Exception {"
+        "content": "        List\u003cString\u003e keywords \u003d Arrays.asList(\"foo\", \"bar\", \"baz\");"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD) instanceof HelpCommand);"
+        "content": "        FindCommand command \u003d (FindCommand) parser.parseCommand("
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD + \" 3\") instanceof HelpCommand);"
+        "content": "                FindCommand.COMMAND_WORD + \" \" + keywords.stream().collect(Collectors.joining(\" \")));"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertEquals(new FindCommand(new NameContainsKeywordsPredicate(keywords)), command);"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_history() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD) instanceof HistoryCommand);"
+        "content": "    public void parseCommand_help() throws Exception {"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD + \" 3\") instanceof HistoryCommand);"
+        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD) instanceof HelpCommand);"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        assertTrue(parser.parseCommand(HelpCommand.COMMAND_WORD + \" 3\") instanceof HelpCommand);"
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "        try {"
+        "content": "    }"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "            parser.parseCommand(\"histories\");"
+        "content": ""
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new AssertionError(\"The expected ParseException was not thrown.\");"
+        "content": "    @Test"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (ParseException pe) {"
+        "content": "    public void parseCommand_history() throws Exception {"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "            assertEquals(MESSAGE_UNKNOWN_COMMAND, pe.getMessage());"
+        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD) instanceof HistoryCommand);"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "        assertTrue(parser.parseCommand(HistoryCommand.COMMAND_WORD + \" 3\") instanceof HistoryCommand);"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        try {"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": "            parser.parseCommand(\"histories\");"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_list() throws Exception {"
+        "content": "            throw new AssertionError(\"The expected ParseException was not thrown.\");"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);"
+        "content": "        } catch (ParseException pe) {"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD + \" 3\") instanceof ListCommand);"
+        "content": "            assertEquals(MESSAGE_UNKNOWN_COMMAND, pe.getMessage());"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_select() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "        SelectCommand command \u003d (SelectCommand) parser.parseCommand("
+        "content": "    public void parseCommand_list() throws Exception {"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "                SelectCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
+        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD) instanceof ListCommand);"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);"
+        "content": "        assertTrue(parser.parseCommand(ListCommand.COMMAND_WORD + \" 3\") instanceof ListCommand);"
       },
       {
         "lineNumber": 147,
@@ -64294,215 +65362,215 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_redoCommandWord_returnsRedoCommand() throws Exception {"
+        "content": "    public void parseCommand_select() throws Exception {"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_WORD) instanceof RedoCommand);"
+        "content": "        SelectCommand command \u003d (SelectCommand) parser.parseCommand("
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(\"redo 1\") instanceof RedoCommand);"
+        "content": "                SelectCommand.COMMAND_WORD + \" \" + INDEX_FIRST_PERSON.getOneBased());"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertEquals(new SelectCommand(INDEX_FIRST_PERSON), command);"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_undoCommandWord_returnsUndoCommand() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD) instanceof UndoCommand);"
+        "content": "    public void parseCommand_redoCommandWord_returnsRedoCommand() throws Exception {"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(parser.parseCommand(\"undo 3\") instanceof UndoCommand);"
+        "content": "        assertTrue(parser.parseCommand(RedoCommand.COMMAND_WORD) instanceof RedoCommand);"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        assertTrue(parser.parseCommand(\"redo 1\") instanceof RedoCommand);"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
-          "gitId": "IamRENCE"
-        },
-        "content": "    public void parseCommand_parseCommand_rate() throws Exception {"
-      },
-      {
-        "lineNumber": 163,
-        "author": {
-          "gitId": "IamRENCE"
-        },
-        "content": "        String command \u003d RateCommand.COMMAND_WORD + \" 1 \" + PREFIX_RATING + \"5\";"
-      },
-      {
-        "lineNumber": 164,
-        "author": {
-          "gitId": "IamRENCE"
-        },
-        "content": "        assertTrue(parser.parseCommand(command) instanceof RateCommand);"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "IamRENCE"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 166,
-        "author": {
-          "gitId": "IamRENCE"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 167,
-        "author": {
-          "gitId": "IamRENCE"
+          "gitId": "-"
         },
         "content": "    @Test"
       },
       {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_undoCommandWord_returnsUndoCommand() throws Exception {"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(UndoCommand.COMMAND_WORD) instanceof UndoCommand);"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertTrue(parser.parseCommand(\"undo 3\") instanceof UndoCommand);"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
         "lineNumber": 168,
         "author": {
-          "gitId": "IamRENCE"
+          "gitId": "-"
         },
-        "content": "    public void parseCommand_parseCommand_feedback() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "IamRENCE"
         },
-        "content": "        String command \u003d FeedbackCommand.COMMAND_WORD + \" 1 \" + PREFIX_FEEDBACK + \"Excellent!\";"
+        "content": "    public void parseCommand_parseCommand_rate() throws Exception {"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "IamRENCE"
         },
-        "content": "        assertTrue(parser.parseCommand(command) instanceof FeedbackCommand);"
+        "content": "        String command \u003d RateCommand.COMMAND_WORD + \" 1 \" + PREFIX_RATING + \"5\";"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "IamRENCE"
         },
-        "content": "    }"
+        "content": "        assertTrue(parser.parseCommand(command) instanceof RateCommand);"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "IamRENCE"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "IamRENCE"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 174,
         "author": {
-          "gitId": "-"
+          "gitId": "IamRENCE"
         },
-        "content": "    public void parseCommand_unrecognisedInput_throwsParseException() throws Exception {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 175,
         "author": {
-          "gitId": "-"
+          "gitId": "IamRENCE"
         },
-        "content": "        thrown.expect(ParseException.class);"
+        "content": "    public void parseCommand_parseCommand_feedback() throws Exception {"
       },
       {
         "lineNumber": 176,
         "author": {
-          "gitId": "-"
+          "gitId": "IamRENCE"
         },
-        "content": "        thrown.expectMessage(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
+        "content": "        String command \u003d FeedbackCommand.COMMAND_WORD + \" 1 \" + PREFIX_FEEDBACK + \"Excellent!\";"
       },
       {
         "lineNumber": 177,
         "author": {
-          "gitId": "-"
+          "gitId": "IamRENCE"
         },
-        "content": "        parser.parseCommand(\"\");"
+        "content": "        assertTrue(parser.parseCommand(command) instanceof FeedbackCommand);"
       },
       {
         "lineNumber": 178,
         "author": {
-          "gitId": "-"
+          "gitId": "IamRENCE"
         },
         "content": "    }"
       },
       {
         "lineNumber": 179,
         "author": {
-          "gitId": "-"
+          "gitId": "IamRENCE"
         },
         "content": ""
       },
       {
         "lineNumber": 180,
         "author": {
-          "gitId": "-"
+          "gitId": "IamRENCE"
         },
         "content": "    @Test"
       },
@@ -64511,7 +65579,7 @@
         "author": {
           "gitId": "-"
         },
-        "content": "    public void parseCommand_unknownCommand_throwsParseException() throws Exception {"
+        "content": "    public void parseCommand_unrecognisedInput_throwsParseException() throws Exception {"
       },
       {
         "lineNumber": 182,
@@ -64525,14 +65593,14 @@
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expectMessage(MESSAGE_UNKNOWN_COMMAND);"
+        "content": "        thrown.expectMessage(String.format(MESSAGE_INVALID_COMMAND_FORMAT, HelpCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "        parser.parseCommand(\"unknownCommand\");"
+        "content": "        parser.parseCommand(\"\");"
       },
       {
         "lineNumber": 185,
@@ -64546,11 +65614,60 @@
         "author": {
           "gitId": "-"
         },
+        "content": ""
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void parseCommand_unknownCommand_throwsParseException() throws Exception {"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(ParseException.class);"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expectMessage(MESSAGE_UNKNOWN_COMMAND);"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        parser.parseCommand(\"unknownCommand\");"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "valensia0711": 14,
+      "valensia0711": 21,
       "IamRENCE": 17,
       "abtyx": 12,
       "-": 143
@@ -80929,72 +82046,72 @@
       {
         "lineNumber": 65,
         "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "    public static final Person HARRY \u003d new PersonBuilder().withName(\"Harry Potter\").withPhone(\"95284922\")"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "            .withEmail(\"harry@example.com\").withAddress(\"9.75 platform\").withRating(\"0\")"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "            .withDepartment(\"Tech\").withManager(\"Sirius Snape\")"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "            .withSalary(\"0\").withHours(\"0\").withRate(\"0\").withDeductibles(\"0\").withFeedback(\"-NO FEEDBACK YET-\")"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "valensia0711"
+        },
+        "content": "            .withFavourite(true).build();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 66,
+        "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
         "content": "    // Manually added"
       },
       {
-        "lineNumber": 67,
+        "lineNumber": 72,
         "author": {
           "gitId": "DanKhoo"
         },
         "content": "    public static final Person HOON \u003d new PersonBuilder().withName(\"Hoon Meier\").withPhone(\"84824241\")"
       },
       {
-        "lineNumber": 68,
+        "lineNumber": 73,
         "author": {
           "gitId": "DanKhoo"
         },
         "content": "            .withEmail(\"stefan@example.com\").withAddress(\"little india\").withRating(\"0\")"
       },
       {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "NgeowXiuQi"
-        },
-        "content": "            .withDepartment(\"Marketing\").withManager(\"Marcus Tan\")"
-      },
-      {
-        "lineNumber": 70,
-        "author": {
-          "gitId": "IamRENCE"
-        },
-        "content": "            .withSalary(\"0\").withHours(\"0\").withRate(\"0\").withDeductibles(\"0\").withFeedback(\"-NO FEEDBACK YET-\")"
-      },
-      {
-        "lineNumber": 71,
-        "author": {
-          "gitId": "NgeowXiuQi"
-        },
-        "content": "            .build();"
-      },
-      {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "DanKhoo"
-        },
-        "content": "    public static final Person IDA \u003d new PersonBuilder().withName(\"Ida Mueller\").withPhone(\"84821311\")"
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "DanKhoo"
-        },
-        "content": "            .withEmail(\"hans@example.com\").withAddress(\"chicago ave\").withRating(\"0\")"
-      },
-      {
         "lineNumber": 74,
         "author": {
           "gitId": "NgeowXiuQi"
         },
-        "content": "            .withDepartment(\"Tech\").withManager(\"Moses Lim\")"
+        "content": "            .withDepartment(\"Marketing\").withManager(\"Marcus Tan\")"
       },
       {
         "lineNumber": 75,
@@ -81013,243 +82130,278 @@
       {
         "lineNumber": 77,
         "author": {
-          "gitId": "abtyx"
+          "gitId": "DanKhoo"
         },
-        "content": "    public static final Person NINJA \u003d new PersonBuilder().withName(\"Ninja Warrior\").withPrivatePhone(\"92349234\")"
+        "content": "    public static final Person IDA \u003d new PersonBuilder().withName(\"Ida Mueller\").withPhone(\"84821311\")"
       },
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "abtyx"
+          "gitId": "DanKhoo"
         },
-        "content": "            .withPrivateEmail(\"ninja@example.com\").withPrivateAddress(\"Ninja Cave\").withRating(\"0\")"
+        "content": "            .withEmail(\"hans@example.com\").withAddress(\"chicago ave\").withRating(\"0\")"
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "abtyx"
+          "gitId": "NgeowXiuQi"
         },
-        "content": "            .withDepartment(\"Assasin\").withManager(\"Bruce Lee\").withSalary(\"0\").withHours(\"0\").withRate(\"0\")"
+        "content": "            .withDepartment(\"Tech\").withManager(\"Moses Lim\")"
       },
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "abtyx"
+          "gitId": "IamRENCE"
         },
-        "content": "            .withDeductibles(\"0\").withFeedback(\"-NO FEEDBACK YET-\")"
+        "content": "            .withSalary(\"0\").withHours(\"0\").withRate(\"0\").withDeductibles(\"0\").withFeedback(\"-NO FEEDBACK YET-\")"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "abtyx"
+          "gitId": "NgeowXiuQi"
         },
         "content": "            .build();"
       },
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "-"
+          "gitId": "abtyx"
         },
-        "content": ""
+        "content": "    public static final Person NINJA \u003d new PersonBuilder().withName(\"Ninja Warrior\").withPrivatePhone(\"92349234\")"
       },
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "abtyx"
         },
-        "content": "    // Manually added - Person\u0027s details found in {@code CommandTestUtil}"
+        "content": "            .withPrivateEmail(\"ninja@example.com\").withPrivateAddress(\"Ninja Cave\").withRating(\"0\")"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "-"
+          "gitId": "abtyx"
         },
-        "content": "    public static final Person AMY \u003d new PersonBuilder().withName(VALID_NAME_AMY).withPhone(VALID_PHONE_AMY)"
+        "content": "            .withDepartment(\"Assasin\").withManager(\"Bruce Lee\").withSalary(\"0\").withHours(\"0\").withRate(\"0\")"
       },
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "abtyx"
         },
-        "content": "            .withEmail(VALID_EMAIL_AMY).withAddress(VALID_ADDRESS_AMY).withRating(\"0\")"
+        "content": "            .withDeductibles(\"0\").withFeedback(\"-NO FEEDBACK YET-\")"
       },
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "abtyx"
         },
-        "content": "            .withDepartment(VALID_DEPARTMENT_AMY).withManager(VALID_MANAGER_AMY)"
+        "content": "            .build();"
       },
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "-"
         },
-        "content": "            .withTags(VALID_TAG_FRIEND).build();"
+        "content": ""
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final Person BOB \u003d new PersonBuilder().withName(VALID_NAME_BOB).withPhone(VALID_PHONE_BOB)"
+        "content": "    // Manually added - Person\u0027s details found in {@code CommandTestUtil}"
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "DanKhoo"
+          "gitId": "-"
         },
-        "content": "            .withEmail(VALID_EMAIL_BOB).withAddress(VALID_ADDRESS_BOB).withRating(\"0\")"
+        "content": "    public static final Person AMY \u003d new PersonBuilder().withName(VALID_NAME_AMY).withPhone(VALID_PHONE_AMY)"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "            .withDepartment(VALID_DEPARTMENT_BOB).withManager(VALID_MANAGER_BOB)"
+        "content": "            .withEmail(VALID_EMAIL_AMY).withAddress(VALID_ADDRESS_AMY).withRating(\"0\")"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "DanKhoo"
         },
-        "content": "            .withTags(VALID_TAG_FRIEND).build();"
+        "content": "            .withDepartment(VALID_DEPARTMENT_AMY).withManager(VALID_MANAGER_AMY)"
       },
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": ""
+        "content": "            .withTags(VALID_TAG_FRIEND).build();"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static final String KEYWORD_MATCHING_MEIER \u003d \"Meier\"; // A keyword that matches MEIER"
+        "content": "    public static final Person BOB \u003d new PersonBuilder().withName(VALID_NAME_BOB).withPhone(VALID_PHONE_BOB)"
       },
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": ""
+        "content": "            .withEmail(VALID_EMAIL_BOB).withAddress(VALID_ADDRESS_BOB).withRating(\"0\")"
       },
       {
         "lineNumber": 95,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": "    private TypicalPersons() {} // prevents instantiation"
+        "content": "            .withDepartment(VALID_DEPARTMENT_BOB).withManager(VALID_MANAGER_BOB)"
       },
       {
         "lineNumber": 96,
         "author": {
-          "gitId": "-"
+          "gitId": "DanKhoo"
         },
-        "content": ""
+        "content": "            .withTags(VALID_TAG_FRIEND).build();"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns an {@code AddressBook} with all the typical persons."
+        "content": "    public static final String KEYWORD_MATCHING_MEIER \u003d \"Meier\"; // A keyword that matches MEIER"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static AddressBook getTypicalAddressBook() {"
+        "content": "    private TypicalPersons() {} // prevents instantiation"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "        AddressBook ab \u003d new AddressBook();"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": "        for (Person person : getTypicalPersons()) {"
+        "content": "    /**"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "            ab.addPerson(person);"
+        "content": "     * Returns an {@code AddressBook} with all the typical persons."
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "     */"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "        return ab;"
+        "content": "    public static AddressBook getTypicalAddressBook() {"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        AddressBook ab \u003d new AddressBook();"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        for (Person person : getTypicalPersons()) {"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static List\u003cPerson\u003e getTypicalPersons() {"
+        "content": "            ab.addPerson(person);"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "        return new ArrayList\u003c\u003e(Arrays.asList(ALICE, BENSON, CARL, DANIEL, ELLE, FIONA, GEORGE));"
+        "content": "        }"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "        return ab;"
       },
       {
         "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static List\u003cPerson\u003e getTypicalPersons() {"
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return new ArrayList\u003c\u003e(Arrays.asList(ALICE, BENSON, CARL, DANIEL, ELLE, FIONA, GEORGE));"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
@@ -81257,6 +82409,7 @@
       }
     ],
     "authorContributionMap": {
+      "valensia0711": 5,
       "IamRENCE": 11,
       "NgeowXiuQi": 14,
       "abtyx": 5,
