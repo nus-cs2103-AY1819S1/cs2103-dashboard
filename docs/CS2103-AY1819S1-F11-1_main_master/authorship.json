@@ -38955,432 +38955,439 @@
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "YezhongZ"
+          "gitId": "ChengYuuu"
         },
-        "content": "                    targetEvent.getEventSetUid(),"
+        "content": "                    targetEvent.getEventUid(),"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "ChengYuuu"
+          "gitId": "YezhongZ"
         },
-        "content": "                    targetEvent.getEventName(),"
+        "content": "                    targetEvent.getEventSetUid(),"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    new DateTime(repeatStartDateTime),"
+        "content": "                    targetEvent.getEventName(),"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    new DateTime(repeatStartDateTime.plus(durationDiff)),"
+        "content": "                    new DateTime(repeatStartDateTime),"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    targetEvent.getDescription(),"
+        "content": "                    new DateTime(repeatStartDateTime.plus(durationDiff)),"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    targetEvent.getVenue(),"
+        "content": "                    targetEvent.getDescription(),"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    targetEvent.getRepeatType(),"
+        "content": "                    targetEvent.getVenue(),"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    targetEvent.getRepeatUntilDateTime(),"
+        "content": "                    targetEvent.getRepeatType(),"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    targetEvent.getTags(),"
+        "content": "                    targetEvent.getRepeatUntilDateTime(),"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    targetEvent.getReminderDurationList()"
+        "content": "                    targetEvent.getTags(),"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            ));"
+        "content": "                    targetEvent.getReminderDurationList()"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            switch (targetEvent.getRepeatType()) {"
+        "content": "            ));"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            case DAILY:"
+        "content": "            switch (targetEvent.getRepeatType()) {"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                repeatStartDateTime \u003d repeatStartDateTime.plusDays(1);"
+        "content": "            case DAILY:"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                break;"
+        "content": "                repeatStartDateTime \u003d repeatStartDateTime.plusDays(1);"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            case WEEKLY:"
+        "content": "                break;"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                repeatStartDateTime \u003d repeatStartDateTime.plusWeeks(1);"
+        "content": "            case WEEKLY:"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                break;"
+        "content": "                repeatStartDateTime \u003d repeatStartDateTime.plusWeeks(1);"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            case MONTHLY:"
+        "content": "                break;"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                repeatStartDateTime \u003d repeatStartDateTime.with("
+        "content": "            case MONTHLY:"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                        new SameDayOfMonthTemporalAdjuster(targetEvent, ChronoUnit.MONTHS));"
+        "content": "                repeatStartDateTime \u003d repeatStartDateTime.with("
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                break;"
+        "content": "                        new SameDayOfMonthTemporalAdjuster(targetEvent, ChronoUnit.MONTHS));"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            case YEARLY:"
+        "content": "                break;"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                repeatStartDateTime \u003d repeatStartDateTime.with("
+        "content": "            case YEARLY:"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                        new SameDayOfMonthTemporalAdjuster(targetEvent, ChronoUnit.YEARS));"
+        "content": "                repeatStartDateTime \u003d repeatStartDateTime.with("
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                break;"
+        "content": "                        new SameDayOfMonthTemporalAdjuster(targetEvent, ChronoUnit.YEARS));"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            default:"
+        "content": "                break;"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                return Collections.unmodifiableList(repeatedEventList);"
+        "content": "            default:"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            }"
+        "content": "                return Collections.unmodifiableList(repeatedEventList);"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        }"
+        "content": "            }"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        return Collections.unmodifiableList(repeatedEventList);"
+        "content": "        }"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "    }"
+        "content": "        return Collections.unmodifiableList(repeatedEventList);"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "     * Custom Temporal Adjuster that helps adjust date to the next date"
+        "content": "    /**"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "     * according to its {@code unitType}."
+        "content": "     * Custom Temporal Adjuster that helps adjust date to the next date"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "     */"
+        "content": "     * according to its {@code unitType}."
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "    private class SameDayOfMonthTemporalAdjuster implements TemporalAdjuster {"
+        "content": "     */"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        private Event targetEvent;"
+        "content": "    private class SameDayOfMonthTemporalAdjuster implements TemporalAdjuster {"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        private ChronoUnit unitType;"
+        "content": "        private Event targetEvent;"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": ""
+        "content": "        private ChronoUnit unitType;"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        private SameDayOfMonthTemporalAdjuster(Event targetEvent, ChronoUnit unitType) {"
+        "content": ""
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            this.targetEvent \u003d targetEvent;"
+        "content": "        private SameDayOfMonthTemporalAdjuster(Event targetEvent, ChronoUnit unitType) {"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            this.unitType \u003d unitType;"
+        "content": "            this.targetEvent \u003d targetEvent;"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        }"
+        "content": "            this.unitType \u003d unitType;"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        @Override"
+        "content": ""
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        public Temporal adjustInto(Temporal temporal) {"
+        "content": "        @Override"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            do {"
+        "content": "        public Temporal adjustInto(Temporal temporal) {"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                try {"
+        "content": "            do {"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    temporal \u003d temporal.plus(1, unitType).with(ChronoField.DAY_OF_MONTH,"
+        "content": "                try {"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                            targetEvent.getStartDateTime().value.getDayOfMonth());"
+        "content": "                    temporal \u003d temporal.plus(1, unitType).with(ChronoField.DAY_OF_MONTH,"
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                } catch (DateTimeException e) {"
+        "content": "                            targetEvent.getStartDateTime().value.getDayOfMonth());"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    temporal \u003d temporal.plus(1, unitType);"
+        "content": "                } catch (DateTimeException e) {"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                }"
+        "content": "                    temporal \u003d temporal.plus(1, unitType);"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            } while (temporal.get(ChronoField.DAY_OF_MONTH)"
+        "content": "                }"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                    !\u003d targetEvent.getStartDateTime().value.getDayOfMonth());"
+        "content": "            } while (temporal.get(ChronoField.DAY_OF_MONTH)"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            return temporal;"
+        "content": "                    !\u003d targetEvent.getStartDateTime().value.getDayOfMonth());"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        }"
+        "content": "            return temporal;"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 111,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 112,
         "author": {
           "gitId": "ChengYuuu"
         },
@@ -39388,7 +39395,7 @@
       }
     ],
     "authorContributionMap": {
-      "ChengYuuu": 110,
+      "ChengYuuu": 111,
       "YezhongZ": 1
     }
   },
@@ -49119,14 +49126,14 @@
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        Event event \u003d new Event(UUID.randomUUID(), eventName, startDateTime, endDateTime, description,"
+        "content": "        Event event \u003d new Event(UUID.randomUUID(), UUID.randomUUID(), eventName, startDateTime, endDateTime,"
       },
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "Hexinyiyi"
+          "gitId": "ChengYuuu"
         },
-        "content": "                venue, repeatType, repeatUntilDateTime, tags, reminderDurationList);"
+        "content": "                description, venue, repeatType, repeatUntilDateTime, tags, reminderDurationList);"
       },
       {
         "lineNumber": 88,
@@ -49221,8 +49228,8 @@
       }
     ],
     "authorContributionMap": {
-      "Hexinyiyi": 6,
-      "ChengYuuu": 61,
+      "Hexinyiyi": 5,
+      "ChengYuuu": 62,
       "-": 33
     }
   },
@@ -62611,9 +62618,9 @@
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "YezhongZ"
+          "gitId": "ChengYuuu"
         },
-        "content": "                new Event(event.getEventSetUid(), event.getEventName(),"
+        "content": "                new Event(event.getEventUid(), event.getEventSetUid(), event.getEventName(),"
       },
       {
         "lineNumber": 132,
@@ -62912,8 +62919,8 @@
     ],
     "authorContributionMap": {
       "Hexinyiyi": 2,
-      "ChengYuuu": 169,
-      "YezhongZ": 2
+      "ChengYuuu": 170,
+      "YezhongZ": 1
     }
   },
   {
@@ -65477,595 +65484,595 @@
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "     * Does not take in eventUid. Will generate a random eventUid"
-      },
-      {
-        "lineNumber": 64,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "     * Used every time a new event is created"
-      },
-      {
-        "lineNumber": 65,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 66,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "    public Event(UUID eventSetUid, EventName eventName, DateTime startDateTime, DateTime endDateTime,"
-      },
-      {
-        "lineNumber": 67,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                 Description description, Venue venue,"
-      },
-      {
-        "lineNumber": 68,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                 RepeatType repeatType, DateTime repeatUntilDateTime, Set\u003cTag\u003e tags,"
-      },
-      {
-        "lineNumber": 69,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                 ReminderDurationList reminderDurationList) {"
-      },
-      {
-        "lineNumber": 70,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "        this(UUID.randomUUID(), eventSetUid, eventName, startDateTime, endDateTime, description,"
-      },
-      {
-        "lineNumber": 71,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                venue, repeatType, repeatUntilDateTime, tags, reminderDurationList);"
-      },
-      {
-        "lineNumber": 72,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 73,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 74,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 75,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 76,
-        "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "     * Does not take in reminderDurationList, which is set to an Empty ReminderDurationList"
       },
       {
-        "lineNumber": 77,
+        "lineNumber": 64,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 78,
+        "lineNumber": 65,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "    public Event(UUID eventUid, UUID eventSetUid, EventName eventName, DateTime startDateTime, DateTime endDateTime,"
       },
       {
-        "lineNumber": 79,
+        "lineNumber": 66,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "                 Description description, Venue venue,"
       },
       {
-        "lineNumber": 80,
+        "lineNumber": 67,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "                 RepeatType repeatType, DateTime repeatUntilDateTime, Set\u003cTag\u003e tags) {"
       },
       {
-        "lineNumber": 81,
+        "lineNumber": 68,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "        this(eventUid, eventSetUid, eventName, startDateTime, endDateTime, description,"
       },
       {
-        "lineNumber": 82,
+        "lineNumber": 69,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "                venue, repeatType, repeatUntilDateTime, tags, new ReminderDurationList());"
       },
       {
-        "lineNumber": 83,
+        "lineNumber": 70,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 84,
+        "lineNumber": 71,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": ""
       },
       {
-        "lineNumber": 85,
+        "lineNumber": 72,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 86,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "     * Does not take in reminderDurationList and eventUid"
-      },
-      {
-        "lineNumber": 87,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 88,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "    public Event(UUID eventSetUid, EventName eventName, DateTime startDateTime, DateTime endDateTime,"
-      },
-      {
-        "lineNumber": 89,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                 Description description, Venue venue,"
-      },
-      {
-        "lineNumber": 90,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                 RepeatType repeatType, DateTime repeatUntilDateTime, Set\u003cTag\u003e tags) {"
-      },
-      {
-        "lineNumber": 91,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "        this(UUID.randomUUID(), eventSetUid, eventName, startDateTime, endDateTime, description,"
-      },
-      {
-        "lineNumber": 92,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                venue, repeatType, repeatUntilDateTime, tags, new ReminderDurationList());"
-      },
-      {
-        "lineNumber": 93,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 94,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 95,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 96,
+        "lineNumber": 73,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "     * Does not take in reminderDurationList and eventUid and eventSetUid"
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 74,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 75,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "    public Event(EventName eventName, DateTime startDateTime, DateTime endDateTime,"
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 76,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "                 Description description, Venue venue,"
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 77,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "                 RepeatType repeatType, DateTime repeatUntilDateTime, Set\u003cTag\u003e tags,"
       },
       {
-        "lineNumber": 101,
+        "lineNumber": 78,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "                 ReminderDurationList reminderDurationList) {"
       },
       {
-        "lineNumber": 102,
+        "lineNumber": 79,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "        this(UUID.randomUUID(), UUID.randomUUID(), eventName, startDateTime, endDateTime,"
       },
       {
-        "lineNumber": 103,
+        "lineNumber": 80,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "                description, venue, repeatType, repeatUntilDateTime,"
       },
       {
-        "lineNumber": 104,
+        "lineNumber": 81,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "                tags, reminderDurationList);"
       },
       {
-        "lineNumber": 105,
+        "lineNumber": 82,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 106,
+        "lineNumber": 83,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": ""
       },
       {
-        "lineNumber": 107,
+        "lineNumber": 84,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "    public UUID getEventUid() {"
       },
       {
-        "lineNumber": 108,
+        "lineNumber": 85,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "        return eventUid;"
       },
       {
-        "lineNumber": 109,
+        "lineNumber": 86,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 110,
+        "lineNumber": 87,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 111,
+        "lineNumber": 88,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "    public UUID getEventSetUid() {"
       },
       {
-        "lineNumber": 112,
+        "lineNumber": 89,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "        return eventSetUid;"
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 90,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 114,
+        "lineNumber": 91,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 115,
+        "lineNumber": 92,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public EventName getEventName() {"
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 93,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        return eventName;"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 94,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 95,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 96,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public DateTime getStartDateTime() {"
       },
       {
-        "lineNumber": 120,
+        "lineNumber": 97,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        return startDateTime;"
       },
       {
-        "lineNumber": 121,
+        "lineNumber": 98,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 122,
+        "lineNumber": 99,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 123,
+        "lineNumber": 100,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public DateTime getEndDateTime() {"
       },
       {
-        "lineNumber": 124,
+        "lineNumber": 101,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        return endDateTime;"
       },
       {
-        "lineNumber": 125,
+        "lineNumber": 102,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 126,
+        "lineNumber": 103,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 127,
+        "lineNumber": 104,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public Description getDescription() {"
       },
       {
-        "lineNumber": 128,
+        "lineNumber": 105,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        return description;"
       },
       {
-        "lineNumber": 129,
+        "lineNumber": 106,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 130,
+        "lineNumber": 107,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 131,
+        "lineNumber": 108,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public Venue getVenue() {"
       },
       {
-        "lineNumber": 132,
+        "lineNumber": 109,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        return venue;"
       },
       {
-        "lineNumber": 133,
+        "lineNumber": 110,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 134,
+        "lineNumber": 111,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 135,
+        "lineNumber": 112,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public RepeatType getRepeatType() {"
       },
       {
-        "lineNumber": 136,
+        "lineNumber": 113,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        return repeatType;"
       },
       {
-        "lineNumber": 137,
+        "lineNumber": 114,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 138,
+        "lineNumber": 115,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 139,
+        "lineNumber": 116,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public DateTime getRepeatUntilDateTime() {"
       },
       {
-        "lineNumber": 140,
+        "lineNumber": 117,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        return repeatUntilDateTime;"
       },
       {
-        "lineNumber": 141,
+        "lineNumber": 118,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 142,
+        "lineNumber": 119,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 143,
+        "lineNumber": 120,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "    public ReminderDurationList getReminderDurationList() {"
       },
       {
-        "lineNumber": 144,
+        "lineNumber": 121,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "        return reminderDurationList;"
       },
       {
-        "lineNumber": 145,
+        "lineNumber": 122,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 146,
+        "lineNumber": 123,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": ""
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 124,
         "author": {
           "gitId": "YezhongZ"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "     * Returns true if the Event is an instance of RepeatEvent (EventSet)"
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "     * Returns false otherwise."
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "    public boolean isRepeatEvent() {"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "        return this.repeatType !\u003d RepeatType.NONE;"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "Hexinyiyi"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "     * Returns an immutable tag set, which throws {@code UnsupportedOperationException}"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "     * if modification is attempted."
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    public Set\u003cTag\u003e getTags() {"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "        return Collections.unmodifiableSet(tags);"
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "     * Returns true if end datetime is after start datetime"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    public static boolean isValidEventDateTime(DateTime startDateTime, DateTime endDateTime) {"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "        return startDateTime.compareTo(endDateTime) \u003c\u003d 0;"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "ChengYuuu"
         },
         "content": "    /**"
       },
@@ -66074,315 +66081,315 @@
         "author": {
           "gitId": "YezhongZ"
         },
-        "content": "     * Returns true if the Event is an instance of RepeatEvent (EventSet)"
+        "content": "     * Returns true if both event have the same eventSetUid."
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "YezhongZ"
         },
-        "content": "     * Returns false otherwise."
-      },
-      {
-        "lineNumber": 150,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 151,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "    public boolean isRepeatEvent() {"
-      },
-      {
-        "lineNumber": 152,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "        return this.repeatType !\u003d RepeatType.NONE;"
-      },
-      {
-        "lineNumber": 153,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 154,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 155,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 156,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "     * Returns an immutable tag set, which throws {@code UnsupportedOperationException}"
-      },
-      {
-        "lineNumber": 157,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "     * if modification is attempted."
-      },
-      {
-        "lineNumber": 158,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 159,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    public Set\u003cTag\u003e getTags() {"
-      },
-      {
-        "lineNumber": 160,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "        return Collections.unmodifiableSet(tags);"
-      },
-      {
-        "lineNumber": 161,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 162,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 163,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 164,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "     * Returns true if end datetime is after start datetime"
-      },
-      {
-        "lineNumber": 165,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 166,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    public static boolean isValidEventDateTime(DateTime startDateTime, DateTime endDateTime) {"
-      },
-      {
-        "lineNumber": 167,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "        return startDateTime.compareTo(endDateTime) \u003c\u003d 0;"
-      },
-      {
-        "lineNumber": 168,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 169,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 170,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 171,
-        "author": {
-          "gitId": "YezhongZ"
-        },
-        "content": "     * Returns true if both event have the same eventSetUid."
-      },
-      {
-        "lineNumber": 172,
-        "author": {
-          "gitId": "YezhongZ"
-        },
         "content": "     * This defines a weaker notion of equality between two events."
       },
       {
-        "lineNumber": 173,
+        "lineNumber": 150,
         "author": {
           "gitId": "Hexinyiyi"
         },
         "content": "     * Identifies recurring events as the same event"
       },
       {
-        "lineNumber": 174,
+        "lineNumber": 151,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 175,
+        "lineNumber": 152,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public boolean isSameEvent(Event otherEvent) {"
       },
       {
-        "lineNumber": 176,
+        "lineNumber": 153,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        if (otherEvent \u003d\u003d this) {"
       },
       {
-        "lineNumber": 177,
+        "lineNumber": 154,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "            return true;"
       },
       {
-        "lineNumber": 178,
+        "lineNumber": 155,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        }"
       },
       {
-        "lineNumber": 179,
+        "lineNumber": 156,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 180,
+        "lineNumber": 157,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        return otherEvent !\u003d null"
       },
       {
-        "lineNumber": 181,
+        "lineNumber": 158,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "                \u0026\u0026 otherEvent.getEventSetUid().equals(getEventSetUid());"
       },
       {
-        "lineNumber": 182,
+        "lineNumber": 159,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 183,
+        "lineNumber": 160,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": ""
       },
       {
-        "lineNumber": 184,
+        "lineNumber": 161,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 185,
+        "lineNumber": 162,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "     * Returns true if both events have the same identity and data fields."
       },
       {
-        "lineNumber": 186,
+        "lineNumber": 163,
         "author": {
           "gitId": "YezhongZ"
         },
         "content": "     * This defines a stronger notion of equality between two events."
       },
       {
-        "lineNumber": 187,
+        "lineNumber": 164,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 188,
+        "lineNumber": 165,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    @Override"
       },
       {
-        "lineNumber": 189,
+        "lineNumber": 166,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "    public boolean equals(Object other) {"
       },
       {
-        "lineNumber": 190,
+        "lineNumber": 167,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        if (other \u003d\u003d this) {"
       },
       {
-        "lineNumber": 191,
+        "lineNumber": 168,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "            return true;"
       },
       {
-        "lineNumber": 192,
+        "lineNumber": 169,
         "author": {
           "gitId": "ChengYuuu"
         },
         "content": "        }"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "        if (!(other instanceof Event)) {"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "        Event otherEvent \u003d (Event) other;"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "YezhongZ"
+        },
+        "content": "        return otherEvent.getEventSetUid().equals(getEventSetUid())"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "                \u0026\u0026 otherEvent.getEventName().equals(getEventName())"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "                \u0026\u0026 otherEvent.getStartDateTime().equals(getStartDateTime())"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "                \u0026\u0026 otherEvent.getEndDateTime().equals(getEndDateTime())"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "                \u0026\u0026 otherEvent.getDescription().equals(getDescription())"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "                \u0026\u0026 otherEvent.getVenue().equals(getVenue())"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "                \u0026\u0026 otherEvent.getRepeatType().equals(getRepeatType())"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "                \u0026\u0026 otherEvent.getRepeatUntilDateTime().equals(getRepeatUntilDateTime())"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "                \u0026\u0026 otherEvent.getTags().equals(getTags());"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    @Override"
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    public int hashCode() {"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "        // use this method for custom fields hashing instead of implementing our own"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "        return Objects.hash(eventName, startDateTime, endDateTime, description,"
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "Hexinyiyi"
+        },
+        "content": "                venue, repeatType, repeatUntilDateTime, tags, reminderDurationList);"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "ChengYuuu"
+        },
+        "content": "    }"
       },
       {
         "lineNumber": 193,
@@ -66396,147 +66403,147 @@
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        if (!(other instanceof Event)) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "            return false;"
+        "content": "    public String toString() {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        }"
+        "content": "        final StringBuilder builder \u003d new StringBuilder();"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": ""
+        "content": "        builder.append(getEventName())"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        Event otherEvent \u003d (Event) other;"
+        "content": "                .append(\" startDateTime: \")"
       },
       {
         "lineNumber": 199,
         "author": {
-          "gitId": "YezhongZ"
+          "gitId": "ChengYuuu"
         },
-        "content": "        return otherEvent.getEventSetUid().equals(getEventSetUid())"
+        "content": "                .append(getStartDateTime())"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                \u0026\u0026 otherEvent.getEventName().equals(getEventName())"
+        "content": "                .append(\" endDateTime: \")"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                \u0026\u0026 otherEvent.getStartDateTime().equals(getStartDateTime())"
+        "content": "                .append(getEndDateTime())"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                \u0026\u0026 otherEvent.getEndDateTime().equals(getEndDateTime())"
+        "content": "                .append(\" description: \")"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                \u0026\u0026 otherEvent.getDescription().equals(getDescription())"
+        "content": "                .append(getDescription())"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                \u0026\u0026 otherEvent.getVenue().equals(getVenue())"
+        "content": "                .append(\" venue: \")"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                \u0026\u0026 otherEvent.getRepeatType().equals(getRepeatType())"
+        "content": "                .append(getVenue())"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                \u0026\u0026 otherEvent.getRepeatUntilDateTime().equals(getRepeatUntilDateTime())"
+        "content": "                .append(\" repeat type: \")"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "                \u0026\u0026 otherEvent.getTags().equals(getTags());"
+        "content": "                .append(getRepeatType())"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "    }"
+        "content": "                .append(\" repeat until: \")"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": ""
+        "content": "                .append(getRepeatUntilDateTime())"
       },
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "ChengYuuu"
+          "gitId": "Hexinyiyi"
         },
-        "content": "    @Override"
+        "content": "                .append(\" Tags: \").append(getRepeatUntilDateTime())"
       },
       {
         "lineNumber": 211,
         "author": {
-          "gitId": "ChengYuuu"
+          "gitId": "Hexinyiyi"
         },
-        "content": "    public int hashCode() {"
+        "content": "                .append(\" reminders: \")"
       },
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "ChengYuuu"
+          "gitId": "Hexinyiyi"
         },
-        "content": "        // use this method for custom fields hashing instead of implementing our own"
+        "content": "                .append(getReminderDurationList().toString());"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "        return Objects.hash(eventName, startDateTime, endDateTime, description,"
+        "content": "        getTags().forEach(builder::append);"
       },
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "Hexinyiyi"
+          "gitId": "ChengYuuu"
         },
-        "content": "                venue, repeatType, repeatUntilDateTime, tags, reminderDurationList);"
+        "content": "        return builder.toString();"
       },
       {
         "lineNumber": 215,
@@ -66557,174 +66564,13 @@
         "author": {
           "gitId": "ChengYuuu"
         },
-        "content": "    @Override"
-      },
-      {
-        "lineNumber": 218,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    public String toString() {"
-      },
-      {
-        "lineNumber": 219,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "        final StringBuilder builder \u003d new StringBuilder();"
-      },
-      {
-        "lineNumber": 220,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "        builder.append(getEventName())"
-      },
-      {
-        "lineNumber": 221,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(\" startDateTime: \")"
-      },
-      {
-        "lineNumber": 222,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(getStartDateTime())"
-      },
-      {
-        "lineNumber": 223,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(\" endDateTime: \")"
-      },
-      {
-        "lineNumber": 224,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(getEndDateTime())"
-      },
-      {
-        "lineNumber": 225,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(\" description: \")"
-      },
-      {
-        "lineNumber": 226,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(getDescription())"
-      },
-      {
-        "lineNumber": 227,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(\" venue: \")"
-      },
-      {
-        "lineNumber": 228,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(getVenue())"
-      },
-      {
-        "lineNumber": 229,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(\" repeat type: \")"
-      },
-      {
-        "lineNumber": 230,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(getRepeatType())"
-      },
-      {
-        "lineNumber": 231,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(\" repeat until: \")"
-      },
-      {
-        "lineNumber": 232,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "                .append(getRepeatUntilDateTime())"
-      },
-      {
-        "lineNumber": 233,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                .append(\" Tags: \").append(getRepeatUntilDateTime())"
-      },
-      {
-        "lineNumber": 234,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                .append(\" reminders: \")"
-      },
-      {
-        "lineNumber": 235,
-        "author": {
-          "gitId": "Hexinyiyi"
-        },
-        "content": "                .append(getReminderDurationList().toString());"
-      },
-      {
-        "lineNumber": 236,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "        getTags().forEach(builder::append);"
-      },
-      {
-        "lineNumber": 237,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "        return builder.toString();"
-      },
-      {
-        "lineNumber": 238,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": "    }"
-      },
-      {
-        "lineNumber": 239,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 240,
-        "author": {
-          "gitId": "ChengYuuu"
-        },
         "content": "}"
       }
     ],
     "authorContributionMap": {
-      "Hexinyiyi": 40,
+      "Hexinyiyi": 25,
       "ChengYuuu": 150,
-      "YezhongZ": 50
+      "YezhongZ": 42
     }
   },
   {

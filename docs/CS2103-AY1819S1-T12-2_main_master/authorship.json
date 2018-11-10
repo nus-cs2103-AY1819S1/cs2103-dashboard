@@ -83738,6 +83738,567 @@
     }
   },
   {
+    "path": "src/test/java/guitests/guihandles/AppointmentCardHandle.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "package guitests.guihandles;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import java.util.stream.Collectors;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import com.google.common.collect.ImmutableMultiset;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import javafx.scene.Node;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import javafx.scene.control.Label;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import javafx.scene.layout.Region;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import seedu.address.model.event.ScheduleEvent;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": " * Provides a handle to an appointment card in the appointment panel."
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "public class AppointmentCardHandle extends NodeHandle\u003cNode\u003e {"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private static final String ID_FIELD_ID \u003d \"#id\";"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private static final String DATETIME_ID \u003d \"#datetime\";"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private static final String PERSONID_ID \u003d \"#personId\";"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private static final String DETAILS_ID \u003d \"#details\";"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private static final String TAGS_FIELD_ID \u003d \"#tags\";"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private final Label idLabel;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private final Label datetimeLabel;"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private final Label personidLabel;"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private final Label detailsLabel;"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private final List\u003cLabel\u003e tagLabels;"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public AppointmentCardHandle(Node cardNode) {"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        super(cardNode);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        idLabel \u003d getChildNode(ID_FIELD_ID);"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        datetimeLabel \u003d getChildNode(DATETIME_ID);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        personidLabel \u003d getChildNode(PERSONID_ID);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        detailsLabel \u003d getChildNode(DETAILS_ID);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        Region tagsContainer \u003d getChildNode(TAGS_FIELD_ID);"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        tagLabels \u003d tagsContainer"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                .getChildrenUnmodifiable()"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                .stream()"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                .map(Label.class::cast)"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                .collect(Collectors.toList());"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public String getId() {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        return idLabel.getText();"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public String getDatetime() {"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        return datetimeLabel.getText();"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public String getPersonid() {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        return personidLabel.getText();"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public String getDetails() {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        return detailsLabel.getText();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public List\u003cString\u003e getTags() {"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        return tagLabels"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                .stream()"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                .map(Label::getText)"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                .collect(Collectors.toList());"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "     * Returns true if this handle contains {@code event}."
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public boolean equals(ScheduleEvent event) {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        return getDatetime().equals(event.getDate().toString())"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                \u0026\u0026 getPersonid().equals(event.getPersonId().value)"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                \u0026\u0026 getDetails().equals(event.getDetails())"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                \u0026\u0026 ImmutableMultiset.copyOf(getTags()).equals(ImmutableMultiset.copyOf(event.getTags().stream()"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                        .map(tag -\u003e tag.tagName)"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                        .collect(Collectors.toList())));"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "lixinze777": 79
+    }
+  },
+  {
     "path": "src/test/java/guitests/guihandles/MainWindowHandle.java",
     "lines": [
       {
@@ -117125,6 +117686,574 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/ui/AppointmentCardTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "package seedu.address.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import static org.junit.Assert.assertFalse;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import static org.junit.Assert.assertTrue;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import static seedu.address.ui.testutil.GuiTestAssert.assertCardDisplaysEvent;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import java.util.Calendar;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import guitests.guihandles.AppointmentCardHandle;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import seedu.address.commons.util.Pair;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import seedu.address.model.event.ScheduleEvent;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import seedu.address.testutil.ScheduleEventBuilder;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "public class AppointmentCardTest extends GuiUnitTest {"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private Calendar currentTime \u003d Calendar.getInstance();"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private Calendar sampleStart \u003d (Calendar) currentTime.clone();"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private Calendar sampleEnd \u003d (Calendar) currentTime.clone();"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public void display() {"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // no tags"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        ScheduleEvent eventWithNoTags \u003d new ScheduleEventBuilder().withTags(new String[0]).build();"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        AppointmentCard appointmentCard \u003d new AppointmentCard(eventWithNoTags, 1);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        uiPartRule.setUiPart(appointmentCard);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertCardDisplay(appointmentCard, eventWithNoTags, 1);"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // with tags"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        ScheduleEvent eventWithTags \u003d new ScheduleEventBuilder().build();"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        appointmentCard \u003d new AppointmentCard(eventWithTags, 2);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        uiPartRule.setUiPart(appointmentCard);"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertCardDisplay(appointmentCard, eventWithTags, 2);"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public void equals() {"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        ScheduleEvent event \u003d new ScheduleEventBuilder().build();"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        AppointmentCard appointmentCard \u003d new AppointmentCard(event, 0);"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // same event, same index -\u003e returns true"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        AppointmentCard copy \u003d new AppointmentCard(event, 0);"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertTrue(appointmentCard.equals(copy));"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // same object -\u003e returns true"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertTrue(appointmentCard.equals(appointmentCard));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ";"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // null -\u003e returns false"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertFalse(appointmentCard.equals(null));"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // different types -\u003e returns false"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertFalse(appointmentCard.equals(0));"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // different event, same index -\u003e returns false"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        ScheduleEvent differentEvent \u003d new ScheduleEventBuilder().withDurations(new Pair\u003c\u003e(sampleStart, sampleEnd))"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                .build();"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertFalse(appointmentCard.equals(new AppointmentCard(differentEvent, 0)));"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // same event, different index -\u003e returns false"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertFalse(appointmentCard.equals(new AppointmentCard(event, 1)));"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "     * Asserts that {@code appointmentCard} displays the details of {@code expectedEvent} correctly and matches"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "     * {@code expectedId}."
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    private void assertCardDisplay(AppointmentCard appointmentCard, ScheduleEvent expectedEvent, int expectedId) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        guiRobot.pauseForHuman();"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        AppointmentCardHandle appointmentCardHandle \u003d new AppointmentCardHandle(appointmentCard.getRoot());"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // verify id is displayed correctly"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertEquals(Integer.toString(expectedId) + \". \", appointmentCardHandle.getId());"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        // verify event details are displayed correctly"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertCardDisplaysEvent(expectedEvent, appointmentCardHandle);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "lixinze777": 80
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/ui/CommandBoxTest.java",
     "lines": [
       {
@@ -119781,6 +120910,624 @@
     "authorContributionMap": {
       "shuiherng": 5,
       "-": 121
+    }
+  },
+  {
+    "path": "src/test/java/seedu/address/ui/testutil/GuiTestAssert.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.ui.testutil;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.List;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.stream.Collectors;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import guitests.guihandles.AppointmentCardHandle;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import guitests.guihandles.PersonCardHandle;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import guitests.guihandles.PersonListPanelHandle;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import guitests.guihandles.ResultDisplayHandle;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "import seedu.address.model.event.ScheduleEvent;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * A set of assertion methods useful for writing GUI tests."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class GuiTestAssert {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Asserts that {@code actualCard} displays the same values as {@code expectedCard}."
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertCardEquals(PersonCardHandle expectedCard, PersonCardHandle actualCard) {"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedCard.getId(), actualCard.getId());"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedCard.getAddress(), actualCard.getAddress());"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedCard.getEmail(), actualCard.getEmail());"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedCard.getName(), actualCard.getName());"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedCard.getPhone(), actualCard.getPhone());"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedCard.getTags(), actualCard.getTags());"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Asserts that {@code actualCard} displays the details of {@code expectedPerson}."
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertCardDisplaysPerson(Person expectedPerson, PersonCardHandle actualCard) {"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedPerson.getName().fullName, actualCard.getName());"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedPerson.getPhone().value, actualCard.getPhone());"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedPerson.getEmail().value, actualCard.getEmail());"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedPerson.getAddress().value, actualCard.getAddress());"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedPerson.getTags().stream().map(tag -\u003e tag.tagName).collect(Collectors.toList()),"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                actualCard.getTags());"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "     * Asserts that {@code actualCard} displays the details of {@code expectedEvent}."
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    public static void assertCardDisplaysEvent(ScheduleEvent expectedEvent, AppointmentCardHandle actualCard) {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertEquals(expectedEvent.getDateToString(), actualCard.getDatetime());"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertEquals(expectedEvent.getPersonId().value, actualCard.getPersonid());"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertEquals(expectedEvent.getDetails(), actualCard.getDetails());"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "        assertEquals(expectedEvent.getTags().stream().map(tag -\u003e tag.tagName).collect(Collectors.toList()),"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "                actualCard.getTags());"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "lixinze777"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Asserts that the list in {@code personListPanelHandle} displays the details of {@code persons} correctly and"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * in the correct order."
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertListMatching(PersonListPanelHandle personListPanelHandle, Person... persons) {"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        for (int i \u003d 0; i \u003c persons.length; i++) {"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            personListPanelHandle.navigateToCard(i);"
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            assertCardDisplaysPerson(persons[i], personListPanelHandle.getPersonCardHandle(i));"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Asserts that the list in {@code personListPanelHandle} displays the details of {@code persons} correctly and"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * in the correct order."
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertListMatching(PersonListPanelHandle personListPanelHandle, List\u003cPerson\u003e persons) {"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertListMatching(personListPanelHandle, persons.toArray(new Person[0]));"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Asserts the size of the list in {@code personListPanelHandle} equals to {@code size}."
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertListSize(PersonListPanelHandle personListPanelHandle, int size) {"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        int numberOfPeople \u003d personListPanelHandle.getListSize();"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(size, numberOfPeople);"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Asserts the message shown in {@code resultDisplayHandle} equals to {@code expected}."
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static void assertResultMessage(ResultDisplayHandle resultDisplayHandle, String expected) {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expected, resultDisplayHandle.getText());"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "-": 74,
+      "lixinze777": 13
     }
   },
   {
