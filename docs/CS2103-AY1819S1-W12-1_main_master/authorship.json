@@ -4636,7 +4636,7 @@
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "image::FindSequenceDiagram.png[width\u003d\"800\"]"
+        "content": "image::FindSequenceDiagram.PNG[width\u003d\"800\"]"
       },
       {
         "lineNumber": 335,
@@ -4762,7 +4762,7 @@
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "// tag::find[]"
+        "content": "// tag::resolve[]"
       },
       {
         "lineNumber": 353,
@@ -4811,7 +4811,7 @@
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "image::ResolveSequenceDiagram.png[width\u003d\"800\"]"
+        "content": "image::ResolveSequenceDiagram.PNG[width\u003d\"800\"]"
       },
       {
         "lineNumber": 360,
@@ -15235,9 +15235,9 @@
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "            initialData \u003d articleListOptional.orElseGet(SampleDataUtil::getSampleArticleList);"
+        "content": "            initialData \u003d articleListOptional.orElseGet(SampleDataUtil::getAllSampleArticleList);"
       },
       {
         "lineNumber": 91,
@@ -16053,8 +16053,8 @@
       }
     ],
     "authorContributionMap": {
-      "plty": 44,
-      "Swiftkage": 3,
+      "plty": 43,
+      "Swiftkage": 4,
       "-": 159
     }
   },
@@ -16374,9 +16374,9 @@
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "    private String appTitle \u003d \"Description App\";"
+        "content": "    private String appTitle \u003d \"LostBUTFound\";"
       },
       {
         "lineNumber": 17,
@@ -16786,7 +16786,8 @@
       }
     ],
     "authorContributionMap": {
-      "plty": 2,
+      "plty": 1,
+      "Swiftkage": 1,
       "-": 72
     }
   },
@@ -31066,9 +31067,9 @@
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Listed all articles\";"
+        "content": "    public static final String MESSAGE_SUCCESS \u003d \"Listed all unresolved articles\";"
       },
       {
         "lineNumber": 17,
@@ -31135,8 +31136,8 @@
       }
     ],
     "authorContributionMap": {
-      "plty": 5,
-      "Swiftkage": 2,
+      "plty": 4,
+      "Swiftkage": 3,
       "-": 18
     }
   },
@@ -48928,292 +48929,481 @@
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "    public static Article[] getSampleArticles() {"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        return new Article[] {"
+        "content": "    public static Article[] getUnresolvedSampleArticles() {"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            new Article(new Name(\"Nike Wallet\"), new Phone(\"87438807\"), new Email(\"alexyeoh@example.com\"),"
+        "content": "        return new Article[] {"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                new Description(\"Found at Blk 30 Geylang Street 29, #06-40\"), new Name(\"Alex Yeoh\"),"
+        "content": "            new Article(new Name(\"Nike Wallet\"), new Phone(\"87438807\"), new Email(\"alexyeoh@example.com\"),"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE,"
+        "content": "                new Description(\"Found at Blk 30 Geylang Street 29, #06-40\"), new Name(\"Alex Yeoh\"),"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                getTagSet(\"Black\")),"
+        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE,"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            new Article(new Name(\"Nike bag\"), new Phone(\"99272758\"), new Email(\"berniceyu@example.com\"),"
+        "content": "                getTagSet(\"Black\")),"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                new Description(\"Found at Blk 30 Lorong 3 Serangoon Gardens, #07-18\"), new Name(\"Bernice Yu\"),"
+        "content": "            new Article(new Name(\"Nike bag\"), new Phone(\"99272758\"), new Email(\"berniceyu@example.com\"),"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"Scratched\", \"Black\")),"
+        "content": "                new Description(\"Found at Blk 30 Lorong 3 Serangoon Gardens, #07-18\"), new Name(\"Bernice Yu\"),"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            new Article(new Name(\"Fitbit\"), new Phone(\"93210283\"), new Email(\"charlotte@example.com\"),"
+        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"Scratched\", \"Black\")),"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                new Description(\"Found at Blk 11 Ang Mo Kio Street 74, #11-04\"), new Name(\"Charlotte Oliveiro\"),"
+        "content": "            new Article(new Name(\"Fitbit\"), new Phone(\"93210283\"), new Email(\"charlotte@example.com\"),"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"New\")),"
+        "content": "                new Description(\"Found at Blk 11 Ang Mo Kio Street 74, #11-04\"), new Name(\"Charlotte Oliveiro\"),"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            new Article(new Name(\"Casio watch\"), new Phone(\"91031282\"), new Email(\"lidavid@example.com\"),"
+        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"New\")),"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                new Description(\"Found at Blk 436 Serangoon Gardens Street 26, #16-43\"), new Name(\"David Li\"),"
+        "content": "            new Article(new Name(\"Casio watch\"), new Phone(\"91031282\"), new Email(\"lidavid@example.com\"),"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"Red\")),"
+        "content": "                new Description(\"Found at Blk 436 Serangoon Gardens Street 26, #16-43\"), new Name(\"David Li\"),"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            new Article(new Name(\"Bluetooth speaker\"), new Phone(\"92492021\"), new Email(\"irfan@example.com\"),"
+        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"Red\")),"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                new Description(\"Found at Blk 47 Tampines Street 20, #17-35\"), new Name(\"Irfan Ibrahim\"),"
+        "content": "        };"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"Blue\")),"
+        "content": "    }"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            new Article(new Name(\"IPhone 7\"), new Phone(\"92624417\"), new Email(\"royb@example.com\"),"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "                new Description(\"Found at Blk 45 Aljunied Street 85, #11-31\"), new Name(\"Roy Balakrishnan\"),"
+        "content": "    public static Article[] getAllSampleArticles() {"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "Swiftkage"
+          "gitId": "plty"
         },
-        "content": "                    new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"Gold\"))"
+        "content": "        return new Article[] {"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        };"
+        "content": "            new Article(new Name(\"Nike Wallet\"), new Phone(\"87438807\"), new Email(\"alexyeoh@example.com\"),"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "    }"
+        "content": "                        new Description(\"Found at Blk 30 Geylang Street 29, #06-40\"), new Name(\"Alex Yeoh\"),"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": ""
+        "content": "                        new Name(\"Not Claimed\"), Boolean.FALSE,"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "    public static ReadOnlyArticleList getSampleArticleList() {"
+        "content": "                        getTagSet(\"Black\")),"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        ArticleList sampleAb \u003d new ArticleList();"
+        "content": "            new Article(new Name(\"Nike bag\"), new Phone(\"99272758\"), new Email(\"berniceyu@example.com\"),"
       },
       {
         "lineNumber": 46,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        for (Article sampleArticle : getSampleArticles()) {"
+        "content": "                        new Description(\"Found at Blk 30 Lorong 3 Serangoon Gardens, #07-18\"), new Name(\"Bernice Yu\"),"
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "            sampleAb.addArticle(sampleArticle);"
+        "content": "                        new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"Scratched\", \"Black\")),"
       },
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        }"
+        "content": "            new Article(new Name(\"Fitbit\"), new Phone(\"93210283\"), new Email(\"charlotte@example.com\"),"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        return sampleAb;"
+        "content": "                        new Description(\"Found at Blk 11 Ang Mo Kio Street 74, #11-04\"), new Name(\"Charlotte Oliveiro\"),"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "    }"
+        "content": "                        new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"New\")),"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": ""
+        "content": "            new Article(new Name(\"Casio watch\"), new Phone(\"91031282\"), new Email(\"lidavid@example.com\"),"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "    /**"
+        "content": "                        new Description(\"Found at Blk 436 Serangoon Gardens Street 26, #16-43\"), new Name(\"David Li\"),"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "     * Returns a tag set containing the list of strings given."
+        "content": "                        new Name(\"Not Claimed\"), Boolean.FALSE, getTagSet(\"Red\")),"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "     */"
+        "content": "            new Article(new Name(\"Bluetooth speaker\"), new Phone(\"92492021\"), new Email(\"irfan@example.com\"),"
       },
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
+        "content": "                        new Description(\"Found at Blk 47 Tampines Street 20, #17-35\"), new Name(\"Irfan Ibrahim\"),"
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        return Arrays.stream(strings)"
+        "content": "                        new Name(\"Roy Balakrishnan\"), Boolean.TRUE, getTagSet(\"Blue\")),"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "                .map(Tag::new)"
+        "content": "            new Article(new Name(\"IPhone 7\"), new Phone(\"92624417\"), new Email(\"royb@example.com\"),"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "                .collect(Collectors.toSet());"
+        "content": "                        new Description(\"Found at Blk 45 Aljunied Street 85, #11-31\"), new Name(\"Roy Balakrishnan\"),"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "    }"
+        "content": "                        new Name(\"Alex Yeoh\"), Boolean.TRUE, getTagSet(\"Gold\"))"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        };"
       },
       {
         "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "    public static ReadOnlyArticleList getUnresolvedSampleArticleList() {"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "        ArticleList sampleAb \u003d new ArticleList();"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "        for (Article sampleArticle : getUnresolvedSampleArticles()) {"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "            sampleAb.addArticle(sampleArticle);"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "        return sampleAb;"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "    public static ReadOnlyArticleList getAllSampleArticleList() {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "        ArticleList sampleAb \u003d new ArticleList();"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "Swiftkage"
+        },
+        "content": "        for (Article sampleArticle : getAllSampleArticles()) {"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "            sampleAb.addArticle(sampleArticle);"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return sampleAb;"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns a tag set containing the list of strings given."
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static Set\u003cTag\u003e getTagSet(String... strings) {"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Arrays.stream(strings)"
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .map(Tag::new)"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .collect(Collectors.toSet());"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
@@ -49221,8 +49411,8 @@
       }
     ],
     "authorContributionMap": {
-      "plty": 16,
-      "Swiftkage": 19,
+      "plty": 13,
+      "Swiftkage": 49,
       "-": 26
     }
   },
@@ -60638,9 +60828,9 @@
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "    private static final String ICON_APPLICATION \u003d \"/images/address_book_32.png\";"
+        "content": "    private static final String ICON_APPLICATION \u003d \"/images/LBF.png\";"
       },
       {
         "lineNumber": 34,
@@ -61247,7 +61437,8 @@
     ],
     "authorContributionMap": {
       "plty": 9,
-      "-": 110
+      "Swiftkage": 1,
+      "-": 109
     }
   },
   {
@@ -66033,9 +66224,9 @@
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "    \u003cImage url\u003d\"@/images/address_book_32.png\" /\u003e"
+        "content": "    \u003cImage url\u003d\"@/images/LBF.png\" /\u003e"
       },
       {
         "lineNumber": 22,
@@ -66419,7 +66610,8 @@
     "authorContributionMap": {
       "plty": 1,
       "dan-delion": 26,
-      "-": 48
+      "Swiftkage": 1,
+      "-": 47
     }
   },
   {
@@ -67446,9 +67638,9 @@
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003cdescription\u003e123, Jurong West Ave 6, #08-111\u003c/description\u003e"
+        "content": "        \u003cdescription\u003eFound at 123, Jurong West Ave 6\u003c/description\u003e"
       },
       {
         "lineNumber": 9,
@@ -67474,9 +67666,9 @@
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003ctagged\u003efriends\u003c/tagged\u003e"
+        "content": "        \u003ctagged\u003eBlack\u003c/tagged\u003e"
       },
       {
         "lineNumber": 13,
@@ -67516,9 +67708,9 @@
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003cdescription\u003e311, Clementi Ave 2, #02-25\u003c/description\u003e"
+        "content": "        \u003cdescription\u003eFound at 311, Clementi Ave 2\u003c/description\u003e"
       },
       {
         "lineNumber": 19,
@@ -67544,16 +67736,16 @@
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003ctagged\u003eowesMoney\u003c/tagged\u003e"
+        "content": "        \u003ctagged\u003eBlack\u003c/tagged\u003e"
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003ctagged\u003efriends\u003c/tagged\u003e"
+        "content": "        \u003ctagged\u003eSticker\u003c/tagged\u003e"
       },
       {
         "lineNumber": 24,
@@ -67593,9 +67785,9 @@
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003cdescription\u003ewall street\u003c/description\u003e"
+        "content": "        \u003cdescription\u003eFound at wall street\u003c/description\u003e"
       },
       {
         "lineNumber": 30,
@@ -67656,9 +67848,9 @@
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003cdescription\u003e10th street\u003c/description\u003e"
+        "content": "        \u003cdescription\u003eFound at 10th street\u003c/description\u003e"
       },
       {
         "lineNumber": 39,
@@ -67684,9 +67876,9 @@
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003ctagged\u003efriends\u003c/tagged\u003e"
+        "content": "        \u003ctagged\u003eBlue\u003c/tagged\u003e"
       },
       {
         "lineNumber": 43,
@@ -67726,9 +67918,9 @@
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003cdescription\u003emichegan ave\u003c/description\u003e"
+        "content": "        \u003cdescription\u003eFound at michegan ave\u003c/description\u003e"
       },
       {
         "lineNumber": 49,
@@ -67789,9 +67981,9 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003cdescription\u003elittle tokyo\u003c/description\u003e"
+        "content": "        \u003cdescription\u003eFound at little tokyo\u003c/description\u003e"
       },
       {
         "lineNumber": 58,
@@ -67852,9 +68044,9 @@
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        \u003cdescription\u003e4th street\u003c/description\u003e"
+        "content": "        \u003cdescription\u003eFound at 4th street\u003c/description\u003e"
       },
       {
         "lineNumber": 67,
@@ -67893,9 +68085,9 @@
       }
     ],
     "authorContributionMap": {
-      "plty": 24,
-      "Swiftkage": 28,
-      "-": 19
+      "plty": 17,
+      "Swiftkage": 39,
+      "-": 15
     }
   },
   {
@@ -73310,9 +73502,9 @@
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        String defaultConfigAsString \u003d \"App title : Description App\\n\""
+        "content": "        String defaultConfigAsString \u003d \"App title : LostBUTFound\\n\""
       },
       {
         "lineNumber": 18,
@@ -73421,7 +73613,8 @@
       }
     ],
     "authorContributionMap": {
-      "plty": 2,
+      "plty": 1,
+      "Swiftkage": 1,
       "-": 30
     }
   },
@@ -75185,9 +75378,9 @@
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "        assertNotNull(AppUtil.getImage(\"/images/address_book_32.png\"));"
+        "content": "        assertNotNull(AppUtil.getImage(\"/images/LBF.png\"));"
       },
       {
         "lineNumber": 19,
@@ -75395,7 +75588,8 @@
     ],
     "authorContributionMap": {
       "plty": 1,
-      "-": 46
+      "Swiftkage": 1,
+      "-": 45
     }
   },
   {
@@ -110411,327 +110605,355 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "import java.nio.file.Path;"
+        "content": "import static org.junit.jupiter.api.Assertions.assertEquals;"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": "import java.nio.file.Paths;"
+        "content": ""
       },
       {
         "lineNumber": 5,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import java.nio.file.Path;"
       },
       {
         "lineNumber": 6,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.Rule;"
+        "content": "import java.nio.file.Paths;"
       },
       {
         "lineNumber": 7,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.Test;"
+        "content": ""
       },
       {
         "lineNumber": 8,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.rules.ExpectedException;"
+        "content": "import org.junit.Rule;"
       },
       {
         "lineNumber": 9,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import org.junit.Test;"
       },
       {
         "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.rules.ExpectedException;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
         "author": {
           "gitId": "plty"
         },
         "content": "import seedu.lostandfound.commons.exceptions.IllegalValueException;"
       },
       {
-        "lineNumber": 11,
+        "lineNumber": 13,
         "author": {
           "gitId": "plty"
         },
         "content": "import seedu.lostandfound.commons.util.XmlUtil;"
       },
       {
-        "lineNumber": 12,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 13,
-        "author": {
-          "gitId": "plty"
-        },
-        "content": "public class XmlSerializableArticleListTest {"
-      },
-      {
         "lineNumber": 14,
         "author": {
-          "gitId": "-"
+          "gitId": "Swiftkage"
         },
-        "content": ""
+        "content": "import seedu.lostandfound.model.ArticleList;"
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "    private static final Path TEST_DATA_FOLDER \u003d Paths.get(\"src\", \"test\", \"data\", \"XmlSerializableArticleListTest\");"
+        "content": "import seedu.lostandfound.testutil.TypicalArticles;"
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "plty"
+          "gitId": "-"
         },
-        "content": "    private static final Path TYPICAL_ARTICLES_FILE \u003d TEST_DATA_FOLDER.resolve(\"typicalArticlesArticleList.xml\");"
+        "content": ""
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "plty"
         },
-        "content": "    private static final Path INVALID_ARTICLE_FILE \u003d TEST_DATA_FOLDER.resolve(\"invalidArticleArticleList.xml\");"
+        "content": "public class XmlSerializableArticleListTest {"
       },
       {
         "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "    private static final Path TEST_DATA_FOLDER \u003d Paths.get(\"src\", \"test\", \"data\", \"XmlSerializableArticleListTest\");"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "    private static final Path TYPICAL_ARTICLES_FILE \u003d TEST_DATA_FOLDER.resolve(\"typicalArticlesArticleList.xml\");"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "    private static final Path INVALID_ARTICLE_FILE \u003d TEST_DATA_FOLDER.resolve(\"invalidArticleArticleList.xml\");"
+      },
+      {
+        "lineNumber": 22,
         "author": {
           "gitId": "plty"
         },
         "content": "    private static final Path DUPLICATE_ARTICLE_FILE \u003d TEST_DATA_FOLDER.resolve(\"duplicateArticleArticleList.xml\");"
       },
       {
-        "lineNumber": 19,
+        "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 20,
+        "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
         "content": "    @Rule"
       },
       {
-        "lineNumber": 21,
+        "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
         "content": "    public ExpectedException thrown \u003d ExpectedException.none();"
       },
       {
-        "lineNumber": 22,
+        "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 23,
+        "lineNumber": 27,
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "    /*    @Test"
-      },
-      {
-        "lineNumber": 24,
-        "author": {
-          "gitId": "plty"
-        },
-        "content": "        public void toModelType_typicalArticlesFile_success() throws Exception {"
-      },
-      {
-        "lineNumber": 25,
-        "author": {
-          "gitId": "plty"
-        },
-        "content": "            XmlSerializableArticleList dataFromFile \u003d XmlUtil.getDataFromFile(TYPICAL_ARTICLES_FILE,"
-      },
-      {
-        "lineNumber": 26,
-        "author": {
-          "gitId": "plty"
-        },
-        "content": "                    XmlSerializableArticleList.class);"
-      },
-      {
-        "lineNumber": 27,
-        "author": {
-          "gitId": "plty"
-        },
-        "content": "            ArticleList articleListFromFile \u003d dataFromFile.toModelType();"
+        "content": "    @Test"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "plty"
         },
-        "content": "            ArticleList typicalArticlesArticleList \u003d TypicalArticles.getTypicalArticleList();"
+        "content": "    public void toModelType_typicalArticlesFile_success() throws Exception {"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "plty"
         },
-        "content": "            assertEquals(articleListFromFile, typicalArticlesArticleList);"
+        "content": "        XmlSerializableArticleList dataFromFile \u003d XmlUtil.getDataFromFile(TYPICAL_ARTICLES_FILE,"
       },
       {
         "lineNumber": 30,
         "author": {
-          "gitId": "-"
+          "gitId": "plty"
         },
-        "content": "            }"
+        "content": "                XmlSerializableArticleList.class);"
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "Swiftkage"
+          "gitId": "plty"
         },
-        "content": "    */"
+        "content": "        ArticleList articleListFromFile \u003d dataFromFile.toModelType();"
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "-"
+          "gitId": "plty"
         },
-        "content": "    @Test"
+        "content": "        ArticleList typicalArticlesArticleList \u003d TypicalArticles.getTypicalArticleList();"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "plty"
         },
-        "content": "    public void toModelType_invalidArticleFile_throwsIllegalValueException() throws Exception {"
+        "content": "        assertEquals(articleListFromFile, typicalArticlesArticleList);"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "plty"
+          "gitId": "-"
         },
-        "content": "        XmlSerializableArticleList dataFromFile \u003d XmlUtil.getDataFromFile(INVALID_ARTICLE_FILE,"
+        "content": "    }"
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "                XmlSerializableArticleList.class);"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "        thrown.expect(IllegalValueException.class);"
+        "content": "    @Test"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "-"
+          "gitId": "plty"
         },
-        "content": "        dataFromFile.toModelType();"
+        "content": "    public void toModelType_invalidArticleFile_throwsIllegalValueException() throws Exception {"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "-"
+          "gitId": "plty"
         },
-        "content": "    }"
+        "content": "        XmlSerializableArticleList dataFromFile \u003d XmlUtil.getDataFromFile(INVALID_ARTICLE_FILE,"
       },
       {
         "lineNumber": 39,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 40,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    @Test"
-      },
-      {
-        "lineNumber": 41,
-        "author": {
-          "gitId": "plty"
-        },
-        "content": "    public void toModelType_duplicateArticles_throwsIllegalValueException() throws Exception {"
-      },
-      {
-        "lineNumber": 42,
-        "author": {
-          "gitId": "plty"
-        },
-        "content": "        XmlSerializableArticleList dataFromFile \u003d XmlUtil.getDataFromFile(DUPLICATE_ARTICLE_FILE,"
-      },
-      {
-        "lineNumber": 43,
         "author": {
           "gitId": "plty"
         },
         "content": "                XmlSerializableArticleList.class);"
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
         "content": "        thrown.expect(IllegalValueException.class);"
       },
       {
-        "lineNumber": 45,
-        "author": {
-          "gitId": "plty"
-        },
-        "content": "        thrown.expectMessage(XmlSerializableArticleList.MESSAGE_DUPLICATE_ARTICLE);"
-      },
-      {
-        "lineNumber": 46,
+        "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
         "content": "        dataFromFile.toModelType();"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "    public void toModelType_duplicateArticles_throwsIllegalValueException() throws Exception {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "        XmlSerializableArticleList dataFromFile \u003d XmlUtil.getDataFromFile(DUPLICATE_ARTICLE_FILE,"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "                XmlSerializableArticleList.class);"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        thrown.expect(IllegalValueException.class);"
+      },
+      {
         "lineNumber": 49,
+        "author": {
+          "gitId": "plty"
+        },
+        "content": "        thrown.expectMessage(XmlSerializableArticleList.MESSAGE_DUPLICATE_ARTICLE);"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        dataFromFile.toModelType();"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
@@ -110740,7 +110962,7 @@
     ],
     "authorContributionMap": {
       "plty": 21,
-      "Swiftkage": 2,
+      "Swiftkage": 6,
       "-": 26
     }
   },
@@ -114759,7 +114981,7 @@
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            .withPhone(\"94351253\").withIsResolved(false).withTags(\"friends\").build();"
+        "content": "            .withPhone(\"94351253\").withIsResolved(false).withTags(\"Black\").build();"
       },
       {
         "lineNumber": 33,
@@ -114787,7 +115009,7 @@
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            .withIsResolved(false).withTags(\"owesMoney\", \"friends\").build();"
+        "content": "            .withIsResolved(false).withTags(\"Black\", \"Sticker\").build();"
       },
       {
         "lineNumber": 37,
@@ -114829,7 +115051,7 @@
         "author": {
           "gitId": "Swiftkage"
         },
-        "content": "            .withFinder(\"Daniel Meier\").withIsResolved(false).withTags(\"friends\").build();"
+        "content": "            .withFinder(\"Daniel Meier\").withIsResolved(false).withTags(\"Blue\").build();"
       },
       {
         "lineNumber": 43,
@@ -134499,9 +134721,9 @@
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "plty"
+          "gitId": "Swiftkage"
         },
-        "content": "        Article[] expectedList \u003d SampleDataUtil.getSampleArticles();"
+        "content": "        Article[] expectedList \u003d SampleDataUtil.getUnresolvedSampleArticles();"
       },
       {
         "lineNumber": 49,
@@ -134526,7 +134748,8 @@
       }
     ],
     "authorContributionMap": {
-      "plty": 10,
+      "plty": 9,
+      "Swiftkage": 1,
       "-": 41
     }
   },

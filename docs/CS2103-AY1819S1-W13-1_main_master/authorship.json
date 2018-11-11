@@ -2216,59 +2216,24 @@
         "author": {
           "gitId": "-"
         },
-        "content": "task copyDummySearchPage(type: Copy) {"
+        "content": "deployOfflineDocs.dependsOn asciidoctor"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "    from \u0027docs/DummySearchPage.html\u0027"
+        "content": "processResources.dependsOn deployOfflineDocs"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "    into \"${buildDir}/docs/html5\""
+        "content": ""
       },
       {
         "lineNumber": 242,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "}"
-      },
-      {
-        "lineNumber": 243,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 244,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "deployOfflineDocs.dependsOn asciidoctor"
-      },
-      {
-        "lineNumber": 245,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "processResources.dependsOn deployOfflineDocs"
-      },
-      {
-        "lineNumber": 246,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
@@ -2277,7 +2242,7 @@
     ],
     "authorContributionMap": {
       "zioul123": 1,
-      "-": 243,
+      "-": 238,
       "denzelchung": 3
     }
   },
@@ -53749,6 +53714,512 @@
     }
   },
   {
+    "path": "src/main/java/seedu/address/ui/BrowserPanel.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.net.URL;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.logging.Logger;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import com.google.common.eventbus.Subscribe;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.application.Platform;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.event.Event;"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.fxml.FXML;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.scene.layout.Region;"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import javafx.scene.web.WebView;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.MainApp;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.core.LogsCenter;"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.events.ui.PersonPanelSelectionChangedEvent;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.model.person.Person;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * The Browser Panel of the App."
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class BrowserPanel extends UiPart\u003cRegion\u003e {"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static final String DEFAULT_PAGE \u003d \"default.html\";"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private static final String FXML \u003d \"BrowserPanel.fxml\";"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private final Logger logger \u003d LogsCenter.getLogger(getClass());"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @FXML"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private WebView browser;"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public BrowserPanel() {"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        super(FXML);"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // To prevent triggering events for typing inside the loaded Web page."
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        getRoot().setOnKeyPressed(Event::consume);"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        loadDefaultPage();"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        registerAsAnEventHandler(this);"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private void loadPersonPage(Person person) {"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "zioul123"
+        },
+        "content": "        // Load the default page, because PersonPages are not implemented yet."
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "zioul123"
+        },
+        "content": "        loadDefaultPage();"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void loadPage(String url) {"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        Platform.runLater(() -\u003e browser.getEngine().load(url));"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Loads a default HTML file with a background that matches the general theme."
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private void loadDefaultPage() {"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        URL defaultPage \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        loadPage(defaultPage.toExternalForm());"
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Frees resources allocated to the browser."
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void freeResources() {"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        browser \u003d null;"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Subscribe"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private void handlePersonPanelSelectionChangedEvent(PersonPanelSelectionChangedEvent event) {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        logger.info(LogsCenter.getEventHandlingLogMessage(event));"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        loadPersonPage(event.getNewSelection());"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zioul123": 2,
+      "-": 69
+    }
+  },
+  {
     "path": "src/main/java/seedu/address/ui/CommandBox.java",
     "lines": [
       {
@@ -90975,6 +91446,351 @@
     }
   },
   {
+    "path": "src/test/java/seedu/address/ui/BrowserPanelTest.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.ui;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static guitests.guihandles.WebViewUtil.waitUntilBrowserLoaded;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static org.junit.Assert.assertEquals;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.testutil.EventsUtil.postNow;"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.testutil.TypicalPersons.ALICE;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.ui.BrowserPanel.DEFAULT_PAGE;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.ui.UiPart.FXML_FILE_FOLDER;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.net.URL;"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.Before;"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.junit.Test;"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import guitests.guihandles.BrowserPanelHandle;"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.MainApp;"
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import seedu.address.commons.events.ui.PersonPanelSelectionChangedEvent;"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class BrowserPanelTest extends GuiUnitTest {"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private PersonPanelSelectionChangedEvent selectionChangedEventStub;"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private BrowserPanel browserPanel;"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    private BrowserPanelHandle browserPanelHandle;"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Before"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void setUp() {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        selectionChangedEventStub \u003d new PersonPanelSelectionChangedEvent(ALICE);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        guiRobot.interact(() -\u003e browserPanel \u003d new BrowserPanel());"
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        uiPartRule.setUiPart(browserPanel);"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        browserPanelHandle \u003d new BrowserPanelHandle(browserPanel.getRoot());"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    @Test"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public void display() throws Exception {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // default web page"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        URL expectedDefaultPageUrl \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedDefaultPageUrl, browserPanelHandle.getLoadedUrl());"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "zioul123"
+        },
+        "content": "        // associated web page of a person is not yet implemented, display the default webpage"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        postNow(selectionChangedEventStub);"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "zioul123"
+        },
+        "content": "        URL expectedPersonUrl \u003d MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE);"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        waitUntilBrowserLoaded(browserPanelHandle);"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        assertEquals(expectedPersonUrl, browserPanelHandle.getLoadedUrl());"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "zioul123": 2,
+      "-": 46
+    }
+  },
+  {
     "path": "src/test/java/seedu/address/ui/CommandBoxTest.java",
     "lines": [
       {
@@ -98053,1984 +98869,1956 @@
         "author": {
           "gitId": "-"
         },
-        "content": "import java.net.MalformedURLException;"
+        "content": "import java.net.URL;"
       },
       {
         "lineNumber": 15,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.net.URL;"
+        "content": "import java.nio.file.Path;"
       },
       {
         "lineNumber": 16,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.nio.file.Path;"
+        "content": "import java.nio.file.Paths;"
       },
       {
         "lineNumber": 17,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.nio.file.Paths;"
+        "content": "import java.util.Arrays;"
       },
       {
         "lineNumber": 18,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.util.Arrays;"
+        "content": "import java.util.Date;"
       },
       {
         "lineNumber": 19,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.util.Date;"
+        "content": "import java.util.List;"
       },
       {
         "lineNumber": 20,
         "author": {
           "gitId": "-"
         },
-        "content": "import java.util.List;"
+        "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import org.junit.After;"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.After;"
+        "content": "import org.junit.Before;"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.Before;"
+        "content": "import org.junit.BeforeClass;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.BeforeClass;"
+        "content": "import org.junit.ClassRule;"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "-"
         },
-        "content": "import org.junit.ClassRule;"
+        "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "import guitests.guihandles.BrowserPanelHandle;"
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "-"
         },
-        "content": "import guitests.guihandles.BrowserPanelHandle;"
+        "content": "import guitests.guihandles.CommandBoxHandle;"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "-"
         },
-        "content": "import guitests.guihandles.CommandBoxHandle;"
+        "content": "import guitests.guihandles.MainMenuHandle;"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "-"
         },
-        "content": "import guitests.guihandles.MainMenuHandle;"
+        "content": "import guitests.guihandles.MainWindowHandle;"
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "-"
         },
-        "content": "import guitests.guihandles.MainWindowHandle;"
+        "content": "import guitests.guihandles.PersonListPanelHandle;"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "-"
         },
-        "content": "import guitests.guihandles.PersonListPanelHandle;"
+        "content": "import guitests.guihandles.ResultDisplayHandle;"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "-"
         },
-        "content": "import guitests.guihandles.ResultDisplayHandle;"
+        "content": "import guitests.guihandles.StatusBarFooterHandle;"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "-"
         },
-        "content": "import guitests.guihandles.StatusBarFooterHandle;"
+        "content": "import seedu.address.MainApp;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.MainApp;"
+        "content": "import seedu.address.TestApp;"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.TestApp;"
+        "content": "import seedu.address.commons.core.EventsCenter;"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.core.EventsCenter;"
+        "content": "import seedu.address.commons.core.index.Index;"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.commons.core.index.Index;"
+        "content": "import seedu.address.logic.commands.ClearCommand;"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.ClearCommand;"
+        "content": "import seedu.address.logic.commands.FindCommand;"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.FindCommand;"
+        "content": "import seedu.address.logic.commands.ListCommand;"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.ListCommand;"
+        "content": "import seedu.address.logic.commands.SelectCommand;"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.logic.commands.SelectCommand;"
+        "content": "import seedu.address.model.AddressBook;"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.AddressBook;"
+        "content": "import seedu.address.model.Model;"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.model.Model;"
+        "content": "import seedu.address.testutil.TypicalPersons;"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.testutil.TypicalPersons;"
+        "content": "import seedu.address.ui.BrowserPanel;"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.ui.BrowserPanel;"
+        "content": "import seedu.address.ui.CommandBox;"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "-"
         },
-        "content": "import seedu.address.ui.CommandBox;"
+        "content": ""
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "/**"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "-"
         },
-        "content": "/**"
+        "content": " * A system test class for AddressBook, which provides access to handles of GUI components and helper methods"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
-        "content": " * A system test class for AddressBook, which provides access to handles of GUI components and helper methods"
+        "content": " * for test verification."
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
-        "content": " * for test verification."
+        "content": " */"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "-"
         },
-        "content": " */"
+        "content": "public abstract class AddressBookSystemTest {"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
-        "content": "public abstract class AddressBookSystemTest {"
+        "content": "    @ClassRule"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "-"
         },
-        "content": "    @ClassRule"
+        "content": "    public static ClockRule clockRule \u003d new ClockRule();"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static ClockRule clockRule \u003d new ClockRule();"
+        "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private static final List\u003cString\u003e COMMAND_BOX_DEFAULT_STYLE \u003d Arrays.asList(\"text-input\", \"text-field\");"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cString\u003e COMMAND_BOX_DEFAULT_STYLE \u003d Arrays.asList(\"text-input\", \"text-field\");"
+        "content": "    private static final List\u003cString\u003e COMMAND_BOX_ERROR_STYLE \u003d"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
-        "content": "    private static final List\u003cString\u003e COMMAND_BOX_ERROR_STYLE \u003d"
+        "content": "            Arrays.asList(\"text-input\", \"text-field\", CommandBox.ERROR_STYLE_CLASS);"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "-"
         },
-        "content": "            Arrays.asList(\"text-input\", \"text-field\", CommandBox.ERROR_STYLE_CLASS);"
+        "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    private MainWindowHandle mainWindowHandle;"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "-"
         },
-        "content": "    private MainWindowHandle mainWindowHandle;"
+        "content": "    private TestApp testApp;"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "-"
         },
-        "content": "    private TestApp testApp;"
+        "content": "    private SystemTestSetupHelper setupHelper;"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "-"
         },
-        "content": "    private SystemTestSetupHelper setupHelper;"
+        "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @BeforeClass"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "-"
         },
-        "content": "    @BeforeClass"
+        "content": "    public static void setupBeforeClass() {"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "-"
         },
-        "content": "    public static void setupBeforeClass() {"
+        "content": "        SystemTestSetupHelper.initialize();"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "-"
         },
-        "content": "        SystemTestSetupHelper.initialize();"
+        "content": "    }"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @Before"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "-"
         },
-        "content": "    @Before"
+        "content": "    public void setUp() {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void setUp() {"
+        "content": "        setupHelper \u003d new SystemTestSetupHelper();"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "-"
         },
-        "content": "        setupHelper \u003d new SystemTestSetupHelper();"
+        "content": "        testApp \u003d setupHelper.setupApplication(this::getInitialData, getDataFileLocation());"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "-"
         },
-        "content": "        testApp \u003d setupHelper.setupApplication(this::getInitialData, getDataFileLocation());"
+        "content": "        mainWindowHandle \u003d setupHelper.setupMainWindowHandle();"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "-"
         },
-        "content": "        mainWindowHandle \u003d setupHelper.setupMainWindowHandle();"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        waitUntilBrowserLoaded(getBrowserPanel());"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "-"
         },
-        "content": "        waitUntilBrowserLoaded(getBrowserPanel());"
+        "content": "        assertApplicationStartingStateIsCorrect();"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertApplicationStartingStateIsCorrect();"
+        "content": "    }"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    @After"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "-"
         },
-        "content": "    @After"
+        "content": "    public void tearDown() {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "-"
         },
-        "content": "    public void tearDown() {"
+        "content": "        setupHelper.tearDownStage();"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "-"
         },
-        "content": "        setupHelper.tearDownStage();"
+        "content": "        EventsCenter.clearSubscribers();"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "-"
         },
-        "content": "        EventsCenter.clearSubscribers();"
+        "content": "    }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Returns the data to be loaded into the file in {@link #getDataFileLocation()}."
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the data to be loaded into the file in {@link #getDataFileLocation()}."
+        "content": "     */"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected AddressBook getInitialData() {"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected AddressBook getInitialData() {"
+        "content": "        return TypicalPersons.getTypicalAddressBook();"
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "-"
         },
-        "content": "        return TypicalPersons.getTypicalAddressBook();"
+        "content": "    }"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Returns the directory of the data file."
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Returns the directory of the data file."
+        "content": "     */"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected Path getDataFileLocation() {"
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected Path getDataFileLocation() {"
+        "content": "        return TestApp.SAVE_LOCATION_FOR_TESTING;"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "-"
         },
-        "content": "        return TestApp.SAVE_LOCATION_FOR_TESTING;"
+        "content": "    }"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public MainWindowHandle getMainWindowHandle() {"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
-        "content": "    public MainWindowHandle getMainWindowHandle() {"
+        "content": "        return mainWindowHandle;"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
-        "content": "        return mainWindowHandle;"
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public CommandBoxHandle getCommandBox() {"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "-"
         },
-        "content": "    public CommandBoxHandle getCommandBox() {"
+        "content": "        return mainWindowHandle.getCommandBox();"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
-        "content": "        return mainWindowHandle.getCommandBox();"
+        "content": "    }"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public PersonListPanelHandle getPersonListPanel() {"
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
-        "content": "    public PersonListPanelHandle getPersonListPanel() {"
+        "content": "        return mainWindowHandle.getPersonListPanel();"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "-"
         },
-        "content": "        return mainWindowHandle.getPersonListPanel();"
+        "content": "    }"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public MainMenuHandle getMainMenu() {"
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "-"
         },
-        "content": "    public MainMenuHandle getMainMenu() {"
+        "content": "        return mainWindowHandle.getMainMenu();"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
-        "content": "        return mainWindowHandle.getMainMenu();"
+        "content": "    }"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public BrowserPanelHandle getBrowserPanel() {"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "-"
         },
-        "content": "    public BrowserPanelHandle getBrowserPanel() {"
+        "content": "        return mainWindowHandle.getBrowserPanel();"
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "-"
         },
-        "content": "        return mainWindowHandle.getBrowserPanel();"
+        "content": "    }"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public StatusBarFooterHandle getStatusBarFooter() {"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
-        "content": "    public StatusBarFooterHandle getStatusBarFooter() {"
+        "content": "        return mainWindowHandle.getStatusBarFooter();"
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
-        "content": "        return mainWindowHandle.getStatusBarFooter();"
+        "content": "    }"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    public ResultDisplayHandle getResultDisplay() {"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "-"
         },
-        "content": "    public ResultDisplayHandle getResultDisplay() {"
+        "content": "        return mainWindowHandle.getResultDisplay();"
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
-        "content": "        return mainWindowHandle.getResultDisplay();"
+        "content": "    }"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Executes {@code command} in the application\u0027s {@code CommandBox}."
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Executes {@code command} in the application\u0027s {@code CommandBox}."
+        "content": "     * Method returns after UI components have been updated."
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Method returns after UI components have been updated."
+        "content": "     */"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void executeCommand(String command) {"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void executeCommand(String command) {"
+        "content": "        rememberStates();"
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
-        "content": "        rememberStates();"
+        "content": "        // Injects a fixed clock before executing a command so that the time stamp shown in the status bar"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "-"
         },
-        "content": "        // Injects a fixed clock before executing a command so that the time stamp shown in the status bar"
+        "content": "        // after each command is predictable and also different from the previous command."
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
-        "content": "        // after each command is predictable and also different from the previous command."
+        "content": "        clockRule.setInjectedClockToCurrentTime();"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
-        "content": "        clockRule.setInjectedClockToCurrentTime();"
+        "content": ""
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        mainWindowHandle.getCommandBox().run(command);"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "-"
         },
-        "content": "        mainWindowHandle.getCommandBox().run(command);"
+        "content": ""
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "        waitUntilBrowserLoaded(getBrowserPanel());"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "-"
         },
-        "content": "        waitUntilBrowserLoaded(getBrowserPanel());"
+        "content": "    }"
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Displays all persons in the address book."
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Displays all persons in the address book."
+        "content": "     */"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void showAllPersons() {"
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void showAllPersons() {"
+        "content": "        executeCommand(ListCommand.COMMAND_WORD);"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "-"
         },
-        "content": "        executeCommand(ListCommand.COMMAND_WORD);"
+        "content": "        assertEquals(getModel().getAddressBook().getPersonList().size(), getModel().getFilteredPersonList().size());"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(getModel().getAddressBook().getPersonList().size(), getModel().getFilteredPersonList().size());"
+        "content": "    }"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Displays all persons with any parts of their names matching {@code keyword} (case-insensitive)."
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Displays all persons with any parts of their names matching {@code keyword} (case-insensitive)."
+        "content": "     */"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void showPersonsWithName(String keyword) {"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void showPersonsWithName(String keyword) {"
+        "content": "        executeCommand(FindCommand.COMMAND_WORD + \" \" + keyword);"
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "-"
         },
-        "content": "        executeCommand(FindCommand.COMMAND_WORD + \" \" + keyword);"
+        "content": "        assertTrue(getModel().getFilteredPersonList().size() \u003c getModel().getAddressBook().getPersonList().size());"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertTrue(getModel().getFilteredPersonList().size() \u003c getModel().getAddressBook().getPersonList().size());"
+        "content": "    }"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Selects the person at {@code index} of the displayed list."
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Selects the person at {@code index} of the displayed list."
+        "content": "     */"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void selectPerson(Index index) {"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void selectPerson(Index index) {"
+        "content": "        executeCommand(SelectCommand.COMMAND_WORD + \" \" + index.getOneBased());"
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": "        executeCommand(SelectCommand.COMMAND_WORD + \" \" + index.getOneBased());"
+        "content": "        assertEquals(index.getZeroBased(), getPersonListPanel().getSelectedCardIndex());"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(index.getZeroBased(), getPersonListPanel().getSelectedCardIndex());"
+        "content": "    }"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Deletes all persons in the address book."
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Deletes all persons in the address book."
+        "content": "     */"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void deleteAllPersons() {"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void deleteAllPersons() {"
+        "content": "        executeCommand(ClearCommand.COMMAND_WORD);"
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "-"
         },
-        "content": "        executeCommand(ClearCommand.COMMAND_WORD);"
+        "content": "        assertEquals(0, getModel().getAddressBook().getPersonList().size());"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(0, getModel().getAddressBook().getPersonList().size());"
+        "content": "    }"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Asserts that the {@code CommandBox} displays {@code expectedCommandInput}, the {@code ResultDisplay} displays"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the {@code CommandBox} displays {@code expectedCommandInput}, the {@code ResultDisplay} displays"
+        "content": "     * {@code expectedResultMessage}, the storage contains the same person objects as {@code expectedModel}"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "-"
         },
-        "content": "     * {@code expectedResultMessage}, the storage contains the same person objects as {@code expectedModel}"
+        "content": "     * and the person list panel displays the persons in the model correctly."
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "-"
         },
-        "content": "     * and the person list panel displays the persons in the model correctly."
+        "content": "     */"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void assertApplicationDisplaysExpected(String expectedCommandInput, String expectedResultMessage,"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertApplicationDisplaysExpected(String expectedCommandInput, String expectedResultMessage,"
+        "content": "            Model expectedModel) {"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
-        "content": "            Model expectedModel) {"
+        "content": "        assertEquals(expectedCommandInput, getCommandBox().getInput());"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(expectedCommandInput, getCommandBox().getInput());"
+        "content": "        assertEquals(expectedResultMessage, getResultDisplay().getText());"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(expectedResultMessage, getResultDisplay().getText());"
+        "content": "        assertEquals(new AddressBook(expectedModel.getAddressBook()), testApp.readStorageAddressBook());"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(new AddressBook(expectedModel.getAddressBook()), testApp.readStorageAddressBook());"
+        "content": "        assertListMatching(getPersonListPanel(), expectedModel.getFilteredPersonList());"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertListMatching(getPersonListPanel(), expectedModel.getFilteredPersonList());"
+        "content": "    }"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Calls {@code BrowserPanelHandle}, {@code PersonListPanelHandle} and {@code StatusBarFooterHandle} to remember"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Calls {@code BrowserPanelHandle}, {@code PersonListPanelHandle} and {@code StatusBarFooterHandle} to remember"
+        "content": "     * their current state."
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "-"
         },
-        "content": "     * their current state."
+        "content": "     */"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    private void rememberStates() {"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "-"
         },
-        "content": "    private void rememberStates() {"
+        "content": "        StatusBarFooterHandle statusBarFooterHandle \u003d getStatusBarFooter();"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "-"
         },
-        "content": "        StatusBarFooterHandle statusBarFooterHandle \u003d getStatusBarFooter();"
+        "content": "        getBrowserPanel().rememberUrl();"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "-"
         },
-        "content": "        getBrowserPanel().rememberUrl();"
+        "content": "        statusBarFooterHandle.rememberSaveLocation();"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "-"
         },
-        "content": "        statusBarFooterHandle.rememberSaveLocation();"
-      },
-      {
-        "lineNumber": 195,
-        "author": {
-          "gitId": "-"
-        },
         "content": "        statusBarFooterHandle.rememberSyncStatus();"
       },
       {
-        "lineNumber": 196,
+        "lineNumber": 195,
         "author": {
           "gitId": "zioul123"
         },
         "content": "        statusBarFooterHandle.rememberTotalNumberStatus();"
       },
       {
-        "lineNumber": 197,
+        "lineNumber": 196,
         "author": {
           "gitId": "-"
         },
         "content": "        getPersonListPanel().rememberSelectedPersonCard();"
       },
       {
-        "lineNumber": 198,
+        "lineNumber": 197,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     * Asserts that the previously selected card is now deselected and the browser\u0027s url remains displaying the details"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the previously selected card is now deselected and the browser\u0027s url remains displaying the details"
+        "content": "     * of the previously selected person."
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "-"
         },
-        "content": "     * of the previously selected person."
+        "content": "     * @see BrowserPanelHandle#isUrlChanged()"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @see BrowserPanelHandle#isUrlChanged()"
+        "content": "     */"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void assertSelectedCardDeselected() {"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertSelectedCardDeselected() {"
+        "content": "        assertFalse(getBrowserPanel().isUrlChanged());"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(getBrowserPanel().isUrlChanged());"
+        "content": "        assertFalse(getPersonListPanel().isAnyCardSelected());"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(getPersonListPanel().isAnyCardSelected());"
+        "content": "    }"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "-"
+          "gitId": "zioul123"
         },
-        "content": "    /**"
+        "content": "     * Asserts that the browser\u0027s url displays the default page, and only the card at {@code expectedSelectedCardIndex}"
       },
       {
         "lineNumber": 211,
         "author": {
-          "gitId": "-"
+          "gitId": "zioul123"
         },
-        "content": "     * Asserts that the browser\u0027s url is changed to display the details of the person in the person list panel at"
+        "content": "     * is selected."
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "-"
         },
-        "content": "     * {@code expectedSelectedCardIndex}, and only the card at {@code expectedSelectedCardIndex} is selected."
+        "content": "     * @see BrowserPanelHandle#isUrlChanged()"
       },
       {
         "lineNumber": 213,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @see BrowserPanelHandle#isUrlChanged()"
+        "content": "     * @see PersonListPanelHandle#isSelectedPersonCardChanged()"
       },
       {
         "lineNumber": 214,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @see PersonListPanelHandle#isSelectedPersonCardChanged()"
+        "content": "     */"
       },
       {
         "lineNumber": 215,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    protected void assertSelectedCardChanged(Index expectedSelectedCardIndex) {"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertSelectedCardChanged(Index expectedSelectedCardIndex) {"
+        "content": "        getPersonListPanel().navigateToCard(getPersonListPanel().getSelectedCardIndex());"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "-"
         },
-        "content": "        getPersonListPanel().navigateToCard(getPersonListPanel().getSelectedCardIndex());"
+        "content": "        String selectedCardName \u003d getPersonListPanel().getHandleToSelectedCard().getName();"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "-"
         },
-        "content": "        String selectedCardName \u003d getPersonListPanel().getHandleToSelectedCard().getName();"
+        "content": "        URL expectedUrl;"
       },
       {
         "lineNumber": 219,
         "author": {
-          "gitId": "-"
+          "gitId": "zioul123"
         },
-        "content": "        URL expectedUrl;"
+        "content": "        expectedUrl \u003d MainApp.class.getResource(FXML_FILE_FOLDER + BrowserPanel.DEFAULT_PAGE);"
       },
       {
         "lineNumber": 220,
         "author": {
-          "gitId": "-"
+          "gitId": "zioul123"
         },
-        "content": "        try {"
+        "content": ""
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "-"
         },
-        "content": "            expectedUrl \u003d new URL(BrowserPanel.SEARCH_PAGE_URL + selectedCardName.replaceAll(\" \", \"%20\"));"
+        "content": "        assertEquals(expectedUrl, getBrowserPanel().getLoadedUrl());"
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "-"
         },
-        "content": "        } catch (MalformedURLException mue) {"
+        "content": ""
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "-"
         },
-        "content": "            throw new AssertionError(\"URL expected to be valid.\", mue);"
+        "content": "        assertEquals(expectedSelectedCardIndex.getZeroBased(), getPersonListPanel().getSelectedCardIndex());"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "-"
         },
-        "content": "        }"
+        "content": "    }"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(expectedUrl, getBrowserPanel().getLoadedUrl());"
+        "content": ""
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(expectedSelectedCardIndex.getZeroBased(), getPersonListPanel().getSelectedCardIndex());"
+        "content": "     * Asserts that the browser\u0027s url and the selected card in the person list panel remain unchanged."
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     * @see BrowserPanelHandle#isUrlChanged()"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "     * @see PersonListPanelHandle#isSelectedPersonCardChanged()"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "     */"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the browser\u0027s url and the selected card in the person list panel remain unchanged."
+        "content": "    protected void assertSelectedCardUnchanged() {"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @see BrowserPanelHandle#isUrlChanged()"
+        "content": "        assertFalse(getBrowserPanel().isUrlChanged());"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "-"
         },
-        "content": "     * @see PersonListPanelHandle#isSelectedPersonCardChanged()"
+        "content": "        assertFalse(getPersonListPanel().isSelectedPersonCardChanged());"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": "    }"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertSelectedCardUnchanged() {"
+        "content": ""
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(getBrowserPanel().isUrlChanged());"
+        "content": "    /**"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertFalse(getPersonListPanel().isSelectedPersonCardChanged());"
+        "content": "     * Asserts that the command box\u0027s shows the default style."
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    protected void assertCommandBoxShowsDefaultStyle() {"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        assertEquals(COMMAND_BOX_DEFAULT_STYLE, getCommandBox().getStyleClass());"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the command box\u0027s shows the default style."
+        "content": "    }"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertCommandBoxShowsDefaultStyle() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(COMMAND_BOX_DEFAULT_STYLE, getCommandBox().getStyleClass());"
+        "content": "     * Asserts that the command box\u0027s shows the error style."
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    protected void assertCommandBoxShowsErrorStyle() {"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        assertEquals(COMMAND_BOX_ERROR_STYLE, getCommandBox().getStyleClass());"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the command box\u0027s shows the error style."
+        "content": "    }"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "-"
         },
-        "content": "    protected void assertCommandBoxShowsErrorStyle() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "-"
         },
-        "content": "        assertEquals(COMMAND_BOX_ERROR_STYLE, getCommandBox().getStyleClass());"
+        "content": "     * Asserts that the entire status bar remains the same."
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "-"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    protected void assertStatusBarUnchanged() {"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": "        StatusBarFooterHandle handle \u003d getStatusBarFooter();"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "-"
         },
-        "content": "     * Asserts that the entire status bar remains the same."
+        "content": "        assertFalse(handle.isSaveLocationChanged());"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "-"
         },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 257,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "    protected void assertStatusBarUnchanged() {"
-      },
-      {
-        "lineNumber": 258,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        StatusBarFooterHandle handle \u003d getStatusBarFooter();"
-      },
-      {
-        "lineNumber": 259,
-        "author": {
-          "gitId": "-"
-        },
-        "content": "        assertFalse(handle.isSaveLocationChanged());"
-      },
-      {
-        "lineNumber": 260,
-        "author": {
-          "gitId": "-"
-        },
         "content": "        assertFalse(handle.isSyncStatusChanged());"
       },
       {
-        "lineNumber": 261,
+        "lineNumber": 257,
         "author": {
           "gitId": "zioul123"
         },
         "content": "        assertFalse(handle.isTotalNumberStatusChanged());"
       },
       {
-        "lineNumber": 262,
+        "lineNumber": 258,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 263,
+        "lineNumber": 259,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 264,
+        "lineNumber": 260,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 265,
+        "lineNumber": 261,
         "author": {
           "gitId": "-"
         },
         "content": "     * Asserts that only the sync status in the status bar was changed to the timing of"
       },
       {
-        "lineNumber": 266,
+        "lineNumber": 262,
         "author": {
           "gitId": "-"
         },
         "content": "     * {@code ClockRule#getInjectedClock()}, while the save location remains the same."
       },
       {
-        "lineNumber": 267,
+        "lineNumber": 263,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 268,
+        "lineNumber": 264,
         "author": {
           "gitId": "zioul123"
         },
         "content": "    protected void assertStatusBarChangedExceptLocation() {"
       },
       {
-        "lineNumber": 269,
+        "lineNumber": 265,
         "author": {
           "gitId": "-"
         },
         "content": "        StatusBarFooterHandle handle \u003d getStatusBarFooter();"
       },
       {
-        "lineNumber": 270,
+        "lineNumber": 266,
         "author": {
           "gitId": "-"
         },
         "content": "        String timestamp \u003d new Date(clockRule.getInjectedClock().millis()).toString();"
       },
       {
-        "lineNumber": 271,
+        "lineNumber": 267,
         "author": {
           "gitId": "-"
         },
         "content": "        String expectedSyncStatus \u003d String.format(SYNC_STATUS_UPDATED, timestamp);"
       },
       {
-        "lineNumber": 272,
+        "lineNumber": 268,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(expectedSyncStatus, handle.getSyncStatus());"
       },
       {
-        "lineNumber": 273,
+        "lineNumber": 269,
         "author": {
           "gitId": "-"
         },
         "content": "        assertFalse(handle.isSaveLocationChanged());"
       },
       {
-        "lineNumber": 274,
+        "lineNumber": 270,
         "author": {
           "gitId": "zioul123"
         },
         "content": "        assertEquals(handle.getTotalNumberStatus(),"
       },
       {
-        "lineNumber": 275,
+        "lineNumber": 271,
         "author": {
           "gitId": "zioul123"
         },
         "content": "                String.format(TOTAL_NUMBER_STATUS, testApp.getModel().getAddressBook().getPersonList().size()));"
       },
       {
-        "lineNumber": 276,
+        "lineNumber": 272,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 277,
+        "lineNumber": 273,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 278,
+        "lineNumber": 274,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 279,
+        "lineNumber": 275,
         "author": {
           "gitId": "-"
         },
         "content": "     * Asserts that the starting state of the application is correct."
       },
       {
-        "lineNumber": 280,
+        "lineNumber": 276,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 281,
+        "lineNumber": 277,
         "author": {
           "gitId": "-"
         },
         "content": "    private void assertApplicationStartingStateIsCorrect() {"
       },
       {
-        "lineNumber": 282,
+        "lineNumber": 278,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(\"\", getCommandBox().getInput());"
       },
       {
-        "lineNumber": 283,
+        "lineNumber": 279,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(\"\", getResultDisplay().getText());"
       },
       {
-        "lineNumber": 284,
+        "lineNumber": 280,
         "author": {
           "gitId": "-"
         },
         "content": "        assertListMatching(getPersonListPanel(), getModel().getFilteredPersonList());"
       },
       {
-        "lineNumber": 285,
+        "lineNumber": 281,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(MainApp.class.getResource(FXML_FILE_FOLDER + DEFAULT_PAGE), getBrowserPanel().getLoadedUrl());"
       },
       {
-        "lineNumber": 286,
+        "lineNumber": 282,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(Paths.get(\".\").resolve(testApp.getStorageSaveLocation()).toString(),"
       },
       {
-        "lineNumber": 287,
+        "lineNumber": 283,
         "author": {
           "gitId": "-"
         },
         "content": "                getStatusBarFooter().getSaveLocation());"
       },
       {
-        "lineNumber": 288,
+        "lineNumber": 284,
         "author": {
           "gitId": "-"
         },
         "content": "        assertEquals(SYNC_STATUS_INITIAL, getStatusBarFooter().getSyncStatus());"
       },
       {
-        "lineNumber": 289,
+        "lineNumber": 285,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 290,
+        "lineNumber": 286,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 291,
+        "lineNumber": 287,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 292,
+        "lineNumber": 288,
         "author": {
           "gitId": "-"
         },
         "content": "     * Returns a defensive copy of the current model."
       },
       {
-        "lineNumber": 293,
+        "lineNumber": 289,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 294,
+        "lineNumber": 290,
         "author": {
           "gitId": "-"
         },
         "content": "    protected Model getModel() {"
       },
       {
-        "lineNumber": 295,
+        "lineNumber": 291,
         "author": {
           "gitId": "-"
         },
         "content": "        return testApp.getModel();"
       },
       {
-        "lineNumber": 296,
+        "lineNumber": 292,
         "author": {
           "gitId": "-"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 297,
+        "lineNumber": 293,
         "author": {
           "gitId": "-"
         },
@@ -100038,8 +100826,8 @@
       }
     ],
     "authorContributionMap": {
-      "zioul123": 6,
-      "-": 291
+      "zioul123": 10,
+      "-": 283
     }
   },
   {
