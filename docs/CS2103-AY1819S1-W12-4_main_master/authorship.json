@@ -68622,950 +68622,964 @@
       {
         "lineNumber": 129,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    /**"
+        "content": "    //@@author robertvictoreen"
       },
       {
         "lineNumber": 130,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "     * Show the specified student\u0027s assignments and marks."
+        "content": "    /**"
       },
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "     */"
+        "content": "     * Show the specified student\u0027s assignments and marks."
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    private void showAssignments(Person student) {"
+        "content": "     */"
       },
       {
         "lineNumber": 133,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        Label label;"
+        "content": "    private void showAssignments(Person student) {"
       },
       {
         "lineNumber": 134,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        double assignmentWeight;"
+        "content": "        Label label;"
       },
       {
         "lineNumber": 135,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        double totalWeight \u003d 0;"
+        "content": "        double assignmentWeight;"
       },
       {
         "lineNumber": 136,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        double weightedMarks \u003d 0;"
+        "content": "        double totalWeight \u003d 0;"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "        double weightedMarks \u003d 0;"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        int row \u003d 1;"
+        "content": ""
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "        Assignment assignment;"
+        "content": "        int row \u003d 1;"
       },
       {
         "lineNumber": 140,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        for (int i \u003d 0; i \u003c assignmentList.size(); i++) {"
+        "content": "        Assignment assignment;"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "            assignment \u003d assignmentList.get(i);"
+        "content": "        for (int i \u003d 0; i \u003c assignmentList.size(); i++) {"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "            row \u003d i + 1;"
+        "content": "            assignment \u003d assignmentList.get(i);"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "            row \u003d i + 1;"
       },
       {
         "lineNumber": 144,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            // adding assignment labels (name and deadline)"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            String assignmentString \u003d String.format(\"%d. %s\", row, assignment.getName().getValue());"
+        "content": "            // adding assignment labels (name and deadline)"
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            addLabelToGrid(assignmentString, row, 0);"
+        "content": "            String assignmentString \u003d String.format(\"%d. %s\", row, assignment.getName().getValue());"
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            addLabelToGrid(String.valueOf(assignment.getDeadline()), row, 1);"
+        "content": "            addLabelToGrid(assignmentString, row, 0);"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "            addLabelToGrid(String.valueOf(assignment.getDeadline()), row, 1);"
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            // assignment weight"
+        "content": ""
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "            assignmentWeight \u003d assignment.getWeight().getValue();"
+        "content": "            // assignment weight"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "            totalWeight +\u003d assignmentWeight;"
+        "content": "            assignmentWeight \u003d assignment.getWeight().getValue();"
       },
       {
         "lineNumber": 152,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            addLabelToGrid(String.valueOf(assignment.getWeight()), row, 2);"
+        "content": "            totalWeight +\u003d assignmentWeight;"
       },
       {
         "lineNumber": 153,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "            addLabelToGrid(String.valueOf(assignment.getWeight()), row, 2);"
       },
       {
         "lineNumber": 154,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            weightedMarks +\u003d showMarks(student, assignment, row);"
+        "content": ""
       },
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "            weightedMarks +\u003d showMarks(student, assignment, row);"
       },
       {
         "lineNumber": 156,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        }"
+        "content": ""
       },
       {
         "lineNumber": 157,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 158,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        row++;"
+        "content": ""
       },
       {
         "lineNumber": 159,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        showTotalGrade(weightedMarks, totalWeight, row);"
+        "content": "        row++;"
       },
       {
         "lineNumber": 160,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    }"
+        "content": "        showTotalGrade(weightedMarks, totalWeight, row);"
       },
       {
         "lineNumber": 161,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 162,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 163,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "     * Shows the obtained marks and maximum marks in the given row of the GridPane."
+        "content": "    /**"
       },
       {
         "lineNumber": 164,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "     */"
+        "content": "     * Shows the obtained marks and maximum marks in the given row of the GridPane."
       },
       {
         "lineNumber": 165,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    private void showTotalGrade(double weightedMarks, double totalWeight, int row) {"
+        "content": "     */"
       },
       {
         "lineNumber": 166,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        Label label \u003d createLabel(\"Total\", DEFAULT_STYLE);"
+        "content": "    private void showTotalGrade(double weightedMarks, double totalWeight, int row) {"
       },
       {
         "lineNumber": 167,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        components.add(label, 0, row);"
+        "content": "        Label label \u003d createLabel(\"Total\", DEFAULT_STYLE);"
       },
       {
         "lineNumber": 168,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "        components.add(label, 0, row);"
       },
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        String text \u003d String.format(\"%.1f/%.1f\", weightedMarks, totalWeight);"
+        "content": ""
       },
       {
         "lineNumber": 170,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        label \u003d createLabel(text, DEFAULT_STYLE);"
+        "content": "        String text \u003d String.format(\"%.1f/%.1f\", weightedMarks, totalWeight);"
       },
       {
         "lineNumber": 171,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        components.add(label, 3, row);"
+        "content": "        label \u003d createLabel(text, DEFAULT_STYLE);"
       },
       {
         "lineNumber": 172,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    }"
+        "content": "        components.add(label, 3, row);"
       },
       {
         "lineNumber": 173,
         "author": {
-          "gitId": "spencertan96"
-        },
-        "content": ""
-      },
-      {
-        "lineNumber": 174,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 175,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "     * Add label with specified text to GridPane at given row and column."
-      },
-      {
-        "lineNumber": 176,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 177,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "    private void addLabelToGrid(String text, int row, int column) {"
-      },
-      {
-        "lineNumber": 178,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "        Label label \u003d createLabel(text, DEFAULT_STYLE);"
-      },
-      {
-        "lineNumber": 179,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "        components.add(label, column, row);"
-      },
-      {
-        "lineNumber": 180,
-        "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
         "content": "    }"
       },
       {
-        "lineNumber": 181,
+        "lineNumber": 174,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
         "content": ""
       },
       {
-        "lineNumber": 182,
+        "lineNumber": 175,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 183,
+        "lineNumber": 176,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "     * Shows student\u0027s marks in the display at given row for the specified assignment."
+        "content": "     * Add label with specified text to GridPane at given row and column."
       },
       {
-        "lineNumber": 184,
+        "lineNumber": 177,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
         "content": "     */"
       },
       {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    private void addLabelToGrid(String text, int row, int column) {"
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        Label label \u003d createLabel(text, DEFAULT_STYLE);"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        components.add(label, column, row);"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "     * Shows student\u0027s marks in the display at given row for the specified assignment."
+      },
+      {
         "lineNumber": 185,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    private double showMarks(Person student, Assignment assignment, int row) {"
+        "content": "     */"
       },
       {
         "lineNumber": 186,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        String text;"
+        "content": "    private double showMarks(Person student, Assignment assignment, int row) {"
       },
       {
         "lineNumber": 187,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        double result \u003d 0;"
+        "content": "        String text;"
       },
       {
         "lineNumber": 188,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        double assignmentMark;"
+        "content": "        double result \u003d 0;"
       },
       {
         "lineNumber": 189,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        double assignmentMaxMark;"
+        "content": "        double assignmentMark;"
       },
       {
         "lineNumber": 190,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        double assignmentWeight \u003d assignment.getWeight().getValue();"
+        "content": "        double assignmentMaxMark;"
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        // adding marks label"
+        "content": "        double assignmentWeight \u003d assignment.getWeight().getValue();"
       },
       {
         "lineNumber": 192,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "robertvictoreen"
         },
-        "content": "        try {"
+        "content": "        // adding marks label"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "            assignmentMark \u003d student.getMarks().get(assignment.getUniqueId()).getValue();"
+        "content": "        if (student.getMarks().containsKey(assignment.getUniqueId())) {"
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "            assignmentMaxMark \u003d assignment.getMaxMark().getValue();"
+        "content": "            assignmentMark \u003d student.getMarks().get(assignment.getUniqueId()).getValue();"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "            assignmentMaxMark \u003d assignment.getMaxMark().getValue();"
       },
       {
         "lineNumber": 196,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            text \u003d String.format(\"%.1f/%.1f\", assignmentMark, assignmentMaxMark);"
+        "content": ""
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "            text \u003d String.format(\"%.1f/%.1f\", assignmentMark, assignmentMaxMark);"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "            assignmentMark /\u003d assignmentMaxMark;"
+        "content": ""
       },
       {
         "lineNumber": 199,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            result +\u003d assignmentMark * assignmentWeight;"
+        "content": "            assignmentMark /\u003d assignmentMaxMark;"
       },
       {
         "lineNumber": 200,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "robertvictoreen"
         },
-        "content": "        } catch (Exception e) {"
+        "content": "            result +\u003d assignmentMark * assignmentWeight;"
       },
       {
         "lineNumber": 201,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "            text \u003d \"\";"
+        "content": "        } else {"
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "HenryJk"
+          "gitId": "robertvictoreen"
         },
-        "content": "        }"
+        "content": "            text \u003d \"\";"
       },
       {
         "lineNumber": 203,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        Label label \u003d createLabel(text, DEFAULT_STYLE);"
+        "content": "        }"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": "        components.add(label, 3, row);"
+        "content": "        Label label \u003d createLabel(text, DEFAULT_STYLE);"
       },
       {
         "lineNumber": 205,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        return result;"
+        "content": "        components.add(label, 3, row);"
       },
       {
         "lineNumber": 206,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    }"
+        "content": "        return result;"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 208,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "    /**"
-      },
-      {
-        "lineNumber": 209,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "     * Set the {@code GridPane}\u0027s rows and columns to Assignment layout."
-      },
-      {
-        "lineNumber": 210,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "     */"
-      },
-      {
-        "lineNumber": 211,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "    private void setRowsAndColumns() {"
-      },
-      {
-        "lineNumber": 212,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "        Label label \u003d createLabel(\"Assignments\", DEFAULT_STYLE);"
-      },
-      {
-        "lineNumber": 213,
-        "author": {
-          "gitId": "spencertan96"
-        },
-        "content": "        components.add(label, 0, 0);"
-      },
-      {
-        "lineNumber": 214,
         "author": {
           "gitId": "robertvictoreen"
         },
         "content": ""
       },
       {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "     * Set the {@code GridPane}\u0027s rows and columns to Assignment layout."
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "    private void setRowsAndColumns() {"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        Label label \u003d createLabel(\"Assignments\", DEFAULT_STYLE);"
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "robertvictoreen"
+        },
+        "content": "        components.add(label, 0, 0);"
+      },
+      {
         "lineNumber": 215,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        label \u003d createLabel(\"Deadline\", DEFAULT_STYLE);"
+        "content": ""
       },
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        components.add(label, 1, 0);"
+        "content": "        label \u003d createLabel(\"Deadline\", DEFAULT_STYLE);"
       },
       {
         "lineNumber": 217,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "        components.add(label, 1, 0);"
       },
       {
         "lineNumber": 218,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        label \u003d createLabel(\"Weight\", DEFAULT_STYLE);"
+        "content": ""
       },
       {
         "lineNumber": 219,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        components.add(label, 2, 0);"
+        "content": "        label \u003d createLabel(\"Weight\", DEFAULT_STYLE);"
       },
       {
         "lineNumber": 220,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "        components.add(label, 2, 0);"
       },
       {
         "lineNumber": 221,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        label \u003d createLabel(\"Grade\", DEFAULT_STYLE);"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "        components.add(label, 3, 0);"
+        "content": "        label \u003d createLabel(\"Grade\", DEFAULT_STYLE);"
       },
       {
         "lineNumber": 223,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": "    }"
+        "content": "        components.add(label, 3, 0);"
       },
       {
         "lineNumber": 224,
         "author": {
-          "gitId": "spencertan96"
+          "gitId": "robertvictoreen"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    /**"
+        "content": "    //@@author spencertan96"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "     * Resets display to default where no student is selected."
+        "content": ""
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    private void showDefault() {"
+        "content": "     * Resets display to default where no student is selected."
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        showDefaultLabel();"
+        "content": "     */"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        showDefaultText();"
+        "content": "    private void showDefault() {"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    }"
+        "content": "        showDefaultLabel();"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "        showDefaultText();"
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "     * Resets note display to default."
+        "content": ""
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    private void showDefaultText() {"
+        "content": "     * Resets note display to default."
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        notesText.clear();"
+        "content": "     */"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        notesText.setText(DEFAULT_TEXT);"
+        "content": "    private void showDefaultText() {"
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    }"
+        "content": "        notesText.clear();"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "        notesText.setText(DEFAULT_TEXT);"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    /**"
+        "content": "    }"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "     * Resets assignments display to default."
+        "content": ""
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    private void showDefaultLabel() {"
+        "content": "     * Resets assignments display to default."
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        components.getChildren().clear();"
+        "content": "     */"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        Label noComponents \u003d new Label(DEFAULT_LABEL);"
+        "content": "    private void showDefaultLabel() {"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        noComponents.setFont(DEFAULT_FONT);"
+        "content": "        components.getChildren().clear();"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        components.add(noComponents, 0, 0);"
+        "content": "        Label noComponents \u003d new Label(DEFAULT_LABEL);"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    }"
+        "content": "        noComponents.setFont(DEFAULT_FONT);"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "        components.add(noComponents, 0, 0);"
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    private Label createLabel(String text, String style) {"
+        "content": "    }"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        Label label \u003d new Label(text);"
+        "content": ""
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        label.setStyle(style);"
+        "content": "    private Label createLabel(String text, String style) {"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        return label;"
+        "content": "        Label label \u003d new Label(text);"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    }"
+        "content": "        label.setStyle(style);"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "        return label;"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    public ObservableList\u003cPerson\u003e getList() {"
+        "content": "    }"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        return studentList;"
+        "content": ""
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    }"
+        "content": "    public ObservableList\u003cPerson\u003e getList() {"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": ""
+        "content": "        return studentList;"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    public Person getCurrentStudent() {"
+        "content": "    }"
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "        return currentStudent;"
+        "content": ""
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "spencertan96"
         },
-        "content": "    }"
+        "content": "    public Person getCurrentStudent() {"
       },
       {
         "lineNumber": 264,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "        return currentStudent;"
+      },
+      {
+        "lineNumber": 265,
+        "author": {
+          "gitId": "spencertan96"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 266,
         "author": {
           "gitId": "spencertan96"
         },
@@ -69573,9 +69587,9 @@
       }
     ],
     "authorContributionMap": {
-      "robertvictoreen": 18,
-      "spencertan96": 233,
-      "HenryJk": 13
+      "robertvictoreen": 98,
+      "spencertan96": 158,
+      "HenryJk": 10
     }
   },
   {
