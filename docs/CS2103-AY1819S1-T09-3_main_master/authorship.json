@@ -15022,7 +15022,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (model.getPhotoHandler() \u003d\u003d null) {"
+        "content": "        if (model.getPhotoHandler(false) \u003d\u003d null) {"
       },
       {
         "lineNumber": 61,
@@ -20432,521 +20432,549 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public static final String MESSAGE_FAILURE \u003d \"%s failed to download.\";"
+        "content": "    public static final String MESSAGE_FAILURE \u003d \"%s failed to download.\""
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public static final String TYPE \u003d \"dl\";"
+        "content": "            + \" Remember to type a valid name in the right format!\";"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public static final String FULL_CMD \u003d COMMAND_WORD + \" \" + TYPE;"
+        "content": "    public static final String TYPE \u003d \"dl\";"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public static final String MESSAGE_USAGE \u003d \"Usage of google download (requires an internet connection): \""
+        "content": "    public static final String FULL_CMD \u003d COMMAND_WORD + \" \" + TYPE;"
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"\\n- \" + FULL_CMD + \" /i\u003cIMAGE_NAME\u003e: \" + \"Downloads specified image from Google Photos\""
+        "content": "    public static final String MESSAGE_USAGE \u003d \"Usage of google download (requires an internet connection): \""
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"\\n\\tExample: \" + FULL_CMD + \" /i\u003cmountain.png\u003e, usage inclusive of \u003c\u003e \""
+        "content": "            + \"\\n- \" + FULL_CMD + \" /i\u003cIMAGE_NAME\u003e: \" + \"Downloads specified image from Google Photos\""
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"\\n- \" + FULL_CMD + \" /a\u003cALBUM_NAME\u003e /i\u003cIMAGE_NAME\u003e: \" + \"Downloads specified image\""
+        "content": "            + \"\\n\\tExample: \" + FULL_CMD + \" /i\u003cmountain.png\u003e, usage inclusive of \u003c\u003e \""
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"from specified album in Google sPhotos\""
+        "content": "            + \"\\n- \" + FULL_CMD + \" /a\u003cALBUM_NAME\u003e /i\u003cIMAGE_NAME\u003e: \" + \"Downloads specified image\""
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"\\n\\tExample: \" + FULL_CMD + \" /a\u003cVacation\u003e /i\u003cmountain.png\u003e, usage inclusive of \u003c\u003e\""
+        "content": "            + \"from specified album in Google sPhotos\""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"\\n- \" + FULL_CMD + \" /a\u003cALBUM_NAME\u003e: \" + \"Downloads all images from specified album, \""
+        "content": "            + \"\\n\\tExample: \" + FULL_CMD + \" /a\u003cVacation\u003e /i\u003cmountain.png\u003e, usage inclusive of \u003c\u003e\""
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"takes a longer time depending on number of images\""
+        "content": "            + \"\\n- \" + FULL_CMD + \" /a\u003cALBUM_NAME\u003e: \" + \"Downloads all images from specified album, \""
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"\\n\\tExample: \" + FULL_CMD + \" /a\u003cVacation\u003e, usage inclusive of \u003c\u003e \\n\\n\""
+        "content": "            + \"takes a longer time depending on number of images\""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            + \"!!WARNING: Any files with duplicate naming existing in the folder WILL be replaced\";"
+        "content": "            + \"\\n\\tExample: \" + FULL_CMD + \" /a\u003cVacation\u003e, usage inclusive of \u003c\u003e \\n\\n\""
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            + \"!!WARNING: Any files with duplicate naming existing in the folder WILL be replaced\";"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     * Index to start from when parsing a image or album name"
+        "content": "    /**"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     */"
+        "content": "     * Index to start from when parsing a image or album name"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    private static final int START_INDEX \u003d 3;"
+        "content": "     */"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    private static final int START_INDEX \u003d 3;"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public GoogleDlCommand(String parameter) {"
+        "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        super(parameter);"
+        "content": "    public GoogleDlCommand(String parameter) {"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        super(parameter);"
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String org \u003d parameter;"
+        "content": ""
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        try {"
+        "content": "        String org \u003d parameter;"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            String currDir \u003d model.getCurrDirectory().toString();"
+        "content": "        try {"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            String currDir \u003d model.getCurrDirectory().toString();"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            if (parameter.startsWith(\"/a\")) {"
+        "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                String[] params \u003d parameter.trim().split(\" /i\u003c\", 2);"
+        "content": "            if (parameter.startsWith(\"/a\")) {"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                if (params.length \u003e 1) {"
+        "content": "                String[] params \u003d parameter.trim().split(\" /i\u003c\", 2);"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    String albumName \u003d params[0].substring(START_INDEX, params[0].length() - 1);"
+        "content": "                if (params.length \u003e 1) {"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "                    String albumName \u003d params[0].substring(START_INDEX, params[0].length() - 1);"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    // get image name"
+        "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    parameter \u003d params[1].substring(0, params[1].length() - 1);"
+        "content": "                    // get image name"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    model.getPhotoHandler().downloadAlbumImage(albumName, parameter, currDir);"
+        "content": "                    parameter \u003d params[1].substring(0, params[1].length() - 1);"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                } else {"
+        "content": "                    model.getPhotoHandler(true).downloadAlbumImage(albumName, parameter, currDir);"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    parameter \u003d parameter.substring(START_INDEX, parameter.length() - 1);"
+        "content": "                } else {"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    model.getPhotoHandler().downloadWholeAlbum(parameter, currDir);"
+        "content": "                    parameter \u003d parameter.substring(START_INDEX, parameter.length() - 1);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                }"
+        "content": "                    model.getPhotoHandler(true).downloadWholeAlbum(parameter, currDir);"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "                }"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            } else if (parameter.startsWith(\"/i\")) {"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                parameter \u003d parameter.substring(START_INDEX, parameter.length() - 1);"
+        "content": "            } else if (parameter.startsWith(\"/i\")) {"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                model.getPhotoHandler().downloadImage(parameter, currDir);"
+        "content": "                parameter \u003d parameter.substring(START_INDEX, parameter.length() - 1);"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            } else {"
+        "content": "                model.getPhotoHandler(true).downloadImage(parameter, currDir);"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                throw new Exception(parameter);"
+        "content": "            } else {"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            }"
+        "content": "                throw new Exception(parameter);"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            model.updateEntireImageList();"
+        "content": ""
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            model.updateEntireImageList();"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } catch (ApiException api) {"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            throw new CommandException(MESSAGE_CONNECTION_FAILURE);"
+        "content": "        } catch (ApiException api) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } catch (Exception ex) {"
+        "content": "            throw new CommandException(MESSAGE_CONNECTION_FAILURE);"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            if (parameter.isEmpty()) {"
+        "content": "        } catch (CommandException coEx) {"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                parameter \u003d org;"
+        "content": "            throw coEx;"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            }"
+        "content": "        } catch (Exception ex) {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            throw new CommandException(String.format(MESSAGE_FAILURE, parameter) + \"\\n\\n\" + MESSAGE_USAGE);"
+        "content": "            if (parameter.isEmpty()) {"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "                parameter \u003d org;"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, parameter, model.getCurrDirectory().toString()));"
+        "content": "            }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "            throw new CommandException(String.format(MESSAGE_FAILURE, parameter) + \"\\n\\n\" + MESSAGE_USAGE);"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "        return new CommandResult(String.format(MESSAGE_SUCCESS, parameter, model.getCurrDirectory().toString()));"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": "    }"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return true;"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (!(other instanceof GoogleDlCommand)) { //this handles null as well."
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return false;"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "            return true;"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        return ((GoogleDlCommand) other).parameter.equals(this.parameter);"
+        "content": "        }"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        if (!(other instanceof GoogleDlCommand)) { //this handles null as well."
       },
       {
         "lineNumber": 95,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "        return ((GoogleDlCommand) other).parameter.equals(this.parameter);"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 99,
         "author": {
           "gitId": "chivent"
         },
@@ -20954,7 +20982,7 @@
       }
     ],
     "authorContributionMap": {
-      "chivent": 95
+      "chivent": 99
     }
   },
   {
@@ -21273,7 +21301,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "                printTarget \u003d model.getPhotoHandler().returnAllImagesList();"
+        "content": "                printTarget \u003d model.getPhotoHandler(true).returnAllImagesList();"
       },
       {
         "lineNumber": 46,
@@ -21301,7 +21329,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "                printTarget \u003d model.getPhotoHandler().returnAllAlbumsList();"
+        "content": "                printTarget \u003d model.getPhotoHandler(true).returnAllAlbumsList();"
       },
       {
         "lineNumber": 50,
@@ -21322,7 +21350,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "                printTarget \u003d model.getPhotoHandler().returnAllImagesinAlbum(parameter);"
+        "content": "                printTarget \u003d model.getPhotoHandler(true).returnAllImagesinAlbum(parameter);"
       },
       {
         "lineNumber": 53,
@@ -21413,122 +21441,136 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } catch (Exception ex) {"
+        "content": "        } catch (CommandException coEx) {"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            throw new CommandException(FAILURE_MESSAGE + \"\\n\\n\" + MESSAGE_USAGE);"
+        "content": "            throw coEx;"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "        } catch (Exception ex) {"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            throw new CommandException(FAILURE_MESSAGE + \"\\n\\n\" + MESSAGE_USAGE);"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        return new CommandResult(toPrint.toString());"
+        "content": "        }"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        return new CommandResult(toPrint.toString());"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": ""
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return true;"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (!(other instanceof GoogleLsCommand)) { //this handles null as well."
+        "content": "            return true;"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return false;"
+        "content": "        }"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "        if (!(other instanceof GoogleLsCommand)) { //this handles null as well."
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        return ((GoogleLsCommand) other).parameter.equals(this.parameter);"
+        "content": "            return false;"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 82,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "        return ((GoogleLsCommand) other).parameter.equals(this.parameter);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 84,
         "author": {
           "gitId": "chivent"
         },
@@ -21536,7 +21578,7 @@
       }
     ],
     "authorContributionMap": {
-      "chivent": 82
+      "chivent": 84
     }
   },
   {
@@ -21757,7 +21799,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "            model.getPhotoHandler().refreshLists();"
+        "content": "            model.getPhotoHandler(true).refreshLists();"
       },
       {
         "lineNumber": 32,
@@ -21778,38 +21820,52 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } catch (Exception ex) {"
+        "content": "        } catch (CommandException coEx) {"
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            throw new CommandException(FAILURE_MESSAGE + \"\\n\\n\" + MESSAGE_USAGE);"
+        "content": "            throw coEx;"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "        } catch (Exception ex) {"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        return new CommandResult(\"Images and albums refreshed!\");"
+        "content": "            throw new CommandException(FAILURE_MESSAGE + \"\\n\\n\" + MESSAGE_USAGE);"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        }"
       },
       {
         "lineNumber": 39,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "        return new CommandResult(\"Images and albums refreshed!\");"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 41,
         "author": {
           "gitId": "chivent"
         },
@@ -21817,7 +21873,7 @@
       }
     ],
     "authorContributionMap": {
-      "chivent": 39
+      "chivent": 41
     }
   },
   {
@@ -22045,392 +22101,392 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public static final String MESSAGE_FAILURE \u003d \"%s failed to upload.\" + \"\\n\\n\" + MESSAGE_USAGE;"
+        "content": "    public static final String MESSAGE_FAILURE \u003d \"%s failed to upload.\""
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            + \"Remember to type a valid name in the right format!\" + \"\\n\\n\" + MESSAGE_USAGE;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public GoogleUploadCommand(String parameter) {"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        super(parameter);"
+        "content": "    public GoogleUploadCommand(String parameter) {"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        super(parameter);"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 40,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        requireNonNull(model);"
+        "content": "    public CommandResult execute(Model model, CommandHistory history) throws CommandException {"
       },
       {
         "lineNumber": 41,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        requireNonNull(model);"
       },
       {
         "lineNumber": 42,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String org \u003d parameter;"
+        "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String message;"
+        "content": "        String org \u003d parameter;"
       },
       {
         "lineNumber": 44,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        try {"
+        "content": "        String message;"
       },
       {
         "lineNumber": 45,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            if (parameter.startsWith(\"all\")) {"
+        "content": "        try {"
       },
       {
         "lineNumber": 46,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                message \u003d model.getPhotoHandler().uploadAll(model.getCurrDirectory().toString());"
+        "content": "            if (parameter.startsWith(\"all\")) {"
       },
       {
         "lineNumber": 47,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                return returnUploadMessage(message);"
+        "content": "                message \u003d model.getPhotoHandler(true).uploadAll(model.getCurrDirectory().toString());"
       },
       {
         "lineNumber": 48,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            } else {"
+        "content": "                return returnUploadMessage(message);"
       },
       {
         "lineNumber": 49,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                parameter \u003d parameter.substring(1, parameter.length() - 1);"
+        "content": "            } else {"
       },
       {
         "lineNumber": 50,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                message \u003d model.getPhotoHandler().uploadImage(parameter, model.getCurrDirectory().toString());"
+        "content": "                parameter \u003d parameter.substring(1, parameter.length() - 1);"
       },
       {
         "lineNumber": 51,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                return returnUploadMessage(message);"
+        "content": "                message \u003d model.getPhotoHandler(true).uploadImage(parameter, model.getCurrDirectory().toString());"
       },
       {
         "lineNumber": 52,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            }"
+        "content": "                return returnUploadMessage(message);"
       },
       {
         "lineNumber": 53,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } catch (ApiException ex) {"
+        "content": "            }"
       },
       {
         "lineNumber": 54,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            throw new CommandException(ex.getMessage());"
+        "content": "        } catch (ApiException ex) {"
       },
       {
         "lineNumber": 55,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } catch (Exception ex) {"
+        "content": "            throw new CommandException(ex.getMessage());"
       },
       {
         "lineNumber": 56,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            if (parameter.isEmpty()) {"
+        "content": "        } catch (CommandException coEx) {"
       },
       {
         "lineNumber": 57,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                parameter \u003d org;"
+        "content": "            throw coEx;"
       },
       {
         "lineNumber": 58,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            }"
+        "content": "        } catch (Exception ex) {"
       },
       {
         "lineNumber": 59,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            throw new CommandException(String.format(MESSAGE_FAILURE, parameter) + \"\\n\\n\" + MESSAGE_USAGE);"
+        "content": "            if (parameter.isEmpty()) {"
       },
       {
         "lineNumber": 60,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "                parameter \u003d org;"
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "            }"
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            throw new CommandException(String.format(MESSAGE_FAILURE, parameter) + \"\\n\\n\" + MESSAGE_USAGE);"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    /**"
+        "content": "        }"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     * Parses and prepares a message to return to result display for uploading"
+        "content": "    }"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     * @param uploaded duplicate list"
+        "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     * @return result to return to display"
+        "content": "    /**"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     */"
+        "content": "     * Parses and prepares a message to return to result display for uploading"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public CommandResult returnUploadMessage(String uploaded) {"
+        "content": "     * @param uploaded duplicate list"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String message \u003d uploaded;"
+        "content": "     * @return result to return to display"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String allImages \u003d \"All images in directory\";"
+        "content": "     */"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (uploaded.isEmpty()) {"
+        "content": "    public CommandResult returnUploadMessage(String uploaded) {"
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return new CommandResult(String.format(MESSAGE_ALL_DUPLICATE, allImages));"
+        "content": "        String message \u003d uploaded;"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } else if (uploaded.substring(0, 4).equals(\".all\")) {"
+        "content": "        String allImages \u003d \"All images in directory\";"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            message \u003d uploaded.substring(4);"
+        "content": "        if (uploaded.isEmpty()) {"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return new CommandResult(String.format(MESSAGE_SUCCESS, message));"
+        "content": "            return new CommandResult(String.format(MESSAGE_ALL_DUPLICATE, allImages));"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } else {"
+        "content": "        } else if (uploaded.substring(0, 4).equals(\".all\")) {"
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return new CommandResult(String.format(MESSAGE_DUPLICATE, message));"
+        "content": "            message \u003d uploaded.substring(4);"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "            return new CommandResult(String.format(MESSAGE_SUCCESS, message));"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        } else {"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            return new CommandResult(String.format(MESSAGE_DUPLICATE, message));"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Override"
+        "content": "        }"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public boolean equals(Object other) {"
+        "content": "    }"
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (other \u003d\u003d this) {"
+        "content": ""
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return true;"
+        "content": "    @Override"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "    public boolean equals(Object other) {"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (!(other instanceof GoogleUploadCommand)) { //this handles null as well."
+        "content": "        if (other \u003d\u003d this) {"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return false;"
+        "content": "            return true;"
       },
       {
         "lineNumber": 88,
@@ -22444,17 +22500,38 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "        return ((GoogleUploadCommand) other).parameter.equals(this.parameter);"
+        "content": "        if (!(other instanceof GoogleUploadCommand)) { //this handles null as well."
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "            return false;"
       },
       {
         "lineNumber": 91,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "        return ((GoogleUploadCommand) other).parameter.equals(this.parameter);"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 94,
         "author": {
           "gitId": "chivent"
         },
@@ -22462,7 +22539,7 @@
       }
     ],
     "authorContributionMap": {
-      "chivent": 91
+      "chivent": 94
     }
   },
   {
@@ -30140,1158 +30217,1165 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "     */"
+        "content": "     * @param subCommand returns true if from an instance such as g ls, dl, ul or refresh"
       },
       {
         "lineNumber": 22,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    PhotoHandler getPhotoHandler() throws CommandException;"
+        "content": "     */"
       },
       {
         "lineNumber": 23,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    PhotoHandler getPhotoHandler(boolean subCommand) throws CommandException;"
       },
       {
         "lineNumber": 24,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 25,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     * Set PhotoHandler."
+        "content": "    /**"
       },
       {
         "lineNumber": 26,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     */"
+        "content": "     * Set PhotoHandler."
       },
       {
         "lineNumber": 27,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    void setPhotoHandler(PhotoHandler instance);"
+        "content": "     */"
       },
       {
         "lineNumber": 28,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    void setPhotoHandler(PhotoHandler instance);"
       },
       {
         "lineNumber": 29,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     * Gets currently logged in user"
+        "content": "    /**"
       },
       {
         "lineNumber": 31,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     */"
+        "content": "     * Gets currently logged in user"
       },
       {
         "lineNumber": 32,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    String getUserLoggedIn() throws CommandException;"
+        "content": "     */"
       },
       {
         "lineNumber": 33,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    String getUserLoggedIn() throws CommandException;"
       },
       {
         "lineNumber": 34,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     * Performs necessary set up for current model (test or actual)"
+        "content": "    /**"
       },
       {
         "lineNumber": 36,
         "author": {
           "gitId": "chivent"
         },
-        "content": "     */"
+        "content": "     * Performs necessary set up for current model (test or actual)"
       },
       {
         "lineNumber": 37,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    void setUpForGoogle(boolean isTest);"
+        "content": "     */"
       },
       {
         "lineNumber": 38,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    void setUpForGoogle(boolean isTest);"
       },
       {
         "lineNumber": 39,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 40,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 41,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "     * Returns true if the current layer\u0027s PreviewImage has undone states to restore."
       },
       {
-        "lineNumber": 41,
+        "lineNumber": 42,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 42,
+        "lineNumber": 43,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "    boolean canUndoPreviewImage();"
       },
       {
-        "lineNumber": 43,
+        "lineNumber": 44,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 44,
+        "lineNumber": 45,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 45,
+        "lineNumber": 46,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "     * Returns true if the current layer\u0027s PreviewImage states to restore."
       },
       {
-        "lineNumber": 46,
+        "lineNumber": 47,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 47,
+        "lineNumber": 48,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "    boolean canRedoPreviewImage();"
       },
       {
-        "lineNumber": 48,
+        "lineNumber": 49,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 49,
+        "lineNumber": 50,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 50,
+        "lineNumber": 51,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "     * Undoes one state in the current layer\u0027s previewImage."
       },
       {
-        "lineNumber": 51,
+        "lineNumber": 52,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 52,
+        "lineNumber": 53,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "    void undoPreviewImage();"
       },
       {
-        "lineNumber": 53,
+        "lineNumber": 54,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 54,
+        "lineNumber": 55,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 55,
+        "lineNumber": 56,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "     * Redoes one state in the current layer\u0027s previewImage."
       },
       {
-        "lineNumber": 56,
+        "lineNumber": 57,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 57,
+        "lineNumber": 58,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "    void redoPreviewImage();"
       },
       {
-        "lineNumber": 58,
+        "lineNumber": 59,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 59,
+        "lineNumber": 60,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "    /**"
-      },
-      {
-        "lineNumber": 60,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "     * Undoes all states in the current layer\u0027s previewImage."
       },
       {
         "lineNumber": 61,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     */"
+        "content": "     * Undoes all states in the current layer\u0027s previewImage."
       },
       {
         "lineNumber": 62,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    void undoAllPreviewImage();"
+        "content": "     */"
       },
       {
         "lineNumber": 63,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "    void undoAllPreviewImage();"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     * Redoes all states in the current layer\u0027s previewImage."
+        "content": "    /**"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     */"
+        "content": "     * Redoes all states in the current layer\u0027s previewImage."
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    void redoAllPreviewImage();"
+        "content": "     */"
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "    void redoAllPreviewImage();"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "benedictcss"
+          "gitId": "ihwk1996"
         },
-        "content": "     * Updates the userPrefs current directory."
+        "content": "    /**"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     */"
+        "content": "     * Updates the userPrefs current directory."
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    void updateCurrDirectory(Path newCurrDirectory);"
+        "content": "     */"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": ""
+        "content": "    void updateCurrDirectory(Path newCurrDirectory);"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     * Retrieves the userPrefs current directory."
+        "content": "    /**"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     */"
+        "content": "     * Retrieves the userPrefs current directory."
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    Path getCurrDirectory();"
+        "content": "     */"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": ""
+        "content": "    Path getCurrDirectory();"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     * Retrieves the list of images in current directory."
+        "content": "    /**"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     */"
+        "content": "     * Retrieves the list of images in current directory."
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    List\u003cPath\u003e getDirectoryImageList();"
+        "content": "     */"
       },
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "benedictcss"
         },
-        "content": ""
+        "content": "    List\u003cPath\u003e getDirectoryImageList();"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "benedictcss"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     * Returns the total number of images in current directory"
+        "content": "    /**"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     */"
+        "content": "     * Returns the total number of images in current directory"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    int getTotalImagesInDir();"
+        "content": "     */"
       },
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "-"
+          "gitId": "benedictcss"
         },
-        "content": ""
+        "content": "    int getTotalImagesInDir();"
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "benedictcss"
+          "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     * Returns the current batch pointer"
+        "content": "    /**"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "     */"
+        "content": "     * Returns the current batch pointer"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    int numOfRemainingImagesInDir();"
+        "content": "     */"
       },
       {
         "lineNumber": 93,
         "author": {
-          "gitId": "-"
+          "gitId": "benedictcss"
         },
-        "content": ""
+        "content": "    int numOfRemainingImagesInDir();"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "-"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 96,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "     * Returns the current batch pointer in {@code UserPrefs}"
       },
       {
-        "lineNumber": 96,
+        "lineNumber": 97,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 97,
+        "lineNumber": 98,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "    int getCurrBatchPointer();"
       },
       {
-        "lineNumber": 98,
+        "lineNumber": 99,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 99,
+        "lineNumber": 100,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 100,
+        "lineNumber": 101,
         "author": {
           "gitId": "chivent"
         },
         "content": "     * Updates entire image list."
       },
       {
-        "lineNumber": 101,
+        "lineNumber": 102,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 102,
+        "lineNumber": 103,
         "author": {
           "gitId": "chivent"
         },
         "content": "    void updateEntireImageList();"
       },
       {
-        "lineNumber": 103,
+        "lineNumber": 104,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 104,
+        "lineNumber": 105,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 105,
+        "lineNumber": 106,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "     * Updates the batch pointer to the next 10 images."
       },
       {
-        "lineNumber": 106,
+        "lineNumber": 107,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 107,
+        "lineNumber": 108,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "    void updateImageListNextBatch();"
       },
       {
-        "lineNumber": 108,
+        "lineNumber": 109,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 109,
+        "lineNumber": 110,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 110,
+        "lineNumber": 111,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "     * Updates the batch pointer to the previous 10 images."
       },
       {
-        "lineNumber": 111,
+        "lineNumber": 112,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 112,
+        "lineNumber": 113,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "    void updateImageListPrevBatch();"
       },
       {
-        "lineNumber": 113,
+        "lineNumber": 114,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 114,
+        "lineNumber": 115,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 115,
+        "lineNumber": 116,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "     * Retrieves the current displayed original image."
       },
       {
-        "lineNumber": 116,
+        "lineNumber": 117,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 117,
+        "lineNumber": 118,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "    Path getCurrentOriginalImage();"
       },
       {
-        "lineNumber": 118,
+        "lineNumber": 119,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 119,
+        "lineNumber": 120,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 120,
+        "lineNumber": 121,
         "author": {
           "gitId": "lancelotwillow"
         },
         "content": "     * Set the current displayed original image."
       },
       {
-        "lineNumber": 121,
+        "lineNumber": 122,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 122,
+        "lineNumber": 123,
         "author": {
           "gitId": "lancelotwillow"
         },
         "content": "    void setCurrentOriginalImage(Path path);"
       },
       {
-        "lineNumber": 123,
+        "lineNumber": 124,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 124,
+        "lineNumber": 125,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 125,
+        "lineNumber": 126,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "     * Retrieves the current displayed preview image."
       },
       {
-        "lineNumber": 126,
+        "lineNumber": 127,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 127,
+        "lineNumber": 128,
         "author": {
           "gitId": "lancelotwillow"
         },
         "content": "    PreviewImage getCurrentPreviewImage();"
       },
       {
-        "lineNumber": 128,
+        "lineNumber": 129,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 129,
+        "lineNumber": 130,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
       },
       {
-        "lineNumber": 130,
+        "lineNumber": 131,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "     * Retrieves the current displayed preview image."
       },
       {
-        "lineNumber": 131,
+        "lineNumber": 132,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 132,
+        "lineNumber": 133,
         "author": {
           "gitId": "ihwk1996"
         },
         "content": "    Path getCurrentPreviewImagePath();"
       },
       {
-        "lineNumber": 133,
+        "lineNumber": 134,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 134,
+        "lineNumber": 135,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
-      },
-      {
-        "lineNumber": 135,
-        "author": {
-          "gitId": "lancelotwillow"
-        },
-        "content": "     * update the preview image stored in the model"
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "     * @param image"
+        "content": "     * update the preview image stored in the model"
       },
       {
         "lineNumber": 137,
+        "author": {
+          "gitId": "lancelotwillow"
+        },
+        "content": "     * @param image"
+      },
+      {
+        "lineNumber": 138,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 138,
+        "lineNumber": 139,
         "author": {
           "gitId": "j-lum"
         },
         "content": "    void updateCurrentPreviewImage(BufferedImage image);"
       },
       {
-        "lineNumber": 139,
+        "lineNumber": 140,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 140,
+        "lineNumber": 141,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
-      },
-      {
-        "lineNumber": 141,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "     * Update the current displayed original image."
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     * @param img"
+        "content": "     * Update the current displayed original image."
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     * @param imgPath"
+        "content": "     * @param img"
       },
       {
         "lineNumber": 144,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "     * @param imgPath"
+      },
+      {
+        "lineNumber": 145,
         "author": {
           "gitId": "-"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 145,
+        "lineNumber": 146,
         "author": {
           "gitId": "benedictcss"
         },
         "content": "    void updateCurrentOriginalImage(Image img, Path imgPath);"
       },
       {
-        "lineNumber": 146,
+        "lineNumber": 147,
         "author": {
           "gitId": "-"
         },
         "content": ""
       },
       {
-        "lineNumber": 147,
+        "lineNumber": 148,
         "author": {
           "gitId": "-"
         },
         "content": "    /**"
-      },
-      {
-        "lineNumber": 148,
-        "author": {
-          "gitId": "ihwk1996"
-        },
-        "content": "     * Update the current displayed original image for test."
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     * @param previewImage"
+        "content": "     * Update the current displayed original image for test."
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "ihwk1996"
         },
-        "content": "     */"
+        "content": "     * @param previewImage"
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "-"
         },
-        "content": "    void updateCurrentOriginalImageForTest(PreviewImage previewImage);"
+        "content": "     */"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "    void updateCurrentOriginalImageForTest(PreviewImage previewImage);"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 154,
+        "author": {
+          "gitId": "ihwk1996"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 155,
         "author": {
           "gitId": "lancelotwillow"
         },
         "content": "     * update the transformationSet of the current image"
       },
       {
-        "lineNumber": 155,
+        "lineNumber": 156,
         "author": {
           "gitId": "j-lum"
         },
         "content": "     * @param transformation - transfomation to be added"
       },
       {
-        "lineNumber": 156,
+        "lineNumber": 157,
         "author": {
           "gitId": "lancelotwillow"
         },
         "content": "     */"
       },
       {
-        "lineNumber": 157,
+        "lineNumber": 158,
         "author": {
           "gitId": "j-lum"
         },
         "content": "    void addTransformation(Transformation transformation);"
       },
       {
-        "lineNumber": 158,
-        "author": {
-          "gitId": "-"
-        },
-        "content": ""
-      },
-      {
         "lineNumber": 159,
         "author": {
           "gitId": "-"
         },
-        "content": "    void addLayer(PreviewImage i, String name);"
+        "content": ""
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    void addLayer(PreviewImage i, String name);"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "-"
         },
-        "content": "    void addLayer(PreviewImage i);"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "-"
         },
-        "content": ""
+        "content": "    void addLayer(PreviewImage i);"
       },
       {
         "lineNumber": 163,
         "author": {
-          "gitId": "j-lum"
+          "gitId": "-"
         },
-        "content": "    Index removeLayer(Index i) throws IllegalOperationException;"
+        "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    Index removeLayer(Index i) throws IllegalOperationException;"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    void setCurrentLayer(Index i);"
+        "content": ""
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    void setCurrentLayer(Index i);"
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    void swapLayer(Index to, Index from) throws IllegalOperationException;"
+        "content": ""
       },
       {
         "lineNumber": 168,
         "author": {
-          "gitId": "-"
+          "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    void swapLayer(Index to, Index from) throws IllegalOperationException;"
       },
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "j-lum"
+          "gitId": "-"
         },
-        "content": "    void setCanvasSize(int height, int width);"
+        "content": ""
       },
       {
         "lineNumber": 170,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    void setCanvasSize(int height, int width);"
       },
       {
         "lineNumber": 171,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    void setBackgroundColor(String color);"
+        "content": ""
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    void setBackgroundColor(String color);"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    void setCanvasAuto(boolean auto);"
+        "content": ""
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    void setCanvasAuto(boolean auto);"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    int getCanvasHeight();"
+        "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    int getCanvasHeight();"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    int getCanvasWidth();"
+        "content": ""
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    int getCanvasWidth();"
       },
       {
         "lineNumber": 179,
+        "author": {
+          "gitId": "j-lum"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 180,
         "author": {
           "gitId": "-"
         },
         "content": "    Canvas getCanvas();"
       },
       {
-        "lineNumber": 180,
+        "lineNumber": 181,
         "author": {
           "gitId": "j-lum"
         },
         "content": ""
-      },
-      {
-        "lineNumber": 181,
-        "author": {
-          "gitId": "lancelotwillow"
-        },
-        "content": "    //void saveCanvas(String fileName) throws IOException, InterruptedException, UnsupportedPlatformException;"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": ""
+        "content": "    //void saveCanvas(String fileName) throws IOException, InterruptedException, UnsupportedPlatformException;"
       },
       {
         "lineNumber": 183,
         "author": {
-          "gitId": "j-lum"
+          "gitId": "lancelotwillow"
         },
-        "content": "    void refreshHistoryList();"
+        "content": ""
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    void refreshHistoryList();"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    void setCurrentLayerPosition(int newX, int newY);"
+        "content": ""
       },
       {
         "lineNumber": 186,
+        "author": {
+          "gitId": "j-lum"
+        },
+        "content": "    void setCurrentLayerPosition(int newX, int newY);"
+      },
+      {
+        "lineNumber": 187,
         "author": {
           "gitId": "-"
         },
@@ -31300,7 +31384,7 @@
     ],
     "authorContributionMap": {
       "lancelotwillow": 10,
-      "chivent": 25,
+      "chivent": 26,
       "ihwk1996": 31,
       "benedictcss": 34,
       "j-lum": 22,
@@ -32491,7 +32575,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public PhotoHandler getPhotoHandler() throws CommandException {"
+        "content": "    public PhotoHandler getPhotoHandler(boolean subCommand) throws CommandException {"
       },
       {
         "lineNumber": 170,
@@ -32505,1823 +32589,1844 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "            try {"
+        "content": "            if (subCommand) {"
       },
       {
         "lineNumber": 172,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                photoLibrary \u003d PhotosLibraryClientFactory.createClient();"
+        "content": "                throw new CommandException(\"You are not logged in! Please login with `login` to proceed.\");"
       },
       {
         "lineNumber": 173,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                if (photoLibrary \u003d\u003d null) {"
+        "content": "            }"
       },
       {
         "lineNumber": 174,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    throw new CommandException(MESSAGE_CONNECTION_FAILURE);"
+        "content": "            try {"
       },
       {
         "lineNumber": 175,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                }"
+        "content": "                photoLibrary \u003d PhotosLibraryClientFactory.createClient();"
       },
       {
         "lineNumber": 176,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            } catch (Exception e) {"
+        "content": "                if (photoLibrary \u003d\u003d null) {"
       },
       {
         "lineNumber": 177,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                throw new CommandException(MESSAGE_CONNECTION_FAILURE);"
+        "content": "                    throw new CommandException(MESSAGE_CONNECTION_FAILURE);"
       },
       {
         "lineNumber": 178,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            }"
+        "content": "                }"
       },
       {
         "lineNumber": 179,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "            } catch (Exception e) {"
       },
       {
         "lineNumber": 180,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        return photoLibrary;"
+        "content": "                throw new CommandException(MESSAGE_CONNECTION_FAILURE);"
       },
       {
         "lineNumber": 181,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "            }"
       },
       {
         "lineNumber": 182,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 183,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Override"
+        "content": "        return photoLibrary;"
       },
       {
         "lineNumber": 184,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public String getUserLoggedIn () throws CommandException {"
+        "content": "    }"
       },
       {
         "lineNumber": 185,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (photoLibrary \u003d\u003d null) {"
+        "content": ""
       },
       {
         "lineNumber": 186,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            return null;"
+        "content": "    @Override"
       },
       {
         "lineNumber": 187,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "    public String getUserLoggedIn () throws CommandException {"
       },
       {
         "lineNumber": 188,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        return getPhotoHandler().identifyUser();"
+        "content": "        if (photoLibrary \u003d\u003d null) {"
       },
       {
         "lineNumber": 189,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "            return null;"
       },
       {
         "lineNumber": 190,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 191,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Override"
+        "content": "        return getPhotoHandler(false).identifyUser();"
       },
       {
         "lineNumber": 192,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public void setUpForGoogle(boolean isTest) {"
+        "content": "    }"
       },
       {
         "lineNumber": 193,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        if (isTest) {"
+        "content": ""
       },
       {
         "lineNumber": 194,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            FileUtil.createDirectoriesIfMissing(DATA_STORE);"
+        "content": "    @Override"
       },
       {
         "lineNumber": 195,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            try {"
+        "content": "    public void setUpForGoogle(boolean isTest) {"
       },
       {
         "lineNumber": 196,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                FileUtil.createIfMissing(TEST_FILE);"
+        "content": "        if (isTest) {"
       },
       {
         "lineNumber": 197,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            } catch (Exception e) {"
+        "content": "            FileUtil.createDirectoriesIfMissing(DATA_STORE);"
       },
       {
         "lineNumber": 198,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                e.printStackTrace();"
+        "content": "            try {"
       },
       {
         "lineNumber": 199,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            }"
+        "content": "                FileUtil.createIfMissing(TEST_FILE);"
       },
       {
         "lineNumber": 200,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        } else {"
+        "content": "            } catch (Exception e) {"
       },
       {
         "lineNumber": 201,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            FileUtil.deleteIfAvaliable(TEST_FILE);"
+        "content": "                e.printStackTrace();"
       },
       {
         "lineNumber": 202,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            if (!BLOCKER.exists()) {"
+        "content": "            }"
       },
       {
         "lineNumber": 203,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                try {"
+        "content": "        } else {"
       },
       {
         "lineNumber": 204,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    photoLibrary \u003d PhotosLibraryClientFactory.loginUserIfPossible();"
+        "content": "            FileUtil.deleteIfAvaliable(TEST_FILE);"
       },
       {
         "lineNumber": 205,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                } catch (Exception e) {"
+        "content": "            if (!BLOCKER.exists()) {"
       },
       {
         "lineNumber": 206,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                    logger.warning(\"Unable to log into user account\");"
+        "content": "                try {"
       },
       {
         "lineNumber": 207,
         "author": {
           "gitId": "chivent"
         },
-        "content": "                }"
+        "content": "                    photoLibrary \u003d PhotosLibraryClientFactory.loginUserIfPossible();"
       },
       {
         "lineNumber": 208,
         "author": {
           "gitId": "chivent"
         },
-        "content": "            }"
+        "content": "                } catch (Exception e) {"
       },
       {
         "lineNumber": 209,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        }"
+        "content": "                    logger.warning(\"Unable to log into user account\");"
       },
       {
         "lineNumber": 210,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "                }"
       },
       {
         "lineNumber": 211,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "            }"
       },
       {
         "lineNumber": 212,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Undo/Redo \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": "        }"
       },
       {
         "lineNumber": 213,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "chivent"
         },
-        "content": "    // @@author ihwk1996"
+        "content": "    }"
       },
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "chivent"
         },
-        "content": "    @Override"
+        "content": ""
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "ihwk1996"
+          "gitId": "chivent"
         },
-        "content": "    public boolean canUndoPreviewImage() {"
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Undo/Redo \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 216,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        return getCurrentPreviewImage().canUndo();"
+        "content": "    // @@author ihwk1996"
       },
       {
         "lineNumber": 217,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 218,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "    public boolean canUndoPreviewImage() {"
       },
       {
         "lineNumber": 219,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    @Override"
+        "content": "        return getCurrentPreviewImage().canUndo();"
       },
       {
         "lineNumber": 220,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    public boolean canRedoPreviewImage() {"
+        "content": "    }"
       },
       {
         "lineNumber": 221,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        return getCurrentPreviewImage().canRedo();"
+        "content": ""
       },
       {
         "lineNumber": 222,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 223,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "    public boolean canRedoPreviewImage() {"
       },
       {
         "lineNumber": 224,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    @Override"
+        "content": "        return getCurrentPreviewImage().canRedo();"
       },
       {
         "lineNumber": 225,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    public void undoPreviewImage() {"
+        "content": "    }"
       },
       {
         "lineNumber": 226,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        getCurrentPreviewImage().undo();"
+        "content": ""
       },
       {
         "lineNumber": 227,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        refreshHistoryList();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 228,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    public void undoPreviewImage() {"
       },
       {
         "lineNumber": 229,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "        getCurrentPreviewImage().undo();"
       },
       {
         "lineNumber": 230,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    @Override"
+        "content": "        refreshHistoryList();"
       },
       {
         "lineNumber": 231,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    public void redoPreviewImage() {"
+        "content": "    }"
       },
       {
         "lineNumber": 232,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        getCurrentPreviewImage().redo();"
+        "content": ""
       },
       {
         "lineNumber": 233,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        refreshHistoryList();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 234,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    public void redoPreviewImage() {"
       },
       {
         "lineNumber": 235,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "        getCurrentPreviewImage().redo();"
       },
       {
         "lineNumber": 236,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    @Override"
+        "content": "        refreshHistoryList();"
       },
       {
         "lineNumber": 237,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    public void undoAllPreviewImage() {"
+        "content": "    }"
       },
       {
         "lineNumber": 238,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        getCurrentPreviewImage().undoAll();"
+        "content": ""
       },
       {
         "lineNumber": 239,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        refreshHistoryList();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 240,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    public void undoAllPreviewImage() {"
       },
       {
         "lineNumber": 241,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "        getCurrentPreviewImage().undoAll();"
       },
       {
         "lineNumber": 242,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    @Override"
+        "content": "        refreshHistoryList();"
       },
       {
         "lineNumber": 243,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    public void redoAllPreviewImage() {"
+        "content": "    }"
       },
       {
         "lineNumber": 244,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        getCurrentPreviewImage().redoAll();"
+        "content": ""
       },
       {
         "lineNumber": 245,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        refreshHistoryList();"
+        "content": "    @Override"
       },
       {
         "lineNumber": 246,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    public void redoAllPreviewImage() {"
       },
       {
         "lineNumber": 247,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "        getCurrentPreviewImage().redoAll();"
       },
       {
         "lineNumber": 248,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d get/updating preview image \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": "        refreshHistoryList();"
       },
       {
         "lineNumber": 249,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 250,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 251,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     * Adds a transformation to current layer"
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d get/updating preview image \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 252,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     * @param transformation transformation to add"
+        "content": ""
       },
       {
         "lineNumber": 253,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 254,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    public void addTransformation(Transformation transformation) {"
+        "content": "     * Adds a transformation to current layer"
       },
       {
         "lineNumber": 255,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        canvas.getCurrentLayer().addTransformation(transformation);"
+        "content": "     * @param transformation transformation to add"
       },
       {
         "lineNumber": 256,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        refreshHistoryList();"
+        "content": "     */"
       },
       {
         "lineNumber": 257,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    public void addTransformation(Transformation transformation) {"
       },
       {
         "lineNumber": 258,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "        canvas.getCurrentLayer().addTransformation(transformation);"
       },
       {
         "lineNumber": 259,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    @Override"
+        "content": "        refreshHistoryList();"
       },
       {
         "lineNumber": 260,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    public PreviewImage getCurrentPreviewImage() {"
+        "content": "    }"
       },
       {
         "lineNumber": 261,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        return canvas.getCurrentLayer().getImage();"
+        "content": ""
       },
       {
         "lineNumber": 262,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 263,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "    public PreviewImage getCurrentPreviewImage() {"
       },
       {
         "lineNumber": 264,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    @Override"
+        "content": "        return canvas.getCurrentLayer().getImage();"
       },
       {
         "lineNumber": 265,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    public Path getCurrentPreviewImagePath() {"
+        "content": "    }"
       },
       {
         "lineNumber": 266,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "        return getCurrentPreviewImage().getCurrentPath();"
+        "content": ""
       },
       {
         "lineNumber": 267,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 268,
         "author": {
           "gitId": "ihwk1996"
         },
-        "content": ""
+        "content": "    public Path getCurrentPreviewImagePath() {"
       },
       {
         "lineNumber": 269,
         "author": {
-          "gitId": "lancelotwillow"
+          "gitId": "ihwk1996"
         },
-        "content": "    //@@author lancelotwillow"
+        "content": "        return getCurrentPreviewImage().getCurrentPath();"
       },
       {
         "lineNumber": 270,
         "author": {
-          "gitId": "lancelotwillow"
+          "gitId": "ihwk1996"
         },
-        "content": "    @Override"
+        "content": "    }"
       },
       {
         "lineNumber": 271,
         "author": {
-          "gitId": "lancelotwillow"
+          "gitId": "ihwk1996"
         },
-        "content": "    public void updateCurrentPreviewImage(BufferedImage image) {"
+        "content": ""
       },
       {
         "lineNumber": 272,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "        try {"
+        "content": "    //@@author lancelotwillow"
       },
       {
         "lineNumber": 273,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "            canvas.getCurrentLayer().getImage().commit(image);"
+        "content": "    @Override"
       },
       {
         "lineNumber": 274,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "            refreshHistoryList();"
+        "content": "    public void updateCurrentPreviewImage(BufferedImage image) {"
       },
       {
         "lineNumber": 275,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "        } catch (Exception e) {"
+        "content": "        try {"
       },
       {
         "lineNumber": 276,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "            logger.severe(e.getMessage());"
+        "content": "            canvas.getCurrentLayer().getImage().commit(image);"
       },
       {
         "lineNumber": 277,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "        }"
+        "content": "            refreshHistoryList();"
       },
       {
         "lineNumber": 278,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "    }"
+        "content": "        } catch (Exception e) {"
       },
       {
         "lineNumber": 279,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Update UserPrefs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": "            logger.severe(e.getMessage());"
       },
       {
         "lineNumber": 280,
         "author": {
           "gitId": "lancelotwillow"
         },
-        "content": ""
+        "content": "        }"
       },
       {
         "lineNumber": 281,
         "author": {
-          "gitId": "benedictcss"
+          "gitId": "lancelotwillow"
         },
-        "content": "    // @@author benedictcss"
+        "content": "    }"
       },
       {
         "lineNumber": 282,
         "author": {
-          "gitId": "benedictcss"
+          "gitId": "lancelotwillow"
         },
-        "content": "    @Override"
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Update UserPrefs \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
       },
       {
         "lineNumber": 283,
         "author": {
-          "gitId": "benedictcss"
+          "gitId": "lancelotwillow"
         },
-        "content": "    public void updateCurrDirectory(Path newCurrDirectory) {"
+        "content": ""
       },
       {
         "lineNumber": 284,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "        this.userPrefs.updateUserPrefs(newCurrDirectory);"
+        "content": "    // @@author benedictcss"
       },
       {
         "lineNumber": 285,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "        EventsCenter.getInstance().post(new ChangeDirectoryEvent(getCurrDirectory().toString()));"
+        "content": "    @Override"
       },
       {
         "lineNumber": 286,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "        EventsCenter.getInstance().post(new UpdateFilmReelEvent(getDirectoryImageList()));"
+        "content": "    public void updateCurrDirectory(Path newCurrDirectory) {"
       },
       {
         "lineNumber": 287,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    }"
+        "content": "        this.userPrefs.updateUserPrefs(newCurrDirectory);"
       },
       {
         "lineNumber": 288,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": ""
+        "content": "        EventsCenter.getInstance().post(new ChangeDirectoryEvent(getCurrDirectory().toString()));"
       },
       {
         "lineNumber": 289,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    @Override"
+        "content": "        EventsCenter.getInstance().post(new UpdateFilmReelEvent(getDirectoryImageList()));"
       },
       {
         "lineNumber": 290,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    public Path getCurrDirectory() {"
+        "content": "    }"
       },
       {
         "lineNumber": 291,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "        return this.userPrefs.getCurrDirectory();"
+        "content": ""
       },
       {
         "lineNumber": 292,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    }"
+        "content": "    @Override"
       },
       {
         "lineNumber": 293,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": ""
+        "content": "    public Path getCurrDirectory() {"
       },
       {
         "lineNumber": 294,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Canvas and layers \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+        "content": "        return this.userPrefs.getCurrDirectory();"
       },
       {
         "lineNumber": 295,
         "author": {
           "gitId": "benedictcss"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 296,
         "author": {
-          "gitId": "j-lum"
-        },
-        "content": "    //@@author j-lum"
-      },
-      {
-        "lineNumber": 297,
-        "author": {
-          "gitId": "j-lum"
+          "gitId": "benedictcss"
         },
         "content": ""
       },
       {
+        "lineNumber": 297,
+        "author": {
+          "gitId": "benedictcss"
+        },
+        "content": "    //\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d Canvas and layers \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+      },
+      {
         "lineNumber": 298,
         "author": {
-          "gitId": "j-lum"
+          "gitId": "benedictcss"
         },
-        "content": "    /**"
+        "content": ""
       },
       {
         "lineNumber": 299,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Sets the background color of the canvas to the provided color."
+        "content": "    //@@author j-lum"
       },
       {
         "lineNumber": 300,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param color - valid color string in either hex, rgb/hsl(a) or none."
+        "content": ""
       },
       {
         "lineNumber": 301,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 302,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void setBackgroundColor(String color) {"
+        "content": "     * Sets the background color of the canvas to the provided color."
       },
       {
         "lineNumber": 303,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.setBackgroundColor(color);"
+        "content": "     * @param color - valid color string in either hex, rgb/hsl(a) or none."
       },
       {
         "lineNumber": 304,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 305,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    public void setBackgroundColor(String color) {"
       },
       {
         "lineNumber": 306,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        canvas.setBackgroundColor(color);"
       },
       {
         "lineNumber": 307,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Sets the canvas size to the new size provided."
+        "content": "    }"
       },
       {
         "lineNumber": 308,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param height - a integer larger than 0."
+        "content": ""
       },
       {
         "lineNumber": 309,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param width - a integer larger than 0."
+        "content": "    /**"
       },
       {
         "lineNumber": 310,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": "     * Sets the canvas size to the new size provided."
       },
       {
         "lineNumber": 311,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void setCanvasSize(int height, int width) {"
+        "content": "     * @param height - a integer larger than 0."
       },
       {
         "lineNumber": 312,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.setHeight(height);"
+        "content": "     * @param width - a integer larger than 0."
       },
       {
         "lineNumber": 313,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.setWidth(width);"
+        "content": "     */"
       },
       {
         "lineNumber": 314,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "    public void setCanvasSize(int height, int width) {"
       },
       {
         "lineNumber": 315,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        canvas.setHeight(height);"
       },
       {
         "lineNumber": 316,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        canvas.setWidth(width);"
       },
       {
         "lineNumber": 317,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Turns auto-resizing of the canvas on/off."
+        "content": "    }"
       },
       {
         "lineNumber": 318,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param auto - if true, the canvas auto-resizes."
+        "content": ""
       },
       {
         "lineNumber": 319,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 320,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void setCanvasAuto(boolean auto) {"
+        "content": "     * Turns auto-resizing of the canvas on/off."
       },
       {
         "lineNumber": 321,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.setCanvasAuto(auto);"
+        "content": "     * @param auto - if true, the canvas auto-resizes."
       },
       {
         "lineNumber": 322,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 323,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    public void setCanvasAuto(boolean auto) {"
       },
       {
         "lineNumber": 324,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        canvas.setCanvasAuto(auto);"
       },
       {
         "lineNumber": 325,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @return the height of the canvas."
+        "content": "    }"
       },
       {
         "lineNumber": 326,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 327,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public int getCanvasHeight() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 328,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        return canvas.getHeight();"
+        "content": "     * @return the height of the canvas."
       },
       {
         "lineNumber": 329,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 330,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    public int getCanvasHeight() {"
       },
       {
         "lineNumber": 331,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        return canvas.getHeight();"
       },
       {
         "lineNumber": 332,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @return the width of the canvas."
+        "content": "    }"
       },
       {
         "lineNumber": 333,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 334,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public int getCanvasWidth() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 335,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        return canvas.getWidth();"
+        "content": "     * @return the width of the canvas."
       },
       {
         "lineNumber": 336,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "     */"
       },
       {
         "lineNumber": 337,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    public int getCanvasWidth() {"
       },
       {
         "lineNumber": 338,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        return canvas.getWidth();"
       },
       {
         "lineNumber": 339,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Adds a layer to the canvas, a name is generated automatically."
+        "content": "    }"
       },
       {
         "lineNumber": 340,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param i - PreviewImage to add."
+        "content": ""
       },
       {
         "lineNumber": 341,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": "    /**"
       },
       {
         "lineNumber": 342,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void addLayer(PreviewImage i) {"
+        "content": "     * Adds a layer to the canvas, a name is generated automatically."
       },
       {
         "lineNumber": 343,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.addLayer(i);"
+        "content": "     * @param i - PreviewImage to add."
       },
       {
         "lineNumber": 344,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        refreshLayerList();"
+        "content": "     */"
       },
       {
         "lineNumber": 345,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "    public void addLayer(PreviewImage i) {"
       },
       {
         "lineNumber": 346,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        canvas.addLayer(i);"
       },
       {
         "lineNumber": 347,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        refreshLayerList();"
       },
       {
         "lineNumber": 348,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Overloads the addLayer function to handle an optional name."
+        "content": "    }"
       },
       {
         "lineNumber": 349,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param i - PreviewImage to add"
+        "content": ""
       },
       {
         "lineNumber": 350,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param name - Name of the new layer."
+        "content": "    /**"
       },
       {
         "lineNumber": 351,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": "     * Overloads the addLayer function to handle an optional name."
       },
       {
         "lineNumber": 352,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void addLayer(PreviewImage i, String name) {"
+        "content": "     * @param i - PreviewImage to add"
       },
       {
         "lineNumber": 353,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.addLayer(i, name);"
+        "content": "     * @param name - Name of the new layer."
       },
       {
         "lineNumber": 354,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        refreshLayerList();"
+        "content": "     */"
       },
       {
         "lineNumber": 355,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "    public void addLayer(PreviewImage i, String name) {"
       },
       {
         "lineNumber": 356,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        canvas.addLayer(i, name);"
       },
       {
         "lineNumber": 357,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        refreshLayerList();"
       },
       {
         "lineNumber": 358,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Removes the layer at the given index."
+        "content": "    }"
       },
       {
         "lineNumber": 359,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param i - Index of the layer to remove."
+        "content": ""
       },
       {
         "lineNumber": 360,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @return the new index of the current layer."
+        "content": "    /**"
       },
       {
         "lineNumber": 361,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @throws IllegalOperationException - thrown if the current layer is being removed"
+        "content": "     * Removes the layer at the given index."
       },
       {
         "lineNumber": 362,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * or the only layer is being removed."
+        "content": "     * @param i - Index of the layer to remove."
       },
       {
         "lineNumber": 363,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": "     * @return the new index of the current layer."
       },
       {
         "lineNumber": 364,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "     * @throws IllegalOperationException - thrown if the current layer is being removed"
       },
       {
         "lineNumber": 365,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public Index removeLayer(Index i) throws IllegalOperationException {"
+        "content": "     * or the only layer is being removed."
       },
       {
         "lineNumber": 366,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        Index tmp \u003d canvas.removeLayer(i);"
+        "content": "     */"
       },
       {
         "lineNumber": 367,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        refreshLayerList();"
+        "content": ""
       },
       {
         "lineNumber": 368,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        return tmp;"
+        "content": "    public Index removeLayer(Index i) throws IllegalOperationException {"
       },
       {
         "lineNumber": 369,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "        Index tmp \u003d canvas.removeLayer(i);"
       },
       {
         "lineNumber": 370,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        refreshLayerList();"
       },
       {
         "lineNumber": 371,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public Canvas getCanvas() {"
+        "content": "        return tmp;"
       },
       {
         "lineNumber": 372,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        return canvas;"
+        "content": "    }"
       },
       {
         "lineNumber": 373,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 374,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    public Canvas getCanvas() {"
       },
       {
         "lineNumber": 375,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void setCurrentLayer(Index i) {"
+        "content": "        return canvas;"
       },
       {
         "lineNumber": 376,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.setCurrentLayer(i);"
+        "content": "    }"
       },
       {
         "lineNumber": 377,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        refreshLayerList();"
+        "content": ""
       },
       {
         "lineNumber": 378,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "    public void setCurrentLayer(Index i) {"
       },
       {
         "lineNumber": 379,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        canvas.setCurrentLayer(i);"
       },
       {
         "lineNumber": 380,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void setCurrentLayerPosition(int x, int y) {"
+        "content": "        refreshLayerList();"
       },
       {
         "lineNumber": 381,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.setCurrentLayerPosition(x, y);"
+        "content": "    }"
       },
       {
         "lineNumber": 382,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": ""
       },
       {
         "lineNumber": 383,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    public void setCurrentLayerPosition(int x, int y) {"
       },
       {
         "lineNumber": 384,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        canvas.setCurrentLayerPosition(x, y);"
       },
       {
         "lineNumber": 385,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Swaps two layers."
+        "content": "    }"
       },
       {
         "lineNumber": 386,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param to - Layer 1"
+        "content": ""
       },
       {
         "lineNumber": 387,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @param from - Layer 2."
+        "content": "    /**"
       },
       {
         "lineNumber": 388,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * @throws IllegalOperationException - thrown when the two layers are the same."
+        "content": "     * Swaps two layers."
       },
       {
         "lineNumber": 389,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": "     * @param to - Layer 1"
       },
       {
         "lineNumber": 390,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void swapLayer(Index to, Index from) throws IllegalOperationException {"
+        "content": "     * @param from - Layer 2."
       },
       {
         "lineNumber": 391,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        canvas.swapLayer(to, from);"
+        "content": "     * @throws IllegalOperationException - thrown when the two layers are the same."
       },
       {
         "lineNumber": 392,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        refreshLayerList();"
+        "content": "     */"
       },
       {
         "lineNumber": 393,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "    public void swapLayer(Index to, Index from) throws IllegalOperationException {"
       },
       {
         "lineNumber": 394,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        canvas.swapLayer(to, from);"
       },
       {
         "lineNumber": 395,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "        refreshLayerList();"
       },
       {
         "lineNumber": 396,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Simple utility function that updates the HistoryListPanel and logs the event."
+        "content": "    }"
       },
       {
         "lineNumber": 397,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 398,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public void refreshHistoryList() {"
+        "content": "    /**"
       },
       {
         "lineNumber": 399,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        EventsCenter.getInstance().post("
+        "content": "     * Simple utility function that updates the HistoryListPanel and logs the event."
       },
       {
         "lineNumber": 400,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "                new HistoryUpdateEvent("
+        "content": "     */"
       },
       {
         "lineNumber": 401,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "                        canvas.getCurrentLayer().getImage().getTransformationsAsString()));"
+        "content": "    public void refreshHistoryList() {"
       },
       {
         "lineNumber": 402,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "        EventsCenter.getInstance().post("
       },
       {
         "lineNumber": 403,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "                new HistoryUpdateEvent("
       },
       {
         "lineNumber": 404,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    /**"
+        "content": "                        canvas.getCurrentLayer().getImage().getTransformationsAsString()));"
       },
       {
         "lineNumber": 405,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     * Simple utility function that updates the LayerListPanel and logs the event."
+        "content": "    }"
       },
       {
         "lineNumber": 406,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "     */"
+        "content": ""
       },
       {
         "lineNumber": 407,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "    /**"
       },
       {
         "lineNumber": 408,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    private void refreshLayerList() {"
+        "content": "     * Simple utility function that updates the LayerListPanel and logs the event."
       },
       {
         "lineNumber": 409,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        EventsCenter.getInstance().post("
+        "content": "     */"
       },
       {
         "lineNumber": 410,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "                new LayerUpdateEvent("
+        "content": ""
       },
       {
         "lineNumber": 411,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "                        canvas.getLayerNames(), canvas.getCurrentLayerIndex()));"
+        "content": "    private void refreshLayerList() {"
       },
       {
         "lineNumber": 412,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "        EventsCenter.getInstance().post("
       },
       {
         "lineNumber": 413,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "                new LayerUpdateEvent("
       },
       {
         "lineNumber": 414,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    @Override"
+        "content": "                        canvas.getLayerNames(), canvas.getCurrentLayerIndex()));"
       },
       {
         "lineNumber": 415,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    public boolean equals(Object obj) {"
+        "content": "    }"
       },
       {
         "lineNumber": 416,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        // short circuit if same object"
+        "content": ""
       },
       {
         "lineNumber": 417,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        if (obj \u003d\u003d this) {"
+        "content": "    @Override"
       },
       {
         "lineNumber": 418,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "            return true;"
+        "content": "    public boolean equals(Object obj) {"
       },
       {
         "lineNumber": 419,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        }"
+        "content": "        // short circuit if same object"
       },
       {
         "lineNumber": 420,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        if (obj \u003d\u003d this) {"
       },
       {
         "lineNumber": 421,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        // instanceof handles nulls"
+        "content": "            return true;"
       },
       {
         "lineNumber": 422,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        if (!(obj instanceof ModelManager)) {"
+        "content": "        }"
       },
       {
         "lineNumber": 423,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "            return false;"
+        "content": ""
       },
       {
         "lineNumber": 424,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        }"
+        "content": "        // instanceof handles nulls"
       },
       {
         "lineNumber": 425,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        if (!(obj instanceof ModelManager)) {"
       },
       {
         "lineNumber": 426,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        // state check"
+        "content": "            return false;"
       },
       {
         "lineNumber": 427,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        ModelManager other \u003d (ModelManager) obj;"
+        "content": "        }"
       },
       {
         "lineNumber": 428,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "        return userPrefs.equals(other.userPrefs);"
+        "content": ""
       },
       {
         "lineNumber": 429,
         "author": {
           "gitId": "j-lum"
         },
-        "content": "    }"
+        "content": "        // state check"
       },
       {
         "lineNumber": 430,
         "author": {
           "gitId": "j-lum"
         },
-        "content": ""
+        "content": "        ModelManager other \u003d (ModelManager) obj;"
       },
       {
         "lineNumber": 431,
+        "author": {
+          "gitId": "j-lum"
+        },
+        "content": "        return userPrefs.equals(other.userPrefs);"
+      },
+      {
+        "lineNumber": 432,
+        "author": {
+          "gitId": "j-lum"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 433,
+        "author": {
+          "gitId": "j-lum"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 434,
         "author": {
           "gitId": "j-lum"
         },
@@ -34330,7 +34435,7 @@
     ],
     "authorContributionMap": {
       "lancelotwillow": 13,
-      "chivent": 69,
+      "chivent": 72,
       "ihwk1996": 59,
       "benedictcss": 122,
       "j-lum": 138,
@@ -67099,7 +67204,7 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String msg \u003d GoogleLsCommand.FAILURE_MESSAGE + \"\\n\\n\" + GoogleLsCommand.MESSAGE_USAGE;"
+        "content": "        String msg \u003d \"You are not logged in! Please login with `login` to proceed.\";"
       },
       {
         "lineNumber": 37,
@@ -67288,752 +67393,766 @@
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test all from directory"
+        "content": "        msg \u003d \"You are not logged in! Please login with `login` to proceed.\";"
       },
       {
         "lineNumber": 64,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleUploadCommand(\"all\");"
+        "content": "        //test all from directory"
       },
       {
         "lineNumber": 65,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"all\"));"
+        "content": "        command \u003d new GoogleUploadCommand(\"all\");"
       },
       {
         "lineNumber": 66,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"all\"));"
       },
       {
         "lineNumber": 67,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test image"
+        "content": ""
       },
       {
         "lineNumber": 68,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleUploadCommand(\"\u003cimageName\u003e\");"
+        "content": "        //test image"
       },
       {
         "lineNumber": 69,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"imageName\"));"
+        "content": "        command \u003d new GoogleUploadCommand(\"\u003cimageName\u003e\");"
       },
       {
         "lineNumber": 70,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"imageName\"));"
       },
       {
         "lineNumber": 71,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test invalid"
+        "content": ""
       },
       {
         "lineNumber": 72,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleUploadCommand(\"invalid\");"
+        "content": "        //test invalid"
       },
       {
         "lineNumber": 73,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"nvali\"));"
+        "content": "        command \u003d new GoogleUploadCommand(\"invalid\");"
       },
       {
         "lineNumber": 74,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"nvali\"));"
       },
       {
         "lineNumber": 75,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 76,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 77,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public void testUploadMessageParsing() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 78,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        GoogleUploadCommand command;"
+        "content": "    public void testUploadMessageParsing() {"
       },
       {
         "lineNumber": 79,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String message;"
+        "content": "        GoogleUploadCommand command;"
       },
       {
         "lineNumber": 80,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String expectedMessage;"
+        "content": "        String message;"
       },
       {
         "lineNumber": 81,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        String expectedMessage;"
       },
       {
         "lineNumber": 82,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //All duplicates"
+        "content": ""
       },
       {
         "lineNumber": 83,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleUploadCommand(\"all\");"
+        "content": "        //All duplicates"
       },
       {
         "lineNumber": 84,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        message \u003d command.returnUploadMessage(\"\").feedbackToUser;"
+        "content": "        command \u003d new GoogleUploadCommand(\"all\");"
       },
       {
         "lineNumber": 85,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        expectedMessage \u003d String.format(MESSAGE_ALL_DUPLICATE, \"All images in directory\");"
+        "content": "        message \u003d command.returnUploadMessage(\"\").feedbackToUser;"
       },
       {
         "lineNumber": 86,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertEquals(expectedMessage, message);"
+        "content": "        expectedMessage \u003d String.format(MESSAGE_ALL_DUPLICATE, \"All images in directory\");"
       },
       {
         "lineNumber": 87,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertEquals(expectedMessage, message);"
       },
       {
         "lineNumber": 88,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //Some duplicates"
+        "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleUploadCommand(\"all\");"
+        "content": "        //Some duplicates"
       },
       {
         "lineNumber": 90,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        message \u003d command.returnUploadMessage(mockMessage).feedbackToUser;"
+        "content": "        command \u003d new GoogleUploadCommand(\"all\");"
       },
       {
         "lineNumber": 91,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        expectedMessage \u003d String.format(MESSAGE_DUPLICATE, mockMessage);"
+        "content": "        message \u003d command.returnUploadMessage(mockMessage).feedbackToUser;"
       },
       {
         "lineNumber": 92,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertEquals(expectedMessage, message);"
+        "content": "        expectedMessage \u003d String.format(MESSAGE_DUPLICATE, mockMessage);"
       },
       {
         "lineNumber": 93,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertEquals(expectedMessage, message);"
       },
       {
         "lineNumber": 94,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //No duplicates"
+        "content": ""
       },
       {
         "lineNumber": 95,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleUploadCommand(\"all\");"
+        "content": "        //No duplicates"
       },
       {
         "lineNumber": 96,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        message \u003d command.returnUploadMessage(\".all\" + mockMessage).feedbackToUser;"
+        "content": "        command \u003d new GoogleUploadCommand(\"all\");"
       },
       {
         "lineNumber": 97,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        expectedMessage \u003d String.format(MESSAGE_SUCCESS, mockMessage);"
+        "content": "        message \u003d command.returnUploadMessage(\".all\" + mockMessage).feedbackToUser;"
       },
       {
         "lineNumber": 98,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertEquals(expectedMessage, message);"
+        "content": "        expectedMessage \u003d String.format(MESSAGE_SUCCESS, mockMessage);"
       },
       {
         "lineNumber": 99,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        assertEquals(expectedMessage, message);"
       },
       {
         "lineNumber": 100,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "    }"
       },
       {
         "lineNumber": 101,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Test"
+        "content": ""
       },
       {
         "lineNumber": 102,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public void testGoogleDownloadParsing() {"
+        "content": "    @Test"
       },
       {
         "lineNumber": 103,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        GoogleDlCommand command;"
+        "content": "    public void testGoogleDownloadParsing() {"
       },
       {
         "lineNumber": 104,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String msg \u003d GoogleDlCommand.MESSAGE_FAILURE + \"\\n\\n\" + GoogleDlCommand.MESSAGE_USAGE;"
+        "content": "        GoogleDlCommand command;"
       },
       {
         "lineNumber": 105,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        String msg \u003d GoogleDlCommand.MESSAGE_FAILURE + \"\\n\\n\" + GoogleDlCommand.MESSAGE_USAGE;"
       },
       {
         "lineNumber": 106,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test invalid"
+        "content": ""
       },
       {
         "lineNumber": 107,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"\u003c\");"
+        "content": "        //test invalid"
       },
       {
         "lineNumber": 108,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"\u003c\"));"
+        "content": "        command \u003d new GoogleDlCommand(\"\u003c\");"
       },
       {
         "lineNumber": 109,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"\u003c\"));"
       },
       {
         "lineNumber": 110,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test from invalid image, invalid album"
+        "content": ""
       },
       {
         "lineNumber": 111,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAl /i\u003cIm\");"
+        "content": "        //test from invalid image, invalid album"
       },
       {
         "lineNumber": 112,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"I\"));"
+        "content": "        msg \u003d \"You are not logged in! Please login with `login` to proceed.\";"
       },
       {
         "lineNumber": 113,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAl /i\u003cIm\");"
       },
       {
         "lineNumber": 114,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test from valid image, invalid album"
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"I\"));"
       },
       {
         "lineNumber": 115,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAlbu /i\u003cImage\u003e\");"
+        "content": ""
       },
       {
         "lineNumber": 116,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Image\"));"
+        "content": "        //test from valid image, invalid album"
       },
       {
         "lineNumber": 117,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAlbu /i\u003cImage\u003e\");"
       },
       {
         "lineNumber": 118,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test from invalid image, valid album"
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Image\"));"
       },
       {
         "lineNumber": 119,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAlbum\u003e /i\u003cI\");"
+        "content": ""
       },
       {
         "lineNumber": 120,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"/a\u003cAlbum\u003e /i\u003cI\"));"
+        "content": "        //test from invalid image, valid album"
       },
       {
         "lineNumber": 121,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAlbum\u003e /i\u003cI\");"
       },
       {
         "lineNumber": 122,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test from image of album"
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"/a\u003cAlbum\u003e /i\u003cI\"));"
       },
       {
         "lineNumber": 123,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAlbum\u003e /i\u003cImage\u003e\");"
+        "content": ""
       },
       {
         "lineNumber": 124,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Image\"));"
+        "content": "        //test from image of album"
       },
       {
         "lineNumber": 125,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAlbum\u003e /i\u003cImage\u003e\");"
       },
       {
         "lineNumber": 126,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test image"
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Image\"));"
       },
       {
         "lineNumber": 127,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"/i\u003cimageName\u003e\");"
+        "content": ""
       },
       {
         "lineNumber": 128,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"imageName\"));"
+        "content": "        //test image"
       },
       {
         "lineNumber": 129,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        command \u003d new GoogleDlCommand(\"/i\u003cimageName\u003e\");"
       },
       {
         "lineNumber": 130,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test invalid image"
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"imageName\"));"
       },
       {
         "lineNumber": 131,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"/i\u003cInvalid\");"
+        "content": ""
       },
       {
         "lineNumber": 132,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Invali\"));"
+        "content": "        //test invalid image"
       },
       {
         "lineNumber": 133,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        command \u003d new GoogleDlCommand(\"/i\u003cInvalid\");"
       },
       {
         "lineNumber": 134,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test album"
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Invali\"));"
       },
       {
         "lineNumber": 135,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAlbum\u003e\");"
+        "content": ""
       },
       {
         "lineNumber": 136,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Album\"));"
+        "content": "        //test album"
       },
       {
         "lineNumber": 137,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cAlbum\u003e\");"
       },
       {
         "lineNumber": 138,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        //test invalid album"
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Album\"));"
       },
       {
         "lineNumber": 139,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cInvalid\");"
+        "content": ""
       },
       {
         "lineNumber": 140,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Invali\"));"
+        "content": "        //test invalid album"
       },
       {
         "lineNumber": 141,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        command \u003d new GoogleDlCommand(\"/a\u003cInvalid\");"
       },
       {
         "lineNumber": 142,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertCommandFailure(command, model, commandHistory, String.format(msg, \"Invali\"));"
       },
       {
         "lineNumber": 143,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 144,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public void testGoogleRefreshFailure() {"
+        "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        GoogleRefreshCommand command;"
+        "content": "    @Test"
       },
       {
         "lineNumber": 146,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        String msg \u003d GoogleRefreshCommand.FAILURE_MESSAGE + \"\\n\\n\" + GoogleRefreshCommand.MESSAGE_USAGE;"
+        "content": "    public void testGoogleRefreshFailure() {"
       },
       {
         "lineNumber": 147,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        GoogleRefreshCommand command;"
       },
       {
         "lineNumber": 148,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        command \u003d new GoogleRefreshCommand();"
+        "content": "        String msg \u003d \"You are not logged in! Please login with `login` to proceed.\";"
       },
       {
         "lineNumber": 149,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertCommandFailure(command, model, commandHistory, msg);"
+        "content": ""
       },
       {
         "lineNumber": 150,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        command \u003d new GoogleRefreshCommand();"
       },
       {
         "lineNumber": 151,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertCommandFailure(command, model, commandHistory, msg);"
       },
       {
         "lineNumber": 152,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    @Test"
+        "content": "    }"
       },
       {
         "lineNumber": 153,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    public void testGoogleEquals() {"
+        "content": ""
       },
       {
         "lineNumber": 154,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        GoogleCommand testCommand \u003d new GoogleLsCommand(\"test\");"
+        "content": "    @Test"
       },
       {
         "lineNumber": 155,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertEquals(testCommand, testCommand);"
+        "content": "    public void testGoogleEquals() {"
       },
       {
         "lineNumber": 156,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertEquals(testCommand, new GoogleLsCommand(\"test\"));"
+        "content": "        GoogleCommand testCommand \u003d new GoogleLsCommand(\"test\");"
       },
       {
         "lineNumber": 157,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertNotEquals(testCommand, new GoogleLsCommand(\"fail\"));"
+        "content": "        assertEquals(testCommand, testCommand);"
       },
       {
         "lineNumber": 158,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertNotEquals(testCommand, new GoogleUploadCommand(\"fail\"));"
+        "content": "        assertEquals(testCommand, new GoogleLsCommand(\"test\"));"
       },
       {
         "lineNumber": 159,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertNotEquals(testCommand, new GoogleLsCommand(\"fail\"));"
       },
       {
         "lineNumber": 160,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        testCommand \u003d new GoogleDlCommand(\"test\");"
+        "content": "        assertNotEquals(testCommand, new GoogleUploadCommand(\"fail\"));"
       },
       {
         "lineNumber": 161,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertEquals(testCommand, testCommand);"
+        "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertNotEquals(testCommand, new GoogleDlCommand(\"fail\"));"
+        "content": "        testCommand \u003d new GoogleDlCommand(\"test\");"
       },
       {
         "lineNumber": 163,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertNotEquals(testCommand, new GoogleLsCommand(\"fail\"));"
+        "content": "        assertEquals(testCommand, testCommand);"
       },
       {
         "lineNumber": 164,
         "author": {
           "gitId": "chivent"
         },
-        "content": ""
+        "content": "        assertNotEquals(testCommand, new GoogleDlCommand(\"fail\"));"
       },
       {
         "lineNumber": 165,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        testCommand \u003d new GoogleUploadCommand(\"test\");"
+        "content": "        assertNotEquals(testCommand, new GoogleLsCommand(\"fail\"));"
       },
       {
         "lineNumber": 166,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertEquals(testCommand, testCommand);"
+        "content": ""
       },
       {
         "lineNumber": 167,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertNotEquals(testCommand, new GoogleUploadCommand(\"fail\"));"
+        "content": "        testCommand \u003d new GoogleUploadCommand(\"test\");"
       },
       {
         "lineNumber": 168,
         "author": {
           "gitId": "chivent"
         },
-        "content": "        assertNotEquals(testCommand, new GoogleDlCommand(\"fail\"));"
+        "content": "        assertEquals(testCommand, testCommand);"
       },
       {
         "lineNumber": 169,
         "author": {
           "gitId": "chivent"
         },
-        "content": "    }"
+        "content": "        assertNotEquals(testCommand, new GoogleUploadCommand(\"fail\"));"
       },
       {
         "lineNumber": 170,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "        assertNotEquals(testCommand, new GoogleDlCommand(\"fail\"));"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "chivent"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 172,
         "author": {
           "gitId": "chivent"
         },
@@ -68041,7 +68160,7 @@
       }
     ],
     "authorContributionMap": {
-      "chivent": 170
+      "chivent": 172
     }
   },
   {

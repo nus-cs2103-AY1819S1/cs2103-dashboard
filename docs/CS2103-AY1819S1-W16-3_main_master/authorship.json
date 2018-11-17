@@ -407,9 +407,9 @@
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "guestuser0123"
+          "gitId": "ngkangtze"
         },
-        "content": "      \"authorNames\": [\"ngkangtze\"]"
+        "content": "      \"authorNames\": [\"ngkangtze\", \"Kang Tze\"]"
       },
       {
         "lineNumber": 18,
@@ -504,7 +504,1739 @@
       }
     ],
     "authorContributionMap": {
-      "guestuser0123": 30
+      "ngkangtze": 1,
+      "guestuser0123": 29
+    }
+  },
+  {
+    "path": "build.gradle",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Gradle Configuration File"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// For more details take a look at the Java Quickstart chapter in the Gradle"
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// user guide available at http://gradle.org/docs/4.8.1/userguide/tutorial_java_projects.html"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import org.gradle.api.tasks.testing.logging.TestLogEvent"
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "plugins {"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027java\u0027"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027jacoco\u0027"
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027checkstyle\u0027"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027com.github.kt3k.coveralls\u0027 version \u00272.4.0\u0027"
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027com.github.johnrengelman.shadow\u0027 version \u00272.0.3\u0027"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027org.asciidoctor.convert\u0027 version \u00271.5.6\u0027"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    id \u0027application\u0027"
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "if (JavaVersion.current() \u003d\u003d JavaVersion.VERSION_1_10"
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0026\u0026 System.getProperty(\u0027os.name\u0027).startsWith(\u0027Windows\u0027)) {"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    logger.warn(\u0027\u0027\u0027\\"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        *********************************** WARNING **********************************"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        You seem to be running Gradle with JDK 10 on Windows."
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        JDK 10 on Windows will fail to run tests in headless mode due to a JavaFX bug."
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        You are highly recommended to use JDK 9!"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027\u0027\u0027.stripIndent())"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Specifies the entry point of the application"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "mainClassName \u003d \u0027seedu.address.MainApp\u0027"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "sourceCompatibility \u003d JavaVersion.VERSION_1_9"
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "targetCompatibility \u003d JavaVersion.VERSION_1_9"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "repositories {"
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    mavenCentral()"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    maven { url \u0027https://oss.sonatype.org/content/repositories/snapshots/\u0027 }"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "checkstyle {"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    toolVersion \u003d \u00278.1\u0027"
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "jacocoTestReport {"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    reports {"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        xml.enabled false"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        csv.enabled false"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        html.destination file(\"${buildDir}/jacocoHtml\")"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "test {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    useJUnitPlatform()"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "dependencies {"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    String testFxVersion \u003d \u00274.0.12-alpha\u0027"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    String jUnitVersion \u003d \u00275.1.0\u0027"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    implementation group: \u0027org.controlsfx\u0027, name: \u0027controlsfx\u0027, version: \u00278.40.11\u0027"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    implementation group: \u0027com.fasterxml.jackson.core\u0027, name: \u0027jackson-databind\u0027, version: \u00272.7.0\u0027"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    implementation group: \u0027com.fasterxml.jackson.datatype\u0027, name: \u0027jackson-datatype-jsr310\u0027, version: \u00272.7.4\u0027"
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    implementation group: \u0027com.google.guava\u0027, name: \u0027guava\u0027, version: \u002719.0\u0027"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    implementation group: \u0027javax.xml.bind\u0027, name: \u0027jaxb-api\u0027, version: \u00272.2.8\u0027"
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    implementation group: \u0027com.sun.xml.bind\u0027, name: \u0027jaxb-impl\u0027, version: \u00272.3.0\u0027"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    implementation group: \u0027com.sun.xml.bind\u0027, name: \u0027jaxb-core\u0027, version: \u00272.3.0\u0027"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    implementation group: \u0027javax.activation\u0027, name: \u0027activation\u0027, version: \u00271.1.1\u0027"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testImplementation group: \u0027junit\u0027, name: \u0027junit\u0027, version: \u00274.12\u0027"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testImplementation group: \u0027org.testfx\u0027, name: \u0027testfx-core\u0027, version: testFxVersion, {"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        exclude group: \u0027org.testfx\u0027, module: \u0027testfx-internal-java8\u0027"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testImplementation group: \u0027org.testfx\u0027, name: \u0027testfx-junit\u0027, version: testFxVersion"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testImplementation group: \u0027org.junit.jupiter\u0027, name: \u0027junit-jupiter-api\u0027, version: jUnitVersion"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testRuntimeOnly group: \u0027org.testfx\u0027, name: \u0027testfx-internal-java9\u0027, version: testFxVersion"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testRuntimeOnly group: \u0027org.testfx\u0027, name: \u0027openjfx-monocle\u0027, version: \u0027jdk-9+181\u0027"
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testRuntimeOnly group:\u0027org.junit.vintage\u0027, name:\u0027junit-vintage-engine\u0027, version: jUnitVersion"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testRuntimeOnly group: \u0027org.junit.jupiter\u0027, name: \u0027junit-jupiter-engine\u0027, version: jUnitVersion"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "shadowJar {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    archiveName \u003d \u0027addressbook.jar\u0027"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    destinationDir \u003d file(\"${buildDir}/jar/\")"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task wrapper(type: Wrapper) {"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    gradleVersion \u003d \u00274.8.1\u0027"
+      },
+      {
+        "lineNumber": 92,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 93,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 94,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task coverage(type: JacocoReport) {"
+      },
+      {
+        "lineNumber": 95,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    sourceDirectories \u003d files(sourceSets.main.allSource.srcDirs)"
+      },
+      {
+        "lineNumber": 96,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    classDirectories \u003d  files(sourceSets.main.output)"
+      },
+      {
+        "lineNumber": 97,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    executionData \u003d files(jacocoTestReport.executionData)"
+      },
+      {
+        "lineNumber": 98,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    afterEvaluate {"
+      },
+      {
+        "lineNumber": 99,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        classDirectories \u003d files(classDirectories.files.collect {"
+      },
+      {
+        "lineNumber": 100,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            fileTree(dir: it, exclude: [\u0027**/*.jar\u0027])"
+      },
+      {
+        "lineNumber": 101,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        })"
+      },
+      {
+        "lineNumber": 102,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 103,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    reports {"
+      },
+      {
+        "lineNumber": 104,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        html.enabled \u003d true"
+      },
+      {
+        "lineNumber": 105,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        xml.enabled \u003d true"
+      },
+      {
+        "lineNumber": 106,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 107,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 108,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 109,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "coveralls {"
+      },
+      {
+        "lineNumber": 110,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    sourceDirs \u003d sourceSets.main.allSource.srcDirs.absolutePath"
+      },
+      {
+        "lineNumber": 111,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    jacocoReportPath \u003d \"${buildDir}/reports/jacoco/coverage/coverage.xml\""
+      },
+      {
+        "lineNumber": 112,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 113,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 114,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "tasks.coveralls {"
+      },
+      {
+        "lineNumber": 115,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    dependsOn coverage"
+      },
+      {
+        "lineNumber": 116,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    onlyIf { System.env.\u0027CI\u0027 }"
+      },
+      {
+        "lineNumber": 117,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 118,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 119,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task(guiTests)"
+      },
+      {
+        "lineNumber": 120,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task(nonGuiTests)"
+      },
+      {
+        "lineNumber": 121,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 122,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Run `test` task if `guiTests` or `nonGuiTests` is specified"
+      },
+      {
+        "lineNumber": 123,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "guiTests.dependsOn test"
+      },
+      {
+        "lineNumber": 124,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "nonGuiTests.dependsOn test"
+      },
+      {
+        "lineNumber": 125,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 126,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task(allTests)"
+      },
+      {
+        "lineNumber": 127,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 128,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// `allTests` implies both `guiTests` and `nonGuiTests`"
+      },
+      {
+        "lineNumber": 129,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "allTests.dependsOn guiTests"
+      },
+      {
+        "lineNumber": 130,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "allTests.dependsOn nonGuiTests"
+      },
+      {
+        "lineNumber": 131,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 132,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "test {"
+      },
+      {
+        "lineNumber": 133,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    systemProperty \u0027testfx.setup.timeout\u0027, \u002760000\u0027"
+      },
+      {
+        "lineNumber": 134,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 135,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    testLogging {"
+      },
+      {
+        "lineNumber": 136,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        events TestLogEvent.FAILED, TestLogEvent.SKIPPED"
+      },
+      {
+        "lineNumber": 137,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 138,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // Prints the currently running test\u0027s name in the CI\u0027s build log,"
+      },
+      {
+        "lineNumber": 139,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // so that we can check if tests are being silently skipped or"
+      },
+      {
+        "lineNumber": 140,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        // stalling the build."
+      },
+      {
+        "lineNumber": 141,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (System.env.\u0027CI\u0027) {"
+      },
+      {
+        "lineNumber": 142,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            events \u003c\u003c TestLogEvent.STARTED"
+      },
+      {
+        "lineNumber": 143,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 144,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 145,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 146,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    jacoco {"
+      },
+      {
+        "lineNumber": 147,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        destinationFile \u003d new File(\"${buildDir}/jacoco/test.exec\")"
+      },
+      {
+        "lineNumber": 148,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 149,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 150,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    doFirst {"
+      },
+      {
+        "lineNumber": 151,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        boolean runGuiTests \u003d gradle.taskGraph.hasTask(guiTests)"
+      },
+      {
+        "lineNumber": 152,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        boolean runNonGuiTests \u003d gradle.taskGraph.hasTask(nonGuiTests)"
+      },
+      {
+        "lineNumber": 153,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 154,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!runGuiTests \u0026\u0026 !runNonGuiTests) {"
+      },
+      {
+        "lineNumber": 155,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            runGuiTests \u003d true"
+      },
+      {
+        "lineNumber": 156,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            runNonGuiTests \u003d true"
+      },
+      {
+        "lineNumber": 157,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 158,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 159,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (runNonGuiTests) {"
+      },
+      {
+        "lineNumber": 160,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            test.include \u0027seedu/address/**\u0027"
+      },
+      {
+        "lineNumber": 161,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 162,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 163,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (runGuiTests) {"
+      },
+      {
+        "lineNumber": 164,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            test.include \u0027systemtests/**\u0027"
+      },
+      {
+        "lineNumber": 165,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            test.include \u0027seedu/address/ui/**\u0027"
+      },
+      {
+        "lineNumber": 166,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 167,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 168,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        if (!runGuiTests) {"
+      },
+      {
+        "lineNumber": 169,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            test.exclude \u0027seedu/address/ui/**\u0027"
+      },
+      {
+        "lineNumber": 170,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 171,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 172,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 173,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 174,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task headless {"
+      },
+      {
+        "lineNumber": 175,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    doLast {"
+      },
+      {
+        "lineNumber": 176,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        println \u0027Setting headless mode properties.\u0027"
+      },
+      {
+        "lineNumber": 177,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        test {"
+      },
+      {
+        "lineNumber": 178,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            systemProperties \u003d ["
+      },
+      {
+        "lineNumber": 179,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0027testfx.robot\u0027: \u0027glass\u0027,"
+      },
+      {
+        "lineNumber": 180,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0027testfx.headless\u0027: \u0027true\u0027,"
+      },
+      {
+        "lineNumber": 181,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0027prism.order\u0027: \u0027sw\u0027,"
+      },
+      {
+        "lineNumber": 182,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                \u0027prism.text\u0027: \u0027t2k\u0027,"
+      },
+      {
+        "lineNumber": 183,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            ]"
+      },
+      {
+        "lineNumber": 184,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 185,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 186,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 187,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 188,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Makes sure that headless properties are set before running tests"
+      },
+      {
+        "lineNumber": 189,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "test.mustRunAfter headless"
+      },
+      {
+        "lineNumber": 190,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 191,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "asciidoctor {"
+      },
+      {
+        "lineNumber": 192,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    backends \u0027html5\u0027"
+      },
+      {
+        "lineNumber": 193,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    sourceDir \u0027docs\u0027"
+      },
+      {
+        "lineNumber": 194,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    outputDir \"${buildDir}/docs\""
+      },
+      {
+        "lineNumber": 195,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 196,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    options \u003d ["
+      },
+      {
+        "lineNumber": 197,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        template_dirs: [file(\"${sourceDir}/templates\")],"
+      },
+      {
+        "lineNumber": 198,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    ]"
+      },
+      {
+        "lineNumber": 199,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 200,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    attributes \u003d ["
+      },
+      {
+        "lineNumber": 201,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        linkcss: true,"
+      },
+      {
+        "lineNumber": 202,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        stylesheet: \u0027gh-pages.css\u0027,"
+      },
+      {
+        "lineNumber": 203,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027source-highlighter\u0027: \u0027coderay\u0027,"
+      },
+      {
+        "lineNumber": 204,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        icons: \u0027font\u0027,"
+      },
+      {
+        "lineNumber": 205,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        experimental: true,"
+      },
+      {
+        "lineNumber": 206,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        sectlinks: true,"
+      },
+      {
+        "lineNumber": 207,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        idprefix: \u0027\u0027,  // for compatibility with GitHub preview"
+      },
+      {
+        "lineNumber": 208,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        idseparator: \u0027-\u0027,"
+      },
+      {
+        "lineNumber": 209,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        \u0027site-root\u0027: \"${sourceDir}\",  // must be the same as sourceDir, do not modify"
+      },
+      {
+        "lineNumber": 210,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "        \u0027site-name\u0027: \u0027One Life\u0027,"
+      },
+      {
+        "lineNumber": 211,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "        \u0027site-githuburl\u0027: \u0027https://github.com/CS2103-AY1819S1-W16-3/main\u0027,"
+      },
+      {
+        "lineNumber": 212,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    ]"
+      },
+      {
+        "lineNumber": 213,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 214,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    options[\u0027template_dirs\u0027].each {"
+      },
+      {
+        "lineNumber": 215,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        inputs.files fileTree(it)"
+      },
+      {
+        "lineNumber": 216,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 217,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 218,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 219,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Copies stylesheets into the directory containing generated HTML files as"
+      },
+      {
+        "lineNumber": 220,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// Asciidoctor does not copy linked CSS files to the output directory when rendering."
+      },
+      {
+        "lineNumber": 221,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "// This is needed for linked stylesheets and embedded stylesheets which import other files."
+      },
+      {
+        "lineNumber": 222,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task copyStylesheets(type: Copy) {"
+      },
+      {
+        "lineNumber": 223,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    from \"${asciidoctor.sourceDir}/stylesheets\""
+      },
+      {
+        "lineNumber": 224,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    into \"${asciidoctor.outputDir}/html5/stylesheets\""
+      },
+      {
+        "lineNumber": 225,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 226,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "asciidoctor.dependsOn copyStylesheets"
+      },
+      {
+        "lineNumber": 227,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 228,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task deployOfflineDocs(type: Copy) {"
+      },
+      {
+        "lineNumber": 229,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    into(\u0027src/main/resources/docs\u0027)"
+      },
+      {
+        "lineNumber": 230,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 231,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    from (\"${asciidoctor.outputDir}/html5\") {"
+      },
+      {
+        "lineNumber": 232,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        include \u0027stylesheets/*\u0027"
+      },
+      {
+        "lineNumber": 233,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        include \u0027images/*\u0027"
+      },
+      {
+        "lineNumber": 234,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        include \u0027HelpWindow.html\u0027"
+      },
+      {
+        "lineNumber": 235,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 236,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 237,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 238,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "task copyDummySearchPage(type: Copy) {"
+      },
+      {
+        "lineNumber": 239,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    from \u0027docs/DummySearchPage.html\u0027"
+      },
+      {
+        "lineNumber": 240,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    into \"${buildDir}/docs/html5\""
+      },
+      {
+        "lineNumber": 241,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      },
+      {
+        "lineNumber": 242,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 243,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "deployOfflineDocs.dependsOn asciidoctor"
+      },
+      {
+        "lineNumber": 244,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "processResources.dependsOn deployOfflineDocs"
+      },
+      {
+        "lineNumber": 245,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 246,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "defaultTasks \u0027clean\u0027, \u0027headless\u0027, \u0027allTests\u0027, \u0027coverage\u0027, \u0027asciidoctor\u0027"
+      }
+    ],
+    "authorContributionMap": {
+      "ngkangtze": 2,
+      "-": 244
     }
   },
   {
@@ -555,14 +2287,14 @@
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "One Life was developed by the"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "https://github.com/CS2103-AY1819S1-W16-3[W16-3] team. +"
       },
@@ -800,7 +2532,7 @@
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "{empty}[https://github.com/ngkangtze[github]] [\u003c\u003cngkangtze#, portfolio\u003e\u003e]"
       },
@@ -967,10 +2699,10 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 6,
+      "ngkangtze": 9,
       "guestuser0123": 2,
       "GaryGohYP": 1,
-      "-": 37,
+      "-": 34,
       "nelvintan": 19
     }
   },
@@ -6484,14 +8216,14 @@
       {
         "lineNumber": 774,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "`FindCommand` extends from `Command`, `FindCommandParser` implements `Parser` and `PersonContainsKeywordPredicate`"
       },
       {
         "lineNumber": 775,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "implements `Predicate`."
       },
@@ -6526,14 +8258,14 @@
       {
         "lineNumber": 780,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Step 1. The user wants to find all `Person` whom have a `friends` `Tag`, with `Name` either `Alex` or `Bernice` by"
       },
       {
         "lineNumber": 781,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "executing `find n/Alex n/Bernice t/friends`."
       },
@@ -6547,14 +8279,14 @@
       {
         "lineNumber": 783,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Step 2. `FindCommandParser` will parse the input and verify that is it valid before creating a"
       },
       {
         "lineNumber": 784,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "`PersonContainsKeywordsPredicate`, which is passed into `FindCommand`. Then, `FindCommand` is returned."
       },
@@ -6568,175 +8300,175 @@
       {
         "lineNumber": 786,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `PersonContainsKeywordPredicate` takes in a `HashMap` of `Prefix` mapped to an `ArrayList` of search parameters. The"
       },
       {
         "lineNumber": 787,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "code snippet below illustrates how a `FindCommand` is created:"
       },
       {
         "lineNumber": 788,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 789,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "[source, java]"
       },
       {
         "lineNumber": 790,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "public FindCommand parse(String args) throws ParseException {"
       },
       {
         "lineNumber": 791,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        ..."
       },
       {
         "lineNumber": 792,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // Performs checks to see if the arguments entered are valid."
       },
       {
         "lineNumber": 793,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        ..."
       },
       {
         "lineNumber": 794,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // Process arguments into a HashMap personSearchKeywords which is used to create a PersonContainsKeywordsPredicate to be passed into FindCommand."
       },
       {
         "lineNumber": 795,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        ..."
       },
       {
         "lineNumber": 796,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        return new FindCommand(new PersonContainsKeywordsPredicate(personSearchKeywords));"
       },
       {
         "lineNumber": 797,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    }"
       },
       {
         "lineNumber": 798,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 799,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `PersonContainsKeywordPredicate` tests if a `Person` should appear when searched by iterating through each of the keys"
       },
       {
         "lineNumber": 800,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "in the `HashMap` and returning `true` if all of the `Person` \u0027s attributes match at least 1 of the entries in each key\u0027s"
       },
       {
         "lineNumber": 801,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "`ArrayList`. The image below illustrates the list of `Person` that return `true` for"
       },
       {
         "lineNumber": 802,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "`PersonContainsKeywordPredicate#test`"
       },
       {
         "lineNumber": 803,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "after the user input `find n/Alex n/Bernice t/friends`."
       },
       {
         "lineNumber": 804,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 805,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".PersonContainsKeywordPredicate test result"
       },
       {
         "lineNumber": 806,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::FindCommandDeveloperGuidePredicate.png[width\u003d\"600\"]"
       },
       {
         "lineNumber": 807,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 808,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* As can be seen in the image above, `Person` at index 0 and index 2 have at least 1 entry in `Name` and `Tag` that"
       },
       {
         "lineNumber": 809,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "match the required search parameters. Therefore, they will be shown in the result list. Even though `Person` at index 1"
       },
       {
         "lineNumber": 810,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "has a match in the `Name` attribute, he does not have a `friends` `Tag` and is therefore not shown."
       },
@@ -6757,14 +8489,14 @@
       {
         "lineNumber": 813,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "If there is no input after the \"find\" keyword, `IntuitiveEntryCommand` will be triggered, which will prompt the user to"
       },
       {
         "lineNumber": 814,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "input search parameters."
       },
@@ -6792,14 +8524,14 @@
       {
         "lineNumber": 818,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Step 4. `Model#updateFilteredPersonList()` will be called, which uses `PersonContainsKeywordPredicate` to  update"
       },
       {
         "lineNumber": 819,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "`Model` to show all `Person` that contains the searched parameters."
       },
@@ -6827,14 +8559,14 @@
       {
         "lineNumber": 823,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Find command sequence diagram"
       },
       {
         "lineNumber": 824,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::FindCommandDeveloperGuideSequenceDiagram.png[width\u003d\"800\"]"
       },
@@ -6876,84 +8608,84 @@
       {
         "lineNumber": 830,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* **Alternative 1 (current choice):** Allow users to perform searches by specifying certain keywords of interest."
       },
       {
         "lineNumber": 831,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "(For example: `Name` : `n/`, `Phone`: `p/`)"
       },
       {
         "lineNumber": 832,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Pros: It results in a powerful and precise search function by providing the user the option to specify exactly which"
       },
       {
         "lineNumber": 833,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "`Person` attributes are of interest."
       },
       {
         "lineNumber": 834,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Cons: It may be difficult for newer users to remember the shortcuts that represent the attributes of interest."
       },
       {
         "lineNumber": 835,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* **Alternative 2:** Generalise the search function by searching through all fields and providing the most relevant"
       },
       {
         "lineNumber": 836,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "information through predictive search."
       },
       {
         "lineNumber": 837,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Pros: It provides an even more powerful search function that is both simple to use and accurate."
       },
       {
         "lineNumber": 838,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Cons: It is incredibly difficult to implement such a search function without the use of machine-learning algorithms"
       },
       {
         "lineNumber": 839,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "or an internet connection."
       },
       {
         "lineNumber": 840,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 841,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "// end::findcommand[]"
       },
@@ -12566,11 +14298,11 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 20,
+      "ngkangtze": 69,
       "tristonpang": 285,
       "guestuser0123": 119,
       "GaryGohYP": 219,
-      "-": 905,
+      "-": 856,
       "nelvintan": 94
     }
   },
@@ -12797,7 +14529,7 @@
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".One Life User Interface"
       },
@@ -12853,7 +14585,7 @@
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* **`add`**`r/patient n/John Doe p/98765432 e/johnd@example.com a/John street, block 123, #01-01 ic/S9601234A` : adds a `Patient` named `John Doe` to the database."
       },
@@ -13021,7 +14753,7 @@
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Adds a `Patient` or `Doctor` to the database. +"
       },
@@ -13035,7 +14767,7 @@
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*Adding a `Patient`* +"
       },
@@ -13056,7 +14788,7 @@
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*Adding a `Doctor`* +"
       },
@@ -13077,7 +14809,7 @@
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "A `Person` can have any number of `Tag` (including 0)."
       },
@@ -13105,7 +14837,7 @@
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `add r/patient n/John Doe Xiao Huang ic/S1234567D p/98765432 e/johnd@example.com a/John street, block 123, #01-01"
       },
@@ -13133,14 +14865,14 @@
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Before adding a new patient using add command"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::AddCommandPatientBefore.png[width\u003d\"600\"]"
       },
@@ -13154,14 +14886,14 @@
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".After adding a new patient using add command"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::AddCommandPatientAfter.png[width\u003d\"600\"]"
       },
@@ -13175,35 +14907,35 @@
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `add r/doctor n/Betsy Crowe ic/S8234567A e/betsycrowe@example.com a/Newgate Estates p/1234567 md/dentistry` +"
       },
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "(Adds a new `Doctor`, refer to Figure 3 and 4 below for illustrations)"
       },
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Before adding a new doctor using add command"
       },
       {
         "lineNumber": 90,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::AddCommandDoctorBefore.png[width\u003d\"600\"]"
       },
@@ -13217,14 +14949,14 @@
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".After adding a new doctor using add command"
       },
       {
         "lineNumber": 93,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::AddCommandDoctorAfter.png[width\u003d\"600\"]"
       },
@@ -13252,7 +14984,7 @@
       {
         "lineNumber": 97,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "When adding a new `Doctor` you have to to specify his/her `MedicalDepartment`."
       },
@@ -13469,7 +15201,7 @@
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "// tag::find[]"
       },
@@ -13490,21 +15222,21 @@
       {
         "lineNumber": 131,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "There are two types of Find Commands: Global Find and Specific Find. They can be used in conjunction with one"
       },
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "another. +"
       },
       {
         "lineNumber": 133,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Format: `find [PREFIX] KEYWORDS [NEXT_PREFIX] [MORE_KEYWORDS]`"
       },
@@ -13518,28 +15250,28 @@
       {
         "lineNumber": 135,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "[NOTE]"
       },
       {
         "lineNumber": 136,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "In order for a `Person` to show up on `find`, the `Person` must match all attributes in the input. +"
       },
       {
         "lineNumber": 137,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "(i.e. `find n/alex r/doctor` will show all `Doctor` named `Alex`. If another `Alex` is not a `Doctor`, he will not be"
       },
       {
         "lineNumber": 138,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "shown.)"
       },
@@ -13553,371 +15285,371 @@
       {
         "lineNumber": 140,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "\u003d\u003d\u003d\u003d Global Find"
       },
       {
         "lineNumber": 141,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Global Find is a search on all attributes of all `Person` in the database. +"
       },
       {
         "lineNumber": 142,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 143,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "It is performed when:"
       },
       {
         "lineNumber": 144,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* no `Prefix` is included in the input, or when"
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* keywords are included before the first valid `Prefix`."
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "[NOTE]"
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "When performing Global Find with more than one separate keyword, users can simply separate them using a `[SPACE]`."
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "The Find Command will interpret the input as separate words to be searched globally."
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 152,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Examples:"
       },
       {
         "lineNumber": 153,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 154,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `find kang` +"
       },
       {
         "lineNumber": 155,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Displays all `Person` with `kang` in any of their attributes."
       },
       {
         "lineNumber": 156,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `find kang r/doctor` +"
       },
       {
         "lineNumber": 157,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Displays all `Person` with `kang` in any of their attributes and whom is a `Doctor`. This is an example of Global Find"
       },
       {
         "lineNumber": 158,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "used in conjunction with Specific Find."
       },
       {
         "lineNumber": 159,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `find alex doctor` +"
       },
       {
         "lineNumber": 160,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Displays all `Person` with `alex` or `doctor` in any of their attributes."
       },
       {
         "lineNumber": 161,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 162,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "The images below illustrate the utilisation of Global Find:"
       },
       {
         "lineNumber": 163,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 164,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Global find command"
       },
       {
         "lineNumber": 165,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::FindCommandUserGuideGlobal1.png[width\u003d\"400\"]"
       },
       {
         "lineNumber": 166,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 167,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Global find command with specific find command"
       },
       {
         "lineNumber": 168,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::FindCommandUserGuideGlobal2.png[width\u003d\"400\"]"
       },
       {
         "lineNumber": 169,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 170,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Global Find command with multiple keywords"
       },
       {
         "lineNumber": 171,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::FindCommandUserGuideGlobal3.png[width\u003d\"400\"]"
       },
       {
         "lineNumber": 172,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 173,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "\u003d\u003d\u003d\u003d Specific Find"
       },
       {
         "lineNumber": 174,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Specific Find is a search on attributes specified by the user. (i.e. `Name`, `Phone` etc)."
       },
       {
         "lineNumber": 175,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 176,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "It is performed when a `Prefix` is specified in the input field. +"
       },
       {
         "lineNumber": 177,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Below is a list of all searchable attributes and their corresponding `Prefix`:"
       },
       {
         "lineNumber": 178,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 179,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Table of searchable prefixes"
       },
       {
         "lineNumber": 180,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "[width\u003d\"80\"]"
       },
       {
         "lineNumber": 181,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 182,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| *Attribute*        | *Prefix*"
       },
       {
         "lineNumber": 183,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| Name               | `n/`"
       },
       {
         "lineNumber": 184,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| NRIC               | `ic/`"
       },
       {
         "lineNumber": 185,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| Phone              | `p/`"
       },
       {
         "lineNumber": 186,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| Email              | `e/`"
       },
       {
         "lineNumber": 187,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| Address            | `a/`"
       },
       {
         "lineNumber": 188,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| Role               | `r/`"
       },
       {
         "lineNumber": 189,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| Tag                | `t/`"
       },
       {
         "lineNumber": 190,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| Medical Department | `md/`"
       },
       {
         "lineNumber": 191,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "| Medical Record     | `mr/`"
       },
       {
         "lineNumber": 192,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "|\u003d\u003d\u003d"
       },
@@ -13931,28 +15663,28 @@
       {
         "lineNumber": 194,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "[WARNING]"
       },
       {
         "lineNumber": 195,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Search keywords must be entered behind a `Prefix` whenever a `Prefix` is used in the input. A command like"
       },
       {
         "lineNumber": 196,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "`find n/[BLANK]` is not a valid input. +"
       },
       {
         "lineNumber": 197,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "The `Prefix` entered must also be valid."
       },
@@ -13980,210 +15712,210 @@
       {
         "lineNumber": 201,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `find t/friends` +"
       },
       {
         "lineNumber": 202,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Displays all `Person` with the `Tag` labelled `friends`."
       },
       {
         "lineNumber": 203,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* `find t/friends r/doctor` +"
       },
       {
         "lineNumber": 204,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "Displays all `Person` with the `Tag` labelled `friends` and whose `Role` is `Doctor`."
       },
       {
         "lineNumber": 205,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* The images below illustrate the utilisation of Specific Find."
       },
       {
         "lineNumber": 206,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 207,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Specific find command"
       },
       {
         "lineNumber": 208,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::FindCommandUserGuideSpecific1.png[width\u003d\"400\"]"
       },
       {
         "lineNumber": 209,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 210,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Specific find command with additional prefixes"
       },
       {
         "lineNumber": 211,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::FindCommandUserGuideSpecific2.png[width\u003d\"400\"]"
       },
       {
         "lineNumber": 212,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 213,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ".Examples of invalid input for specific find command"
       },
       {
         "lineNumber": 214,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "image::FindCommandUserGuideError.png[width\u003d\"400\"]"
       },
       {
         "lineNumber": 215,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 216,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "****"
       },
       {
         "lineNumber": 217,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* Find is case-insensitive. e.g. `nelvin` will match `Nelvin`."
       },
       {
         "lineNumber": 218,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* In Global Find, `Person` containing any of the given keywords in any of his/her attributes will be displayed."
       },
       {
         "lineNumber": 219,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "e.g. `find doctor nelvin` will cause all `Doctor` and `Nelvin Tan` to be displayed."
       },
       {
         "lineNumber": 220,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* In Specific Find, the specified attribute of the `Person` must contain the searched keyword to be displayed."
       },
       {
         "lineNumber": 221,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "e.g. `find n/Gary Goh` will display `Gary Goh` but not `Kenneth Goh`"
       },
       {
         "lineNumber": 222,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* In the event that the user wants to specify more than one keyword to be seperately searched in a specified attribute,"
       },
       {
         "lineNumber": 223,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "for example if the user wants to find all `Person` with `Name` `Kang Tze` or `Triston`, he must separate the names"
       },
       {
         "lineNumber": 224,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "using two `Name` `Prefix`. e.g. `find n/Kang Tze n/Triston` displays `Ng Kang Tze` and `Triston Pang`."
       },
       {
         "lineNumber": 225,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* An illustration of a more complicated `find` command is `find friends n/Kang Tze n/Triston r/doctor`, which displays"
       },
       {
         "lineNumber": 226,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "all `Person` with `friends` in their attributes, has `name` containing either `Kang Tze` or `Triston`, and whom is a"
       },
       {
         "lineNumber": 227,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "`Doctor`."
       },
       {
         "lineNumber": 228,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "****"
       },
       {
         "lineNumber": 229,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 230,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "// end::find[]"
       },
@@ -17305,14 +19037,14 @@
       {
         "lineNumber": 676,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* *Find* : `find [PREFIX] KEYWORDS [NEXT_PREFIX] [MORE_KEYWORDS]` +"
       },
       {
         "lineNumber": 677,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "e.g. `find n/James t/friends`"
       },
@@ -17409,11 +19141,11 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 1,
+      "ngkangtze": 117,
       "tristonpang": 44,
       "guestuser0123": 168,
       "GaryGohYP": 78,
-      "-": 328,
+      "-": 212,
       "nelvintan": 71
     }
   },
@@ -19183,42 +20915,42 @@
       {
         "lineNumber": 1,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "\u003d Ng Kang Tze - Project Portfolio"
       },
       {
         "lineNumber": 2,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ":site-section: AboutUs"
       },
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ":imagesDir: ../images"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ":stylesDir: ../stylesheets"
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ":sectnums:"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
@@ -19232,21 +20964,21 @@
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "---"
       },
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
@@ -19260,84 +20992,84 @@
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "This Project Portfolio is intended to document my contributions towards One Life. These contributions include functional"
       },
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "and non-functional code, documentation, user interface and numerous other aspects of the project."
       },
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 16,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "One Life is a desktop-based medical database and medical information management application used for storing and displaying"
       },
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "data related to patients and doctors."
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "One Life aims to improve the efficiency of administrative processes in medical institutions."
       },
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "It was developed as part of the module requirements for CS2103T (Software Engineering)."
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "The user interacts with it using a Command Line Interface (CLI), and it has a Graphical User Interface (GUI) created with JavaFX."
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "It is written in Java, and has about 10 kLoC."
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
@@ -19351,294 +21083,294 @@
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* *Major enhancement*: Enhanced *the ability to find `Person` with selected attributes* instead of only with their `Name`."
       },
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** What it does: This feature allows the user to find all `Person` containing specified keywords. Users may combine multiple keywords from different fields to increase the search accuracy."
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Justification: This feature improves the product significantly because it reduces the amount of time needed to find all relevant `Person` and perform other operations on their information fields."
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Highlights: This enhancement was deceptively challenging. Even though it builds upon existing procedures, a large amount of modification was necessary to ensure that users are able to enter the arguments in any preferred order."
       },
       {
         "lineNumber": 30,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* *Minor enhancement*: Modified the `find` command to reject invalid input and prompt the user for proper input using a format guide."
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* *Code contributed*: [https://github.com/CS2103-AY1819S1-W16-3/main/commits?author\u003dngkangtze[Functional code]] [https://nus-cs2103-ay1819s1.github.io/cs2103-dashboard/#\u003dundefined\u0026search\u003dngkangtze\u0026sort\u003ddisplayName\u0026since\u003d2018-09-12\u0026until\u003d2018-11-06\u0026timeframe\u003dday\u0026reverse\u003dfalse\u0026repoSort\u003dtrue[RepoSense]]"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "* *Other contributions*:"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Project management:"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*** Managed releases `v1.1` - `v1.4` (4 releases) on GitHub"
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*** Set up Travis and AppVeyor badge for tracking of project build. (Pull request https://github.com/CS2103-AY1819S1-W16-3/main/commit/e5ee2bc09478cd85f5d867e9c4b1f6fc1a5a710d[#49])"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Enhancements to existing features:"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*** Fixed bugs arising from modification of the GUI. (Pull request https://github.com/CS2103-AY1819S1-W16-3/main/pull/183[#183])"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Documentation:"
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*** Modified README, AboutUs and ContactUs to match project specifications and team information. (Pull request https://github.com/CS2103-AY1819S1-W16-3/main/pull/36[#36])"
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*** Modified build.gradle to reflect our project and removed elements of AddressBook-Level4 from the documentation website. (Pull request https://github.com/CS2103-AY1819S1-W16-3/main/pull/150[#150], https://github.com/CS2103-AY1819S1-W16-3/main/pull/153/commits[#153])"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "** Community:"
       },
       {
         "lineNumber": 46,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*** Reviewed pull requests (with non-trivial review comments)."
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "(Pull request https://github.com/CS2103-AY1819S1-W16-3/main/pull/128[#128])"
       },
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "*** Reviewed and addressed raised issues. (Issue https://github.com/CS2103-AY1819S1-W16-3/main/issues/170[#170], https://github.com/CS2103-AY1819S1-W16-3/main/issues/174[#174])"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "\u003d\u003d Contributions to the User Guide"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "|_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._"
       },
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "include::../UserGuide.adoc[tag\u003dfind]"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "\u003d\u003d Contributions to the Developer Guide"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "|_Given below are sections I contributed to the Developer Guide. They showcase my ability to write technical documentation and the technical depth of my contributions to the project._"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "|\u003d\u003d\u003d"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "include::../DeveloperGuide.adoc[tag\u003dfindcommand]"
       }
     ],
     "authorContributionMap": {
-      "GaryGohYP": 3,
-      "-": 62
+      "ngkangtze": 62,
+      "GaryGohYP": 3
     }
   },
   {
@@ -22729,6 +24461,652 @@
     ],
     "authorContributionMap": {
       "GaryGohYP": 27
+    }
+  },
+  {
+    "path": "src/main/java/seedu/address/commons/util/StringUtil.java",
+    "lines": [
+      {
+        "lineNumber": 1,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "package seedu.address.commons.util;"
+      },
+      {
+        "lineNumber": 2,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 3,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static java.util.Objects.requireNonNull;"
+      },
+      {
+        "lineNumber": 4,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import static seedu.address.commons.util.AppUtil.checkArgument;"
+      },
+      {
+        "lineNumber": 5,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 6,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.io.PrintWriter;"
+      },
+      {
+        "lineNumber": 7,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.io.StringWriter;"
+      },
+      {
+        "lineNumber": 8,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "import java.util.Arrays;"
+      },
+      {
+        "lineNumber": 9,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 10,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "/**"
+      },
+      {
+        "lineNumber": 11,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " * Helper functions for handling strings."
+      },
+      {
+        "lineNumber": 12,
+        "author": {
+          "gitId": "-"
+        },
+        "content": " */"
+      },
+      {
+        "lineNumber": 13,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "public class StringUtil {"
+      },
+      {
+        "lineNumber": 14,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 15,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 16,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns true if the {@code sentence} contains the {@code word}."
+      },
+      {
+        "lineNumber": 17,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *   Ignores case, but a full word match is required."
+      },
+      {
+        "lineNumber": 18,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *   \u003cbr\u003eexamples:\u003cpre\u003e"
+      },
+      {
+        "lineNumber": 19,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *       containsWordIgnoreCase(\"ABc def\", \"abc\") \u003d\u003d true"
+      },
+      {
+        "lineNumber": 20,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *       containsWordIgnoreCase(\"ABc def\", \"DEF\") \u003d\u003d true"
+      },
+      {
+        "lineNumber": 21,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *       containsWordIgnoreCase(\"ABc def\", \"AB\") \u003d\u003d false //not a full word match"
+      },
+      {
+        "lineNumber": 22,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     *       \u003c/pre\u003e"
+      },
+      {
+        "lineNumber": 23,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param sentence cannot be null"
+      },
+      {
+        "lineNumber": 24,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @param word cannot be null, cannot be empty, must be a single word"
+      },
+      {
+        "lineNumber": 25,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 26,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static boolean containsWordIgnoreCase(String sentence, String word) {"
+      },
+      {
+        "lineNumber": 27,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(sentence);"
+      },
+      {
+        "lineNumber": 28,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(word);"
+      },
+      {
+        "lineNumber": 29,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 30,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String preppedWord \u003d word.trim();"
+      },
+      {
+        "lineNumber": 31,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        checkArgument(!preppedWord.isEmpty(), \"Word parameter cannot be empty\");"
+      },
+      {
+        "lineNumber": 32,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        checkArgument(preppedWord.split(\"\\\\s+\").length \u003d\u003d 1, \"Word parameter should be a single word\");"
+      },
+      {
+        "lineNumber": 33,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 34,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String preppedSentence \u003d sentence;"
+      },
+      {
+        "lineNumber": 35,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        String[] wordsInPreppedSentence \u003d preppedSentence.split(\"\\\\s+\");"
+      },
+      {
+        "lineNumber": 36,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 37,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return Arrays.stream(wordsInPreppedSentence)"
+      },
+      {
+        "lineNumber": 38,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "                .anyMatch(preppedWord::equalsIgnoreCase);"
+      },
+      {
+        "lineNumber": 39,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 40,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 41,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 42,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     * Returns true if the {@code sentence} contains the {@code query}."
+      },
+      {
+        "lineNumber": 43,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     *   Ignores case, will match as long as the argument is contained within the {@code Person} parameters."
+      },
+      {
+        "lineNumber": 44,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     *   \u003cbr\u003eexamples:\u003cpre\u003e"
+      },
+      {
+        "lineNumber": 45,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     *       containsWordIgnoreCase(\"ABc def\", \"abc\") \u003d\u003d true"
+      },
+      {
+        "lineNumber": 46,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     *       containsWordIgnoreCase(\"ABc def\", \"DEF\") \u003d\u003d true"
+      },
+      {
+        "lineNumber": 47,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     *       containsWordIgnoreCase(\"ABc def\", \"AB\") \u003d\u003d true // ABc def contains AB"
+      },
+      {
+        "lineNumber": 48,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     *       containsWordIgnoreCase(\"aaa BBB\", \"a B\") \u003d\u003d true"
+      },
+      {
+        "lineNumber": 49,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     *       \u003c/pre\u003e"
+      },
+      {
+        "lineNumber": 50,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     * @param sentence cannot be null"
+      },
+      {
+        "lineNumber": 51,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     * @param query cannot be null, cannot be empty"
+      },
+      {
+        "lineNumber": 52,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 53,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "    public static boolean containsQueryIgnoreCase(String sentence, String query) {"
+      },
+      {
+        "lineNumber": 54,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "        requireNonNull(sentence);"
+      },
+      {
+        "lineNumber": 55,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "        requireNonNull(query);"
+      },
+      {
+        "lineNumber": 56,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 57,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "        String preppedQuery \u003d query.trim();"
+      },
+      {
+        "lineNumber": 58,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "        checkArgument(!preppedQuery.isEmpty(), \"Query parameter cannot be empty\");"
+      },
+      {
+        "lineNumber": 59,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "        checkArgument(preppedQuery.split(\"\\\\s+\").length !\u003d 0, \"Query parameter should not be null\");"
+      },
+      {
+        "lineNumber": 60,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 61,
+        "author": {
+          "gitId": "ngkangtze"
+        },
+        "content": "        return sentence.toLowerCase().contains(preppedQuery.toLowerCase());"
+      },
+      {
+        "lineNumber": 62,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 63,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 64,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 65,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns a detailed message of the t, including the stack trace."
+      },
+      {
+        "lineNumber": 66,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 67,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static String getDetails(Throwable t) {"
+      },
+      {
+        "lineNumber": 68,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(t);"
+      },
+      {
+        "lineNumber": 69,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        StringWriter sw \u003d new StringWriter();"
+      },
+      {
+        "lineNumber": 70,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        t.printStackTrace(new PrintWriter(sw));"
+      },
+      {
+        "lineNumber": 71,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        return t.getMessage() + \"\\n\" + sw.toString();"
+      },
+      {
+        "lineNumber": 72,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 73,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 74,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    /**"
+      },
+      {
+        "lineNumber": 75,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Returns true if {@code s} represents a non-zero unsigned integer"
+      },
+      {
+        "lineNumber": 76,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * e.g. 1, 2, 3, ..., {@code Integer.MAX_VALUE} \u003cbr\u003e"
+      },
+      {
+        "lineNumber": 77,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * Will return false for any other non-null string input"
+      },
+      {
+        "lineNumber": 78,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * e.g. empty string, \"-1\", \"0\", \"+1\", and \" 2 \" (untrimmed), \"3 0\" (contains whitespace), \"1 a\" (contains letters)"
+      },
+      {
+        "lineNumber": 79,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     * @throws NullPointerException if {@code s} is null."
+      },
+      {
+        "lineNumber": 80,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "     */"
+      },
+      {
+        "lineNumber": 81,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    public static boolean isNonZeroUnsignedInteger(String s) {"
+      },
+      {
+        "lineNumber": 82,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        requireNonNull(s);"
+      },
+      {
+        "lineNumber": 83,
+        "author": {
+          "gitId": "-"
+        },
+        "content": ""
+      },
+      {
+        "lineNumber": 84,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        try {"
+      },
+      {
+        "lineNumber": 85,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            int value \u003d Integer.parseInt(s);"
+      },
+      {
+        "lineNumber": 86,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return value \u003e 0 \u0026\u0026 !s.startsWith(\"+\"); // \"+1\" is successfully parsed by Integer#parseInt(String)"
+      },
+      {
+        "lineNumber": 87,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        } catch (NumberFormatException nfe) {"
+      },
+      {
+        "lineNumber": 88,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "            return false;"
+      },
+      {
+        "lineNumber": 89,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "        }"
+      },
+      {
+        "lineNumber": 90,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "    }"
+      },
+      {
+        "lineNumber": 91,
+        "author": {
+          "gitId": "-"
+        },
+        "content": "}"
+      }
+    ],
+    "authorContributionMap": {
+      "ngkangtze": 19,
+      "-": 72
     }
   },
   {
@@ -28402,7 +30780,7 @@
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    public static final String MESSAGE_USAGE \u003d COMMAND_WORD + \": Finds all persons whose attributes contain any of \""
       },
@@ -28416,42 +30794,42 @@
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            + \"The following prefixes are available for specification: Name: n/, NRIC: ic/, Phone: p/, \""
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            + \"Address: a/, Role: r/, Tag: t/, Medical Department: md/, Medical Record: mr/.\\n\""
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            + \"Ensure that the prefixes entered adhere to the format above.\""
       },
       {
         "lineNumber": 23,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            + \"If no prefixes are given, all available attributes will searched for the specified keywords.\\n\""
       },
       {
         "lineNumber": 24,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            + \"Parameters: [PREFIX]KEYWORD [NEXT_PREFIX][NEXT_KEYWORD]\\n\""
       },
       {
         "lineNumber": 25,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            + \"Example: \" + COMMAND_WORD + \" n/alex r/doctor\";"
       },
@@ -28611,8 +30989,8 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 3,
-      "-": 44
+      "ngkangtze": 10,
+      "-": 37
     }
   },
   {
@@ -35532,70 +37910,70 @@
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;"
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_GLOBAL;"
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_MEDICAL_DEPARTMENT;"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_MEDICAL_RECORD;"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;"
       },
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_NRIC;"
       },
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;"
       },
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_ROLE;"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;"
       },
@@ -35609,7 +37987,7 @@
       {
         "lineNumber": 15,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.ArrayList;"
       },
@@ -35623,35 +38001,35 @@
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.HashMap;"
       },
       {
         "lineNumber": 18,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.List;"
       },
       {
         "lineNumber": 19,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.Map;"
       },
       {
         "lineNumber": 20,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.regex.Matcher;"
       },
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.regex.Pattern;"
       },
@@ -35749,7 +38127,7 @@
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     * @param args is a non-empty String."
       },
@@ -35777,175 +38155,175 @@
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        final ArrayList\u003cPrefix\u003e prefixList \u003d new ArrayList\u003c\u003e(Arrays.asList(PREFIX_NAME, PREFIX_NRIC, PREFIX_PHONE,"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                PREFIX_EMAIL, PREFIX_ADDRESS, PREFIX_ROLE, PREFIX_TAG, PREFIX_MEDICAL_DEPARTMENT,"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                PREFIX_MEDICAL_RECORD));"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // Checks if any of the prefixes entered are invalid."
       },
       {
         "lineNumber": 44,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        List\u003cString\u003e allPrefixes \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        Matcher m \u003d Pattern.compile(\"\\\\s\\\\w+/\").matcher(args);"
       },
       {
         "lineNumber": 46,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        while (m.find()) {"
       },
       {
         "lineNumber": 47,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            allPrefixes.add(m.group().trim());"
       },
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        }"
       },
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        for (String s : allPrefixes) {"
       },
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            if (prefixList.stream().noneMatch(x -\u003e s.equals(x.toString()))) {"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            }"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        }"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 55,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        ArgumentMultimap argMultimap \u003d ArgumentTokenizer.tokenize(args, prefixList.toArray(new Prefix[0]));"
       },
       {
         "lineNumber": 56,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        Map\u003cPrefix, List\u003cString\u003e\u003e personSearchKeywords \u003d new HashMap\u003c\u003e();"
       },
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        if (!argMultimap.getPreamble().equals(\"\")) {"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            List\u003cString\u003e keywordList \u003d new ArrayList\u003c\u003e(Arrays.asList(argMultimap.getPreamble().split(\"\\\\s+\")));"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            personSearchKeywords.put(PREFIX_GLOBAL, keywordList);"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        }"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        for (Prefix prefix : prefixList) {"
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            initialiseKeywordMap(argMultimap, personSearchKeywords, prefix);"
       },
@@ -35966,14 +38344,14 @@
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        return new FindCommand(new PersonContainsKeywordsPredicate(personSearchKeywords));"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    }"
       },
@@ -35987,126 +38365,126 @@
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    /**"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     * Private method for handling {@code Prefix} in the input argument."
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     * Maps each {@code Prefix} into a HashMap with their searched keywords."
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     *"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     * @param argMultimap Immutable HashMap of all given keywords for each {@code Prefix} mapped to {@code Prefix}."
       },
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     * @param personSearchKeywords HashMap of individual keywords in an ArrayList mapped to {@code Prefix}."
       },
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     * @param prefix {@code Prefix} corresponding to the keywords given."
       },
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     */"
       },
       {
         "lineNumber": 77,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    private void initialiseKeywordMap(ArgumentMultimap argMultimap, Map\u003cPrefix, List\u003cString\u003e\u003e personSearchKeywords,"
       },
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                                      Prefix prefix) throws ParseException {"
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        if (argMultimap.getValue(prefix).isPresent()) {"
       },
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            List\u003cString\u003e keywordList \u003d new ArrayList\u003c\u003e(argMultimap.getAllValues(prefix));"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            if (keywordList.get(0).equals(\"\")) {"
       },
       {
         "lineNumber": 82,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                throw new ParseException("
       },
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                        String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            }"
       },
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            personSearchKeywords.put(prefix, keywordList);"
       },
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        }"
       },
@@ -36133,8 +38511,8 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 1,
-      "-": 88
+      "ngkangtze": 63,
+      "-": 26
     }
   },
   {
@@ -58395,7 +60773,7 @@
       {
         "lineNumber": 128,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
@@ -58548,9 +60926,9 @@
       }
     ],
     "authorContributionMap": {
+      "ngkangtze": 1,
       "guestuser0123": 2,
-      "GaryGohYP": 146,
-      "-": 1
+      "GaryGohYP": 146
     }
   },
   {
@@ -59322,112 +61700,112 @@
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     * Creates a keyword array for the {@code Patient}\u0027s {@code MedicalRecord} that lists all the relevant details."
       },
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     * For use in {@code PersonContainsKeywordPredicate}."
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "     */"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    public ArrayList\u003cString\u003e getMedicalRecordKeywords() {"
       },
       {
         "lineNumber": 115,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        ArrayList\u003cString\u003e keywordsList \u003d new ArrayList\u003c\u003e();"
       },
       {
         "lineNumber": 116,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        for (MedicalRecord record : this.medicalRecordLibrary) {"
       },
       {
         "lineNumber": 117,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            keywordsList.add(record.getDate());"
       },
       {
         "lineNumber": 118,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            keywordsList.add(record.getDiagnosis());"
       },
       {
         "lineNumber": 119,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            keywordsList.add(record.getTreatment());"
       },
       {
         "lineNumber": 120,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            keywordsList.add(record.getComments());"
       },
       {
         "lineNumber": 121,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        }"
       },
       {
         "lineNumber": 122,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        return keywordsList;"
       },
       {
         "lineNumber": 123,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    }"
       },
       {
         "lineNumber": 124,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    /**"
       },
@@ -59888,10 +62266,10 @@
       }
     ],
     "authorContributionMap": {
+      "ngkangtze": 16,
       "guestuser0123": 107,
       "GaryGohYP": 42,
-      "nelvintan": 25,
-      "-": 16
+      "nelvintan": 25
     }
   },
   {
@@ -68419,7 +70797,7 @@
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        builder.append(person.getName()).append(\" \")"
       },
@@ -68433,28 +70811,28 @@
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .append(person.getPhone()).append(\" \")"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .append(person.getEmail()).append(\" \")"
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .append(person.getAddress().toString().replaceAll(\",\", \"\")).append(\" \")"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .append(person.getClass().getSimpleName()).append(\" \");"
       },
@@ -68475,7 +70853,7 @@
       {
         "lineNumber": 45,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .map(x -\u003e x + \" \")"
       },
@@ -68503,7 +70881,7 @@
       {
         "lineNumber": 49,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            builder.append(((Doctor) person).getMedicalDepartment()).append(\" \");"
       },
@@ -68517,28 +70895,28 @@
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            builder.append(person.getNric()).append(\" \");"
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            for (String s : ((Patient) person).getMedicalRecordKeywords()) {"
       },
       {
         "lineNumber": 53,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                builder.append(s + \" \");"
       },
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            }"
       },
@@ -68559,21 +70937,21 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyKeywordMatch \u003d personSearchKeywords.get(PREFIX_GLOBAL) \u003d\u003d null"
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || personSearchKeywords.get(PREFIX_GLOBAL).stream().anyMatch(keyword -\u003e {"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                    return StringUtil.containsQueryIgnoreCase(builder.toString().replaceAll(\",\", \" \"),"
       },
@@ -68601,21 +70979,21 @@
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyNameMatch \u003d personSearchKeywords.get(PREFIX_NAME) \u003d\u003d null"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || personSearchKeywords.get(PREFIX_NAME).stream()"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .anyMatch(name -\u003e StringUtil.containsQueryIgnoreCase(person.getName().toString(), name));"
       },
@@ -68629,49 +71007,49 @@
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyNricMatch \u003d personSearchKeywords.get(PREFIX_NRIC) \u003d\u003d null"
       },
       {
         "lineNumber": 68,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || personSearchKeywords.get(PREFIX_NRIC).stream()"
       },
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .anyMatch(nric -\u003e StringUtil.containsQueryIgnoreCase(person.getNric().toString(), nric));"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 71,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyPhoneMatch \u003d personSearchKeywords.get(PREFIX_PHONE) \u003d\u003d null"
       },
       {
         "lineNumber": 72,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || personSearchKeywords.get(PREFIX_PHONE).stream()"
       },
       {
         "lineNumber": 73,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .anyMatch(phone -\u003e StringUtil.containsQueryIgnoreCase(person.getPhone().toString(), phone));"
       },
@@ -68685,21 +71063,21 @@
       {
         "lineNumber": 75,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyEmailMatch \u003d personSearchKeywords.get(PREFIX_EMAIL) \u003d\u003d null"
       },
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || personSearchKeywords.get(PREFIX_EMAIL).stream()"
       },
       {
         "lineNumber": 77,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .anyMatch(email -\u003e StringUtil.containsQueryIgnoreCase(person.getEmail().toString(), email));"
       },
@@ -68713,21 +71091,21 @@
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyAddressMatch \u003d personSearchKeywords.get(PREFIX_ADDRESS) \u003d\u003d null"
       },
       {
         "lineNumber": 80,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || personSearchKeywords.get(PREFIX_ADDRESS).stream()"
       },
       {
         "lineNumber": 81,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .anyMatch(address -\u003e StringUtil.containsQueryIgnoreCase(person.getAddress().toString(), address));"
       },
@@ -68741,21 +71119,21 @@
       {
         "lineNumber": 83,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyRoleMatch \u003d personSearchKeywords.get(PREFIX_ROLE) \u003d\u003d null"
       },
       {
         "lineNumber": 84,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || personSearchKeywords.get(PREFIX_ROLE).stream()"
       },
       {
         "lineNumber": 85,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .anyMatch(role -\u003e StringUtil.containsQueryIgnoreCase(person.getClass().getSimpleName(), role));"
       },
@@ -68769,21 +71147,21 @@
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyTagMatch \u003d personSearchKeywords.get(PREFIX_TAG) \u003d\u003d null"
       },
       {
         "lineNumber": 88,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || personSearchKeywords.get(PREFIX_TAG).stream()"
       },
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                .anyMatch(tag -\u003e StringUtil.containsQueryIgnoreCase(person.getTags().toString(), tag));"
       },
@@ -68797,14 +71175,14 @@
       {
         "lineNumber": 91,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyMedicalDepartmentMatch \u003d personSearchKeywords.get(PREFIX_MEDICAL_DEPARTMENT) \u003d\u003d null"
       },
       {
         "lineNumber": 92,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                || person instanceof Doctor \u0026\u0026 personSearchKeywords.get(PREFIX_MEDICAL_DEPARTMENT).stream()"
       },
@@ -68818,7 +71196,7 @@
       {
         "lineNumber": 94,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                        StringUtil.containsQueryIgnoreCase(((Doctor) person).getMedicalDepartment().toString(),"
       },
@@ -68839,63 +71217,63 @@
       {
         "lineNumber": 97,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        boolean isAnyMedicalRecordMatch \u003d personSearchKeywords.get(PREFIX_MEDICAL_RECORD) \u003d\u003d null;"
       },
       {
         "lineNumber": 98,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        if (person instanceof Patient \u0026\u0026 personSearchKeywords.get(PREFIX_MEDICAL_RECORD) !\u003d null) {"
       },
       {
         "lineNumber": 99,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            for (String keywords : personSearchKeywords.get(PREFIX_MEDICAL_RECORD)) {"
       },
       {
         "lineNumber": 100,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                for (String medicalRecord : ((Patient) person).getMedicalRecordKeywords()) {"
       },
       {
         "lineNumber": 101,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                    isAnyMedicalRecordMatch \u003d isAnyMedicalRecordMatch"
       },
       {
         "lineNumber": 102,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                            || StringUtil.containsQueryIgnoreCase(medicalRecord, keywords);"
       },
       {
         "lineNumber": 103,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                }"
       },
       {
         "lineNumber": 104,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            }"
       },
       {
         "lineNumber": 105,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        }"
       },
@@ -68916,63 +71294,63 @@
       {
         "lineNumber": 108,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyNameMatch"
       },
       {
         "lineNumber": 109,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyNricMatch"
       },
       {
         "lineNumber": 110,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyPhoneMatch"
       },
       {
         "lineNumber": 111,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyEmailMatch"
       },
       {
         "lineNumber": 112,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyAddressMatch"
       },
       {
         "lineNumber": 113,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyRoleMatch"
       },
       {
         "lineNumber": 114,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyTagMatch"
       },
       {
         "lineNumber": 115,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyMedicalDepartmentMatch"
       },
       {
         "lineNumber": 116,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                \u0026\u0026 isAnyMedicalRecordMatch;"
       },
@@ -69055,9 +71433,8 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 34,
-      "guestuser0123": 36,
-      "-": 57
+      "ngkangtze": 91,
+      "guestuser0123": 36
     }
   },
   {
@@ -80418,14 +82795,14 @@
       {
         "lineNumber": 3,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.awt.AWTException;"
       },
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.awt.Robot;"
       },
@@ -80488,7 +82865,7 @@
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import javafx.scene.input.KeyCode;"
       },
@@ -81412,56 +83789,56 @@
       {
         "lineNumber": 145,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        commandBoxPlaceholder.requestFocus();"
       },
       {
         "lineNumber": 146,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        try {"
       },
       {
         "lineNumber": 147,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            Robot robot \u003d new Robot();"
       },
       {
         "lineNumber": 148,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            robot.keyPress(KeyCode.TAB.getCode());"
       },
       {
         "lineNumber": 149,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            robot.keyRelease(KeyCode.TAB.getCode());"
       },
       {
         "lineNumber": 150,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        } catch (AWTException e) {"
       },
       {
         "lineNumber": 151,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "            e.printStackTrace();"
       },
       {
         "lineNumber": 152,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        }"
       },
@@ -81943,8 +84320,9 @@
       }
     ],
     "authorContributionMap": {
+      "ngkangtze": 11,
       "guestuser0123": 12,
-      "-": 208
+      "-": 197
     }
   },
   {
@@ -101008,7 +103386,7 @@
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_GLOBAL;"
       },
@@ -101050,7 +103428,7 @@
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.ArrayList;"
       },
@@ -101071,7 +103449,7 @@
       {
         "lineNumber": 17,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.Map;"
       },
@@ -101218,7 +103596,7 @@
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL, new ArrayList\u003c\u003e(Arrays.asList(\"first\"))));"
       },
@@ -101232,7 +103610,7 @@
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL, new ArrayList\u003c\u003e(Arrays.asList(\"second\"))));"
       },
@@ -101554,14 +103932,14 @@
       {
         "lineNumber": 86,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        return new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL,"
       },
       {
         "lineNumber": 87,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                new ArrayList\u003c\u003e(Arrays.asList(userInput.split(\"\\\\s+\")))));"
       },
@@ -101575,7 +103953,7 @@
       {
         "lineNumber": 89,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
@@ -101588,8 +103966,8 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 7,
-      "-": 83
+      "ngkangtze": 15,
+      "-": 75
     }
   },
   {
@@ -109195,21 +111573,21 @@
       {
         "lineNumber": 4,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_GLOBAL;"
       },
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_NAME;"
       },
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;"
       },
@@ -109237,7 +111615,7 @@
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.ArrayList;"
       },
@@ -109251,14 +111629,14 @@
       {
         "lineNumber": 12,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.List;"
       },
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.Map;"
       },
@@ -109349,126 +111727,126 @@
       {
         "lineNumber": 26,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // input between two valid prefixes is empty"
       },
       {
         "lineNumber": 27,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        assertParseFailure(parser, \" n/ p/91919191 \","
       },
       {
         "lineNumber": 28,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 29,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 30,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // input after last valid prefix is empty"
       },
       {
         "lineNumber": 31,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        assertParseFailure(parser, \" n/\","
       },
       {
         "lineNumber": 32,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 33,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    }"
       },
       {
         "lineNumber": 34,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 35,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    @Test"
       },
       {
         "lineNumber": 36,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "    public void parse_invalidPrefix_throwsParseException() {"
       },
       {
         "lineNumber": 37,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // prefix not in valid list"
       },
       {
         "lineNumber": 38,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        assertParseFailure(parser, \" role/doctor\","
       },
       {
         "lineNumber": 39,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
       },
       {
         "lineNumber": 40,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 41,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // mix of valid and invalid prefixes"
       },
       {
         "lineNumber": 42,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        assertParseFailure(parser, \" n/alex role/doctor\","
       },
       {
         "lineNumber": 43,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                String.format(MESSAGE_INVALID_COMMAND_FORMAT, FindCommand.MESSAGE_USAGE));"
       },
@@ -109503,7 +111881,7 @@
       {
         "lineNumber": 48,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        Map\u003cPrefix, List\u003cString\u003e\u003e testMap \u003d Map.of(PREFIX_GLOBAL, new ArrayList\u003c\u003e(Arrays.asList(\"Alice\", \"Bob\")));"
       },
@@ -109517,21 +111895,21 @@
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                new FindCommand(new PersonContainsKeywordsPredicate(testMap));"
       },
       {
         "lineNumber": 51,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 52,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // no leading and trailing whitespaces"
       },
@@ -109566,77 +111944,77 @@
       {
         "lineNumber": 57,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        testMap \u003d Map.of(PREFIX_NAME, new ArrayList\u003c\u003e(Arrays.asList(\"Alice\", \"Bob\")),"
       },
       {
         "lineNumber": 59,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                PREFIX_TAG, new ArrayList\u003c\u003e(Arrays.asList(\"friends\")));"
       },
       {
         "lineNumber": 60,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        expectedFindCommand \u003d"
       },
       {
         "lineNumber": 61,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                new FindCommand(new PersonContainsKeywordsPredicate(testMap));"
       },
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 63,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // valid tags in mixed order"
       },
       {
         "lineNumber": 64,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        assertParseSuccess(parser, \" n/Alice t/friends n/Bob\", expectedFindCommand);"
       },
       {
         "lineNumber": 65,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": ""
       },
       {
         "lineNumber": 66,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        // space in between tags and prefixes"
       },
       {
         "lineNumber": 67,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        assertParseSuccess(parser, \" n/ \\n Alice \\n n/ \\t Bob \\t t/friends\", expectedFindCommand);"
       },
@@ -109663,8 +112041,8 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 1,
-      "-": 69
+      "ngkangtze": 40,
+      "-": 30
     }
   },
   {
@@ -113081,9 +115459,9 @@
       {
         "lineNumber": 262,
         "author": {
-          "gitId": "tristonpang"
+          "gitId": "ngkangtze"
         },
-        "content": "        intuitivePromptManager.addArgument(\"12.11.2018\");"
+        "content": "        intuitivePromptManager.addArgument(\"12.11.9999\");"
       },
       {
         "lineNumber": 263,
@@ -113130,9 +115508,9 @@
       {
         "lineNumber": 269,
         "author": {
-          "gitId": "tristonpang"
+          "gitId": "ngkangtze"
         },
-        "content": "        assertEquals(retrieveArguments, \"update 3 d/12.11.2018 dg/runny nose tr/loratadine c/mc given for 2 days\");"
+        "content": "        assertEquals(retrieveArguments, \"update 3 d/12.11.9999 dg/runny nose tr/loratadine c/mc given for 2 days\");"
       },
       {
         "lineNumber": 270,
@@ -113591,7 +115969,8 @@
       }
     ],
     "authorContributionMap": {
-      "tristonpang": 325,
+      "ngkangtze": 2,
+      "tristonpang": 323,
       "guestuser0123": 9
     }
   },
@@ -113629,7 +116008,7 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_GLOBAL;"
       },
@@ -113671,7 +116050,7 @@
       {
         "lineNumber": 11,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.ArrayList;"
       },
@@ -113685,7 +116064,7 @@
       {
         "lineNumber": 13,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.Map;"
       },
@@ -114126,14 +116505,14 @@
       {
         "lineNumber": 76,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        modelManager.updateFilteredPersonList(new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL,"
       },
       {
         "lineNumber": 77,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                new ArrayList\u003c\u003e(Arrays.asList(keywords)))));"
       },
@@ -114216,8 +116595,8 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 1,
-      "-": 87
+      "ngkangtze": 6,
+      "-": 82
     }
   },
   {
@@ -118638,7 +121017,7 @@
       {
         "lineNumber": 5,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_GLOBAL;"
       },
@@ -118673,7 +121052,7 @@
       {
         "lineNumber": 10,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import java.util.Map;"
       },
@@ -118701,7 +121080,7 @@
       {
         "lineNumber": 14,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import seedu.address.logic.parser.Prefix;"
       },
@@ -118750,14 +121129,14 @@
       {
         "lineNumber": 21,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        Map\u003cPrefix, List\u003cString\u003e\u003e firstPredicateKeywordList \u003d Map.of(PREFIX_GLOBAL, Collections.singletonList(\"first\"));"
       },
       {
         "lineNumber": 22,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        Map\u003cPrefix, List\u003cString\u003e\u003e secondPredicateKeywordList \u003d Map.of(PREFIX_GLOBAL, Arrays.asList(\"first\", \"second\"));"
       },
@@ -118953,7 +121332,7 @@
       {
         "lineNumber": 50,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL, Collections.singletonList(\"Alice\")));"
       },
@@ -118981,7 +121360,7 @@
       {
         "lineNumber": 54,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        predicate \u003d new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL, Arrays.asList(\"Alice\", \"Bob\")));"
       },
@@ -119009,7 +121388,7 @@
       {
         "lineNumber": 58,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        predicate \u003d new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL, Arrays.asList(\"Bob\", \"Carol\")));"
       },
@@ -119037,7 +121416,7 @@
       {
         "lineNumber": 62,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        predicate \u003d new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL, Arrays.asList(\"aLIce\", \"bOB\")));"
       },
@@ -119086,14 +121465,14 @@
       {
         "lineNumber": 69,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        PersonContainsKeywordsPredicate predicate \u003d new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL,"
       },
       {
         "lineNumber": 70,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                Collections.emptyList()));"
       },
@@ -119121,7 +121500,7 @@
       {
         "lineNumber": 74,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        predicate \u003d new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL, Arrays.asList(\"Carol\")));"
       },
@@ -119149,14 +121528,14 @@
       {
         "lineNumber": 78,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        predicate \u003d new PersonContainsKeywordsPredicate(Map.of(PREFIX_GLOBAL,"
       },
       {
         "lineNumber": 79,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "                Arrays.asList(\"12345\", \"alice@email.com\", \"Main\", \"Street\")));"
       },
@@ -119190,9 +121569,9 @@
       }
     ],
     "authorContributionMap": {
-      "ngkangtze": 8,
+      "ngkangtze": 22,
       "guestuser0123": 8,
-      "-": 67
+      "-": 53
     }
   },
   {
@@ -137814,28 +140193,28 @@
       {
         "lineNumber": 6,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_ADDRESS;"
       },
       {
         "lineNumber": 7,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_EMAIL;"
       },
       {
         "lineNumber": 8,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_PHONE;"
       },
       {
         "lineNumber": 9,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;"
       },
@@ -138612,7 +140991,7 @@
       {
         "lineNumber": 120,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        command \u003d FindCommand.COMMAND_WORD + \" \" + PREFIX_PHONE + DANIEL.getPhone().value;"
       },
@@ -138647,21 +141026,21 @@
       {
         "lineNumber": 125,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        /* Case: find address of person in address book -\u003e 1 persons found */"
       },
       {
         "lineNumber": 126,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        command \u003d FindCommand.COMMAND_WORD + \" \" + PREFIX_ADDRESS + DANIEL.getAddress().value;"
       },
       {
         "lineNumber": 127,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        ModelHelper.setFilteredList(expectedModel, DANIEL);"
       },
@@ -138696,7 +141075,7 @@
       {
         "lineNumber": 132,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        command \u003d FindCommand.COMMAND_WORD + \" \" + PREFIX_EMAIL + DANIEL.getEmail().value;"
       },
@@ -138745,7 +141124,7 @@
       {
         "lineNumber": 139,
         "author": {
-          "gitId": "-"
+          "gitId": "ngkangtze"
         },
         "content": "        command \u003d FindCommand.COMMAND_WORD + \" \" + PREFIX_TAG + tags.get(0).tagName;"
       },
@@ -139206,8 +141585,9 @@
       }
     ],
     "authorContributionMap": {
+      "ngkangtze": 10,
       "guestuser0123": 9,
-      "-": 195
+      "-": 185
     }
   },
   {
